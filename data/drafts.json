@@ -991,7 +991,7 @@
         "What Veloso actually built wasn't just a trophy competition. It was a research methodology with annual forcing functions. That's rarer than it sounds. Which benchmark in robotics today has the same teeth? Curious what people think."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T20:47:24.438400+00:00",
     "media": {
       "figures": [
@@ -1087,5 +1087,82 @@
       ]
     },
     "issue": 19
+  },
+  {
+    "draft_id": "47755850",
+    "paper": {
+      "id": "rss-733599b2a9",
+      "title": "A history of RoboCup with Manuela Veloso",
+      "abstract": "RoboCup is an international competition that promotes and advances robotics and AI through the challenges presented by its various leagues. We got the chance to sit down with Professor Manuela Veloso, one of RoboCup’s founders, to find out more about how it all started, how the community has grown over the years, and the vision […]",
+      "authors": [],
+      "url": "https://robohub.org/a-history-of-robocup-with-manuela-veloso/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5,
+      "redo_notes": "we are on 2026. Not 2024"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RoboCup turns 30. Its founder just told the origin story.",
+      "commentary": "Manuela Veloso sits down with Robohub to trace RoboCup from a provocative 1993 thought experiment to a global multi-league competition now well into its third decade. The origin framing is worth knowing: football was chosen not because robots needed to play sport but because it forced simultaneous progress on perception, real-time planning, and multi-agent coordination under a single measurable benchmark. Honest caveat: this is an oral history, not a technical analysis, so it reads more as institutional memory than research insight. Still, with RoboCup 2026 just wrapped, the timing makes it essential context for anyone in the field.",
+      "slides": [
+        {
+          "title": "RoboCup at 30",
+          "body": "Founded in 1993 as a research challenge, RoboCup set a concrete long-term goal: a team of autonomous robots beating the human World Cup champions by 2050. That deadline is still live."
+        },
+        {
+          "title": "Why football, specifically",
+          "body": "Veloso explains the choice was deliberate. Football demands real-time perception, dynamic multi-agent coordination, and adversarial planning. One sport, many hard open problems packaged into a single scoreline."
+        },
+        {
+          "title": "From one league to many",
+          "body": "The competition expanded from simulation and small-sized leagues to humanoid, rescue, logistics, and @Home. Each league operationalizes a different slice of real-world robotics and AI."
+        },
+        {
+          "title": "The benchmark argument",
+          "body": "Veloso's core bet: shared, reproducible competitions accelerate progress faster than isolated lab results. RoboCup teams publish, share code, and compete. The community compounds over decades."
+        },
+        {
+          "title": "What it still can't do",
+          "body": "The 2050 goal requires robots that match human athletes in physical agility, situational reasoning, and team strategy. In 2026, humanoid teams still struggle with basic dynamic balance under match conditions."
+        },
+        {
+          "title": "Why read it now",
+          "body": "RoboCup 2026 just ended. Understanding what Veloso's founding vision actually was helps you judge whether recent results are real progress or incremental benchmark gaming."
+        }
+      ],
+      "video_script": "RoboCup just wrapped its 2026 edition. But do you know why the competition exists at all? Manuela Veloso, one of its founders, sat down with Robohub to explain. Back in 1993, the idea was simple and kind of audacious: use football as a forcing function for all of robotics. Perception, planning, multi-agent coordination, all tested live against an opponent. Thirty years later the 2050 goal, robots beating human World Cup champions, is still on the table. Are we on track?",
+      "caption_instagram": "RoboCup just finished its 2026 run, and I keep coming back to this interview with Manuela Veloso on Robohub.\n\nThe founding logic was sharper than people remember. Football wasn't picked for spectacle. It was picked because a single match forces you to solve perception, real-time multi-agent coordination, and adversarial planning all at once. One clean benchmark.\n\nVeloso also makes the case that shared competitions compound knowledge faster than isolated lab work. You publish, you compete, you iterate against other people's solutions. Thirty years of that adds up.\n\nThe honest caveat: this is oral history, not a technical paper. It won't give you new methods. But with 2026 results fresh, it's the right moment to stress-test your read of the field against the original vision.\n\nThe 2050 deadline is still live. Worth asking whether we're ahead of schedule or behind it.\n\nSource: 'A history of RoboCup with Manuela Veloso', robohub.org\n\n#swarmrobotics #multiagentsystems #robocup #roboticsresearch #autonomousrobots #AIresearch #humanoidrobots",
+      "caption_tiktok": "RoboCup turns 30 and its founder just explained why football was always a research strategy, not a gimmick. The 2050 deadline is still live. #robocup #robotics #multiagentai #researchlife",
+      "post_bluesky": "RoboCup 2026 just ended. Good moment to read Veloso on why the competition exists at all. Football was chosen as a forcing function: one match, perception + real-time multi-agent planning + adversarial strategy all tested live. The 2050 goal is still on the table. https://robohub.org/a-history-of-robocup-with-manuela-veloso/",
+      "bluesky_thread": [
+        "The benchmark argument Veloso makes is the one I find most durable: shared competitions compound faster than isolated lab results. You publish, compete, and iterate against other teams' real solutions. Thirty years of that is hard to replicate any other way.",
+        "Honest question after watching 2026 highlights: humanoid teams still lose balance on dynamic plays. Are we making genuine progress toward 2050 or are we mostly winning on rule-favorable conditions? Curious what people who were at the competition this year actually think."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-08T20:52:28.426830+00:00",
+    "media": {
+      "figures": [
+        "media/47755850/fig_00.png"
+      ],
+      "bsky": [
+        "media/47755850/bsky_00.png",
+        "media/47755850/bsky_01.png",
+        "media/47755850/bsky_02.png",
+        "media/47755850/bsky_03.png"
+      ],
+      "slides": [
+        "media/47755850/slide_00.png",
+        "media/47755850/slide_01.png",
+        "media/47755850/slide_02.png",
+        "media/47755850/slide_03.png",
+        "media/47755850/slide_04.png",
+        "media/47755850/slide_05.png",
+        "media/47755850/slide_06.png",
+        "media/47755850/slide_07.png"
+      ]
+    },
+    "issue": 20
   }
 ]
