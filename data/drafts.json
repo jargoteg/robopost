@@ -87,9 +87,12 @@
       "video_script": "Most robot swarms coordinate through radios, algorithms, and careful software engineering. Cornell just tried something different. Their Cross-Link Collective physically entangles dozens of small robots — poor movers on their own — into a collective that flows and reshapes like a material. No central controller. No communication protocol. The physics does the work. It is a genuinely different design philosophy, borrowing from soft matter science rather than distributed computing. We need the full paper to know if it scales. But the concept alone is worth asking: how much swarm intelligence can we just... build into the structure?",
       "caption_instagram": "What if a robot swarm behaved less like a fleet and more like a flowing liquid?\n\nCornell engineers built the Cross-Link Collective — dozens of small robots that can barely move alone, but together form a cohesive material that flows, reshapes, and adapts to its surroundings with zero centralized control.\n\nThe key insight is elegant: instead of solving coordination with communication and algorithms, they solve it with mechanical entanglement. The physical coupling between robots carries force and motion through the whole collective. Structure replaces software.\n\nThis is a meaningful philosophical shift for swarm robotics. We spend enormous effort on consensus protocols, localization, and failure recovery — and here is a system that sidesteps most of that by borrowing ideas from granular physics and soft matter science.\n\nCaveat worth noting: the Robohub write-up is light on hard numbers. Scalability claims and real-world robustness need to survive peer review before we treat this as a paradigm shift. But the concept is genuinely clever and I will be watching for the full paper.\n\nFull piece: 'Entangled robotic matter with cohesive motion' via @robohub\n\n#SwarmRobotics #CollectiveIntelligence #SoftRobotics #EmergentBehavior #RoboticsResearch #MaterialsScience #DistributedRobotics",
       "caption_tiktok": "Robot swarm that moves like a liquid — no WiFi, no central brain, just physics doing the work. Cornell's entangled collective is a wild concept. #SwarmRobotics #Robotics #EmergentBehavior #SoftMatter",
-      "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept — waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics"
+      "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept — waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics",
+      "bluesky_thread": [
+        "Cornell's Cross-Link Collective reframes swarm robotics around physical entanglement: robots with poor individual mobility become collectively fluid, reshaping and flowing as a material rather than a coordinated team. The clever insight is that mechanical coupling does the work that commun"
+      ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-08T19:51:10.677901+00:00",
     "media": {
       "figures": [
@@ -114,7 +117,8 @@
     },
     "issue": 5,
     "post_failures": 3,
-    "failures_notified": 3
+    "failures_notified": 3,
+    "finalized": true
   },
   {
     "draft_id": "bacf1b66",

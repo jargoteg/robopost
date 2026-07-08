@@ -40,5 +40,19 @@
       "tiktok": null
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "0a9bea4b",
+    "paper_id": "rss-228a9b11e3",
+    "title": "Entangled robotic matter with cohesive motion",
+    "format": "carousel",
+    "hook": "What if your robot swarm behaved like a liquid instead of a fleet?",
+    "posted_at": "2026-07-08T20:46:07.822523+00:00",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq5ygfkltg2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
