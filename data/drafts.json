@@ -472,5 +472,80 @@
       ]
     },
     "issue": 10
+  },
+  {
+    "draft_id": "6c53cce6",
+    "paper": {
+      "id": "web-40e0404040",
+      "title": "TacticAI: an AI assistant for football tactics",
+      "abstract": "TacticAI is an AI football tactics assistant developed in collaboration with domain experts from Liverpool FC, focused on analyzing corner kicks in association football. It combines predictive and generative components, allowing coaches to sample and explore alternative player setups for corner kick routines and select those with the highest predicted likelihood of success. The system uses geometric deep learning on graph-based representations of spatio-temporal player tracking data, enabling data efficiency despite limited gold-standard data availability. TacticAI addresses benchmark tasks including predicting receivers, predicting shot attempts, and recommending player position adjustments. In a qualitative study with Liverpool FC domain experts, TacticAI's suggested tactics were indistinguishable from real tactics and were favored over existing tactics 90% of the time. The system also functions as an effective corner kick retrieval system.",
+      "authors": [
+        "Google DeepMind",
+        "Liverpool FC"
+      ],
+      "url": "https://www.nature.com/articles/s41467-024-45965-x",
+      "source": "Nature Communications",
+      "item_type": "article",
+      "user_notes": "Relate it to this year's RoboCup results. What TacticAI-style tactical analysis could mean for robot soccer."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Liverpool FC let DeepMind redesign their corner kicks",
+      "commentary": "TacticAI uses geometric deep learning on player-tracking graphs to predict corner kick receivers, flag shot attempt probability, and generate alternative player setups. The headline number is strong: Liverpool coaches preferred the AI-suggested tactics over real historical ones 90% of the time in blind review. The graph-based representation is the genuinely clever bit, it handles variable squad sizes and spatial relationships cleanly without needing massive datasets. Honest caveat: the 90% figure comes from a qualitative study with a small expert panel at one club, so generalization claims need more than that before anyone builds a coaching pipeline around this.",
+      "slides": [
+        {
+          "title": "Corner kicks, modeled as graphs",
+          "body": "TacticAI represents each player as a node with spatial and role features. Edges encode proximity and interaction. Geometric deep learning handles variable player counts cleanly, no fixed input size needed."
+        },
+        {
+          "title": "Three benchmark tasks",
+          "body": "1. Predict the likely ball receiver. 2. Predict whether a shot attempt follows. 3. Recommend position adjustments to improve outcome probability. All three trained on limited tracking data from Liverpool matches."
+        },
+        {
+          "title": "Coaches preferred AI tactics 90% of the time",
+          "body": "In a blind qualitative study, Liverpool FC domain experts rated TacticAI-generated setups as indistinguishable from real tactics and preferred them over existing recorded routines in 9 out of 10 cases."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "One club, one blind study, small expert panel. The 90% preference figure is promising but not a controlled trial. Generalization across leagues, teams, and playing styles is unproven."
+        },
+        {
+          "title": "What this means for robot soccer",
+          "body": "RoboCup 2024 exposed the same gap every year: individual skills improve, set-piece coordination lags. A TacticAI-style graph model over robot positions could optimize corner routines the same way, with even cleaner tracking data."
+        },
+        {
+          "title": "Why geometric deep learning fits here",
+          "body": "Standard CNNs need fixed grid inputs. Football formations are relational, not spatial grids. Graph nets respect that structure and stay data-efficient, which matters when gold-standard labeled match data is scarce."
+        }
+      ],
+      "video_script": "DeepMind and Liverpool FC just published a corner kick AI in Nature Communications. It models every player as a node in a graph, predicts who gets the ball, whether a shot follows, and then generates better player setups. Liverpool coaches preferred the AI suggestions 90% of the time in a blind test. The geometric deep learning approach is the real contribution here, it handles the relational structure of formations without needing huge datasets. Fresh off RoboCup, where set-piece coordination is still a weak point for robot teams, does this architecture belong on the pitch in more ways than one?",
+      "caption_instagram": "Liverpool FC and Google DeepMind published a corner kick tactics assistant in Nature Communications, and the core idea is sharper than the headline number suggests.\n\nTacticAI represents players as graph nodes with spatial and role features. It predicts ball receivers, flags shot attempt likelihood, and generates alternative player setups for coaches to explore. The graph-based approach handles variable squad positions without needing a massive labeled dataset, which is the real technical contribution.\n\nThe 90% preference rate in blind expert review is eye-catching, but read it carefully. Small panel, one club, qualitative study. Promising signal, not a controlled trial.\n\nRoboCup just wrapped and set-piece coordination is still where robot teams leave points on the table every year. Graph models over robot tracking data could attack exactly that problem. The data is cleaner in simulation too, so the dataset scarcity argument disappears.\n\nPaper: TacticAI: an AI assistant for football tactics, Nature Communications (Google DeepMind x Liverpool FC) https://www.nature.com/articles/s41467-024-45965-x\n\n#swarmrobotics #robotsoccer #robocup #geometricdeeplearning #multiagentsystems #sportsai #robotics",
+      "caption_tiktok": "DeepMind redesigned Liverpool's corner kicks with graph neural networks, coaches couldn't tell the AI tactics from the real ones 90% of the time. RoboCup teams, take notes. #robotsoccer #robocup #deeplearning #sportsai",
+      "post_bluesky": "TacticAI models football formations as player graphs, generates corner kick alternatives, and Liverpool coaches preferred them 90% of the time. Graph nets on robot tracking data could hit the same set-piece gap RoboCup just exposed. Nature Comms: https://www.nature.com/articles/s41467-024-45965-x #robotics"
+    },
+    "status": "in_review",
+    "created": "2026-07-08T20:17:28.909193+00:00",
+    "media": {
+      "figures": [
+        "media/6c53cce6/fig_00.png"
+      ],
+      "bsky": [
+        "media/6c53cce6/bsky_00.png",
+        "media/6c53cce6/bsky_01.png",
+        "media/6c53cce6/bsky_02.png",
+        "media/6c53cce6/bsky_03.png"
+      ],
+      "slides": [
+        "media/6c53cce6/slide_00.png",
+        "media/6c53cce6/slide_01.png",
+        "media/6c53cce6/slide_02.png",
+        "media/6c53cce6/slide_03.png",
+        "media/6c53cce6/slide_04.png",
+        "media/6c53cce6/slide_05.png",
+        "media/6c53cce6/slide_06.png",
+        "media/6c53cce6/slide_07.png"
+      ]
+    },
+    "issue": 12
   }
 ]
