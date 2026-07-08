@@ -1,0 +1,42 @@
+# ── RoboPost configuration ──────────────────────────────────────────
+account:
+  name: "Your Robotics Account"        # shown on cards / video outro
+  handle: "@yourhandle"
+  niche: "academic robotics — paper reviews with sharp, accessible commentary"
+
+sources:
+  arxiv_categories: ["cs.RO"]          # add "cs.AI", "cs.LG" if desired
+  arxiv_max_results: 40                # fetched per day before ranking
+  hf_daily_papers: true                # also pull Hugging Face daily papers
+  keywords_boost:                      # papers matching these rank higher
+    - manipulation
+    - locomotion
+    - humanoid
+    - "sim-to-real"
+    - "imitation learning"
+    - "reinforcement learning"
+    - VLA
+    - "foundation model"
+
+pipeline:
+  drafts_per_day: 2                    # how many papers become drafts daily
+  min_relevance_score: 6               # 0-10, Claude-ranked; below = skipped
+  model: "claude-sonnet-4-6"
+
+platforms:
+  bluesky: true
+  instagram: true
+  tiktok: true
+
+visuals:
+  carousel_size: [1080, 1350]          # IG portrait
+  video_size: [1080, 1920]             # 9:16
+  max_slides: 6
+  bg_color: "#0E1116"
+  accent_color: "#4FD1C5"
+  text_color: "#F5F5F5"
+  tts_voice: "en-US-AndrewNeural"      # edge-tts voice for video narration
+
+# Public base URL for media (Instagram Graph API requires publicly
+# reachable image URLs). With a PUBLIC repo this works out of the box:
+media_base_url: "https://raw.githubusercontent.com/jargoteg/robopost/main"

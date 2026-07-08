@@ -1,0 +1,35 @@
+name: Approvals & posting
+on:
+  schedule:
+    - cron: "*/30 * * * *"      # poll Telegram every 30 min
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: robopost-data
+jobs:
+  approvals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - name: Poll Telegram commands
+        env:
+          TELEGRAM_BOT_TOKEN: "${{ secrets.TELEGRAM_BOT_TOKEN }}"
+        run: python src/telegram_review.py poll
+      - name: Post approved drafts
+        env:
+          BLUESKY_HANDLE: "${{ secrets.BLUESKY_HANDLE }}"
+          BLUESKY_APP_PASSWORD: "${{ secrets.BLUESKY_APP_PASSWORD }}"
+          IG_ACCESS_TOKEN: "${{ secrets.IG_ACCESS_TOKEN }}"
+          IG_USER_ID: "${{ secrets.IG_USER_ID }}"
+          TIKTOK_ACCESS_TOKEN: "${{ secrets.TIKTOK_ACCESS_TOKEN }}"
+        run: python src/post_all.py
+      - name: Commit state
+        run: |
+          git config user.name robopost-bot
+          git config user.email bot@users.noreply.github.com
+          git add data
+          git commit -m "approvals cycle" || echo "nothing to commit"
+          git pull --rebase && git push
