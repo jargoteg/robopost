@@ -4,6 +4,23 @@ import requests
 from datetime import datetime, timezone
 from utils import load_config, load_json, save_json, env, ROOT
 
+def compress_for_bluesky(path, limit=950_000):
+    """Bluesky rejects blobs near 1MB; JPEG-compress (and downscale if
+    needed) while preserving aspect ratio."""
+    import io
+    from PIL import Image
+    img = Image.open(path).convert("RGB")
+    for scale in (1.0, 0.85, 0.7, 0.55):
+        w, h = int(img.width * scale), int(img.height * scale)
+        frame = img if scale == 1.0 else img.resize((w, h), Image.LANCZOS)
+        for q in (85, 75, 65):
+            buf = io.BytesIO()
+            frame.save(buf, "JPEG", quality=q)
+            if buf.tell() <= limit:
+                return buf.getvalue()
+    return buf.getvalue()
+
+
 # ── Bluesky ─────────────────────────────────────────────────────────
 def post_bluesky(draft, cfg):
     handle, pw = env("BLUESKY_HANDLE", True), env("BLUESKY_APP_PASSWORD", True)
@@ -15,10 +32,12 @@ def post_bluesky(draft, cfg):
 
     images = []
     for rel in (draft["media"].get("bsky") or draft["media"]["slides"][:4]):
-        with open(ROOT / rel, "rb") as f:
-            blob = requests.post(f"{base}/com.atproto.repo.uploadBlob", headers={
-                **H, "Content-Type": "image/png"}, data=f.read(), timeout=60).json()["blob"]
-        images.append({"image": blob, "alt": draft["paper"]["title"][:200]})
+        data = compress_for_bluesky(ROOT / rel)
+        r = requests.post(f"{base}/com.atproto.repo.uploadBlob", headers={
+            **H, "Content-Type": "image/jpeg"}, data=data, timeout=60)
+        r.raise_for_status()
+        images.append({"image": r.json()["blob"],
+                       "alt": draft["paper"]["title"][:200]})
 
     text = draft["content"]["post_bluesky"]
     record = {
@@ -109,6 +128,10 @@ def main():
         if d["status"] != "approved":
             continue
         d["content"] = ensure_complete(d["content"], d["paper"])
+        import os
+        NEEDS = {"bluesky": ["BLUESKY_HANDLE", "BLUESKY_APP_PASSWORD"],
+                 "instagram": ["IG_ACCESS_TOKEN", "IG_USER_ID"],
+                 "tiktok": ["TIKTOK_ACCESS_TOKEN"]}
         ids = {}
         for name, fn, enabled in [
             ("bluesky", post_bluesky, cfg["platforms"]["bluesky"]),
@@ -117,12 +140,22 @@ def main():
         ]:
             if not enabled:
                 continue
+            if not all(os.environ.get(k) for k in NEEDS[name]):
+                ids[name] = "skipped"
+                print(f"{d['draft_id']} → {name}: skipped (secrets not configured)")
+                continue
             try:
                 ids[name] = fn(d, cfg)
                 print(f"{d['draft_id']} → {name}: {ids[name]}")
             except Exception as e:
                 print(f"{d['draft_id']} → {name} FAILED: {e}")
                 ids[name] = None
+        attempted = {k: v for k, v in ids.items() if v != "skipped"}
+        if attempted and not any(attempted.values()):
+            # every configured platform failed: stay approved, retry next cycle
+            d["post_failures"] = d.get("post_failures", 0) + 1
+            print(f"{d['draft_id']}: all platforms failed, will retry.")
+            continue
         d["status"] = "posted"
         posted.append({
             "draft_id": d["draft_id"], "paper_id": d["paper"]["id"],

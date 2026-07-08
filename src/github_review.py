@@ -267,12 +267,21 @@ def finalize():
     for d in drafts:
         if d["status"] == "posted" and d.get("issue") and not d.get("finalized"):
             ids = posted.get(d["draft_id"], {}).get("platform_ids", {})
-            lines = "\n".join(
-                f"- **{k}**: {'✅ ' + str(v) if v else '❌ failed (see run logs)'}"
-                for k, v in ids.items())
+            def fmt(v):
+                if v == "skipped":
+                    return "⏭ skipped (platform not configured yet)"
+                return f"✅ {v}" if v else "❌ failed (see run logs)"
+            lines = "\n".join(f"- **{k}**: {fmt(v)}" for k, v in ids.items())
             comment(d["issue"], f"📤 Posted:\n{lines}")
             close(d["issue"])
             d["finalized"] = True
+        elif (d["status"] == "approved" and d.get("issue")
+              and d.get("post_failures", 0) > d.get("failures_notified", 0)):
+            comment(d["issue"], "⚠️ Posting failed on all configured platforms. "
+                                "It will retry automatically on the next review "
+                                "action or daily run. Check the Actions logs if "
+                                "it keeps failing.")
+            d["failures_notified"] = d["post_failures"]
     save_json("drafts.json", drafts)
 
 
