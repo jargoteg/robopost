@@ -51,7 +51,7 @@
       "caption_tiktok": "They put the robot arms inside the knees. All four feet stay down. Bimanual tasks at ground level. It's sim-only but the idea is wild 👀 #robotics #quadruped #manipulation #leggedrobotics",
       "post_bluesky": "Calf-integrated bimanual arms on a Go2 quadruped — manipulation at ground level, all four feet planted. Genuinely clever geometry. Catch: sim-only, no hardware yet. The knee stress alone will be a paper. https://arxiv.org/abs/2607.06186v1 #robotics"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T17:15:16.403485+00:00",
     "media": {
       "slides": [
@@ -64,7 +64,8 @@
         "media/6016e72b/slide_06.png",
         "media/6016e72b/slide_07.png"
       ]
-    }
+    },
+    "issue": 1
   },
   {
     "draft_id": "5ba0a7dd",
@@ -113,7 +114,7 @@
       "caption_tiktok": "RoboCup 2026 humanoid finals just wrapped 🤖⚽ — here's who won and why the scoreboard only tells half the story. #RoboCup2026 #HumanoidRobots #RoboticsResearch #RobotSoccer",
       "post_bluesky": "RoboCup 2026 humanoid finals done in Incheon. Invic & Hamburg Bit-Bots on the small division podium. Scoreboard tells you who survived the bracket — the real science comes in the post-competition papers. Watch arXiv. #RoboCup2026 https://robohub.org/robocup2026-humanoid-league-knockout-stages/"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T17:15:42.113217+00:00",
     "media": {
       "slides": [
@@ -126,7 +127,8 @@
         "media/5ba0a7dd/slide_06.png",
         "media/5ba0a7dd/slide_07.png"
       ]
-    }
+    },
+    "issue": 2
   },
   {
     "draft_id": "a72b63a1",
@@ -175,7 +177,7 @@
       "caption_tiktok": "RoboCup 2026 is in ONE WEEK — and the goal is still: beat FIFA by 2050. Here's why that's actually serious science, not sci-fi 🤖⚽ #RoboCup #HumanoidRobots #RoboticsResearch #AIResearch",
       "post_bluesky": "RoboCup 2026 in 7 days. Trustee Alessandra Rossi on the 2050 \"beat FIFA\" goal — useful read as a benchmark reality check. The gap is still enormous, but forcing full-stack integration is the point. https://robohub.org/taking-humanoid-soccer-to-the-next-level-an-interview-with-robocup-trustee-alessandra-rossi/ #RoboCup2026"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T17:16:10.547269+00:00",
     "media": {
       "slides": [
@@ -188,6 +190,7 @@
         "media/a72b63a1/slide_06.png",
         "media/a72b63a1/slide_07.png"
       ]
-    }
+    },
+    "issue": 3
   }
 ]
