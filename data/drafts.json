@@ -162,7 +162,7 @@
       "caption_tiktok": "RoboCup 2026 just made humanoid robots the main event. Real matches, real chaos — this is the test no simulation can fake. #RoboCup2026 #HumanoidRobot #RoboticsResearch #AIRobotics",
       "post_bluesky": "RoboCup 2026 is live in Incheon — and humanoid robots are now the headline act in soccer, not a side category. Real match stress-test > any controlled demo. Watching closely all week. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T19:51:38.316954+00:00",
     "media": {
       "figures": [
@@ -547,5 +547,78 @@
       ]
     },
     "issue": 12
+  },
+  {
+    "draft_id": "5f0c0285",
+    "paper": {
+      "id": "rss-f6204b5f70",
+      "title": "#RoboCup2026 – humanoid league day 1",
+      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
+      "authors": [],
+      "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5,
+      "redo_notes": "make it more about the entire event. As the event finished already"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RoboCup 2026 wrapped. The humanoid era just became official.",
+      "commentary": "RoboCup 2026 in Incheon made its biggest structural shift in years: soccer leagues now center humanoid robots, signaling a clear direction for the whole competition ecosystem. After decades of wheeled and small bipedal platforms dominating, putting humanoids front and center is a real constraint shift, not just optics. The honest caveat is that humanoid soccer at this scale still sees a lot of falling over and slow play, so 'primary focus' is partly aspirational. But the format change matters because it forces teams to solve harder embodied coordination problems, which is exactly where swarm and multi-agent research needs real hardware pressure.",
+      "slides": [
+        {
+          "title": "RoboCup 2026 is done",
+          "body": "Incheon, South Korea. Competitions ran through July 5. The biggest format change in recent memory: soccer leagues now treat humanoid robots as the primary platform, not the sideshow."
+        },
+        {
+          "title": "Why the format shift matters",
+          "body": "Wheeled and kid-size bipedal platforms ruled for years. Centering humanoids raises the physical difficulty sharply. Balance, gait recovery, and team coordination all get harder on full-size bipeds."
+        },
+        {
+          "title": "What humanoid soccer actually looks like",
+          "body": "Honest picture: lots of slow walks, falls, and cautious ball contact. High-DOF robots playing at speed with real team tactics is still an open problem. The gap to adult human play remains large."
+        },
+        {
+          "title": "Multi-agent coordination under pressure",
+          "body": "Real games expose what simulated training misses. Sensor noise, dynamic opponents, and unscripted collisions stress-test decentralized control in ways no benchmark fully replicates."
+        },
+        {
+          "title": "What changes going forward",
+          "body": "Teams now build around humanoid constraints from day one. Expect hardware standardization pressure, new shared codebases, and sharper focus on real-time whole-body multi-robot planning."
+        },
+        {
+          "title": "The longer arc",
+          "body": "RoboCup's stated goal: beat the FIFA World Cup winner by 2050. Centering humanoids in 2026 is a necessary step. Whether teams close the gap fast enough is the real question to watch."
+        }
+      ],
+      "video_script": "RoboCup 2026 just wrapped in Incheon, and the headline isn't a score, it's a structural change. Soccer leagues now center humanoid robots. That sounds like a small rule update but it's a real constraint shift. Humanoids fall, they're slow, and coordinating a team of them in real time is a genuinely hard multi-agent problem. No simulation benchmark fully stress-tests this. So watching what broke, what held, and which teams adapted fastest tells us more about the state of the field than any lab result. What did you see from Incheon that surprised you?",
+      "caption_instagram": "RoboCup 2026 wrapped up in Incheon, South Korea, and the format change alone made this year worth watching.\n\nThe soccer leagues officially pivoted to humanoid robots as the primary platform. That's not cosmetic. Humanoids bring real mechanical constraints: fall recovery, slow gaits, and whole-body coordination under dynamic contact. Problems that wheeled platforms let teams skip entirely.\n\nHonest take: humanoid soccer right now still looks fragile. Slow possession, cautious kicks, frequent falls. The gap to competitive human play is large. But the point of the format change is to force teams to close it, and hardware pressure is how that happens in robotics.\n\nFrom a multi-agent perspective, these games are a stress test no simulation fully replicates. Sensor noise, opponent collisions, unpredictable ball physics. The teams whose coordination held up under that pressure are the ones worth studying.\n\nFull day-one coverage via Robohub: robohub.org/robocup2026-humanoid-league-day-1/\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #MultiAgentSystems #RobotSoccer #LearnedControl #EmbodiedAI",
+      "caption_tiktok": "RoboCup 2026 just ended and humanoid robots are now the main event. Here's what that actually means for the field. #RoboCup2026 #HumanoidRobots #Robotics #MultiAgentSystems",
+      "post_bluesky": "RoboCup 2026 wrapped in Incheon. Humanoids are now the primary soccer platform, not the sideshow. Real games stress-test coordination in ways no benchmark does. Worth studying what held up. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
+    },
+    "status": "in_review",
+    "created": "2026-07-08T20:22:53.923447+00:00",
+    "media": {
+      "figures": [
+        "media/5f0c0285/fig_00.png"
+      ],
+      "bsky": [
+        "media/5f0c0285/bsky_00.png",
+        "media/5f0c0285/bsky_01.png",
+        "media/5f0c0285/bsky_02.png",
+        "media/5f0c0285/bsky_03.png"
+      ],
+      "slides": [
+        "media/5f0c0285/slide_00.png",
+        "media/5f0c0285/slide_01.png",
+        "media/5f0c0285/slide_02.png",
+        "media/5f0c0285/slide_03.png",
+        "media/5f0c0285/slide_04.png",
+        "media/5f0c0285/slide_05.png",
+        "media/5f0c0285/slide_06.png",
+        "media/5f0c0285/slide_07.png"
+      ]
+    },
+    "issue": 13
   }
 ]
