@@ -620,5 +620,242 @@
       ]
     },
     "issue": 13
+  },
+  {
+    "draft_id": "ac7acc49",
+    "paper": {
+      "id": "2607.06564v1",
+      "title": "Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation",
+      "abstract": "Recently, Vision-Language-Action (VLA) models have demonstrated strong generalization across diverse tasks. However, effective robotic manipulation in physical environments fundamentally requires geometric understanding and spatial reasoning. While some VLA approaches attempt to incorporate 3D information, they are constrained by limited data availability and geometric information loss in current 3D encoding pipelines, and fail to jointly capture 3D geometry and temporally structured actions in dynamic environments. To address these limitations, we introduce Lift3D-VLA, a unified VLA framework that equips models with explicit 3D point cloud reasoning and enables temporally coherent action generation. First, building upon our previous work Lift3D, an enhanced 2D model-lifting strategy is proposed to geometrically align 3D points with pretrained 2D positional embeddings. This design enables direct point-cloud encoding within the VLA vision encoder while minimizing spatial information loss. Based on explicit 3D inputs, we propose Geometry-Centric Masked Autoencoding (GC-MAE), a dual-objective self-supervised framework that reconstructs the current point cloud while predicting its future geometric evolution. This formulation allows the 2D vision encoder to internalize both 3D structure and physical dynamics. To fully exploit 3D representations, we further design layer-wise temporal action modeling, which leverages multiple layers of the LLM to collaboratively predict action chunks, enabling temporally consistent predictions. Across 22 simulated tasks and 8 real-world manipulation tasks, Lift3D-VLA achieves 10.8% and 11.1% higher mean success rates on MetaWorld and RLBench than the best-performing prior VLA methods, and outperforms the strongest real-world baseline by 4 percentage points, while exhibiting stronger generalization to out-of-distribution perturbations.",
+      "authors": [
+        "Jiaming Liu",
+        "Qingpo Wuwu",
+        "Nuowei Han",
+        "Hao Chen",
+        "Zhuoyang Liu",
+        "Fan Fei"
+      ],
+      "url": "https://arxiv.org/abs/2607.06564v1",
+      "source": "arxiv",
+      "score": 7.8
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "VLA robots that actually understand 3D geometry, not just pixels",
+      "commentary": "Lift3D-VLA attacks a real problem: most VLA models reason from 2D image patches and lose spatial structure the moment things get physical. The clever bit is GC-MAE, a self-supervised objective that forces the vision encoder to predict future point-cloud geometry, so the model internalizes dynamics without needing paired action labels for every scene. The gains are concrete: 10.8% on MetaWorld, 11.1% on RLBench, 4 points on real hardware over the best prior VLA baseline. Honest caveat: the real-world evaluation is 8 tasks, which is thin, and we don't know how the system handles severe occlusion or sensor noise in less controlled settings. Still, the layer-wise temporal action modeling idea is worth watching.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "VLA models process 2D patches. Manipulation is a 3D problem. Spatial information bleeds out at every encoding step, and current approaches have not fixed this cleanly."
+        },
+        {
+          "title": "How Lift3D-VLA works",
+          "body": "Point clouds are geometrically aligned to pretrained 2D positional embeddings. No separate 3D encoder branch. The existing vision encoder processes raw point-cloud tokens directly."
+        },
+        {
+          "title": "GC-MAE: the key idea",
+          "body": "Geometry-Centric Masked Autoencoding trains the encoder to reconstruct current point clouds AND predict their future shape. Dynamics baked into the vision backbone via self-supervision."
+        },
+        {
+          "title": "Temporal action modeling",
+          "body": "Multiple LLM layers collaborate to predict action chunks, not just the final layer. This distributes the prediction load and improves temporal consistency across a sequence."
+        },
+        {
+          "title": "Numbers that matter",
+          "body": "MetaWorld: +10.8% mean success over best prior VLA. RLBench: +11.1%. Real-world: +4 percentage points. Stronger on out-of-distribution perturbations too. Evaluated across 22 sim and 8 real tasks."
+        },
+        {
+          "title": "What to watch for",
+          "body": "8 real-world tasks is a narrow eval. Sensor noise and heavy occlusion are untested. Sim-to-real gap remains the open question. Worth tracking as the eval set grows."
+        }
+      ],
+      "video_script": "Most VLA models think in 2D. Pixels in, actions out. But manipulation lives in 3D, and that mismatch costs you precision. Lift3D-VLA fixes this by plugging point clouds directly into the vision encoder, then adding a self-supervised objective that teaches the model to predict how geometry changes over time. The result is 10 to 11 percent better success rates on MetaWorld and RLBench, and 4 points ahead on real hardware. The real-world evaluation is still small, so the big question is: does this hold up when the point clouds get noisy and occluded?",
+      "caption_instagram": "VLA robots that actually reason about 3D geometry.\n\nMost Vision-Language-Action models process 2D image patches. That works fine for language tasks. For manipulation, you need to know where objects are in space and how they move. That spatial signal gets crushed in standard encoding pipelines.\n\nLift3D-VLA tackles this with two moves. First, point clouds are aligned to pretrained 2D positional embeddings so the existing vision encoder can process them directly, no separate 3D branch needed. Second, a self-supervised objective called GC-MAE trains the encoder to reconstruct current geometry AND predict its future shape, so dynamics get baked in without extra labeled data.\n\nThe numbers: +10.8% on MetaWorld, +11.1% on RLBench, +4 percentage points on real-world tasks versus the strongest prior VLA baseline. Out-of-distribution generalization also improves. Caveat: the real-world eval covers only 8 tasks in controlled conditions. The harder test will come with noisy sensors and cluttered scenes.\n\nPaper: Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation, arXiv 2607.06564\n\n#swarmsrobotics #roboticmanipulation #VLA #embodiedAI #pointcloud #robotlearning #researchreview",
+      "caption_tiktok": "VLA models are blind to 3D geometry. This paper adds point-cloud reasoning and beats every prior VLA baseline by 10+ percent. Here is how. #robotics #VLA #manipulation #embodiedAI #robotlearning",
+      "post_bluesky": "Lift3D-VLA plugs point clouds into the VLA vision encoder and adds a self-supervised future-geometry prediction objective. Result: +10.8% on MetaWorld, +11.1% on RLBench vs best prior VLA. Real-world eval is small but the core idea is solid. https://arxiv.org/abs/2607.06564v1 #robotics #VLA"
+    },
+    "status": "pending_review",
+    "created": "2026-07-08T20:31:29.622436+00:00",
+    "media": {
+      "figures": [
+        "media/ac7acc49/fig_00.png",
+        "media/ac7acc49/fig_01.png",
+        "media/ac7acc49/fig_02.png",
+        "media/ac7acc49/fig_03.png"
+      ],
+      "bsky": [
+        "media/ac7acc49/bsky_00.png",
+        "media/ac7acc49/bsky_01.png",
+        "media/ac7acc49/bsky_02.png",
+        "media/ac7acc49/bsky_03.png"
+      ],
+      "slides": [
+        "media/ac7acc49/slide_00.png",
+        "media/ac7acc49/slide_01.png",
+        "media/ac7acc49/slide_02.png",
+        "media/ac7acc49/slide_03.png",
+        "media/ac7acc49/slide_04.png",
+        "media/ac7acc49/slide_05.png",
+        "media/ac7acc49/slide_06.png",
+        "media/ac7acc49/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ee6df781",
+    "paper": {
+      "id": "2607.06438v1",
+      "title": "WristMimic: Full-Body Humanoid Control with Wrist-Guided Manipulation",
+      "abstract": "Retargeting human object interaction demonstrations to physics based simulation requires reproducing not only body motion but also the object motion and contacts that make manipulation succeed. However, position only hand trajectories do not specify the contact forces needed to manipulate objects, and directly tracking them can overconstrain contact rich finger behavior. We introduce WristMimic, a wrist guided whole body control framework that explicitly separates contact free body motion from contact rich hand manipulation. The contact free body and wrist are guided by kinematic pose targets, whereas the fingers are not directly supervised by human hand pose. Instead, they learn grasping and manipulation behaviors from object tracking and contact outcomes. Our key insight is that the wrist is the natural gate between these two regimes. It is largely free from contact and can be tracked kinematically, yet it determines the global hand configuration and places the fingers within reachable grasp affordances. To ensure reliable wrist placement during interaction, we introduce wrist specific reset constraints and reward prioritization. Experiments show that WristMimic matches or surpasses methods using full finger pose supervision while enabling finger agnostic retargeting across diverse hand embodiments.",
+      "authors": [
+        "Wongyun Yu",
+        "Youngwoon Kim",
+        "Minsu Cho"
+      ],
+      "url": "https://arxiv.org/abs/2607.06438v1",
+      "source": "arxiv",
+      "score": 7.6
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Stop supervising fingers. Let the wrist do the work.",
+      "commentary": "WristMimic splits full-body humanoid manipulation into two regimes: kinematically tracked wrist, unsupervised fingers that learn from object outcomes. The core insight is that the wrist is a natural bottleneck, close enough to contact to position fingers within grasp affordances, far enough to track cleanly without overconstrained force mismatches. It matches or beats full finger-pose supervision on diverse hand embodiments, which is a real practical win for retargeting across robot hands. The honest caveat: we only see this on physics simulation benchmarks, and sim-to-real contact transfer for dexterous manipulation remains notoriously rough terrain.",
+      "slides": [
+        {
+          "title": "The problem with finger tracking",
+          "body": "Recording human hand poses captures geometry, not contact forces. Directly tracking finger trajectories overconstrain contact-rich behavior and causes sim failures. This is a known pain point in imitation learning for dexterous manipulation."
+        },
+        {
+          "title": "The wrist as the key split",
+          "body": "WristMimic divides motion into two regimes. Wrist and body: kinematic pose targets. Fingers: no direct supervision. Fingers learn grasping purely from object tracking and contact outcomes. The wrist is the gate between the two."
+        },
+        {
+          "title": "Why the wrist works here",
+          "body": "The wrist is mostly contact-free during manipulation setup, so kinematic tracking is reliable. It also places fingers within reachable grasp affordances, letting the policy figure out the contact details itself."
+        },
+        {
+          "title": "Engineering details that matter",
+          "body": "Two additions stabilize wrist placement during object interaction: wrist-specific reset constraints and reward prioritization. Without these, the policy drifts during the critical transition into contact."
+        },
+        {
+          "title": "Results vs. full finger supervision",
+          "body": "WristMimic matches or surpasses methods that supervise every finger joint, across diverse hand embodiments. Finger-agnostic retargeting means one human demo can transfer to different robot hands without re-annotation."
+        },
+        {
+          "title": "What to watch for next",
+          "body": "All results are in physics-based simulation. Sim-to-real transfer for contact-rich dexterous tasks is still the hard part. Real-robot validation with varied objects will be the real test of this approach."
+        }
+      ],
+      "video_script": "Here is a subtle but important idea in humanoid control. When you retarget human manipulation demos, tracking finger poses looks sensible but actually fails. Position data has no force information, and contact-rich fingers get overconstrained. WristMimic fixes this by tracking the wrist kinematically and leaving fingers completely unsupervised, letting them learn grasping from object outcomes alone. The wrist positions the hand, the policy figures out the grasp. It beats full finger supervision across different robot hands. So, should we be supervising fingers at all in contact-rich manipulation?",
+      "caption_instagram": "Stop supervising fingers. Let the wrist do the work.\n\nRetargeting human manipulation demos to robots sounds straightforward until you realize position recordings carry no force information. Directly tracking finger poses in contact-rich tasks overconstrain the policy and cause failures in simulation. This is a problem everyone working on dexterous manipulation runs into.\n\nWristMimic splits the problem cleanly. Body and wrist get kinematic pose targets. Fingers get zero direct supervision. Instead, they learn grasping and manipulation from object tracking and contact outcomes. The wrist acts as a natural boundary: mostly contact-free, so it tracks reliably, but it positions fingers within reachable grasp affordances. Two additions, wrist-specific reset constraints and reward prioritization, keep wrist placement stable during the tricky transition into contact.\n\nThe payoff: it matches or beats full finger-pose supervision across diverse hand embodiments, and one human demo can retarget to different robot hands without re-annotation. All in simulation so far, and sim-to-real for dexterous contact tasks is still the hard part. But the design principle here is clean and worth watching.\n\nPaper: WristMimic: Full-Body Humanoid Control with Wrist-Guided Manipulation, arXiv 2607.06438\n\n#swarmrobotics #humanoidrobots #dexterousmanipulation #imitationlearning #roboticsresearch #physicssimulation #embodiedai",
+      "caption_tiktok": "Tracking robot fingers from human demos fails because positions carry no force data. WristMimic tracks the wrist, skips finger supervision, and still wins. Clean idea. #robotics #humanoidrobots #dexterousmanipulation #imitationlearning",
+      "post_bluesky": "WristMimic: track the wrist kinematically, leave fingers unsupervised, let them learn from object outcomes. Matches or beats full finger-pose supervision across hand embodiments. Clean design principle. Sim only for now, but worth your attention. https://arxiv.org/abs/2607.06438v1 #robotics"
+    },
+    "status": "pending_review",
+    "created": "2026-07-08T20:31:55.177558+00:00",
+    "media": {
+      "figures": [
+        "media/ee6df781/fig_00.png",
+        "media/ee6df781/fig_01.png",
+        "media/ee6df781/fig_02.png",
+        "media/ee6df781/fig_03.png"
+      ],
+      "bsky": [
+        "media/ee6df781/bsky_00.png",
+        "media/ee6df781/bsky_01.png",
+        "media/ee6df781/bsky_02.png",
+        "media/ee6df781/bsky_03.png"
+      ],
+      "slides": [
+        "media/ee6df781/slide_00.png",
+        "media/ee6df781/slide_01.png",
+        "media/ee6df781/slide_02.png",
+        "media/ee6df781/slide_03.png",
+        "media/ee6df781/slide_04.png",
+        "media/ee6df781/slide_05.png",
+        "media/ee6df781/slide_06.png",
+        "media/ee6df781/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "4c7786bf",
+    "paper": {
+      "id": "2607.06559v1",
+      "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+      "abstract": "Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+      "authors": [
+        "Haoyu Zhao",
+        "Xingyue Zhao",
+        "Siteng Huang",
+        "Xin Li",
+        "Deli Zhao",
+        "Zhongyu Li"
+      ],
+      "url": "https://arxiv.org/abs/2607.06559v1",
+      "source": "arxiv",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RGB video alone is lying to your robot. Here's the fix.",
+      "commentary": "RynnWorld-4D argues that predicting depth and optical flow alongside RGB is a more grounded input for manipulation policies than pixels alone. The clever bit is that they skip multi-step denoising at inference time: the policy reads internal diffusion representations directly, which is a real engineering win. The 254.4M-frame dataset with pseudo-labels is ambitious but pseudo-labels on depth and flow are noisy by definition, and the paper doesn't stress-test how sensitive the policy is to that noise. State-of-the-art on bimanual dexterous tasks is a strong claim, but the benchmark scope matters a lot here.",
+      "slides": [
+        {
+          "title": "The core argument",
+          "body": "2D video hides geometry. RGB plus depth plus optical flow, trained jointly in one diffusion process, gives the robot a representation that actually reflects how objects move in 3D space."
+        },
+        {
+          "title": "What RynnWorld-4D builds",
+          "body": "Tri-branch diffusion model. Takes one RGB-D image and a language instruction. Outputs future RGB frames, depth maps, and optical flow simultaneously via cross-modal attention and frame-wise 3D RoPE."
+        },
+        {
+          "title": "The clever engineering call",
+          "body": "RynnWorld-4D-Policy reads internal diffusion features in a single forward pass. No iterative denoising at inference. That is a meaningful latency reduction for closed-loop control."
+        },
+        {
+          "title": "Training data: 254.4M frames",
+          "body": "Rynn4DDataset 1.0 mixes egocentric human and robotic manipulation videos. Depth and optical flow are pseudo-labeled, not measured. Scale is impressive; label quality is the open question."
+        },
+        {
+          "title": "Results and honest caveats",
+          "body": "State-of-the-art on real bimanual dexterous tasks, especially spatial precision and timing. But benchmark scope is unclear, and pseudo-label noise sensitivity is not analyzed in the abstract."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "World models for manipulation are moving fast. Grounding predictions in geometry rather than pixels is a principled step toward policies that generalize beyond the training distribution."
+        }
+      ],
+      "video_script": "Your robot watches an RGB video and tries to manipulate objects. But video hides depth. It hides how things actually move in 3D. RynnWorld-4D trains a single diffusion model to predict RGB, depth, and optical flow together, all from one image and a text instruction. Then the policy reads internal model features directly, no expensive denoising loop at inference. They trained on 254 million frames. Results on bimanual dexterous tasks look strong. My question for you: how much of that gain comes from the 4D representation versus just the dataset scale?",
+      "caption_instagram": "RGB video is cheap to collect but it hides the geometry your robot actually needs.\n\nRynnWorld-4D proposes a unified diffusion model that generates future RGB frames, depth maps, and optical flow together, from a single RGB-D image and a language instruction. The architecture uses a tri-branch design with cross-modal attention and frame-wise 3D RoPE to keep appearance, geometry, and motion consistent across time.\n\nThe engineering highlight: at inference, the policy reads internal diffusion representations in one forward pass instead of running full denoising. That matters for real closed-loop control.\n\nThey trained on Rynn4DDataset 1.0, over 254.4 million frames of human and robotic manipulation with pseudo-labeled depth and flow. Scale is real. But pseudo-labels introduce noise, and the paper does not report how sensitive the downstream policy is to that, which I'd want to see before trusting the generalization claims.\n\nPaper: RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation, arXiv 2607.06559\n\n#swarmrobotics #roboticmanipulation #worldmodels #embodiedai #robotlearning #diffusionmodels #roboticsresearch",
+      "caption_tiktok": "Your robot can't feel depth from pixels alone. This paper predicts RGB, depth, and optical flow together in one model, then skips the slow denoising step at test time. arXiv 2607.06559 #robotics #worldmodels #embodiedai #manipulation",
+      "post_bluesky": "RynnWorld-4D jointly predicts RGB, depth, and optical flow in one diffusion pass, then reads internal features directly for policy output. No denoising at inference. 254M training frames. Strong bimanual results. Curious how much is architecture vs. data scale. https://arxiv.org/abs/2607.06559v1 #robotics #worldmodels"
+    },
+    "status": "pending_review",
+    "created": "2026-07-08T20:32:22.062446+00:00",
+    "media": {
+      "figures": [
+        "media/4c7786bf/fig_00.png",
+        "media/4c7786bf/fig_01.png",
+        "media/4c7786bf/fig_02.png",
+        "media/4c7786bf/fig_03.png"
+      ],
+      "bsky": [
+        "media/4c7786bf/bsky_00.png",
+        "media/4c7786bf/bsky_01.png",
+        "media/4c7786bf/bsky_02.png",
+        "media/4c7786bf/bsky_03.png"
+      ],
+      "slides": [
+        "media/4c7786bf/slide_00.png",
+        "media/4c7786bf/slide_01.png",
+        "media/4c7786bf/slide_02.png",
+        "media/4c7786bf/slide_03.png",
+        "media/4c7786bf/slide_04.png",
+        "media/4c7786bf/slide_05.png",
+        "media/4c7786bf/slide_06.png",
+        "media/4c7786bf/slide_07.png"
+      ]
+    }
   }
 ]
