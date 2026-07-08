@@ -2,7 +2,7 @@
 account:
   name: "Dr. Jahir Argote Gerald"        # shown on cards / video outro
   handle: "@jahirargote"
-  niche: "academic robotics — paper reviews with sharp, accessible commentary"
+  niche:  "PhD researcher in swarm robotics sharing paper reviews with honest takes"
 
 sources:
   arxiv_categories: ["cs.RO", "cs.MA"] # cs.MA = multi-agent / swarm
