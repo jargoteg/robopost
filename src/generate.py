@@ -8,6 +8,8 @@ from utils import load_config, load_json, save_json, claude_json, get_feedback_n
 
 def generate_draft(paper: dict, cfg) -> dict:
     feedback = get_feedback_notes()
+    from conference_radar import conference_context
+    conf = conference_context(cfg)
     result = claude_json(
         f"""You write content for a social media account: {cfg['account']['niche']}.
 Voice: knowledgeable but accessible; opinionated commentary, not press-release
@@ -16,6 +18,8 @@ and why it matters. Never fabricate results not implied by the abstract.
 
 Lessons from past engagement (apply them):
 {feedback}
+
+{conf}
 
 Item type: {paper.get('item_type', 'paper')} (paper = arXiv preprint; article =
 journal/news/blog piece e.g. Nature or IEEE Spectrum; video = lab/company video).

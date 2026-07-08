@@ -5,7 +5,7 @@ account:
   niche: "academic robotics — paper reviews with sharp, accessible commentary"
 
 sources:
-  arxiv_categories: ["cs.RO"]          # add "cs.AI", "cs.LG" if desired
+  arxiv_categories: ["cs.RO", "cs.MA"] # cs.MA = multi-agent / swarm
   arxiv_max_results: 40                # fetched per day before ranking
   hf_daily_papers: true                # also pull Hugging Face daily papers
   news_feeds:                          # RSS — competitions, industry, lab news
@@ -20,6 +20,11 @@ sources:
     - manipulation
     - autonomous
     - competition
+    - swarm
+    - multi-robot
+    - collective
+  watch_pages:                         # news pages WITHOUT an RSS feed —
+    - https://www.bristolroboticslab.com/brl-news   # fetched + items extracted by Claude
   youtube_enrichment: true             # find project/demo videos for picked items
                                        # (requires YOUTUBE_API_KEY secret; free)
   keywords_boost:                      # papers matching these rank higher
@@ -31,6 +36,9 @@ sources:
     - "reinforcement learning"
     - VLA
     - "foundation model"
+    - "swarm robotics"
+    - "collective behavior"
+    - "multi-robot"
 
 pipeline:
   drafts_per_day: 2                    # how many papers become drafts daily
@@ -54,3 +62,8 @@ visuals:
 # Public base URL for media (Instagram Graph API requires publicly
 # reachable image URLs). With a PUBLIC repo this works out of the box:
 media_base_url: "https://raw.githubusercontent.com/jargoteg/robopost/main"
+
+conferences:
+  track: [ICRA, IROS, RSS, CoRL, DARS, MRS, Humanoids, RoboCup, ICSR]
+  window_before_days: 21               # boost/preview window before start
+  window_after_days: 10                # results coverage window after end

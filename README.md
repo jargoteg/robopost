@@ -80,8 +80,11 @@ The pipeline searches YouTube for a project/demo video of each picked item and l
 1. console.cloud.google.com → create project → enable **YouTube Data API v3** → Credentials → API key
 2. Add secret `YOUTUBE_API_KEY`. Free quota easily covers daily use. If unset, the step is skipped silently.
 
+## Conference awareness
+`data/conferences.json` tracks DARS, RSS, ICRA, MRS, IROS, CoRL, Humanoids, RoboCup, ICSR. A weekly job refreshes dates using Claude's web search. When a conference is within 3 weeks (or just ended), the pipeline: widens the daily net (+1 draft slot), tells the ranker to prioritize accepted-paper announcements / results / competition outcomes, and seeds a "conference preview — what to watch" draft ~1-2 weeks out. Tune windows in `config.yaml → conferences`.
+
 ## Content sources
-Automatic daily pull now covers: arXiv (configurable categories), Hugging Face daily papers, and any RSS feeds in `config.yaml → sources.news_feeds` — preloaded with IEEE Spectrum robotics, The Robot Report, and Robohub, which carry RoboCup and other competition coverage. Add any feed URL (e.g. a specific competition's news feed) and it joins the ranking pool; `news_keywords` filters what's considered.
+Automatic daily pull now covers: arXiv (configurable categories), Hugging Face daily papers, and any RSS feeds in `config.yaml → sources.news_feeds` — preloaded with IEEE Spectrum robotics, The Robot Report, and Robohub (co-founded at Bristol; strong swarm coverage). Pages **without** an RSS feed go in `sources.watch_pages` — preloaded with Bristol Robotics Laboratory's news page (Sabine Hauert's swarm group); the page is fetched and Claude extracts recent items. arXiv now also monitors cs.MA (multi-agent systems), where swarm papers land, and swarm/multi-robot keywords are boosted in ranking. Add any feed URL (e.g. a specific competition's news feed) and it joins the ranking pool; `news_keywords` filters what's considered.
 
 ## Tuning
 Everything lives in `config.yaml`: account voice, arXiv categories, boost keywords, drafts per day, colors, TTS voice, carousel/video sizes. The commentary style prompt is in `src/generate.py`.

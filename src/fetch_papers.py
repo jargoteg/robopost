@@ -120,9 +120,39 @@ def enrich_youtube(items: list[dict]):
             print(f"YouTube search failed (non-fatal): {e}")
 
 
+def fetch_watch_pages(cfg) -> list[dict]:
+    """News pages without RSS (e.g. Bristol Robotics Lab) — fetch the page,
+    Claude extracts the recent items."""
+    import hashlib
+    from utils import fetch_url_text, claude_json
+    items = []
+    for url in cfg["sources"].get("watch_pages", []):
+        try:
+            page = fetch_url_text(url, limit=10000)
+            found = claude_json(
+                f"""Extract up to 5 of the most recent news items from this lab/news
+page. JSON: [{{"title": "...", "summary": "2-4 sentences", "link": "absolute URL
+if visible, else \"{url}\""}}]\n\nPAGE ({url}):\n{page}""",
+                system="You extract structured news items from web pages.")
+            for f in found:
+                link = f.get("link") or url
+                items.append({
+                    "id": "watch-" + hashlib.sha1((f["title"] + link).encode()).hexdigest()[:10],
+                    "title": f["title"], "abstract": f.get("summary", f["title"]),
+                    "authors": [], "url": link,
+                    "source": url.split("/")[2].replace("www.", ""),
+                    "item_type": "article",
+                })
+        except Exception as e:
+            print(f"Watch page failed for {url} (non-fatal): {e}")
+    return items
+
+
 def rank_papers(papers: list[dict], cfg) -> list[dict]:
     """Ask Claude to score papers for this account's audience."""
+    from conference_radar import conference_context
     feedback = get_feedback_notes()
+    conf = conference_context(cfg)
     boost = ", ".join(cfg["sources"]["keywords_boost"])
     listing = "\n".join(
         f"[{i}] {p['title']} — {p['abstract'][:400]}" for i, p in enumerate(papers)
@@ -133,6 +163,8 @@ Priority topics: {boost}.
 
 Lessons learned from past engagement data:
 {feedback}
+
+{conf}
 
 Score each item (paper or news/competition story) 0-10 for how compelling a social post about it would be
 (novelty, visual/story potential, audience fit). Return JSON:
@@ -174,6 +206,12 @@ def main():
             if any(k in (p["title"] + p["abstract"]).lower() for k in kw)
         ]
     papers += fetch_rss(cfg)
+    papers += fetch_watch_pages(cfg)
+    from conference_radar import preview_items, active_windows
+    papers += preview_items(cfg)
+    if active_windows(cfg):
+        print("Conference window active — widening the net.")
+        cfg["pipeline"]["drafts_per_day"] = cfg["pipeline"]["drafts_per_day"] + 1
     papers = [p for p in papers if p["id"] not in seen]
     if papers:
         ranked = rank_papers(papers, cfg)

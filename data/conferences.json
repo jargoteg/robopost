@@ -1,0 +1,37 @@
+{
+  "updated": "2026-07-01",
+  "conferences": [
+    {
+      "name": "ICRA",
+      "year": 2026,
+      "start": "2026-06-01",
+      "end": "2026-06-05",
+      "location": "Vienna, Austria",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "IROS",
+      "year": 2026,
+      "start": "2026-09-28",
+      "end": "2026-10-01",
+      "location": "Pittsburgh, USA",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "RoboCup",
+      "year": 2026,
+      "start": "2026-07-15",
+      "end": "2026-07-21",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "Humanoids",
+      "year": 2026,
+      "start": "2026-12-06",
+      "end": "2026-12-09",
+      "location": "Santa Clara, USA",
+      "confidence": "confirmed"
+    }
+  ]
+}
