@@ -11,7 +11,11 @@ def generate_draft(paper: dict, cfg) -> dict:
     from conference_radar import conference_context
     conf = conference_context(cfg)
     result = claude_json(
-        f"""You write content for a social media account: {cfg['account']['niche']}.
+        f"""Today's date: {__import__('datetime').date.today().strftime('%B %d, %Y')}.
+Use it: "this year" means {__import__('datetime').date.today().year}, recent
+events are relative to today, never assume an older year.
+
+You write content for a social media account: {cfg['account']['niche']}.
 Voice: a researcher talking to peers over coffee. Opinionated, specific,
 concrete numbers over adjectives. Point out what's genuinely clever, what's
 overhyped, limitations, and why it matters. Never fabricate results not
@@ -63,8 +67,8 @@ Produce JSON:
   "video_script": "60-90 word narration for a short video, spoken style, ends with a question to the audience",
   "caption_instagram": "caption with hook, 3-4 short paragraphs, line breaks, 5-8 niche hashtags, cites the paper title + arXiv id",
   "caption_tiktok": "punchy 1-2 line caption + 4-6 hashtags",
-  "post_bluesky": "THE MAIN POST, <=280 chars incl. the link {paper['url']}: hook plus the overarching story in miniature. This text carries the narrative; the images are support.",
-  "bluesky_thread": ["1-2 reply posts, each <=290 chars: your sharp analysis, the honest caveat, and a question or take that invites replies. Conversational, no link repetition."]
+  "post_bluesky": "THE MAIN POST, <=240 chars incl. the link {paper['url']}: hook plus the overarching story in miniature. This text carries the narrative; the images are support.",
+  "bluesky_thread": ["1-2 reply posts, each <=270 chars: your sharp analysis, the honest caveat, and a question or take that invites replies. Conversational, no link repetition."]
 }}""",
         system="You are an expert robotics researcher and social media writer.",
         max_tokens=4000,
@@ -79,6 +83,20 @@ Produce JSON:
         "status": "pending_media",
         "created": datetime.now(timezone.utc).isoformat(),
     }
+
+
+def fit_post(text: str, limit: int = 300, keep_link: str = "") -> str:
+    """Fit text within Bluesky's limit at a word boundary, never cropping
+    the link. Trims the prose, keeps the URL whole."""
+    text = text.strip()
+    if len(text) <= limit:
+        return text
+    if keep_link and keep_link in text:
+        prose = text.replace(keep_link, "").strip()
+        room = limit - len(keep_link) - 2
+        prose = prose[:room].rsplit(" ", 1)[0].rstrip(" ,.;:") + "…"
+        return f"{prose}\n{keep_link}"
+    return text[:limit - 1].rsplit(" ", 1)[0].rstrip(" ,.;:") + "…"
 
 
 def strip_dashes(obj):
@@ -108,7 +126,9 @@ def ensure_complete(c: dict, paper: dict) -> dict:
         room = 280 - len(link) - 2
         c["post_bluesky"] = f"{hook[:max(0, room)]}\n{link}".strip()
     if not c.get("bluesky_thread"):
-        c["bluesky_thread"] = [commentary[:290]]
+        c["bluesky_thread"] = [commentary]
+    c["post_bluesky"] = fit_post(c["post_bluesky"], 300, link)
+    c["bluesky_thread"] = [fit_post(t, 300) for t in c["bluesky_thread"][:2]]
     if not c.get("caption_instagram"):
         c["caption_instagram"] = f"{hook}\n\n{commentary}\n\n{paper['title']} — {link}"
     if not c.get("caption_tiktok"):

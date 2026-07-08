@@ -190,7 +190,8 @@ def suggest_evergreen(cfg, seen: set) -> list[dict]:
     rejected = [r.get("title", "") for r in load_json("rejections.json", [])][-30:]
     try:
         cands = claude_json(
-            f"""Suggest 4 robotics papers on arXiv that are NOT from the last few
+            f"""Today is {__import__('datetime').date.today().isoformat()}.
+Suggest 4 robotics papers on arXiv that are NOT from the last few
 months but are worth featuring on a robotics research account today:
 landmark works, underrated gems, or classics newly relevant to current events
 (e.g. RoboCup, humanoid progress, VLA models). Prefer visually rich papers.
@@ -242,7 +243,8 @@ def _rank_batch(batch, listing, feedback, conf, boost):
         rejections = "The owner REJECTED these recently (avoid similar picks):\n" + "\n".join(
             f"- {r.get('title','')[:70]}: \"{r.get('reason','no reason given')}\"" for r in rej)
     result = claude_json(
-        f"""You curate papers for a social account about: {cfg['account']['niche']}.
+        f"""Today is {__import__('datetime').date.today().isoformat()}.
+You curate papers for a social account about: {cfg['account']['niche']}.
 Priority topics: {boost}.
 
 Lessons learned from past engagement data:
