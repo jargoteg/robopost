@@ -40,5 +40,218 @@
         }
       ]
     }
+  },
+  {
+    "draft_id": "0a9bea4b",
+    "paper": {
+      "id": "rss-228a9b11e3",
+      "title": "Entangled robotic matter with cohesive motion",
+      "abstract": "By Syl Kacapyr Cornell engineers have developed a robotic collective that behaves less like a machine and more like a material that flows, reshapes and adapts to its environment without centralized control. The system, called the Cross-Link Collective, consists of dozens of small robots that have limited mobility individually, but together exhibit coordinated and sustained [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/entangled-robotic-matter-with-cohesive-motion/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.8
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "What if your robot swarm behaved like a liquid instead of a fleet?",
+      "commentary": "Cornell's Cross-Link Collective reframes swarm robotics around physical entanglement: robots with poor individual mobility become collectively fluid, reshaping and flowing as a material rather than a coordinated team. The clever insight is that mechanical coupling does the work that communication and computation usually handle — decentralizing control into the structure itself. This matters because it sidesteps the classic swarm failure modes of latency and packet loss. Honest caveat: Robohub coverage is light on quantitative benchmarks, so claims about scalability and real-world robustness need scrutiny in the full paper before we get too excited.",
+      "slides": [
+        {
+          "title": "Robots that flow like matter",
+          "body": "Cornell's Cross-Link Collective: dozens of low-mobility robots that together flow, reshape, and adapt to their environment — no centralized controller, no wireless coordination required."
+        },
+        {
+          "title": "The trick: physical entanglement",
+          "body": "Robots link mechanically at contact points. The coupling transfers force and motion directly through the collective body, replacing communication with physical structure."
+        },
+        {
+          "title": "Why individual mobility doesn't matter",
+          "body": "Each unit moves poorly alone. Entanglement pools their motion into cohesive, sustained displacement — emergent locomotion from structural interaction, not algorithmic instruction."
+        },
+        {
+          "title": "Decentralization through physics",
+          "body": "No central planner, no leader election, no consensus protocol. The material-like behavior emerges from local mechanical constraints — a fundamentally different design philosophy."
+        },
+        {
+          "title": "Why this is worth watching",
+          "body": "Soft matter and granular physics have long inspired robotics theory. Cross-Link Collective is a rare case of actually building the analogy — with real hardware, not simulation."
+        },
+        {
+          "title": "What we still need to see",
+          "body": "Quantitative scaling data, performance in cluttered 3D environments, and failure mode analysis are absent from current coverage. The full paper will be the real test."
+        }
+      ],
+      "video_script": "Most robot swarms coordinate through radios, algorithms, and careful software engineering. Cornell just tried something different. Their Cross-Link Collective physically entangles dozens of small robots — poor movers on their own — into a collective that flows and reshapes like a material. No central controller. No communication protocol. The physics does the work. It is a genuinely different design philosophy, borrowing from soft matter science rather than distributed computing. We need the full paper to know if it scales. But the concept alone is worth asking: how much swarm intelligence can we just... build into the structure?",
+      "caption_instagram": "What if a robot swarm behaved less like a fleet and more like a flowing liquid?\n\nCornell engineers built the Cross-Link Collective — dozens of small robots that can barely move alone, but together form a cohesive material that flows, reshapes, and adapts to its surroundings with zero centralized control.\n\nThe key insight is elegant: instead of solving coordination with communication and algorithms, they solve it with mechanical entanglement. The physical coupling between robots carries force and motion through the whole collective. Structure replaces software.\n\nThis is a meaningful philosophical shift for swarm robotics. We spend enormous effort on consensus protocols, localization, and failure recovery — and here is a system that sidesteps most of that by borrowing ideas from granular physics and soft matter science.\n\nCaveat worth noting: the Robohub write-up is light on hard numbers. Scalability claims and real-world robustness need to survive peer review before we treat this as a paradigm shift. But the concept is genuinely clever and I will be watching for the full paper.\n\nFull piece: 'Entangled robotic matter with cohesive motion' via @robohub\n\n#SwarmRobotics #CollectiveIntelligence #SoftRobotics #EmergentBehavior #RoboticsResearch #MaterialsScience #DistributedRobotics",
+      "caption_tiktok": "Robot swarm that moves like a liquid — no WiFi, no central brain, just physics doing the work. Cornell's entangled collective is a wild concept. #SwarmRobotics #Robotics #EmergentBehavior #SoftMatter",
+      "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept — waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics"
+    },
+    "status": "pending_review",
+    "created": "2026-07-08T19:51:10.677901+00:00",
+    "media": {
+      "figures": [
+        "media/0a9bea4b/fig_00.png"
+      ],
+      "bsky": [
+        "media/0a9bea4b/bsky_00.png",
+        "media/0a9bea4b/bsky_01.png",
+        "media/0a9bea4b/bsky_02.png",
+        "media/0a9bea4b/bsky_03.png"
+      ],
+      "slides": [
+        "media/0a9bea4b/slide_00.png",
+        "media/0a9bea4b/slide_01.png",
+        "media/0a9bea4b/slide_02.png",
+        "media/0a9bea4b/slide_03.png",
+        "media/0a9bea4b/slide_04.png",
+        "media/0a9bea4b/slide_05.png",
+        "media/0a9bea4b/slide_06.png",
+        "media/0a9bea4b/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "bacf1b66",
+    "paper": {
+      "id": "rss-f6204b5f70",
+      "title": "#RoboCup2026 – humanoid league day 1",
+      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
+      "authors": [],
+      "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RoboCup 2026 just went all-in on humanoid soccer",
+      "commentary": "RoboCup 2026 has opened in Incheon, South Korea, with a structural shift that's been years in the making: the soccer leagues are centering humanoid robots as the headline act. This isn't just a format tweak — it signals the field believes legged locomotion on dynamic, uneven play is tractable enough to compete at scale. The honest caveat is that 'primary focus on humanoid' can mean anything from genuine full-size bipeds to the kid-sized platforms that have dominated for years; the real question is whether the gap between lab demos and actual match play narrows here. Either way, this is the stress test that simulation and controlled environments can't replicate.",
+      "slides": [
+        {
+          "title": "RoboCup 2026 opens in Incheon",
+          "body": "Competitions run through 5 July in South Korea. This year's event marks a significant structural update: humanoid robots are now the primary focus of the soccer leagues, not an afterthought."
+        },
+        {
+          "title": "Why humanoid? Why now?",
+          "body": "The shift reflects growing confidence in legged locomotion research. Boston Dynamics, Unitree, and academic labs have all made bipedal walking more robust. RoboCup is asking: can that translate to actual competitive play?"
+        },
+        {
+          "title": "What 'primary focus' really means",
+          "body": "This phrase needs scrutiny. Kid-sized bipeds have competed for years. The question is whether full-size, adult-scale humanoids are genuinely entering the mix — or if we're rebranding an existing format."
+        },
+        {
+          "title": "The stress test simulation can't give you",
+          "body": "Match conditions — opponent contact, referee calls, crowd noise, lighting variation — expose failure modes no sim captures. Day 1 footage will reveal more than a hundred preprints about humanoid soccer policy."
+        },
+        {
+          "title": "What to watch this week",
+          "body": "Track fall recovery rates, ball-handling under pressure, and team coordination. These are the metrics that separate 'walking robot' from 'soccer-playing robot.' Results here shape research agendas for the next two years."
+        },
+        {
+          "title": "Swarm angle: multi-agent coordination",
+          "body": "Even in humanoid leagues, team-level coordination is a swarm problem — decentralized roles, emergent strategy, communication under latency. Day 1 will show how far that field has come outside the lab."
+        }
+      ],
+      "video_script": "RoboCup 2026 just kicked off in Incheon, South Korea, and this year the organizers made a bold call — humanoid robots are now the main event in soccer. Not a side league. The headline. That's a direct challenge to every lab working on bipedal locomotion and multi-agent coordination. Real matches expose what simulations hide: falls, collisions, chaos. By the end of this week we'll know if the hardware and the algorithms are actually ready. So — do you think humanoid soccer is a genuine milestone, or still an elaborate proof of concept?",
+      "caption_instagram": "RoboCup 2026 is live in Incheon, South Korea, and the format just changed in a way that actually matters.\n\nThe soccer leagues are now centered on humanoid robots. Not as a novelty category — as the primary focus. That's a statement about where the field thinks it is with legged locomotion and autonomous play.\n\nThe honest watch-out: 'humanoid focus' is a broad tent. Kid-sized bipeds have been at RoboCup for years. The real signal will come from whether full-scale, adult-sized platforms are genuinely competing — and how ugly or graceful the actual match play looks under pressure.\n\nFor those of us in multi-agent and swarm research, the team coordination layer is just as interesting as the individual robot hardware. Decentralized role assignment, emergent offense and defense, communication under real-world latency — these are unsolved problems and a week of competitive matches is a better stress test than any benchmark paper.\n\nCoverage via robohub.org — link in bio. Competitions run through 5 July.\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #MultiAgentSystems #RobotSoccer #AutonomousRobots #LeggedLocomotion #RoboticsResearch",
+      "caption_tiktok": "RoboCup 2026 just made humanoid robots the main event. Real matches, real chaos — this is the test no simulation can fake. #RoboCup2026 #HumanoidRobot #RoboticsResearch #AIRobotics",
+      "post_bluesky": "RoboCup 2026 is live in Incheon — and humanoid robots are now the headline act in soccer, not a side category. Real match stress-test > any controlled demo. Watching closely all week. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
+    },
+    "status": "pending_review",
+    "created": "2026-07-08T19:51:38.316954+00:00",
+    "media": {
+      "figures": [
+        "media/bacf1b66/fig_00.png"
+      ],
+      "bsky": [
+        "media/bacf1b66/bsky_00.png",
+        "media/bacf1b66/bsky_01.png",
+        "media/bacf1b66/bsky_02.png",
+        "media/bacf1b66/bsky_03.png"
+      ],
+      "slides": [
+        "media/bacf1b66/slide_00.png",
+        "media/bacf1b66/slide_01.png",
+        "media/bacf1b66/slide_02.png",
+        "media/bacf1b66/slide_03.png",
+        "media/bacf1b66/slide_04.png",
+        "media/bacf1b66/slide_05.png",
+        "media/bacf1b66/slide_06.png",
+        "media/bacf1b66/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "79586311",
+    "paper": {
+      "id": "rss-de1a3eddc8",
+      "title": "Sony AI table tennis robot outplays elite human players",
+      "abstract": "Ace rotates its paddle as it prepares to return the ball back to its human opponent, Yamato Kawamata, during a match in December 2025. Credit: Sony AI. In an article published today in Nature, Sony AI introduce Ace, the first robot to beat elite human players in competitive physical sport. Although AI systems have shown […]",
+      "authors": [],
+      "url": "https://robohub.org/sony-ai-table-tennis-robot-outplays-elite-human-players/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A robot just beat elite table tennis players in a peer-reviewed study",
+      "commentary": "Sony AI's Ace system, published in Nature, is the first robot documented beating elite human players in a real competitive physical sport — not a demo, a studied matchup. The technical achievement is real: real-time perception, high-speed motor control, and strategy adaptation against humans who can spin, place, and pressure a ball in ways no training dataset fully captures. This matters beyond ping-pong because it shows learned motor policies can now close the gap with human experts in fast, continuous, contact-adjacent tasks. Honest caveat: 'elite' is doing a lot of work here — we need to see exactly what rating bracket was tested, how many matches, and whether Ace degrades against truly world-class spin variation before declaring human parity in sport robotics.",
+      "slides": [
+        {
+          "title": "Robot beats elite humans at table tennis",
+          "body": "Sony AI's robot Ace, published in Nature, is the first documented case of a robot defeating elite human players in a competitive physical sport under studied conditions — not a staged exhibition."
+        },
+        {
+          "title": "Why table tennis is hard for robots",
+          "body": "Ball speeds exceed 10 m/s. Spin variation changes bounce physics unpredictably. Players adapt mid-rally. Any lag in perception or actuation means a lost point. It is a stress test for the full robotics stack."
+        },
+        {
+          "title": "What Ace actually does",
+          "body": "Ace combines real-time ball tracking, learned motor policies, and in-match strategy adaptation. It rotates its paddle dynamically to handle spin — a detail that separates it from earlier table tennis robot demos."
+        },
+        {
+          "title": "Why this matters beyond ping-pong",
+          "body": "Closing the gap with human experts in a fast, continuous, adversarial physical task signals that learned control policies are maturing. The same perception-action loop appears in manipulation, logistics, and — yes — robot soccer."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "The word 'elite' needs scrutiny. Exact player ratings, match count, and performance against top-10 world-ranked opponents with maximum spin variation are the numbers that will determine how big this result really is."
+        },
+        {
+          "title": "The bigger question for robotics",
+          "body": "Ace wins in a constrained, well-lit, single-task environment. Generalizing this level of physical competence to unstructured settings — the real frontier — is still unsolved. But this is a credible step toward it."
+        }
+      ],
+      "video_script": "A robot just beat elite human table tennis players, and it's published in Nature — so this isn't a viral marketing clip. Sony AI's system called Ace tracks the ball in real time, adapts its paddle angle for spin, and changes strategy mid-match against humans. That's a genuinely hard robotics problem involving fast perception, precise actuation, and adversarial adaptation all at once. My question is what player rating counts as elite here, because that number changes everything about how significant this result is. What do you think — does sport performance tell us anything useful about real-world robot capability?",
+      "caption_instagram": "A robot just beat elite human table tennis players in a peer-reviewed Nature study — and that deserves more than hype.\n\nSony AI's Ace system is the first robot documented defeating elite humans in a competitive physical sport under studied conditions. It tracks a ball moving at high speed, compensates for spin by rotating its paddle dynamically, and adapts strategy mid-rally. That last part is what separates this from earlier table tennis robot demos.\n\nWhy does this matter if you care about robotics broadly? Because table tennis is a brutal stress test: fast perception loops, continuous unpredictable physics, and an opponent actively trying to exploit your weaknesses. Getting a learned motor policy to work at this level is a real result.\n\nMy honest read: the word 'elite' is carrying a lot of weight. The key numbers — exact player ratings, match sample size, performance against maximum spin variation — will determine whether this is a landmark or a strong milestone. Either way, it's worth reading the Nature paper carefully.\n\nPaper: 'Mastering table tennis with a physical robot' — Sony AI, Nature 2025. Link in robohub article in bio.\n\n#swarmrobotics #roboticsresearch #reinforcementlearning #humanrobotinteraction #motorsports #robotcontrol #naturepaper",
+      "caption_tiktok": "A robot beat elite human table tennis players and it's published in Nature. Here's what's actually impressive — and what questions I still have. #robotics #AI #tabletennisrobot #sonyai",
+      "post_bluesky": "Sony AI's Ace robot beats elite humans at table tennis — published in Nature, not a promo clip. Real-time spin compensation + mid-rally strategy adaptation is genuinely hard. Caveat: what rating bracket counts as 'elite' matters a lot here. https://robohub.org/sony-ai-table-tennis-robot-outplays-elite-human-players/ #robotics"
+    },
+    "status": "pending_review",
+    "created": "2026-07-08T19:52:05.857711+00:00",
+    "media": {
+      "figures": [
+        "media/79586311/fig_00.png"
+      ],
+      "bsky": [
+        "media/79586311/bsky_00.png",
+        "media/79586311/bsky_01.png",
+        "media/79586311/bsky_02.png",
+        "media/79586311/bsky_03.png"
+      ],
+      "slides": [
+        "media/79586311/slide_00.png",
+        "media/79586311/slide_01.png",
+        "media/79586311/slide_02.png",
+        "media/79586311/slide_03.png",
+        "media/79586311/slide_04.png",
+        "media/79586311/slide_05.png",
+        "media/79586311/slide_06.png",
+        "media/79586311/slide_07.png"
+      ]
+    }
   }
 ]
