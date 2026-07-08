@@ -113,8 +113,8 @@
       ]
     },
     "issue": 5,
-    "post_failures": 2,
-    "failures_notified": 2
+    "post_failures": 3,
+    "failures_notified": 3
   },
   {
     "draft_id": "bacf1b66",
@@ -597,7 +597,7 @@
       "caption_tiktok": "RoboCup 2026 just ended and humanoid robots are now the main event. Here's what that actually means for the field. #RoboCup2026 #HumanoidRobots #Robotics #MultiAgentSystems",
       "post_bluesky": "RoboCup 2026 wrapped in Incheon. Humanoids are now the primary soccer platform, not the sideshow. Real games stress-test coordination in ways no benchmark does. Worth studying what held up. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T20:22:53.923447+00:00",
     "media": {
       "figures": [
@@ -862,5 +862,73 @@
       ]
     },
     "issue": 16
+  },
+  {
+    "draft_id": "81a84806",
+    "paper": {
+      "id": "rss-f6204b5f70",
+      "title": "#RoboCup2026 – humanoid league day 1",
+      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
+      "authors": [],
+      "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5,
+      "redo_notes": "some cards seem to have failed or corrupted."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RoboCup 2026 is live and humanoids just took center stage",
+      "commentary": "RoboCup 2026 opened today in Incheon, South Korea, with a notable structural shift: the soccer leagues are now primarily organized around humanoid robots. This is a meaningful format change, not just a scheduling tweak, because it forces teams to commit resources to full-body locomotion and balance rather than specialized wheeled or low-CoM platforms. The timing is interesting given how much bipedal hardware has matured in the last two years. Caveat: day one coverage is thin on technical specifics, so how this format change actually reshapes team strategies will take a few more days to see clearly.",
+      "slides": [
+        {
+          "title": "RoboCup 2026 Opens in Incheon",
+          "body": "Day 1 of RoboCup 2026 in Incheon, South Korea. Competitions run through 5 July. The headline change: soccer leagues restructured around humanoid robots as the primary platform."
+        },
+        {
+          "title": "Why Humanoids? Why Now?",
+          "body": "Past RoboCup soccer featured wheeled and kid-size platforms alongside humanoids. The new format pushes full bipedal locomotion to the front. That raises the physical difficulty bar considerably for competing teams."
+        },
+        {
+          "title": "What This Demands from Teams",
+          "body": "Humanoid soccer requires stable dynamic walking, vision under motion blur, and real-time balance recovery. These are unsolved problems at game speed. Teams optimizing for wheeled platforms have to rebuild from the ground up."
+        },
+        {
+          "title": "The Broader Stakes",
+          "body": "RoboCup's long-term goal is a humanoid team beating the human World Cup winner by 2050. Centering the competition on humanoids now keeps pressure on that trajectory, even if 2050 still feels distant."
+        },
+        {
+          "title": "Watch For This Week",
+          "body": "Key questions: which teams handle rough field contacts without falling, how well do perception stacks cope with crowded scenes, and whether any team shows coordination strategies beyond one-on-one ball chasing."
+        }
+      ],
+      "video_script": "RoboCup 2026 is live in Incheon, and the format just changed. Soccer is now built around humanoid robots. Not wheeled platforms, not low-center-of-mass shortcuts. Full bipedal locomotion, dynamic balance, real-time vision. That is a hard problem at game speed. Teams that optimized for other platforms have to adapt fast. The competition runs until July 5th. I will be watching how teams handle contact, recovery, and multi-robot coordination. What do you think is the biggest unsolved bottleneck in humanoid soccer right now?",
+      "caption_instagram": "RoboCup 2026 just kicked off in Incheon, South Korea, and day one comes with a real format shift.\n\nThe soccer leagues are now primarily organized around humanoid robots. That sounds like a small administrative change but it actually restructures what every competing team has to invest in. Bipedal locomotion, real-time balance under contact, vision at game speed. These are genuinely hard engineering problems.\n\nIn past editions teams could compete seriously with wheeled or specialized low-profile platforms. That path is narrowed now. The pressure is on full-body robot control, which aligns more honestly with what the 2050 World Cup goal actually requires.\n\nCoverage is just getting started so the technical details on team strategies will come out over the next few days. Worth following closely if humanoid locomotion or multi-agent coordination is anywhere near your research.\n\nSource: robohub.org, RoboCup 2026 Day 1 coverage.\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #RobotSoccer #BipedalLocomotion #MultiAgentSystems #Robotics",
+      "caption_tiktok": "RoboCup 2026 is live and humanoids are now the main event. Full bipedal soccer, real contact, real falls. This week is going to be telling. #RoboCup2026 #HumanoidRobotics #Robotics #RobotSoccer",
+      "post_bluesky": "RoboCup 2026 opened in Incheon today. Big format shift: soccer leagues now centered on humanoid robots, not wheeled or specialized platforms. Raises the bar on locomotion and balance significantly. Worth watching. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
+    },
+    "status": "in_review",
+    "created": "2026-07-08T20:43:11.163524+00:00",
+    "media": {
+      "figures": [
+        "media/81a84806/fig_00.png"
+      ],
+      "bsky": [
+        "media/81a84806/bsky_00.png",
+        "media/81a84806/bsky_01.png",
+        "media/81a84806/bsky_02.png",
+        "media/81a84806/bsky_03.png"
+      ],
+      "slides": [
+        "media/81a84806/slide_00.png",
+        "media/81a84806/slide_01.png",
+        "media/81a84806/slide_02.png",
+        "media/81a84806/slide_03.png",
+        "media/81a84806/slide_04.png",
+        "media/81a84806/slide_05.png",
+        "media/81a84806/slide_06.png"
+      ]
+    },
+    "issue": 17
   }
 ]
