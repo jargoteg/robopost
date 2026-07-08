@@ -23,12 +23,12 @@
     },
     "content": {
       "format": "carousel",
-      "hook": "1,000 robots \ud83e\udd16 just self-organized \u2014 no one told them how \u2728",
+      "hook": "1,000 robots 🤖 just self-organized — no one told them how ✨",
       "commentary": "The emergence result is genuinely striking and the scale is unprecedented for hardware. Caveat: the arena is highly controlled, so real-world foraging remains open. Still, this is the strongest swarm-scaling evidence yet.",
       "slides": [
         {
           "title": "The setup",
-          "body": "1,000 kilobots forage with only local sensing \u2014 no central controller, no global map."
+          "body": "1,000 kilobots forage with only local sensing — no central controller, no global map."
         },
         {
           "title": "What emerged",
@@ -57,11 +57,11 @@
     "content": {
       "format": "carousel",
       "hook": "What if your robot swarm behaved like a liquid instead of a fleet?",
-      "commentary": "Cornell's Cross-Link Collective reframes swarm robotics around physical entanglement: robots with poor individual mobility become collectively fluid, reshaping and flowing as a material rather than a coordinated team. The clever insight is that mechanical coupling does the work that communication and computation usually handle \u2014 decentralizing control into the structure itself. This matters because it sidesteps the classic swarm failure modes of latency and packet loss. Honest caveat: Robohub coverage is light on quantitative benchmarks, so claims about scalability and real-world robustness need scrutiny in the full paper before we get too excited.",
+      "commentary": "Cornell's Cross-Link Collective reframes swarm robotics around physical entanglement: robots with poor individual mobility become collectively fluid, reshaping and flowing as a material rather than a coordinated team. The clever insight is that mechanical coupling does the work that communication and computation usually handle — decentralizing control into the structure itself. This matters because it sidesteps the classic swarm failure modes of latency and packet loss. Honest caveat: Robohub coverage is light on quantitative benchmarks, so claims about scalability and real-world robustness need scrutiny in the full paper before we get too excited.",
       "slides": [
         {
           "title": "Robots that flow like matter",
-          "body": "Cornell's Cross-Link Collective: dozens of low-mobility robots that together flow, reshape, and adapt to their environment \u2014 no centralized controller, no wireless coordination required."
+          "body": "Cornell's Cross-Link Collective: dozens of low-mobility robots that together flow, reshape, and adapt to their environment — no centralized controller, no wireless coordination required."
         },
         {
           "title": "The trick: physical entanglement",
@@ -69,25 +69,25 @@
         },
         {
           "title": "Why individual mobility doesn't matter",
-          "body": "Each unit moves poorly alone. Entanglement pools their motion into cohesive, sustained displacement \u2014 emergent locomotion from structural interaction, not algorithmic instruction."
+          "body": "Each unit moves poorly alone. Entanglement pools their motion into cohesive, sustained displacement — emergent locomotion from structural interaction, not algorithmic instruction."
         },
         {
           "title": "Decentralization through physics",
-          "body": "No central planner, no leader election, no consensus protocol. The material-like behavior emerges from local mechanical constraints \u2014 a fundamentally different design philosophy."
+          "body": "No central planner, no leader election, no consensus protocol. The material-like behavior emerges from local mechanical constraints — a fundamentally different design philosophy."
         },
         {
           "title": "Why this is worth watching",
-          "body": "Soft matter and granular physics have long inspired robotics theory. Cross-Link Collective is a rare case of actually building the analogy \u2014 with real hardware, not simulation."
+          "body": "Soft matter and granular physics have long inspired robotics theory. Cross-Link Collective is a rare case of actually building the analogy — with real hardware, not simulation."
         },
         {
           "title": "What we still need to see",
           "body": "Quantitative scaling data, performance in cluttered 3D environments, and failure mode analysis are absent from current coverage. The full paper will be the real test."
         }
       ],
-      "video_script": "Most robot swarms coordinate through radios, algorithms, and careful software engineering. Cornell just tried something different. Their Cross-Link Collective physically entangles dozens of small robots \u2014 poor movers on their own \u2014 into a collective that flows and reshapes like a material. No central controller. No communication protocol. The physics does the work. It is a genuinely different design philosophy, borrowing from soft matter science rather than distributed computing. We need the full paper to know if it scales. But the concept alone is worth asking: how much swarm intelligence can we just... build into the structure?",
-      "caption_instagram": "What if a robot swarm behaved less like a fleet and more like a flowing liquid?\n\nCornell engineers built the Cross-Link Collective \u2014 dozens of small robots that can barely move alone, but together form a cohesive material that flows, reshapes, and adapts to its surroundings with zero centralized control.\n\nThe key insight is elegant: instead of solving coordination with communication and algorithms, they solve it with mechanical entanglement. The physical coupling between robots carries force and motion through the whole collective. Structure replaces software.\n\nThis is a meaningful philosophical shift for swarm robotics. We spend enormous effort on consensus protocols, localization, and failure recovery \u2014 and here is a system that sidesteps most of that by borrowing ideas from granular physics and soft matter science.\n\nCaveat worth noting: the Robohub write-up is light on hard numbers. Scalability claims and real-world robustness need to survive peer review before we treat this as a paradigm shift. But the concept is genuinely clever and I will be watching for the full paper.\n\nFull piece: 'Entangled robotic matter with cohesive motion' via @robohub\n\n#SwarmRobotics #CollectiveIntelligence #SoftRobotics #EmergentBehavior #RoboticsResearch #MaterialsScience #DistributedRobotics",
-      "caption_tiktok": "Robot swarm that moves like a liquid \u2014 no WiFi, no central brain, just physics doing the work. Cornell's entangled collective is a wild concept. #SwarmRobotics #Robotics #EmergentBehavior #SoftMatter",
-      "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept \u2014 waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics"
+      "video_script": "Most robot swarms coordinate through radios, algorithms, and careful software engineering. Cornell just tried something different. Their Cross-Link Collective physically entangles dozens of small robots — poor movers on their own — into a collective that flows and reshapes like a material. No central controller. No communication protocol. The physics does the work. It is a genuinely different design philosophy, borrowing from soft matter science rather than distributed computing. We need the full paper to know if it scales. But the concept alone is worth asking: how much swarm intelligence can we just... build into the structure?",
+      "caption_instagram": "What if a robot swarm behaved less like a fleet and more like a flowing liquid?\n\nCornell engineers built the Cross-Link Collective — dozens of small robots that can barely move alone, but together form a cohesive material that flows, reshapes, and adapts to its surroundings with zero centralized control.\n\nThe key insight is elegant: instead of solving coordination with communication and algorithms, they solve it with mechanical entanglement. The physical coupling between robots carries force and motion through the whole collective. Structure replaces software.\n\nThis is a meaningful philosophical shift for swarm robotics. We spend enormous effort on consensus protocols, localization, and failure recovery — and here is a system that sidesteps most of that by borrowing ideas from granular physics and soft matter science.\n\nCaveat worth noting: the Robohub write-up is light on hard numbers. Scalability claims and real-world robustness need to survive peer review before we treat this as a paradigm shift. But the concept is genuinely clever and I will be watching for the full paper.\n\nFull piece: 'Entangled robotic matter with cohesive motion' via @robohub\n\n#SwarmRobotics #CollectiveIntelligence #SoftRobotics #EmergentBehavior #RoboticsResearch #MaterialsScience #DistributedRobotics",
+      "caption_tiktok": "Robot swarm that moves like a liquid — no WiFi, no central brain, just physics doing the work. Cornell's entangled collective is a wild concept. #SwarmRobotics #Robotics #EmergentBehavior #SoftMatter",
+      "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept — waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics"
     },
     "status": "approved",
     "created": "2026-07-08T19:51:10.677901+00:00",
@@ -112,14 +112,16 @@
         "media/0a9bea4b/slide_07.png"
       ]
     },
-    "issue": 5
+    "issue": 5,
+    "post_failures": 1,
+    "failures_notified": 1
   },
   {
     "draft_id": "bacf1b66",
     "paper": {
       "id": "rss-f6204b5f70",
-      "title": "#RoboCup2026 \u2013 humanoid league day 1",
-      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It\u2019s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series [\u2026]",
+      "title": "#RoboCup2026 – humanoid league day 1",
+      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
       "authors": [],
       "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
       "source": "robohub.org",
@@ -129,7 +131,7 @@
     "content": {
       "format": "carousel",
       "hook": "RoboCup 2026 just went all-in on humanoid soccer",
-      "commentary": "RoboCup 2026 has opened in Incheon, South Korea, with a structural shift that's been years in the making: the soccer leagues are centering humanoid robots as the headline act. This isn't just a format tweak \u2014 it signals the field believes legged locomotion on dynamic, uneven play is tractable enough to compete at scale. The honest caveat is that 'primary focus on humanoid' can mean anything from genuine full-size bipeds to the kid-sized platforms that have dominated for years; the real question is whether the gap between lab demos and actual match play narrows here. Either way, this is the stress test that simulation and controlled environments can't replicate.",
+      "commentary": "RoboCup 2026 has opened in Incheon, South Korea, with a structural shift that's been years in the making: the soccer leagues are centering humanoid robots as the headline act. This isn't just a format tweak — it signals the field believes legged locomotion on dynamic, uneven play is tractable enough to compete at scale. The honest caveat is that 'primary focus on humanoid' can mean anything from genuine full-size bipeds to the kid-sized platforms that have dominated for years; the real question is whether the gap between lab demos and actual match play narrows here. Either way, this is the stress test that simulation and controlled environments can't replicate.",
       "slides": [
         {
           "title": "RoboCup 2026 opens in Incheon",
@@ -141,11 +143,11 @@
         },
         {
           "title": "What 'primary focus' really means",
-          "body": "This phrase needs scrutiny. Kid-sized bipeds have competed for years. The question is whether full-size, adult-scale humanoids are genuinely entering the mix \u2014 or if we're rebranding an existing format."
+          "body": "This phrase needs scrutiny. Kid-sized bipeds have competed for years. The question is whether full-size, adult-scale humanoids are genuinely entering the mix — or if we're rebranding an existing format."
         },
         {
           "title": "The stress test simulation can't give you",
-          "body": "Match conditions \u2014 opponent contact, referee calls, crowd noise, lighting variation \u2014 expose failure modes no sim captures. Day 1 footage will reveal more than a hundred preprints about humanoid soccer policy."
+          "body": "Match conditions — opponent contact, referee calls, crowd noise, lighting variation — expose failure modes no sim captures. Day 1 footage will reveal more than a hundred preprints about humanoid soccer policy."
         },
         {
           "title": "What to watch this week",
@@ -153,13 +155,13 @@
         },
         {
           "title": "Swarm angle: multi-agent coordination",
-          "body": "Even in humanoid leagues, team-level coordination is a swarm problem \u2014 decentralized roles, emergent strategy, communication under latency. Day 1 will show how far that field has come outside the lab."
+          "body": "Even in humanoid leagues, team-level coordination is a swarm problem — decentralized roles, emergent strategy, communication under latency. Day 1 will show how far that field has come outside the lab."
         }
       ],
-      "video_script": "RoboCup 2026 just kicked off in Incheon, South Korea, and this year the organizers made a bold call \u2014 humanoid robots are now the main event in soccer. Not a side league. The headline. That's a direct challenge to every lab working on bipedal locomotion and multi-agent coordination. Real matches expose what simulations hide: falls, collisions, chaos. By the end of this week we'll know if the hardware and the algorithms are actually ready. So \u2014 do you think humanoid soccer is a genuine milestone, or still an elaborate proof of concept?",
-      "caption_instagram": "RoboCup 2026 is live in Incheon, South Korea, and the format just changed in a way that actually matters.\n\nThe soccer leagues are now centered on humanoid robots. Not as a novelty category \u2014 as the primary focus. That's a statement about where the field thinks it is with legged locomotion and autonomous play.\n\nThe honest watch-out: 'humanoid focus' is a broad tent. Kid-sized bipeds have been at RoboCup for years. The real signal will come from whether full-scale, adult-sized platforms are genuinely competing \u2014 and how ugly or graceful the actual match play looks under pressure.\n\nFor those of us in multi-agent and swarm research, the team coordination layer is just as interesting as the individual robot hardware. Decentralized role assignment, emergent offense and defense, communication under real-world latency \u2014 these are unsolved problems and a week of competitive matches is a better stress test than any benchmark paper.\n\nCoverage via robohub.org \u2014 link in bio. Competitions run through 5 July.\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #MultiAgentSystems #RobotSoccer #AutonomousRobots #LeggedLocomotion #RoboticsResearch",
-      "caption_tiktok": "RoboCup 2026 just made humanoid robots the main event. Real matches, real chaos \u2014 this is the test no simulation can fake. #RoboCup2026 #HumanoidRobot #RoboticsResearch #AIRobotics",
-      "post_bluesky": "RoboCup 2026 is live in Incheon \u2014 and humanoid robots are now the headline act in soccer, not a side category. Real match stress-test > any controlled demo. Watching closely all week. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
+      "video_script": "RoboCup 2026 just kicked off in Incheon, South Korea, and this year the organizers made a bold call — humanoid robots are now the main event in soccer. Not a side league. The headline. That's a direct challenge to every lab working on bipedal locomotion and multi-agent coordination. Real matches expose what simulations hide: falls, collisions, chaos. By the end of this week we'll know if the hardware and the algorithms are actually ready. So — do you think humanoid soccer is a genuine milestone, or still an elaborate proof of concept?",
+      "caption_instagram": "RoboCup 2026 is live in Incheon, South Korea, and the format just changed in a way that actually matters.\n\nThe soccer leagues are now centered on humanoid robots. Not as a novelty category — as the primary focus. That's a statement about where the field thinks it is with legged locomotion and autonomous play.\n\nThe honest watch-out: 'humanoid focus' is a broad tent. Kid-sized bipeds have been at RoboCup for years. The real signal will come from whether full-scale, adult-sized platforms are genuinely competing — and how ugly or graceful the actual match play looks under pressure.\n\nFor those of us in multi-agent and swarm research, the team coordination layer is just as interesting as the individual robot hardware. Decentralized role assignment, emergent offense and defense, communication under real-world latency — these are unsolved problems and a week of competitive matches is a better stress test than any benchmark paper.\n\nCoverage via robohub.org — link in bio. Competitions run through 5 July.\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #MultiAgentSystems #RobotSoccer #AutonomousRobots #LeggedLocomotion #RoboticsResearch",
+      "caption_tiktok": "RoboCup 2026 just made humanoid robots the main event. Real matches, real chaos — this is the test no simulation can fake. #RoboCup2026 #HumanoidRobot #RoboticsResearch #AIRobotics",
+      "post_bluesky": "RoboCup 2026 is live in Incheon — and humanoid robots are now the headline act in soccer, not a side category. Real match stress-test > any controlled demo. Watching closely all week. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
     },
     "status": "rejected",
     "created": "2026-07-08T19:51:38.316954+00:00",
@@ -191,7 +193,7 @@
     "paper": {
       "id": "rss-de1a3eddc8",
       "title": "Sony AI table tennis robot outplays elite human players",
-      "abstract": "Ace rotates its paddle as it prepares to return the ball back to its human opponent, Yamato Kawamata, during a match in December 2025. Credit: Sony AI. In an article published today in Nature, Sony AI introduce Ace, the first robot to beat elite human players in competitive physical sport. Although AI systems have shown [\u2026]",
+      "abstract": "Ace rotates its paddle as it prepares to return the ball back to its human opponent, Yamato Kawamata, during a match in December 2025. Credit: Sony AI. In an article published today in Nature, Sony AI introduce Ace, the first robot to beat elite human players in competitive physical sport. Although AI systems have shown […]",
       "authors": [],
       "url": "https://robohub.org/sony-ai-table-tennis-robot-outplays-elite-human-players/",
       "source": "robohub.org",
@@ -201,11 +203,11 @@
     "content": {
       "format": "carousel",
       "hook": "A robot just beat elite table tennis players in a peer-reviewed study",
-      "commentary": "Sony AI's Ace system, published in Nature, is the first robot documented beating elite human players in a real competitive physical sport \u2014 not a demo, a studied matchup. The technical achievement is real: real-time perception, high-speed motor control, and strategy adaptation against humans who can spin, place, and pressure a ball in ways no training dataset fully captures. This matters beyond ping-pong because it shows learned motor policies can now close the gap with human experts in fast, continuous, contact-adjacent tasks. Honest caveat: 'elite' is doing a lot of work here \u2014 we need to see exactly what rating bracket was tested, how many matches, and whether Ace degrades against truly world-class spin variation before declaring human parity in sport robotics.",
+      "commentary": "Sony AI's Ace system, published in Nature, is the first robot documented beating elite human players in a real competitive physical sport — not a demo, a studied matchup. The technical achievement is real: real-time perception, high-speed motor control, and strategy adaptation against humans who can spin, place, and pressure a ball in ways no training dataset fully captures. This matters beyond ping-pong because it shows learned motor policies can now close the gap with human experts in fast, continuous, contact-adjacent tasks. Honest caveat: 'elite' is doing a lot of work here — we need to see exactly what rating bracket was tested, how many matches, and whether Ace degrades against truly world-class spin variation before declaring human parity in sport robotics.",
       "slides": [
         {
           "title": "Robot beats elite humans at table tennis",
-          "body": "Sony AI's robot Ace, published in Nature, is the first documented case of a robot defeating elite human players in a competitive physical sport under studied conditions \u2014 not a staged exhibition."
+          "body": "Sony AI's robot Ace, published in Nature, is the first documented case of a robot defeating elite human players in a competitive physical sport under studied conditions — not a staged exhibition."
         },
         {
           "title": "Why table tennis is hard for robots",
@@ -213,11 +215,11 @@
         },
         {
           "title": "What Ace actually does",
-          "body": "Ace combines real-time ball tracking, learned motor policies, and in-match strategy adaptation. It rotates its paddle dynamically to handle spin \u2014 a detail that separates it from earlier table tennis robot demos."
+          "body": "Ace combines real-time ball tracking, learned motor policies, and in-match strategy adaptation. It rotates its paddle dynamically to handle spin — a detail that separates it from earlier table tennis robot demos."
         },
         {
           "title": "Why this matters beyond ping-pong",
-          "body": "Closing the gap with human experts in a fast, continuous, adversarial physical task signals that learned control policies are maturing. The same perception-action loop appears in manipulation, logistics, and \u2014 yes \u2014 robot soccer."
+          "body": "Closing the gap with human experts in a fast, continuous, adversarial physical task signals that learned control policies are maturing. The same perception-action loop appears in manipulation, logistics, and — yes — robot soccer."
         },
         {
           "title": "The honest caveat",
@@ -225,13 +227,13 @@
         },
         {
           "title": "The bigger question for robotics",
-          "body": "Ace wins in a constrained, well-lit, single-task environment. Generalizing this level of physical competence to unstructured settings \u2014 the real frontier \u2014 is still unsolved. But this is a credible step toward it."
+          "body": "Ace wins in a constrained, well-lit, single-task environment. Generalizing this level of physical competence to unstructured settings — the real frontier — is still unsolved. But this is a credible step toward it."
         }
       ],
-      "video_script": "A robot just beat elite human table tennis players, and it's published in Nature \u2014 so this isn't a viral marketing clip. Sony AI's system called Ace tracks the ball in real time, adapts its paddle angle for spin, and changes strategy mid-match against humans. That's a genuinely hard robotics problem involving fast perception, precise actuation, and adversarial adaptation all at once. My question is what player rating counts as elite here, because that number changes everything about how significant this result is. What do you think \u2014 does sport performance tell us anything useful about real-world robot capability?",
-      "caption_instagram": "A robot just beat elite human table tennis players in a peer-reviewed Nature study \u2014 and that deserves more than hype.\n\nSony AI's Ace system is the first robot documented defeating elite humans in a competitive physical sport under studied conditions. It tracks a ball moving at high speed, compensates for spin by rotating its paddle dynamically, and adapts strategy mid-rally. That last part is what separates this from earlier table tennis robot demos.\n\nWhy does this matter if you care about robotics broadly? Because table tennis is a brutal stress test: fast perception loops, continuous unpredictable physics, and an opponent actively trying to exploit your weaknesses. Getting a learned motor policy to work at this level is a real result.\n\nMy honest read: the word 'elite' is carrying a lot of weight. The key numbers \u2014 exact player ratings, match sample size, performance against maximum spin variation \u2014 will determine whether this is a landmark or a strong milestone. Either way, it's worth reading the Nature paper carefully.\n\nPaper: 'Mastering table tennis with a physical robot' \u2014 Sony AI, Nature 2025. Link in robohub article in bio.\n\n#swarmrobotics #roboticsresearch #reinforcementlearning #humanrobotinteraction #motorsports #robotcontrol #naturepaper",
-      "caption_tiktok": "A robot beat elite human table tennis players and it's published in Nature. Here's what's actually impressive \u2014 and what questions I still have. #robotics #AI #tabletennisrobot #sonyai",
-      "post_bluesky": "Sony AI's Ace robot beats elite humans at table tennis \u2014 published in Nature, not a promo clip. Real-time spin compensation + mid-rally strategy adaptation is genuinely hard. Caveat: what rating bracket counts as 'elite' matters a lot here. https://robohub.org/sony-ai-table-tennis-robot-outplays-elite-human-players/ #robotics"
+      "video_script": "A robot just beat elite human table tennis players, and it's published in Nature — so this isn't a viral marketing clip. Sony AI's system called Ace tracks the ball in real time, adapts its paddle angle for spin, and changes strategy mid-match against humans. That's a genuinely hard robotics problem involving fast perception, precise actuation, and adversarial adaptation all at once. My question is what player rating counts as elite here, because that number changes everything about how significant this result is. What do you think — does sport performance tell us anything useful about real-world robot capability?",
+      "caption_instagram": "A robot just beat elite human table tennis players in a peer-reviewed Nature study — and that deserves more than hype.\n\nSony AI's Ace system is the first robot documented defeating elite humans in a competitive physical sport under studied conditions. It tracks a ball moving at high speed, compensates for spin by rotating its paddle dynamically, and adapts strategy mid-rally. That last part is what separates this from earlier table tennis robot demos.\n\nWhy does this matter if you care about robotics broadly? Because table tennis is a brutal stress test: fast perception loops, continuous unpredictable physics, and an opponent actively trying to exploit your weaknesses. Getting a learned motor policy to work at this level is a real result.\n\nMy honest read: the word 'elite' is carrying a lot of weight. The key numbers — exact player ratings, match sample size, performance against maximum spin variation — will determine whether this is a landmark or a strong milestone. Either way, it's worth reading the Nature paper carefully.\n\nPaper: 'Mastering table tennis with a physical robot' — Sony AI, Nature 2025. Link in robohub article in bio.\n\n#swarmrobotics #roboticsresearch #reinforcementlearning #humanrobotinteraction #motorsports #robotcontrol #naturepaper",
+      "caption_tiktok": "A robot beat elite human table tennis players and it's published in Nature. Here's what's actually impressive — and what questions I still have. #robotics #AI #tabletennisrobot #sonyai",
+      "post_bluesky": "Sony AI's Ace robot beats elite humans at table tennis — published in Nature, not a promo clip. Real-time spin compensation + mid-rally strategy adaptation is genuinely hard. Caveat: what rating bracket counts as 'elite' matters a lot here. https://robohub.org/sony-ai-table-tennis-robot-outplays-elite-human-players/ #robotics"
     },
     "status": "rejected",
     "created": "2026-07-08T19:52:05.857711+00:00",
@@ -263,7 +265,7 @@
     "paper": {
       "id": "rss-6f40e25aa1",
       "title": "#RoboCup2026 social media round-up",
-      "abstract": "This year, RoboCup took place in Incheon, South Korea, from 2-6 July. The event saw teams take part in competitions, training sessions, and a symposium. Take a look at what the participants got up to in our round up from social media. The wait is over! \ud83e\udd16\ud83c\udf89 RoboCup 2026 officially begins today! Join us for [\u2026]",
+      "abstract": "This year, RoboCup took place in Incheon, South Korea, from 2-6 July. The event saw teams take part in competitions, training sessions, and a symposium. Take a look at what the participants got up to in our round up from social media. The wait is over! 🤖🎉 RoboCup 2026 officially begins today! Join us for […]",
       "authors": [],
       "url": "https://robohub.org/robocup2026-social-media-round-up/",
       "source": "robohub.org",
@@ -273,7 +275,7 @@
     "content": {
       "format": "carousel",
       "hook": "RoboCup 2026 is live. Here is what the field actually looks like right now.",
-      "commentary": "Robohub's social media round-up from Incheon gives a ground-level snapshot of where competitive robot soccer, rescue, and logistics actually stand in 2026. The value here isn't analysis \u2014 it's raw signal: what teams showed up, what broke on the field, and what the community is excited about versus quietly struggling with. As someone who studies swarm coordination, RoboCup is genuinely one of the best annual stress-tests for multi-agent systems under real-world noise. The honest caveat: social media round-ups flatten nuance \u2014 you get highlight reels, not failure rates, so temper the optimism accordingly.",
+      "commentary": "Robohub's social media round-up from Incheon gives a ground-level snapshot of where competitive robot soccer, rescue, and logistics actually stand in 2026. The value here isn't analysis — it's raw signal: what teams showed up, what broke on the field, and what the community is excited about versus quietly struggling with. As someone who studies swarm coordination, RoboCup is genuinely one of the best annual stress-tests for multi-agent systems under real-world noise. The honest caveat: social media round-ups flatten nuance — you get highlight reels, not failure rates, so temper the optimism accordingly.",
       "slides": [
         {
           "title": "RoboCup 2026 Opens in Incheon",
@@ -281,7 +283,7 @@
         },
         {
           "title": "Why RoboCup Still Matters",
-          "body": "It is one of few public, standardized stress-tests for real-time multi-agent coordination. Results here often predict where the field moves next \u2014 and expose what the lab papers quietly assume away."
+          "body": "It is one of few public, standardized stress-tests for real-time multi-agent coordination. Results here often predict where the field moves next — and expose what the lab papers quietly assume away."
         },
         {
           "title": "What the Social Feed Shows",
@@ -297,13 +299,13 @@
         },
         {
           "title": "Follow Along This Week",
-          "body": "Accepted paper announcements expected daily. Prioritize league-specific technical reports over press coverage \u2014 that is where the honest accounting of what worked lives."
+          "body": "Accepted paper announcements expected daily. Prioritize league-specific technical reports over press coverage — that is where the honest accounting of what worked lives."
         }
       ],
-      "video_script": "RoboCup 2026 just kicked off in Incheon, South Korea, and if you care about real-world multi-robot systems, this week matters more than most conference seasons. The competition floor is where the gap between simulation and reality gets brutally exposed. Social media highlights look great, but the real data is in the symposium papers dropping this week. I'll be tracking what actually moved \u2014 coordination, localization, learning under noise \u2014 and what's still stuck. What league are you watching most closely this year?",
-      "caption_instagram": "RoboCup 2026 is live in Incheon, and the community is already flooding social media with footage from the competition floor.\n\nRobohub put together a social round-up that gives you a ground-level view of what teams are actually doing \u2014 beyond the polished press releases. As a swarm robotics researcher, this event is one of my favorite annual reality checks. No simulation, no cherry-picked conditions. Just robots failing and succeeding in front of an audience.\n\nHonest caveat: social media highlights are curated by what looks good on camera. The coordination breakdowns, the localization failures, the moments where the multi-agent system just falls apart \u2014 those don't trend. So take the excitement as a directional signal, not a performance report.\n\nThe symposium papers are where the real accounting happens. I'll be posting breakdowns as they drop this week. Stay close.\n\nFull round-up linked in bio. Source: Robohub \u2014 RoboCup 2026 Social Media Round-Up.\n\n#RoboCup2026 #SwarmRobotics #MultiAgentSystems #AutonomousRobots #RobotSoccer #RoboticsResearch #HumanoidRobots",
-      "caption_tiktok": "RoboCup 2026 just started and the footage is wild \u2014 but here's how to watch it like a researcher, not a hype account. #RoboCup2026 #SwarmRobotics #RoboticsResearch #MultiAgentSystems",
-      "post_bluesky": "RoboCup 2026 is live in Incheon. Robohub's social round-up is the vibe check \u2014 the symposium papers dropping this week are where the real signal is. Tracking both. https://robohub.org/robocup2026-social-media-round-up/ #RoboCup2026"
+      "video_script": "RoboCup 2026 just kicked off in Incheon, South Korea, and if you care about real-world multi-robot systems, this week matters more than most conference seasons. The competition floor is where the gap between simulation and reality gets brutally exposed. Social media highlights look great, but the real data is in the symposium papers dropping this week. I'll be tracking what actually moved — coordination, localization, learning under noise — and what's still stuck. What league are you watching most closely this year?",
+      "caption_instagram": "RoboCup 2026 is live in Incheon, and the community is already flooding social media with footage from the competition floor.\n\nRobohub put together a social round-up that gives you a ground-level view of what teams are actually doing — beyond the polished press releases. As a swarm robotics researcher, this event is one of my favorite annual reality checks. No simulation, no cherry-picked conditions. Just robots failing and succeeding in front of an audience.\n\nHonest caveat: social media highlights are curated by what looks good on camera. The coordination breakdowns, the localization failures, the moments where the multi-agent system just falls apart — those don't trend. So take the excitement as a directional signal, not a performance report.\n\nThe symposium papers are where the real accounting happens. I'll be posting breakdowns as they drop this week. Stay close.\n\nFull round-up linked in bio. Source: Robohub — RoboCup 2026 Social Media Round-Up.\n\n#RoboCup2026 #SwarmRobotics #MultiAgentSystems #AutonomousRobots #RobotSoccer #RoboticsResearch #HumanoidRobots",
+      "caption_tiktok": "RoboCup 2026 just started and the footage is wild — but here's how to watch it like a researcher, not a hype account. #RoboCup2026 #SwarmRobotics #RoboticsResearch #MultiAgentSystems",
+      "post_bluesky": "RoboCup 2026 is live in Incheon. Robohub's social round-up is the vibe check — the symposium papers dropping this week are where the real signal is. Tracking both. https://robohub.org/robocup2026-social-media-round-up/ #RoboCup2026"
     },
     "status": "rejected",
     "created": "2026-07-08T19:56:42.982359+00:00",
@@ -335,7 +337,7 @@
     "paper": {
       "id": "rss-733599b2a9",
       "title": "A history of RoboCup with Manuela Veloso",
-      "abstract": "RoboCup is an international competition that promotes and advances robotics and AI through the challenges presented by its various leagues. We got the chance to sit down with Professor Manuela Veloso, one of RoboCup\u2019s founders, to find out more about how it all started, how the community has grown over the years, and the vision [\u2026]",
+      "abstract": "RoboCup is an international competition that promotes and advances robotics and AI through the challenges presented by its various leagues. We got the chance to sit down with Professor Manuela Veloso, one of RoboCup’s founders, to find out more about how it all started, how the community has grown over the years, and the vision […]",
       "authors": [],
       "url": "https://robohub.org/a-history-of-robocup-with-manuela-veloso/",
       "source": "robohub.org",
@@ -345,7 +347,7 @@
     "content": {
       "format": "carousel",
       "hook": "RoboCup was almost called something completely different",
-      "commentary": "Veloso's retrospective on RoboCup's founding is a rare primary-source account of how a moonshot benchmark actually gets built. The framing is honest: soccer was chosen not because it's the most useful task, but because it's legible, competitive, and forces real-time multi-agent coordination. What's genuinely valuable here is the reminder that research communities need audacious, long-horizon goals to cohere around. The caveat: this is an interview, not an analysis, so it's celebratory by nature \u2014 the hard questions about whether humanoid soccer is still the right frontier 30 years on go mostly unasked.",
+      "commentary": "Veloso's retrospective on RoboCup's founding is a rare primary-source account of how a moonshot benchmark actually gets built. The framing is honest: soccer was chosen not because it's the most useful task, but because it's legible, competitive, and forces real-time multi-agent coordination. What's genuinely valuable here is the reminder that research communities need audacious, long-horizon goals to cohere around. The caveat: this is an interview, not an analysis, so it's celebratory by nature — the hard questions about whether humanoid soccer is still the right frontier 30 years on go mostly unasked.",
       "slides": [
         {
           "title": "The moonshot benchmark problem",
@@ -353,7 +355,7 @@
         },
         {
           "title": "Why soccer, not surgery?",
-          "body": "Soccer was chosen for legibility: any observer can judge success. It forces real-time perception, multi-agent coordination, and physical robustness \u2014 all in one package that cameras can follow."
+          "body": "Soccer was chosen for legibility: any observer can judge success. It forces real-time perception, multi-agent coordination, and physical robustness — all in one package that cameras can follow."
         },
         {
           "title": "The name almost wasn't RoboCup",
@@ -361,7 +363,7 @@
         },
         {
           "title": "Community is the actual product",
-          "body": "Veloso emphasizes that shared codebases, open leagues, and student participation built a research community \u2014 not just a competition. That infrastructure outlasts any single team's win."
+          "body": "Veloso emphasizes that shared codebases, open leagues, and student participation built a research community — not just a competition. That infrastructure outlasts any single team's win."
         },
         {
           "title": "30 years later: still the right goal?",
@@ -372,10 +374,10 @@
           "body": "Veloso's story is a case study in benchmark design: pick a goal hard enough to be unsolved for decades, easy enough to demonstrate publicly, and flexible enough to spawn sub-problems across every AI discipline."
         }
       ],
-      "video_script": "RoboCup 2026 is a week away, so let's go back to the beginning. Manuela Veloso, one of RoboCup's founders, sat down with Robohub to explain how a single audacious question \u2014 can robots beat the FIFA World Cup winner by 2050 \u2014 built an entire research community. The clever part wasn't the soccer. It was designing a benchmark legible enough for the public, hard enough for researchers, and open enough that thousands of students worldwide could contribute. But with humanoid robotics exploding outside RoboCup right now, I want to ask you: is the 2050 goal still the right mountain to climb?",
-      "caption_instagram": "RoboCup 2026 starts in 7 days, and I've been thinking about WHY this competition has survived 30 years when most robotics benchmarks quietly die.\n\nManuela Veloso \u2014 one of RoboCup's actual founders \u2014 sat down with Robohub to tell the origin story. The core insight: soccer wasn't chosen because it matters intrinsically. It was chosen because it's LEGIBLE. Any camera, any crowd, any funding committee can tell whether the robot is doing the right thing.\n\nWhat Veloso gets right is that long-horizon benchmarks aren't really about the task. They're about creating a coordination point for a research community \u2014 shared codebases, open leagues, student pipelines. The competition is the excuse. The community is the product.\n\nHonest caveat though: this is a celebratory interview, not a critical audit. With Boston Dynamics and Figure AI pushing humanoid capability from the outside, it's worth asking whether RoboCup is still setting the pace or reacting to it. That question doesn't get asked here, but it should be front and center at every keynote next week.\n\n'A history of RoboCup with Manuela Veloso' \u2014 Robohub. Link in bio.\n\n#swarmrobotics #roboticsresearch #RoboCup2026 #multiagentsystems #AIbenchmarks #humanoidrobots #roboticscommunity",
-      "caption_tiktok": "RoboCup 2026 in 7 days \u2014 here's why the 2050 World Cup goal was genius benchmark design, not just hype. #RoboCup2026 #robotics #AIresearch #multiagentrobotics",
-      "post_bluesky": "RoboCup 2026 in 7 days. Veloso's origin story is worth reading \u2014 soccer was chosen for legibility, not utility. The benchmark was always about building a community. Still the right goal in 2026? https://robohub.org/a-history-of-robocup-with-manuela-veloso/ #RoboCup"
+      "video_script": "RoboCup 2026 is a week away, so let's go back to the beginning. Manuela Veloso, one of RoboCup's founders, sat down with Robohub to explain how a single audacious question — can robots beat the FIFA World Cup winner by 2050 — built an entire research community. The clever part wasn't the soccer. It was designing a benchmark legible enough for the public, hard enough for researchers, and open enough that thousands of students worldwide could contribute. But with humanoid robotics exploding outside RoboCup right now, I want to ask you: is the 2050 goal still the right mountain to climb?",
+      "caption_instagram": "RoboCup 2026 starts in 7 days, and I've been thinking about WHY this competition has survived 30 years when most robotics benchmarks quietly die.\n\nManuela Veloso — one of RoboCup's actual founders — sat down with Robohub to tell the origin story. The core insight: soccer wasn't chosen because it matters intrinsically. It was chosen because it's LEGIBLE. Any camera, any crowd, any funding committee can tell whether the robot is doing the right thing.\n\nWhat Veloso gets right is that long-horizon benchmarks aren't really about the task. They're about creating a coordination point for a research community — shared codebases, open leagues, student pipelines. The competition is the excuse. The community is the product.\n\nHonest caveat though: this is a celebratory interview, not a critical audit. With Boston Dynamics and Figure AI pushing humanoid capability from the outside, it's worth asking whether RoboCup is still setting the pace or reacting to it. That question doesn't get asked here, but it should be front and center at every keynote next week.\n\n'A history of RoboCup with Manuela Veloso' — Robohub. Link in bio.\n\n#swarmrobotics #roboticsresearch #RoboCup2026 #multiagentsystems #AIbenchmarks #humanoidrobots #roboticscommunity",
+      "caption_tiktok": "RoboCup 2026 in 7 days — here's why the 2050 World Cup goal was genius benchmark design, not just hype. #RoboCup2026 #robotics #AIresearch #multiagentrobotics",
+      "post_bluesky": "RoboCup 2026 in 7 days. Veloso's origin story is worth reading — soccer was chosen for legibility, not utility. The benchmark was always about building a community. Still the right goal in 2026? https://robohub.org/a-history-of-robocup-with-manuela-veloso/ #RoboCup"
     },
     "status": "in_review",
     "created": "2026-07-08T19:57:10.273667+00:00",
@@ -406,7 +408,7 @@
     "draft_id": "4c0a064a",
     "paper": {
       "id": "confprev-RoboCup-2026",
-      "title": "RoboCup 2026 preview \u2014 what to watch",
+      "title": "RoboCup 2026 preview — what to watch",
       "abstract": "RoboCup 2026 runs 2026-07-15 to 2026-07-21 in TBD. Create a preview post: what the conference is, why it matters, themes to watch this year.",
       "authors": [],
       "url": "",
@@ -417,7 +419,7 @@
     "content": {
       "format": "carousel",
       "hook": "RoboCup 2026 is in 7 days. Here is what actually matters.",
-      "commentary": "RoboCup is one of the few venues where multi-robot coordination, real-time perception, and autonomous decision-making are stress-tested against actual opponents rather than curated lab conditions. It is not a research conference in the traditional sense \u2014 the league structure forces reproducibility in a way peer review rarely does. This year, watch for how teams handle unstructured environments and adversarial agents, two things that expose the gap between simulation results and physical reality fast. The honest caveat: media coverage tends to fixate on the humanoid spectacle while the logistics, rescue, and @Home leagues are doing more quietly rigorous work.",
+      "commentary": "RoboCup is one of the few venues where multi-robot coordination, real-time perception, and autonomous decision-making are stress-tested against actual opponents rather than curated lab conditions. It is not a research conference in the traditional sense — the league structure forces reproducibility in a way peer review rarely does. This year, watch for how teams handle unstructured environments and adversarial agents, two things that expose the gap between simulation results and physical reality fast. The honest caveat: media coverage tends to fixate on the humanoid spectacle while the logistics, rescue, and @Home leagues are doing more quietly rigorous work.",
       "slides": [
         {
           "title": "RoboCup 2026: What Is It",
@@ -441,13 +443,13 @@
         },
         {
           "title": "What to Watch For",
-          "body": "Accepted-paper announcements drop this week. Track team technical reports \u2014 they are the most honest documentation of what actually worked, written by engineers who had to make it run, not reviewers who had to accept it."
+          "body": "Accepted-paper announcements drop this week. Track team technical reports — they are the most honest documentation of what actually worked, written by engineers who had to make it run, not reviewers who had to accept it."
         }
       ],
-      "video_script": "RoboCup 2026 starts in seven days, and if you only follow polished lab demos, this is the event that resets your priors. Fully autonomous robots. Real opponents. No remote control. The soccer leagues get the cameras, but the logistics and home leagues are where the coordination research gets genuinely stress-tested. This year I am watching how LLM-integrated home robots handle real ambiguity, and whether the sim-to-real pipelines everyone published on actually hold. Technical reports from teams are your best read \u2014 more honest than most papers. What league are you following this year?",
-      "caption_instagram": "RoboCup 2026 kicks off July 15th and it is one of the most underrated events in robotics research.\n\nMost benchmarks let you control the conditions. RoboCup does not. Robots are fully autonomous, the environment is adversarial, and failure is immediate and public. That is a harder test than most peer-reviewed papers ever face.\n\nThis year I am watching three things: how sim-to-real pipelines hold under actual opposition in the Standard Platform League, whether multi-robot schedulers in the Logistics League survive dynamic order streams at real pace, and whether the LLM-integrated @Home robots can handle genuine household ambiguity or just perform well on rehearsed prompts.\n\nAccepted paper announcements are coming this week. When they drop, go read the team technical reports alongside them. They are the most honest documentation in robotics \u2014 written by people who had to make it actually work.\n\n#swarmrobotics #autonomousrobots #robocup2026 #multirobotsystems #roboticsresearch #humanoidrobots #roboticscompetition",
-      "caption_tiktok": "RoboCup 2026 in 7 days \u2014 autonomous robots, real opponents, no remote control. This is where lab results meet reality. Which league are you watching? #robocup2026 #robotics #swarmrobotics #autonomousrobots",
-      "post_bluesky": "RoboCup 2026 starts July 15. Fully autonomous robots, adversarial opponents, public failure. It is the stress test most published results never face. Technical reports drop this week \u2014 they are more honest than most papers. Which league are you tracking? #RoboCup2026"
+      "video_script": "RoboCup 2026 starts in seven days, and if you only follow polished lab demos, this is the event that resets your priors. Fully autonomous robots. Real opponents. No remote control. The soccer leagues get the cameras, but the logistics and home leagues are where the coordination research gets genuinely stress-tested. This year I am watching how LLM-integrated home robots handle real ambiguity, and whether the sim-to-real pipelines everyone published on actually hold. Technical reports from teams are your best read — more honest than most papers. What league are you following this year?",
+      "caption_instagram": "RoboCup 2026 kicks off July 15th and it is one of the most underrated events in robotics research.\n\nMost benchmarks let you control the conditions. RoboCup does not. Robots are fully autonomous, the environment is adversarial, and failure is immediate and public. That is a harder test than most peer-reviewed papers ever face.\n\nThis year I am watching three things: how sim-to-real pipelines hold under actual opposition in the Standard Platform League, whether multi-robot schedulers in the Logistics League survive dynamic order streams at real pace, and whether the LLM-integrated @Home robots can handle genuine household ambiguity or just perform well on rehearsed prompts.\n\nAccepted paper announcements are coming this week. When they drop, go read the team technical reports alongside them. They are the most honest documentation in robotics — written by people who had to make it actually work.\n\n#swarmrobotics #autonomousrobots #robocup2026 #multirobotsystems #roboticsresearch #humanoidrobots #roboticscompetition",
+      "caption_tiktok": "RoboCup 2026 in 7 days — autonomous robots, real opponents, no remote control. This is where lab results meet reality. Which league are you watching? #robocup2026 #robotics #swarmrobotics #autonomousrobots",
+      "post_bluesky": "RoboCup 2026 starts July 15. Fully autonomous robots, adversarial opponents, public failure. It is the stress test most published results never face. Technical reports drop this week — they are more honest than most papers. Which league are you tracking? #RoboCup2026"
     },
     "status": "rejected",
     "created": "2026-07-08T19:57:36.467136+00:00",
@@ -551,8 +553,8 @@
     "draft_id": "5f0c0285",
     "paper": {
       "id": "rss-f6204b5f70",
-      "title": "#RoboCup2026 \u2013 humanoid league day 1",
-      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It\u2019s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series [\u2026]",
+      "title": "#RoboCup2026 – humanoid league day 1",
+      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
       "authors": [],
       "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
       "source": "robohub.org",
@@ -673,7 +675,7 @@
       "caption_tiktok": "VLA models are blind to 3D geometry. This paper adds point-cloud reasoning and beats every prior VLA baseline by 10+ percent. Here is how. #robotics #VLA #manipulation #embodiedAI #robotlearning",
       "post_bluesky": "Lift3D-VLA plugs point clouds into the VLA vision encoder and adds a self-supervised future-geometry prediction objective. Result: +10.8% on MetaWorld, +11.1% on RLBench vs best prior VLA. Real-world eval is small but the core idea is solid. https://arxiv.org/abs/2607.06564v1 #robotics #VLA"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T20:31:29.622436+00:00",
     "media": {
       "figures": [
