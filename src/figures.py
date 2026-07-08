@@ -1,0 +1,106 @@
+"""Pull real imagery for drafts:
+- arXiv papers → download the PDF, extract the largest figures (attributed
+  to the authors on every card/caption)
+- articles → the publisher's own social-share image (og:image)
+Figures are used in review/commentary context with attribution; many arXiv
+papers are CC-BY. The /redo command lets the owner drop any image."""
+import re
+import requests
+from pathlib import Path
+from utils import MEDIA
+
+
+def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 4) -> list[str]:
+    """Extract the biggest embedded images from an arXiv PDF."""
+    import fitz
+    pid = paper["id"]
+    url = f"https://arxiv.org/pdf/{pid}"
+    r = requests.get(url, timeout=60, headers={"User-Agent": "RoboPost/1.0"})
+    r.raise_for_status()
+    doc = fitz.open(stream=r.content, filetype="pdf")
+    seen, candidates = set(), []
+    for page in doc:
+        for img in page.get_images(full=True):
+            xref = img[0]
+            if xref in seen:
+                continue
+            seen.add(xref)
+            try:
+                pix = fitz.Pixmap(doc, xref)
+                if pix.n - pix.alpha > 3:  # CMYK etc → RGB
+                    pix = fitz.Pixmap(fitz.csRGB, pix)
+                w, h = pix.width, pix.height
+                # skip icons/lines/logos; keep figure-sized, sane aspect
+                if w < 380 or h < 260 or w * h < 200_000 or w / h > 5 or h / w > 5:
+                    continue
+                candidates.append((w * h, page.number, pix.tobytes("png")))
+            except Exception:
+                continue
+    candidates.sort(key=lambda c: (c[1], -c[0]))  # earliest pages, biggest first
+    paths = []
+    for i, (_, _, png) in enumerate(candidates[:max_figs]):
+        p = out_dir / f"fig_{i:02d}.png"
+        p.write_bytes(png)
+        paths.append(str(p.relative_to(MEDIA.parent)))
+    doc.close()
+    return paths
+
+
+def og_image(url: str, out_dir: Path) -> list[str]:
+    """Publisher's social-share image for articles/news."""
+    try:
+        r = requests.get(url, timeout=30, headers={
+            "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
+        m = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)', r.text) \
+            or re.search(r'content=["\']([^"\']+)["\']\s+property=["\']og:image', r.text)
+        if not m:
+            return []
+        img = requests.get(m.group(1), timeout=30).content
+        p = out_dir / "fig_00.png"
+        from PIL import Image
+        import io
+        Image.open(io.BytesIO(img)).convert("RGB").save(p)
+        return [str(p.relative_to(MEDIA.parent))]
+    except Exception as e:
+        print(f"og:image failed for {url}: {e}")
+        return []
+
+
+def youtube_thumbnail(video_url: str, out_dir: Path) -> list[str]:
+    """Thumbnail of a linked YouTube video (used with 'linked video' credit)."""
+    m = re.search(r"(?:v=|youtu\.be/|shorts/)([\w-]{6,})", video_url or "")
+    if not m:
+        return []
+    for variant in ("maxresdefault", "hqdefault"):
+        try:
+            r = requests.get(
+                f"https://img.youtube.com/vi/{m.group(1)}/{variant}.jpg",
+                timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+            if r.ok and len(r.content) > 5000:
+                p = out_dir / "fig_00.png"
+                from PIL import Image
+                import io
+                Image.open(io.BytesIO(r.content)).convert("RGB").save(p)
+                return [str(p.relative_to(MEDIA.parent))]
+        except Exception:
+            continue
+    return []
+
+
+def get_figures(draft) -> list[str]:
+    p = draft["paper"]
+    out_dir = MEDIA / draft["draft_id"]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    figs = []
+    try:
+        if p.get("source") in ("arxiv", "hf_daily", "manual") and re.match(r"\d{4}\.\d{4,5}", str(p["id"])):
+            figs = arxiv_figures(p, out_dir)
+        if not figs and p.get("video_url"):
+            figs = youtube_thumbnail(p["video_url"], out_dir)
+        if not figs and p.get("item_type") == "video":
+            figs = youtube_thumbnail(p["url"], out_dir)
+        if not figs and p.get("url", "").startswith("http"):
+            figs = og_image(p["url"], out_dir)
+    except Exception as e:
+        print(f"Figure extraction failed for {draft['draft_id']} (non-fatal): {e}")
+    return figs

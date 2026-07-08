@@ -35,6 +35,10 @@ Link: {paper['url']}
 {"Curator's notes (from the account owner — follow these): " + paper['user_notes'] if paper.get('user_notes') else ""}
 {"Redo notes from previous rejection (must address): " + paper['redo_notes'] if paper.get('redo_notes') else ""}
 
+RULES: no emojis in "hook" or "slides" (they render on image cards without
+emoji fonts); emojis ARE fine in the platform captions. Slide bodies should
+read like figure captions when possible — concrete, specific.
+
 Produce JSON:
 {{
   "format": "carousel" | "video",   // video only if the story has strong narrative punch

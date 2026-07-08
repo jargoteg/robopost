@@ -4,3 +4,4 @@ pyyaml
 pillow
 edge-tts
 beautifulsoup4
+pymupdf

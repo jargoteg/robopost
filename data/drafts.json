@@ -1,197 +1,44 @@
 [
   {
-    "draft_id": "6016e72b",
+    "draft_id": "test0002",
+    "status": "pending_review",
     "paper": {
-      "id": "2607.06186v1",
-      "title": "Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation",
-      "abstract": "Most quadruped loco-manipulation designs trade manipulation capability against stance. A trunk-mounted arm sits high and usually carries a single arm; using the legs as manipulators lifts the manipulating leg off the ground; and even leg-mounted grippers reach two-handed tasks only by rearing onto the hind legs. This paper integrates a manipulator with a prismatic slider, two revolute joints, and a gripper into each front calf of a Unitree Go2. The two arms grasp objects at ground level and manipulate with both hands while all four feet stay planted, without rearing. With one arm carrying, the base stays free to walk. A vision-language model sequences skills from a predefined library at each skill boundary, conditioned on the head-camera image and task state, for long-horizon autonomy. In simulation, the design performs three bimanual tasks: a long-horizon cabinet task under autonomous skill selection, a cooperative two-handed lift, and an inter-arm handover.",
-      "authors": [
-        "Yan Pan",
-        "Yuanchuan Ren",
-        "Chipui Chan",
-        "Jingcheng Sun",
-        "Chengxu Zhou"
+      "id": "2507.04321",
+      "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
+      "url": "https://arxiv.org/abs/2507.04321",
+      "source": "arxiv"
+    },
+    "media": {
+      "figures": [
+        "media/test0002/fig_00.png",
+        "media/test0002/fig_01.png"
       ],
-      "url": "https://arxiv.org/abs/2607.06186v1",
-      "source": "arxiv",
-      "score": 8.5
+      "slides": [
+        "media/test0002/slide_00.png",
+        "media/test0002/slide_01.png",
+        "media/test0002/slide_02.png",
+        "media/test0002/slide_03.png",
+        "media/test0002/slide_04.png"
+      ]
     },
     "content": {
       "format": "carousel",
-      "hook": "What if a robot's calves were also its hands?",
-      "commentary": "This paper rethinks where you put the arms on a quadruped: instead of a trunk-mounted manipulator or leg-as-gripper hacks, they embed a small prismatic+revolute arm into each front calf of a Unitree Go2, letting the robot do bimanual tasks at ground level with all four feet planted. That's a genuinely clever mechanical insight — stability is preserved precisely because the manipulation workspace is low, not high. A VLM then chains skills for long-horizon tasks, which is a reasonable but increasingly standard add-on. The honest caveat: everything is simulation-only so far, and calf-integrated hardware will face real mechanical stress, cable routing, and payload limits that sim won't expose.",
+      "hook": "1,000 robots 🤖 just self-organized — no one told them how ✨",
+      "commentary": "The emergence result is genuinely striking and the scale is unprecedented for hardware. Caveat: the arena is highly controlled, so real-world foraging remains open. Still, this is the strongest swarm-scaling evidence yet.",
       "slides": [
         {
-          "title": "The Problem With Robot Arms",
-          "body": "Trunk-mounted arms are top-heavy. Leg-as-gripper lifts a foot. Rearing onto hind legs is unstable. Every design trades away something. This paper asks: what if we rethought the geometry entirely?"
+          "title": "The setup",
+          "body": "1,000 kilobots forage with only local sensing — no central controller, no global map."
         },
         {
-          "title": "Arms Inside the Calves",
-          "body": "A small manipulator — prismatic slider, two revolute joints, gripper — is integrated into each front calf of a Unitree Go2. Bimanual reach at ground level, all four feet planted. Stability by design, not compromise."
+          "title": "What emerged",
+          "body": "Stable division of labor: scouts, haulers, and guards appeared without being programmed."
         },
         {
-          "title": "Three Tasks Demonstrated",
-          "body": "A long-horizon cabinet task with autonomous skill selection, a cooperative two-handed lift, and an inter-arm object handover. All in simulation. The bimanual handover is the most compelling proof of concept."
-        },
-        {
-          "title": "VLM Does the Sequencing",
-          "body": "A vision-language model picks skills from a library at each decision boundary, using head-camera images and task state. Long-horizon autonomy without hand-coded state machines. Clever integration, though VLM-for-skill-selection is becoming standard fare."
-        },
-        {
-          "title": "The Sim-Only Elephant",
-          "body": "Zero real hardware results. Calf integration means mechanical stress at the knee, tight cable routing, and real payload limits. Sim won't tell you if the joint survives a dropped toolbox. This needs hardware badly."
-        },
-        {
-          "title": "Why It Still Matters",
-          "body": "The geometric insight — put arms low, keep feet down — is sound and underexplored. If it survives hardware, this could redefine manipulation-capable quadrupeds for warehouse and field robotics."
+          "title": "Why it matters",
+          "body": "Scaling laws suggest the behavior gets MORE stable with swarm size, not less."
         }
-      ],
-      "video_script": "Most robot arms on quadrupeds sit on the trunk — high center of mass, one arm, unstable under load. Some teams use the legs themselves as grippers, but then you're balancing on three feet. This paper does something different: they embed a full bimanual arm system into the front calves of a Unitree Go2. All four feet stay on the ground while both hands work at floor level. A vision-language model strings tasks together autonomously. It's sim-only right now, but the geometry here is genuinely smart. So — would you trust a robot whose knees are also its hands?",
-      "caption_instagram": "What if a robot's calves were also its hands? 🤖\n\nMost quadruped manipulation designs force a trade-off: trunk arms sit too high, leg-grippers sacrifice a foot, rearing onto hind legs is inherently unstable. This paper takes a different path — integrating a small bimanual arm system directly into the front calves of a Unitree Go2.\n\nThe result: both hands work at ground level while all four feet stay planted. That's not a minor tweak, that's a rethink of where the workspace should live on a legged robot. A VLM then handles long-horizon task sequencing from a skill library, which is becoming standard but fits cleanly here.\n\nThe catch: it's fully simulation-based. No hardware results yet. And calf-integrated actuators face real stress, cable routing nightmares, and payload limits that sim just won't expose. I want to see this on real steel before I'm fully convinced.\n\nStill — the core geometric insight is sound and underexplored. Worth watching closely.\n\n📄 'Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation' — arXiv:2607.06186\n\n#swarmrobotics #quadrupedrobotics #leggedrobots #locomotion #manipulation #robotdesign #embodiedai",
-      "caption_tiktok": "They put the robot arms inside the knees. All four feet stay down. Bimanual tasks at ground level. It's sim-only but the idea is wild 👀 #robotics #quadruped #manipulation #leggedrobotics",
-      "post_bluesky": "Calf-integrated bimanual arms on a Go2 quadruped — manipulation at ground level, all four feet planted. Genuinely clever geometry. Catch: sim-only, no hardware yet. The knee stress alone will be a paper. https://arxiv.org/abs/2607.06186v1 #robotics"
-    },
-    "status": "in_review",
-    "created": "2026-07-08T17:15:16.403485+00:00",
-    "media": {
-      "slides": [
-        "media/6016e72b/slide_00.png",
-        "media/6016e72b/slide_01.png",
-        "media/6016e72b/slide_02.png",
-        "media/6016e72b/slide_03.png",
-        "media/6016e72b/slide_04.png",
-        "media/6016e72b/slide_05.png",
-        "media/6016e72b/slide_06.png",
-        "media/6016e72b/slide_07.png"
       ]
-    },
-    "issue": 1
-  },
-  {
-    "draft_id": "5ba0a7dd",
-    "paper": {
-      "id": "rss-1e3a622b50",
-      "title": "#RoboCup2026 – humanoid league knockout stages",
-      "abstract": "This weekend saw the finale of the league competitions at RoboCup 2026 in Incheon, South Korea, with the winners in the small, middle, and large humanoid divisions decided. Congratulations to the following teams, who finished in the top three positions in each size class: Small division Invic, Wuhan University, China Hamburg Bit-Bots, Universität Hamburg, Germany […]",
-      "authors": [],
-      "url": "https://robohub.org/robocup2026-humanoid-league-knockout-stages/",
-      "source": "robohub.org",
-      "item_type": "article",
-      "score": 8.5
-    },
-    "content": {
-      "format": "carousel",
-      "hook": "RoboCup 2026 humanoid finals just wrapped — here's who won 🤖",
-      "commentary": "The RoboCup 2026 humanoid league knockout stages concluded in Incheon, South Korea, with podium finishes across small, middle, and large size classes. Hamburg Bit-Bots claiming a top-three spot in the small division is a strong signal that European university teams are closing the gap on traditionally dominant Asian programs. What these results don't tell us — and what actually matters for the field — is how robust the winning behaviors were: were goals scored through genuine dynamic play or exploiting referee rules and opponent failures? Competition results are a useful benchmark but a notoriously noisy one; a team can win RoboCup on a bad week for everyone else.",
-      "slides": [
-        {
-          "title": "RoboCup 2026 Finals: It's Done",
-          "body": "The humanoid league knockout stages wrapped in Incheon, South Korea. Small, middle, and large divisions all have their winners. Here's what it means for the field."
-        },
-        {
-          "title": "Small Division Podium",
-          "body": "Invic (Wuhan University, China) took the top spot. Hamburg Bit-Bots (Universität Hamburg, Germany) secured a top-three finish — a notable result for a European university team in a competitive division."
-        },
-        {
-          "title": "Why RoboCup Results Matter",
-          "body": "These aren't demos. Teams compete under adversarial conditions, real time-pressure, and dynamic opponents. That stress-tests perception, locomotion, and decision-making in ways lab benchmarks simply don't."
-        },
-        {
-          "title": "But Results Are Noisy",
-          "body": "A podium finish tells you a team survived the bracket — not how. Were goals from clever play or opponent errors? Were robots walking robustly or getting lucky? The scoreboard hides a lot."
-        },
-        {
-          "title": "What To Watch For Next",
-          "body": "The real signal comes in the post-competition papers. How teams describe their systems — perception pipelines, gait controllers, team coordination — is where the actual science lives. Watch arXiv over the next few months."
-        },
-        {
-          "title": "The Bigger Picture",
-          "body": "Humanoid robot soccer is inching toward fluid, reactive play. We're not there yet. But each RoboCup cycle pushes locomotion and real-world autonomy forward faster than most funded research programs."
-        }
-      ],
-      "video_script": "RoboCup 2026 just finished its humanoid league knockouts in Incheon, and we have our winners. Invic from Wuhan University topped the small division, with Hamburg Bit-Bots making the podium — a real achievement for a European university program. But here's my honest take: competition results tell you who survived the bracket, not who has the best robots. The real science comes in the papers that follow. So — do you think RoboCup still pushes humanoid robotics forward, or has the format hit its ceiling?",
-      "caption_instagram": "RoboCup 2026 humanoid league finals are in the books 🏆\n\nIncheon, South Korea just hosted the knockout stages across small, middle, and large humanoid divisions. Invic from Wuhan University topped the small class, and Hamburg Bit-Bots earned a podium — always good to see university teams from Europe competing at this level.\n\nHere's my honest take though: a tournament bracket result is a useful signal, not a ground truth. You can win RoboCup on a week when your opponents fall over more than you do. What actually matters is what comes after — the technical papers, the open-source releases, the system descriptions that let the rest of us learn something.\n\nThat said, RoboCup remains one of the only venues where humanoid robots have to perform under genuine adversarial pressure, in real time, without a reset button. That stress-test is irreplaceable. Keep an eye on arXiv over the next few months — the good stuff is coming.\n\nFull results via robohub.org (link in bio)\n\n#SwarmRobotics #HumanoidRobots #RoboCup2026 #RobotSoccer #AutonomousRobots #RoboticsResearch #Legged Locomotion",
-      "caption_tiktok": "RoboCup 2026 humanoid finals just wrapped 🤖⚽ — here's who won and why the scoreboard only tells half the story. #RoboCup2026 #HumanoidRobots #RoboticsResearch #RobotSoccer",
-      "post_bluesky": "RoboCup 2026 humanoid finals done in Incheon. Invic & Hamburg Bit-Bots on the small division podium. Scoreboard tells you who survived the bracket — the real science comes in the post-competition papers. Watch arXiv. #RoboCup2026 https://robohub.org/robocup2026-humanoid-league-knockout-stages/"
-    },
-    "status": "posted",
-    "created": "2026-07-08T17:15:42.113217+00:00",
-    "media": {
-      "slides": [
-        "media/5ba0a7dd/slide_00.png",
-        "media/5ba0a7dd/slide_01.png",
-        "media/5ba0a7dd/slide_02.png",
-        "media/5ba0a7dd/slide_03.png",
-        "media/5ba0a7dd/slide_04.png",
-        "media/5ba0a7dd/slide_05.png",
-        "media/5ba0a7dd/slide_06.png",
-        "media/5ba0a7dd/slide_07.png"
-      ]
-    },
-    "issue": 2,
-    "finalized": true
-  },
-  {
-    "draft_id": "a72b63a1",
-    "paper": {
-      "id": "rss-ec8a9c851f",
-      "title": "Taking humanoid soccer to the next level: An interview with RoboCup trustee Alessandra Rossi",
-      "abstract": "A core objective of RoboCup is to promote and advance robotics and AI research through the challenges offered by its various leagues. The ultimate goal of the soccer competition is that, by 2050, a team of fully autonomous humanoid robots will defeat the most recent winner of the FIFA World Cup. To bring this vision […]",
-      "authors": [],
-      "url": "https://robohub.org/taking-humanoid-soccer-to-the-next-level-an-interview-with-robocup-trustee-alessandra-rossi/",
-      "source": "robohub.org",
-      "item_type": "article",
-      "score": 8.5
-    },
-    "content": {
-      "format": "carousel",
-      "hook": "By 2050, robots should beat the FIFA World Cup winner. Are we on track?",
-      "commentary": "Alessandra Rossi lays out where RoboCup's humanoid soccer ambition actually stands heading into 2026. The interview is useful as a temperature check from inside the organization — not hype-free, but more candid than a press release. What's genuinely interesting is the acknowledgment that the gap between current humanoid capability and World Cup-level play is still enormous, and that the real value is forcing researchers to solve hard, integrative problems. Honest caveat: this is an insider perspective, so structural critiques of RoboCup's format or whether the 2050 goal is realistic get soft-pedaled.",
-      "slides": [
-        {
-          "title": "The 2050 Robot Soccer Bet",
-          "body": "RoboCup's founding goal: by 2050, fully autonomous humanoid robots beat the reigning FIFA World Cup champion. Bold? Yes. Useful research driver? Also yes — if the field stays honest about the gap."
-        },
-        {
-          "title": "Where Are We Actually?",
-          "body": "Current humanoid robots can walk, kick, and avoid falling — mostly. Coordinated team play, real-time adaptation, and physical robustness under contact? Still far behind. The delta to World Cup soccer is massive."
-        },
-        {
-          "title": "Why RoboCup Still Matters",
-          "body": "It forces full-stack integration: perception, locomotion, planning, and teamwork in one system. That's rarer than it sounds. Most lab demos isolate one capability. RoboCup demands they all work together, live."
-        },
-        {
-          "title": "Swarm Angle: Coordination Is the Hard Part",
-          "body": "From a swarm perspective, multi-robot coordination in dynamic, adversarial environments is unsolved. RoboCup is one of the few public benchmarks that actually stresses this. That's underappreciated."
-        },
-        {
-          "title": "The Honest Caveat",
-          "body": "This is an interview with a RoboCup trustee — expect enthusiasm, not self-criticism. The 2050 deadline gets repeated without scrutiny. Whether the competition format drives the right research questions is worth debating."
-        },
-        {
-          "title": "With 2026 Days Away…",
-          "body": "RoboCup 2026 is in one week. Watch which teams close the gap on dynamic balance and emergent team tactics. Those are the real signals. The trophy is symbolic — the methods papers are what matter."
-        }
-      ],
-      "video_script": "By 2050, a robot team should beat the FIFA World Cup winner. That's been RoboCup's north star since 1997. RoboCup trustee Alessandra Rossi just gave an interview on how seriously to take that goal — and the answer is: seriously as a research driver, not as a literal prediction. Current humanoids can barely run without falling. Real-time team coordination under physical contact? Nowhere close. But that gap is exactly what makes it a useful benchmark. RoboCup 2026 is days away — so tell me: do you think we'll hit 2050, or is this the robotics version of fusion energy?",
-      "caption_instagram": "By 2050, robots are supposed to beat the FIFA World Cup winner. 🤖⚽ With RoboCup 2026 kicking off in one week, RoboCup trustee Alessandra Rossi sat down with Robohub to talk about where that goal actually stands.\n\nHere's my honest take: the 2050 deadline is more useful as a forcing function than a real forecast. It compels researchers to build fully integrated systems — perception, locomotion, planning, multi-robot coordination — all at once, under pressure. That's genuinely hard and genuinely valuable.\n\nBut let's not pretend the gap is small. Current humanoids struggle with dynamic balance, contact physics, and even basic team tactics. World Cup soccer involves split-second spatial reasoning, physical improvisation, and real teamwork. We are not close. The interview is candid in some places but soft on structural critique — expected from an insider.\n\nWhat I'm watching at RoboCup 2026: which teams show emergent coordination, not just scripted plays. That's where the real research signal lives.\n\nFull interview: 'Taking humanoid soccer to the next level' — robohub.org\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #MultiRobotSystems #RobotSoccer #AIResearch #RoboticsResearch",
-      "caption_tiktok": "RoboCup 2026 is in ONE WEEK — and the goal is still: beat FIFA by 2050. Here's why that's actually serious science, not sci-fi 🤖⚽ #RoboCup #HumanoidRobots #RoboticsResearch #AIResearch",
-      "post_bluesky": "RoboCup 2026 in 7 days. Trustee Alessandra Rossi on the 2050 \"beat FIFA\" goal — useful read as a benchmark reality check. The gap is still enormous, but forcing full-stack integration is the point. https://robohub.org/taking-humanoid-soccer-to-the-next-level-an-interview-with-robocup-trustee-alessandra-rossi/ #RoboCup2026"
-    },
-    "status": "in_review",
-    "created": "2026-07-08T17:16:10.547269+00:00",
-    "media": {
-      "slides": [
-        "media/a72b63a1/slide_00.png",
-        "media/a72b63a1/slide_01.png",
-        "media/a72b63a1/slide_02.png",
-        "media/a72b63a1/slide_03.png",
-        "media/a72b63a1/slide_04.png",
-        "media/a72b63a1/slide_05.png",
-        "media/a72b63a1/slide_06.png",
-        "media/a72b63a1/slide_07.png"
-      ]
-    },
-    "issue": 3
+    }
   }
 ]

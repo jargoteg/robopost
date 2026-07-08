@@ -1,12 +1,26 @@
-"""Render branded carousel cards (PNG) for each draft with Pillow."""
-import textwrap
+"""Render carousel cards — v2 design.
+- gradient background + accent glow (no more flat black)
+- real paper figures placed on cards, with author attribution
+- emoji stripped from card text (Pillow fonts can't render them; captions
+  posted to the platforms keep their emojis, where they render natively)
+"""
+import re
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
-from utils import load_config, load_json, save_json, MEDIA
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from utils import load_config, load_json, save_json, MEDIA, ROOT
+from figures import get_figures
 
 FONT_DIR = "/usr/share/fonts/truetype/dejavu"
 FONT_BOLD = f"{FONT_DIR}/DejaVuSans-Bold.ttf"
 FONT_REG = f"{FONT_DIR}/DejaVuSans.ttf"
+
+EMOJI = re.compile(
+    "[\U0001F000-\U0001FAFF\U00002600-\U000027BF\U0001F1E6-\U0001F1FF"
+    "\U00002190-\U000021FF\U00002B00-\U00002BFF\uFE0F\u200D]+")
+
+
+def clean(text: str) -> str:
+    return re.sub(r"\s+", " ", EMOJI.sub("", text or "")).strip()
 
 
 def _font(path, size):
@@ -27,33 +41,111 @@ def _wrap(draw, text, font, max_w):
     return lines
 
 
-def render_card(idx, total, title, body, footer, cfg) -> Image.Image:
+def _hex(c):
+    c = c.lstrip("#")
+    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def canvas(cfg):
+    """Vertical gradient background with a soft accent glow."""
     w, h = cfg["visuals"]["carousel_size"]
-    bg, accent, fg = (cfg["visuals"][k] for k in ("bg_color", "accent_color", "text_color"))
-    img = Image.new("RGB", (w, h), bg)
+    top, bottom = _hex("#101725"), _hex("#0A0D14")
+    img = Image.new("RGB", (w, h))
     d = ImageDraw.Draw(img)
-    pad = 90
+    for y in range(h):
+        t = y / h
+        d.line([(0, y), (w, y)], fill=tuple(
+            int(top[i] + (bottom[i] - top[i]) * t) for i in range(3)))
+    glow = Image.new("RGB", (w, h), "#000000")
+    gd = ImageDraw.Draw(glow)
+    gd.ellipse([w - 620, -420, w + 320, 380], fill=cfg["visuals"]["accent_color"])
+    glow = glow.filter(ImageFilter.GaussianBlur(200))
+    img = Image.blend(img, glow, 0.16)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, w, 12], fill=cfg["visuals"]["accent_color"])
+    return img, d
 
-    # accent bar + page marker
-    d.rectangle([0, 0, w, 14], fill=accent)
-    d.text((w - pad, h - 70), f"{idx + 1}/{total}", font=_font(FONT_REG, 34), fill=accent, anchor="ra")
 
-    # title
-    y = pad + 40
-    tf = _font(FONT_BOLD, 72 if idx == 0 else 60)
-    for line in _wrap(d, title, tf, w - 2 * pad):
-        d.text((pad, y), line, font=tf, fill=accent if idx == 0 else fg)
-        y += tf.size + 14
+def paste_figure(img, fig_path, box):
+    """Fit a figure into box on a soft white rounded panel. Returns bottom y."""
+    x0, y0, x1, y1 = box
+    bw, bh = x1 - x0, y1 - y0
+    fig = Image.open(ROOT / fig_path).convert("RGB")
+    fig.thumbnail((bw - 40, bh - 40))
+    panel = Image.new("RGB", (fig.width + 40, fig.height + 40), "#FAFAF7")
+    panel.paste(fig, (20, 20))
+    mask = Image.new("L", panel.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, panel.width, panel.height], 28, fill=255)
+    px = x0 + (bw - panel.width) // 2
+    py = y0 + (bh - panel.height) // 2
+    img.paste(panel, (px, py), mask)
+    return py + panel.height
 
-    # body
-    y += 40
-    bf = _font(FONT_REG, 44)
-    for line in _wrap(d, body, bf, w - 2 * pad):
-        d.text((pad, y), line, font=bf, fill=fg)
-        y += bf.size + 18
 
-    # footer (handle + arXiv id)
-    d.text((pad, h - 70), footer, font=_font(FONT_REG, 34), fill="#9AA4B2", anchor="la")
+def footer(img, d, cfg, ref, idx, total, attribution=False):
+    w, h = img.size
+    pad = 84
+    f = _font(FONT_REG, 32)
+    left = f"{cfg['account']['handle']}  ·  {ref}"
+    if attribution:
+        left += "  ·  figures © the authors"
+    d.text((pad, h - 64), left, font=f, fill="#8B95A5", anchor="la")
+    d.text((w - pad, h - 64), f"{idx + 1}/{total}",
+           font=_font(FONT_BOLD, 32), fill=cfg["visuals"]["accent_color"], anchor="ra")
+
+
+def hero_card(cfg, hook, title, ref, fig, total):
+    w, h = cfg["visuals"]["carousel_size"]
+    pad = 84
+    img, d = canvas(cfg)
+    d.text((pad, pad + 8), "NEW IN ROBOTICS", font=_font(FONT_BOLD, 30),
+           fill=cfg["visuals"]["accent_color"])
+    y = pad + 70
+    tf = _font(FONT_BOLD, 78)
+    for line in _wrap(d, clean(hook), tf, w - 2 * pad)[:4]:
+        d.text((pad, y), line, font=tf, fill="#FFFFFF")
+        y += 88
+    y += 26
+    sf = _font(FONT_REG, 40)
+    for line in _wrap(d, clean(title), sf, w - 2 * pad)[:3]:
+        d.text((pad, y), line, font=sf, fill="#B9C2D0")
+        y += 52
+    if fig and y < h - 460:
+        paste_figure(img, fig, (pad, y + 30, w - pad, h - 120))
+    footer(img, d, cfg, ref, 0, total, attribution=bool(fig))
+    return img
+
+
+def figure_card(cfg, fig, caption, ref, idx, total):
+    w, h = cfg["visuals"]["carousel_size"]
+    pad = 84
+    img, d = canvas(cfg)
+    bottom = paste_figure(img, fig, (pad, pad, w - pad, int(h * 0.66)))
+    y = bottom + 44
+    cf = _font(FONT_REG, 42)
+    for line in _wrap(d, clean(caption), cf, w - 2 * pad)[:6]:
+        d.text((pad, y), line, font=cf, fill="#EDEFF3")
+        y += 56
+    footer(img, d, cfg, ref, idx, total, attribution=True)
+    return img
+
+
+def text_card(cfg, title, body, ref, idx, total):
+    w, h = cfg["visuals"]["carousel_size"]
+    pad = 84
+    img, d = canvas(cfg)
+    y = pad + 30
+    tf = _font(FONT_BOLD, 62)
+    for line in _wrap(d, clean(title), tf, w - 2 * pad)[:3]:
+        d.text((pad, y), line, font=tf, fill=cfg["visuals"]["accent_color"])
+        y += 74
+    d.rectangle([pad, y + 10, pad + 130, y + 18], fill=cfg["visuals"]["accent_color"])
+    y += 60
+    bf = _font(FONT_REG, 46)
+    for line in _wrap(d, clean(body), bf, w - 2 * pad)[:10]:
+        d.text((pad, y), line, font=bf, fill="#EDEFF3")
+        y += 62
+    footer(img, d, cfg, ref, idx, total)
     return img
 
 
@@ -66,13 +158,32 @@ def build_carousel(draft, cfg) -> list[str]:
     else:
         from urllib.parse import urlparse
         ref = p.get("source") or urlparse(p["url"]).netloc.replace("www.", "")
-    footer = f"{cfg['account']['handle']}  ·  {ref}"
 
-    slides = [{"title": c["hook"], "body": p["title"]}] + c["slides"]
-    slides.append({"title": "The takeaway", "body": c["commentary"]})
+    figs = draft.get("media", {}).get("figures") or get_figures(draft)
+    draft.setdefault("media", {})["figures"] = figs
+
+    # plan cards: hero, then slides (figure-backed where figures remain), takeaway
+    plan = []
+    fig_i = 1
+    for s in c["slides"]:
+        if fig_i < len(figs):
+            plan.append(("fig", figs[fig_i], f"{s['title']} — {s['body']}"))
+            fig_i += 1
+        else:
+            plan.append(("txt", s["title"], s["body"]))
+    plan.append(("txt", "The takeaway", c["commentary"]))
+    total = len(plan) + 1
+
+    rendered = [hero_card(cfg, c["hook"], p["title"], ref,
+                          figs[0] if figs else None, total)]
+    for idx, item in enumerate(plan, start=1):
+        if item[0] == "fig":
+            rendered.append(figure_card(cfg, item[1], item[2], ref, idx, total))
+        else:
+            rendered.append(text_card(cfg, item[1], item[2], ref, idx, total))
+
     paths = []
-    for i, s in enumerate(slides):
-        img = render_card(i, len(slides), s["title"], s["body"], footer, cfg)
+    for i, img in enumerate(rendered):
         path = out_dir / f"slide_{i:02d}.png"
         img.save(path)
         paths.append(str(path.relative_to(MEDIA.parent)))
@@ -85,12 +196,10 @@ def main():
     for d in drafts:
         if d["status"] != "pending_media":
             continue
-        d["media"] = {"slides": build_carousel(d, cfg)}
-        if d["content"]["format"] == "video":
-            d["status"] = "pending_video"
-        else:
-            d["status"] = "pending_review"
-        print(f"Rendered {len(d['media']['slides'])} cards for {d['draft_id']}")
+        d.setdefault("media", {})["slides"] = build_carousel(d, cfg)
+        d["status"] = "pending_video" if d["content"]["format"] == "video" else "pending_review"
+        print(f"Rendered {len(d['media']['slides'])} cards "
+              f"({len(d['media'].get('figures', []))} figures) for {d['draft_id']}")
     save_json("drafts.json", drafts)
 
 
