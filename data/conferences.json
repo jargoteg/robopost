@@ -1,6 +1,14 @@
 {
-  "updated": "2026-07-01",
+  "updated": "2026-07-08T20:12:04.392331+00:00",
   "conferences": [
+    {
+      "name": "RoboCup",
+      "year": 2026,
+      "start": "2026-06-30",
+      "end": "2026-07-06",
+      "location": "Incheon, South Korea",
+      "confidence": "confirmed"
+    },
     {
       "name": "ICRA",
       "year": 2026,
@@ -16,14 +24,6 @@
       "end": "2026-10-01",
       "location": "Pittsburgh, USA",
       "confidence": "confirmed"
-    },
-    {
-      "name": "RoboCup",
-      "year": 2026,
-      "start": "2026-07-15",
-      "end": "2026-07-21",
-      "location": "TBD",
-      "confidence": "estimated"
     },
     {
       "name": "Humanoids",

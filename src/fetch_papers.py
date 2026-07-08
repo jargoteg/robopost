@@ -246,7 +246,16 @@ def main():
         ranked = rank_papers(papers, cfg)
         n = cfg["pipeline"]["drafts_per_day"]
         floor = cfg["pipeline"]["min_relevance_score"]
-        picked = [p for p in ranked if p.get("score", 0) >= floor][:n]
+        good = [p for p in ranked if p.get("score", 0) >= floor]
+        # papers first; news capped so feeds never crowd out research
+        max_news = cfg["pipeline"].get("max_news_per_day", 1)
+        research = [p for p in good if p.get("item_type", "paper") == "paper"]
+        news = [p for p in good if p.get("item_type", "paper") != "paper"]
+        picked = research[:n]
+        for item in news[:max_news]:
+            if len(picked) < n or item.get("score", 0) > 8.5:
+                picked.append(item)
+        picked = picked[:n + 1]
         if cfg["sources"].get("youtube_enrichment"):
             enrich_youtube(picked)
         for p in picked:

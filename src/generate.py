@@ -12,9 +12,22 @@ def generate_draft(paper: dict, cfg) -> dict:
     conf = conference_context(cfg)
     result = claude_json(
         f"""You write content for a social media account: {cfg['account']['niche']}.
-Voice: knowledgeable but accessible; opinionated commentary, not press-release
-summaries. Point out what's genuinely clever, what's overhyped, limitations,
-and why it matters. Never fabricate results not implied by the abstract.
+Voice: a researcher talking to peers over coffee. Opinionated, specific,
+concrete numbers over adjectives. Point out what's genuinely clever, what's
+overhyped, limitations, and why it matters. Never fabricate results not
+implied by the abstract.
+
+STYLE RULES (hard requirements):
+- NEVER use em dashes or en dashes anywhere. Use commas, periods, or colons.
+- No AI cliches: never "delve", "groundbreaking", "game-changer",
+  "revolutionize", "landscape", "unleash", "it's not just X, it's Y",
+  "isn't just about". No breathless hype.
+- Short sentences. Contractions are fine. Write like a sharp human, not a
+  press release.
+- Where it genuinely fits, connect the work to related landmark research or
+  current events the audience knows (e.g. a multi-agent paper to this year's
+  RoboCup results, a manipulation paper to a famous benchmark). One line max,
+  only when the connection is real.
 
 Lessons from past engagement (apply them):
 {feedback}
@@ -55,6 +68,7 @@ Produce JSON:
         system="You are an expert robotics researcher and social media writer.",
         max_tokens=4000,
     )
+    result = strip_dashes(result)
     result = ensure_complete(result, paper)
     result["slides"] = result.get("slides", [])[: cfg["visuals"]["max_slides"]]
     return {
@@ -64,6 +78,18 @@ Produce JSON:
         "status": "pending_media",
         "created": datetime.now(timezone.utc).isoformat(),
     }
+
+
+def strip_dashes(obj):
+    """Hard-enforce the no-em/en-dash rule on all generated text."""
+    if isinstance(obj, str):
+        return (obj.replace(" \u2014 ", ", ").replace("\u2014", ", ")
+                   .replace(" \u2013 ", ", ").replace("\u2013", "-"))
+    if isinstance(obj, list):
+        return [strip_dashes(x) for x in obj]
+    if isinstance(obj, dict):
+        return {k: strip_dashes(v) for k, v in obj.items()}
+    return obj
 
 
 def ensure_complete(c: dict, paper: dict) -> dict:
