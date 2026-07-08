@@ -48,7 +48,8 @@ sources:
 
 pipeline:
   drafts_per_day: 2
-  max_news_per_day: 1            # news/RSS items cap; papers get the rest                    # how many papers become drafts daily
+  max_news_per_day: 1            # news/RSS items cap; papers get the rest
+  min_hours_between_posts: 3     # approved drafts wait in queue; no feed spam                    # how many papers become drafts daily
   min_relevance_score: 6               # 0-10, Claude-ranked; below = skipped
   model: "claude-sonnet-4-6"
 

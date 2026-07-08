@@ -96,3 +96,9 @@ def fetch_url_text(url: str, limit: int = 8000) -> str:
     title = soup.title.string.strip() if soup.title and soup.title.string else ""
     text = " ".join(soup.get_text(" ").split())
     return f"PAGE TITLE: {title}\n\n{text[:limit]}"
+
+
+def get_trends() -> str:
+    """Latest community-trends brief (from the 6-hourly Bluesky radar)."""
+    p = DATA / "trends.md"
+    return p.read_text() if p.exists() else ""

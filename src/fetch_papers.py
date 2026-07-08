@@ -4,7 +4,7 @@ data/manual_queue.json always take priority."""
 import re
 import requests
 import xml.etree.ElementTree as ET
-from utils import load_config, load_json, save_json, claude_json, get_feedback_notes
+from utils import load_config, load_json, save_json, claude_json, get_feedback_notes, get_trends
 
 NS = {"a": "http://www.w3.org/2005/Atom"}
 
@@ -249,6 +249,8 @@ Lessons learned from past engagement data:
 {feedback}
 
 {conf}
+
+{get_trends()}
 
 {rejections}
 

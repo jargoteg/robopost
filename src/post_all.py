@@ -158,8 +158,17 @@ def main():
     drafts = load_json("drafts.json", [])
     posted = load_json("posted.json", [])
     from generate import ensure_complete
+    from datetime import timedelta
+    gap = timedelta(hours=cfg["pipeline"].get("min_hours_between_posts", 3))
+    last = max((datetime.fromisoformat(p["posted_at"]) for p in posted), default=None)
     for d in drafts:
         if d["status"] != "approved":
+            continue
+        now = datetime.now(timezone.utc)
+        if last and now - last < gap:
+            eta = (last + gap).strftime("%H:%M UTC")
+            print(f"{d['draft_id']}: spacing posts, next window at {eta}. Staying queued.")
+            d["scheduled_after"] = (last + gap).isoformat()
             continue
         d["content"] = ensure_complete(d["content"], d["paper"])
         import os
@@ -191,6 +200,7 @@ def main():
             print(f"{d['draft_id']}: all platforms failed, will retry.")
             continue
         d["status"] = "posted"
+        last = datetime.now(timezone.utc)
         posted.append({
             "draft_id": d["draft_id"], "paper_id": d["paper"]["id"],
             "title": d["paper"]["title"], "format": d["content"]["format"],

@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name robopost-bot
           git config user.email bot@users.noreply.github.com
-          git add data media 2>/dev/null || git add data
+          git add data media docs 2>/dev/null || git add data docs
           git commit -m "daily pipeline $(date -u +%F)" || echo "nothing to commit"
           for i in 1 2 3; do
             if git pull --rebase; then

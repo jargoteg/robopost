@@ -3,7 +3,7 @@ Claude decides carousel vs video per paper, writes the review/commentary,
 and produces captions tuned per platform — informed by feedback.md."""
 import uuid
 from datetime import datetime, timezone
-from utils import load_config, load_json, save_json, claude_json, get_feedback_notes
+from utils import load_config, load_json, save_json, claude_json, get_feedback_notes, get_trends
 
 
 def generate_draft(paper: dict, cfg) -> dict:
@@ -37,6 +37,8 @@ Lessons from past engagement (apply them):
 {feedback}
 
 {conf}
+
+{get_trends()}
 
 Item type: {paper.get('item_type', 'paper')} (paper = arXiv preprint; article =
 journal/news/blog piece e.g. Nature or IEEE Spectrum; video = lab/company video).

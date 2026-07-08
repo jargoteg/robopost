@@ -40,7 +40,27 @@ def tiktok_metrics(publish_id):
     return {}
 
 
+def track_followers():
+    handle = env("BLUESKY_HANDLE")
+    if not handle:
+        return
+    try:
+        r = requests.get("https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile",
+                         params={"actor": handle}, timeout=30).json()
+        hist = load_json("follower_history.json", [])
+        hist.append({"date": datetime.now(timezone.utc).isoformat()[:10],
+                     "followers": r.get("followersCount", 0),
+                     "posts": r.get("postsCount", 0)})
+        # keep one entry per day (last wins)
+        dedup = {h["date"]: h for h in hist}
+        save_json("follower_history.json", [dedup[k] for k in sorted(dedup)])
+        print(f"Followers: {r.get('followersCount')}")
+    except Exception as e:
+        print(f"Follower tracking failed (non-fatal): {e}")
+
+
 def main():
+    track_followers()
     posted = load_json("posted.json", [])
     for p in posted:
         ids = p.get("platform_ids", {})
