@@ -291,6 +291,13 @@ def finalize():
             close(d["issue"])
             d["finalized"] = True
         elif (d["status"] == "approved" and d.get("issue")
+              and d.get("scheduled_after") and not d.get("queue_notified")):
+            comment(d["issue"], f"⏱ Approved and queued. Posting after "
+                                f"{d['scheduled_after'][11:16]} UTC to space out "
+                                f"your feed (queue drains every 30 min). "
+                                f"Live queue: see the dashboard.")
+            d["queue_notified"] = True
+        elif (d["status"] == "approved" and d.get("issue")
               and d.get("post_failures", 0) > d.get("failures_notified", 0)):
             comment(d["issue"], "⚠️ Posting failed on all configured platforms. "
                                 "It will retry automatically on the next review "

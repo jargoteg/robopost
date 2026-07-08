@@ -159,7 +159,7 @@ def main():
     posted = load_json("posted.json", [])
     from generate import ensure_complete
     from datetime import timedelta
-    gap = timedelta(hours=cfg["pipeline"].get("min_hours_between_posts", 3))
+    gap = timedelta(minutes=cfg.get("posting", {}).get("min_gap_minutes", 90))
     last = max((datetime.fromisoformat(p["posted_at"]) for p in posted), default=None)
     for d in drafts:
         if d["status"] != "approved":

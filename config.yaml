@@ -46,6 +46,12 @@ sources:
     - "collective behavior"
     - "multi-robot"
 
+posting:
+  min_gap_minutes: 90                  # spacing between posts; queue drains every 30 min
+
+trends:
+  queries: ["robotics", "robot learning", "humanoid robot", "swarm robots", "robot arm"]
+
 pipeline:
   drafts_per_day: 2
   max_news_per_day: 1            # news/RSS items cap; papers get the rest
