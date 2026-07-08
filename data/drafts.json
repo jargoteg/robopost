@@ -1,7 +1,7 @@
 [
   {
     "draft_id": "test0002",
-    "status": "in_review",
+    "status": "rejected",
     "paper": {
       "id": "2507.04321",
       "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
