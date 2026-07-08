@@ -64,28 +64,28 @@ def create_issues():
         video = d.get("media", {}).get("video")
         video_md = (f"\n🎬 [Watch the generated video]"
                     f"(https://github.com/{repo}/blob/main/{video})\n" if video else "")
-        body = f"""**[{c['format'].upper()}]** {p['title']}
+        body = f"""**[{c.get('format','carousel').upper()}]** {p['title']}
 {p['url']}
 
 ### 🪝 Hook
-{c['hook']}
+{c.get('hook', '(missing — will be filled at post time)')}
 
 ### 💬 Commentary
-{c['commentary']}
+{c.get('commentary', '(missing — will be filled at post time)')}
 
 ### Bluesky post
 ```
-{c['post_bluesky']}
+{c.get('post_bluesky', '(missing — will be filled at post time)')}
 ```
 
 ### Instagram caption
 ```
-{c['caption_instagram']}
+{c.get('caption_instagram', '(missing — will be filled at post time)')}
 ```
 
 ### TikTok caption
 ```
-{c['caption_tiktok']}
+{c.get('caption_tiktok', '(missing — will be filled at post time)')}
 ```
 {video_md}
 ### Cards

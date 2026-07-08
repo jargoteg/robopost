@@ -104,9 +104,11 @@ def main():
     cfg = load_config()
     drafts = load_json("drafts.json", [])
     posted = load_json("posted.json", [])
+    from generate import ensure_complete
     for d in drafts:
         if d["status"] != "approved":
             continue
+        d["content"] = ensure_complete(d["content"], d["paper"])
         ids = {}
         for name, fn, enabled in [
             ("bluesky", post_bluesky, cfg["platforms"]["bluesky"]),

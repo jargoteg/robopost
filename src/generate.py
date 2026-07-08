@@ -53,8 +53,9 @@ Produce JSON:
   "post_bluesky": "<=280 chars incl. the arXiv link {paper['url']}, no hashtags spam (max 2)"
 }}""",
         system="You are an expert robotics researcher and social media writer.",
-        max_tokens=3000,
+        max_tokens=4000,
     )
+    result = ensure_complete(result, paper)
     result["slides"] = result.get("slides", [])[: cfg["visuals"]["max_slides"]]
     return {
         "draft_id": uuid.uuid4().hex[:8],
@@ -63,6 +64,27 @@ Produce JSON:
         "status": "pending_media",
         "created": datetime.now(timezone.utc).isoformat(),
     }
+
+
+def ensure_complete(c: dict, paper: dict) -> dict:
+    """Guarantee every field downstream code relies on exists."""
+    hook = c.get("hook") or paper["title"][:88]
+    commentary = c.get("commentary") or paper["abstract"][:400]
+    c["hook"] = hook
+    c["commentary"] = commentary
+    c.setdefault("format", "carousel")
+    if not c.get("slides"):
+        c["slides"] = [{"title": "What it is", "body": paper["abstract"][:220]}]
+    c.setdefault("video_script", f"{hook}. {commentary}")
+    link = paper.get("url", "")
+    if not c.get("post_bluesky"):
+        room = 280 - len(link) - 2
+        c["post_bluesky"] = f"{hook[:max(0, room)]}\n{link}".strip()
+    if not c.get("caption_instagram"):
+        c["caption_instagram"] = f"{hook}\n\n{commentary}\n\n{paper['title']} — {link}"
+    if not c.get("caption_tiktok"):
+        c["caption_tiktok"] = f"{hook} #robotics"
+    return c
 
 
 def main():
