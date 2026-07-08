@@ -8,6 +8,20 @@ sources:
   arxiv_categories: ["cs.RO"]          # add "cs.AI", "cs.LG" if desired
   arxiv_max_results: 40                # fetched per day before ranking
   hf_daily_papers: true                # also pull Hugging Face daily papers
+  news_feeds:                          # RSS — competitions, industry, lab news
+    - https://spectrum.ieee.org/feeds/topic/robotics.rss
+    - https://www.therobotreport.com/feed/
+    - https://robohub.org/feed/
+  news_keywords:                       # RSS item kept only if it matches one
+    - robot
+    - robocup
+    - humanoid
+    - drone
+    - manipulation
+    - autonomous
+    - competition
+  youtube_enrichment: true             # find project/demo videos for picked items
+                                       # (requires YOUTUBE_API_KEY secret; free)
   keywords_boost:                      # papers matching these rank higher
     - manipulation
     - locomotion

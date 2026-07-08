@@ -57,6 +57,69 @@ def fetch_hf_daily() -> list[dict]:
         return []
 
 
+def fetch_rss(cfg) -> list[dict]:
+    """Pull robotics news/competition items from configured RSS feeds
+    (RoboCup coverage, industry news, lab announcements)."""
+    import hashlib
+    from datetime import timedelta
+    kw = [k.lower() for k in cfg["sources"].get("news_keywords", ["robot"])]
+    items = []
+    for feed in cfg["sources"].get("news_feeds", []):
+        try:
+            r = requests.get(feed, timeout=30, headers={
+                "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
+            root = ET.fromstring(r.content)
+            for it in root.iter("item"):  # RSS 2.0
+                title = (it.findtext("title") or "").strip()
+                link = (it.findtext("link") or "").strip()
+                desc = re.sub(r"<[^>]+>", " ", it.findtext("description") or "")
+                desc = re.sub(r"\s+", " ", desc).strip()
+                blob = f"{title} {desc}".lower()
+                if not link or not any(k in blob for k in kw):
+                    continue
+                items.append({
+                    "id": "rss-" + hashlib.sha1(link.encode()).hexdigest()[:10],
+                    "title": title, "abstract": desc[:1500] or title,
+                    "authors": [], "url": link,
+                    "source": feed.split("/")[2].replace("www.", ""),
+                    "item_type": "article",
+                })
+        except Exception as e:
+            print(f"RSS fetch failed for {feed} (non-fatal): {e}")
+    return items
+
+
+def enrich_youtube(items: list[dict]):
+    """For each picked item, search YouTube for a project/demo video and
+    attach it as video_url. Linked in captions, never re-uploaded.
+    Requires YOUTUBE_API_KEY (free Data API v3 key); silently skips if unset."""
+    import os
+    key = os.environ.get("YOUTUBE_API_KEY", "")
+    if not key:
+        return
+    for it in items:
+        if it.get("video_url"):
+            continue
+        q = it["title"][:90]
+        try:
+            r = requests.get(
+                "https://www.googleapis.com/youtube/v3/search",
+                params={"part": "snippet", "q": q, "type": "video",
+                        "maxResults": 3, "key": key}, timeout=30).json()
+            for v in r.get("items", []):
+                vt = v["snippet"]["title"].lower()
+                # crude match: enough title-word overlap to be the same work
+                words = [w for w in re.findall(r"\w{4,}", it["title"].lower())][:8]
+                hits = sum(w in vt for w in words)
+                if words and hits / len(words) >= 0.4:
+                    it["video_url"] = f"https://www.youtube.com/watch?v={v['id']['videoId']}"
+                    it["video_title"] = v["snippet"]["title"]
+                    print(f"YouTube match for '{it['title'][:50]}': {it['video_title'][:60]}")
+                    break
+        except Exception as e:
+            print(f"YouTube search failed (non-fatal): {e}")
+
+
 def rank_papers(papers: list[dict], cfg) -> list[dict]:
     """Ask Claude to score papers for this account's audience."""
     feedback = get_feedback_notes()
@@ -71,7 +134,7 @@ Priority topics: {boost}.
 Lessons learned from past engagement data:
 {feedback}
 
-Score each paper 0-10 for how compelling a social post about it would be
+Score each item (paper or news/competition story) 0-10 for how compelling a social post about it would be
 (novelty, visual/story potential, audience fit). Return JSON:
 [{{"index": int, "score": float, "why": "one line"}}]
 
@@ -101,7 +164,7 @@ def main():
             seen.add(p["id"])
     save_json("manual_queue.json", [])
 
-    # 2. Automatic fetch + rank
+    # 2. Automatic fetch + rank (papers + news/competition feeds)
     papers = fetch_arxiv(cfg)
     if cfg["sources"]["hf_daily_papers"]:
         # keep HF entries that look robotics-adjacent
@@ -110,16 +173,19 @@ def main():
             p for p in fetch_hf_daily()
             if any(k in (p["title"] + p["abstract"]).lower() for k in kw)
         ]
+    papers += fetch_rss(cfg)
     papers = [p for p in papers if p["id"] not in seen]
     if papers:
         ranked = rank_papers(papers, cfg)
         n = cfg["pipeline"]["drafts_per_day"]
         floor = cfg["pipeline"]["min_relevance_score"]
         picked = [p for p in ranked if p.get("score", 0) >= floor][:n]
+        if cfg["sources"].get("youtube_enrichment"):
+            enrich_youtube(picked)
         for p in picked:
             queue.append(p)
             seen.add(p["id"])
-        print(f"Picked {len(picked)} of {len(papers)} new papers.")
+        print(f"Picked {len(picked)} of {len(papers)} new items.")
 
     save_json("draft_queue.json", queue)
     save_json("seen_papers.json", sorted(seen)[-5000:])  # cap history

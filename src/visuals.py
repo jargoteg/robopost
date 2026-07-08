@@ -61,7 +61,12 @@ def build_carousel(draft, cfg) -> list[str]:
     c, p = draft["content"], draft["paper"]
     out_dir = MEDIA / draft["draft_id"]
     out_dir.mkdir(parents=True, exist_ok=True)
-    footer = f"{cfg['account']['handle']}  ·  arXiv:{p['id']}"
+    if p.get("source", "arxiv") in ("arxiv", "hf_daily", "manual"):
+        ref = f"arXiv:{p['id']}"
+    else:
+        from urllib.parse import urlparse
+        ref = p.get("source") or urlparse(p["url"]).netloc.replace("www.", "")
+    footer = f"{cfg['account']['handle']}  ·  {ref}"
 
     slides = [{"title": c["hook"], "body": p["title"]}] + c["slides"]
     slides.append({"title": "The takeaway", "body": c["commentary"]})

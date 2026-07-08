@@ -126,29 +126,103 @@ def handle_event():
             comment(num, "🔁 Will regenerate with your notes in the next daily run.")
             close(num)
 
-    elif ev.get("action") == "opened" and "issue" in ev:  # manual paper add
+    elif ev.get("action") == "opened" and "issue" in ev:  # manual item add
         issue = ev["issue"]
         if "[bot]" in issue["user"]["login"]:
             return
         if any(l["name"] == "draft" for l in issue.get("labels", [])):
             return
-        blob = f"{issue['title']} {issue.get('body') or ''}"
-        m = re.search(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", blob) \
-            or re.search(r"\b(\d{4}\.\d{4,5})\b", blob)
-        if not m:
-            return
-        paper = fetch_arxiv_by_id(m.group(1))
         num = issue["number"]
-        if paper:
+        item = resolve_item(issue["title"], issue.get("body") or "")
+        if item:
             manual = load_json("manual_queue.json", [])
-            manual.append(paper)
+            manual.append(item)
             save_json("manual_queue.json", manual)
-            comment(num, f"➕ Queued for the next daily run: **{paper['title']}**")
+            extra = " (+ YouTube video attached)" if item.get("video_url") else ""
+            comment(num, f"➕ Queued for the next daily run: **{item['title']}**{extra}")
         else:
-            comment(num, f"Couldn't resolve arXiv id `{m.group(1)}`.")
+            comment(num, "Couldn't find a usable link in this issue. Include an "
+                         "arXiv link, or any article URL (Nature, IEEE Spectrum, "
+                         "blog...). Optionally add a YouTube link and notes.")
         close(num)
 
     save_json("drafts.json", drafts)
+
+
+def resolve_item(title: str, body: str):
+    """Turn a manual-add issue into a content item. Accepts:
+    - arXiv links (full metadata via arXiv API)
+    - any other article URL (Nature, IEEE Spectrum, news, blogs) —
+      page is fetched and Claude extracts title/summary/source
+    - an optional YouTube link (attached as video_url, linked in captions)
+    - any remaining text becomes user_notes for the writer."""
+    import hashlib
+    from utils import fetch_url_text, claude_json
+
+    blob = f"{title}\n{body}"
+    urls = re.findall(r"https?://[^\s)\]>\"']+", blob)
+    yt = [u for u in urls if re.search(r"(youtube\.com|youtu\.be)/", u)]
+    other = [u for u in urls if u not in yt]
+    notes = re.sub(r"https?://[^\s)\]>\"']+", "", body).strip()
+
+    item = None
+    # arXiv first-class
+    m = re.search(r"arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})", blob) \
+        or (not other and re.search(r"\b(\d{4}\.\d{4,5})\b", blob))
+    if m:
+        item = fetch_arxiv_by_id(m.group(1))
+    elif other:
+        url = other[0]
+        try:
+            page = fetch_url_text(url)
+            meta = claude_json(
+                f"""Extract metadata for a robotics social-media post from this page.
+Return JSON: {{"title": "...", "summary": "4-8 sentence factual summary of the
+work/announcement", "source_name": "e.g. Nature, IEEE Spectrum, Boston Dynamics blog",
+"authors_or_org": ["..."], "is_robotics_relevant": true|false}}
+
+URL: {url}
+{page}""",
+                system="You extract clean metadata from web pages.")
+            item = {
+                "id": "web-" + hashlib.sha1(url.encode()).hexdigest()[:10],
+                "title": meta["title"],
+                "abstract": meta["summary"],
+                "authors": meta.get("authors_or_org", [])[:6],
+                "url": url,
+                "source": meta.get("source_name", "web"),
+                "item_type": "article",
+            }
+        except Exception as e:
+            print(f"Generic URL resolution failed for {url}: {e}")
+            item = None
+    elif yt:
+        # video-only submission: use the YouTube page itself as the item
+        url = yt[0]
+        try:
+            page = fetch_url_text(url)
+            meta = claude_json(
+                f"Extract from this YouTube page. JSON: {{\"title\": \"...\", "
+                f"\"summary\": \"what the video shows, 3-6 sentences\", "
+                f"\"authors_or_org\": [\"channel/lab\"]}}\n\nURL: {url}\n{page}",
+                system="You extract clean metadata from web pages.")
+            item = {
+                "id": "yt-" + hashlib.sha1(url.encode()).hexdigest()[:10],
+                "title": meta["title"], "abstract": meta["summary"],
+                "authors": meta.get("authors_or_org", [])[:6],
+                "url": url, "source": "youtube", "item_type": "video",
+            }
+        except Exception as e:
+            print(f"YouTube resolution failed: {e}")
+
+    if item:
+        if yt and item.get("source") != "youtube":
+            item["video_url"] = yt[0]
+        if notes:
+            item["user_notes"] = notes[:1500]
+        item.setdefault("item_type", "paper")
+        item["source"] = item.get("source") or "manual"
+    return item
 
 
 def fetch_arxiv_by_id(pid: str):

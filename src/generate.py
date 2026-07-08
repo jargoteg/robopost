@@ -17,11 +17,19 @@ and why it matters. Never fabricate results not implied by the abstract.
 Lessons from past engagement (apply them):
 {feedback}
 
-Paper:
+Item type: {paper.get('item_type', 'paper')} (paper = arXiv preprint; article =
+journal/news/blog piece e.g. Nature or IEEE Spectrum; video = lab/company video).
+Adapt: papers get review-style rigor; articles get context on why the news
+matters; videos get commentary on what the demo does and doesn't prove.
+
 Title: {paper['title']}
-Authors: {', '.join(paper.get('authors', []))}
-Abstract: {paper['abstract']}
+Source: {paper.get('source', 'arxiv')}
+Authors/Org: {', '.join(paper.get('authors', []))}
+Summary/Abstract: {paper['abstract']}
 Link: {paper['url']}
+{"Related YouTube video (title: " + paper.get('video_title','?') + "): " + paper['video_url'] + " — LINK it in captions (e.g. 'full video linked in comments/bio'); never re-upload footage. If the video title looks unrelated to this work, IGNORE it entirely." if paper.get('video_url') else ""}
+{"Curator's notes (from the account owner — follow these): " + paper['user_notes'] if paper.get('user_notes') else ""}
+{"Redo notes from previous rejection (must address): " + paper['redo_notes'] if paper.get('redo_notes') else ""}
 
 Produce JSON:
 {{

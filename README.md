@@ -23,7 +23,20 @@ Each draft arrives as an issue labeled `draft` with all cards, captions, and vid
 - `/reject` — discard
 - `/redo your notes here` — regenerate with your feedback in the next daily run
 
-**Manually add a paper:** open a new issue whose title or body contains an arXiv link (e.g. `https://arxiv.org/abs/2507.01234`). It's queued instantly, jumps the automatic queue, and the issue closes with a confirmation.
+**Manually add anything:** open a new issue containing a link. Supported:
+- **arXiv links** → full paper metadata pulled from the arXiv API
+- **any article URL** (Nature, Science Robotics, IEEE Spectrum, lab blogs, news) → page fetched, Claude extracts title/summary/source
+- **YouTube link alongside** → attached and linked in the captions ("full video linked") — third-party footage is never re-uploaded, only linked
+- **YouTube link alone** → the video itself becomes the item
+- **any extra text** in the body → curator's notes the writer must follow
+
+Example issue body:
+```
+https://www.nature.com/articles/s41586-025-xxxxx
+https://youtu.be/xxxx
+Emphasize the actuator design; be skeptical of the battery-life claim.
+```
+Items are queued instantly, jump the automatic queue, and the issue closes with a confirmation.
 
 Install the GitHub mobile app and enable notifications for this repo — drafts land as push notifications. Only comments from the repo owner/collaborators are honored.
 
@@ -61,6 +74,14 @@ Repo → Settings → Secrets and variables → Actions → add all of the above
 
 ### 7. First run
 Actions tab → "Daily content pipeline" → **Run workflow**. Draft issues appear in the Issues tab within ~5 minutes.
+
+### 9. YouTube video enrichment (optional, recommended)
+The pipeline searches YouTube for a project/demo video of each picked item and links it in the captions (videos are linked, never re-uploaded).
+1. console.cloud.google.com → create project → enable **YouTube Data API v3** → Credentials → API key
+2. Add secret `YOUTUBE_API_KEY`. Free quota easily covers daily use. If unset, the step is skipped silently.
+
+## Content sources
+Automatic daily pull now covers: arXiv (configurable categories), Hugging Face daily papers, and any RSS feeds in `config.yaml → sources.news_feeds` — preloaded with IEEE Spectrum robotics, The Robot Report, and Robohub, which carry RoboCup and other competition coverage. Add any feed URL (e.g. a specific competition's news feed) and it joins the ranking pool; `news_keywords` filters what's considered.
 
 ## Tuning
 Everything lives in `config.yaml`: account voice, arXiv categories, boost keywords, drafts per day, colors, TTS voice, carousel/video sizes. The commentary style prompt is in `src/generate.py`.

@@ -68,3 +68,18 @@ def env(key: str, required: bool = False) -> str:
     if required and not v:
         raise RuntimeError(f"Missing required env var / secret: {key}")
     return v
+
+
+def fetch_url_text(url: str, limit: int = 8000) -> str:
+    """Fetch a web page and return readable text (for Claude extraction)."""
+    import requests
+    from bs4 import BeautifulSoup
+    r = requests.get(url, timeout=30, headers={
+        "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+    for tag in soup(["script", "style", "nav", "footer", "header", "aside"]):
+        tag.decompose()
+    title = soup.title.string.strip() if soup.title and soup.title.string else ""
+    text = " ".join(soup.get_text(" ").split())
+    return f"PAGE TITLE: {title}\n\n{text[:limit]}"
