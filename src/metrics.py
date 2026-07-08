@@ -58,7 +58,8 @@ def main():
 
     # ── learning step ──
     recent = posted[-30:]
-    if not recent:
+    rejections = load_json("rejections.json", [])[-20:]
+    if not recent and not rejections:
         return
     table = "\n".join(
         f"- [{p['format']}] \"{p['hook']}\" ({p['title'][:60]}) → {p['metrics']}"
@@ -67,6 +68,9 @@ def main():
     lessons = claude(
         f"""Here are our last posts (format, hook, paper, engagement metrics):
 {table}
+
+Recently REJECTED by the owner (with reasons):
+{chr(10).join(f"- [{r.get('item_type')}] {r.get('title','')[:60]}: {r.get('reason')}" for r in rejections) or "none"}
 
 Write a short "lessons learned" brief (max 250 words) for the content team:
 1. Topics/paper types that over- and under-performed

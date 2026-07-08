@@ -71,14 +71,16 @@ def fetch_hf_daily() -> list[dict]:
         return []
 
 
-def fetch_rss(cfg) -> list[dict]:
-    """Pull robotics news/competition items from configured RSS feeds
-    (RoboCup coverage, industry news, lab announcements)."""
+def fetch_rss(cfg, feeds_key="news_feeds", item_type="article") -> list[dict]:
+    """Pull items from RSS feeds. news_feeds → articles (subject to the news
+    cap); journal_feeds (Science Robotics, Nature MI...) → papers (no cap)."""
     import hashlib
     from datetime import timedelta
     kw = [k.lower() for k in cfg["sources"].get("news_keywords", ["robot"])]
+    if item_type == "paper":
+        kw = kw + ["learn", "control", "actuat", "sensor", "soft", "manipulat"]
     items = []
-    for feed in cfg["sources"].get("news_feeds", []):
+    for feed in cfg["sources"].get(feeds_key, []):
         try:
             r = requests.get(feed, timeout=30, headers={
                 "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
@@ -96,7 +98,7 @@ def fetch_rss(cfg) -> list[dict]:
                     "title": title, "abstract": desc[:1500] or title,
                     "authors": [], "url": link,
                     "source": feed.split("/")[2].replace("www.", ""),
-                    "item_type": "article",
+                    "item_type": item_type,
                 })
         except Exception as e:
             print(f"RSS fetch failed for {feed} (non-fatal): {e}")
@@ -162,6 +164,56 @@ if visible, else \"{url}\""}}]\n\nPAGE ({url}):\n{page}""",
     return items
 
 
+def fetch_arxiv_ids(ids: list[str]) -> list[dict]:
+    r = get_with_retries(f"http://export.arxiv.org/api/query?id_list={','.join(ids)}")
+    out = []
+    for e in ET.fromstring(r.text).findall("a:entry", NS):
+        t = e.find("a:title", NS)
+        if t is None or not (t.text or "").strip():
+            continue
+        pid = e.find("a:id", NS).text.split("/abs/")[-1].split("v")[0]
+        out.append({
+            "id": pid,
+            "title": re.sub(r"\s+", " ", t.text).strip(),
+            "abstract": re.sub(r"\s+", " ", e.find("a:summary", NS).text).strip(),
+            "authors": [a.find("a:name", NS).text for a in e.findall("a:author", NS)][:6],
+            "url": f"https://arxiv.org/abs/{pid}", "source": "arxiv",
+        })
+    return out
+
+
+def suggest_evergreen(cfg, seen: set) -> list[dict]:
+    """Older but landmark/underrated robotics papers, proposed by Claude and
+    verified against arXiv. Skips anything already seen or posted."""
+    from utils import claude_json
+    posted_titles = [p["title"] for p in load_json("posted.json", [])][-50:]
+    rejected = [r.get("title", "") for r in load_json("rejections.json", [])][-30:]
+    try:
+        cands = claude_json(
+            f"""Suggest 4 robotics papers on arXiv that are NOT from the last few
+months but are worth featuring on a robotics research account today:
+landmark works, underrated gems, or classics newly relevant to current events
+(e.g. RoboCup, humanoid progress, VLA models). Prefer visually rich papers.
+Avoid anything resembling these already covered: {posted_titles}
+And these rejected topics: {rejected}
+Return JSON: [{{"arxiv_id": "XXXX.XXXXX", "why_now": "one line"}}]""",
+            system="You are a robotics research historian and curator.")
+        ids = [c["arxiv_id"] for c in cands if re.match(r"\d{4}\.\d{4,5}$", str(c.get("arxiv_id", "")))]
+        why = {c["arxiv_id"]: c.get("why_now", "") for c in cands}
+        verified = fetch_arxiv_ids(ids) if ids else []
+        out = []
+        for p in verified:
+            if p["id"] not in seen:
+                p["item_type"] = "paper"
+                p["evergreen"] = True
+                p["user_notes"] = f"Evergreen pick. Angle: {why.get(p['id'], '')}. Make clear it's not new work, and why it matters today."
+                out.append(p)
+        return out[: cfg["sources"].get("evergreen", {}).get("per_day", 1)]
+    except Exception as e:
+        print(f"Evergreen suggestion failed (non-fatal): {e}")
+        return []
+
+
 def rank_papers(papers: list[dict], cfg) -> list[dict]:
     """Ask Claude to score items for this account's audience (batched to
     keep each response small enough to never truncate)."""
@@ -184,6 +236,11 @@ def rank_papers(papers: list[dict], cfg) -> list[dict]:
 
 def _rank_batch(batch, listing, feedback, conf, boost):
     cfg = load_config()
+    rej = load_json("rejections.json", [])[-10:]
+    rejections = ""
+    if rej:
+        rejections = "The owner REJECTED these recently (avoid similar picks):\n" + "\n".join(
+            f"- {r.get('title','')[:70]}: \"{r.get('reason','no reason given')}\"" for r in rej)
     result = claude_json(
         f"""You curate papers for a social account about: {cfg['account']['niche']}.
 Priority topics: {boost}.
@@ -192,6 +249,8 @@ Lessons learned from past engagement data:
 {feedback}
 
 {conf}
+
+{rejections}
 
 Score each item (paper or news/competition story) 0-10 for how compelling a social post about it would be
 (novelty, visual/story potential, audience fit). Return a compact JSON
@@ -235,6 +294,9 @@ def main():
             if any(k in (p["title"] + p["abstract"]).lower() for k in kw)
         ]
     papers += fetch_rss(cfg)
+    papers += fetch_rss(cfg, "journal_feeds", "paper")
+    if cfg["sources"].get("evergreen", {}).get("enabled"):
+        papers += suggest_evergreen(cfg, seen)
     papers += fetch_watch_pages(cfg)
     from conference_radar import preview_items, active_windows
     papers += preview_items(cfg)

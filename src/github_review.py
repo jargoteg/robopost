@@ -92,7 +92,7 @@ def create_issues():
 {slides}
 
 ---
-**Reply with a comment:** `/approve` · `/reject` · `/redo <your notes>`
+**Reply with a comment:** `/approve` · `/reject <why — teaches the curator>` · `/redo <your notes>`
 """
         issue = gh("POST", "/issues", {
             "title": f"[DRAFT {d['draft_id']}] {p['title'][:80]}",
@@ -121,9 +121,20 @@ def handle_event():
         if re.match(r"/approve\b", text):
             d["status"] = "approved"
             comment(num, "✅ Approved — posting now. Results will follow here.")
-        elif re.match(r"/reject\b", text):
+        elif m := re.match(r"/reject\b\s*(.*)", text, re.S):
             d["status"] = "rejected"
-            comment(num, "🗑 Rejected.")
+            reason = m.group(1).strip()
+            rej = load_json("rejections.json", [])
+            rej.append({"title": d["paper"]["title"], "source": d["paper"].get("source"),
+                        "item_type": d["paper"].get("item_type", "paper"),
+                        "reason": reason or "no reason given",
+                        "date": __import__("datetime").date.today().isoformat()})
+            save_json("rejections.json", rej[-200:])
+            if reason:
+                comment(num, f"🗑 Rejected. Noted for future curation: \"{reason}\"")
+            else:
+                comment(num, "🗑 Rejected. Tip: add a reason (/reject too incremental) "
+                             "and the system learns what to avoid.")
             close(num)
         elif m := re.match(r"/redo\s*(.*)", text, re.S):
             d["status"] = "rejected"
