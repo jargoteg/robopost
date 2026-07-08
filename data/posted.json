@@ -26,5 +26,19 @@
       "tiktok": null
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ee6df781",
+    "paper_id": "2607.06438v1",
+    "title": "WristMimic: Full-Body Humanoid Control with Wrist-Guided Manipulation",
+    "format": "carousel",
+    "hook": "Stop supervising fingers. Let the wrist do the work.",
+    "posted_at": "2026-07-08T20:36:04.241816+00:00",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq5xugo6g32x",
+      "instagram": null,
+      "tiktok": null
+    },
+    "metrics": {}
   }
 ]

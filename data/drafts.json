@@ -752,7 +752,7 @@
       "caption_tiktok": "Tracking robot fingers from human demos fails because positions carry no force data. WristMimic tracks the wrist, skips finger supervision, and still wins. Clean idea. #robotics #humanoidrobots #dexterousmanipulation #imitationlearning",
       "post_bluesky": "WristMimic: track the wrist kinematically, leave fingers unsupervised, let them learn from object outcomes. Matches or beats full finger-pose supervision across hand embodiments. Clean design principle. Sim only for now, but worth your attention. https://arxiv.org/abs/2607.06438v1 #robotics"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-08T20:31:55.177558+00:00",
     "media": {
       "figures": [
@@ -778,7 +778,8 @@
         "media/ee6df781/slide_07.png"
       ]
     },
-    "issue": 15
+    "issue": 15,
+    "finalized": true
   },
   {
     "draft_id": "4c7786bf",
