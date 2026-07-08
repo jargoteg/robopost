@@ -39,6 +39,14 @@ def close(num: int):
     gh("PATCH", f"/issues/{num}", {"state": "closed"})
 
 
+def flag_regen():
+    """Tell the workflow to run the generation steps in this same run."""
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a") as f:
+            f.write("regen=true\n")
+
+
 # ── create draft issues ─────────────────────────────────────────────
 def create_issues():
     cfg = load_config()
@@ -123,7 +131,9 @@ def handle_event():
             queue = load_json("draft_queue.json", [])
             queue.insert(0, paper)
             save_json("draft_queue.json", queue)
-            comment(num, "🔁 Will regenerate with your notes in the next daily run.")
+            flag_regen()
+            comment(num, "🔁 Regenerating with your notes — a fresh draft issue "
+                         "will appear here in a few minutes.")
             close(num)
 
     elif ev.get("action") == "opened" and "issue" in ev:  # manual item add
@@ -135,11 +145,16 @@ def handle_event():
         num = issue["number"]
         item = resolve_item(issue["title"], issue.get("body") or "")
         if item:
-            manual = load_json("manual_queue.json", [])
-            manual.append(item)
-            save_json("manual_queue.json", manual)
+            queue = load_json("draft_queue.json", [])
+            queue.insert(0, item)
+            save_json("draft_queue.json", queue)
+            seen = set(load_json("seen_papers.json", []))
+            seen.add(item["id"])
+            save_json("seen_papers.json", sorted(seen))
+            flag_regen()
             extra = " (+ YouTube video attached)" if item.get("video_url") else ""
-            comment(num, f"➕ Queued for the next daily run: **{item['title']}**{extra}")
+            comment(num, f"➕ **{item['title']}**{extra} — drafting now, a draft "
+                         f"issue will appear in a few minutes.")
         else:
             comment(num, "Couldn't find a usable link in this issue. Include an "
                          "arXiv link, or any article URL (Nature, IEEE Spectrum, "

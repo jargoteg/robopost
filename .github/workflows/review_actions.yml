@@ -16,12 +16,31 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install requests pyyaml
+      - run: pip install -r requirements.txt
       - name: Handle command / manual paper
+        id: handle
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GITHUB_REPOSITORY: "${{ github.repository }}"
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
         run: python src/github_review.py handle
+      - name: Install media tools (regen only)
+        if: steps.handle.outputs.regen == 'true'
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
+      - name: Regenerate drafts (redo / manual add)
+        if: steps.handle.outputs.regen == 'true'
+        env:
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+        run: |
+          python src/generate.py
+          python src/visuals.py
+          python src/video.py
+      - name: Open new draft issues (regen only)
+        if: steps.handle.outputs.regen == 'true'
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_REPOSITORY: "${{ github.repository }}"
+        run: python src/github_review.py create
       - name: Post approved drafts
         env:
           BLUESKY_HANDLE: "${{ secrets.BLUESKY_HANDLE }}"
@@ -39,6 +58,6 @@ jobs:
         run: |
           git config user.name robopost-bot
           git config user.email bot@users.noreply.github.com
-          git add data
+          git add data media
           git commit -m "review action" || echo "nothing to commit"
           git pull --rebase && git push
