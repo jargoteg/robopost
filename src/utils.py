@@ -54,7 +54,20 @@ def claude_json(prompt: str, system: str = "", max_tokens: int = 4000):
     text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
     # Tolerate leading/trailing junk by grabbing outermost braces/brackets
     m = re.search(r"[\[{].*[\]}]", text, flags=re.S)
-    return json.loads(m.group(0) if m else text)
+    raw = m.group(0) if m else text
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        # Salvage a truncated/glitched ARRAY: trim to the last complete object
+        start = raw.find("[")
+        if start != -1:
+            end = raw.rfind("}")
+            while end > start:
+                try:
+                    return json.loads(raw[start:end + 1] + "]")
+                except json.JSONDecodeError:
+                    end = raw.rfind("}", start, end)
+        raise
 
 
 def get_feedback_notes() -> str:

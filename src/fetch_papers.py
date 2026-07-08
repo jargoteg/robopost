@@ -149,14 +149,27 @@ if visible, else \"{url}\""}}]\n\nPAGE ({url}):\n{page}""",
 
 
 def rank_papers(papers: list[dict], cfg) -> list[dict]:
-    """Ask Claude to score papers for this account's audience."""
+    """Ask Claude to score items for this account's audience (batched to
+    keep each response small enough to never truncate)."""
     from conference_radar import conference_context
     feedback = get_feedback_notes()
     conf = conference_context(cfg)
     boost = ", ".join(cfg["sources"]["keywords_boost"])
-    listing = "\n".join(
-        f"[{i}] {p['title']} — {p['abstract'][:400]}" for i, p in enumerate(papers)
-    )
+    B = 25
+    for lo in range(0, len(papers), B):
+        batch = papers[lo:lo + B]
+        listing = "\n".join(
+            f"[{i}] {p['title']} — {p['abstract'][:300]}" for i, p in enumerate(batch)
+        )
+        try:
+            _rank_batch(batch, listing, feedback, conf, boost)
+        except Exception as e:
+            print(f"Ranking batch {lo//B} failed (items skipped): {e}")
+    return sorted(papers, key=lambda p: p.get("score", 0), reverse=True)
+
+
+def _rank_batch(batch, listing, feedback, conf, boost):
+    cfg = load_config()
     result = claude_json(
         f"""You curate papers for a social account about: {cfg['account']['niche']}.
 Priority topics: {boost}.
@@ -167,19 +180,17 @@ Lessons learned from past engagement data:
 {conf}
 
 Score each item (paper or news/competition story) 0-10 for how compelling a social post about it would be
-(novelty, visual/story potential, audience fit). Return JSON:
-[{{"index": int, "score": float, "why": "one line"}}]
+(novelty, visual/story potential, audience fit). Return a compact JSON
+array, nothing else: [{{"i": int, "s": float}}]
 
-Papers:
+Items:
 {listing}""",
         system="You are a sharp robotics research curator.",
     )
     for r in result:
-        i = r["index"]
-        if 0 <= i < len(papers):
-            papers[i]["score"] = r["score"]
-            papers[i]["why_ranked"] = r["why"]
-    return sorted(papers, key=lambda p: p.get("score", 0), reverse=True)
+        i = r.get("i", -1)
+        if 0 <= i < len(batch):
+            batch[i]["score"] = r.get("s", 0)
 
 
 def main():
