@@ -14,7 +14,7 @@ def post_bluesky(draft, cfg):
     H = {"Authorization": f"Bearer {jwt}"}
 
     images = []
-    for rel in draft["media"]["slides"][:4]:
+    for rel in (draft["media"].get("bsky") or draft["media"]["slides"][:4]):
         with open(ROOT / rel, "rb") as f:
             blob = requests.post(f"{base}/com.atproto.repo.uploadBlob", headers={
                 **H, "Content-Type": "image/png"}, data=f.read(), timeout=60).json()["blob"]

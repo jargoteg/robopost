@@ -82,7 +82,7 @@ def paste_figure(img, fig_path, box):
     return py + panel.height
 
 
-def footer(img, d, cfg, ref, idx, total, attribution=False):
+def footer(img, d, cfg, ref, attribution=False, page=None):
     w, h = img.size
     pad = 84
     f = _font(FONT_REG, 32)
@@ -90,11 +90,12 @@ def footer(img, d, cfg, ref, idx, total, attribution=False):
     if attribution:
         left += "  ·  figures © the authors"
     d.text((pad, h - 64), left, font=f, fill="#8B95A5", anchor="la")
-    d.text((w - pad, h - 64), f"{idx + 1}/{total}",
-           font=_font(FONT_BOLD, 32), fill=cfg["visuals"]["accent_color"], anchor="ra")
+    if page:
+        d.text((w - pad, h - 64), f"{page[0]}/{page[1]}",
+               font=_font(FONT_BOLD, 32), fill=cfg["visuals"]["accent_color"], anchor="ra")
 
 
-def hero_card(cfg, hook, title, ref, fig, total):
+def hero_card(cfg, hook, title, ref, fig, page=None):
     w, h = cfg["visuals"]["carousel_size"]
     pad = 84
     img, d = canvas(cfg)
@@ -112,11 +113,11 @@ def hero_card(cfg, hook, title, ref, fig, total):
         y += 52
     if fig and y < h - 460:
         paste_figure(img, fig, (pad, y + 30, w - pad, h - 120))
-    footer(img, d, cfg, ref, 0, total, attribution=bool(fig))
+    footer(img, d, cfg, ref, attribution=bool(fig), page=page)
     return img
 
 
-def figure_card(cfg, fig, caption, ref, idx, total):
+def figure_card(cfg, fig, caption, ref, page=None):
     w, h = cfg["visuals"]["carousel_size"]
     pad = 84
     img, d = canvas(cfg)
@@ -126,11 +127,11 @@ def figure_card(cfg, fig, caption, ref, idx, total):
     for line in _wrap(d, clean(caption), cf, w - 2 * pad)[:6]:
         d.text((pad, y), line, font=cf, fill="#EDEFF3")
         y += 56
-    footer(img, d, cfg, ref, idx, total, attribution=True)
+    footer(img, d, cfg, ref, attribution=True, page=page)
     return img
 
 
-def text_card(cfg, title, body, ref, idx, total):
+def text_card(cfg, title, body, ref, page=None):
     w, h = cfg["visuals"]["carousel_size"]
     pad = 84
     img, d = canvas(cfg)
@@ -145,7 +146,7 @@ def text_card(cfg, title, body, ref, idx, total):
     for line in _wrap(d, clean(body), bf, w - 2 * pad)[:10]:
         d.text((pad, y), line, font=bf, fill="#EDEFF3")
         y += 62
-    footer(img, d, cfg, ref, idx, total)
+    footer(img, d, cfg, ref, page=page)
     return img
 
 
@@ -174,19 +175,34 @@ def build_carousel(draft, cfg) -> list[str]:
     plan.append(("txt", "The takeaway", c["commentary"]))
     total = len(plan) + 1
 
-    rendered = [hero_card(cfg, c["hook"], p["title"], ref,
-                          figs[0] if figs else None, total)]
-    for idx, item in enumerate(plan, start=1):
+    def render(item, page):
+        if item[0] == "hero":
+            return hero_card(cfg, c["hook"], p["title"], ref,
+                             figs[0] if figs else None, page)
         if item[0] == "fig":
-            rendered.append(figure_card(cfg, item[1], item[2], ref, idx, total))
-        else:
-            rendered.append(text_card(cfg, item[1], item[2], ref, idx, total))
+            return figure_card(cfg, item[1], item[2], ref, page)
+        return text_card(cfg, item[1], item[2], ref, page)
 
+    full_plan = [("hero",)] + plan
+
+    # Instagram/full set: numbered i/total
     paths = []
-    for i, img in enumerate(rendered):
+    for i, item in enumerate(full_plan):
+        img = render(item, (i + 1, total))
         path = out_dir / f"slide_{i:02d}.png"
         img.save(path)
         paths.append(str(path.relative_to(MEDIA.parent)))
+
+    # Bluesky set: max 4 cards (hero, first content cards, takeaway), NO numbering
+    idxs = [0] + list(range(1, min(3, len(full_plan) - 1))) + [len(full_plan) - 1]
+    idxs = sorted(dict.fromkeys(idxs))[:4]
+    bsky = []
+    for j, i in enumerate(idxs):
+        img = render(full_plan[i], None)
+        path = out_dir / f"bsky_{j:02d}.png"
+        img.save(path)
+        bsky.append(str(path.relative_to(MEDIA.parent)))
+    draft.setdefault("media", {})["bsky"] = bsky
     return paths
 
 
