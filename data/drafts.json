@@ -1,7 +1,7 @@
 [
   {
     "draft_id": "test0002",
-    "status": "pending_review",
+    "status": "in_review",
     "paper": {
       "id": "2507.04321",
       "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
@@ -39,7 +39,8 @@
           "body": "Scaling laws suggest the behavior gets MORE stable with swarm size, not less."
         }
       ]
-    }
+    },
+    "issue": 4
   },
   {
     "draft_id": "0a9bea4b",
@@ -88,7 +89,7 @@
       "caption_tiktok": "Robot swarm that moves like a liquid — no WiFi, no central brain, just physics doing the work. Cornell's entangled collective is a wild concept. #SwarmRobotics #Robotics #EmergentBehavior #SoftMatter",
       "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept — waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T19:51:10.677901+00:00",
     "media": {
       "figures": [
@@ -110,7 +111,8 @@
         "media/0a9bea4b/slide_06.png",
         "media/0a9bea4b/slide_07.png"
       ]
-    }
+    },
+    "issue": 5
   },
   {
     "draft_id": "bacf1b66",
@@ -159,7 +161,7 @@
       "caption_tiktok": "RoboCup 2026 just made humanoid robots the main event. Real matches, real chaos — this is the test no simulation can fake. #RoboCup2026 #HumanoidRobot #RoboticsResearch #AIRobotics",
       "post_bluesky": "RoboCup 2026 is live in Incheon — and humanoid robots are now the headline act in soccer, not a side category. Real match stress-test > any controlled demo. Watching closely all week. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T19:51:38.316954+00:00",
     "media": {
       "figures": [
@@ -181,7 +183,8 @@
         "media/bacf1b66/slide_06.png",
         "media/bacf1b66/slide_07.png"
       ]
-    }
+    },
+    "issue": 6
   },
   {
     "draft_id": "79586311",
@@ -230,7 +233,7 @@
       "caption_tiktok": "A robot beat elite human table tennis players and it's published in Nature. Here's what's actually impressive — and what questions I still have. #robotics #AI #tabletennisrobot #sonyai",
       "post_bluesky": "Sony AI's Ace robot beats elite humans at table tennis — published in Nature, not a promo clip. Real-time spin compensation + mid-rally strategy adaptation is genuinely hard. Caveat: what rating bracket counts as 'elite' matters a lot here. https://robohub.org/sony-ai-table-tennis-robot-outplays-elite-human-players/ #robotics"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T19:52:05.857711+00:00",
     "media": {
       "figures": [
@@ -252,7 +255,8 @@
         "media/79586311/slide_06.png",
         "media/79586311/slide_07.png"
       ]
-    }
+    },
+    "issue": 7
   },
   {
     "draft_id": "318f8fbd",
@@ -301,7 +305,7 @@
       "caption_tiktok": "RoboCup 2026 just started and the footage is wild — but here's how to watch it like a researcher, not a hype account. #RoboCup2026 #SwarmRobotics #RoboticsResearch #MultiAgentSystems",
       "post_bluesky": "RoboCup 2026 is live in Incheon. Robohub's social round-up is the vibe check — the symposium papers dropping this week are where the real signal is. Tracking both. https://robohub.org/robocup2026-social-media-round-up/ #RoboCup2026"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T19:56:42.982359+00:00",
     "media": {
       "figures": [
@@ -323,7 +327,8 @@
         "media/318f8fbd/slide_06.png",
         "media/318f8fbd/slide_07.png"
       ]
-    }
+    },
+    "issue": 8
   },
   {
     "draft_id": "ecd01553",
@@ -372,7 +377,7 @@
       "caption_tiktok": "RoboCup 2026 in 7 days — here's why the 2050 World Cup goal was genius benchmark design, not just hype. #RoboCup2026 #robotics #AIresearch #multiagentrobotics",
       "post_bluesky": "RoboCup 2026 in 7 days. Veloso's origin story is worth reading — soccer was chosen for legibility, not utility. The benchmark was always about building a community. Still the right goal in 2026? https://robohub.org/a-history-of-robocup-with-manuela-veloso/ #RoboCup"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T19:57:10.273667+00:00",
     "media": {
       "figures": [
@@ -394,7 +399,8 @@
         "media/ecd01553/slide_06.png",
         "media/ecd01553/slide_07.png"
       ]
-    }
+    },
+    "issue": 9
   },
   {
     "draft_id": "4c0a064a",
@@ -443,7 +449,7 @@
       "caption_tiktok": "RoboCup 2026 in 7 days — autonomous robots, real opponents, no remote control. This is where lab results meet reality. Which league are you watching? #robocup2026 #robotics #swarmrobotics #autonomousrobots",
       "post_bluesky": "RoboCup 2026 starts July 15. Fully autonomous robots, adversarial opponents, public failure. It is the stress test most published results never face. Technical reports drop this week — they are more honest than most papers. Which league are you tracking? #RoboCup2026"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T19:57:36.467136+00:00",
     "media": {
       "figures": [],
@@ -463,6 +469,7 @@
         "media/4c0a064a/slide_06.png",
         "media/4c0a064a/slide_07.png"
       ]
-    }
+    },
+    "issue": 10
   }
 ]
