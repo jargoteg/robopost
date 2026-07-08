@@ -34,6 +34,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Handle command / manual paper
+        if: github.event_name != 'schedule'
         id: handle
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -61,10 +62,7 @@ jobs:
         if: github.event_name == 'schedule'
         id: buffer
         run: |
-          OPEN=$(python -c "
-          import json
-          d=json.load(open('data/drafts.json'))
-          print(sum(1 for x in d if x.get('status') in ('pending_media','pending_video','pending_review','in_review')))")
+          OPEN=$(python -c "import json; d=json.load(open('data/drafts.json')); print(sum(1 for x in d if x.get('status') in ('pending_media','pending_video','pending_review','in_review')))")
           echo "open=$OPEN" >> $GITHUB_OUTPUT
           echo "Open drafts: $OPEN"
       - name: Top up drafts (queue running low)
