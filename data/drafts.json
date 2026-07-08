@@ -1064,7 +1064,7 @@
         "Genuine question for anyone following along: which team do you think has the most robust recovery behavior when a collision happens? Not the flashiest walking gait. The one that actually stays upright after contact. That's the real test this week."
       ]
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-08T20:49:38.379514+00:00",
     "media": {
       "figures": [
@@ -1086,7 +1086,8 @@
         "media/7cfeb789/slide_06.png"
       ]
     },
-    "issue": 19
+    "issue": 19,
+    "finalized": true
   },
   {
     "draft_id": "47755850",

@@ -68,5 +68,19 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "7cfeb789",
+    "paper_id": "rss-f6204b5f70",
+    "title": "#RoboCup2026 – humanoid league day 1",
+    "format": "carousel",
+    "hook": "RoboCup 2026 just went all-in on humanoids. Here's what changed.",
+    "posted_at": "2026-07-08T20:53:00.732940+00:00",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq5yspeuhl27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
