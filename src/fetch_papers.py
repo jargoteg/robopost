@@ -10,6 +10,21 @@ from utils import load_config, load_json, save_json, claude_json, get_feedback_n
 NS = {"a": "http://www.w3.org/2005/Atom"}
 
 
+def get_with_retries(url, tries=3, timeout=60, **kw):
+    import time
+    for attempt in range(tries):
+        try:
+            r = requests.get(url, timeout=timeout, **kw)
+            r.raise_for_status()
+            return r
+        except Exception as e:
+            if attempt == tries - 1:
+                raise
+            wait = 15 * (attempt + 1)
+            print(f"Fetch failed ({e}); retrying in {wait}s...")
+            time.sleep(wait)
+
+
 def fetch_arxiv(cfg) -> list[dict]:
     cats = " OR ".join(f"cat:{c}" for c in cfg["sources"]["arxiv_categories"])
     url = (
@@ -17,8 +32,7 @@ def fetch_arxiv(cfg) -> list[dict]:
         f"?search_query={cats}&sortBy=submittedDate&sortOrder=descending"
         f"&max_results={cfg['sources']['arxiv_max_results']}"
     )
-    r = requests.get(url, timeout=30)
-    r.raise_for_status()
+    r = get_with_retries(url)
     papers = []
     for e in ET.fromstring(r.text).findall("a:entry", NS):
         pid = e.find("a:id", NS).text.split("/abs/")[-1]
@@ -208,7 +222,11 @@ def main():
     save_json("manual_queue.json", [])
 
     # 2. Automatic fetch + rank (papers + news/competition feeds)
-    papers = fetch_arxiv(cfg)
+    try:
+        papers = fetch_arxiv(cfg)
+    except Exception as e:
+        print(f"arXiv fetch failed after retries (non-fatal, other sources continue): {e}")
+        papers = []
     if cfg["sources"]["hf_daily_papers"]:
         # keep HF entries that look robotics-adjacent
         kw = [k.lower() for k in cfg["sources"]["keywords_boost"]] + ["robot"]
