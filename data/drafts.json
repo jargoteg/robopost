@@ -89,7 +89,7 @@
       "caption_tiktok": "Robot swarm that moves like a liquid — no WiFi, no central brain, just physics doing the work. Cornell's entangled collective is a wild concept. #SwarmRobotics #Robotics #EmergentBehavior #SoftMatter",
       "post_bluesky": "Cornell's Cross-Link Collective: robots so mechanically entangled they flow like a material instead of a fleet. Coordination emerges from physics, not protocols. Clever concept — waiting on the full paper for hard numbers. https://robohub.org/entangled-robotic-matter-with-cohesive-motion/ #swarmrobotics"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-08T19:51:10.677901+00:00",
     "media": {
       "figures": [
@@ -112,7 +112,8 @@
         "media/0a9bea4b/slide_07.png"
       ]
     },
-    "issue": 5
+    "issue": 5,
+    "finalized": true
   },
   {
     "draft_id": "bacf1b66",
