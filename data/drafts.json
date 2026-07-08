@@ -113,8 +113,8 @@
       ]
     },
     "issue": 5,
-    "post_failures": 1,
-    "failures_notified": 1
+    "post_failures": 2,
+    "failures_notified": 2
   },
   {
     "draft_id": "bacf1b66",
@@ -835,7 +835,7 @@
       "caption_tiktok": "Your robot can't feel depth from pixels alone. This paper predicts RGB, depth, and optical flow together in one model, then skips the slow denoising step at test time. arXiv 2607.06559 #robotics #worldmodels #embodiedai #manipulation",
       "post_bluesky": "RynnWorld-4D jointly predicts RGB, depth, and optical flow in one diffusion pass, then reads internal features directly for policy output. No denoising at inference. 254M training frames. Strong bimanual results. Curious how much is architecture vs. data scale. https://arxiv.org/abs/2607.06559v1 #robotics #worldmodels"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T20:32:22.062446+00:00",
     "media": {
       "figures": [
