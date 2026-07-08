@@ -915,7 +915,7 @@
       "caption_tiktok": "RoboCup 2026 is live and humanoids are now the main event. Full bipedal soccer, real contact, real falls. This week is going to be telling. #RoboCup2026 #HumanoidRobotics #Robotics #RobotSoccer",
       "post_bluesky": "RoboCup 2026 opened in Incheon today. Big format shift: soccer leagues now centered on humanoid robots, not wheeled or specialized platforms. Raises the bar on locomotion and balance significantly. Worth watching. https://robohub.org/robocup2026-humanoid-league-day-1/ #RoboCup2026"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T20:43:11.163524+00:00",
     "media": {
       "figures": [
@@ -1015,5 +1015,77 @@
       ]
     },
     "issue": 18
+  },
+  {
+    "draft_id": "7cfeb789",
+    "paper": {
+      "id": "rss-f6204b5f70",
+      "title": "#RoboCup2026 – humanoid league day 1",
+      "abstract": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
+      "authors": [],
+      "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5,
+      "redo_notes": "using the newly made bluesky first version of the repo"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RoboCup 2026 just went all-in on humanoids. Here's what changed.",
+      "commentary": "RoboCup 2026 in Incheon has restructured the soccer leagues to center humanoid robots, which is a real format shift, not just rebranding. This matters because wheeled and low-DOF platforms dominated competition for years, and humanoid locomotion on a real soccer pitch is a genuinely hard benchmark. The caveat: day one coverage is thin on technical specifics, so how teams handle dynamic balance under contact is still the story to watch. Worth following closely this week.",
+      "slides": [
+        {
+          "title": "RoboCup 2026 opens in Incheon",
+          "body": "Competition runs through July 5. South Korea hosts what may be the most significant format update in years: soccer leagues now center on humanoid robots across all primary divisions."
+        },
+        {
+          "title": "Why humanoids, why now?",
+          "body": "Wheeled and wheeled-hybrid platforms dominated RoboCup soccer for over a decade. Shifting focus to humanoids raises the bar on locomotion, balance recovery, and bipedal coordination under real game conditions."
+        },
+        {
+          "title": "The hard part nobody mentions",
+          "body": "Humanoid soccer means dynamic balance during contact, not just navigation. Even Boston Dynamics avoids unscripted multi-robot contact. Watching teams handle collisions on day one is the real benchmark here."
+        },
+        {
+          "title": "Format changes signal a new era",
+          "body": "Rule and league structure updates suggest organizers want closer alignment with the original 2050 goal: humanoids competitive with human soccer players. Still a long road, but the direction is explicit now."
+        },
+        {
+          "title": "What to watch this week",
+          "body": "Gait stability under fatigue, recovery from falls, and team coordination latency. These are the metrics that separate polished demos from competition-ready systems. Scores alone won't tell the story."
+        }
+      ],
+      "video_script": "RoboCup 2026 just started in Incheon and the big news isn't who's winning. It's the format. Soccer leagues now put humanoid robots front and center. That's a real shift. For years, lower platforms dominated because walking is hard. Now teams have to handle bipedal locomotion, balance, contact, and coordination all at once on a live pitch. This is as close to a real stress test as academic robotics gets. The question is: which team's locomotion actually holds up by day three?",
+      "caption_instagram": "RoboCup 2026 is live in Incheon, and the format just got a lot harder.\n\nThe big update: soccer leagues now focus on humanoid robots. Not as a side event. As the main thing. That's a significant shift from the wheeled and hybrid platforms that have dominated competition for years.\n\nHumanoid soccer is genuinely difficult. You need stable bipedal locomotion, real-time balance recovery, and coordinated multi-agent behavior, all under contact conditions you can't fully script in the lab. That combination is rare even in research settings.\n\nCompetition runs through July 5. Day one is just getting started, but this is the week to watch if you care about where legged robotics actually stands outside the demo reel.\n\nCoverage via robohub.org. Not affiliated.\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #LeapedRobots #MultiAgentSystems #RoboticsResearch #RoboCup",
+      "caption_tiktok": "RoboCup 2026 just made humanoids the main event. Wheeled bots had it easier. Now teams have to actually walk, balance, and play soccer. This week gets interesting fast.\n\n#RoboCup2026 #HumanoidRobots #Robotics #RobotSoccer",
+      "post_bluesky": "RoboCup 2026 is live in Incheon and the format changed: soccer leagues now center humanoid robots. Wheeled platforms had a long run. Bipedal locomotion under real contact conditions is a much harder ask. Worth watching closely this week. https://robohub.org/robocup2026-humanoid-league-day-1/",
+      "bluesky_thread": [
+        "The honest caveat: day one coverage is light on technical specifics. We don't yet know how teams are handling dynamic balance under contact or what falls look like mid-match. Scores will be reported. Locomotion quality probably won't be. That's the gap to watch.",
+        "Genuine question for anyone following along: which team do you think has the most robust recovery behavior when a collision happens? Not the flashiest walking gait. The one that actually stays upright after contact. That's the real test this week."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-08T20:49:38.379514+00:00",
+    "media": {
+      "figures": [
+        "media/7cfeb789/fig_00.png"
+      ],
+      "bsky": [
+        "media/7cfeb789/bsky_00.png",
+        "media/7cfeb789/bsky_01.png",
+        "media/7cfeb789/bsky_02.png",
+        "media/7cfeb789/bsky_03.png"
+      ],
+      "slides": [
+        "media/7cfeb789/slide_00.png",
+        "media/7cfeb789/slide_01.png",
+        "media/7cfeb789/slide_02.png",
+        "media/7cfeb789/slide_03.png",
+        "media/7cfeb789/slide_04.png",
+        "media/7cfeb789/slide_05.png",
+        "media/7cfeb789/slide_06.png"
+      ]
+    },
+    "issue": 19
   }
 ]
