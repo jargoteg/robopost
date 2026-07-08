@@ -114,7 +114,7 @@
       "caption_tiktok": "RoboCup 2026 humanoid finals just wrapped 🤖⚽ — here's who won and why the scoreboard only tells half the story. #RoboCup2026 #HumanoidRobots #RoboticsResearch #RobotSoccer",
       "post_bluesky": "RoboCup 2026 humanoid finals done in Incheon. Invic & Hamburg Bit-Bots on the small division podium. Scoreboard tells you who survived the bracket — the real science comes in the post-competition papers. Watch arXiv. #RoboCup2026 https://robohub.org/robocup2026-humanoid-league-knockout-stages/"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-08T17:15:42.113217+00:00",
     "media": {
       "slides": [
@@ -128,7 +128,8 @@
         "media/5ba0a7dd/slide_07.png"
       ]
     },
-    "issue": 2
+    "issue": 2,
+    "finalized": true
   },
   {
     "draft_id": "a72b63a1",
