@@ -11,7 +11,6 @@ Merge rules:
 """
 import json
 import subprocess
-import sys
 
 RANK = {"pending_media": 0, "pending_video": 1, "pending_review": 2,
         "in_review": 3, "rejected": 4, "approved": 5, "posted": 6}

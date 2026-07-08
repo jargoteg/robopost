@@ -155,7 +155,7 @@ def handle_event():
         issue = ev["issue"]
         if "[bot]" in issue["user"]["login"]:
             return
-        if any(l["name"] == "draft" for l in issue.get("labels", [])):
+        if any(lb["name"] == "draft" for lb in issue.get("labels", [])):
             return
         num = issue["number"]
         item = resolve_item(issue["title"], issue.get("body") or "")

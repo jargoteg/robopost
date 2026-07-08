@@ -64,7 +64,8 @@ def post_bluesky(draft, cfg):
     # link facet for the arXiv URL if present in text
     url = draft["paper"]["url"]
     if url in text:
-        b = text.encode(); start = b.find(url.encode())
+        b = text.encode()
+        start = b.find(url.encode())
         record["facets"] = [{
             "index": {"byteStart": start, "byteEnd": start + len(url.encode())},
             "features": [{"$type": "app.bsky.richtext.facet#link", "uri": url}],

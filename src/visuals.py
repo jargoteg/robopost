@@ -5,7 +5,6 @@
   posted to the platforms keep their emojis, where they render natively)
 """
 import re
-from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from utils import load_config, load_json, save_json, MEDIA, ROOT
 from figures import get_figures

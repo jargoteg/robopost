@@ -4,7 +4,6 @@ data/manual_queue.json always take priority."""
 import re
 import requests
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
 from utils import load_config, load_json, save_json, claude_json, get_feedback_notes
 
 NS = {"a": "http://www.w3.org/2005/Atom"}
@@ -75,7 +74,6 @@ def fetch_rss(cfg, feeds_key="news_feeds", item_type="article") -> list[dict]:
     """Pull items from RSS feeds. news_feeds → articles (subject to the news
     cap); journal_feeds (Science Robotics, Nature MI...) → papers (no cap)."""
     import hashlib
-    from datetime import timedelta
     kw = [k.lower() for k in cfg["sources"].get("news_keywords", ["robot"])]
     if item_type == "paper":
         kw = kw + ["learn", "control", "actuat", "sensor", "soft", "manipulat"]
