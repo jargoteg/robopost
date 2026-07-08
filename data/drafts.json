@@ -674,7 +674,7 @@
       "caption_tiktok": "VLA models are blind to 3D geometry. This paper adds point-cloud reasoning and beats every prior VLA baseline by 10+ percent. Here is how. #robotics #VLA #manipulation #embodiedAI #robotlearning",
       "post_bluesky": "Lift3D-VLA plugs point clouds into the VLA vision encoder and adds a self-supervised future-geometry prediction objective. Result: +10.8% on MetaWorld, +11.1% on RLBench vs best prior VLA. Real-world eval is small but the core idea is solid. https://arxiv.org/abs/2607.06564v1 #robotics #VLA"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T20:31:29.622436+00:00",
     "media": {
       "figures": [
@@ -699,7 +699,8 @@
         "media/ac7acc49/slide_06.png",
         "media/ac7acc49/slide_07.png"
       ]
-    }
+    },
+    "issue": 14
   },
   {
     "draft_id": "ee6df781",
@@ -751,7 +752,7 @@
       "caption_tiktok": "Tracking robot fingers from human demos fails because positions carry no force data. WristMimic tracks the wrist, skips finger supervision, and still wins. Clean idea. #robotics #humanoidrobots #dexterousmanipulation #imitationlearning",
       "post_bluesky": "WristMimic: track the wrist kinematically, leave fingers unsupervised, let them learn from object outcomes. Matches or beats full finger-pose supervision across hand embodiments. Clean design principle. Sim only for now, but worth your attention. https://arxiv.org/abs/2607.06438v1 #robotics"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T20:31:55.177558+00:00",
     "media": {
       "figures": [
@@ -776,7 +777,8 @@
         "media/ee6df781/slide_06.png",
         "media/ee6df781/slide_07.png"
       ]
-    }
+    },
+    "issue": 15
   },
   {
     "draft_id": "4c7786bf",
@@ -831,7 +833,7 @@
       "caption_tiktok": "Your robot can't feel depth from pixels alone. This paper predicts RGB, depth, and optical flow together in one model, then skips the slow denoising step at test time. arXiv 2607.06559 #robotics #worldmodels #embodiedai #manipulation",
       "post_bluesky": "RynnWorld-4D jointly predicts RGB, depth, and optical flow in one diffusion pass, then reads internal features directly for policy output. No denoising at inference. 254M training frames. Strong bimanual results. Curious how much is architecture vs. data scale. https://arxiv.org/abs/2607.06559v1 #robotics #worldmodels"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-08T20:32:22.062446+00:00",
     "media": {
       "figures": [
@@ -856,6 +858,7 @@
         "media/4c7786bf/slide_06.png",
         "media/4c7786bf/slide_07.png"
       ]
-    }
+    },
+    "issue": 16
   }
 ]
