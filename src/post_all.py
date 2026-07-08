@@ -73,9 +73,14 @@ def post_bluesky(draft, cfg):
         "repo": did, "collection": "app.bsky.feed.post", "record": record}, timeout=30)
     r.raise_for_status()
     root = r.json()
-    # the story continues in the thread: analysis + caveat as replies
+    # A/B experiment: alternate single post vs thread; metrics compare them
+    posted_count = len(load_json("posted.json", []))
+    draft["bsky_variant"] = "thread" if posted_count % 2 == 0 else "single"
+    replies = draft["content"].get("bluesky_thread", [])[:2] \
+        if draft["bsky_variant"] == "thread" else []
+    print(f"Bluesky variant: {draft['bsky_variant']}")
     parent = root
-    for reply_text in draft["content"].get("bluesky_thread", [])[:2]:
+    for reply_text in replies:
         rec = {"$type": "app.bsky.feed.post", "text": reply_text[:300],
                "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                "reply": {"root": {"uri": root["uri"], "cid": root["cid"]},
@@ -190,6 +195,7 @@ def main():
             "title": d["paper"]["title"], "format": d["content"]["format"],
             "hook": d["content"]["hook"],
             "posted_at": datetime.now(timezone.utc).isoformat(),
+            "bsky_variant": d.get("bsky_variant", ""),
             "platform_ids": ids, "metrics": {},
         })
     save_json("drafts.json", drafts)

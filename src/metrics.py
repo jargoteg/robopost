@@ -62,7 +62,8 @@ def main():
     if not recent and not rejections:
         return
     table = "\n".join(
-        f"- [{p['format']}] \"{p['hook']}\" ({p['title'][:60]}) → {p['metrics']}"
+        f"- [{p['format']}|bsky:{p.get('bsky_variant','?')}] \"{p['hook']}\" "
+        f"({p['title'][:60]}) → {p['metrics']}"
         for p in recent
     )
     lessons = claude(
@@ -76,6 +77,8 @@ Write a short "lessons learned" brief (max 250 words) for the content team:
 1. Topics/paper types that over- and under-performed
 2. Hook styles that worked
 3. Carousel vs video performance
+3b. Bluesky A/B: "thread" variant (post + analysis replies) vs "single" (one
+    post only). Which earns more likes/reposts/replies? Recommend a split.
 4. 3 concrete recommendations for the next posts
 Be specific and evidence-based; if data is too sparse, say what to test next.""",
         system="You are a social media analyst.",
