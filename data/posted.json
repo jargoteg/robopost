@@ -54,5 +54,19 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "6c53cce6",
+    "paper_id": "web-40e0404040",
+    "title": "TacticAI: an AI assistant for football tactics",
+    "format": "carousel",
+    "hook": "Liverpool FC let DeepMind redesign their corner kicks",
+    "posted_at": "2026-07-08T20:47:59.794688+00:00",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq5yjqg5ql2x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
