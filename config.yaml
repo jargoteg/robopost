@@ -1,7 +1,7 @@
 # ── RoboPost configuration ──────────────────────────────────────────
 account:
-  name: "Your Robotics Account"        # shown on cards / video outro
-  handle: "@yourhandle"
+  name: "Dr. Jahir Argote Gerald"        # shown on cards / video outro
+  handle: "@jahirargote"
   niche: "academic robotics — paper reviews with sharp, accessible commentary"
 
 sources:
