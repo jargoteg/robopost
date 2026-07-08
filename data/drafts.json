@@ -383,7 +383,7 @@
       "caption_tiktok": "RoboCup 2026 in 7 days — here's why the 2050 World Cup goal was genius benchmark design, not just hype. #RoboCup2026 #robotics #AIresearch #multiagentrobotics",
       "post_bluesky": "RoboCup 2026 in 7 days. Veloso's origin story is worth reading — soccer was chosen for legibility, not utility. The benchmark was always about building a community. Still the right goal in 2026? https://robohub.org/a-history-of-robocup-with-manuela-veloso/ #RoboCup"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-08T19:57:10.273667+00:00",
     "media": {
       "figures": [
@@ -934,5 +934,82 @@
       ]
     },
     "issue": 17
+  },
+  {
+    "draft_id": "82991ba3",
+    "paper": {
+      "id": "rss-733599b2a9",
+      "title": "A history of RoboCup with Manuela Veloso",
+      "abstract": "RoboCup is an international competition that promotes and advances robotics and AI through the challenges presented by its various leagues. We got the chance to sit down with Professor Manuela Veloso, one of RoboCup’s founders, to find out more about how it all started, how the community has grown over the years, and the vision […]",
+      "authors": [],
+      "url": "https://robohub.org/a-history-of-robocup-with-manuela-veloso/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.5,
+      "redo_notes": "include more real event pictures in all the cards. Improve the style of the card for less ai looking"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "RoboCup started as a bet that soccer would force real AI progress",
+      "commentary": "Veloso's interview traces RoboCup from a 1993 provocation to a global research infrastructure spanning simulation to humanoids. The core insight still holds: a fixed, hard task with public competition accelerates progress faster than open-ended benchmarks. Honest caveat: the 2050 goal of beating a human World Cup team gets repeated as vision, but the gap between current humanoid locomotion and a real grass pitch is enormous and the interview doesn't stress that enough.",
+      "slides": [
+        {
+          "title": "The original bet",
+          "body": "1993. Researchers argue AI needs a hard, public benchmark. Veloso and colleagues propose soccer. Not because soccer is easy. Because it forces perception, planning, and multi-agent coordination all at once."
+        },
+        {
+          "title": "Why soccer, specifically",
+          "body": "A soccer match is adversarial, real-time, and partially observable. It punishes any weak link in the stack. Simulation League teams run 11-vs-11. Humanoid League robots still fall over on flat turf."
+        },
+        {
+          "title": "30 years of compounding",
+          "body": "RoboCup 2024 just wrapped. Thousands of researchers, dozens of countries. The competition format forces annual publication cycles. That steady pressure has produced more deployable multi-agent work than many grant programs."
+        },
+        {
+          "title": "The 2050 claim",
+          "body": "The stated goal: beat the human World Cup champion by 2050. Current humanoid robots struggle with grass, uneven terrain, and sustained high-speed play. 26 years is a long runway. It will need breakthroughs, not just iteration."
+        },
+        {
+          "title": "What Veloso actually built",
+          "body": "CMU's CMUNITED won multiple early titles. But her bigger contribution was framing RoboCup as a research methodology, not just a trophy. That framing is why the leagues keep expanding into rescue, logistics, and @Home."
+        },
+        {
+          "title": "Why this interview matters now",
+          "body": "RoboCup 2024 just ended. Before the highlight reels fade, understanding the founding logic helps separate genuine progress from demo polish. The benchmark only works if the community stays honest about what robots still cannot do."
+        }
+      ],
+      "video_script": "RoboCup started as a provocation. Could soccer force real AI progress? Manuela Veloso helped found the competition in the 1990s, and the bet has largely paid off. Thirty years of annual competition, public results, and a hard task that punishes weak systems. But the 2050 goal of beating a human World Cup team is still a long way from current humanoid capability. So the question is: is the benchmark still hard enough to keep pushing the field?",
+      "caption_instagram": "RoboCup just wrapped for 2024, so I read Robohub's interview with Manuela Veloso, one of the founders. Worth your time.\n\nThe founding logic is sharper than people remember. The argument in 1993 was that open-ended AI research needed a fixed, adversarial, public benchmark. Soccer was chosen because it stacks perception, planning, and multi-agent coordination into one task you cannot fake your way through.\n\nThirty years later that logic still holds. The competition format creates annual publication pressure and forces teams to ship working systems, not just papers. That has produced more deployable multi-agent research than a lot of grant-funded work.\n\nThe honest note: the 2050 World Cup goal gets repeated without much scrutiny. Current humanoid robots still fall on flat turf. Grass, crowd noise, sustained sprint speeds. These are not solved. The interview is inspiring but slightly soft on that gap.\n\nFull interview at robohub.org. Link in bio.\n\n#swarmrobotics #multiagentai #robocup #humanoidrobots #roboticsresearch #AIbenchmarks #roboticscommunity",
+      "caption_tiktok": "RoboCup 2024 just ended and this Veloso interview explains why the whole thing was a research bet from day one. The 2050 World Cup goal is still very far away. #robocup #robotics #multiagentai #humanoidrobots #AIresearch",
+      "post_bluesky": "RoboCup started as a deliberate provocation: give AI a fixed, public, adversarial benchmark and see what happens. 30 years in, the bet holds up. Veloso's Robohub interview is worth reading right after 2024 wrapped. https://robohub.org/a-history-of-robocup-with-manuela-veloso/",
+      "bluesky_thread": [
+        "The 2050 goal of beating a human World Cup team gets repeated a lot. But current humanoid robots still fall on flat turf. Grass, real speed, sustained play. That gap deserves more scrutiny than it usually gets in the anniversary coverage.",
+        "What Veloso actually built wasn't just a trophy competition. It was a research methodology with annual forcing functions. That's rarer than it sounds. Which benchmark in robotics today has the same teeth? Curious what people think."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-08T20:47:24.438400+00:00",
+    "media": {
+      "figures": [
+        "media/82991ba3/fig_00.png"
+      ],
+      "bsky": [
+        "media/82991ba3/bsky_00.png",
+        "media/82991ba3/bsky_01.png",
+        "media/82991ba3/bsky_02.png",
+        "media/82991ba3/bsky_03.png"
+      ],
+      "slides": [
+        "media/82991ba3/slide_00.png",
+        "media/82991ba3/slide_01.png",
+        "media/82991ba3/slide_02.png",
+        "media/82991ba3/slide_03.png",
+        "media/82991ba3/slide_04.png",
+        "media/82991ba3/slide_05.png",
+        "media/82991ba3/slide_06.png",
+        "media/82991ba3/slide_07.png"
+      ]
+    },
+    "issue": 18
   }
 ]
