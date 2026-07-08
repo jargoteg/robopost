@@ -3,7 +3,7 @@ community is actually discussing, and distill it into data/trends.md.
 The ranker and writer read it, so daily posts ride live conversations."""
 import requests
 from datetime import datetime, timezone
-from utils import load_config, claude, env, DATA
+from utils import claude, env, DATA
 
 
 def bsky_session():
@@ -25,7 +25,6 @@ def search_posts(base, H, query, limit=25):
 
 
 def main():
-    cfg = load_config()
     queries = ["robotics", "robot learning", "humanoid robot", "swarm robotics"]
     base, H = bsky_session()
     seen_text = []
