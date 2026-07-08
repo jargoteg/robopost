@@ -39,11 +39,27 @@ def post_bluesky(draft, cfg):
         images.append({"image": r.json()["blob"],
                        "alt": draft["paper"]["title"][:200]})
 
-    text = draft["content"]["post_bluesky"]
+    embed = {"$type": "app.bsky.embed.images", "images": images}
+    # native video when this draft is a video (Bluesky: <=60s, ~50MB)
+    vid = draft["media"].get("video")
+    if draft["content"].get("format") == "video" and vid:
+        try:
+            with open(ROOT / vid, "rb") as f:
+                vblob = requests.post(f"{base}/com.atproto.repo.uploadBlob", headers={
+                    **H, "Content-Type": "video/mp4"}, data=f.read(), timeout=180)
+            vblob.raise_for_status()
+            embed = {"$type": "app.bsky.embed.video",
+                     "video": vblob.json()["blob"],
+                     "aspectRatio": {"width": 1080, "height": 1920}}
+            print("Bluesky: native video embed")
+        except Exception as e:
+            print(f"Bluesky video upload failed, using images: {e}")
+
+    text = draft["content"]["post_bluesky"][:300]
     record = {
         "$type": "app.bsky.feed.post", "text": text,
         "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "embed": {"$type": "app.bsky.embed.images", "images": images},
+        "embed": embed,
     }
     # link facet for the arXiv URL if present in text
     url = draft["paper"]["url"]
@@ -56,7 +72,19 @@ def post_bluesky(draft, cfg):
     r = requests.post(f"{base}/com.atproto.repo.createRecord", headers=H, json={
         "repo": did, "collection": "app.bsky.feed.post", "record": record}, timeout=30)
     r.raise_for_status()
-    return r.json()["uri"]
+    root = r.json()
+    # the story continues in the thread: analysis + caveat as replies
+    parent = root
+    for reply_text in draft["content"].get("bluesky_thread", [])[:2]:
+        rec = {"$type": "app.bsky.feed.post", "text": reply_text[:300],
+               "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+               "reply": {"root": {"uri": root["uri"], "cid": root["cid"]},
+                          "parent": {"uri": parent["uri"], "cid": parent["cid"]}}}
+        rr = requests.post(f"{base}/com.atproto.repo.createRecord", headers=H, json={
+            "repo": did, "collection": "app.bsky.feed.post", "record": rec}, timeout=30)
+        if rr.ok:
+            parent = rr.json()
+    return root["uri"]
 
 # ── Instagram (Graph API) ───────────────────────────────────────────
 def post_instagram(draft, cfg):

@@ -193,12 +193,27 @@ def build_carousel(draft, cfg) -> list[str]:
         img.save(path)
         paths.append(str(path.relative_to(MEDIA.parent)))
 
-    # Bluesky set: max 4 cards (hero, first content cards, takeaway), NO numbering
-    idxs = [0] + list(range(1, min(3, len(full_plan) - 1))) + [len(full_plan) - 1]
-    idxs = sorted(dict.fromkeys(idxs))[:4]
+    # Bluesky set: FIGURE-FIRST, max 4, no numbering. The post text carries
+    # the story; these cards are the visuals. Figures with one-line captions
+    # dominate; text cards only fill gaps when figures are scarce.
+    bsky_plan = []
+    if figs:
+        bsky_plan.append(("hero",))  # hero already leads with the figure
+        fig_cards = [it for it in plan if it[0] == "fig"]
+        for it in fig_cards[:3]:
+            cap = it[2].split(". ")[0][:110]  # one line, the figure speaks
+            bsky_plan.append(("fig", it[1], cap))
+        for it in plan:
+            if len(bsky_plan) >= 4:
+                break
+            if it[0] == "txt" and it not in bsky_plan and it[1] != "The takeaway":
+                bsky_plan.append(it)
+    else:
+        idxs = [0] + list(range(1, min(3, len(full_plan) - 1))) + [len(full_plan) - 1]
+        bsky_plan = [full_plan[i] for i in sorted(dict.fromkeys(idxs))]
     bsky = []
-    for j, i in enumerate(idxs):
-        img = render(full_plan[i], None)
+    for j, item in enumerate(bsky_plan[:4]):
+        img = render(item, None)
         path = out_dir / f"bsky_{j:02d}.png"
         img.save(path)
         bsky.append(str(path.relative_to(MEDIA.parent)))

@@ -73,9 +73,13 @@ def create_issues():
 ### 💬 Commentary
 {c.get('commentary', '(missing — will be filled at post time)')}
 
-### Bluesky post
+### Bluesky post (the story lives here)
 ```
 {c.get('post_bluesky', '(missing — will be filled at post time)')}
+```
+**Thread replies:**
+```
+{chr(10).join(c.get('bluesky_thread', []) or ['(none)'])}
 ```
 
 ### Instagram caption

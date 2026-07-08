@@ -63,7 +63,8 @@ Produce JSON:
   "video_script": "60-90 word narration for a short video, spoken style, ends with a question to the audience",
   "caption_instagram": "caption with hook, 3-4 short paragraphs, line breaks, 5-8 niche hashtags, cites the paper title + arXiv id",
   "caption_tiktok": "punchy 1-2 line caption + 4-6 hashtags",
-  "post_bluesky": "<=280 chars incl. the arXiv link {paper['url']}, no hashtags spam (max 2)"
+  "post_bluesky": "THE MAIN POST, <=280 chars incl. the link {paper['url']}: hook plus the overarching story in miniature. This text carries the narrative; the images are support.",
+  "bluesky_thread": ["1-2 reply posts, each <=290 chars: your sharp analysis, the honest caveat, and a question or take that invites replies. Conversational, no link repetition."]
 }}""",
         system="You are an expert robotics researcher and social media writer.",
         max_tokens=4000,
@@ -106,6 +107,8 @@ def ensure_complete(c: dict, paper: dict) -> dict:
     if not c.get("post_bluesky"):
         room = 280 - len(link) - 2
         c["post_bluesky"] = f"{hook[:max(0, room)]}\n{link}".strip()
+    if not c.get("bluesky_thread"):
+        c["bluesky_thread"] = [commentary[:290]]
     if not c.get("caption_instagram"):
         c["caption_instagram"] = f"{hook}\n\n{commentary}\n\n{paper['title']} — {link}"
     if not c.get("caption_tiktok"):
