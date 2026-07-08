@@ -310,6 +310,13 @@ def main():
         ranked = rank_papers(papers, cfg)
         n = cfg["pipeline"]["drafts_per_day"]
         floor = cfg["pipeline"]["min_relevance_score"]
+        # stock the review queue up to review_buffer open drafts
+        drafts = load_json("drafts.json", [])
+        open_now = sum(1 for d in drafts if d.get("status") in
+                       ("pending_media", "pending_video", "pending_review", "in_review"))
+        deficit = cfg["pipeline"].get("review_buffer", 6) - open_now
+        n = max(0, min(n, deficit))
+        print(f"Open drafts: {open_now}; picking up to {n} new items.")
         good = [p for p in ranked if p.get("score", 0) >= floor]
         # papers first; news capped so feeds never crowd out research
         max_news = cfg["pipeline"].get("max_news_per_day", 1)

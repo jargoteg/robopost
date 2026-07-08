@@ -57,6 +57,30 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GITHUB_REPOSITORY: "${{ github.repository }}"
         run: python src/github_review.py create
+      - name: Check review buffer (scheduled runs)
+        if: github.event_name == 'schedule'
+        id: buffer
+        run: |
+          OPEN=$(python -c "
+          import json
+          d=json.load(open('data/drafts.json'))
+          print(sum(1 for x in d if x.get('status') in ('pending_media','pending_video','pending_review','in_review')))")
+          echo "open=$OPEN" >> $GITHUB_OUTPUT
+          echo "Open drafts: $OPEN"
+      - name: Top up drafts (queue running low)
+        if: github.event_name == 'schedule' && steps.buffer.outputs.open < 2
+        env:
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+          YOUTUBE_API_KEY: "${{ secrets.YOUTUBE_API_KEY }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_REPOSITORY: "${{ github.repository }}"
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu
+          python src/fetch_papers.py
+          python src/generate.py
+          python src/visuals.py
+          python src/video.py
+          python src/github_review.py create
       - name: Post approved drafts
         env:
           BLUESKY_HANDLE: "${{ secrets.BLUESKY_HANDLE }}"

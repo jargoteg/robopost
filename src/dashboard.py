@@ -91,8 +91,8 @@ def build():
 <title>{esc(cfg["account"]["name"])} · mission control</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 <style>
-:root{{--bg:#0E1116;--panel:#151B23;--line:#232B36;--ink:#F2F5F8;--mut:#8B95A5;
---acc:#4FD1C5;--ok:#7BD88F;--warn:#F6C177;--fail:#EB6F92}}
+:root{{--bg:#131017;--panel:#151B23;--line:#232B36;--ink:#F2F5F8;--mut:#8B95A5;
+--acc:#FF8A2B;--ok:#7BD88F;--warn:#F6C177;--fail:#EB6F92}}
 *{{box-sizing:border-box;margin:0}}
 body{{background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,sans-serif;padding:20px;max-width:760px;margin:0 auto}}
 .mono,td.mono{{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}}
@@ -146,9 +146,9 @@ footer{{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}}
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={{grid:{{color:"#232B36"}},ticks:{{color:"#8B95A5",font:{{size:10}}}}}};
-new Chart(fchart,{{type:"line",data:{{labels:{fdates},datasets:[{{data:{fcounts},borderColor:"#4FD1C5",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}}]}},options:{{plugins:{{legend:{{display:false}}}},scales:{{x:G,y:G}}}}}});
+new Chart(fchart,{{type:"line",data:{{labels:{fdates},datasets:[{{data:{fcounts},borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}}]}},options:{{plugins:{{legend:{{display:false}}}},scales:{{x:G,y:G}}}}}});
 new Chart(echart,{{type:"bar",data:{{labels:{eng_labels},datasets:[
- {{label:"likes",data:{eng_likes},backgroundColor:"#4FD1C5"}},
+ {{label:"likes",data:{eng_likes},backgroundColor:"#FF8A2B"}},
  {{label:"reposts",data:{eng_reposts},backgroundColor:"#F6C177"}}]}},
  options:{{plugins:{{legend:{{labels:{{color:"#8B95A5"}}}}}},scales:{{x:{{stacked:true,...G}},y:{{stacked:true,...G}}}}}}}});
 </script></body></html>'''

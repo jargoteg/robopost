@@ -68,9 +68,10 @@ visuals:
   carousel_size: [1080, 1350]          # IG portrait
   video_size: [1080, 1920]             # 9:16
   max_slides: 6
-  bg_color: "#0E1116"
-  accent_color: "#4FD1C5"
-  text_color: "#F5F5F5"
+  bg_color: "#131017"
+  accent_color: "#FF8A2B"              # warm orange: complementary to Bluesky's blue UI
+  accent2_color: "#3E7BFF"             # cool counterpoint glow (color complexity)
+  text_color: "#FAF7F2"
   tts_voice: "en-US-AndrewNeural"      # edge-tts voice for video narration
 
 # Public base URL for media (Instagram Graph API requires publicly

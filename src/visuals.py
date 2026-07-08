@@ -58,8 +58,10 @@ def canvas(cfg):
     glow = Image.new("RGB", (w, h), "#000000")
     gd = ImageDraw.Draw(glow)
     gd.ellipse([w - 620, -420, w + 320, 380], fill=cfg["visuals"]["accent_color"])
+    gd.ellipse([-380, h - 520, 420, h + 380],
+               fill=cfg["visuals"].get("accent2_color", cfg["visuals"]["accent_color"]))
     glow = glow.filter(ImageFilter.GaussianBlur(200))
-    img = Image.blend(img, glow, 0.16)
+    img = Image.blend(img, glow, 0.17)
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, w, 12], fill=cfg["visuals"]["accent_color"])
     return img, d
@@ -88,7 +90,7 @@ def footer(img, d, cfg, ref, attribution=False, page=None):
     left = f"{cfg['account']['handle']}  ·  {ref}"
     if attribution:
         left += "  ·  figures © the authors"
-    d.text((pad, h - 64), left, font=f, fill="#8B95A5", anchor="la")
+    d.text((pad, h - 64), left, font=f, fill="#A89F94", anchor="la")
     if page:
         d.text((w - pad, h - 64), f"{page[0]}/{page[1]}",
                font=_font(FONT_BOLD, 32), fill=cfg["visuals"]["accent_color"], anchor="ra")
