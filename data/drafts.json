@@ -2999,7 +2999,7 @@
         "The caveat nobody is saying: 'cluttered indoor scene' in a demo lab is still a curated environment. No dynamic obstacles, no deformable objects, no uneven floors. If you work in SAR or subsea, you know how fast 'works in the lab' falls apart. Does HumanoidPF generalize, or does it just generalize…"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T12:08:45.760269+00:00",
     "media": {
       "bsky": [
@@ -3027,7 +3027,9 @@
     },
     "issue": 44,
     "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "c8db1744",
@@ -3196,7 +3198,7 @@
       ]
     },
     "issue": 46,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -3923,7 +3925,7 @@
       ]
     },
     "issue": 55,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -4080,7 +4082,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -4240,7 +4242,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -4325,7 +4327,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -4489,7 +4491,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -5346,7 +5348,7 @@
       ]
     },
     "issue": 73,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   },
   {
@@ -5815,7 +5817,7 @@
       ]
     },
     "issue": 79,
-    "scheduled_after": "2026-07-09T23:34:24.716555+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
     "queue_notified": true
   }
 ]

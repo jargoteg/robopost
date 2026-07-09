@@ -324,5 +324,21 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-09T23:05:10.223164+00:00"
+  },
+  {
+    "draft_id": "f76ab756",
+    "paper_id": "rss-7989e9fa70",
+    "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+    "format": "carousel",
+    "hook": "Humanoid walks through clutter. But how does it actually see obstacles?",
+    "posted_at": "2026-07-09T23:41:23.280800+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqasopktl22f",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
