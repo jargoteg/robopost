@@ -2787,5 +2787,232 @@
       ]
     },
     "issue": 40
+  },
+  {
+    "draft_id": "71cb2c94",
+    "paper": {
+      "id": "web-1667c45eab",
+      "title": "Unknown - Page content not accessible",
+      "abstract": "The page at the provided IEEE Xplore URL (document 11560910) could not be retrieved or parsed, so no factual summary can be generated. The document may be a recent publication, behind a paywall, or otherwise inaccessible from the provided page content. No title, abstract, or author information was available from the page data supplied.",
+      "authors": [],
+      "url": "https://ieeexplore.ieee.org/document/11560910",
+      "source": "IEEE Xplore",
+      "item_type": "paper",
+      "journal": true,
+      "user_notes": "Testing open-version figure fallback for a paywalled IEEE paper."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Paywalled paper. Here is what we can say anyway.",
+      "commentary": "IEEE Xplore document 11560910 is inaccessible without a subscription, so no results can be reviewed honestly. Rather than fabricate a take, the right move is to flag the access gap and wait for an open version. This happens constantly with IEEE papers and it is a real friction point for community discussion. If the authors have an arXiv preprint or ResearchGate version, that is the version worth sharing. No abstract means no review.",
+      "slides": [
+        {
+          "title": "Paper behind a paywall",
+          "body": "IEEE Xplore document 11560910 could not be retrieved. No title, abstract, or author data was accessible. Reviewing a paper without reading it is not reviewing it."
+        },
+        {
+          "title": "Why this matters",
+          "body": "Paywalled publications slow community discussion. A paper posted without an open version gets far less engagement, fewer citations in the first months, and less honest peer scrutiny."
+        },
+        {
+          "title": "What to look for instead",
+          "body": "Check arXiv, ResearchGate, or the authors' lab pages. Many IEEE authors self-archive accepted manuscripts legally. That version usually has the same figures and results."
+        },
+        {
+          "title": "The honest take",
+          "body": "If the open version surfaces, this account will review it properly: numbers, methods, caveats, and whether the field results hold up outside the lab."
+        }
+      ],
+      "video_script": "Here is something that happens more than anyone admits. A paper link goes around, people share it, and half the community cannot actually read it because it is behind a paywall. IEEE Xplore document 11560910. No title, no abstract, no authors available. So what do you do? You wait for the open version. You do not fake a review. If you know where the preprint lives, drop it in the comments. Where do you actually find the papers you read?",
+      "caption_instagram": "Paywalled paper, no abstract available, so no review today.\n\nIEEE Xplore document 11560910 could not be retrieved. No title, no authors, no results to discuss. Posting a hot take on a paper I cannot read is not something this account does.\n\nIf you have the open version or know the authors, share it. Many IEEE accepted manuscripts are self-archived legally on arXiv or lab pages. That is usually the fastest route.\n\nReview incoming once the open version surfaces. In the meantime: always check arXiv before paying $33 for a single paper PDF.\n\n#swarmrobotics #fieldrobotics #openaccess #robotics #ieeeroboticsandautomation #inspectionrobotics #roboticsresearch",
+      "caption_tiktok": "Paywalled IEEE paper, no abstract, no review. That is just how it goes sometimes. Drop the open version if you have it. #robotics #openaccess #fieldrobotics #researchlife",
+      "post_bluesky": "Paywalled IEEE paper, no abstract accessible, so no review. Not faking a take on a paper I cannot read. If you have the open preprint, reply with it. https://ieeexplore.ieee.org/document/11560910",
+      "bluesky_thread": [
+        "This is a real friction point: IEEE papers get shared, half the community hits a paywall, discussion dies. Authors: please self-archive on arXiv. It is allowed under most IEEE agreements and takes 20 minutes.",
+        "Review will go up properly once an open version is found. Numbers, methods, honest caveats, field deployment context. No abstract means no review. Does anyone know the authors or title for doc 11560910?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T12:07:45.914104+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/71cb2c94/bsky_00.png",
+        "media/71cb2c94/bsky_01.png",
+        "media/71cb2c94/bsky_02.png",
+        "media/71cb2c94/bsky_03.png"
+      ],
+      "slides": [
+        "media/71cb2c94/slide_00.png",
+        "media/71cb2c94/slide_01.png",
+        "media/71cb2c94/slide_02.png",
+        "media/71cb2c94/slide_03.png",
+        "media/71cb2c94/slide_04.png",
+        "media/71cb2c94/slide_05.png"
+      ]
+    },
+    "issue": 42
+  },
+  {
+    "draft_id": "491af231",
+    "paper": {
+      "id": "rss-2d043c8dc9",
+      "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+      "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578324",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2603.07920"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your LiDAR map works great. Until it rains. Then what?",
+      "commentary": "RLPR tackles a real deployment problem: cities have LiDAR maps everywhere, but LiDAR fails in fog, rain, and dust. The insight is to match radar queries against existing LiDAR maps rather than build parallel radar maps. The two-stage asymmetric alignment is clever because it deliberately throws away radar-specific features like RCS and Doppler, forcing the network to work only on geometry both sensors share. Zero-shot generalization across five datasets is the number that earns credibility here. The honest caveat: autonomous driving is still a relatively controlled environment compared to, say, underground mining or offshore inspection, where spatial structure itself may be ambiguous and map freshness is a real problem.",
+      "slides": [
+        {
+          "title": "LiDAR fails in bad weather",
+          "body": "Heavy rain, fog, and dust degrade LiDAR point clouds. Radar is immune. But rebuilding maps in radar from scratch costs serious time and money. The question: can radar query an existing LiDAR map?"
+        },
+        {
+          "title": "RLPR: radar queries LiDAR maps",
+          "body": "Dual-stream network matches radar scans to LiDAR-based place descriptors. Works with both scanning radars and phased-array radars. No new map infrastructure required."
+        },
+        {
+          "title": "The asymmetry insight",
+          "body": "Radar and LiDAR are not symmetric in information density. RLPR uses the pre-trained radar branch as a discriminative anchor to guide alignment, rather than treating both streams equally."
+        },
+        {
+          "title": "Drop the modality-specific noise",
+          "body": "RCS values and Doppler velocity are deliberately discarded. Only shared spatial structure is matched. This is what enables cross-radar-type compatibility and cleaner generalization."
+        },
+        {
+          "title": "Zero-shot across 5 datasets",
+          "body": "State-of-the-art place recognition accuracy on five benchmarks, including zero-shot transfer. That generalization result is the one worth scrutinizing in the full paper."
+        },
+        {
+          "title": "The real-world question",
+          "body": "LiDAR maps age. Construction, flooding, and seasonal change alter structure. Cross-modal matching is only as good as map freshness. Field deployment will stress-test this assumption hard."
+        }
+      ],
+      "video_script": "Your city already has LiDAR maps. Rebuilding them in radar would cost a fortune. So what if your radar could just query the map that already exists? That is exactly what RLPR does. It strips out radar-specific noise like RCS and Doppler, keeps only the geometry both sensors agree on, and matches live radar scans to pre-existing LiDAR descriptors. Five datasets, state-of-the-art accuracy, zero-shot generalization. The clever part is the asymmetric alignment strategy that uses radar as the anchor. But here is what I want to know: how does this hold up when the map is six months old and half the street has been rebuilt?",
+      "caption_instagram": "Your LiDAR map works great. Until it rains. Then what?\n\nLiDAR place recognition is the backbone of most deployed autonomy stacks. But fog, rain, and dust kill LiDAR performance fast. Radar handles all of that. The catch is nobody wants to rebuild city-scale maps in a new modality from scratch.\n\nRLPR sidesteps that by matching live radar scans against existing LiDAR maps. The key design choice is deliberate: throw away RCS and Doppler, keep only the spatial geometry both sensors share. That single decision is what makes it work across both scanning and phased-array radars without retraining.\n\nThe two-stage asymmetric alignment uses the radar branch as an anchor to guide the LiDAR branch, not the other way around. Zero-shot generalization across five datasets is a real result worth reading carefully.\n\nMy honest caveat: maps age. Construction, seasonal change, and infrastructure updates mean the LiDAR map you matched against six months ago may not match current geometry. That is the deployment question this paper does not fully answer yet.\n\nPaper: RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving. IEEE Xplore 11578324.\n\n#swarmrobotics #autonomousdriving #placerecognition #LiDAR #radar #roboticsloc #fieldrobotics #sensorfusion",
+      "caption_tiktok": "Radar sees through rain. LiDAR maps the world. RLPR makes them talk without rebuilding anything. Smart cross-modal design with real zero-shot results. #robotics #autonomousdriving #LiDAR #radar #roboticsresearch",
+      "post_bluesky": "Your LiDAR map works great. Until it rains. RLPR matches live radar against existing LiDAR maps, no new map infrastructure needed. Asymmetric alignment, zero-shot generalization across 5 datasets. Map freshness is still the open question. http://ieeexplore.ieee.org/document/11578324",
+      "bluesky_thread": [
+        "The clever design call: deliberately discard RCS and Doppler velocity. Only shared spatial geometry goes into the descriptor. That is why it works across both scanning and phased-array radars without separate training runs.",
+        "My sticking point is map aging. LiDAR maps degrade as environments change. Cross-modal matching inherits that fragility. Has anyone seen field results on how fast these descriptors drift when the mapped environment actually changes? Genuinely curious."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T12:08:14.976778+00:00",
+    "media": {
+      "figures": [
+        "media/491af231/fig_00.png",
+        "media/491af231/fig_01.png",
+        "media/491af231/fig_02.png",
+        "media/491af231/fig_03.png"
+      ],
+      "bsky": [
+        "media/491af231/bsky_00.png",
+        "media/491af231/bsky_01.png",
+        "media/491af231/bsky_02.png",
+        "media/491af231/bsky_03.png"
+      ],
+      "slides": [
+        "media/491af231/slide_00.png",
+        "media/491af231/slide_01.png",
+        "media/491af231/slide_02.png",
+        "media/491af231/slide_03.png",
+        "media/491af231/slide_04.png",
+        "media/491af231/slide_05.png",
+        "media/491af231/slide_06.png",
+        "media/491af231/slide_07.png"
+      ]
+    },
+    "issue": 43
+  },
+  {
+    "draft_id": "f76ab756",
+    "paper": {
+      "id": "rss-7989e9fa70",
+      "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+      "abstract": "We study the problem of collision-free humanoid traversal in cluttered indoor scenes, such as hurdling over objects scattered on the floor, crouching under low-hanging obstacles, or squeezing through narrow passages. To achieve this goal, the humanoid needs to map its perception of surrounding obstacles with diverse spatial layouts and geometries to the corresponding traversal skills. However, the lack of an effective representation that captures humanoid–obstacle relationships during collision avoidance makes directly learning such mappings difficult. We therefore propose Humanoid Potential Field (HumanoidPF), which encodes these relationships as collision-free motion directions, significantly facilitating RL-based traversal skill learning. We also find that HumanoidPF exhibits a surprisingly negligible sim-to-real gap as a perceptual representation. To further enable generalizable traversal skills through diverse and challenging cluttered indoor scenes, we further propose a hybrid scene generation method, incorporating crops of realistic 3D indoor scenes and procedurally synthesized obstacles. We successfully transfer our policy to the real world and develop a teleoperation system where users could command the humanoid to traverse in cluttered indoor scenes with just a single click. Extensive experiments are conducted in both simulation and the real world to validate the effectiveness of our method. Project page: https://axian12138.github.io/CAT/.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563633",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5,
+      "open_version": "https://arxiv.org/abs/2601.16035"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Humanoid walks through clutter. But how does it actually see obstacles?",
+      "commentary": "This paper tackles a real gap: humanoids need to crouch, hurdle, and squeeze through cluttered rooms, and raw point clouds are lousy inputs for learning those skills. The key idea is HumanoidPF, a potential field representation that encodes collision-free motion directions relative to the robot body, not just obstacle positions. The sim-to-real transfer is the surprising result: the authors claim negligible gap for this representation specifically, which is a bold and testable claim. Honest caveat: 'cluttered indoor scenes' in a controlled transfer demo is still a long way from an unstructured environment where geometry changes every second. The single-click teleoperation framing is clever but glosses over what happens when the click is wrong.",
+      "slides": [
+        {
+          "title": "The problem: bodies vs. boxes",
+          "body": "Humanoids aren't point masses. Crouching, hurdling, squeezing all require mapping obstacle geometry to full-body motion. Standard representations don't capture that relationship well."
+        },
+        {
+          "title": "HumanoidPF explained",
+          "body": "Potential field built around the humanoid body, not just the scene. Encodes collision-free motion directions at each body segment. Feeds directly into RL policy training as a perceptual input."
+        },
+        {
+          "title": "The sim-to-real claim",
+          "body": "Authors report negligible sim-to-real gap for HumanoidPF as a representation. That is a specific, strong claim. Most perception gaps come from texture and geometry mismatch, so a geometry-encoding field may genuinely sidestep that."
+        },
+        {
+          "title": "Scene generation: hybrid approach",
+          "body": "Crops from real 3D indoor scans plus procedurally synthesized obstacles. Mixing both avoids overfitting to synthetic geometry. Policy trained across diverse layouts, not a single room type."
+        },
+        {
+          "title": "What it doesn't answer",
+          "body": "Demo environments are structured enough to allow single-click commands. Dynamic obstacles, deformable clutter, wet floors: none tested. Indoor office is not a warehouse, hospital, or search-and-rescue site."
+        },
+        {
+          "title": "Why the community should care",
+          "body": "HumanoidPF is a representation idea, not just a locomotion trick. If the sim-to-real gap claim holds under adversarial testing, it is worth borrowing for legged robots in inspection and SAR work."
+        }
+      ],
+      "video_script": "Everyone's showing humanoid robots walking in clean corridors. This paper asks a harder question: what happens when the floor is covered in boxes and the ceiling is low? The trick is a new perceptual representation called HumanoidPF. Instead of feeding raw depth data to the policy, it encodes which directions are collision-free at every part of the robot's body. They transfer it to a real robot and claim almost no sim-to-real gap for that representation. That's a bold claim. Does a geometry-based potential field actually survive the mess of real environments, or is this still a tidy-lab result in disguise?",
+      "caption_instagram": "Humanoid robots crouching under tables and hurdling boxes sounds impressive. The hard part is the representation.\n\nThis paper introduces HumanoidPF: a potential field built around the humanoid body that encodes collision-free motion directions, not just where obstacles are. That framing makes RL training significantly easier because the policy gets told which way to move, not just what to avoid.\n\nThe sim-to-real result is the headline. They claim negligible transfer gap for this representation specifically. Most papers drown in that gap. If this holds up under harder conditions, the representation idea is worth stealing for legged inspection and SAR robots.\n\nBig caveat: the demo is cluttered-indoor, not unstructured-real-world. Dynamic obstacles, slippery surfaces, deformable objects: none of that is tested. The single-click teleoperation interface is a nice touch but assumes a lot about operator accuracy.\n\nPaper: Collision-Free Humanoid Traversal in Cluttered Indoor Scenes. IEEE Xplore 11563633.\n\n#swarmrobotics #leggedrobots #humanoidrobotics #robotlearning #simtoreal #fieldrobotics #roboticsinspection",
+      "caption_tiktok": "New humanoid paper: potential fields built around the robot body, not the room. Sim-to-real gap claim is bold. Let's see if it survives real clutter. #humanoidrobot #robotics #robotlearning #simtoreal",
+      "post_bluesky": "Humanoid crouches, hurdles, squeezes through clutter. The clever part: they encode collision-free directions around the robot body, not just obstacle positions. Bold sim-to-real claim follows. Worth reading critically. http://ieeexplore.ieee.org/document/11563633",
+      "bluesky_thread": [
+        "The representation idea is the real contribution here. HumanoidPF gives the RL policy motion directions at each body segment. That sidesteps a lot of the geometry mismatch that kills sim-to-real transfer. Specific, testable, and borrowable for legged robots beyond humanoids.",
+        "The caveat nobody is saying: 'cluttered indoor scene' in a demo lab is still a curated environment. No dynamic obstacles, no deformable objects, no uneven floors. If you work in SAR or subsea, you know how fast 'works in the lab' falls apart. Does HumanoidPF generalize, or does it just generalize…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T12:08:45.760269+00:00",
+    "media": {
+      "figures": [
+        "media/f76ab756/fig_00.png",
+        "media/f76ab756/fig_01.png",
+        "media/f76ab756/fig_02.png",
+        "media/f76ab756/fig_03.png"
+      ],
+      "bsky": [
+        "media/f76ab756/bsky_00.png",
+        "media/f76ab756/bsky_01.png",
+        "media/f76ab756/bsky_02.png",
+        "media/f76ab756/bsky_03.png"
+      ],
+      "slides": [
+        "media/f76ab756/slide_00.png",
+        "media/f76ab756/slide_01.png",
+        "media/f76ab756/slide_02.png",
+        "media/f76ab756/slide_03.png",
+        "media/f76ab756/slide_04.png",
+        "media/f76ab756/slide_05.png",
+        "media/f76ab756/slide_06.png",
+        "media/f76ab756/slide_07.png"
+      ]
+    },
+    "issue": 44
   }
 ]

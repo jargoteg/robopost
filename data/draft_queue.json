@@ -1,27 +1,5 @@
 [
   {
-    "id": "rss-2d043c8dc9",
-    "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
-    "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11578324",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 8.0
-  },
-  {
-    "id": "rss-7989e9fa70",
-    "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
-    "abstract": "We study the problem of collision-free humanoid traversal in cluttered indoor scenes, such as hurdling over objects scattered on the floor, crouching under low-hanging obstacles, or squeezing through narrow passages. To achieve this goal, the humanoid needs to map its perception of surrounding obstacles with diverse spatial layouts and geometries to the corresponding traversal skills. However, the lack of an effective representation that captures humanoid–obstacle relationships during collision avoidance makes directly learning such mappings difficult. We therefore propose Humanoid Potential Field (HumanoidPF), which encodes these relationships as collision-free motion directions, significantly facilitating RL-based traversal skill learning. We also find that HumanoidPF exhibits a surprisingly negligible sim-to-real gap as a perceptual representation. To further enable generalizable traversal skills through diverse and challenging cluttered indoor scenes, we further propose a hybrid scene generation method, incorporating crops of realistic 3D indoor scenes and procedurally synthesized obstacles. We successfully transfer our policy to the real world and develop a teleoperation system where users could command the humanoid to traverse in cluttered indoor scenes with just a single click. Extensive experiments are conducted in both simulation and the real world to validate the effectiveness of our method. Project page: https://axian12138.github.io/CAT/.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11563633",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 7.5
-  },
-  {
     "id": "2507.04321",
     "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
     "url": "https://arxiv.org/abs/2507.04321",
