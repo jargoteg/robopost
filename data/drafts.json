@@ -2909,12 +2909,6 @@
     "status": "in_review",
     "created": "2026-07-09T12:08:14.976778+00:00",
     "media": {
-      "figures": [
-        "media/491af231/fig_00.png",
-        "media/491af231/fig_01.png",
-        "media/491af231/fig_02.png",
-        "media/491af231/fig_03.png"
-      ],
       "bsky": [
         "media/491af231/bsky_00.png",
         "media/491af231/bsky_01.png",
@@ -2930,6 +2924,9 @@
         "media/491af231/slide_05.png",
         "media/491af231/slide_06.png",
         "media/491af231/slide_07.png"
+      ],
+      "figures": [
+        "media/491af231/fig_00.png"
       ]
     },
     "issue": 43
