@@ -3962,7 +3962,7 @@
         "The honest caveat: predefined target objects is a strong assumption. Works well in structured inspection. Falls apart in SAR or subsea where you can't enumerate relevant objects upfront. Open-vocabulary change detection on constrained hardware is the unsolved piece. Anyone working on that?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T15:01:30.102900+00:00",
     "media": {
       "bsky": [
