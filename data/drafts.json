@@ -1816,7 +1816,7 @@
         "Caveat worth saying out loud: it's open-loop. No opponent, no return to read. The full game is a different class of problem. But if your contact control can hit 550 rad/s reliably, what other manipulation tasks does that unlock?"
       ]
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-09T09:43:50.184339+00:00",
     "media": {
       "figures": [
@@ -1841,7 +1841,8 @@
         "media/7a483f84/slide_06.png",
         "media/7a483f84/slide_07.png"
       ]
-    }
+    },
+    "issue": 28
   },
   {
     "draft_id": "ea2afac7",
@@ -1898,7 +1899,7 @@
         "Honest caveat: actuator-disk theory with directional attenuation is clean but it is still a proxy. Complex confined spaces, hull inspections, reef crevices, will have flow interactions this model underestimates. Tank results and open-water results are not the same thing. How much does that gap…"
       ]
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-09T09:44:20.315608+00:00",
     "media": {
       "figures": [
@@ -1923,7 +1924,8 @@
         "media/ea2afac7/slide_06.png",
         "media/ea2afac7/slide_07.png"
       ]
-    }
+    },
+    "issue": 29
   },
   {
     "draft_id": "b2e163fe",
@@ -1982,7 +1984,7 @@
         "The scaling law claim is bold for a tech report. No external peer review, goalposts are self-set. But if the quadruped motion tracking curve holds up under scrutiny, it's a real finding. Who else is working on scaling laws for non-humanoid embodiments right now?"
       ]
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-09T09:44:46.991902+00:00",
     "media": {
       "figures": [
@@ -2007,6 +2009,7 @@
         "media/b2e163fe/slide_06.png",
         "media/b2e163fe/slide_07.png"
       ]
-    }
+    },
+    "issue": 30
   }
 ]
