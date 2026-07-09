@@ -82,7 +82,7 @@ def main():
     if not recent and not rejections:
         return
     table = "\n".join(
-        f"- [{p['format']}|bsky:{p.get('bsky_variant','?')}] \"{p['hook']}\" "
+        f"- [{p['format']}|bsky:{p.get('bsky_variant','?')}|hook:{p.get('hook_style','?')}] \"{p['hook']}\" "
         f"({p['title'][:60]}) → {p['metrics']}"
         for p in recent
     )
@@ -97,6 +97,8 @@ Write a short "lessons learned" brief (max 250 words) for the content team:
 1. Topics/paper types that over- and under-performed
 2. Hook styles that worked
 3. Carousel vs video performance
+3a. Hook-style A/B: curiosity_gap vs bold_claim vs number_stat vs tension.
+    Which hook style earns more engagement? Recommend a weighting.
 3b. Bluesky A/B: "thread" variant (post + analysis replies) vs "single" (one
     post only). Which earns more likes/reposts/replies? Recommend a split.
 4. 3 concrete recommendations for the next posts

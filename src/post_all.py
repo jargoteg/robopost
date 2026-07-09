@@ -217,6 +217,7 @@ def main():
             "hook": d["content"]["hook"],
             "posted_at": datetime.now(timezone.utc).isoformat(),
             "bsky_variant": d.get("bsky_variant", ""),
+            "hook_style": d["content"].get("hook_style", ""),
             "platform_ids": ids, "metrics": {},
         })
     save_json("drafts.json", drafts)

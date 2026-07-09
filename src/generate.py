@@ -6,8 +6,29 @@ from datetime import datetime, timezone
 from utils import load_config, load_json, save_json, claude_json, get_feedback_notes, get_trends
 
 
+HOOK_STYLES = {
+    "curiosity_gap": 'Open a curiosity gap the reader must resolve: "Ever wondered '
+                     'how...", "Why does nobody...", "There is a reason robots '
+                     'cannot..." The payoff comes in the thread/slides, not the hook.',
+    "bold_claim": "Open with the single most surprising claim of the work, stated "
+                  "flatly as fact. No hedging in the hook; nuance comes later.",
+    "number_stat": "Open with the most striking NUMBER in the work and what it "
+                   "beats or breaks. Concrete units, no adjectives.",
+    "tension": "Open with the contradiction or tension the work resolves: what "
+               "everyone believed vs what this shows, or the tradeoff it escapes.",
+}
+
+
+def pick_hook_style() -> str:
+    """Rotate hook styles deterministically so the learning loop can compare."""
+    from utils import load_json as _lj
+    n = len(_lj("drafts.json", []))
+    return list(HOOK_STYLES)[n % len(HOOK_STYLES)]
+
+
 def generate_draft(paper: dict, cfg) -> dict:
     feedback = get_feedback_notes()
+    hook_style = pick_hook_style()
     from conference_radar import conference_context
     conf = conference_context(cfg)
     # Resolve the code repo (and open-access version) BEFORE writing, so the
@@ -86,7 +107,7 @@ read like figure captions when possible — concrete, specific.
 Produce JSON:
 {{
   "format": "carousel" | "video",   // video only if the story has strong narrative punch
-  "hook": "scroll-stopping first line, <90 chars",
+  "hook": "scroll-stopping first line, <90 chars. STYLE FOR THIS POST ({hook_style}): {HOOK_STYLES[hook_style]} The first 3 words decide everything. One idea only.",
   "commentary": "3-5 sentence sharp review: what it does, why it matters, one honest caveat",
   "slides": [                        // 4-{cfg['visuals']['max_slides']} slides for the carousel (always provide; video also uses them as frames)
     {{"title": "<=6 words", "body": "<=45 words, plain language"}}
@@ -103,6 +124,7 @@ Produce JSON:
     result = strip_dashes(result)
     result = ensure_complete(result, paper)
     result["slides"] = result.get("slides", [])[: cfg["visuals"]["max_slides"]]
+    result["hook_style"] = hook_style
     return {
         "draft_id": uuid.uuid4().hex[:8],
         "paper": paper,
