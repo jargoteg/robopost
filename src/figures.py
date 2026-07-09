@@ -101,6 +101,124 @@ def get_figures(draft) -> list[str]:
             figs = youtube_thumbnail(p["url"], out_dir)
         if not figs and p.get("url", "").startswith("http"):
             figs = og_image(p["url"], out_dir)
+        # Paywalled sources (IEEE, closed journals) often yield no figures.
+        # Hunt for an open version of the same paper and pull figures there.
+        if not figs:
+            paywalled = any(s in (p.get("url", "") + " " + p.get("source", "")).lower()
+                            for s in ("ieee", "sciencedirect", "springer",
+                                      "wiley", "acm.org", "mdpi"))
+            if paywalled or p.get("item_type") == "paper":
+                info = find_open_version(p.get("title", ""), p.get("authors"))
+                if info and info.get("arxiv_id"):
+                    figs = arxiv_figures({"id": info["arxiv_id"]}, out_dir)
+                    if figs:
+                        p["open_version"] = f"https://arxiv.org/abs/{info['arxiv_id']}"
+                elif info and info.get("pdf_url"):
+                    figs = figures_from_pdf_url(info["pdf_url"], out_dir)
+                    if figs:
+                        p["open_version"] = info["pdf_url"]
+        # Last resort: a matching YouTube video's thumbnail
+        if not figs:
+            from fetch_papers import enrich_youtube
+            enrich_youtube([p])
+            if p.get("video_url"):
+                figs = youtube_thumbnail(p["video_url"], out_dir)
     except Exception as e:
         print(f"Figure extraction failed for {draft['draft_id']} (non-fatal): {e}")
     return figs
+
+
+def find_open_version(title, authors=None):
+    """Find an open-access version of a paywalled paper. Returns a dict with
+    an 'arxiv_id' and/or a direct 'pdf_url' if found, else None.
+    Strategy: query arXiv by title; if a close title match exists, use it.
+    Then try Crossref/Unpaywall-style OA via the Semantic Scholar public API."""
+    import difflib
+
+    def norm(s):
+        return re.sub(r"[^a-z0-9 ]", "", (s or "").lower()).strip()
+
+    tnorm = norm(title)
+
+    # 1) arXiv title search (author preprints are extremely common)
+    try:
+        q = requests.utils.quote(f'ti:"{title[:120]}"')
+        r = requests.get(
+            f"http://export.arxiv.org/api/query?search_query={q}&max_results=5",
+            timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+        if not r.text.strip().startswith("<"):
+            return None
+        import xml.etree.ElementTree as ET
+        ns = {"a": "http://www.w3.org/2005/Atom"}
+        for e in ET.fromstring(r.text).findall("a:entry", ns):
+            at = e.find("a:title", ns)
+            if at is None:
+                continue
+            cand = re.sub(r"\s+", " ", at.text).strip()
+            ratio = difflib.SequenceMatcher(None, tnorm, norm(cand)).ratio()
+            if ratio >= 0.85:
+                aid = e.find("a:id", ns).text.split("/abs/")[-1].split("v")[0]
+                print(f"Open version: arXiv {aid} (title match {ratio:.2f})")
+                return {"arxiv_id": aid}
+    except Exception as e:
+        print(f"arXiv title search failed: {e}")
+
+    # 2) Semantic Scholar: openAccessPdf if available
+    try:
+        r = requests.get(
+            "https://api.semanticscholar.org/graph/v1/paper/search",
+            params={"query": title[:200], "limit": 3,
+                    "fields": "title,openAccessPdf,externalIds"},
+            timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+        for pap in r.json().get("data", []):
+            if difflib.SequenceMatcher(None, tnorm, norm(pap.get("title"))).ratio() >= 0.85:
+                ext = pap.get("externalIds") or {}
+                if ext.get("ArXiv"):
+                    print(f"Open version: arXiv {ext['ArXiv']} (via S2)")
+                    return {"arxiv_id": ext["ArXiv"]}
+                oa = pap.get("openAccessPdf") or {}
+                if oa.get("url"):
+                    print(f"Open version: OA PDF {oa['url'][:60]}")
+                    return {"pdf_url": oa["url"]}
+    except Exception as e:
+        print(f"Semantic Scholar lookup failed: {e}")
+    return None
+
+
+def figures_from_pdf_url(pdf_url, out_dir):
+    """Extract figures from any direct PDF URL (reuses arxiv_figures logic)."""
+    import fitz
+    import io
+    from PIL import Image
+    try:
+        r = requests.get(pdf_url, timeout=60, headers={"User-Agent": "RoboPost/1.0"})
+        r.raise_for_status()
+        doc = fitz.open(stream=r.content, filetype="pdf")
+        found, seen = [], set()
+        for page in doc[:10]:
+            for info in page.get_images(full=True):
+                x = info[0]
+                if x in seen:
+                    continue
+                seen.add(x)
+                try:
+                    pix = fitz.Pixmap(doc, x)
+                    if pix.n - pix.alpha >= 4:
+                        pix = fitz.Pixmap(fitz.csRGB, pix)
+                    if pix.width < 420 or pix.height < 260:
+                        continue
+                    found.append((pix.width * pix.height,
+                                  Image.open(io.BytesIO(pix.tobytes("png")))))
+                except Exception:
+                    continue
+        found.sort(key=lambda t: -t[0])
+        paths = []
+        for i, (_, img) in enumerate(found[:4]):
+            pth = out_dir / f"fig_{i:02d}.png"
+            img.convert("RGB").save(pth)
+            paths.append(str(pth.relative_to(MEDIA.parent)))
+        doc.close()
+        return paths
+    except Exception as e:
+        print(f"PDF figure extraction failed: {e}")
+        return []
