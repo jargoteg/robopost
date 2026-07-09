@@ -174,10 +174,13 @@ def main():
     posted = load_json("posted.json", [])
     from generate import ensure_complete
     from datetime import timedelta
-    try:
-        from github_review import set_status_label
-    except Exception:
-        def set_status_label(*a, **k): pass
+    def set_status_label(num, status):
+        """Cosmetic label; must NEVER break posting."""
+        try:
+            from github_review import set_status_label as _ssl
+            _ssl(num, status)
+        except Exception as e:
+            print(f"label skipped ({status}): {e}")
     gap = timedelta(minutes=cfg.get("posting", {}).get("min_gap_minutes", 90))
     last = max((datetime.fromisoformat(p["posted_at"]) for p in posted), default=None)
     for d in drafts:
@@ -224,8 +227,6 @@ def main():
             continue
         d["status"] = "posted"
         last = datetime.now(timezone.utc)
-        if d.get("issue"):
-            set_status_label(d["issue"], "posted")
         posted.append({
             "draft_id": d["draft_id"], "paper_id": d["paper"]["id"],
             "title": d["paper"]["title"], "format": d["content"]["format"],
@@ -235,6 +236,11 @@ def main():
             "hook_style": d["content"].get("hook_style", ""),
             "platform_ids": ids, "metrics": {},
         })
+        # persist IMMEDIATELY: if anything later crashes, this post is recorded
+        save_json("drafts.json", drafts)
+        save_json("posted.json", posted)
+        if d.get("issue"):
+            set_status_label(d["issue"], "posted")
     save_json("drafts.json", drafts)
     save_json("posted.json", posted)
 
