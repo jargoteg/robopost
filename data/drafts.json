@@ -5009,7 +5009,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T18:06:34.132027+00:00",
     "media": {
       "bsky": [
@@ -5586,5 +5586,234 @@
       ]
     },
     "issue": 76
+  },
+  {
+    "draft_id": "e287ba94",
+    "paper": {
+      "id": "rss-9fa9cc853e",
+      "title": "Task-Agnostic Assistance via Centroidal Momentum Shaping: Preliminary Validations on a Hip Exoskeleton",
+      "abstract": "Model-based control paradigms for lower-limb exoskeletons may encounter challenges in securing solutions for high-dimensional, underactuated human-exoskeleton systems and often rely on task-specific reference kinematics that restrict voluntary motion. Recent learning-based methods can accommodate voluntary motion but typically require extensive data for training, and their ability to generalize beyond the training tasks remains unclear. In this paper, we propose a novel control paradigm that regulates an individual's Centroidal Momentum, i.e., the sum of projected limb momenta onto the Center of Mass, by tracking a virtual reference model's Centroidal Momentum to provide task-agnostic assistance. The reference model is defined from each user's real-time gaits with scaled limb inertial parameters, rather than pre-defined reference kinematics. To accommodate voluntary motion, we propose a nonlinear disturbance observer to estimate human joint torques and incorporate it into the control design. We provide proofs for ultimate boundedness of the observer's estimation error and the closed-loop Centroidal Momentum tracking error with an exponentially decaying transient. Preliminary experiments with six non-disabled participants wearing a bilateral hip exoskeleton demonstrate the effectiveness of the proposed approach across treadmill walking, ground-stair transitions, and sit-to-stand tasks. Ensemble-averaged muscle efforts showed an average 22% reduction with assistance and a 21% i",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576542",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No preset gait. No training data. Still 22% less muscle effort.",
+      "commentary": "This paper controls a hip exoskeleton by tracking centroidal momentum against a virtual reference model built from the user's own real-time motion, not pre-stored kinematics. That's the core bet: momentum is task-agnostic in a way that joint trajectories aren't. A nonlinear disturbance observer estimates human joint torques on the fly, so the controller accommodates voluntary deviation without fighting the user. Six participants across walking, stair transitions, and sit-to-stand is thin for generalization claims, and all were non-disabled, which matters a lot for clinical translation. But the framing is genuinely different from both model-based and learning-based camps, and the stability proofs give it more theoretical backbone than most preliminary exo papers.",
+      "slides": [
+        {
+          "title": "The exoskeleton control problem",
+          "body": "Model-based controllers need task-specific reference gaits. Learning-based controllers need lots of data. Both restrict what the user can do spontaneously. Neither generalizes well."
+        },
+        {
+          "title": "One metric to rule them all",
+          "body": "Centroidal Momentum: sum of all limb momenta projected onto the center of mass. It captures whole-body dynamics without locking in a fixed joint trajectory. Task-agnostic by construction."
+        },
+        {
+          "title": "Reference model built on YOU",
+          "body": "The virtual reference model uses the user's real-time gait with scaled inertial parameters, not pre-defined motion. The controller tracks momentum deviation between you and your virtual twin."
+        },
+        {
+          "title": "Disturbance observer for intent",
+          "body": "A nonlinear disturbance observer estimates human joint torques in real time. Stability proofs show ultimate boundedness of estimation error and exponentially decaying tracking error."
+        },
+        {
+          "title": "Preliminary results: 6 participants",
+          "body": "Treadmill walking, ground-stair transitions, sit-to-stand. Ensemble-averaged muscle effort reduced 22% with assistance. Across three structurally different tasks, same controller, no retuning."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Six non-disabled participants. Preliminary label is earned. Clinical populations walk differently and less predictably. The real test is whether the disturbance observer handles pathological gait without instability."
+        }
+      ],
+      "video_script": "Most exoskeleton controllers have a secret: they already know what you're going to do. They store a reference gait and push you toward it. This paper does something different. It tracks centroidal momentum, a single whole-body quantity, using a virtual model built from your own real-time motion. No preset gait. No training data. The controller adapts to walking, stairs, and sit-to-stand with the same algorithm. Six participants, 22% average muscle effort reduction. Small study, big concept. Would this hold up in clinical populations where gait is the variable you can't predict?",
+      "caption_instagram": "Most exoskeleton controllers quietly assume they know your next move. They store reference kinematics for specific tasks and push your joints toward them. Step outside that pattern and the controller fights you.\n\nThis paper takes a different angle. It regulates centroidal momentum: one whole-body quantity that doesn't care whether you're walking, climbing stairs, or standing up from a chair. The reference model is built from your own real-time gait, not a database. A nonlinear disturbance observer estimates your joint torques on the fly so the system accommodates voluntary motion without resisting it.\n\nSix participants, three task types, same controller throughout. Average 22% reduction in ensemble muscle effort. The stability proofs are there, which is more than you get from most preliminary exo papers.\n\nThe caveat worth saying clearly: all participants were non-disabled, and the sample is small. Pathological gait is exactly where momentum-based methods get tested hardest. That's the experiment that hasn't happened yet.\n\nPaper: Task-Agnostic Assistance via Centroidal Momentum Shaping: Preliminary Validations on a Hip Exoskeleton | IEEE Xplore 11576542\n\n#exoskeleton #wearablerobotics #biomechanics #humanrobotinteraction #controltheory #rehabilitationrobotics #legged",
+      "caption_tiktok": "No preset gait, no training data, 22% less muscle effort across walking AND stairs AND sit-to-stand. Centroidal momentum control for exoskeletons is a genuinely different framing. #exoskeleton #wearablerobotics #controlsystems #robotics",
+      "post_bluesky": "Most exo controllers already know your gait before you move. This one doesn't. Centroidal momentum tracking, reference built from your real-time motion, one controller for walking/stairs/sit-to-stand: 22% avg muscle effort reduction. Small study, real…\nhttp://ieeexplore.ieee.org/document/11576542",
+      "bluesky_thread": [
+        "The disturbance observer estimating human joint torques in real time is the load-bearing piece here. Without it, the controller can't accommodate voluntary deviation, it just fights you. The stability proofs cover estimation error boundedness, which is more rigorous than typical preliminary work.",
+        "All 6 participants were non-disabled. That's the gap. Pathological gait, spasticity, asymmetric loading: these are exactly the conditions where a momentum-based observer gets stressed. Has anyone seen centroidal momentum methods tested on stroke or CP populations yet? Curious what the community…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T22:39:59.287904+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/e287ba94/bsky_00.png",
+        "media/e287ba94/bsky_01.png",
+        "media/e287ba94/bsky_02.png",
+        "media/e287ba94/bsky_03.png"
+      ],
+      "slides": [
+        "media/e287ba94/slide_00.png",
+        "media/e287ba94/slide_01.png",
+        "media/e287ba94/slide_02.png",
+        "media/e287ba94/slide_03.png",
+        "media/e287ba94/slide_04.png",
+        "media/e287ba94/slide_05.png",
+        "media/e287ba94/slide_06.png",
+        "media/e287ba94/slide_07.png"
+      ]
+    },
+    "issue": 77
+  },
+  {
+    "draft_id": "42a87c82",
+    "paper": {
+      "id": "rss-fcd29fba35",
+      "title": "A Passive Clamping Capstan Brake for Strap-Based Wearable Robots",
+      "abstract": "Straps are widely used in soft wearable robots to distribute loads effectively across the body and transmit forces while maintaining wearability. However, mechanical components specifically designed for strap-based transmission remain underdeveloped, especially brakes for efficient force modulation. Here, we present a passive clamping capstan brake for strap-based wearable robots that improves portability and energy efficiency. The mechanism integrates dual one-way clutches to passively clamp the strap, generating high braking forces through self-reinforcing normal force and capstan friction. We develop a quasi-static model for analyzing the braking characteristics and identifying conditions to achieve high tension amplification while avoiding self-locking during release, and validate the model experimentally. The brake is compact and lightweight ($55 \\times 50 \\times 20$ mm, 150 g) and achieves a 40-fold tension amplification ratio, enabling a 1 W motor to control loads exceeding 300 N. We further integrate the brake into a soft upper-limb wearable robot, demonstrating its potential to improve the efficiency, portability, and usability of strap-based soft wearable robots.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576579",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "1 W motor. 300 N load. No power wasted holding it.",
+      "commentary": "This paper solves a real portability bottleneck in strap-based wearable robots: brakes that need continuous power to hold position drain batteries fast. The passive clamping capstan brake uses dual one-way clutches and capstan friction self-reinforcement to hold loads without sustained motor input, achieving a 40x tension amplification ratio. At 150 g and 55x50x20 mm, it's genuinely field-portable. The honest caveat is that the validation is quasi-static, and wearable robots see dynamic, jerky loads from real human movement, so how the clutch timing and self-locking boundary behave under fast transients is still an open question.",
+      "slides": [
+        {
+          "title": "The portability problem",
+          "body": "Strap-based soft wearable robots waste energy holding force. Motors burn power continuously just to maintain tension. That kills battery life and adds weight you cannot afford."
+        },
+        {
+          "title": "Passive clamping capstan brake",
+          "body": "Dual one-way clutches clamp the strap without continuous motor input. Capstan friction self-reinforces the normal force. The brake holds, then releases, driven by strap geometry alone."
+        },
+        {
+          "title": "40x tension amplification",
+          "body": "A 1 W motor controls loads exceeding 300 N. The brake itself: 55 x 50 x 20 mm, 150 g. Quasi-static model predicts braking conditions and identifies the self-locking boundary during release."
+        },
+        {
+          "title": "Self-locking is the real engineering problem",
+          "body": "High amplification ratios risk locking the strap permanently on release. The authors derive conditions to stay in the high-amplification regime while guaranteeing clean disengagement. That tradeoff is the core design challenge."
+        },
+        {
+          "title": "Integrated into upper-limb wearable",
+          "body": "Prototype demonstrated in a soft upper-limb assist robot. Efficiency and portability gains shown. Dynamic loading from real human movement remains the next validation hurdle."
+        },
+        {
+          "title": "Why it matters beyond wearables",
+          "body": "Passive braking with high amplification is relevant anywhere power budgets are tight: field exoskeletons, search and rescue suits, agricultural assist devices. The mechanism is not new, but the strap-specific design is underexplored."
+        }
+      ],
+      "video_script": "Soft wearable robots have a battery problem. Motors hold tension constantly, even when the user is just standing still. This paper fixes that with a passive capstan brake. Two one-way clutches clamp the strap using capstan friction, so the motor only acts to change state, not to hold it. One watt controls three hundred newtons. The whole thing weighs 150 grams. The tricky part is the release: get the amplification ratio wrong and the brake self-locks. They model exactly where that boundary sits. What task would actually put this to the test in the real world?",
+      "caption_instagram": "1 W motor. 300 N load. The brake holds without burning power.\n\nMost strap-based wearable robots waste energy just maintaining tension. The motor runs continuously. That is a battery budget problem, especially for field-deployed or all-day-use devices.\n\nThis paper from IEEE introduces a passive clamping capstan brake that uses dual one-way clutches and self-reinforcing capstan friction to hold loads without sustained motor input. 40x tension amplification ratio. 150 g. 55 x 50 x 20 mm. It fits.\n\nThe honest limitation: validation is quasi-static. Real human movement is not. Dynamic transients, sudden load reversals, and the clutch timing under fast motion are the next questions this work needs to answer before field deployment is on the table.\n\nPaper: A Passive Clamping Capstan Brake for Strap-Based Wearable Robots. IEEE Xplore doi:11576579\n\n#wearablerobotics #softrobotics #exoskeleton #roboticsmechanisms #fieldrobotics #robotdesign #humanrobotinteraction",
+      "caption_tiktok": "1 watt motor holding 300 newtons passively. Soft wearable robots just got a serious portability upgrade. #wearablerobotics #softrobotics #exoskeleton #robotics",
+      "post_bluesky": "1 W motor, 300 N load, no continuous power draw. Passive capstan brake for strap-based wearables: dual one-way clutches, 40x amplification, 150 g. Quasi-static validation is the caveat. Real human motion is next. http://ieeexplore.ieee.org/document/11576579",
+      "bluesky_thread": [
+        "The self-locking problem is the clever part. High amplification ratios can trap the strap permanently on release. They derive the exact boundary conditions to stay in the useful regime. That is the kind of mechanism detail that gets skipped in wearable papers and then bites you in user trials.",
+        "150 g and sub-60mm footprint is genuinely portable. But quasi-static models and human movement are different beasts. Anyone here tested passive brakes on exosuits under real dynamic loading? Curious what failure modes show up first."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T22:40:28.617408+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/42a87c82/bsky_00.png",
+        "media/42a87c82/bsky_01.png",
+        "media/42a87c82/bsky_02.png",
+        "media/42a87c82/bsky_03.png"
+      ],
+      "slides": [
+        "media/42a87c82/slide_00.png",
+        "media/42a87c82/slide_01.png",
+        "media/42a87c82/slide_02.png",
+        "media/42a87c82/slide_03.png",
+        "media/42a87c82/slide_04.png",
+        "media/42a87c82/slide_05.png",
+        "media/42a87c82/slide_06.png",
+        "media/42a87c82/slide_07.png"
+      ]
+    },
+    "issue": 78
+  },
+  {
+    "draft_id": "f9ffe6b0",
+    "paper": {
+      "id": "rss-10489dc266",
+      "title": "The Secret to Marathon-Winning Humanoid Robots",
+      "abstract": "On 19 April 2026, the Honor Lightning humanoid robot ran a half-marathon in 50 minutes and 26 seconds , beating the human world record by 7 minutes and the best robot time from 2025 by almost 2 hours. How did Honor do it? Is there some magical technology or technique that unlocked this performance? How did the company beat the significantly better-known Unitree (which reportedly had to supply its robot with an ice backpack to try and complete the race without overheating)? My doctoral thesis involved building and controlling hopping and running robots , and since then I’ve tried to design and build efficient commercial legged robots , giving me a decent idea of the constraints involved. In this article, we take a look at the fundamental underlying constraints to try and answer these questions. The Physics of Running Running consists of alternating phases of a leg pushing against the ground (“stance phase”) and the body flying through the air (“aerial phase”). In the aerial phase, the body falls due to gravity, losing vertical momentum. The leg in stance phase pushes against the ground to redirect the vertical momentum upward, while the other leg swings forward to reposition for the next foothold. Electric motors use energy to produce torque—the higher the torque, the more energy is lost as heat. Adding a gear train after the motor amplifies its torque and reduces its speed. A large reduction helps with torque production, but since the rotor of the motor itself has to spin fas",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/china-humanoid-robot-marathon",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Faster than a human. The secret is boring physics.",
+      "commentary": "The Honor Lightning ran a half-marathon in 50:26, beating the human world record by 7 minutes and the 2025 best robot time by nearly 2 hours. The article, written by someone with a robotics PhD and commercial legged-robot experience, traces the win to thermal management and mechanical efficiency, not novel AI. High gear reduction helps torque but generates heat; Unitree's ice backpack tells you where they lost. The honest caveat: one race result, one course, one thermal profile, on a controlled road. Field robotics people know what happens when terrain gets unpredictable.",
+      "slides": [
+        {
+          "title": "50:26. Faster than any human.",
+          "body": "On April 19 2026, Honor Lightning ran a half-marathon in 50 minutes 26 seconds. That beats the human world record by 7 minutes and the best 2025 robot time by almost 2 hours. So what actually changed?"
+        },
+        {
+          "title": "Heat is the real enemy",
+          "body": "Electric motors lose energy as heat when producing torque. More gear reduction means more torque but faster rotor spin and more heat. Unitree brought an ice backpack. Honor did not. That gap is thermal design, not magic."
+        },
+        {
+          "title": "Gear ratio is the core tradeoff",
+          "body": "High reduction amplifies torque but spins the rotor fast. Low reduction keeps it cool but needs a bigger, heavier motor. Finding the sweet spot for a 21 km continuous effort is the actual engineering problem here."
+        },
+        {
+          "title": "The physics of running has not changed",
+          "body": "Stance phase redirects vertical momentum. Aerial phase loses it to gravity. Every joule spent fighting that cycle shows up eventually as heat or battery drain. Efficient morphology and gearing delays the reckoning."
+        },
+        {
+          "title": "What a road race does not test",
+          "body": "Flat tarmac, controlled temperature, no payload, no obstacles. Field inspection robots face slopes, loose substrate, mud, and mechanical shock. Marathon performance says almost nothing about those conditions."
+        },
+        {
+          "title": "The honest read",
+          "body": "This is a real result on a real course. The explanation is mechanical and thermal engineering done carefully, not a software breakthrough. Reproducibility on varied terrain is the next question nobody has answered yet."
+        }
+      ],
+      "video_script": "A humanoid robot just ran a half-marathon faster than any human has. 50 minutes 26 seconds. And the reason it won has nothing to do with better AI. It comes down to heat. High gear ratios give you torque, but they spin the motor rotor fast, and fast rotors get hot. Unitree showed up with an ice backpack. Honor did not need one. That tells you everything. One race, flat road, controlled conditions. The physics worked. But would it hold up in a mine, on a slope, in the rain? That's the question nobody's racing to answer yet.",
+      "caption_instagram": "A humanoid robot just beat the human half-marathon world record by 7 minutes.\n\nHonor Lightning: 50 minutes 26 seconds. No ice backpack. No drama.\n\nThe author here has a PhD in hopping and running robots and tried to build commercial legged systems. His read: the win is thermal and mechanical engineering, not a software leap. High gear reduction gives torque but generates heat. Unitree's ice cooling tells you exactly where their margin ran out. Honor found a better operating point.\n\nThe caveat I keep thinking about: this is flat tarmac, no payload, predictable surface. Every field deployment person reading this knows that conditions like mud, slope, or loose substrate will expose things a road race never will. One result is one data point.\n\nStill, the gap closed from 2 hours behind to 7 minutes ahead in a single year. The underlying constraints have not changed. Someone just got serious about optimizing inside them.\n\nArticle: 'The Secret to Marathon-Winning Humanoid Robots' via IEEE Spectrum. spectrum.ieee.org/china-humanoid-robot-marathon\n\n#swarmrobotics #leggedrobots #humanoidrobots #fieldrobotics #roboticsengineer #motorcontrol #roboticsresearch",
+      "caption_tiktok": "A robot beat the human half-marathon record and the reason is thermal physics, not AI hype. The ice backpack on the other robot tells the whole story. #humanoidrobots #robotics #leggedrobotics #engineeringfacts",
+      "post_bluesky": "A humanoid just beat the human half-marathon world record by 7 min. The secret: boring thermal physics, not AI. Unitree brought an ice backpack. Honor didn't need one. That gap is gearing and heat management. spectrum.ieee.org/china-humanoid-robot-marathon",
+      "bluesky_thread": [
+        "The author has a PhD in running robots and tried to build commercial legged systems. His read: high gear reduction amplifies torque but spins the rotor fast and generates heat. Finding the right tradeoff for 21 km continuous effort is the whole engineering problem. No magic.",
+        "One honest caveat: flat tarmac, no payload, controlled conditions. A half-marathon says almost nothing about slopes, loose substrate, or shock loading. The gap between road-race performance and field deployment is still enormous. Anyone here actually tested legged robots on unstructured terrain at…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T22:40:57.938185+00:00",
+    "media": {
+      "figures": [
+        "media/f9ffe6b0/fig_00.png"
+      ],
+      "bsky": [
+        "media/f9ffe6b0/bsky_00.png",
+        "media/f9ffe6b0/bsky_01.png",
+        "media/f9ffe6b0/bsky_02.png",
+        "media/f9ffe6b0/bsky_03.png"
+      ],
+      "slides": [
+        "media/f9ffe6b0/slide_00.png",
+        "media/f9ffe6b0/slide_01.png",
+        "media/f9ffe6b0/slide_02.png",
+        "media/f9ffe6b0/slide_03.png",
+        "media/f9ffe6b0/slide_04.png",
+        "media/f9ffe6b0/slide_05.png",
+        "media/f9ffe6b0/slide_06.png",
+        "media/f9ffe6b0/slide_07.png"
+      ]
+    },
+    "issue": 79
   }
 ]
