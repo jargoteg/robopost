@@ -177,5 +177,20 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "657349b6",
+    "paper_id": "2607.07281v1",
+    "title": "Programmable Synchronization Graphs for Adaptive and Fault-Tolerant Modular Miniature Robots",
+    "format": "carousel",
+    "hook": "Nine tiny robots. No leader. No fixed gait. Just graph math.",
+    "posted_at": "2026-07-09T13:39:35.010876+00:00",
+    "bsky_variant": "single",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq7r2mnsdm2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
