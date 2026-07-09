@@ -235,6 +235,9 @@ work/announcement", "source_name": "e.g. Nature, IEEE Spectrum, Boston Dynamics 
 URL: {url}
 {page}""",
                 system="You extract clean metadata from web pages.")
+            jnames = load_config().get("sources", {}).get("journal_names", [])
+            src_l = (meta.get("source_name", "") + " " + url).lower()
+            is_journal = any(j in src_l for j in jnames)
             item = {
                 "id": "web-" + hashlib.sha1(url.encode()).hexdigest()[:10],
                 "title": meta["title"],
@@ -242,7 +245,8 @@ URL: {url}
                 "authors": meta.get("authors_or_org", [])[:6],
                 "url": url,
                 "source": meta.get("source_name", "web"),
-                "item_type": "article",
+                "item_type": "paper" if is_journal else "article",
+                "journal": is_journal,
             }
         except Exception as e:
             print(f"Generic URL resolution failed for {url}: {e}")

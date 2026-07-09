@@ -224,7 +224,8 @@ def rank_papers(papers: list[dict], cfg) -> list[dict]:
     for lo in range(0, len(papers), B):
         batch = papers[lo:lo + B]
         listing = "\n".join(
-            f"[{i}] {p['title']} — {p['abstract'][:300]}" for i, p in enumerate(batch)
+            f"[{i}]{' [JOURNAL]' if p.get('journal') else ''} {p['title']} — {p['abstract'][:300]}"
+            for i, p in enumerate(batch)
         )
         try:
             _rank_batch(batch, listing, feedback, conf, boost)
@@ -240,9 +241,18 @@ def _rank_batch(batch, listing, feedback, conf, boost):
     if rej:
         rejections = "The owner REJECTED these recently (avoid similar picks):\n" + "\n".join(
             f"- {r.get('title','')[:70]}: \"{r.get('reason','no reason given')}\"" for r in rej)
+    journal_note = ""
+    if cfg["sources"].get("journal_priority"):
+        journal_note = ("PRIORITY: items from peer-reviewed journals (Science "
+                        "Robotics, Nature, Nature Communications, Nature Machine "
+                        "Intelligence, Cell, PNAS) should score HIGHER than arXiv "
+                        "preprints of similar interest. They are peer-reviewed and "
+                        "carry more weight for this audience. Items marked [JOURNAL] "
+                        "below are such papers.")
     result = claude_json(
         f"""Today is {__import__('datetime').date.today().isoformat()}.
 You curate papers for a social account about: {cfg['account']['niche']}.
+{journal_note}
 Priority topics: {boost}.
 
 Lessons learned from past engagement data:
@@ -262,10 +272,14 @@ Items:
 {listing}""",
         system="You are a sharp robotics research curator.",
     )
+    boost = 1.5 if cfg["sources"].get("journal_priority") else 0
     for r in result:
         i = r.get("i", -1)
         if 0 <= i < len(batch):
-            batch[i]["score"] = r.get("s", 0)
+            s_val = r.get("s", 0)
+            if batch[i].get("journal"):
+                s_val = min(10, s_val + boost)
+            batch[i]["score"] = s_val
 
 
 def main():
@@ -296,7 +310,11 @@ def main():
             if any(k in (p["title"] + p["abstract"]).lower() for k in kw)
         ]
     papers += fetch_rss(cfg)
-    papers += fetch_rss(cfg, "journal_feeds", "paper")
+    jitems = fetch_rss(cfg, "journal_feeds", "paper")
+    for it in jitems:
+        it["journal"] = True
+        it["item_type"] = "paper"
+    papers += jitems
     if cfg["sources"].get("evergreen", {}).get("enabled"):
         papers += suggest_evergreen(cfg, seen)
     papers += fetch_watch_pages(cfg)

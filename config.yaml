@@ -8,9 +8,22 @@ sources:
   arxiv_categories: ["cs.RO", "cs.MA"] # cs.MA = multi-agent / swarm
   arxiv_max_results: 40                # fetched per day before ranking
   hf_daily_papers: true                # also pull Hugging Face daily papers
-  journal_feeds:                       # top journals — treated as PAPERS (no news cap)
+  journal_feeds:                       # top journals — treated as PAPERS, prioritized over arXiv
     - https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=scirobotics   # Science Robotics
     - https://www.nature.com/natmachintell.rss                                    # Nature Machine Intelligence
+    - https://www.nature.com/ncomms.rss                                           # Nature Communications
+    - https://www.nature.com/subjects/robotics.rss                                # Nature (robotics subject)
+  journal_priority: true               # journal papers get a ranking boost over arXiv
+  journal_names:                       # used to tag + boost; matched loosely in source/url
+    - science robotics
+    - nature
+    - nature communications
+    - nature machine intelligence
+    - ncomms
+    - scirobotics
+    - cell
+    - pnas
+    - ieee
   evergreen:
     enabled: true                      # daily: 1 older landmark/underrated paper
     per_day: 1                         # enters ranking alongside fresh papers
