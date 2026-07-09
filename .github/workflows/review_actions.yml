@@ -62,7 +62,7 @@ jobs:
           echo "open=$OPEN" >> $GITHUB_OUTPUT
           echo "Open drafts: $OPEN"
       - name: Top up drafts (queue running low)
-        if: github.event_name == 'schedule' && steps.buffer.outputs.open < 2
+        if: github.event_name == 'schedule' && steps.buffer.outputs.open < 4
         env:
           ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
           YOUTUBE_API_KEY: "${{ secrets.YOUTUBE_API_KEY }}"
