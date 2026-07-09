@@ -2914,7 +2914,7 @@
         "My sticking point is map aging. LiDAR maps degrade as environments change. Cross-modal matching inherits that fragility. Has anyone seen field results on how fast these descriptors drift when the mapped environment actually changes? Genuinely curious."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T12:08:14.976778+00:00",
     "media": {
       "bsky": [
@@ -3016,5 +3016,252 @@
       ]
     },
     "issue": 44
+  },
+  {
+    "draft_id": "c8db1744",
+    "paper": {
+      "id": "rss-2d043c8dc9",
+      "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+      "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578324",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "redo_notes": "",
+      "open_version": "https://arxiv.org/abs/2603.07920",
+      "repo_url": "https://github.com/QiZS-BIT/RLPR",
+      "fig_source": "https://github.com/QiZS-BIT/RLPR"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your LiDAR map is useless in a storm. Radar can save it.",
+      "commentary": "RLPR tackles a real infrastructure problem: you've already built city-scale LiDAR maps, but fog or rain kills your onboard LiDAR. Swapping to a radar query makes sense, but radar and LiDAR share almost nothing spectrally. The clever move here is deliberately throwing away RCS and Doppler during feature extraction, keeping only shared spatial structure, then using a pre-trained radar branch as an alignment anchor rather than forcing symmetric cross-modal loss. Zero-shot generalization across five datasets is a strong result for a domain-shift problem. The honest caveat: 'adverse weather' in autonomous driving benchmarks rarely matches true worst-case conditions like heavy sleet or sensor icing, so field deployment skepticism is warranted.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "LiDAR maps are everywhere. But onboard LiDAR fails in fog, rain, dust. Radar doesn't. So: can you query a LiDAR map using a radar scan? That's radar-to-LiDAR place recognition."
+        },
+        {
+          "title": "Why modality mismatch is hard",
+          "body": "Radar sees RCS and Doppler. LiDAR sees precise geometry. Forcing a shared embedding across both usually means the network latches onto noise. Most prior work treats the problem as symmetric. It isn't."
+        },
+        {
+          "title": "RLPR's key design choice",
+          "body": "Strip out all modality-specific signals. Match only on shared spatial structure. Works with both scanning and phased-array radars, which is rare. No retraining per radar type needed."
+        },
+        {
+          "title": "Asymmetric alignment (TACMA)",
+          "body": "Pre-train the radar branch first. Use it as a fixed anchor to pull LiDAR embeddings toward radar space, not the reverse. The asymmetry reflects the actual task: radar queries a LiDAR database."
+        },
+        {
+          "title": "Results and the honest caveat",
+          "body": "State-of-the-art on five datasets. Strong zero-shot transfer across sites. Caveat: benchmark 'adverse weather' rarely includes sensor icing or heavy sleet. Real-world margins may shrink."
+        },
+        {
+          "title": "Why field robotics should watch this",
+          "body": "Mining sites, ports, and construction yards already run LiDAR mapping. Adding a weather-robust radar query layer without rebuilding maps is a practical path. This is the right framing for deployment."
+        }
+      ],
+      "video_script": "You spent years building LiDAR maps of your city or mine site. Then it rains, and your localization fails. Radar doesn't care about the weather, but it speaks a completely different geometric language than LiDAR. RLPR throws out the modality-specific noise, keeps only shared spatial structure, and uses an asymmetric alignment trick to query your existing LiDAR infrastructure with radar. Five datasets, zero-shot generalization. The real question is: how does this hold up when the weather gets genuinely bad, not benchmark bad?",
+      "caption_instagram": "Your LiDAR map is useless in a storm. Radar can save it.\n\nThis paper proposes RLPR: a framework that lets a radar sensor query an existing LiDAR map for place recognition. The insight is that the two modalities share almost nothing except spatial structure, so the authors deliberately discard RCS and Doppler and match only on geometry.\n\nThe alignment strategy is asymmetric by design. Pre-train the radar branch, freeze it, then drag the LiDAR embeddings toward radar space. That direction matters because the task is always radar-in, LiDAR-map. It's a small conceptual shift with a real impact on generalization.\n\nStrong results across five datasets with zero-shot transfer. The caveat I'd raise: adverse weather in autonomous driving benchmarks is usually moderate rain or light fog. Sensor icing, heavy sleet, or dusty open-pit conditions are a different story. Worth watching how this performs outside controlled eval sets.\n\nPaper: RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving | arXiv 2603.07920\n\n#SwarmRobotics #FieldRobotics #LiDAR #Radar #PlaceRecognition #AutonomousDriving #RobotLocalization",
+      "caption_tiktok": "LiDAR dies in bad weather. This paper uses radar to query your existing LiDAR maps instead. Smart asymmetric alignment, zero-shot transfer across five datasets. #Robotics #LiDAR #Radar #FieldRobotics",
+      "post_bluesky": "Your LiDAR map works great until it rains. RLPR lets a radar sensor query existing LiDAR infrastructure by matching only shared spatial structure, no RCS, no Doppler. Asymmetric alignment, zero-shot transfer across 5 datasets. http://ieeexplore.ieee.org/document/11578324",
+      "bluesky_thread": [
+        "The asymmetric design is the part worth stealing. Pre-train radar, freeze it, align LiDAR toward radar space. Most cross-modal work treats both branches as equal. They're not when one is always the query and one is always the map.",
+        "My caveat: five benchmark datasets is good, but 'adverse weather' in AD benchmarks usually means moderate rain. Mining sites, ports, construction yards face dust, sleet, sensor icing. Would love to see this tested there. Anyone running radar-LiDAR fusion in actual harsh environments? Code…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:06:59.718761+00:00",
+    "media": {
+      "figures": [
+        "media/c8db1744/fig_00.png"
+      ],
+      "bsky": [
+        "media/c8db1744/bsky_00.png",
+        "media/c8db1744/bsky_01.png",
+        "media/c8db1744/bsky_02.png",
+        "media/c8db1744/bsky_03.png"
+      ],
+      "slides": [
+        "media/c8db1744/slide_00.png",
+        "media/c8db1744/slide_01.png",
+        "media/c8db1744/slide_02.png",
+        "media/c8db1744/slide_03.png",
+        "media/c8db1744/slide_04.png",
+        "media/c8db1744/slide_05.png",
+        "media/c8db1744/slide_06.png",
+        "media/c8db1744/slide_07.png"
+      ]
+    },
+    "issue": 45
+  },
+  {
+    "draft_id": "e18a70da",
+    "paper": {
+      "id": "rss-4234682556",
+      "title": "Scaling Rough Terrain Locomotion With Automatic Curriculum Reinforcement Learning",
+      "abstract": "Curriculum learning has demonstrated substantial effectiveness in robot learning. However, it still faces limitations when scaling to complex, wide-ranging task spaces. Such task spaces often lack a well-defined difficulty structure, making the difficulty ordering required by previous methods challenging to define. We propose a Learning Progress-based Automatic Curriculum Reinforcement Learning (LP-ACRL) framework, which estimates the agentś learning progress online and adaptively adjusts the task-sampling distribution, thereby enabling automatic curriculum generation without prior knowledge of the difficulty distribution over the task space. Policies trained with LP-ACRL enable the ANYmal D quadruped to achieve and maintain stable, high-speed locomotion at 2.5 m/s linear velocity and 3.0 rd/s angular velocity across diverse terrains, including stairs, slopes, gravel, and low-friction flat surfaces–whereas previous methods have generally been limited to high speeds on flat terrain or low speeds on complex terrain. Experimental results demonstrate that LP-ACRL exhibits strong scalability and real-world applicability, providing a robust baseline for future research on curriculum generation in complex, wide-ranging robotic learning task spaces.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563605",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2601.17428"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "ANYmal D hitting 2.5 m/s on stairs without hand-crafted curricula",
+      "commentary": "LP-ACRL ditches the manual difficulty ordering that bottlenecks most curriculum RL work. Instead it tracks learning progress online and shifts the task-sampling distribution toward wherever the agent is actually improving. The payoff: ANYmal D holds 2.5 m/s linear and 3.0 rad/s angular velocity across stairs, slopes, gravel, and low-friction surfaces, a combination previous methods couldn't pull off simultaneously. The honest caveat is that 'real-world applicability' in the abstract is doing heavy lifting: we see diverse terrain types but no long-duration deployment data, no failure modes in wet or occluded conditions, and no comparison to ETH's Parkour work under matched conditions. Still, removing the prior difficulty knowledge requirement is a real engineering win for anyone trying to deploy legged robots in unstructured field sites.",
+      "slides": [
+        {
+          "title": "The curriculum RL bottleneck",
+          "body": "Standard curriculum RL needs a pre-defined difficulty ordering. For complex terrain spaces with no clear structure, that ordering is hard or impossible to specify manually. This breaks scalability."
+        },
+        {
+          "title": "Learning progress as a compass",
+          "body": "LP-ACRL estimates learning progress online, then shifts task-sampling toward regions where improvement is fastest. No prior knowledge of difficulty distribution required. The curriculum builds itself."
+        },
+        {
+          "title": "The numbers that matter",
+          "body": "ANYmal D achieves 2.5 m/s linear and 3.0 rad/s angular velocity across stairs, slopes, gravel, and low-friction flat surfaces. Previous methods reached high speed OR complex terrain, not both."
+        },
+        {
+          "title": "Why field robots care",
+          "body": "Inspection and search-and-rescue platforms face exactly this problem: mixed terrain with no clean difficulty ladder. A curriculum that adapts without manual tuning lowers the sim-to-real engineering burden significantly."
+        },
+        {
+          "title": "What the paper doesn't show",
+          "body": "No long-duration runs. No wet, muddy, or debris-covered surfaces. No reported failure modes. Comparison baselines are reasonable but don't include ETH's Parkour policy under matched settings."
+        },
+        {
+          "title": "The takeaway",
+          "body": "Automatic curriculum generation without difficulty priors is a genuine contribution. The 2.5 m/s multi-terrain result is credible. Whether it survives a real inspection site is the next question to answer."
+        }
+      ],
+      "video_script": "Most curriculum reinforcement learning hits a wall when the task space gets complicated. You need a difficulty ordering, and for real terrain, that ordering doesn't exist in any clean form. This paper's answer: track learning progress in real time, shift sampling toward wherever the robot is actually improving, let the curriculum emerge. The result on ANYmal D is 2.5 meters per second across stairs, slopes, gravel, and low-friction surfaces simultaneously. That's a combination the field hasn't cleanly hit before. The caveat is we're still in controlled tests, no long deployments, no mud, no debris. So here's the question: is automatic curriculum generation the missing piece for legged robots in real inspection sites, or does sim-to-real still swallow the gains?",
+      "caption_instagram": "ANYmal D at 2.5 m/s across stairs, slopes, and gravel, without anyone hand-crafting a difficulty schedule.\n\nMost curriculum RL for locomotion requires you to know the difficulty ordering of your terrain space in advance. That's fine for clean benchmarks. It falls apart when your task space is genuinely complex and unstructured, which is exactly what field deployment looks like.\n\nLP-ACRL sidesteps this by estimating learning progress online and continuously reweighting which terrain types get sampled. The curriculum adapts to the agent, not the other way around. The 2.5 m/s linear plus 3.0 rad/s angular velocity result across diverse terrain types is the clearest evidence yet that you don't need hand-tuned difficulty priors to get capable locomotion policies.\n\nHonest caveat: no wet surfaces, no debris, no failure mode analysis, no long-duration runs. 'Real-world applicability' is earned over months in the field, not a lab trial. But the core idea, removing the human bottleneck from curriculum design, is worth taking seriously for anyone building inspection or SAR platforms on legged hardware.\n\nPaper: Scaling Rough Terrain Locomotion With Automatic Curriculum Reinforcement Learning, arXiv 2601.17428. Open access link in bio.\n\n#swarmrobotics #leggedrobotics #reinforcementlearning #fieldrobotics #ANYmal #curriculumlearning #roboticsinspection",
+      "caption_tiktok": "ANYmal D, 2.5 m/s, stairs AND gravel, no hand-crafted difficulty schedule. The curriculum writes itself now. #leggedrobotics #reinforcementlearning #fieldrobotics #robotics",
+      "post_bluesky": "ANYmal D at 2.5 m/s across stairs, slopes, and gravel, no hand-crafted difficulty ordering needed. LP-ACRL estimates learning progress online and builds the curriculum automatically. Real contribution for field deployment. http://ieeexplore.ieee.org/document/11563605",
+      "bluesky_thread": [
+        "The key unlock: previous curriculum RL needed you to pre-specify terrain difficulty. That's a hard ask for real inspection sites with mixed, unpredictable surfaces. Tracking learning progress online and resampling adaptively removes that prior knowledge requirement entirely.",
+        "Caveat worth flagging: no wet or debris conditions, no long-duration runs, no reported failure modes. 'Real-world applicability' in the abstract is ambitious framing for what is still a controlled study. Open access at arxiv 2601.17428. Anyone tested ANYmal policies on actual underground or…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:07:33.508703+00:00",
+    "media": {
+      "figures": [
+        "media/e18a70da/fig_00.png",
+        "media/e18a70da/fig_01.png",
+        "media/e18a70da/fig_02.png",
+        "media/e18a70da/fig_03.png",
+        "media/e18a70da/fig_04.png",
+        "media/e18a70da/fig_05.png"
+      ],
+      "bsky": [
+        "media/e18a70da/bsky_00.png",
+        "media/e18a70da/bsky_01.png",
+        "media/e18a70da/bsky_02.png",
+        "media/e18a70da/bsky_03.png"
+      ],
+      "slides": [
+        "media/e18a70da/slide_00.png",
+        "media/e18a70da/slide_01.png",
+        "media/e18a70da/slide_02.png",
+        "media/e18a70da/slide_03.png",
+        "media/e18a70da/slide_04.png",
+        "media/e18a70da/slide_05.png",
+        "media/e18a70da/slide_06.png",
+        "media/e18a70da/slide_07.png"
+      ]
+    },
+    "issue": 46
+  },
+  {
+    "draft_id": "a028df39",
+    "paper": {
+      "id": "rss-db62a6d856",
+      "title": "SyNeT: Synthetic Negatives for Traversability Learning",
+      "abstract": "Reliable traversability estimation is crucial for autonomous robots to navigate complex outdoor environments safely. Existing self-supervised learning frameworks primarily rely on positive and unlabeled data; however, the lack of explicit negative data remains a critical limitation, hindering the model's ability to accurately identify diverse non-traversable regions. To address this issue, we introduce a method to explicitly construct synthetic negatives, representing plausible but non-traversable, and integrate them into vision-based traversability learning. Our approach is formulated as a training strategy that can be seamlessly integrated into both Positive–Unlabeled (PU) and Positive–Negative (PN) frameworks without modifying inference architectures. Complementing standard pixel-wise metrics, we introduce an object-centric FPR evaluation approach that analyzes predictions in regions where synthetic negatives are inserted. This evaluation provides an indirect measure of the model's ability to consistently identify non-traversable regions without additional manual labeling. Extensive experiments on both public and self-collected datasets demonstrate that our approach significantly enhances robustness across diverse environments.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568528",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2602.00814"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your robot thinks dirt is safe. It's never seen unsafe dirt.",
+      "commentary": "SyNeT tackles a real gap in self-supervised traversability learning: models trained only on positive examples never learn what 'bad' looks like explicitly. The fix is elegant, constructing plausible synthetic negatives, things that look traversable but aren't, and injecting them during training without touching inference. The object-centric FPR metric is a genuine contribution; pixel-wise averages hide failures that matter most in field deployment. Honest caveat: synthetic negatives are only as good as your generation heuristics, and edge cases in real terrain, boggy ground, loose shale, submerged rocks, will keep surprising models trained even with this approach.",
+      "slides": [
+        {
+          "title": "The gap no one talks about",
+          "body": "Self-supervised traversability models train on positive patches and unlabeled data. They never see an explicit 'non-traversable' example. That silence is a problem."
+        },
+        {
+          "title": "Synthetic negatives, concretely",
+          "body": "SyNeT constructs plausible but non-traversable image regions and inserts them at training time. No new labels. No architecture changes. Plugs into PU or PN frameworks."
+        },
+        {
+          "title": "A smarter evaluation metric",
+          "body": "Standard pixel-wise FPR hides localised failures. Their object-centric FPR measures predictions specifically around inserted negative regions. That's where field robots actually fail."
+        },
+        {
+          "title": "Where this matters in the field",
+          "body": "Mining haul roads, post-disaster rubble, wet agricultural fields. Traversability misclassification isn't a benchmark stat there. It's a stuck or flipped robot."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Synthetic negatives reflect your assumptions about what looks dangerous. Real terrain produces failures you didn't imagine. Gap between lab robustness and field robustness stays open."
+        },
+        {
+          "title": "Read it",
+          "body": "SyNeT: Synthetic Negatives for Traversability Learning. arXiv 2602.00814. Open access."
+        }
+      ],
+      "video_script": "Your outdoor robot's traversability model has probably never been shown a single explicit non-traversable example. It just learned what safe looks like and hoped for the best. SyNeT changes that. It builds synthetic negatives, plausible but dangerous patches, and injects them at training time. No new labels, no architecture changes. And crucially, they introduce an object-centric false positive rate metric that actually catches the failures pixel averages mask. It won't solve every edge case in real terrain, but it's a concrete step forward. What's the hardest traversability failure mode you've seen in the field?",
+      "caption_instagram": "Your robot learned what traversable terrain looks like. It never learned what non-traversable terrain looks like. That asymmetry causes real failures.\n\nSyNeT constructs synthetic negatives: plausible-looking but non-traversable patches injected during training. No manual labels, no changes to inference. Works inside existing PU and PN frameworks.\n\nThe metric contribution is underrated. Pixel-wise FPR averages hide localised danger misclassification. Their object-centric FPR targets exactly the regions where inserted negatives live. That's the failure mode that gets field robots stuck or worse.\n\nHonest limit: your synthetic negatives are bounded by your imagination of what danger looks like. Boggy peat, submerged gravel, crumbling shale, real terrain keeps inventing new failure modes. Paper is a solid step, not a closed problem.\n\nSyNeT: Synthetic Negatives for Traversability Learning, arXiv 2602.00814. Open access link in bio.\n\n#swarmrobotics #fieldrobotics #autonomousnavigation #traversability #roboticresearch #computervision #offroadrobotics",
+      "caption_tiktok": "Your field robot has never seen a negative example. SyNeT fixes that with zero extra labels. arXiv 2602.00814\n#fieldrobotics #robotics #autonomousrobots #traversability",
+      "post_bluesky": "Field robots fail at terrain they've never seen labelled as dangerous. SyNeT injects synthetic negatives at training time, no labels, no arch changes. The object-centric FPR metric alone is worth reading for. http://ieeexplore.ieee.org/document/11568528",
+      "bluesky_thread": [
+        "Open access: arxiv.org/abs/2602.00814. The object-centric FPR is the quiet contribution here. Pixel-wise averages let localised failures hide. This metric surfaces them. Should be standard practice in traversability evaluation.",
+        "Real limit: synthetic negatives encode your assumptions about danger. Loose shale, waterlogged peat, cracked permafrost, real terrain doesn't read the same playbook. How are people handling distribution shift in long-term outdoor deployment? Genuinely curious what's working."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:08:01.735826+00:00",
+    "media": {
+      "figures": [
+        "media/a028df39/fig_00.png",
+        "media/a028df39/fig_01.png",
+        "media/a028df39/fig_02.png",
+        "media/a028df39/fig_03.png",
+        "media/a028df39/fig_04.png",
+        "media/a028df39/fig_05.png"
+      ],
+      "bsky": [
+        "media/a028df39/bsky_00.png",
+        "media/a028df39/bsky_01.png",
+        "media/a028df39/bsky_02.png",
+        "media/a028df39/bsky_03.png"
+      ],
+      "slides": [
+        "media/a028df39/slide_00.png",
+        "media/a028df39/slide_01.png",
+        "media/a028df39/slide_02.png",
+        "media/a028df39/slide_03.png",
+        "media/a028df39/slide_04.png",
+        "media/a028df39/slide_05.png",
+        "media/a028df39/slide_06.png",
+        "media/a028df39/slide_07.png"
+      ]
+    },
+    "issue": 47
   }
 ]

@@ -1,5 +1,16 @@
 [
   {
+    "id": "rss-2360bdfd68",
+    "title": "CycleRL: Sim-to-Real Deep Reinforcement Learning for Robust Autonomous Bicycle Control",
+    "abstract": "Autonomous bicycles offer a promising agile solution for urban mobility and last-mile logistics. However, conventional control strategies often struggle with underactuated nonlinear dynamics, suffering from sensitivity to model mismatches and limited adaptability to real-world uncertainties. To address this, we develop CycleRL, a comprehensive sim-to-real framework for robust autonomous bicycle control. Our approach establishes a direct perception-to-action mapping within the high-fidelity NVIDIA Isaac Sim environment, leveraging Proximal Policy Optimization (PPO) to optimize the control policy. The framework features a composite reward function tailored for concurrent balance maintenance, velocity tracking, and steering control. Crucially, systematic domain randomization is employed to reduce the reliance on precise system modeling, bridge the simulation-to-reality gap and facilitate direct transfer. In simulation, CycleRL achieves promising performance, including a 99.90% balance success rate, a heading tracking error of $1.15^{\\circ }$, and a velocity tracking error of 0.18 m/s. These quantitative results, coupled with successful hardware deployment, validate DRL as an effective paradigm for autonomous bicycle control, offering superior adaptability over traditional methods.",
+    "authors": [],
+    "url": "http://ieeexplore.ieee.org/document/11568521",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "journal": true,
+    "score": 7.5
+  },
+  {
     "id": "2507.04321",
     "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
     "url": "https://arxiv.org/abs/2507.04321",
