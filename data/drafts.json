@@ -3768,8 +3768,7 @@
       "score": 8.0,
       "redo_notes": "",
       "open_version": "https://arxiv.org/abs/2603.07920",
-      "repo_url": "https://github.com/QiZS-BIT/RLPR",
-      "fig_source": "https://github.com/QiZS-BIT/RLPR"
+      "repo_url": "https://github.com/QiZS-BIT/RLPR"
     },
     "content": {
       "format": "carousel",
@@ -3813,13 +3812,6 @@
     "status": "in_review",
     "created": "2026-07-09T15:00:32.751335+00:00",
     "media": {
-      "figures": [
-        "media/7f00955b/fig_00.png",
-        "media/7f00955b/fig_01.png",
-        "media/7f00955b/fig_02.png",
-        "media/7f00955b/fig_03.png",
-        "media/7f00955b/fig_04.png"
-      ],
       "bsky": [
         "media/7f00955b/bsky_00.png",
         "media/7f00955b/bsky_01.png",

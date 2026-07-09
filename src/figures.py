@@ -7,7 +7,7 @@ papers are CC-BY. The /redo command lets the owner drop any image."""
 import re
 import requests
 from pathlib import Path
-from utils import MEDIA
+from utils import MEDIA, ROOT
 
 
 def expand_until_clean(page, rect, tries=3):
@@ -322,6 +322,8 @@ def get_figures(draft) -> list[str]:
                 figs = youtube_thumbnail(p["video_url"], out_dir)
     except Exception as e:
         print(f"Figure extraction failed for {draft['draft_id']} (non-fatal): {e}")
+    if figs:
+        figs = vet_figures(figs, p.get("title", ""))
     return figs
 
 
@@ -669,3 +671,44 @@ def mine_github_repo(repo, out_dir, max_figs=6):
             continue
     print(f"Repo {repo}: {len(out['figures'])} figures, video={bool(out['video_url'])}")
     return out
+
+
+def vet_figures(fig_paths, paper_title, max_keep=4):
+    """Have Claude LOOK at each candidate figure and keep only the good ones:
+    clean, self-contained, not sliced, not mostly blank, informative for a
+    social post. This replaces brittle pixel heuristics with actual judgment.
+    Non-fatal: returns the originals on any failure."""
+    if len(fig_paths) <= 1:
+        return fig_paths
+    try:
+        from utils import claude_vision_json
+        abs_paths = [str(ROOT / p) for p in fig_paths]
+        result = claude_vision_json(
+            abs_paths[:8],
+            f"""These are candidate figures for a social media post about the
+robotics paper "{paper_title}". The images are numbered 0..{min(len(abs_paths), 8) - 1}
+in the order given.
+
+Judge each ruthlessly. REJECT any image that: has text sliced off at an edge,
+is mostly blank/whitespace, is a fragment of a larger figure, shows a wall of
+paper text, is a logo/badge, or would confuse a viewer scrolling a feed.
+KEEP images that are clean, self-contained, and visually informative
+(robot photos, full pipeline diagrams with readable labels, result plots).
+
+Return JSON: [{{"i": <index>, "keep": true|false, "score": 0-10,
+"why": "few words"}}] for every image.""")
+        kept = sorted([r for r in result if r.get("keep")],
+                      key=lambda r: -r.get("score", 0))
+        keep_idx = [r["i"] for r in kept][:max_keep]
+        out = [fig_paths[i] for i in keep_idx if 0 <= i < len(fig_paths)]
+        dropped = [r for r in result if not r.get("keep")]
+        for r in dropped:
+            print(f"  vet: dropped fig {r.get('i')}: {r.get('why', '')[:50]}")
+        if out:
+            print(f"Figure vetting: kept {len(out)}/{len(fig_paths)}")
+            return out
+        print("Figure vetting rejected ALL candidates; keeping none (text card).")
+        return []
+    except Exception as e:
+        print(f"Figure vetting skipped (non-fatal): {e}")
+        return fig_paths[:max_keep]

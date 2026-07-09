@@ -102,3 +102,33 @@ def get_trends() -> str:
     """Latest community-trends brief (from the 6-hourly Bluesky radar)."""
     p = DATA / "trends.md"
     return p.read_text() if p.exists() else ""
+
+
+def claude_vision_json(images: list, prompt: str, max_tokens: int = 1500):
+    """Claude call with image inputs; returns parsed JSON.
+    `images` = list of file paths; each is downscaled for cost."""
+    import anthropic
+    import base64
+    import io
+    from PIL import Image
+    client = anthropic.Anthropic()
+    cfg = load_config()
+    content = []
+    for p in images:
+        im = Image.open(p).convert("RGB")
+        im.thumbnail((640, 640))  # aspect preserved
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=80)
+        content.append({"type": "image", "source": {
+            "type": "base64", "media_type": "image/jpeg",
+            "data": base64.b64encode(buf.getvalue()).decode()}})
+    content.append({"type": "text", "text": prompt +
+                    "\n\nRespond ONLY with valid JSON. No prose, no fences."})
+    msg = client.messages.create(
+        model=cfg["pipeline"]["model"], max_tokens=max_tokens,
+        messages=[{"role": "user", "content": content}])
+    text = "".join(b.text for b in msg.content if b.type == "text")
+    import re as _re
+    m = _re.search(r"[\[{].*[\]}]", text, flags=_re.S)
+    import json as _json
+    return _json.loads(m.group(0) if m else text)
