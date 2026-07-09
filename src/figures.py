@@ -10,7 +10,7 @@ from pathlib import Path
 from utils import MEDIA
 
 
-def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 4) -> list[str]:
+def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
     """Extract figures from an arXiv PDF by rendering whole image REGIONS of
     the page (figure plus its rendered caption stay intact), rather than
     pulling raw embedded image streams which often slice multi-panel figures
@@ -34,14 +34,18 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 4) -> list[str]:
                 continue
         if not rects:
             continue
-        # merge overlapping/adjacent rects (multi-panel figures) into blocks
+        # merge only truly overlapping panels (same figure), not merely nearby
         merged = []
         for rc in sorted(rects, key=lambda r: (round(r.y0), round(r.x0))):
             placed = False
             for i, m in enumerate(merged):
                 gap = fitz.Rect(m)
-                gap += (-8, -8, 8, 40)  # pad, esp. below for caption
-                if gap.intersects(rc):
+                gap += (-4, -4, 4, 12)  # small pad: real overlap only
+                # require genuine overlap area, not just touching, to avoid
+                # chaining separate figures on a dense page into one block
+                inter = gap & rc
+                if gap.intersects(rc) and inter.get_area() > 0.10 * min(
+                        max(rc.get_area(), 1), max(m.get_area(), 1)):
                     merged[i] = m | rc
                     placed = True
                     break
@@ -49,9 +53,9 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 4) -> list[str]:
                 merged.append(fitz.Rect(rc))
         for m in merged:
             # expand downward to capture the rendered caption line(s)
-            cap = fitz.Rect(m.x0, m.y0, m.x1, min(page.rect.y1, m.y1 + 46))
+            cap = fitz.Rect(m.x0, m.y0, m.x1, min(page.rect.y1, m.y1 + 44))
             w, h = cap.width, cap.height
-            if w < 150 or h < 110 or w / h > 6 or h / w > 6:
+            if w < 150 or h < 100 or w / h > 7 or h / w > 7:
                 continue
             area = w * h
             candidates.append((area, page.number, cap))
@@ -59,9 +63,15 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 4) -> list[str]:
     candidates.sort(key=lambda c: (c[1], -c[0]))
     paths, used = [], []
     for area, pnum, rect in candidates:
-        # skip near-duplicates of an already-picked region on same page
-        if any(pn == pnum and r.intersects(rect) and (r & rect).get_area() > 0.6 * area
-               for pn, r in used):
+        # skip only heavy overlaps with an already-picked region (same figure)
+        dup = False
+        for pn, r in used:
+            if pn == pnum and r.intersects(rect):
+                ov = (r & rect).get_area()
+                if ov > 0.8 * min(area, r.get_area()):
+                    dup = True
+                    break
+        if dup:
             continue
         pix = doc[pnum].get_pixmap(clip=rect, dpi=200)
         p = out_dir / f"fig_{len(paths):02d}.png"
@@ -323,10 +333,36 @@ def figures_from_pdf_url(pdf_url, out_dir):
 
 
 def find_github_repo(title, arxiv_id=None):
-    """Find the paper's official GitHub repo. Papers-with-Code indexes most
-    arXiv papers to their repos; also try a scoped web-less arXiv abstract scan
-    for a github.com link. Returns repo 'owner/name' or None."""
-    # 1) Papers with Code (public API, no key)
+    """Find the paper's official GitHub repo via Papers with Code, the arXiv
+    API 'comment' field, and the abstract page. Validates the repo exists and
+    isn't a reference to some other project."""
+    def clean_repo(raw):
+        raw = raw.rstrip("/").rstrip(".")
+        raw = re.sub(r"\.git$", "", raw)
+        raw = raw.split("#")[0].split("?")[0].split(")")[0].split("]")[0]
+        parts = raw.split("/")
+        if len(parts) >= 2 and parts[0] and parts[1]:
+            owner, name = parts[0], parts[1]
+            # skip non-repo github paths
+            if owner.lower() in ("about", "features", "topics", "sponsors", "orgs"):
+                return None
+            return f"{owner}/{name}"
+        return None
+
+    def repo_exists(repo):
+        try:
+            import os
+            h = {"User-Agent": "RoboPost/1.0"}
+            if os.environ.get("GITHUB_TOKEN"):
+                h["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+            return requests.get(f"https://api.github.com/repos/{repo}",
+                                headers=h, timeout=20).status_code == 200
+        except Exception:
+            return False
+
+    candidates = []
+
+    # 1) Papers with Code
     try:
         if arxiv_id:
             r = requests.get(
@@ -339,30 +375,39 @@ def find_github_repo(title, arxiv_id=None):
                     f"https://paperswithcode.com/api/v1/papers/{pid}/repositories/",
                     timeout=30, headers={"User-Agent": "RoboPost/1.0"})
                 repos = r2.json().get("results") or []
-                official = [x for x in repos if x.get("is_official")] or repos
-                if official:
-                    url = official[0]["url"]
-                    m = re.search(r"github\.com/([^/]+/[^/]+)", url)
+                for x in sorted(repos, key=lambda z: not z.get("is_official")):
+                    m = re.search(r"github\.com/([^/\s]+/[^/\s]+)", x.get("url", ""))
                     if m:
-                        print(f"Repo via PapersWithCode: {m.group(1)}")
-                        return m.group(1).rstrip("/")
+                        candidates.append(clean_repo(m.group(1)))
     except Exception as e:
         print(f"PapersWithCode lookup failed: {e}")
-    # 2) arXiv abstract page often has a github link in comments
+
+    # 2) arXiv API 'comment' field (authors often put the repo here) + abstract
     try:
         if arxiv_id:
-            r = requests.get(f"https://arxiv.org/abs/{arxiv_id}", timeout=30,
-                             headers={"User-Agent": "RoboPost/1.0"})
-            m = re.search(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", r.text)
-            if m:
-                print(f"Repo via arXiv page: {m.group(1)}")
-                return m.group(1).rstrip("/").rstrip(".")
+            r = requests.get(
+                f"http://export.arxiv.org/api/query?id_list={arxiv_id}",
+                timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+            for m in re.finditer(r"github\.com/([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)", r.text):
+                candidates.append(clean_repo(m.group(1)))
+            r2 = requests.get(f"https://arxiv.org/abs/{arxiv_id}", timeout=30,
+                              headers={"User-Agent": "RoboPost/1.0"})
+            for m in re.finditer(r"github\.com/([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)", r2.text):
+                candidates.append(clean_repo(m.group(1)))
     except Exception as e:
         print(f"arXiv repo scan failed: {e}")
+
+    # first candidate that actually exists on GitHub
+    for repo in [c for c in candidates if c]:
+        if repo_exists(repo):
+            print(f"Repo found: {repo}")
+            return repo
+    if candidates:
+        print(f"Repo candidates found but none validated: {[c for c in candidates if c][:3]}")
     return None
 
 
-def mine_github_repo(repo, out_dir, max_figs=4):
+def mine_github_repo(repo, out_dir, max_figs=6):
     """Pull figures and a demo video/GIF link from a repo's README + assets.
     Returns {'figures': [paths], 'video_url': str|None, 'repo_url': str}."""
     base = "https://api.github.com"
