@@ -95,7 +95,43 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
                     break
         if dup:
             continue
-        pix = doc[pnum].get_pixmap(clip=rect, dpi=200)
+        # tighten: shrink the region to the actual drawn/text/image content so
+        # we don't render a mostly-blank block (whitespace above the caption)
+        page = doc[pnum]
+        content = None
+        try:
+            for dr in page.get_drawings():
+                rc = fitz.Rect(dr["rect"])
+                if rc.intersects(rect) and rc.width > 4 and rc.height > 4:
+                    content = rc if content is None else (content | rc)
+            for ir in page.get_images(full=True):
+                for r_ in page.get_image_rects(ir[0]):
+                    if fitz.Rect(r_).intersects(rect):
+                        content = fitz.Rect(r_) if content is None else (content | fitz.Rect(r_))
+            for b in page.get_text("blocks"):
+                bb = fitz.Rect(b[:4])
+                if bb.intersects(rect):
+                    content = bb if content is None else (content | bb)
+        except Exception:
+            content = None
+        if content:
+            tight = content & rect if content.intersects(rect) else rect
+            # keep the caption line: extend down to the region's bottom
+            tight = fitz.Rect(tight.x0 - 4, tight.y0 - 4, tight.x1 + 4, rect.y1)
+            if tight.width > 40 and tight.height > 40:
+                rect = tight
+        pix = page.get_pixmap(clip=rect, dpi=200)
+        # skip if still mostly blank (guards against phantom regions)
+        try:
+            from PIL import Image
+            import io
+            im = Image.open(io.BytesIO(pix.tobytes("png"))).convert("L")
+            px = list(im.getdata())
+            blank = sum(1 for v in px if v > 240) / len(px)
+            if blank > 0.90:
+                continue
+        except Exception:
+            pass
         p = out_dir / f"fig_{len(paths):02d}.png"
         p.write_bytes(pix.tobytes("png"))
         paths.append(str(p.relative_to(MEDIA.parent)))
@@ -161,8 +197,13 @@ def get_figures(draft) -> list[str]:
             figs = youtube_thumbnail(p["url"], out_dir)
         if not figs and p.get("url", "").startswith("http"):
             figs = og_image(p["url"], out_dir)
+        # Determine an arXiv id early (direct or via open-version match).
+        aid = None
+        if re.match(r"\d{4}\.\d{4,5}", str(p.get("id", ""))):
+            aid = p["id"]
+
         # Paywalled sources (IEEE, closed journals) often yield no figures.
-        # Hunt for an open version of the same paper and pull figures there.
+        # Hunt for an open version of the same paper first (also gives arXiv id).
         if not figs:
             paywalled = any(s in (p.get("url", "") + " " + p.get("source", "")).lower()
                             for s in ("ieee", "sciencedirect", "springer",
@@ -171,30 +212,37 @@ def get_figures(draft) -> list[str]:
                 info = find_open_version(p.get("title", ""), p.get("authors"))
                 if info and info.get("arxiv_id"):
                     p["open_version"] = f"https://arxiv.org/abs/{info['arxiv_id']}"
-                    figs = arxiv_figures({"id": info["arxiv_id"]}, out_dir)
+                    aid = aid or info["arxiv_id"]
                 elif info and info.get("pdf_url"):
-                    figs = figures_from_pdf_url(info["pdf_url"], out_dir)
-                    if figs:
-                        p["open_version"] = info["pdf_url"]
-
-        # GitHub repo: often the most reliable figures + a real demo video.
-        # Try it whenever we have an arXiv id, and prefer its video regardless.
-        aid = None
-        if re.match(r"\d{4}\.\d{4,5}", str(p.get("id", ""))):
-            aid = p["id"]
-        elif p.get("open_version"):
+                    p["open_version"] = info["pdf_url"]
+        if not aid and p.get("open_version"):
             mo = re.search(r"arxiv\.org/abs/(\S+)", p["open_version"])
             aid = mo.group(1) if mo else None
+
+        # GitHub repo FIRST: cleanest figures + a real demo video. Try it for
+        # any paper with an arXiv id, before PDF extraction (which can yield
+        # blank/vector-only regions).
         if aid and not p.get("repo_url"):
+            print(f"Looking up GitHub repo for arXiv:{aid}...")
             repo = find_github_repo(p.get("title", ""), aid)
             if repo:
                 mined = mine_github_repo(repo, out_dir)
                 p["repo_url"] = mined["repo_url"]
                 if mined.get("video_url") and not p.get("video_url"):
                     p["video_url"] = mined["video_url"]
-                if mined["figures"]:  # repo figures are clean; prefer them
+                if mined["figures"]:
                     figs = mined["figures"]
                     p["fig_source"] = mined["repo_url"]
+                    print(f"Using {len(figs)} repo figures from {repo}")
+            else:
+                print("No GitHub repo found.")
+
+        # PDF extraction only if repo gave us nothing usable
+        if not figs and aid:
+            figs = arxiv_figures({"id": aid}, out_dir)
+        elif not figs and p.get("open_version", "").endswith(".pdf"):
+            figs = figures_from_pdf_url(p["open_version"], out_dir)
+
         # Last resort: a matching YouTube video's thumbnail
         if not figs:
             from fetch_papers import enrich_youtube
