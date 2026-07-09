@@ -10,6 +10,61 @@ from pathlib import Path
 from utils import MEDIA
 
 
+def expand_until_clean(page, rect, tries=3):
+    """If any edge of the crop slices through page content, expand that edge.
+    Returns a clean rect or None if it can't be fixed (better no figure than
+    a sliced one)."""
+    import fitz
+    try:
+        from PIL import Image
+        import io
+        import numpy as np
+    except Exception:
+        return rect
+    pr = page.rect
+    for _ in range(tries):
+        pix = page.get_pixmap(clip=rect, dpi=72)
+        im = Image.open(io.BytesIO(pix.tobytes("png"))).convert("L")
+        a = np.array(im)
+        if a.size == 0:
+            return None
+        cut = {
+            "top": (a[0:2] < 200).mean(),
+            "bottom": (a[-2:] < 200).mean(),
+            "left": (a[:, 0:2] < 200).mean(),
+            "right": (a[:, -2:] < 200).mean(),
+        }
+        bad = {k: v for k, v in cut.items() if v > 0.06}
+        if not bad:
+            return rect
+        # expand the offending edges by 18pt (bounded by the page)
+        rect = fitz.Rect(
+            max(pr.x0, rect.x0 - (18 if "left" in bad else 0)),
+            max(pr.y0, rect.y0 - (18 if "top" in bad else 0)),
+            min(pr.x1, rect.x1 + (18 if "right" in bad else 0)),
+            min(pr.y1, rect.y1 + (18 if "bottom" in bad else 0)),
+        )
+    # still slicing after expansion: give up on this region
+    return None
+
+
+def trim_white_margins(png_bytes):
+    """Trim uniform near-white borders; never cuts content."""
+    from PIL import Image, ImageOps
+    import io
+    im = Image.open(io.BytesIO(png_bytes)).convert("RGB")
+    gray = ImageOps.invert(im.convert("L")).point(lambda v: 255 if v > 15 else 0)
+    bbox = gray.getbbox()
+    if bbox:
+        pad = 10
+        bbox = (max(0, bbox[0] - pad), max(0, bbox[1] - pad),
+                min(im.width, bbox[2] + pad), min(im.height, bbox[3] + pad))
+        im = im.crop(bbox)
+    buf = io.BytesIO()
+    im.save(buf, "PNG")
+    return buf.getvalue()
+
+
 def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
     """Extract figures from an arXiv PDF. Anchors on the figure CAPTION text
     ('Figure N', 'Fig. N') so it captures VECTOR diagrams too (architecture /
@@ -110,6 +165,14 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
                         content = fitz.Rect(r_) if content is None else (content | fitz.Rect(r_))
             for b in page.get_text("blocks"):
                 bb = fitz.Rect(b[:4])
+                txt = (b[4] or "")
+                # paragraph-like blocks (wide, tall, wordy) are body text —
+                # including them dragged crops into prose columns (the
+                # "sliced text" bug). Only small labels/axis text join.
+                wordy = len(txt.split()) > 12
+                tall = bb.height > 40
+                if wordy and tall:
+                    continue
                 if bb.intersects(rect):
                     content = bb if content is None else (content | bb)
         except Exception:
@@ -120,12 +183,16 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
             tight = fitz.Rect(tight.x0 - 4, tight.y0 - 4, tight.x1 + 4, rect.y1)
             if tight.width > 40 and tight.height > 40:
                 rect = tight
+        rect = expand_until_clean(page, rect)
+        if rect is None:
+            continue
         pix = page.get_pixmap(clip=rect, dpi=200)
+        png = trim_white_margins(pix.tobytes("png"))
         # skip if still mostly blank (guards against phantom regions)
         try:
             from PIL import Image
             import io
-            im = Image.open(io.BytesIO(pix.tobytes("png"))).convert("L")
+            im = Image.open(io.BytesIO(png)).convert("L")
             px = list(im.getdata())
             blank = sum(1 for v in px if v > 240) / len(px)
             if blank > 0.90:
@@ -133,7 +200,7 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
         except Exception:
             pass
         p = out_dir / f"fig_{len(paths):02d}.png"
-        p.write_bytes(pix.tobytes("png"))
+        p.write_bytes(png)
         paths.append(str(p.relative_to(MEDIA.parent)))
         used.append((pnum, rect))
         if len(paths) >= max_figs:
