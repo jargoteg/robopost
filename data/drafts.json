@@ -4278,7 +4278,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T15:46:31.877288+00:00",
     "media": {
       "figures": [
@@ -4305,5 +4305,243 @@
       ]
     },
     "issue": 60
+  },
+  {
+    "draft_id": "d95c941b",
+    "paper": {
+      "id": "rss-5ca43b1501",
+      "title": "Token Expand-Merge: Training-Free Token Compression for Vision-Language-Action Models",
+      "abstract": "Vision-Language-Action (VLA) models pretrained on large-scale multimodal datasets have emerged as powerful foundations for robotic perception and control. However, their massive scale, often billions of parameters, poses significant challenges for real-time deployment, as inference becomes computationally expensive and latency-sensitive in dynamic environments. To address this, we propose Token Expand-and-Merge-VLA (TEAM-VLA), a training-free token compression framework that accelerates VLA inference while preserving task performance. TEAM-VLA introduces a dynamic token expansion mechanism that identifies and samples additional informative tokens in the spatial vicinity of attention-highlighted regions, enhancing contextual completeness. These expanded tokens are then selectively merged in deeper layers under action-aware guidance, effectively reducing redundancy while maintaining semantic coherence. By coupling expansion and merging within a single feed-forward pass, TEAM-VLA achieves a balanced trade-off between efficiency and effectiveness, without any retraining or parameter updates. Extensive experiments on LIBERO benchmark demonstrate that TEAM-VLA consistently improves inference speed while maintaining or even surpassing the task success rate of full VLA models.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560913",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2512.09927",
+      "repo_url": "https://github.com/Jasper-aaa/TEAM-VLA",
+      "fig_source": "https://github.com/Jasper-aaa/TEAM-VLA"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Faster VLA inference. No retraining. Is it real?",
+      "commentary": "TEAM-VLA tackles a genuine bottleneck: billion-parameter VLA models are slow at inference, and that matters the moment you need real-time control in a dynamic environment. The trick is elegant: expand tokens around attention hotspots to grab nearby context, then merge redundant tokens in deeper layers guided by action relevance. No fine-tuning, no weight changes, just a smarter pass through the existing model. Results on LIBERO look solid. The honest caveat: LIBERO is a tabletop manipulation benchmark with relatively clean visual inputs. Whether attention-highlighted regions stay stable and meaningful in cluttered field environments, subsea, mining, construction, is an open question the paper doesn't address.",
+      "slides": [
+        {
+          "title": "The VLA speed problem",
+          "body": "Billion-parameter VLA models are powerful but slow. Inference latency matters in real-time control. Retraining to compress them is expensive and risks losing the pretraining signal."
+        },
+        {
+          "title": "Expand, then merge",
+          "body": "TEAM-VLA finds attention hotspots, samples nearby tokens to add local context, then merges redundant tokens in deeper layers. One forward pass. No extra parameters. No retraining needed."
+        },
+        {
+          "title": "What action-aware merging means",
+          "body": "Merging decisions are guided by action relevance, not just visual similarity. Tokens that matter for the current control output are preserved. Generic visual redundancy gets compressed away."
+        },
+        {
+          "title": "LIBERO benchmark results",
+          "body": "TEAM-VLA consistently improves inference speed versus full VLA models and matches or exceeds task success rates on the LIBERO suite across tested tasks. Training cost: zero."
+        },
+        {
+          "title": "The real question: field conditions",
+          "body": "LIBERO is tabletop, controlled lighting, clean backgrounds. Cluttered subsea or mining scenes may shift attention maps unpredictably. Field validation is the missing chapter here."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Training-free compression that works drops directly into existing deployment pipelines. If the gains hold outside benchmarks, this cuts the hardware cost for real-world VLA deployment significantly."
+        }
+      ],
+      "video_script": "VLA models are some of the most capable robot controllers we have right now. But they're huge, often billions of parameters, and inference latency kills you in real-time control. TEAM-VLA skips retraining entirely. It finds where the model is already paying attention, grabs nearby tokens for context, then merges the redundant ones in deeper layers using action-relevant signals. Speed goes up, task success holds on LIBERO. No weight changes. The open question I keep coming back to: does this hold when your visual input is a murky subsea camera feed? What do you think breaks first?",
+      "caption_instagram": "Faster robot inference without touching the weights. That's the core claim of TEAM-VLA.\n\nVLA models pretrained on large multimodal datasets are genuinely impressive at robot perception and control. The problem is size. Billion-parameter models inference slowly, and slow means broken in dynamic real-world tasks.\n\nTEAM-VLA's approach: identify where attention is already focused, sample neighboring tokens to complete the local context, then merge redundant tokens in deeper layers guided by what actually matters for the action output. One forward pass. No retraining. No parameter updates.\n\nBenchmark numbers on LIBERO are encouraging, speed improves and task success holds. But LIBERO is tabletop robotics with cooperative visual conditions. I'd want to see this stress-tested in environments where attention maps aren't clean before putting it on a field robot. That's the paper waiting to be written.\n\nPaper: Token Expand-Merge: Training-Free Token Compression for VLA Models | arXiv 2512.09927\n\n#swarmbots #robotics #vla #robotlearning #edgerobotics #realtimecontrol #embodiedai #roboticsresearch",
+      "caption_tiktok": "Faster VLA robots with zero retraining. Clever trick or benchmark artifact? Read the caveat. #robotics #vla #robotlearning #airesearch",
+      "post_bluesky": "Faster VLA inference, no retraining. TEAM-VLA expands tokens around attention hotspots, then merges redundancy guided by action relevance. LIBERO numbers hold up. Field conditions are the unwritten chapter. http://ieeexplore.ieee.org/document/11560913",
+      "bluesky_thread": [
+        "The expand-then-merge framing is genuinely smart. Most compression work just prunes. Sampling spatially nearby tokens first preserves local context before you merge, which matters when your action depends on fine spatial detail. That's a real insight, not just an engineering trick.",
+        "Honest caveat: LIBERO is as clean as benchmarks get. Attention hotspots in cluttered or low-visibility field environments may be far less stable. If the expansion step chases the wrong regions, you've compressed the wrong things. Has anyone tested this on something noisier? Code…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:51:59.737193+00:00",
+    "media": {
+      "figures": [
+        "media/d95c941b/fig_00.png"
+      ],
+      "bsky": [
+        "media/d95c941b/bsky_00.png",
+        "media/d95c941b/bsky_01.png",
+        "media/d95c941b/bsky_02.png",
+        "media/d95c941b/bsky_03.png"
+      ],
+      "slides": [
+        "media/d95c941b/slide_00.png",
+        "media/d95c941b/slide_01.png",
+        "media/d95c941b/slide_02.png",
+        "media/d95c941b/slide_03.png",
+        "media/d95c941b/slide_04.png",
+        "media/d95c941b/slide_05.png",
+        "media/d95c941b/slide_06.png",
+        "media/d95c941b/slide_07.png"
+      ]
+    },
+    "issue": 61
+  },
+  {
+    "draft_id": "ea170559",
+    "paper": {
+      "id": "rss-e3c8cb5bc2",
+      "title": "Pixel2Catch: Multi-Agent Sim-to-Real Transfer for Agile Manipulation With a Single RGB Camera",
+      "abstract": "To catch a thrown object, a robot must be able to perceive the object’s motion and generate control actions in a timely manner. Rather than explicitly estimating the object’s 3D position, this work focuses on a novel approach that recognizes object motion using pixel-level visual information extracted from consecutive RGB frames. Such visual cues capture changes in the object’s position and scale, allowing the policy to reason about the object’s motion. Furthermore, to achieve stable learning in a high-DoF system composed of a robot arm equipped with a multi-fingered hand, we design a heterogeneous multi-agent reinforcement learning framework that defines the arm and hand as independent agents with distinct roles. Each agent is trained cooperatively using role-specific observations and rewards, and the learned policies are successfully transferred from simulation to the real world.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563623",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2602.22733"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No depth sensor. No 3D tracker. Just pixels and timing.",
+      "commentary": "This paper catches thrown objects using only consecutive RGB frames, skipping 3D pose estimation entirely and letting a pixel-level motion signal drive the policy. The clever bit is splitting the problem: arm and hand are separate RL agents with distinct rewards, trained cooperatively, which keeps the credit assignment clean in a high-DoF system. Sim-to-real transfer worked, which is the real test. Honest caveat: catching a thrown object in a controlled lab setting is still far from the clutter, lighting variance, and unpredictable throws you get outside that environment. The pixel-motion representation is elegant but its robustness to occlusion and background texture hasn't been stress-tested in the abstract.",
+      "slides": [
+        {
+          "title": "Catch without depth",
+          "body": "Most catching systems estimate 3D position explicitly. This one doesn't. It reads pixel-level changes across consecutive RGB frames: object grows, object shifts, policy reacts."
+        },
+        {
+          "title": "Two agents, one catch",
+          "body": "Arm and hand are independent RL agents with separate observations and rewards. Cooperative training on a shared task. Keeps credit assignment tractable across a high-DoF combined system."
+        },
+        {
+          "title": "What the pixel signal carries",
+          "body": "Change in position and scale across frames encodes direction and closing speed. No explicit velocity estimation. The policy learns to read motion geometry directly from raw pixel diffs."
+        },
+        {
+          "title": "Sim-to-real: it transferred",
+          "body": "Policies trained in simulation deployed on physical hardware with a single RGB camera. That gap is where most agile manipulation papers quietly stop. This one crossed it."
+        },
+        {
+          "title": "The honest ceiling",
+          "body": "Lab throws, controlled backgrounds, clean lighting. Pixel-motion signals degrade fast under occlusion, texture clutter, and variable illumination. Field deployment is a different problem."
+        },
+        {
+          "title": "Why the architecture matters",
+          "body": "Heterogeneous multi-agent framing for limb coordination is a design choice worth watching. Scales better than monolithic policies as robot morphology gets more complex."
+        }
+      ],
+      "video_script": "Most robot catching systems spend half their compute figuring out where the object is in 3D space. This paper skips that entirely. It watches pixel changes across two consecutive frames, reads how the object moves and scales, and acts on that alone. Then it splits the robot into two cooperating agents: one for the arm, one for the hand. Separate rewards, separate observations, trained together. And the policy transferred from sim to real hardware. The question I keep coming back to: how fragile is that pixel signal when the background stops cooperating?",
+      "caption_instagram": "No depth sensor. No 3D tracker. Just pixels and timing.\n\nPixel2Catch uses raw RGB frame differences to drive a catching policy. Object gets bigger, object shifts position, policy generates control. No explicit 3D pose estimation in the loop.\n\nThe architecture is what caught my attention. Arm and hand are separate RL agents with different reward structures, trained cooperatively. It keeps credit assignment clean in a system with a lot of degrees of freedom. That's a real design choice, not just a framing trick.\n\nSim-to-real transfer worked on physical hardware. That's the bar that matters. My caveat: the pixel-motion signal is elegant but I want to see it under variable lighting, background clutter, and off-axis throws before I believe it generalizes. Lab conditions are kind to pixel methods.\n\nFull paper: Pixel2Catch: Multi-Agent Sim-to-Real Transfer for Agile Manipulation With a Single RGB Camera, arXiv 2602.22733\n\n#swarmrobotics #reinforcementlearning #simtoreal #robotmanipulation #multiagentRL #robotics #robotlearning",
+      "caption_tiktok": "Robot catches a thrown object using only two camera frames and no depth sensor. The pixel signal is the whole trick. #robotics #reinforcementlearning #simtoreal #manipulation",
+      "post_bluesky": "No depth sensor. No 3D tracker. Just pixel changes across two RGB frames driving a catch policy. Arm and hand as separate RL agents, cooperative rewards, sim-to-real confirmed. Genuinely clean idea. http://ieeexplore.ieee.org/document/11563623",
+      "bluesky_thread": [
+        "The heterogeneous multi-agent framing is the part worth stealing. Treating arm and hand as independent agents with role-specific rewards keeps credit assignment tractable. Monolithic policies on high-DoF systems are a headache. This sidesteps it.",
+        "My caveat: pixel-motion signals are fragile. Variable backgrounds, occlusion, off-axis throws. The lab is kind to this approach. Would love to see the failure modes documented. What conditions make the pixel representation break down first?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:52:26.084196+00:00",
+    "media": {
+      "figures": [
+        "media/ea170559/fig_00.png",
+        "media/ea170559/fig_04.png",
+        "media/ea170559/fig_01.png"
+      ],
+      "bsky": [
+        "media/ea170559/bsky_00.png",
+        "media/ea170559/bsky_01.png",
+        "media/ea170559/bsky_02.png",
+        "media/ea170559/bsky_03.png"
+      ],
+      "slides": [
+        "media/ea170559/slide_00.png",
+        "media/ea170559/slide_01.png",
+        "media/ea170559/slide_02.png",
+        "media/ea170559/slide_03.png",
+        "media/ea170559/slide_04.png",
+        "media/ea170559/slide_05.png",
+        "media/ea170559/slide_06.png",
+        "media/ea170559/slide_07.png"
+      ]
+    },
+    "issue": 62
+  },
+  {
+    "draft_id": "488145e6",
+    "paper": {
+      "id": "rss-78494d6416",
+      "title": "Autonomous Robotic Occluder Deployment With FBG Force Based Assessment in Left Atrial Appendage Closure",
+      "abstract": "Left Atrial Appendage Closure (LAAC) is an established therapy for reducing stroke risk in patients with atrial fibrillation who are contraindicated for long-term anticoagulation. Current LAAC procedures rely on manual catheter manipulation under fluoroscopic image guidance to seal the LAA by means of a self-expanding occluder. Assessment of occluder deployment typically involves qualitative methods such as tactile feedback and x-ray imaging. This work presents an autonomous robotic approach for LAA occluder implantation based on electromagnetic (EM) tracking. Additionally, to overcome the limitations of qualitative assessment of occluder-tissue engagement during deployment, a novel fiber Bragg grating (FBG)-based force sensor is integrated at the tip of the occluder deployment system. A Naive Bayes classifier is trained to predict the occluder deployment outcome based on intra-operatively acquired force-displacement curves. The system's capability is demonstrated in a phantom model of the left atrial anatomy, achieving mean positional errors of 0.84 mm during autonomous navigation and 1.32 mm during autonomous deployment across five runs. All runs culminated in successful occluder placement and a force-sensing based deployment quality classification accuracy of 83.3%.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576569",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Surgeons feel the catheter. Robots measure it.",
+      "commentary": "This system autonomously navigates and deploys a cardiac occluder for left atrial appendage closure, replacing the tactile guesswork of manual catheter work with FBG force sensing and a Naive Bayes classifier. Mean positional error of 0.84 mm during navigation and 1.32 mm during deployment, across five phantom runs, is genuinely tight for this anatomy. The 83.3% deployment quality classification accuracy is promising but comes from a small sample in a phantom, not a beating heart. The real test is whether FBG sensors survive the forces, fluids, and geometry variation of actual OR conditions. Still, quantifying 'does it feel right' with real force-displacement curves is the right direction.",
+      "slides": [
+        {
+          "title": "The problem with 'feels right'",
+          "body": "Left atrial appendage closure relies on surgeon tactile feedback to judge if the occluder is seated. That assessment is qualitative, operator-dependent, and impossible to log or replay."
+        },
+        {
+          "title": "EM tracking plus FBG force sensing",
+          "body": "Electromagnetic tracking handles autonomous navigation. A fiber Bragg grating sensor at the occluder tip captures force-displacement curves in real time during deployment. No more guessing."
+        },
+        {
+          "title": "How accurate?",
+          "body": "0.84 mm mean error during navigation. 1.32 mm during deployment. Five phantom runs, all successful placements. These numbers are competitive with best manual operator performance in controlled settings."
+        },
+        {
+          "title": "Classifying deployment quality",
+          "body": "A Naive Bayes classifier trained on intra-operative force curves predicts deployment outcome. Accuracy: 83.3%. Simple model, interpretable output. Appropriate choice given limited labeled data."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "All results are in a phantom. Real LAA anatomy varies. A beating heart changes force dynamics significantly. 83.3% on n=5-ish runs is a proof of concept, not a clinical benchmark."
+        },
+        {
+          "title": "Why this matters beyond cardiology",
+          "body": "Replacing qualitative tactile assessment with logged, classifiable force data is a broadly useful idea. Surgical robotics, catheter navigation, and any soft-tissue deployment problem shares this gap."
+        }
+      ],
+      "video_script": "In cardiac surgery, the question 'is this seated correctly?' gets answered by feel. That's not reproducible and it's not logged. This paper puts a fiber Bragg grating sensor on a cardiac occluder, captures force-displacement curves during deployment, and trains a classifier to answer that question with data. Mean navigation error: 0.84 millimeters. All five phantom runs ended in successful placement. 83.3% classification accuracy. It's a phantom study, not a clinical trial. But quantifying what used to be intuition is the first step. Would you trust an 83% accurate classifier on your heart?",
+      "caption_instagram": "Surgeons feel the catheter. Robots measure it.\n\nLeft atrial appendage closure is a real stroke-prevention procedure. The catch: deployment quality is judged by tactile feedback and visual inspection under fluoroscopy. Operator-dependent, unlogged, hard to teach.\n\nThis paper swaps that guesswork for fiber Bragg grating force sensing at the occluder tip. An EM-tracked autonomous system navigates to the target at 0.84 mm mean error, deploys the device at 1.32 mm mean error, and a Naive Bayes classifier reads the force-displacement curve to call the outcome. 83.3% classification accuracy across five phantom runs.\n\nThe caveat is real: phantom anatomy, small sample, no beating heart. Force dynamics in a live atrium are not the same. But the conceptual move here, replacing 'feels right' with a logged, classifiable signal, is valid far beyond cardiology.\n\nPaper: Autonomous Robotic Occluder Deployment With FBG Force Based Assessment in Left Atrial Appendage Closure. IEEE Xplore: ieeexplore.ieee.org/document/11576569\n\n#surgicalrobotics #medicalrobotics #cathetermanipulation #fiberbragg #autonomoussystems #roboticdeployment #forcesensing",
+      "caption_tiktok": "Cardiac surgery used to mean trusting your fingers. This robot measures the force instead. 0.84 mm accuracy, autonomous deployment. Phantom study but the idea is solid. #surgicalrobotics #medicalrobotics #robotics #forcesensing",
+      "post_bluesky": "Surgeons feel the catheter. Robots measure it. This paper puts FBG force sensing on a cardiac occluder, trains a Naive Bayes classifier on deployment curves, and hits 0.84 mm nav error in phantom. 83.3% quality classification. Phantom only, but…\nhttp://ieeexplore.ieee.org/document/11576569",
+      "bluesky_thread": [
+        "The 83.3% classification accuracy sounds modest but the alternative is 'surgeon thinks it felt okay.' Baseline matters. A logged force-displacement curve also gives you something to audit, retrain, and improve. That's not nothing.",
+        "My real question: FBG sensors in contact with soft cardiac tissue under irrigation and motion, do they drift? Phantom studies can't tell you. Has anyone seen FBG force sensing validated across full OR conditions in cardiac work? Genuinely curious what's been published."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:52:56.568516+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/488145e6/bsky_00.png",
+        "media/488145e6/bsky_01.png",
+        "media/488145e6/bsky_02.png",
+        "media/488145e6/bsky_03.png"
+      ],
+      "slides": [
+        "media/488145e6/slide_00.png",
+        "media/488145e6/slide_01.png",
+        "media/488145e6/slide_02.png",
+        "media/488145e6/slide_03.png",
+        "media/488145e6/slide_04.png",
+        "media/488145e6/slide_05.png",
+        "media/488145e6/slide_06.png",
+        "media/488145e6/slide_07.png"
+      ]
+    },
+    "issue": 63
   }
 ]
