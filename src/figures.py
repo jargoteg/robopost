@@ -11,37 +11,65 @@ from utils import MEDIA
 
 
 def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 4) -> list[str]:
-    """Extract the biggest embedded images from an arXiv PDF."""
+    """Extract figures from an arXiv PDF by rendering whole image REGIONS of
+    the page (figure plus its rendered caption stay intact), rather than
+    pulling raw embedded image streams which often slice multi-panel figures
+    or split captions. Aspect ratio is always preserved."""
     import fitz
     pid = paper["id"]
     url = f"https://arxiv.org/pdf/{pid}"
     r = requests.get(url, timeout=60, headers={"User-Agent": "RoboPost/1.0"})
     r.raise_for_status()
     doc = fitz.open(stream=r.content, filetype="pdf")
-    seen, candidates = set(), []
+    candidates = []
     for page in doc:
+        # union image rectangles on the page into figure regions
+        rects = []
         for img in page.get_images(full=True):
-            xref = img[0]
-            if xref in seen:
-                continue
-            seen.add(xref)
             try:
-                pix = fitz.Pixmap(doc, xref)
-                if pix.n - pix.alpha > 3:  # CMYK etc → RGB
-                    pix = fitz.Pixmap(fitz.csRGB, pix)
-                w, h = pix.width, pix.height
-                # skip icons/lines/logos; keep figure-sized, sane aspect
-                if w < 380 or h < 260 or w * h < 200_000 or w / h > 5 or h / w > 5:
-                    continue
-                candidates.append((w * h, page.number, pix.tobytes("png")))
+                for r_ in page.get_image_rects(img[0]):
+                    if r_.width > 60 and r_.height > 60:
+                        rects.append(fitz.Rect(r_))
             except Exception:
                 continue
-    candidates.sort(key=lambda c: (c[1], -c[0]))  # earliest pages, biggest first
-    paths = []
-    for i, (_, _, png) in enumerate(candidates[:max_figs]):
-        p = out_dir / f"fig_{i:02d}.png"
-        p.write_bytes(png)
+        if not rects:
+            continue
+        # merge overlapping/adjacent rects (multi-panel figures) into blocks
+        merged = []
+        for rc in sorted(rects, key=lambda r: (round(r.y0), round(r.x0))):
+            placed = False
+            for i, m in enumerate(merged):
+                gap = fitz.Rect(m)
+                gap += (-8, -8, 8, 40)  # pad, esp. below for caption
+                if gap.intersects(rc):
+                    merged[i] = m | rc
+                    placed = True
+                    break
+            if not placed:
+                merged.append(fitz.Rect(rc))
+        for m in merged:
+            # expand downward to capture the rendered caption line(s)
+            cap = fitz.Rect(m.x0, m.y0, m.x1, min(page.rect.y1, m.y1 + 46))
+            w, h = cap.width, cap.height
+            if w < 150 or h < 110 or w / h > 6 or h / w > 6:
+                continue
+            area = w * h
+            candidates.append((area, page.number, cap))
+    # earliest pages first (teaser/method figures), largest first
+    candidates.sort(key=lambda c: (c[1], -c[0]))
+    paths, used = [], []
+    for area, pnum, rect in candidates:
+        # skip near-duplicates of an already-picked region on same page
+        if any(pn == pnum and r.intersects(rect) and (r & rect).get_area() > 0.6 * area
+               for pn, r in used):
+            continue
+        pix = doc[pnum].get_pixmap(clip=rect, dpi=200)
+        p = out_dir / f"fig_{len(paths):02d}.png"
+        p.write_bytes(pix.tobytes("png"))
         paths.append(str(p.relative_to(MEDIA.parent)))
+        used.append((pnum, rect))
+        if len(paths) >= max_figs:
+            break
     doc.close()
     return paths
 
