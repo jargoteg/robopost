@@ -40,11 +40,13 @@ jobs:
       - name: Install media tools (regen only)
         if: steps.handle.outputs.regen == 'true'
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
-      - name: Regenerate drafts (redo / manual add)
+      - name: Regenerate drafts (redo / manual add / top-up)
         if: steps.handle.outputs.regen == 'true'
         env:
           ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+          YOUTUBE_API_KEY: "${{ secrets.YOUTUBE_API_KEY }}"
         run: |
+          python src/fetch_papers.py || echo "fetch skipped/failed (non-fatal)"
           python src/generate.py
           python src/visuals.py
           python src/video.py

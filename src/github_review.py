@@ -39,6 +39,22 @@ def close(num: int):
     gh("PATCH", f"/issues/{num}", {"state": "closed"})
 
 
+def maybe_topup():
+    """Flag regeneration if the review buffer is running low. Called after
+    every approve/reject so top-ups ride on YOUR actions, not the flaky
+    GitHub scheduler."""
+    from utils import load_config
+    drafts = load_json("drafts.json", [])
+    open_now = sum(1 for x in drafts if x.get("status") in
+                   ("pending_media", "pending_video", "pending_review", "in_review"))
+    target = load_config()["pipeline"].get("review_buffer", 6)
+    if open_now < max(1, target - 2):
+        print(f"Buffer low ({open_now}/{target}); flagging top-up.")
+        flag_regen()
+        return True
+    return False
+
+
 def flag_regen():
     """Tell the workflow to run the generation steps in this same run."""
     out = os.environ.get("GITHUB_OUTPUT")
@@ -149,6 +165,7 @@ def apply_command(d, text, num):
         if re.match(r"/approve\b", text):
             d["status"] = "approved"
             comment(num, "✅ Approved — posting now. Results will follow here.")
+            maybe_topup()
         elif m := re.match(r"/reject\b\s*(.*)", text, re.S):
             d["status"] = "rejected"
             reason = m.group(1).strip()
@@ -158,6 +175,7 @@ def apply_command(d, text, num):
                         "reason": reason or "no reason given",
                         "date": __import__("datetime").date.today().isoformat()})
             save_json("rejections.json", rej[-200:])
+            maybe_topup()
             if reason:
                 comment(num, f"🗑 Rejected. Noted for future curation: \"{reason}\"")
             else:
