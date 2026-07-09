@@ -1729,7 +1729,7 @@
         "54% absolute task success is modest. And we don't know how SBR holds up on higher-DOF hands or outside this lab's setup. Worth replicating before treating this as the settled answer. What retargeting baseline are you using right now?"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T08:40:46.870252+00:00",
     "media": {
       "figures": [
@@ -1755,6 +1755,8 @@
         "media/1da23089/slide_07.png"
       ]
     },
-    "issue": 27
+    "issue": 27,
+    "scheduled_after": "2026-07-09T09:30:04.798260+00:00",
+    "queue_notified": true
   }
 ]
