@@ -173,5 +173,19 @@
     "item_type": "paper",
     "reason": "no fig found",
     "date": "2026-07-09"
+  },
+  {
+    "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+    "source": "hf_daily",
+    "item_type": "paper",
+    "reason": "too learning focused",
+    "date": "2026-07-09"
+  },
+  {
+    "title": "RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avoidance for Manipulator Motion in Dynamic Environments",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "no figure",
+    "date": "2026-07-09"
   }
 ]

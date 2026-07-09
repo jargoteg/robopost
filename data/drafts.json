@@ -3198,7 +3198,7 @@
       ]
     },
     "issue": 46,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -3925,7 +3925,7 @@
       ]
     },
     "issue": 55,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -4082,7 +4082,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -4242,7 +4242,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -4327,7 +4327,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -4491,7 +4491,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -5244,7 +5244,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T20:26:26.731680+00:00",
     "media": {
       "bsky": [
@@ -5348,7 +5348,7 @@
       ]
     },
     "issue": 73,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
   },
   {
@@ -5488,7 +5488,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T21:25:54.422209+00:00",
     "media": {
       "figures": [
@@ -5817,7 +5817,247 @@
       ]
     },
     "issue": 79,
-    "scheduled_after": "2026-07-10T01:11:23.280793+00:00",
+    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "e383bcbd",
+    "paper": {
+      "id": "rss-68f2e0406f",
+      "title": "Mobile Pedipulation for Object Sliding via Hierarchical Control on a Wheeled Bipedal Robot",
+      "abstract": "In this letter, we present a hierarchical control framework that enables wheeled bipedal robots to perform planar object sliding tasks with their wheeled legs. The proposed approach formulates a nonlinear model predictive controller (NMPC) based on a reduced-order three rigid bodies (TRB) dynamical model that explicitly accounts for the hip roll degree of freedom and multiple wheel-environment contact modes, which is essential for lateral stepping and pedipulation tasks. Within this framework, the NMPC simultaneously regulates robot locomotion and interaction forces, allowing the robot to stably execute both rolling and object manipulation behaviors. A trajectory-optimization-based robot-object motion planner is developed to generate reference motions that incorporate stick-slip transitions in ground-object contact. Two representative pedipulation motions, namely scooting and lateral sliding, are validated through real-world hardware experiments, in which the robot successfully retrieves a $\\text{1}\\;\\text{kg}$ object from under a desk and slides a $\\text{4}\\;\\text{kg}$ object over a distance of $\\text{0.228}\\;\\text{m}$ via scooting.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578266",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5,
+      "open_version": "https://arxiv.org/abs/2606.19233"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "4 kg box moved 0.228 m by a robot using only its feet.",
+      "commentary": "This paper puts a wheeled bipedal robot to work as a manipulator, using its legs rather than arms to slide objects across the floor. The hierarchical controller stacks a trajectory optimizer on top of an NMPC built on a three-rigid-body model, and the key insight is explicitly modeling stick-slip transitions in the contact between object and ground. That contact physics detail is what makes scooting motions actually work instead of just spinning wheels against a box. The hardware demos are real: 1 kg retrieval from under a desk, 4 kg lateral slide. Honest caveat: 0.228 m is a short distance, and the objects are simple rigid boxes on flat floors. The gap between this and, say, sliding an awkward tool across a gritty industrial floor is still significant.",
+      "slides": [
+        {
+          "title": "Legs as manipulators",
+          "body": "Wheeled bipedal robot slides objects using its feet, no arm required. Two motions: scooting a 4 kg box and retrieving a 1 kg object from under a desk. Both validated in hardware."
+        },
+        {
+          "title": "The control stack",
+          "body": "A trajectory optimizer plans robot and object motion together. Below it, an NMPC runs on a reduced three-rigid-body model. Hip roll DOF is explicit in the model, which is essential for lateral stepping."
+        },
+        {
+          "title": "Stick-slip is the hard part",
+          "body": "Ground-object contact switches between sticking and sliding. The planner models these transitions directly. Ignoring them causes the robot to push against a stationary object instead of moving it."
+        },
+        {
+          "title": "What the hardware showed",
+          "body": "4 kg box slid 0.228 m via scooting. 1 kg object retrieved from confined under-desk space. Both runs stable. Robot manages locomotion and interaction forces simultaneously through the same NMPC."
+        },
+        {
+          "title": "Where this falls short",
+          "body": "Flat floor, simple rigid boxes, short travel distance. No uneven terrain, no irregular object shapes, no debris. Field deployment readiness is low, but the contact-physics formulation is the foundation worth building on."
+        },
+        {
+          "title": "Why it matters for field robots",
+          "body": "Inspection and field robots often need to move objects without a dedicated arm. Pedipulation on a wheeled biped could cut hardware complexity. The question is whether the controller survives real surface variation."
+        }
+      ],
+      "video_script": "Most robots that manipulate objects need arms. This team skipped the arm entirely. They taught a wheeled bipedal robot to slide boxes using only its legs, and they did it on real hardware. The trick is in the contact model. When a foot pushes a box, the contact can stick or slip, and if your controller ignores that, nothing moves where you want it. Their planner models stick-slip transitions explicitly. Result: a 4 kg box slid across the floor, a 1 kg object pulled from under a desk. The floor is flat, the boxes are simple, but the contact physics framework is solid. Could this hold up on the gritty surfaces field robots actually face?",
+      "caption_instagram": "What if the legs were the manipulator?\n\nThis paper does something genuinely interesting: it takes a wheeled bipedal robot and uses its legs to push, scoot, and retrieve objects. No arm. The control stack is a trajectory optimizer feeding reference motions into an NMPC built on a three-rigid-body model, with explicit hip roll and multiple wheel-ground contact modes.\n\nThe part that actually makes it work is modeling stick-slip transitions in ground-object contact. That is not a detail you can ignore. If your planner treats the box as always sliding or always stuck, the hardware will immediately prove you wrong.\n\nHardware results: 4 kg box moved via scooting, 1 kg object retrieved from under a desk. Both stable. The honest limit is that this is flat floor, simple rigid objects, short distances. Field conditions will stress-test the contact assumptions hard.\n\nBut the formulation is the contribution. Pedipulation on legged platforms could reduce hardware complexity for inspection robots that occasionally need to move things out of the way.\n\nPaper: Mobile Pedipulation for Object Sliding via Hierarchical Control on a Wheeled Bipedal Robot, arXiv 2606.19233\n\n#swarmrobotics #fieldrobotics #leggedrobots #mobilemanipulation #roboticsresearch #controlsystems #inspectionrobotics",
+      "caption_tiktok": "Robot moves a 4 kg box using only its feet. No arm. Real hardware. The contact physics is the whole story.\n#robotics #leggedrobots #mobilemanipulation #controlsystems",
+      "post_bluesky": "What if legs replaced the arm entirely? Wheeled biped slides a 4 kg box using only its feet, hardware validated. The key is modeling stick-slip contact transitions explicitly. Genuinely clever, and worth knowing about. http://ieeexplore.ieee.org/document/11578266",
+      "bluesky_thread": [
+        "The NMPC runs on a three-rigid-body model with explicit hip roll, which lets the robot handle lateral stepping AND object contact simultaneously. That unification is the technical contribution. Most approaches treat loco and manipulation as separate problems.",
+        "Honest limit: flat floor, rigid boxes, 0.228 m travel. The stick-slip model will face a real test on gritty or uneven surfaces. For field inspection robots that need to occasionally clear an object without carrying a full arm, this is the right direction. Would you trust this on a construction…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T23:50:24.690757+00:00",
+    "media": {
+      "figures": [
+        "media/e383bcbd/fig_03.png",
+        "media/e383bcbd/fig_00.png",
+        "media/e383bcbd/fig_04.png",
+        "media/e383bcbd/fig_01.png"
+      ],
+      "bsky": [
+        "media/e383bcbd/bsky_00.png",
+        "media/e383bcbd/bsky_01.png",
+        "media/e383bcbd/bsky_02.png",
+        "media/e383bcbd/bsky_03.png"
+      ],
+      "slides": [
+        "media/e383bcbd/slide_00.png",
+        "media/e383bcbd/slide_01.png",
+        "media/e383bcbd/slide_02.png",
+        "media/e383bcbd/slide_03.png",
+        "media/e383bcbd/slide_04.png",
+        "media/e383bcbd/slide_05.png",
+        "media/e383bcbd/slide_06.png",
+        "media/e383bcbd/slide_07.png"
+      ]
+    },
+    "issue": 80
+  },
+  {
+    "draft_id": "ba40e4fc",
+    "paper": {
+      "id": "rss-a5ccc775e4",
+      "title": "Gotta Grow Fast: Design and Benchmarking of a Tip Mount for High-Speed Vine Robots",
+      "abstract": "Soft, growing vine robots extend through tip eversion, a mechanism that enables navigation through cluttered environments. However, integrating cameras and other sensors at the tip is uniquely challenging because the material forming the tip is constantly renewed as the robot grows. This continual material turnover, combined with friction between internal layers, added tip weight, and fabric constriction, complicates sensor and tool mounting. These limitations hinder the deployment of vine robots for inspection and search tasks, where rapid growth while carrying tip-mounted sensors is essential. In this work, we present a triangular roller tip mount that reduces internal resistance during growth by rolling rather than sliding against the robot body. The design was refined through iterative failure analysis, enabling, for the first time, consistent eversion on a TPU-coated ripstop nylon vine robot. To quantitatively evaluate mount performance, we introduce a custom testbed that isolates tip mounting effects by measuring tail tension during eversion. Comparative experiments across multiple mount variants, including prior designs, show that our triangular roller mount achieves the lowest tail tension and most repeatable growth performance. These results establish both a validated tip mount design and a repeatable benchmarking framework for advancing sensor and tool integration in soft growing robots.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11592424",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5,
+      "open_version": "https://arxiv.org/abs/2606.06040"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Vine robot tip mounts kept failing. Here is why that matters for inspection.",
+      "commentary": "Vine robots grow by everting material from the inside out, which makes attaching a camera to the tip a genuinely hard mechanical problem. Every prior mount design either slid against the internal fabric (adding friction and stalling growth) or was too heavy to evert consistently. This paper introduces a triangular roller mount that rolls rather than slides, measuring the improvement via tail tension on a custom testbed. The benchmarking framework is the real contribution here: now you can actually compare mount designs with a repeatable number. Honest caveat: results are on a TPU-coated nylon robot in a lab testbed, and cluttered real-world environments with obstacles pressing on the body will add friction sources the testbed does not capture.",
+      "slides": [
+        {
+          "title": "The tip mounting problem",
+          "body": "Vine robots grow by turning themselves inside out. The tip material is constantly renewed. Attaching sensors there means anything mounted at the tip must evert cleanly with the rest of the robot body, every single time."
+        },
+        {
+          "title": "Why prior designs failed",
+          "body": "Sliding contact between mount and inner fabric creates friction that stalls eversion. Added tip weight and fabric constriction compounded the problem. Result: inconsistent growth, unreliable sensor deployment, and blocked inspection use cases."
+        },
+        {
+          "title": "The triangular roller fix",
+          "body": "Rolling contact replaces sliding contact. A triangular roller geometry maintains low friction across eversion angles. Iterative failure analysis drove the final design, which achieved consistent eversion on TPU-coated ripstop nylon for the first time."
+        },
+        {
+          "title": "A testbed that isolates the variable",
+          "body": "Custom rig measures tail tension during eversion, isolating tip mount effects from robot body variation. Enables direct, quantitative comparison across mount designs. The triangular roller showed lowest tail tension and best repeatability across all tested variants."
+        },
+        {
+          "title": "What this unlocks and what it does not",
+          "body": "Consistent tip-mounted sensors mean vine robots become viable for search and inspection in confined spaces. Lab testbed does not replicate debris, moisture, or lateral loads. Field deployment gaps remain real and unaddressed here."
+        },
+        {
+          "title": "Why the benchmarking matters most",
+          "body": "Hardware papers live or die by reproducibility. A validated testbed that isolates tip mounting effects gives the field a shared baseline. That is rarer and more useful than any single mount design."
+        }
+      ],
+      "video_script": "Vine robots grow through narrow spaces by everting inside out, like turning a sock inside out continuously. Brilliant for inspection. But nobody could reliably mount a camera on the tip without stalling the robot. This paper fixes that with a rolling contact mount and, more importantly, builds a testbed to actually measure the fix. Tail tension during eversion, isolated and repeatable. The field now has a benchmark. Question is: will it survive outside the lab when debris and moisture enter the picture?",
+      "caption_instagram": "What if your inspection robot could grow through a crack, but could not actually see where it was going?\n\nVine robots have that problem. The tip is constantly turning inside out as the robot grows. Every prior camera mount either jammed the eversion or fell off.\n\nThis paper builds a triangular roller mount that rolls with the eversion instead of fighting it. Lower tail tension, more repeatable growth, first consistent results on TPU-coated ripstop nylon. But the bigger contribution is a custom testbed that isolates tip mount effects and gives the field a repeatable number to compare against.\n\nHonest take: lab conditions are controlled. Real inspection environments add mud, debris, lateral pressure. The gap between this testbed and a confined-space SAR deployment is still wide. Worth watching, not worth deploying yet.\n\nPaper: 'Gotta Grow Fast: Design and Benchmarking of a Tip Mount for High-Speed Vine Robots' arXiv:2606.06040\n\n#vinerobot #softrobotics #inspectionrobotics #searchandrescue #roboticshardware #swarmrobotics #fieldrobotics",
+      "caption_tiktok": "Vine robots can grow into tight spaces, but adding a camera to the tip kept breaking them. This roller mount fix is clever, and the testbed is the real win. #softrobotics #inspectionrobot #robotics #engineeringproblem",
+      "post_bluesky": "Vine robots can grow through cracks. But mounting a camera on a tip that turns itself inside out kept stalling growth. This roller mount changes that, and the testbed to measure it is the real contribution. http://ieeexplore.ieee.org/document/11592424",
+      "bluesky_thread": [
+        "The triangular roller reduces tail tension by replacing sliding contact with rolling contact during eversion. Sounds simple. Getting the geometry right through iterative failure analysis is the actual work. Now there is a repeatable number to beat.",
+        "Caveat worth stating plainly: the testbed isolates tip mount effects on a clean lab robot. Add rubble, water, or asymmetric pressure from a collapsed wall and the friction landscape changes completely. Who is running these in a real confined-space trial? That is the paper I want to see next."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T23:50:54.874988+00:00",
+    "media": {
+      "figures": [
+        "media/ba40e4fc/fig_00.png",
+        "media/ba40e4fc/fig_01.png",
+        "media/ba40e4fc/fig_04.png",
+        "media/ba40e4fc/fig_02.png"
+      ],
+      "bsky": [
+        "media/ba40e4fc/bsky_00.png",
+        "media/ba40e4fc/bsky_01.png",
+        "media/ba40e4fc/bsky_02.png",
+        "media/ba40e4fc/bsky_03.png"
+      ],
+      "slides": [
+        "media/ba40e4fc/slide_00.png",
+        "media/ba40e4fc/slide_01.png",
+        "media/ba40e4fc/slide_02.png",
+        "media/ba40e4fc/slide_03.png",
+        "media/ba40e4fc/slide_04.png",
+        "media/ba40e4fc/slide_05.png",
+        "media/ba40e4fc/slide_06.png",
+        "media/ba40e4fc/slide_07.png"
+      ]
+    },
+    "issue": 81
+  },
+  {
+    "draft_id": "5e76c42c",
+    "paper": {
+      "id": "rss-1217afa1f5",
+      "title": "A Ground-Centric UAV-UGV Cooperative System for Autonomous Launch and Recovery",
+      "abstract": "Most existing Uncrewed Aerial Vehicle (UAV) and Uncrewed Ground Vehicle (UGV) cooperative systems adopt a UAV-centric paradigm, in which the UAV carries onboard sensors to search for, localize, and land on the UGV. This UAV-centric architecture increases onboard payload and reduces endurance, and makes it difficult to reliably assess the safety of the entire landing airspace in unstructured environments. To address these limitations, we propose a ground-centric UAV-UGV cooperative system, wherein a UGV-mounted LiDAR serves as the primary perception unit for launch and recovery. The perception architecture operates in two modes, namely an overhead airspace assessment mode in which the UGV evaluates the overhead airspace for UAV landing and relocates to an open area to ensure landing safety, and a tracking mode that supports guided recovery of the returning UAV. This ground-centric design introduces a coordinate alignment challenge between heterogeneous platforms, which is addressed through an online calibration based on a short flight maneuver that aligns the UAV frame with the UGV frame. Real-world experiments validate the complete autonomous launch and recovery process and demonstrate robust system performance with centimeter-level landing accuracy.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578314",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Centimeter landing accuracy. No sensors on the drone.",
+      "commentary": "Most UAV-UGV landing systems put the perception burden on the drone: onboard cameras, compute, weight. This flips it. The UGV's LiDAR does the work, scanning overhead airspace for obstacles before the UAV even begins descent, then tracking the incoming vehicle for recovery. The coordinate alignment problem this creates (two platforms, two frames, moving) is solved with a short in-flight calibration maneuver rather than pre-surveyed markers. Centimeter-level landing accuracy in real outdoor tests is the headline result. Honest caveat: the calibration maneuver assumes a relatively stable UGV during the flight, and the system hasn't been tested on moving or highly dynamic ground platforms, which is exactly where field deployments get complicated.",
+      "slides": [
+        {
+          "title": "The standard approach has a flaw",
+          "body": "UAV-centric landing puts sensors and compute on the drone. More payload, less flight time. And the drone can't see what's above the UGV before it commits to landing."
+        },
+        {
+          "title": "Flip the perception to the ground",
+          "body": "A UGV-mounted LiDAR handles everything. Mode 1: scan the overhead airspace, relocate if it's blocked. Mode 2: track the returning UAV and guide it down."
+        },
+        {
+          "title": "The hard problem: frame alignment",
+          "body": "Two platforms, two coordinate frames, no shared reference. The fix: a short flight maneuver that aligns the UAV frame to the UGV frame online. No pre-placed markers required."
+        },
+        {
+          "title": "Real-world result: centimeter accuracy",
+          "body": "Full autonomous launch and recovery validated outdoors. Landing precision at centimeter scale, with the drone carrying zero dedicated landing sensors."
+        },
+        {
+          "title": "Where this breaks down",
+          "body": "Calibration assumes a stable UGV during the alignment maneuver. Fast-moving or vibrating ground platforms, think tracked vehicles on rough terrain, weren't tested. That gap matters for actual field use."
+        },
+        {
+          "title": "Why it matters for field deployment",
+          "body": "Inspection and SAR teams want drones with maximum endurance. Every sensor you move off the UAV is battery life gained. Ground-centric perception is the right direction."
+        }
+      ],
+      "video_script": "Most drone-UGV landing systems put all the sensors on the drone. More weight, less flight time, and the drone still can't see if the landing zone is actually clear. This paper flips that. The ground vehicle does the perceiving: it scans the airspace overhead, repositions if there's an obstacle, then tracks the drone all the way down. The result is centimeter-level landing accuracy with nothing extra on the drone. The tricky part is aligning two moving platforms in real time, and they solve it with a single short flight maneuver. No markers, no pre-survey. So here's the question: how far could this push UAV endurance on a real inspection mission?",
+      "caption_instagram": "What if the drone didn't need to see the landing pad at all?\n\nMost UAV-UGV cooperative landing systems put cameras and compute on the drone. That costs weight, battery, and flight time. This paper moves all the perception to the ground vehicle instead.\n\nThe UGV's LiDAR runs two modes: first it scans the overhead airspace and relocates if anything is in the way, then it switches to tracking mode and guides the UAV straight down. Centimeter-level landing accuracy in real outdoor tests, with zero dedicated sensors on the drone.\n\nThe honest limitation: the online calibration that aligns the two platform frames requires a short, stable flight maneuver. Dynamic or fast-moving ground platforms weren't tested. That's the gap between the lab result and a tracked vehicle bouncing across a field.\n\nBut the direction is right. Any team running inspection drones in the field knows endurance is everything, and every gram you take off the UAV counts.\n\nPaper: 'A Ground-Centric UAV-UGV Cooperative System for Autonomous Launch and Recovery' via IEEE Xplore.\n\n#swarmrobotics #fieldrobotics #UAV #UGV #autonomoussystems #inspectionrobotics #robotics",
+      "caption_tiktok": "They moved all the sensors off the drone and onto the truck. Centimeter landing accuracy. Full autonomous recovery. Here's how it works. #robotics #drones #UAV #fieldrobotics #autonomoussystems",
+      "post_bluesky": "What if the drone had zero landing sensors? Ground-centric UAV-UGV recovery: the UGV LiDAR checks airspace, then tracks the drone down. Centimeter accuracy, real outdoors tests. http://ieeexplore.ieee.org/document/11578314",
+      "bluesky_thread": [
+        "The clever bit: aligning two platform frames with no markers. A short in-flight maneuver does it online. That's the piece that makes the whole architecture actually deployable rather than just a nice idea.",
+        "Honest gap: calibration assumes a stable UGV during the alignment flight. Dynamic ground platforms, think tracked vehicles on rough terrain, weren't tested. That's the exact condition most field inspection teams face. Anyone seen this tested on a moving base?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T23:51:24.834970+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/5e76c42c/bsky_00.png",
+        "media/5e76c42c/bsky_01.png",
+        "media/5e76c42c/bsky_02.png",
+        "media/5e76c42c/bsky_03.png"
+      ],
+      "slides": [
+        "media/5e76c42c/slide_00.png",
+        "media/5e76c42c/slide_01.png",
+        "media/5e76c42c/slide_02.png",
+        "media/5e76c42c/slide_03.png",
+        "media/5e76c42c/slide_04.png",
+        "media/5e76c42c/slide_05.png",
+        "media/5e76c42c/slide_06.png",
+        "media/5e76c42c/slide_07.png"
+      ]
+    },
+    "issue": 82
   }
 ]
