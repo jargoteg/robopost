@@ -19,5 +19,12 @@
     "item_type": "paper",
     "reason": "not too interesting of a paper. Would prefer to dig for older papers rather than super recent that aren't that impactful",
     "date": "2026-07-09"
+  },
+  {
+    "title": "Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report",
+    "source": "arxiv",
+    "item_type": "paper",
+    "reason": "learning is not my priority unless it enables some interesting real robot behavior.",
+    "date": "2026-07-09"
   }
 ]
