@@ -1,5 +1,8 @@
 name: Review actions (instant)
 on:
+  schedule:
+    - cron: "*/30 * * * *"   # drain post queue + top up drafts
+  workflow_dispatch:
   issue_comment:
     types: [created]
   issues:
