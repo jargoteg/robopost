@@ -2159,7 +2159,7 @@
         "60k accesses in under two weeks. Nature Comms, open access, strong altmetric. This will reach well outside robotics. Which means the insect cyborg ethics question, welfare, consent frameworks, regulatory status, lands in public before the field has agreed on answers. Where do you draw the line on…"
       ]
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-09T11:37:21.062782+00:00",
     "media": {
       "figures": [
@@ -2181,7 +2181,8 @@
         "media/96a3dc2e/slide_06.png",
         "media/96a3dc2e/slide_07.png"
       ]
-    }
+    },
+    "issue": 32
   },
   {
     "draft_id": "123b45cc",
@@ -2235,7 +2236,7 @@
         "My caveat: 'large-scale offshore' in a controlled test is not a biofouled pipeline at 300m in a 1-knot current. Elevation ambiguity is still the fundamental physical limit. What would it take for you to trust this reconstruction on an actual inspection AUV mission?"
       ]
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-09T11:37:49.872702+00:00",
     "media": {
       "figures": [],
@@ -2255,7 +2256,8 @@
         "media/123b45cc/slide_06.png",
         "media/123b45cc/slide_07.png"
       ]
-    }
+    },
+    "issue": 33
   },
   {
     "draft_id": "08bb0017",
@@ -2309,7 +2311,7 @@
         "The gap I want closed: GBP assumes nodes can pass messages reliably. In subsea or underground settings, comms drop out. Does the estimator degrade gracefully or does it diverge? That's the experiment that earns field deployment trust. Anyone tested this in a harsh-comms setting?"
       ]
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-09T11:38:19.580983+00:00",
     "media": {
       "figures": [],
@@ -2329,6 +2331,7 @@
         "media/08bb0017/slide_06.png",
         "media/08bb0017/slide_07.png"
       ]
-    }
+    },
+    "issue": 34
   }
 ]
