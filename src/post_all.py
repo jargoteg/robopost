@@ -159,6 +159,10 @@ def main():
     posted = load_json("posted.json", [])
     from generate import ensure_complete
     from datetime import timedelta
+    try:
+        from github_review import set_status_label
+    except Exception:
+        def set_status_label(*a, **k): pass
     gap = timedelta(minutes=cfg.get("posting", {}).get("min_gap_minutes", 90))
     last = max((datetime.fromisoformat(p["posted_at"]) for p in posted), default=None)
     for d in drafts:
@@ -169,6 +173,8 @@ def main():
             eta = (last + gap).strftime("%H:%M UTC")
             print(f"{d['draft_id']}: spacing posts, next window at {eta}. Staying queued.")
             d["scheduled_after"] = (last + gap).isoformat()
+            if d.get("issue"):
+                set_status_label(d["issue"], "queued-to-post")
             continue
         d["content"] = ensure_complete(d["content"], d["paper"])
         import os
@@ -198,9 +204,13 @@ def main():
             # every configured platform failed: stay approved, retry next cycle
             d["post_failures"] = d.get("post_failures", 0) + 1
             print(f"{d['draft_id']}: all platforms failed, will retry.")
+            if d.get("issue"):
+                set_status_label(d["issue"], "post-failed")
             continue
         d["status"] = "posted"
         last = datetime.now(timezone.utc)
+        if d.get("issue"):
+            set_status_label(d["issue"], "posted")
         posted.append({
             "draft_id": d["draft_id"], "paper_id": d["paper"]["id"],
             "title": d["paper"]["title"], "format": d["content"]["format"],

@@ -20,13 +20,13 @@ API = "https://api.github.com"
 ALLOWED = {"OWNER", "MEMBER", "COLLABORATOR"}
 
 
-def gh(method: str, path: str, body: dict | None = None):
+def gh(method: str, path: str, body: dict | None = None, quiet_404: bool = False):
     r = requests.request(
         method, f"{API}/repos/{env('GITHUB_REPOSITORY', True)}{path}",
         headers={"Authorization": f"Bearer {env('GITHUB_TOKEN', True)}",
                  "Accept": "application/vnd.github+json"},
         json=body, timeout=30)
-    if r.status_code >= 300:
+    if r.status_code >= 300 and not (quiet_404 and r.status_code == 404):
         print(f"GitHub {method} {path}: {r.status_code} {r.text[:200]}")
     return r.json() if r.text else {}
 
@@ -37,6 +37,36 @@ def comment(num: int, text: str):
 
 def close(num: int):
     gh("PATCH", f"/issues/{num}", {"state": "closed"})
+
+
+# status labels (with colors) that make the Issues tab scannable at a glance
+STATUS_LABELS = {
+    "needs-review": "fbca04",   # yellow  — your attention needed
+    "approved": "0e8a16",       # green   — okayed, waiting to post
+    "queued-to-post": "1d76db", # blue    — scheduled, spacing out
+    "posted": "5319e7",         # purple  — live
+    "rejected": "b60205",       # red     — discarded
+    "post-failed": "e11d21",    # bright red — needs a look
+}
+
+
+def ensure_labels():
+    """Create the status labels once (idempotent)."""
+    existing = {lb["name"] for lb in (gh("GET", "/labels?per_page=100") or [])}
+    for name, color in STATUS_LABELS.items():
+        if name not in existing:
+            gh("POST", "/labels", {"name": name, "color": color})
+
+
+def set_status_label(num: int, status: str):
+    """Swap the issue's status label to `status`, removing other status labels.
+    Keeps the 'draft' label intact."""
+    if not num:
+        return
+    for name in STATUS_LABELS:
+        if name != status:
+            gh("DELETE", f"/issues/{num}/labels/{name}", quiet_404=True)
+    gh("POST", f"/issues/{num}/labels", {"labels": [status]})
 
 
 def maybe_topup():
@@ -66,6 +96,7 @@ def flag_regen():
 # ── create draft issues ─────────────────────────────────────────────
 def create_issues():
     cfg = load_config()
+    ensure_labels()
     base = cfg["media_base_url"].rstrip("/")
     repo = env("GITHUB_REPOSITORY", True)
     drafts = load_json("drafts.json", [])
@@ -112,11 +143,12 @@ def create_issues():
 {slides}
 
 ---
+**Labels:** 🟡needs-review · 🟢approved · 🔵queued-to-post · 🟣posted · 🔴rejected
 **Reply with a comment:** `/approve` · `/reject <why>` · `/redo <notes>` · `/refig` (re-hunt figures incl. open-access + YouTube)
 """
         issue = gh("POST", "/issues", {
             "title": f"[DRAFT {d['draft_id']}] {p['title'][:80]}",
-            "body": body[:65000], "labels": ["draft"]})
+            "body": body[:65000], "labels": ["draft", "needs-review"]})
         d["issue"] = issue.get("number")
         d["status"] = "in_review"
         print(f"Issue #{d['issue']} for draft {d['draft_id']}")
@@ -164,7 +196,9 @@ def is_processed(cid):
 def apply_command(d, text, num):
         if re.match(r"/approve\b", text):
             d["status"] = "approved"
-            comment(num, "✅ Approved — posting now. Results will follow here.")
+            set_status_label(num, "approved")
+            comment(num, "✅ Approved — posting shortly (spaced to avoid flooding "
+                         "your feed). This issue closes once it's live.")
             maybe_topup()
         elif m := re.match(r"/reject\b\s*(.*)", text, re.S):
             d["status"] = "rejected"
@@ -175,6 +209,7 @@ def apply_command(d, text, num):
                         "reason": reason or "no reason given",
                         "date": __import__("datetime").date.today().isoformat()})
             save_json("rejections.json", rej[-200:])
+            set_status_label(num, "rejected")
             maybe_topup()
             if reason:
                 comment(num, f"🗑 Rejected. Noted for future curation: \"{reason}\"")
@@ -215,6 +250,7 @@ def apply_command(d, text, num):
             queue.insert(0, paper)
             save_json("draft_queue.json", queue)
             flag_regen()
+            set_status_label(num, "rejected")
             comment(num, "🔁 Regenerating with your notes — a fresh draft issue "
                          "will appear here in a few minutes.")
             close(num)
@@ -412,5 +448,31 @@ def sweep():
     print(f"Sweep done, {acted} missed command(s) processed.")
 
 
+def backfill_labels():
+    """One-shot: apply status labels to existing open draft issues."""
+    ensure_labels()
+    drafts = load_json("drafts.json", [])
+    by_issue = {d.get("issue"): d for d in drafts if d.get("issue")}
+    open_issues = gh("GET", "/issues?labels=draft&state=open&per_page=100")
+    if not isinstance(open_issues, list):
+        return
+    smap = {"in_review": "needs-review", "pending_review": "needs-review",
+            "approved": "approved", "posted": "posted", "rejected": "rejected"}
+    for issue in open_issues:
+        if "pull_request" in issue:
+            continue
+        d = by_issue.get(issue["number"])
+        if not d:
+            continue
+        label = smap.get(d["status"])
+        if d["status"] == "approved" and d.get("scheduled_after"):
+            label = "queued-to-post"
+        if d.get("post_failures", 0) > 0:
+            label = "post-failed"
+        if label:
+            set_status_label(issue["number"], label)
+            print(f"#{issue['number']} -> {label}")
+
+
 if __name__ == "__main__":
-    {"create": create_issues, "handle": handle_event, "finalize": finalize, "sweep": sweep}[sys.argv[1]]()
+    {"create": create_issues, "handle": handle_event, "finalize": finalize, "sweep": sweep, "backfill": backfill_labels}[sys.argv[1]]()
