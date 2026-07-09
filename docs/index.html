@@ -42,46 +42,62 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-09 09:39 UTC </p></header>
+<p>@jahirargote · generated 2026-07-09 09:48 UTC </p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">4</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">5</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">2</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">4</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">6</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
+  <header><span class="chip in_review">in review</span>
+  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/30" target="_blank">issue #30</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">Quadruped robots can&#x27;t borrow human mocap data. ABot-C0 builds 16,074 clips from 4 sources instead, trains a Flow-Matching policy, and claims a scaling law for motion tracking. The LiDAR memory stack is the real contribution. https://arxiv.org/abs/2607.07370v1</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b2e163fe/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b2e163fe/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b2e163fe/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b2e163fe/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The three-stage locomotion framework is what I&#x27;d actually read the paper for. Privileged teacher to perceptive student to terrain-predictive supervision, with a temporal LiDAR memory buffer. Most locomotion papers treat memory as an afterthought. This one doesn&#x27;t.</div><div class="reply">The scaling law claim is bold for a tech report. No external peer review, goalposts are self-set. But if the quadruped motion tracking curve holds up under scrutiny, it&#x27;s a real finding. Who else is working on scaling laws for non-humanoid embodiments right now?</div>
+</article><article class="post">
   <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 09:30 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/27" target="_blank">issue #27</a></header>
+  <span class="chip">carousel</span><span class="chip warn">posts after 11:18 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/29" target="_blank">issue #29</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">Your ROV thruster wake is destroying the reconstruction you came to get. This paper searches the null space of an 8-thruster system to find the thrust combo that causes least disturbance. 55% better RMSE. 10 Hz. Clever. https://arxiv.org/abs/2607.07139v1</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ea2afac7/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ea2afac7/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ea2afac7/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ea2afac7/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The PIV validation is what makes me take this seriously. R2 = 0.99 near the wake axis, &gt;0.82 in the primary region. That is not a hand-wavy fluid model. The 440-trial result, 1.9 mm vs 4.3 mm RMSE, is a real gap for coral or shipwreck inspection work.</div><div class="reply">Honest caveat: actuator-disk theory with directional attenuation is clean but it is still a proxy. Complex confined spaces, hull inspections, reef crevices, will have flow interactions this model underestimates. Tank results and open-water results are not the same thing. How much does that gap…</div>
+</article><article class="post">
+  <header><span class="chip in_review">in review</span>
+  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/28" target="_blank">issue #28</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">Everyone chases the table tennis rally. This paper tackles the serve: 550 rad/s spin, 6.7 m/s speed, elite human numbers. MPC + Bayesian Opt + motion primitives. Unglamorous physics work that actually matters. https://arxiv.org/abs/2607.06989v1</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a483f84/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a483f84/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a483f84/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a483f84/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The clever bit is framing spin generation as multi-objective optimization, not a fixed replay. Small contact errors compound fast when you&#x27;re spinning a stationary ball. That&#x27;s why almost nobody attempted this cleanly before.</div><div class="reply">Caveat worth saying out loud: it&#x27;s open-loop. No opponent, no return to read. The full game is a different class of problem. But if your contact control can hit 550 rad/s reliably, what other manipulation tasks does that unlock?</div>
+</article><article class="post">
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 11:18 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/27" target="_blank">issue #27</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Your teleoperation data is only as good as your retargeter. SBR skips gradients entirely, hits 54.1% task success and NASA-TLX 36.4 in a real user study. Upstream data quality fix for VLAs. https://arxiv.org/abs/2607.07491v1</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1da23089/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1da23089/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1da23089/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1da23089/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The gradient-free move is clever but the real contribution might be the benchmarking framework. Retargeting papers have had no common evaluation standard. 18 participants and 3 tasks is a start, not a ceiling.</div><div class="reply">54% absolute task success is modest. And we don&#x27;t know how SBR holds up on higher-DOF hands or outside this lab&#x27;s setup. Worth replicating before treating this as the settled answer. What retargeting baseline are you using right now?</div>
 </article><article class="post">
   <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 09:30 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/26" target="_blank">issue #26</a></header>
+  <span class="chip">carousel</span><span class="chip warn">posts after 11:18 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/26" target="_blank">issue #26</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Nine modular mini-robots. No leader. Gait encoded as graph topology, signed edges tune phase from gallop to trot, and fault tolerance scales directly with graph degree. Worst-case phase error drops 3x vs leader-follower. https://arxiv.org/abs/2607.07281v1</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/657349b6/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/657349b6/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/657349b6/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/657349b6/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The clever bit: you do not reprogram the gait, you rewire two signed inter-subgraph edges. That is a compact control layer. Physical demos are nine modules on flat floors though, so terrain scaling is still an open question.</div><div class="reply">The fault tolerance framing maps well onto real deployment anxiety: what happens when modules fail mid-task? Here graph degree gives you a direct handle on robustness budget. Worth asking: does this hold when module failures are correlated, not random?</div>
 </article><article class="post">
   <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 09:30 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/25" target="_blank">issue #25</a></header>
+  <span class="chip">carousel</span><span class="chip warn">posts after 11:18 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/25" target="_blank">issue #25</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">85 cm 3D-printed soft arm, no prescribed motions. ELEANOR bets that matching elephant trunk structure, not movements, is enough for trunk-like grasping. Genuinely different philosophy. https://arxiv.org/abs/2607.07622v1</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/22f3e6a6/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/22f3e6a6/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/22f3e6a6/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/22f3e6a6/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">Most continuum arms chase kinematic models of biological motion. ELEANOR chases material architecture instead. Tapered body, tessellated volume, tendons mimicking longitudinal and oblique muscles. If the structure is right, the behavior follows. That is the whole argument.</div><div class="reply">Missing from the abstract: load capacity, repeatability, force sensing. &#x27;Moves like a trunk&#x27; is not the same as &#x27;works like a trunk.&#x27; Still, the design philosophy is the contribution here. Is structure-first the right frame for soft manipulation, or does the controller still need to do the heavy…</div>
-</article><article class="post">
-  <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 09:30 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/24" target="_blank">issue #24</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">What if you never needed a real robot to collect robot data? RynnWorld-Teleop replaces the physical hardware with a generative world model. Hand poses in, egocentric video out, embodiment-agnostic labels for any robot. 40+ FPS on one H100. https://arxiv.org/abs/2607.06558</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b4c40b4f/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b4c40b4f/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b4c40b4f/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b4c40b4f/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The clever part: the action label (hand pose stream) stays hardware-agnostic by design. One teleoperation session can retarget to multiple embodiments after the fact. That is the actual scaling argument, not the video quality.</div><div class="reply">The part I want to stress-test: &#x27;zero-shot Sim2Real on dexterous bimanual tasks&#x27; with no task-level success numbers in the abstract. World models that look right but hallucinate contact physics are a known failure mode. Anyone seen the full results? What tasks did they actually test?</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~5480m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1220m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~740m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>10:00 UTC (~20m)</td><td>✅ success <span class='mono'>2026-07-09 08:55</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>12:00 UTC (~140m)</td><td>⏳ in_progress <span class='mono'>2026-07-09 09:38</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~5471m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1211m)</td><td>✅ success <span class='mono'>2026-07-09 09:45</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~731m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>10:00 UTC (~11m)</td><td>⏳ in_progress <span class='mono'>2026-07-09 09:48</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>12:00 UTC (~131m)</td><td>✅ success <span class='mono'>2026-07-09 09:39</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-09 08:00</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-09 09:48</td>
+<td>RynnWorld-Teleop: An Action-Conditioned World Model </td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-09 08:00</td>
 <td>TouchWorld: A Predictive and Reactive Tactile Founda</td><td class="mono">thread</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-08 20:53</td>
 <td>#RoboCup2026 – humanoid league day 1</td><td class="mono">?</td>
@@ -102,8 +118,8 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:[],datasets:[{data:[],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-08", "07-08", "07-08", "07-08", "07-08", "07-08", "07-09"],datasets:[
- {label:"likes",data:[1, 0, 0, 0, 0, 1, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-08", "07-08", "07-08", "07-08", "07-08", "07-08", "07-09", "07-09"],datasets:[
+ {label:"likes",data:[1, 0, 0, 0, 0, 1, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>

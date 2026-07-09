@@ -147,5 +147,20 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "b4c40b4f",
+    "paper_id": "2607.06558",
+    "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+    "format": "carousel",
+    "hook": "What if you never needed a real robot to collect robot data?",
+    "posted_at": "2026-07-09T09:48:27.543862+00:00",
+    "bsky_variant": "single",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq7e5dkojf2d",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
