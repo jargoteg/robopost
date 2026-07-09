@@ -2989,7 +2989,7 @@
         "The caveat nobody is saying: 'cluttered indoor scene' in a demo lab is still a curated environment. No dynamic obstacles, no deformable objects, no uneven floors. If you work in SAR or subsea, you know how fast 'works in the lab' falls apart. Does HumanoidPF generalize, or does it just generalize…"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T12:08:45.760269+00:00",
     "media": {
       "bsky": [
