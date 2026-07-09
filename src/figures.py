@@ -138,13 +138,31 @@ def get_figures(draft) -> list[str]:
             if paywalled or p.get("item_type") == "paper":
                 info = find_open_version(p.get("title", ""), p.get("authors"))
                 if info and info.get("arxiv_id"):
+                    p["open_version"] = f"https://arxiv.org/abs/{info['arxiv_id']}"
                     figs = arxiv_figures({"id": info["arxiv_id"]}, out_dir)
-                    if figs:
-                        p["open_version"] = f"https://arxiv.org/abs/{info['arxiv_id']}"
                 elif info and info.get("pdf_url"):
                     figs = figures_from_pdf_url(info["pdf_url"], out_dir)
                     if figs:
                         p["open_version"] = info["pdf_url"]
+
+        # GitHub repo: often the most reliable figures + a real demo video.
+        # Try it whenever we have an arXiv id, and prefer its video regardless.
+        aid = None
+        if re.match(r"\d{4}\.\d{4,5}", str(p.get("id", ""))):
+            aid = p["id"]
+        elif p.get("open_version"):
+            mo = re.search(r"arxiv\.org/abs/(\S+)", p["open_version"])
+            aid = mo.group(1) if mo else None
+        if aid and not p.get("repo_url"):
+            repo = find_github_repo(p.get("title", ""), aid)
+            if repo:
+                mined = mine_github_repo(repo, out_dir)
+                p["repo_url"] = mined["repo_url"]
+                if mined.get("video_url") and not p.get("video_url"):
+                    p["video_url"] = mined["video_url"]
+                if mined["figures"]:  # repo figures are clean; prefer them
+                    figs = mined["figures"]
+                    p["fig_source"] = mined["repo_url"]
         # Last resort: a matching YouTube video's thumbnail
         if not figs:
             from fetch_papers import enrich_youtube
@@ -302,3 +320,101 @@ def figures_from_pdf_url(pdf_url, out_dir):
     except Exception as e:
         print(f"PDF figure extraction failed: {e}")
         return []
+
+
+def find_github_repo(title, arxiv_id=None):
+    """Find the paper's official GitHub repo. Papers-with-Code indexes most
+    arXiv papers to their repos; also try a scoped web-less arXiv abstract scan
+    for a github.com link. Returns repo 'owner/name' or None."""
+    # 1) Papers with Code (public API, no key)
+    try:
+        if arxiv_id:
+            r = requests.get(
+                f"https://paperswithcode.com/api/v1/papers/?arxiv_id={arxiv_id}",
+                timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+            results = r.json().get("results") or []
+            if results:
+                pid = results[0]["id"]
+                r2 = requests.get(
+                    f"https://paperswithcode.com/api/v1/papers/{pid}/repositories/",
+                    timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+                repos = r2.json().get("results") or []
+                official = [x for x in repos if x.get("is_official")] or repos
+                if official:
+                    url = official[0]["url"]
+                    m = re.search(r"github\.com/([^/]+/[^/]+)", url)
+                    if m:
+                        print(f"Repo via PapersWithCode: {m.group(1)}")
+                        return m.group(1).rstrip("/")
+    except Exception as e:
+        print(f"PapersWithCode lookup failed: {e}")
+    # 2) arXiv abstract page often has a github link in comments
+    try:
+        if arxiv_id:
+            r = requests.get(f"https://arxiv.org/abs/{arxiv_id}", timeout=30,
+                             headers={"User-Agent": "RoboPost/1.0"})
+            m = re.search(r"github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)", r.text)
+            if m:
+                print(f"Repo via arXiv page: {m.group(1)}")
+                return m.group(1).rstrip("/").rstrip(".")
+    except Exception as e:
+        print(f"arXiv repo scan failed: {e}")
+    return None
+
+
+def mine_github_repo(repo, out_dir, max_figs=4):
+    """Pull figures and a demo video/GIF link from a repo's README + assets.
+    Returns {'figures': [paths], 'video_url': str|None, 'repo_url': str}."""
+    base = "https://api.github.com"
+    headers = {"User-Agent": "RoboPost/1.0", "Accept": "application/vnd.github+json"}
+    tok = __import__("os").environ.get("GITHUB_TOKEN")
+    if tok:
+        headers["Authorization"] = f"Bearer {tok}"
+    out = {"figures": [], "video_url": None, "repo_url": f"https://github.com/{repo}"}
+    try:
+        meta = requests.get(f"{base}/repos/{repo}", headers=headers, timeout=30).json()
+        branch = meta.get("default_branch", "main")
+        rm = requests.get(f"{base}/repos/{repo}/readme", headers=headers, timeout=30).json()
+        import base64
+        readme = base64.b64decode(rm.get("content", "")).decode("utf-8", "ignore")
+    except Exception as e:
+        print(f"Repo fetch failed for {repo}: {e}")
+        return out
+
+    raw = f"https://raw.githubusercontent.com/{repo}/{branch}"
+    # video: YouTube link in README wins (real demo, we link not re-host)
+    ym = re.search(r"(https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)[\w-]+)", readme)
+    if ym:
+        out["video_url"] = ym.group(1)
+
+    # images in README (markdown ![..](url) and <img src="..">)
+    imgs = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme)
+    imgs += re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', readme)
+    picked = 0
+    for src in imgs:
+        if picked >= max_figs:
+            break
+        low = src.lower().split("?")[0]
+        if low.endswith((".svg", ".ico")) or "badge" in low or "shields.io" in low:
+            continue  # skip badges/logos
+        url = src if src.startswith("http") else f"{raw}/{src.lstrip('./')}"
+        try:
+            rr = requests.get(url, timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+            if not rr.ok or len(rr.content) < 8000:
+                continue
+            from PIL import Image
+            import io
+            im = Image.open(io.BytesIO(rr.content))
+            # animated GIF: grab a representative middle frame (aspect preserved)
+            if getattr(im, "is_animated", False):
+                im.seek(im.n_frames // 2)
+            if im.width < 300 or im.height < 200:
+                continue
+            p = out_dir / f"fig_{picked:02d}.png"
+            im.convert("RGB").save(p)
+            out["figures"].append(str(p.relative_to(MEDIA.parent)))
+            picked += 1
+        except Exception:
+            continue
+    print(f"Repo {repo}: {len(out['figures'])} figures, video={bool(out['video_url'])}")
+    return out

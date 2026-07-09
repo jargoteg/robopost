@@ -56,6 +56,7 @@ Source: {paper.get('source', 'arxiv')}
 Authors/Org: {', '.join(paper.get('authors', []))}
 Summary/Abstract: {paper['abstract']}
 Link: {paper['url']}
+{"Official code repository (link it in a thread reply — devs love this, and it drives saves/reposts): " + paper['repo_url'] if paper.get('repo_url') else ""}
 {"Open-access version of this paper (link it so followers can read it, since the primary source may be paywalled): " + paper['open_version'] if paper.get('open_version') else ""}
 {"Related YouTube video (title: " + paper.get('video_title','?') + "): " + paper['video_url'] + " — LINK it in captions (e.g. 'full video linked in comments/bio'); never re-upload footage. If the video title looks unrelated to this work, IGNORE it entirely." if paper.get('video_url') else ""}
 {"Curator's notes (from the account owner — follow these): " + paper['user_notes'] if paper.get('user_notes') else ""}

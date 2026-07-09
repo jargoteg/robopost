@@ -166,9 +166,11 @@ def build_carousel(draft, cfg) -> list[str]:
 
     # if figures came from an open version, credit THAT exact source, not the
     # paywalled origin — so every card is traceable to where its figure is from
-    ov = p.get("open_version", "")
-    if figs and ov:
-        from urllib.parse import urlparse
+    from urllib.parse import urlparse
+    if figs and p.get("fig_source", "").startswith("http"):
+        ref = "github.com/" + p["fig_source"].split("github.com/")[-1]
+    elif figs and p.get("open_version"):
+        ov = p["open_version"]
         m = re.search(r"arxiv\.org/abs/(\S+)", ov)
         ref = f"arXiv:{m.group(1)}" if m else ("fig: " + urlparse(ov).netloc.replace("www.", ""))
 
