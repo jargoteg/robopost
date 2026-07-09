@@ -1555,7 +1555,7 @@
         "Missing from the abstract: load capacity, repeatability, force sensing. 'Moves like a trunk' is not the same as 'works like a trunk.' Still, the design philosophy is the contribution here. Is structure-first the right frame for soft manipulation, or does the controller still need to do the heavy…"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T08:39:52.052038+00:00",
     "media": {
       "figures": [
@@ -1581,7 +1581,9 @@
         "media/22f3e6a6/slide_07.png"
       ]
     },
-    "issue": 25
+    "issue": 25,
+    "scheduled_after": "2026-07-09T09:30:04.798260+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "657349b6",
