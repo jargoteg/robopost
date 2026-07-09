@@ -1,48 +1,35 @@
 [
   {
-    "id": "rss-9e0042cc98",
-    "title": "CubeDVO: Cubemap-Spherical Deep Visual Odometry for a Monocular 360-Degree Camera",
-    "abstract": "This paper proposes CubeDVO, a learning-based visual odometry system specifically designed for a monocular 360-degree camera. While recent methods apply spherical convolutions to equirectangular images, their core operations still rely on the distorted 2D domain, which inherently degrades tracking accuracy. To address this limitation, our method introduces a unified cubemap-spherical representation that decouples the pose estimation pipeline from the equirectangular image space. We extract features on cubemap planes to reduce projection-induced distortion while enabling standard 2D convolutions, and perform geometric optimization on the unit sphere for consistent pose estimation. Our architecture incorporates a geometry-aware flow estimation network and a differentiable spherical bundle adjustment module. CubeDVO is evaluated against state-of-the-art spherical and conventional perspective visual odometry methods. Experimental results demonstrate that our method achieves robust performance under aggressive motion while maintaining high accuracy and practical computational efficiency.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11576546",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 6.7
-  },
-  {
-    "id": "2607.04434",
-    "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
-    "abstract": "Generalist robot manipulation policies have advanced rapidly, yet existing benchmarks remain limited in systematically evaluating their capabilities. Many rely on simple, short-horizon, or skill-narrow tasks with limited capability coverage, and are often conducted only in simulation or only in the real world. Simulation enables scalable feedback but misses physical deployment challenges, while real-world evaluation is costly, time-consuming, and difficult to reproduce. We introduce RoboDojo, a unified sim-and-real benchmark for comprehensive evaluation of generalist robot manipulation policies. RoboDojo includes 42 simulation tasks and 18 real-world tasks covering diverse and complementary manipulation capabilities. The simulation benchmark evaluates five dimensions: generalization, memory, precision, long-horizon execution, and open-vocabulary instruction following, while the real-world benchmark exposes policies to challenging physical-world deployment conditions. RoboDojo supports scalable evaluation through heterogeneous parallel simulation in Isaac Sim and provides RoboDojo-RealEval, a reproducible real-world evaluation system with remote cloud access, standardized hardware, scene reset, evaluation protocol, and deployment interface. Together with XPolicyLab, policies can be integrated once and evaluated across simulation and real-world settings with minimal adaptation. We integrate 30 policies into XPolicyLab and evaluate them on RoboDojo, establishing a public leaderboard and systematic analysis of current policy performance. The website is available at http://robodojo-benchmark.com/.",
-    "authors": [
-      "Tianxing Chen",
-      "Yue Chen",
-      "Zixuan Li",
-      "Junyuan Tang",
-      "Kailun Su",
-      "Haoran Lu"
-    ],
-    "url": "https://arxiv.org/abs/2607.04434",
-    "source": "hf_daily",
-    "hf_upvotes": 6,
-    "score": 6.5
-  },
-  {
-    "id": "rss-e77d4ada80",
-    "title": "Appliances Describe Themselves: Part–Function–State Modeling for Appliance Manipulation Planning",
-    "abstract": "The use of household appliances often involves a sequence of operations and judgments that must jointly consider the functional semantics of the operated components and the current state of the device. Notably, such critical information is often explicitly presented on appliance control panels. In this work, we propose a Part–Function–State–based appliance manipulation planning framework that enables robots to directly leverage the information embedded in appliances to guide manipulation. The framework first employs a multi-model collaborative scheme to parse control panels under open-vocabulary settings, identifying actionable components and their functional semantics, thereby effectively suppressing functional hallucinations in Vision–Language Models (VLMs). To address the limitations of VLMs in geometric reasoning, we further introduce a Geometry-Enhanced Module (GEM) that transforms implicit rotational states of control components, such as knobs, into explicit geometric visual prompts. In addition, we construct and release the HA-Knob dataset, which provides real-world knob images annotated with keypoints and state labels, serving as a benchmark resource for state-aware perception. Experimental results demonstrate that the proposed approach significantly outperforms existing methods in functional recognition, state estimation, and task-level planning accuracy, while generalizing effectively to unseen appliances. Real-robot demonstrations further suggest its potential for ",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11576562",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 6.5
-  },
-  {
     "id": "2507.04321",
     "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
     "url": "https://arxiv.org/abs/2507.04321",
     "source": "arxiv",
     "redo_notes": "populate the items correctly"
+  },
+  {
+    "id": "2607.07253v1",
+    "title": "Manual, Joystick, or Haptic Control? An In Vitro Comparison of Navigation Strategies for Robotic Interventional Neuroradiology Procedures",
+    "abstract": "Objective: To evaluate robotic controller interfaces for interventional neuroradiology procedures in-vitro incorporating a force-sensing platform to assess safety. Methods: A custom endovascular robot, device-mimicking controller, and sensorized neurovascular phantom were developed. Ten interventional neuroradiologists (4 novices, 6 experts) performed simulated navigations using four control modalities: device-mimicking controllers with and without haptic feedback, joystick-based input, and manual navigation. Navigation time, peak vessel-wall forces, incorrect catheterisations, and prolapse events were assessed, alongside user analyses. Results: Manual navigation was fastest (mean 47.7 s) compared to haptic-on (248.7 s), haptic-off (314.7 s), and joystick (392.6 s) modalities (p<0.001). Regardless of controller type, vessel-wall forces were below the 0.70 N puncture threshold; therefore all modalities were considered safe. Joystick produced significantly more prolapse events than manual control (1.56 vs 0.13; p=0.018). Operator experience was relevant to performance: experts made fewer incorrect catheterisations than novices (0.25 vs 0.62; p=0.035) and applied less vessel-wall force (p<0.0005); these effects were sustained across controllers but accentuated when haptics were on. Users perceived haptic on and haptic off as similarly intuitive, and more intuitive than joystick (p=0.033). Conclusion: Device-mimicking robotic controllers outperform joystick interfaces on most metrics; haptic feedback shows promising but non-significant performance benefits.",
+    "authors": [
+      "Benjamin Jackson",
+      "Nikola Fischer",
+      "Harry Robershaw",
+      "Xingyu Chen",
+      "S. H. Hadi Sadati",
+      "Yang Li"
+    ],
+    "url": "https://arxiv.org/abs/2607.07253v1",
+    "source": "arxiv",
+    "score": 6.0
+  },
+  {
+    "id": "rss-6f1532b006",
+    "title": "AURA Foresight Reaches Global XPRIZE Wildfire Finals in Alaska",
+    "abstract": "One of only four teams remaining from more than 130 competitors worldwide, our team AURA Foresight is developing autonomous technology to stop wildfires before they grow out of control. AURA Foresight has been selected as a finalist in the prestigious XPRIZE Wildfire Autonomous Wildfire Response competition, emerging as one of just four teams remaining from [&#8230;]",
+    "authors": [],
+    "url": "https://robohub.org/aura-foresight-reaches-global-xprize-wildfire-finals-in-alaska/",
+    "source": "robohub.org",
+    "item_type": "article",
+    "score": 7.5
   }
 ]

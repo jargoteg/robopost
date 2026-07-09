@@ -5160,7 +5160,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T20:25:56.595366+00:00",
     "media": {
       "figures": [
@@ -5263,5 +5263,326 @@
       ]
     },
     "issue": 72
+  },
+  {
+    "draft_id": "b3e66624",
+    "paper": {
+      "id": "rss-f83d1dda41",
+      "title": "DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks",
+      "abstract": "Learning robust manipulation policies typically demands large and diverse datasets, whose collection is time-consuming, labor-intensive, and impractical in dynamic environments. We present DynaMimicGen (D-MG), a scalable data-generation framework that enables policy learning from minimal human supervision while uniquely supporting data synthesis in dynamic task conditions. Starting from only a few human demonstrations – potentially as few as a single example – D-MG segments the demonstrations into sub-tasks and uses Dynamic Movement Primitives (DMPs) to generalize each skill to novel and continually changing scenes. Unlike prior methods that assume static environments or rely on simple interpolation, D-MG synthesizes smooth, physically plausible Cartesian trajectories that remain task-consistent while adapting in real time to variations in object pose, robot configuration, and scene geometry. Our method supports basic, contact-rich, and long-horizon tasks in both static and dynamic settings. DynaMimicGen increases dataset-generation success rates by 3.6% (Stack), 59.5% (Square), 124.7% (HammerCleanup), 232.7% (MugCleanup), and 4.60% (NutAssembly) over MimicGen (which requires ten demonstrations), while remaining robust to perturbations. By injecting dynamic perturbations during data generation, D-MG increases dataset variability, enabling Diffusion Policy and Behavior Cloning agents to achieve strong performance across all tasks and consistently outperform MG-trained policies",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568504",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5,
+      "open_version": "https://arxiv.org/abs/2511.16223",
+      "redo_notes": "ale the message more clear and interesting"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One demo is enough. Here's how they made it work.",
+      "commentary": "DynaMimicGen tackles a real bottleneck: imitation learning needs hundreds of demonstrations but collecting them is brutal. Starting from as few as one human demo, it uses Dynamic Movement Primitives to segment tasks and re-synthesize trajectories for changing scenes. The numbers are genuinely striking, 232.7% improvement over MimicGen on MugCleanup. The honest caveat: MimicGen itself needs ten demos as the baseline, so the comparison is favorable by design, and all results are still in simulation with controlled perturbations. Real-world dynamic scenes, think a bin on a moving conveyor or a part shifted by a coworker, remain untested. Still, the architecture for injecting dynamic perturbations during data generation is the clever bit here.",
+      "slides": [
+        {
+          "title": "The demo bottleneck is real",
+          "body": "Imitation learning works. But collecting hundreds of robot demos is slow, expensive, and impossible in environments that keep changing. Most labs just accept this cost."
+        },
+        {
+          "title": "DynaMimicGen: 1 demo, many worlds",
+          "body": "Segment one human demo into sub-tasks. Use Dynamic Movement Primitives to re-synthesize each segment for new object poses, robot configs, and scene geometry. No static-world assumption."
+        },
+        {
+          "title": "The numbers vs. MimicGen",
+          "body": "Stack: +3.6%. Square: +59.5%. HammerCleanup: +124.7%. MugCleanup: +232.7%. NutAssembly: +4.6%. MimicGen uses ten demos as its starting point. D-MG starts from one."
+        },
+        {
+          "title": "Why DMPs, not interpolation?",
+          "body": "Simple trajectory interpolation breaks on contact-rich tasks. DMPs produce smooth, physically plausible Cartesian paths that adapt in real time. Long-horizon tasks benefit most."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Every result is simulation. Perturbations are controlled. Real dynamic scenes, moving conveyors, shifting parts, human coworkers, are a different problem. Gap between sim and field stays open."
+        },
+        {
+          "title": "What it actually changes",
+          "body": "If sim-to-real transfer holds even partially, smaller labs without data collection rigs can train competitive policies. That is the real-world implication worth watching."
+        }
+      ],
+      "video_script": "Imitation learning has a dirty secret. You need hundreds of demos to train anything useful. DynaMimicGen says: give us one. It chops that demo into sub-tasks, uses Dynamic Movement Primitives to rebuild each piece for a new scene, and injects dynamic perturbations during generation. On MugCleanup, it beats MimicGen by over 230 percent, and MimicGen already needs ten demos. All of this is still in simulation, and that gap to real hardware matters. But the architecture is sound. So here's the question: what's actually stopping this from running on a real production line?",
+      "caption_instagram": "One human demo. Potentially one. And the robot learns to generalize.\n\nDynaMimicGen uses Dynamic Movement Primitives to segment a single demonstration into sub-tasks, then re-synthesizes smooth trajectories for changing object poses and scene geometry. No static-world assumption, no interpolation hacks.\n\nThe benchmark numbers against MimicGen are hard to ignore: +232.7% on MugCleanup, +124.7% on HammerCleanup. MimicGen starts from ten demos. This starts from one.\n\nHonest take: every result here is simulation. Controlled perturbations are not the same as a real factory floor or a field inspection environment. The sim-to-real question is still wide open. But the data augmentation strategy, injecting dynamic perturbations during generation to train Diffusion Policy and BC agents, is a solid idea with real legs.\n\nPaper: DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks. arXiv:2511.16223\n\n#swarmrobotics #robotlearning #imitationlearning #manipulationrobotics #robotics #diffusionpolicy #fieldrobotics",
+      "caption_tiktok": "Robot learns from ONE demo and beats the 10-demo baseline by 232%. Still in sim, but the idea is solid. #robotics #robotlearning #imitationlearning #manipulation #AIrobotics",
+      "post_bluesky": "Everyone assumes you need hundreds of demos to train a manipulation policy. DynaMimicGen starts from one, uses DMPs to rebuild trajectories for dynamic scenes, and beats MimicGen by 232% on MugCleanup. Still sim-only, but the architecture matters. http://ieeexplore.ieee.org/document/11568504",
+      "bluesky_thread": [
+        "The clever bit is injecting dynamic perturbations *during* data generation, not just at test time. That is what lets Diffusion Policy and BC agents generalize. Most prior work treats data gen as a static problem.",
+        "Honest caveat though: MimicGen needing 10 demos is a favorable baseline, and controlled sim perturbations are not a moving conveyor or a coworker nudging the part. Who's tried DMPs for data gen on real hardware? Curious what breaks first."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T21:24:55.484754+00:00",
+    "media": {
+      "figures": [
+        "media/b3e66624/fig_04.png",
+        "media/b3e66624/fig_00.png",
+        "media/b3e66624/fig_03.png",
+        "media/b3e66624/fig_01.png"
+      ],
+      "bsky": [
+        "media/b3e66624/bsky_00.png",
+        "media/b3e66624/bsky_01.png",
+        "media/b3e66624/bsky_02.png",
+        "media/b3e66624/bsky_03.png"
+      ],
+      "slides": [
+        "media/b3e66624/slide_00.png",
+        "media/b3e66624/slide_01.png",
+        "media/b3e66624/slide_02.png",
+        "media/b3e66624/slide_03.png",
+        "media/b3e66624/slide_04.png",
+        "media/b3e66624/slide_05.png",
+        "media/b3e66624/slide_06.png",
+        "media/b3e66624/slide_07.png"
+      ]
+    },
+    "issue": 73
+  },
+  {
+    "draft_id": "ae8aef84",
+    "paper": {
+      "id": "rss-9e0042cc98",
+      "title": "CubeDVO: Cubemap-Spherical Deep Visual Odometry for a Monocular 360-Degree Camera",
+      "abstract": "This paper proposes CubeDVO, a learning-based visual odometry system specifically designed for a monocular 360-degree camera. While recent methods apply spherical convolutions to equirectangular images, their core operations still rely on the distorted 2D domain, which inherently degrades tracking accuracy. To address this limitation, our method introduces a unified cubemap-spherical representation that decouples the pose estimation pipeline from the equirectangular image space. We extract features on cubemap planes to reduce projection-induced distortion while enabling standard 2D convolutions, and perform geometric optimization on the unit sphere for consistent pose estimation. Our architecture incorporates a geometry-aware flow estimation network and a differentiable spherical bundle adjustment module. CubeDVO is evaluated against state-of-the-art spherical and conventional perspective visual odometry methods. Experimental results demonstrate that our method achieves robust performance under aggressive motion while maintaining high accuracy and practical computational efficiency.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576546",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.7
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "360 cameras see everything. Standard VO methods handle none of it well.",
+      "commentary": "CubeDVO tackles a real problem: equirectangular projection warps geometry near the poles, and applying standard convolutions there introduces errors that accumulate into bad pose estimates. The cubemap split is a practical engineering call. Feature extraction on six flat faces keeps convolution kernels honest, then a differentiable spherical bundle adjustment module pulls everything back onto the unit sphere for geometrically consistent pose refinement. The geometry-aware flow network is the clever bit, it learns correspondences aware of the projection seams. Honest caveat: 'aggressive motion' robustness and 'practical computational efficiency' need numbers to mean anything, and the paper tests on sequences where 360 content is available, which is still not the norm in field deployments like underground mining or search-and-rescue tunnels where fisheye rigs dominate.",
+      "slides": [
+        {
+          "title": "The problem with 360 VO",
+          "body": "Equirectangular projection stretches pixels near poles. Convolutions trained on flat images see distorted geometry there. Errors compound into drift. Spherical convolutions exist but still operate in the distorted 2D domain."
+        },
+        {
+          "title": "Cubemap: a practical fix",
+          "body": "Split the sphere into 6 flat faces. Extract features with standard 2D convolutions on each face. Distortion is bounded and uniform per face. No exotic spherical conv kernels needed."
+        },
+        {
+          "title": "Back to the sphere for pose",
+          "body": "Features from cube faces are reprojected onto the unit sphere for optimization. Differentiable spherical bundle adjustment refines poses without leaving the correct geometric domain."
+        },
+        {
+          "title": "Geometry-aware flow network",
+          "body": "The flow estimator is trained to respect cubemap face boundaries and spherical geometry, not just 2D pixel displacement. This is where correspondence quality under fast rotation is won or lost."
+        },
+        {
+          "title": "What the results say",
+          "body": "Beats spherical and perspective VO baselines on their benchmarks, especially under aggressive motion. Computational cost is reported as practical. Specific RMSE numbers and hardware specs are not in the abstract."
+        },
+        {
+          "title": "Field relevance: real limits",
+          "body": "360 cameras appear in SAR, inspection drones, and underground mapping. But field rigs often use fisheye, not equirectangular sensors. Generalization to those formats is untested here."
+        }
+      ],
+      "video_script": "Visual odometry with a 360 camera sounds ideal. Full scene coverage, no blind spots. But equirectangular projection distorts geometry near the poles, and that kills tracking accuracy fast. CubeDVO's answer is elegant: split the sphere into six flat cube faces, extract features normally, then reproject onto the sphere for geometrically correct pose optimization. The differentiable spherical bundle adjustment is the key component. It works. It beats the baselines under fast motion. The open question is whether this survives underground inspection or SAR corridors, where 360 rigs are rare and fisheye is standard. So: would you deploy a 360 camera for your odometry stack if the algorithm was this good?",
+      "caption_instagram": "360 cameras see the full world. Standard visual odometry can't process what they capture without accumulating serious drift.\n\nCubeDVO splits the equirectangular image into six flat cubemap faces, runs normal 2D convolutions on each one, then reprojects back onto the unit sphere for pose optimization. That last step matters: spherical bundle adjustment, done differentially, keeps the geometry honest across the full pipeline.\n\nThe geometry-aware flow network learns to handle the seams between cube faces. That's where most 360 VO methods quietly fail under fast rotation.\n\nReal caveat: the field cases where I'd actually want this, underground SAR, tunnel inspection, mine mapping, often run fisheye rigs, not equirectangular sensors. Benchmark performance is encouraging. Deployment generalization is the next question.\n\nPaper: CubeDVO: Cubemap-Spherical Deep Visual Odometry for a Monocular 360-Degree Camera. IEEE Xplore 11576546.\n\n#visualodometry #swarmrobotics #inspectionrobotics #fieldrobotics #searchandrescue #SLAM #roboticsvision",
+      "caption_tiktok": "360 camera VO that actually handles the distortion problem. Cubemap features plus spherical pose optimization. The math is right. Now someone put it in a mine. #robotics #visualodometry #fieldrobotics #SLAM",
+      "post_bluesky": "360 cameras warp geometry near the poles. Every VO system pretending otherwise accumulates that error into drift. CubeDVO splits the sphere into 6 flat faces, runs normal convolutions, then snaps pose back to the sphere. Smart pipeline. http://ieeexplore.ieee.org/document/11576546",
+      "bluesky_thread": [
+        "The differentiable spherical bundle adjustment is the part worth stealing for other projects. Keeping optimization in the correct geometric domain instead of cramming it back into 2D is the right call and it's surprisingly rare in deployed systems.",
+        "My honest caveat: field inspection and SAR platforms usually run fisheye, not equirectangular 360 rigs. How much of this transfers? The cubemap idea might generalize but the training pipeline almost certainly doesn't out of the box. Has anyone tested this on a real underground dataset?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T21:25:27.064216+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/ae8aef84/bsky_00.png",
+        "media/ae8aef84/bsky_01.png",
+        "media/ae8aef84/bsky_02.png",
+        "media/ae8aef84/bsky_03.png"
+      ],
+      "slides": [
+        "media/ae8aef84/slide_00.png",
+        "media/ae8aef84/slide_01.png",
+        "media/ae8aef84/slide_02.png",
+        "media/ae8aef84/slide_03.png",
+        "media/ae8aef84/slide_04.png",
+        "media/ae8aef84/slide_05.png",
+        "media/ae8aef84/slide_06.png",
+        "media/ae8aef84/slide_07.png"
+      ]
+    },
+    "issue": 74
+  },
+  {
+    "draft_id": "4f58d79f",
+    "paper": {
+      "id": "2607.04434",
+      "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+      "abstract": "Generalist robot manipulation policies have advanced rapidly, yet existing benchmarks remain limited in systematically evaluating their capabilities. Many rely on simple, short-horizon, or skill-narrow tasks with limited capability coverage, and are often conducted only in simulation or only in the real world. Simulation enables scalable feedback but misses physical deployment challenges, while real-world evaluation is costly, time-consuming, and difficult to reproduce. We introduce RoboDojo, a unified sim-and-real benchmark for comprehensive evaluation of generalist robot manipulation policies. RoboDojo includes 42 simulation tasks and 18 real-world tasks covering diverse and complementary manipulation capabilities. The simulation benchmark evaluates five dimensions: generalization, memory, precision, long-horizon execution, and open-vocabulary instruction following, while the real-world benchmark exposes policies to challenging physical-world deployment conditions. RoboDojo supports scalable evaluation through heterogeneous parallel simulation in Isaac Sim and provides RoboDojo-RealEval, a reproducible real-world evaluation system with remote cloud access, standardized hardware, scene reset, evaluation protocol, and deployment interface. Together with XPolicyLab, policies can be integrated once and evaluated across simulation and real-world settings with minimal adaptation. We integrate 30 policies into XPolicyLab and evaluate them on RoboDojo, establishing a public leaderboard and systematic analysis of current policy performance. The website is available at http://robodojo-benchmark.com/.",
+      "authors": [
+        "Tianxing Chen",
+        "Yue Chen",
+        "Zixuan Li",
+        "Junyuan Tang",
+        "Kailun Su",
+        "Haoran Lu"
+      ],
+      "url": "https://arxiv.org/abs/2607.04434",
+      "source": "hf_daily",
+      "hf_upvotes": 6,
+      "score": 6.5,
+      "repo_url": "https://github.com/RoboDojo-Benchmark/RoboDojo",
+      "fig_source": "https://github.com/RoboDojo-Benchmark/RoboDojo"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "30 policies benchmarked. Most failed the basics.",
+      "commentary": "RoboDojo is a serious attempt to close the sim-only vs. real-only gap in manipulation benchmarking: 42 sim tasks across five capability dimensions plus 18 real-world tasks on standardized hardware with remote cloud access for reproducibility. The XPolicyLab integration layer is the clever bit, meaning you register a policy once and it runs across both environments without per-environment hacking. Honest caveat: 18 real-world tasks is still a narrow slice of deployment reality, and Isaac Sim contact physics remains notoriously optimistic compared to worn gripper fingers on slippery parts. The leaderboard will be useful, but watch for overfitting to the benchmark's specific hardware setup the moment people know they're being scored.",
+      "slides": [
+        {
+          "title": "The benchmarking problem",
+          "body": "Most manipulation benchmarks test sim OR real. Sim is scalable but dodges physics. Real is expensive and hard to reproduce. Neither alone tells you if a policy actually works."
+        },
+        {
+          "title": "What RoboDojo adds",
+          "body": "42 sim tasks across 5 dimensions: generalization, memory, precision, long-horizon execution, open-vocabulary instructions. Plus 18 real tasks on standardized hardware with cloud remote access for reproducibility."
+        },
+        {
+          "title": "The clever part: XPolicyLab",
+          "body": "Register a policy once. It deploys across all sim and real tasks with minimal adaptation. 30 policies already integrated. No per-environment glue code. That friction reduction matters."
+        },
+        {
+          "title": "What 30 policies actually showed",
+          "body": "Systematic analysis revealed consistent failure patterns across current generalist policies, especially on precision and long-horizon tasks. Public leaderboard tracks this over time."
+        },
+        {
+          "title": "The honest limits",
+          "body": "Isaac Sim contact physics is still optimistic. 18 real tasks is a narrow slice. Standardized hardware means policies can overfit to one robot setup once they know the benchmark."
+        },
+        {
+          "title": "Why this matters now",
+          "body": "Reproducible real-world eval has been the missing piece. RoboDojo-RealEval with remote access could become the ImageNet moment for manipulation, if the community adopts the standard."
+        }
+      ],
+      "video_script": "Everyone claims their robot manipulation policy is generalist. But most benchmarks test either simulation or the real world, not both, and on tasks so simple they barely stress the policy. RoboDojo runs 42 sim tasks and 18 real tasks, with one integration layer so you register once and evaluate everywhere. They put 30 current policies through it. Most struggled on precision and long-horizon tasks. The remote cloud access for real-world eval is genuinely new. So here is the question: is standardized hardware actually solving reproducibility, or just shifting where the overfitting happens?",
+      "caption_instagram": "30 manipulation policies. One benchmark. Most couldn't handle the hard stuff.\n\nRoboDojo is a new sim-and-real benchmark for generalist robot manipulation: 42 simulation tasks covering generalization, memory, precision, long-horizon execution, and open-vocabulary instructions, plus 18 real-world tasks on standardized hardware.\n\nThe key contribution is XPolicyLab. Register a policy once, and it runs across all environments without per-task adaptation. That friction reduction is what makes a shared leaderboard actually viable.\n\nHonest take: Isaac Sim contact physics is still kind compared to real wear. 18 real tasks won't cover the full messiness of deployment. And any time you standardize hardware, people optimize for that hardware. Watch the leaderboard for signs of benchmark overfitting within 12 months.\n\nBut reproducible real-world evaluation with remote cloud access is new, and that matters. Paper: RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies, arXiv 2607.04434\n\n#swarmrobotics #robotmanipulation #embodiedai #roboticsbenchmark #robotlearning #simtoreal #generalrobotics",
+      "caption_tiktok": "30 robot policies benchmarked across sim AND real. Most cracked under precision and long-horizon tasks. This is what honest evaluation looks like. #robotics #manipulation #embodiedai #simtoreal #roboticsbenchmark",
+      "post_bluesky": "30 manipulation policies. One unified sim+real benchmark. Most failed on precision and long-horizon tasks. RoboDojo's remote real-world eval access is genuinely new infrastructure. https://arxiv.org/abs/2607.04434",
+      "bluesky_thread": [
+        "The clever bit is XPolicyLab: register a policy once, it runs across 42 sim tasks and 18 real tasks without per-environment hacks. That's the friction reduction that makes a shared leaderboard actually stick. Code: https://github.com/RoboDojo-Benchmark/RoboDojo",
+        "Caveat worth watching: standardized hardware solves reproducibility but also gives people a fixed target to overfit to. Isaac Sim contact physics is still generous. 18 real tasks is a start, not a ceiling. How long before the leaderboard leaders are just tuned to this specific setup?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T21:25:54.422209+00:00",
+    "media": {
+      "figures": [
+        "media/4f58d79f/fig_01.png"
+      ],
+      "bsky": [
+        "media/4f58d79f/bsky_00.png",
+        "media/4f58d79f/bsky_01.png",
+        "media/4f58d79f/bsky_02.png",
+        "media/4f58d79f/bsky_03.png"
+      ],
+      "slides": [
+        "media/4f58d79f/slide_00.png",
+        "media/4f58d79f/slide_01.png",
+        "media/4f58d79f/slide_02.png",
+        "media/4f58d79f/slide_03.png",
+        "media/4f58d79f/slide_04.png",
+        "media/4f58d79f/slide_05.png",
+        "media/4f58d79f/slide_06.png",
+        "media/4f58d79f/slide_07.png"
+      ]
+    },
+    "issue": 75
+  },
+  {
+    "draft_id": "af7b5ef7",
+    "paper": {
+      "id": "rss-e77d4ada80",
+      "title": "Appliances Describe Themselves: Part–Function–State Modeling for Appliance Manipulation Planning",
+      "abstract": "The use of household appliances often involves a sequence of operations and judgments that must jointly consider the functional semantics of the operated components and the current state of the device. Notably, such critical information is often explicitly presented on appliance control panels. In this work, we propose a Part–Function–State–based appliance manipulation planning framework that enables robots to directly leverage the information embedded in appliances to guide manipulation. The framework first employs a multi-model collaborative scheme to parse control panels under open-vocabulary settings, identifying actionable components and their functional semantics, thereby effectively suppressing functional hallucinations in Vision–Language Models (VLMs). To address the limitations of VLMs in geometric reasoning, we further introduce a Geometry-Enhanced Module (GEM) that transforms implicit rotational states of control components, such as knobs, into explicit geometric visual prompts. In addition, we construct and release the HA-Knob dataset, which provides real-world knob images annotated with keypoints and state labels, serving as a benchmark resource for state-aware perception. Experimental results demonstrate that the proposed approach significantly outperforms existing methods in functional recognition, state estimation, and task-level planning accuracy, while generalizing effectively to unseen appliances. Real-robot demonstrations further suggest its potential for ",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576562",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Robots that read the appliance manual written on the appliance itself.",
+      "commentary": "The core insight here is genuinely practical: control panels already encode function and state explicitly, so why hallucinate it from a VLM? The Part-Function-State framework parses panel labels to ground semantic understanding, and the Geometry-Enhanced Module converts knob rotation into explicit visual prompts rather than asking the model to reason about angles implicitly. That's a clean fix for a well-known VLM failure mode. The HA-Knob dataset is a real contribution, annotated keypoints on real-world knobs are actually useful. Honest caveat: household appliances are still a pretty controlled deployment context, and the gap between 'generalizes to unseen appliances' in a lab and generalizing to a cluttered care-home kitchen with worn labels and sticky knobs is large.",
+      "slides": [
+        {
+          "title": "The problem with appliance robots",
+          "body": "VLMs hallucinate appliance functions constantly. A knob labeled '1-9' looks like a dial, but is it temperature, time, or power? Without reading the panel, models guess wrong."
+        },
+        {
+          "title": "Read the panel, not the model",
+          "body": "Part-Function-State framework parses control panel text and symbols directly under open-vocabulary settings. The appliance describes itself. Functional hallucinations drop significantly."
+        },
+        {
+          "title": "Knob geometry is the hard part",
+          "body": "VLMs fail at rotational state estimation. The Geometry-Enhanced Module converts knob orientation into explicit geometric visual prompts, making implicit angle data visible to the model."
+        },
+        {
+          "title": "HA-Knob: a real benchmark",
+          "body": "New dataset: real-world knob images with keypoint annotations and state labels. Sparse benchmarks for this subtask existed before. This fills a gap."
+        },
+        {
+          "title": "What the demo shows and doesn't",
+          "body": "Real-robot trials confirm planning accuracy gains on unseen appliances. Lab appliances have legible labels. Worn, greasy, or low-contrast panels in actual kitchens remain untested."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "Assistive and domestic robots need appliance manipulation at scale. Designing robots that exploit existing appliance affordances beats building appliance-specific datasets for every device."
+        }
+      ],
+      "video_script": "Your robot walks into a kitchen it's never seen. New microwave, unfamiliar oven, random knobs. Most systems guess. This paper says stop guessing and just read what's already printed on the panel. The Part-Function-State framework parses control labels directly, and a geometry module converts knob angles into explicit visual prompts the model can actually use. They even released a real-world knob dataset with keypoint labels. Results beat baselines on planning accuracy and transfer to unseen appliances. But here's the honest question: does this survive worn labels and dirty panels in a real care home?",
+      "caption_instagram": "Robots that read the appliance, not just look at it.\n\nMost manipulation systems ask a vision-language model to figure out what a knob does from appearance alone. VLMs hallucinate this constantly. A dial is a dial until the label tells you it controls temperature from 1 to 9.\n\nThis paper's answer is simple and correct: the control panel already contains the information. Parse it. The Part-Function-State framework does exactly that, suppressing functional hallucinations by grounding semantics in panel text and symbols.\n\nThe Geometry-Enhanced Module is the clever part. Knob rotation is implicit geometry, and VLMs are bad at implicit geometry. Converting orientation into explicit visual prompts is a clean engineering fix, not a model-scaling fix.\n\nHA-Knob dataset is a genuine community contribution: real knobs, keypoint annotations, state labels. The lab results look strong. The next test is legibility degradation, worn labels, grease, low contrast. That's where domestic robot papers tend to go quiet.\n\nPaper: 'Appliances Describe Themselves: Part-Function-State Modeling for Appliance Manipulation Planning' via IEEE.\n\n#swarmrobotics #robotmanipulation #VLM #domesticrobotics #humanrobotinteraction #robotics #embodiedAI",
+      "caption_tiktok": "Your robot can't figure out your oven. This paper makes it read the labels. Genuinely clever fix for a real VLM failure mode. #robotics #AI #manipulation #VLM",
+      "post_bluesky": "Robots that read the appliance instead of guessing. This PFS framework parses control panels directly, fixes VLM hallucination at the source, and converts knob angles into explicit prompts. Clever engineering over bigger models. http://ieeexplore.ieee.org/document/11576562",
+      "bluesky_thread": [
+        "The Geometry-Enhanced Module is the bit worth stealing. VLMs cannot reliably estimate rotation from appearance. Making knob state an explicit geometric visual prompt sidesteps the whole problem cleanly. That's the kind of fix that actually transfers.",
+        "Caveat worth flagging: 'generalizes to unseen appliances' in a tidy lab is very different from a care-home kitchen with worn dials and marker-pen labels. Has anyone actually benchmarked label degradation for domestic manipulation? Feels like the missing dataset."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T21:26:24.892052+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/af7b5ef7/bsky_00.png",
+        "media/af7b5ef7/bsky_01.png",
+        "media/af7b5ef7/bsky_02.png",
+        "media/af7b5ef7/bsky_03.png"
+      ],
+      "slides": [
+        "media/af7b5ef7/slide_00.png",
+        "media/af7b5ef7/slide_01.png",
+        "media/af7b5ef7/slide_02.png",
+        "media/af7b5ef7/slide_03.png",
+        "media/af7b5ef7/slide_04.png",
+        "media/af7b5ef7/slide_05.png",
+        "media/af7b5ef7/slide_06.png",
+        "media/af7b5ef7/slide_07.png"
+      ]
+    },
+    "issue": 76
   }
 ]
