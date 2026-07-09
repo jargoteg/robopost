@@ -4040,7 +4040,7 @@
         "Caveat: 'five datasets' in autonomous driving usually means tidy urban roads. The deployment case for this is actually mining haul routes, port yards, and flood-prone rural roads. Has anyone tested cross-modal place recognition in genuinely unstructured conditions? Code…"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T15:24:00.073480+00:00",
     "media": {
       "figures": [
