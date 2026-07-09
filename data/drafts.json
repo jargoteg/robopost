@@ -2775,7 +2775,7 @@
         "Honest question for the field inspection crowd: at what point does 'outperforms benchmarks in forest runs' become evidence you'd trust for a confined-space inspection mission, say inside a tunnel or near live infrastructure? What does that validation bar actually look like to you?"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T11:52:12.254700+00:00",
     "media": {
       "bsky": [
@@ -2803,7 +2803,9 @@
     },
     "issue": 40,
     "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "71cb2c94",
@@ -3024,7 +3026,7 @@
       ]
     },
     "issue": 44,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -3194,7 +3196,7 @@
       ]
     },
     "issue": 46,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -3921,7 +3923,7 @@
       ]
     },
     "issue": 55,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -4078,7 +4080,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -4238,7 +4240,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -4323,7 +4325,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -4487,7 +4489,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-09T21:57:02.944497+00:00",
+    "scheduled_after": "2026-07-09T23:34:24.716548+00:00",
     "queue_notified": true
   },
   {
@@ -5010,7 +5012,6 @@
     "status": "in_review",
     "created": "2026-07-09T18:06:34.132027+00:00",
     "media": {
-      "figures": [],
       "bsky": [
         "media/0b90d055/bsky_00.png",
         "media/0b90d055/bsky_01.png",
@@ -5244,7 +5245,6 @@
     "status": "in_review",
     "created": "2026-07-09T20:26:26.731680+00:00",
     "media": {
-      "figures": [],
       "bsky": [
         "media/f9cc0b14/bsky_00.png",
         "media/f9cc0b14/bsky_01.png",

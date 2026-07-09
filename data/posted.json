@@ -240,5 +240,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "4455d4d7",
+    "paper_id": "rss-5af37135ce",
+    "title": "High-Speed Vision-Based Flight in Clutter With Safety-Shielded Reinforcement Learning",
+    "format": "carousel",
+    "hook": "7.5 m/s through dense forest. No crash. Here's why this matters.",
+    "posted_at": "2026-07-09T22:04:24.716555+00:00",
+    "bsky_variant": "single",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqanbd22xt2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
