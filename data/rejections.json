@@ -12,5 +12,12 @@
     "item_type": "paper",
     "reason": "less papers about learning, or robot manipulation. More robots about mobile robotics and real robot experiments.",
     "date": "2026-07-09"
+  },
+  {
+    "title": "Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm",
+    "source": "arxiv",
+    "item_type": "paper",
+    "reason": "not too interesting of a paper. Would prefer to dig for older papers rather than super recent that aren't that impactful",
+    "date": "2026-07-09"
   }
 ]

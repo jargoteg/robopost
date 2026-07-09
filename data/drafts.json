@@ -1584,7 +1584,7 @@
       ]
     },
     "issue": 25,
-    "scheduled_after": "2026-07-09T11:18:27.543857+00:00",
+    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
     "queue_notified": true
   },
   {
@@ -1671,7 +1671,7 @@
       ]
     },
     "issue": 26,
-    "scheduled_after": "2026-07-09T11:18:27.543857+00:00",
+    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
     "queue_notified": true
   },
   {
@@ -1758,7 +1758,7 @@
       ]
     },
     "issue": 27,
-    "scheduled_after": "2026-07-09T11:18:27.543857+00:00",
+    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
     "queue_notified": true
   },
   {
@@ -1818,7 +1818,7 @@
         "Caveat worth saying out loud: it's open-loop. No opponent, no return to read. The full game is a different class of problem. But if your contact control can hit 550 rad/s reliably, what other manipulation tasks does that unlock?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T09:43:50.184339+00:00",
     "media": {
       "figures": [
@@ -1928,7 +1928,7 @@
       ]
     },
     "issue": 29,
-    "scheduled_after": "2026-07-09T11:18:27.543857+00:00",
+    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
     "queue_notified": true
   },
   {
