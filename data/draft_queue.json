@@ -5,31 +5,5 @@
     "url": "https://arxiv.org/abs/2507.04321",
     "source": "arxiv",
     "redo_notes": "populate the items correctly"
-  },
-  {
-    "id": "2607.07253v1",
-    "title": "Manual, Joystick, or Haptic Control? An In Vitro Comparison of Navigation Strategies for Robotic Interventional Neuroradiology Procedures",
-    "abstract": "Objective: To evaluate robotic controller interfaces for interventional neuroradiology procedures in-vitro incorporating a force-sensing platform to assess safety. Methods: A custom endovascular robot, device-mimicking controller, and sensorized neurovascular phantom were developed. Ten interventional neuroradiologists (4 novices, 6 experts) performed simulated navigations using four control modalities: device-mimicking controllers with and without haptic feedback, joystick-based input, and manual navigation. Navigation time, peak vessel-wall forces, incorrect catheterisations, and prolapse events were assessed, alongside user analyses. Results: Manual navigation was fastest (mean 47.7 s) compared to haptic-on (248.7 s), haptic-off (314.7 s), and joystick (392.6 s) modalities (p<0.001). Regardless of controller type, vessel-wall forces were below the 0.70 N puncture threshold; therefore all modalities were considered safe. Joystick produced significantly more prolapse events than manual control (1.56 vs 0.13; p=0.018). Operator experience was relevant to performance: experts made fewer incorrect catheterisations than novices (0.25 vs 0.62; p=0.035) and applied less vessel-wall force (p<0.0005); these effects were sustained across controllers but accentuated when haptics were on. Users perceived haptic on and haptic off as similarly intuitive, and more intuitive than joystick (p=0.033). Conclusion: Device-mimicking robotic controllers outperform joystick interfaces on most metrics; haptic feedback shows promising but non-significant performance benefits.",
-    "authors": [
-      "Benjamin Jackson",
-      "Nikola Fischer",
-      "Harry Robershaw",
-      "Xingyu Chen",
-      "S. H. Hadi Sadati",
-      "Yang Li"
-    ],
-    "url": "https://arxiv.org/abs/2607.07253v1",
-    "source": "arxiv",
-    "score": 6.0
-  },
-  {
-    "id": "rss-6f1532b006",
-    "title": "AURA Foresight Reaches Global XPRIZE Wildfire Finals in Alaska",
-    "abstract": "One of only four teams remaining from more than 130 competitors worldwide, our team AURA Foresight is developing autonomous technology to stop wildfires before they grow out of control. AURA Foresight has been selected as a finalist in the prestigious XPRIZE Wildfire Autonomous Wildfire Response competition, emerging as one of just four teams remaining from [&#8230;]",
-    "authors": [],
-    "url": "https://robohub.org/aura-foresight-reaches-global-xprize-wildfire-finals-in-alaska/",
-    "source": "robohub.org",
-    "item_type": "article",
-    "score": 7.5
   }
 ]
