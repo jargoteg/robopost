@@ -3809,7 +3809,7 @@
         "Open question for anyone working in field inspection or mining: LiDAR maps already exist for a lot of underground and port environments. If this zero-shot generalization holds outside structured roads, the deployment case gets interesting fast. Anyone tested cross-modal localization in GPS-denied…"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T15:00:32.751335+00:00",
     "media": {
       "bsky": [
@@ -3985,5 +3985,86 @@
       ]
     },
     "issue": 56
+  },
+  {
+    "draft_id": "dc0e86a9",
+    "paper": {
+      "id": "rss-2d043c8dc9",
+      "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+      "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578324",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "redo_notes": "",
+      "open_version": "https://arxiv.org/abs/2603.07920",
+      "repo_url": "https://github.com/QiZS-BIT/RLPR",
+      "fig_source": "https://github.com/QiZS-BIT/RLPR"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your LiDAR map is useless in fog. Your radar doesn't know the map.",
+      "commentary": "RLPR tackles a genuinely awkward mismatch: cities have LiDAR maps everywhere, but LiDAR falls apart in rain and fog, and radar doesn't. The clever move is not building new radar maps. Instead, they align a radar query against the existing LiDAR database by stripping both modalities down to shared spatial geometry only, throwing away RCS and Doppler on purpose. The two-stage asymmetric alignment using the radar branch as the anchor, not the LiDAR, is the real contribution and the zero-shot generalization across five datasets is the number that earns attention. Honest caveat: 'five datasets' in autonomous driving often means well-structured urban roads, and the abstract says nothing about performance in truly unstructured or dynamic scenes, which is where weather-resilient sensing matters most.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "LiDAR maps dominate city infrastructure. But LiDAR degrades in fog, rain, and dust. Radar handles adverse weather but can't query a LiDAR map. RLPR asks: what if you didn't need to rebuild the map?"
+        },
+        {
+          "title": "Strip to shared geometry",
+          "body": "RLPR uses a dual-stream network that discards modality-specific signals: no RCS, no Doppler velocity. Only spatial structure is matched. This is what makes it work across both scanning and phased-array radar types."
+        },
+        {
+          "title": "Asymmetric alignment matters",
+          "body": "Radar and LiDAR are not symmetric noise sources. RLPR's TACMA strategy uses the pre-trained radar branch as a discriminative anchor to guide LiDAR alignment, not the other way around. That asymmetry is the paper's key insight."
+        },
+        {
+          "title": "Zero-shot generalization",
+          "body": "Tested on five datasets. State-of-the-art place recognition accuracy with strong zero-shot transfer. No retraining needed for new sensor configurations, which matters if you are switching between radar hardware."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "All five datasets are likely structured urban driving scenes. Adverse weather performance on unstructured or highly dynamic environments, construction zones, flooded roads, is not reported. That is where this needs to be tested next."
+        },
+        {
+          "title": "Why field robotics should care",
+          "body": "Mining haul roads, port yards, and rural autonomy already have partial LiDAR maps. If radar can query those maps reliably in bad weather, you skip a very expensive re-mapping step. That is the deployment argument worth watching."
+        }
+      ],
+      "video_script": "Your city has LiDAR maps everywhere. But LiDAR fails in fog and rain. Radar handles bad weather, but it can't read a LiDAR map. So what do you do? RLPR says: stop trying to match sensors directly. Strip both down to pure spatial geometry. Throw away the RCS, throw away the Doppler. Match only what they share. Then, use an asymmetric alignment that treats radar as the anchor. Five datasets. State-of-the-art. Zero-shot transfer. The question is: does any of this survive a real rainy motorway at 3am?",
+      "caption_instagram": "Your LiDAR map is useless in fog. Your radar doesn't know the map.\n\nRLPR flips the problem. Instead of building new radar maps from scratch, it queries existing LiDAR infrastructure using radar, by stripping both modalities down to shared spatial geometry only. No RCS. No Doppler. Just structure.\n\nThe clever bit is the asymmetric alignment strategy. Radar and LiDAR are not symmetric noise sources, so the authors use the radar branch as the anchor to guide LiDAR alignment, not the reverse. That design choice is what makes zero-shot generalization across five datasets credible.\n\nHonest take: the datasets are almost certainly structured urban scenes. The real test is a flooded construction road or a dusty mining haul route at night. That experiment hasn't been reported yet. But the infrastructure reuse argument is strong, and field autonomy teams should be watching this one.\n\nPaper: RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving. arXiv 2603.07920.\n\n#swarmrobotics #fieldrobotics #autonomousdriving #LiDAR #radarperception #placereception #roboticslocation #sensorFusion",
+      "caption_tiktok": "LiDAR maps exist everywhere. Radar works in fog. RLPR makes them talk to each other without rebuilding anything. Spatial geometry only, no RCS, no Doppler. Zero-shot across five datasets. #robotics #autonomousdriving #LiDAR #radar #fieldrobotics",
+      "post_bluesky": "Your LiDAR map is useless in fog. Radar survives weather but can't query LiDAR infrastructure. RLPR strips both to shared geometry, skips RCS and Doppler, uses asymmetric alignment. Zero-shot across 5 datasets. http://ieeexplore.ieee.org/document/11578324",
+      "bluesky_thread": [
+        "The asymmetric part is the real contribution. Radar and LiDAR aren't symmetric noise sources, so they use the radar branch as the discriminative anchor for alignment, not LiDAR. That design choice drives the zero-shot transfer. Worth reading carefully.",
+        "Caveat: 'five datasets' in autonomous driving usually means tidy urban roads. The deployment case for this is actually mining haul routes, port yards, and flood-prone rural roads. Has anyone tested cross-modal place recognition in genuinely unstructured conditions? Code…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:24:00.073480+00:00",
+    "media": {
+      "figures": [
+        "media/dc0e86a9/fig_00.png"
+      ],
+      "bsky": [
+        "media/dc0e86a9/bsky_00.png",
+        "media/dc0e86a9/bsky_01.png",
+        "media/dc0e86a9/bsky_02.png",
+        "media/dc0e86a9/bsky_03.png"
+      ],
+      "slides": [
+        "media/dc0e86a9/slide_00.png",
+        "media/dc0e86a9/slide_01.png",
+        "media/dc0e86a9/slide_02.png",
+        "media/dc0e86a9/slide_03.png",
+        "media/dc0e86a9/slide_04.png",
+        "media/dc0e86a9/slide_05.png",
+        "media/dc0e86a9/slide_06.png",
+        "media/dc0e86a9/slide_07.png"
+      ]
+    },
+    "issue": 57
   }
 ]
