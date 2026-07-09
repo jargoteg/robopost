@@ -1468,7 +1468,7 @@
         "The part I want to stress-test: 'zero-shot Sim2Real on dexterous bimanual tasks' with no task-level success numbers in the abstract. World models that look right but hallucinate contact physics are a known failure mode. Anyone seen the full results? What tasks did they actually test?"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T05:02:17.306830+00:00",
     "media": {
       "figures": [
@@ -1494,6 +1494,8 @@
         "media/b4c40b4f/slide_07.png"
       ]
     },
-    "issue": 24
+    "issue": 24,
+    "scheduled_after": "2026-07-09T09:30:04.798260+00:00",
+    "queue_notified": true
   }
 ]
