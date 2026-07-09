@@ -223,8 +223,18 @@ def rank_papers(papers: list[dict], cfg) -> list[dict]:
     B = 25
     for lo in range(0, len(papers), B):
         batch = papers[lo:lo + B]
+        depr = [t.lower() for t in cfg["sources"].get("deprioritize_topics", [])]
+
+        def _tag(p):
+            tags = ""
+            if p.get("journal"):
+                tags += " [JOURNAL]"
+            blob = (p.get("title", "") + " " + p.get("abstract", "")).lower()
+            if any(t in blob for t in depr):
+                tags += " [LEARNING-HEAVY?]"
+            return tags
         listing = "\n".join(
-            f"[{i}]{' [JOURNAL]' if p.get('journal') else ''} {p['title']} — {p['abstract'][:300]}"
+            f"[{i}]{_tag(p)} {p['title']} — {p['abstract'][:300]}"
             for i, p in enumerate(batch)
         )
         try:
@@ -252,9 +262,19 @@ def _rank_batch(batch, listing, feedback, conf, boost):
     result = claude_json(
         f"""Today is {__import__('datetime').date.today().isoformat()}.
 You curate papers for a social account about: {cfg['account']['niche']}.
-This account especially values FIELD and INSPECTION robotics (real-world
-deployment: subsea, mining, construction, agriculture, nuclear, search and
-rescue, infrastructure inspection, legged/all-terrain). Score such work higher.
+SCORING PRIORITIES (important):
+BOOST (+2 or more): papers where a REAL PHYSICAL ROBOT does real work,
+especially deployed outside the lab: field robotics, subsea, mining,
+construction, agriculture, nuclear, search and rescue, infrastructure
+inspection, legged/all-terrain, new mechanisms/hardware, field trials,
+long-duration deployments, real-world failure analyses.
+PENALIZE (-2 or more): papers whose contribution is mainly the LEARNING
+METHOD rather than the robot: sim-to-real transfer tricks, sample-efficiency
+improvements, reward shaping, policy architecture tweaks, benchmark chasing,
+simulation-only results. A learning paper only scores well if its headline
+result is demonstrated on real hardware doing a meaningful task in a real
+environment. When in doubt between a hardware/field paper and a learning
+paper, pick the hardware/field paper.
 {journal_note}
 Priority topics: {boost}.
 

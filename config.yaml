@@ -93,6 +93,15 @@ sources:
     - "legged"
     - "all-terrain"
     - "disaster response"
+  deprioritize_topics:                 # ranked LOWER unless real-hardware results
+    - "sim-to-real"
+    - "sample efficiency"
+    - "sample-efficient"
+    - "reward shaping"
+    - "policy learning"
+    - "reinforcement learning benchmark"
+    - "simulation results"
+    - "in simulation"
 
 posting:
   min_gap_minutes: 90                  # spacing between posts; queue drains every 30 min
