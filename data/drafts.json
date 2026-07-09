@@ -2161,7 +2161,7 @@
         "60k accesses in under two weeks. Nature Comms, open access, strong altmetric. This will reach well outside robotics. Which means the insect cyborg ethics question, welfare, consent frameworks, regulatory status, lands in public before the field has agreed on answers. Where do you draw the line on…"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T11:37:21.062782+00:00",
     "media": {
       "figures": [
@@ -2184,7 +2184,9 @@
         "media/96a3dc2e/slide_07.png"
       ]
     },
-    "issue": 32
+    "issue": 32,
+    "scheduled_after": "2026-07-09T13:13:27.521953+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "123b45cc",
@@ -2464,7 +2466,7 @@
         "Honest limit: two real datasets, both relatively controlled. I want to see this on a working inspection ROV after a week subsea with a fouled calibration target and surge-induced motion blur. That is where these pipelines actually live or die. Anyone testing this in the field?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:42:45.066355+00:00",
     "media": {
       "figures": [],
@@ -2539,7 +2541,7 @@
         "But grid-based benchmarks with clean comms are a long way from rubble. If one robot's intention broadcast drops out, the graph is wrong and the policy acts on stale data. Has anyone tested graceful degradation under partial observability here? That's the number I want to see."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:43:13.705496+00:00",
     "media": {
       "figures": [],
@@ -2615,7 +2617,7 @@
         "Caveat: 'real-world large-scale offshore' covers a lot of variation. Sediment plumes, platform motion, transducer degradation at depth, these are where subsea inspection methods usually break. Would love to see ablations on SNR degradation. Anyone working on AUV-mounted versions of this?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:51:15.116454+00:00",
     "media": {
       "figures": [],
@@ -2767,7 +2769,6 @@
     "status": "in_review",
     "created": "2026-07-09T11:52:12.254700+00:00",
     "media": {
-      "figures": [],
       "bsky": [
         "media/4455d4d7/bsky_00.png",
         "media/4455d4d7/bsky_01.png",

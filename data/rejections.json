@@ -33,5 +33,26 @@
     "item_type": "paper",
     "reason": ". No image or video available",
     "date": "2026-07-09"
+  },
+  {
+    "title": "NAS-GS: Noise-Aware Sonar Gaussian Splatting",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "no figure found",
+    "date": "2026-07-09"
+  },
+  {
+    "title": "IAOM: An Intention-Aware Optimization Model With GNN-Based Policy Learning for Dynamic Multi-Robot Cooperative Task Allocation",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": ". No figure found",
+    "date": "2026-07-09"
+  },
+  {
+    "title": "Illumination-Adaptive Ordered Checkerboard Corner Detection for Underwater-Acquired Calibration Images",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "no figure found",
+    "date": "2026-07-09"
   }
 ]
