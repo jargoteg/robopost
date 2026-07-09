@@ -2389,7 +2389,7 @@
         "Caveat: evaluation leans heavily on synthetic data. Field robots deal with sensor dropout, vibration, and packet loss. Has anyone actually run continuous-time SLAM through those failure modes on a real AUV or mining platform? Genuinely asking."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:42:14.917236+00:00",
     "media": {
       "figures": [],
