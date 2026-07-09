@@ -1,0 +1,27 @@
+name: Instant ack
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened]
+permissions:
+  issues: write
+# NO concurrency group and no checkout: this must always fire within seconds,
+# independent of the state-locked review workflow.
+jobs:
+  eyes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: React with eyes
+        env:
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
+            URL="${{ github.event.comment.url }}/reactions"
+          else
+            URL="${{ github.event.issue.url }}/reactions"
+          fi
+          curl -s -o /dev/null -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "$URL" -d '{"content":"eyes"}'

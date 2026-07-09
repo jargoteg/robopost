@@ -122,6 +122,30 @@ def handle_event():
         if not d or assoc not in ALLOWED or d["status"] != "in_review":
             print("Comment ignored (no matching draft / not authorized).")
             return
+        mark_processed(ev["comment"].get("id"))
+        apply_command(d, text, num)
+        save_json("drafts.json", drafts)
+
+    elif ev.get("action") == "opened" and "issue" in ev:  # manual item add
+        handle_new_issue(ev["issue"])
+
+
+def mark_processed(cid):
+    if not cid:
+        return
+    st = load_json("state.json", {})
+    done = st.get("processed_comments", [])
+    if cid not in done:
+        done.append(cid)
+    st["processed_comments"] = done[-500:]
+    save_json("state.json", st)
+
+
+def is_processed(cid):
+    return cid in load_json("state.json", {}).get("processed_comments", [])
+
+
+def apply_command(d, text, num):
         if re.match(r"/approve\b", text):
             d["status"] = "approved"
             comment(num, "✅ Approved — posting now. Results will follow here.")
@@ -151,8 +175,7 @@ def handle_event():
                          "will appear here in a few minutes.")
             close(num)
 
-    elif ev.get("action") == "opened" and "issue" in ev:  # manual item add
-        issue = ev["issue"]
+def handle_new_issue(issue):
         if "[bot]" in issue["user"]["login"]:
             return
         if any(lb["name"] == "draft" for lb in issue.get("labels", [])):
@@ -175,8 +198,6 @@ def handle_event():
                          "arXiv link, or any article URL (Nature, IEEE Spectrum, "
                          "blog...). Optionally add a YouTube link and notes.")
         close(num)
-
-    save_json("drafts.json", drafts)
 
 
 def resolve_item(title: str, body: str):
@@ -307,5 +328,35 @@ def finalize():
     save_json("drafts.json", drafts)
 
 
+def sweep():
+    """Scheduled safety net: process any command comments on open draft
+    issues that the instant run missed (e.g. cancelled by concurrency)."""
+    drafts = load_json("drafts.json", [])
+    by_issue = {d.get("issue"): d for d in drafts if d.get("issue")}
+    open_issues = gh("GET", "?labels=draft&state=open&per_page=50") or []
+    acted = 0
+    for issue in open_issues:
+        num = issue["number"]
+        d = by_issue.get(num)
+        if not d or d["status"] != "in_review":
+            continue
+        comments = gh("GET", f"/{num}/comments?per_page=30") or []
+        for c in comments:
+            text = (c.get("body") or "").strip()
+            if not text.startswith("/"):
+                continue
+            if c.get("author_association") not in ALLOWED:
+                continue
+            if is_processed(c.get("id")):
+                continue
+            mark_processed(c.get("id"))
+            print(f"Sweep: processing missed command on #{num}: {text[:40]}")
+            apply_command(d, text, num)
+            acted += 1
+            break
+    save_json("drafts.json", drafts)
+    print(f"Sweep done, {acted} missed command(s) processed.")
+
+
 if __name__ == "__main__":
-    {"create": create_issues, "handle": handle_event, "finalize": finalize}[sys.argv[1]]()
+    {"create": create_issues, "handle": handle_event, "finalize": finalize, "sweep": sweep}[sys.argv[1]]()
