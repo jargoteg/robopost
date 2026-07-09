@@ -1735,7 +1735,7 @@
         "54% absolute task success is modest. And we don't know how SBR holds up on higher-DOF hands or outside this lab's setup. Worth replicating before treating this as the settled answer. What retargeting baseline are you using right now?"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T08:40:46.870252+00:00",
     "media": {
       "figures": [
@@ -1763,7 +1763,9 @@
     },
     "issue": 27,
     "scheduled_after": "2026-07-09T15:09:35.010876+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "7a483f84",
@@ -1932,7 +1934,7 @@
       ]
     },
     "issue": 29,
-    "scheduled_after": "2026-07-09T15:09:35.010876+00:00",
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
     "queue_notified": true
   },
   {
@@ -2187,7 +2189,7 @@
       ]
     },
     "issue": 32,
-    "scheduled_after": "2026-07-09T15:09:35.010876+00:00",
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
     "queue_notified": true
   },
   {
@@ -2795,7 +2797,9 @@
         "media/4455d4d7/fig_03.png"
       ]
     },
-    "issue": 40
+    "issue": 40,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "71cb2c94",
@@ -3015,7 +3019,9 @@
         "media/f76ab756/fig_03.png"
       ]
     },
-    "issue": 44
+    "issue": 44,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "c8db1744",
@@ -3183,7 +3189,9 @@
         "media/e18a70da/slide_07.png"
       ]
     },
-    "issue": 46
+    "issue": 46,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "a028df39",
@@ -4063,7 +4071,9 @@
         "media/dc0e86a9/slide_07.png"
       ]
     },
-    "issue": 57
+    "issue": 57,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "17aa3741",
@@ -4221,7 +4231,9 @@
         "media/b99963f0/slide_07.png"
       ]
     },
-    "issue": 59
+    "issue": 59,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "c563ba4d",
@@ -4304,7 +4316,9 @@
         "media/c563ba4d/slide_07.png"
       ]
     },
-    "issue": 60
+    "issue": 60,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "d95c941b",
@@ -4466,7 +4480,9 @@
         "media/ea170559/slide_07.png"
       ]
     },
-    "issue": 62
+    "issue": 62,
+    "scheduled_after": "2026-07-09T17:53:03.984923+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "488145e6",
@@ -4521,7 +4537,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T15:52:56.568516+00:00",
     "media": {
       "bsky": [
@@ -4542,5 +4558,239 @@
       ]
     },
     "issue": 63
+  },
+  {
+    "draft_id": "46e4bdc5",
+    "paper": {
+      "id": "rss-529a86340f",
+      "title": "PACE: Power-Aware Compliance via Hardware Energy Tanks",
+      "abstract": "Admittance control enables safe physical human-robot interaction (pHRI), but on battery-powered manipulators it creates a hidden crisis: conventional stability proofs guarantee passivity in theory yet permit instantaneous power bursts exceeding 200 W that drain batteries nonlinearly, trip thermal-protection circuits, and collapse joint velocity loops under voltage sag. We present PACE (Power-Aware Compliance Engine), a certifiably-stable admittance controller that co-designs interaction compliance with a real-time power budget. PACE introduces a hardware energy tank, a Lyapunov-certified scalar state integrated on FPGA at 50 kHz, that continuously modulates the admittance stiffness and damping matrices to keep instantaneous draw below a user-specified budget $P_{\\max }$ while preserving interaction quality. We prove PACE renders the closed-loop system passive with respect to a modified storage function even when the budget saturates, and we establish a formal sampled-data stability result showing that Euler integration of the tank state at sampling period $T_{s}$ preserves the passivity certificate provided $T_{s} \\leq \\lambda _{\\min }(\\mathbf {D}_{d}^{\\min }) / (2L_{K} L_{v} + \\gamma L_{P})$, where $L_{K}$, $L_{v}$, and $L_{P}$ bound the compliance rate, peak end-effector velocity, and power Lipschitz constant respectively; at 50 kHz ($T_{s}\\!=\\!20\\,\\mu$s) this condition is satisfied with a margin of $4.1\\,\\times$. Experiments on a battery-powered 7-DOF Kinova Gen3 arm demon",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576558",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.3
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "200 W power spikes are killing battery-powered robot arms mid-task.",
+      "commentary": "PACE is a clever co-design: instead of bolting a power limiter on top of an admittance controller, the authors bake the power budget directly into the Lyapunov stability proof via a hardware energy tank running on FPGA at 50 kHz. The sampled-data stability result is the real contribution, with a 4.1x margin at 20 microsecond sampling. Honest caveat: everything is on one Kinova Gen3 arm in lab conditions, so whether the budget logic holds when battery internal resistance drifts at end-of-charge or in thermal soak is an open question. Still, this is the kind of paper that should be required reading before anyone deploys a collaborative arm on a mobile platform.",
+      "slides": [
+        {
+          "title": "The hidden battery crisis",
+          "body": "Standard admittance controllers are passivity-certified in theory. In practice they produce instantaneous draws above 200 W, tripping thermal protection and collapsing joint velocity loops under voltage sag."
+        },
+        {
+          "title": "PACE: the fix",
+          "body": "Power-Aware Compliance Engine modulates admittance stiffness and damping matrices in real time to keep draw below a user-set P_max budget. Budget and stability are co-designed, not bolted together."
+        },
+        {
+          "title": "The energy tank on FPGA",
+          "body": "A Lyapunov-certified scalar state integrates at 50 kHz on FPGA. At 20 microsecond sampling, the passivity certificate is satisfied with a 4.1x margin. That headroom matters for real hardware."
+        },
+        {
+          "title": "Formal sampled-data result",
+          "body": "Stability holds provided Ts is at or below lambda_min(D_d_min) / (2*L_K*L_v + gamma*L_P). Authors bound all three Lipschitz constants and show the condition holds comfortably at 50 kHz."
+        },
+        {
+          "title": "What's not tested yet",
+          "body": "One 7-DOF Kinova Gen3, controlled lab conditions. Battery internal resistance drift at end-of-charge and thermal soak are not addressed. Field deployment on mobile manipulators remains an open question."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Mobile manipulators, inspection arms, assistive robots: they all run on batteries. Power-aware compliance is a prerequisite for real deployment. PACE gives a principled, certifiable path to get there."
+        }
+      ],
+      "video_script": "Battery-powered robot arms have a dirty secret. Admittance controllers, the ones that make robots safe to touch, can spike over 200 watts instantaneously. That drains your battery nonlinearly, trips thermal cutouts, and crashes velocity loops. PACE solves this by weaving the power budget directly into the stability proof. A hardware energy tank on FPGA runs at 50 kilohertz and keeps the draw below whatever limit you set, with a 4.1 times margin in the stability certificate. It's certifiable compliance that actually respects your power rail. So here's the question: why aren't all collaborative arm controllers doing this?",
+      "caption_instagram": "200 W instantaneous spikes from a safety controller. On a battery-powered arm. That's the problem PACE is fixing.\n\nAdmittance control makes robots safe for humans to work alongside. But on battery-powered manipulators, standard passivity proofs don't say anything about peak power draw. The result: thermal trips, voltage sag, collapsed velocity loops, mid-task failures.\n\nPACE co-designs the power budget with the Lyapunov stability certificate. A hardware energy tank runs on FPGA at 50 kHz and continuously modulates stiffness and damping matrices to keep draw below P_max. The sampled-data stability result shows a 4.1x margin at 20 microsecond sampling. That's not just a proof, that's real headroom.\n\nCaveat: one Kinova Gen3 arm, lab conditions. Battery aging, thermal soak, and end-of-charge resistance drift are all untested. But for anyone building mobile or inspection manipulators, this is the kind of principled foundation you actually need before you go to the field.\n\nPaper: PACE: Power-Aware Compliance via Hardware Energy Tanks, IEEE Xplore 11576558\n\n#swarmrobotics #fieldrobotics #manipulators #humanrobotinteraction #embeddedcontrol #mobilemanipulator #roboticsinspection",
+      "caption_tiktok": "Your safe robot arm can spike 200 W and kill its own battery. PACE fixes that with a certifiable power budget baked into the stability proof. 50 kHz, FPGA, 4.1x margin. This is how you actually deploy collaborative arms in the field.\n#robotics #fieldrobotics #manipulators #controlsystems",
+      "post_bluesky": "200 W instantaneous spikes from a passivity-certified admittance controller. On a battery. PACE bakes the power budget into the Lyapunov proof via a 50 kHz FPGA energy tank, 4.1x stability margin. Finally someone did this properly. http://ieeexplore.ieee.org/document/11576558",
+      "bluesky_thread": [
+        "The sampled-data stability result is the part worth reading carefully. They bound three Lipschitz constants and show the passivity certificate survives 20 microsecond Euler integration with margin. That's not hand-waving. That's deployable.",
+        "Honest gap: one Kinova Gen3, controlled lab. Battery resistance drifts as cells age and temperature swings. Does P_max still hold on a mobile inspection arm after 200 charge cycles? That's the experiment I want to see next. Anyone working on this?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T16:21:47.832984+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/46e4bdc5/bsky_00.png",
+        "media/46e4bdc5/bsky_01.png",
+        "media/46e4bdc5/bsky_02.png",
+        "media/46e4bdc5/bsky_03.png"
+      ],
+      "slides": [
+        "media/46e4bdc5/slide_00.png",
+        "media/46e4bdc5/slide_01.png",
+        "media/46e4bdc5/slide_02.png",
+        "media/46e4bdc5/slide_03.png",
+        "media/46e4bdc5/slide_04.png",
+        "media/46e4bdc5/slide_05.png",
+        "media/46e4bdc5/slide_06.png",
+        "media/46e4bdc5/slide_07.png"
+      ]
+    },
+    "issue": 64
+  },
+  {
+    "draft_id": "a4df015a",
+    "paper": {
+      "id": "rss-2463dcc607",
+      "title": "Surface-Conforming Modular Jamming Pads for Enhanced Contact and Friction",
+      "abstract": "Granular jamming has been widely explored for adaptive robotic grasping, but conventional designs typically rely on single spherical jamming structures that limit contact distribution and modularity. This paper presents a flexure-based robotic gripper integrating modular square-shaped granular jamming pads as distributed adaptive contact interfaces. The design combines structural compliance from paired-Crossed Flexural Hinges (p-CFH) with material compliance from granular jamming, enabling passive surface conformity while improving frictional coupling and pad maintainability. Systematic experiments analyze the influence of pad geometry, granular material, gap distance, pad height, and vacuum pressure on grasp performance. Results show that the proposed square pad achieves 280% higher grip force than a spherical pad, while providing stable jamming behavior with EPDM granules. Compared with silicone pads, the jamming pad produces 30% higher friction and 197% larger contact area under identical loading conditions. Additional experiments further demonstrate robust grasping under varying contact orientations, positional offsets, and fragile objects. These results demonstrate that modular granular-jamming pads can serve as effective distributed contact interfaces for multi-finger robotic grippers.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576639",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.1
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "280% more grip force. Square beats sphere.",
+      "commentary": "This paper takes granular jamming, which everyone uses in blob form, and asks what happens when you make the pads square, modular, and replaceable. The answer is a 280% grip force increase over spherical pads and 197% more contact area versus silicone, driven by better surface conformity from paired crossed flexural hinges. The EPDM granule result is practically useful, since material choice is often treated as an afterthought. Honest caveat: all results are benchtop, and granular jamming systems are notoriously sensitive to puncture and granule migration in dirty or abrasive environments, exactly where higher grip force would actually matter.",
+      "slides": [
+        {
+          "title": "Square pad vs. sphere",
+          "body": "Modular square granular jamming pads produce 280% higher grip force than conventional spherical pads. Geometry, not just material, drives the gain."
+        },
+        {
+          "title": "How conformity works here",
+          "body": "Paired crossed flexural hinges (p-CFH) provide structural compliance. Granular jamming adds material compliance. Together they passively match irregular surfaces without active sensing."
+        },
+        {
+          "title": "Why EPDM granules?",
+          "body": "Systematic tests across pad geometry, granule material, gap distance, height, and vacuum pressure. EPDM granules gave stable jamming behavior. Material choice is not arbitrary."
+        },
+        {
+          "title": "Versus silicone pads",
+          "body": "Same loading conditions: jamming pad yields 30% higher friction and 197% larger contact area than silicone. Contact distribution, not just force, matters for fragile objects."
+        },
+        {
+          "title": "Modularity is the underrated part",
+          "body": "Pads are replaceable. In real deployments, worn or torn contact surfaces are a maintenance bottleneck. Modular design directly addresses that without redesigning the gripper."
+        },
+        {
+          "title": "The field question",
+          "body": "Benchtop results are clean. Granular jamming fails when membranes puncture or granules migrate in grit and dust. The next test is not the lab."
+        }
+      ],
+      "video_script": "Everyone doing granular jamming uses a sphere. This paper asks: what if you went square instead? The result is 280% more grip force, nearly double the contact area versus silicone, and pads you can actually swap out when they wear. The mechanism is clever: flexural hinges handle structural compliance, the jamming pad handles material compliance, and they work passively. No extra sensors. The real question is membrane durability in dirty conditions. Benchtop numbers are promising. Would you trust this on a gripper in a mining or food-handling environment?",
+      "caption_instagram": "280% more grip force. Just from changing the pad shape.\n\nThis paper on granular jamming grippers does something simple that most designs skip: it tests square modular pads instead of the standard sphere, pairs them with crossed flexural hinges for passive conformity, and runs systematic experiments on geometry, granule material, vacuum pressure, and gap distance.\n\nThe numbers are hard to ignore. Square pad over spherical pad: 280% grip force increase. Versus silicone under the same load: 30% higher friction, 197% more contact area. EPDM granules came out on top for stable jamming behavior.\n\nThe part I find genuinely useful is the modularity angle. Worn contact surfaces kill gripper uptime in real deployments. Swappable pads are a practical fix, not a demo-day feature.\n\nHonest caveat: every result here is benchtop. Granular jamming membranes puncture. Granules migrate in grit. The performance gap between lab and field for these systems can be significant. Worth watching where this goes in uncontrolled environments.\n\nPaper: Surface-Conforming Modular Jamming Pads for Enhanced Contact and Friction. IEEE Xplore ieeexplore.ieee.org/document/11576639\n\n#swarmotics #robotics #grippers #granularjamming #softrobotics #manipulators #fieldrobotics",
+      "caption_tiktok": "Square granular jamming pads: 280% more grip than a sphere. The shape change alone did that. #robotics #gripper #softrobotics #engineeringdesign",
+      "post_bluesky": "280% more grip force. Just from going square instead of spherical on granular jamming pads. Modular, swappable, passively conforming via flexural hinges. EPDM granules, 197% more contact area than silicone. Benchtop numbers are real. Field durability is…\nhttp://ieeexplore.ieee.org/document/11576639",
+      "bluesky_thread": [
+        "The modularity angle is underrated. Granular jamming membranes wear and puncture. Most gripper papers ignore maintenance entirely. Swappable pads are a practical design choice, not a footnote. That alone changes the deployment story.",
+        "Honest concern: every number here is benchtop. Granule migration and membrane failure in grit or dust are real failure modes that rarely show up in lab tests. Who is running these in genuinely dirty conditions? That is the result I want to see."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T16:22:17.028272+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/a4df015a/bsky_00.png",
+        "media/a4df015a/bsky_01.png",
+        "media/a4df015a/bsky_02.png",
+        "media/a4df015a/bsky_03.png"
+      ],
+      "slides": [
+        "media/a4df015a/slide_00.png",
+        "media/a4df015a/slide_01.png",
+        "media/a4df015a/slide_02.png",
+        "media/a4df015a/slide_03.png",
+        "media/a4df015a/slide_04.png",
+        "media/a4df015a/slide_05.png",
+        "media/a4df015a/slide_06.png",
+        "media/a4df015a/slide_07.png"
+      ]
+    },
+    "issue": 65
+  },
+  {
+    "draft_id": "81f7b766",
+    "paper": {
+      "id": "rss-79d30792dc",
+      "title": "Learning Visually Interpretable Oscillator Networks for Soft Continuum Robots From Video",
+      "abstract": "Learning soft continuum robot (SCR) dynamics from video offers flexibility but existing methods lack interpretability or rely on prior assumptions. Model-based approaches require prior knowledge and manual design. We bridge this gap by introducing: (1) The Attention Broadcast Decoder (ABCD), a plug-and-play module for autoencoder-based latent dynamics learning that generates pixel-accurate attention maps localizing each latent dimension’s contribution while filtering static backgrounds, enabling visual interpretability via spatially grounded latents and on-image overlays. (2) Visual Oscillator Networks (VONs), a 2D latent oscillator network coupled to ABCD attention maps for on-image visualization of learned masses, coupling stiffness, and forces, thereby enabling mechanical interpretability. We validate our approach on single- and double-segment SCRs, demonstrating that ABCD-based models significantly improve multi-step prediction accuracy with 5.8× error reduction for Koopman operators and 3.5× for oscillator networks on a two-segment robot. VONs autonomously discover a chain structure of oscillators. This fully data-driven approach yields compact, mechanically interpretable models with potential relevance for future control applications.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560904",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2511.18322",
+      "repo_url": "https://github.com/UThenrik/visual_oscillators_for_SCR",
+      "video_url": "https://www.youtube.com/watch?v=i80H8erVISM",
+      "fig_source": "https://github.com/UThenrik/visual_oscillators_for_SCR"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "5.8x error reduction. No robot model required. Just video.",
+      "commentary": "This paper tackles a real pain point: soft continuum robots are notoriously hard to model analytically, so the team learns dynamics purely from video using a new attention decoder and a latent oscillator network. The 5.8x Koopman error reduction and autonomous discovery of a chain oscillator topology are genuinely impressive. What I find clever is ABCD, it spatially grounds each latent dimension on the actual image, so you can see what the model is paying attention to. Honest caveat: validation is on lab benchtop SCRs with clean lighting and controlled backgrounds, the 'filtering static backgrounds' claim will face a real test in unstructured field settings. The path from interpretable model to closed-loop control is flagged as future work, which is where the hard part starts.",
+      "slides": [
+        {
+          "title": "The problem with soft robots",
+          "body": "Soft continuum robots deform in ways rigid-body models can't capture. Physics-based models need manual design. Data-driven models are black boxes. This paper tries to be neither."
+        },
+        {
+          "title": "Learn dynamics from video only",
+          "body": "No force sensors, no motion capture, no hand-coded kinematics. A camera feed plus an autoencoder-based latent model is the full input pipeline."
+        },
+        {
+          "title": "ABCD: attention you can look at",
+          "body": "The Attention Broadcast Decoder generates pixel-accurate maps showing which image region drives each latent dimension. You see what the model learned, on the image, as an overlay."
+        },
+        {
+          "title": "Visual Oscillator Networks",
+          "body": "VONs model latent dynamics as a 2D mass-spring network. Masses, stiffness, and forces are visualized directly on the robot image. The network autonomously recovered a chain topology."
+        },
+        {
+          "title": "5.8x and 3.5x error cuts",
+          "body": "On a two-segment SCR, ABCD reduced Koopman multi-step prediction error 5.8x and oscillator network error 3.5x versus baselines. Single-segment results are consistent."
+        },
+        {
+          "title": "Gap to close before deployment",
+          "body": "All validation is benchtop, clean background, controlled lighting. Closed-loop control is future work. Interpretability is proven. Whether it survives a real manipulation task is still open."
+        }
+      ],
+      "video_script": "Soft continuum robots are a modelling nightmare. They bend, stretch, and deform in ways no clean equation captures. This team skipped the equations entirely. They learn the dynamics from video, no sensors, no priors. Their attention decoder pins each latent variable to a specific spot on the robot image. You can literally watch the model think. And their oscillator network autonomously figured out the robot has a chain structure. 5.8 times lower prediction error than a Koopman baseline. The catch: every test was in a clean lab. So the question is: does interpretability survive the real world?",
+      "caption_instagram": "5.8x prediction error reduction on a soft robot. From video alone.\n\nSoft continuum robots are the manipulation community's favourite hard problem. They flex and deform in ways rigid-body dynamics simply can't track, and hand-coded models require expert knowledge per robot design.\n\nThis paper introduces two things worth paying attention to. First, ABCD, an attention decoder that spatially grounds each latent dimension onto the actual image frame. You see which pixels drive which model states. Second, Visual Oscillator Networks, which represent learned dynamics as a mass-spring system visualized directly on the robot, and autonomously recover a chain oscillator topology with no supervision.\n\nThe numbers: 5.8x Koopman error reduction and 3.5x oscillator error reduction on a two-segment SCR. Compact, interpretable, fully data-driven.\n\nCaveat I keep thinking about: all tests are benchtop, controlled lighting, static backgrounds. The paper flags closed-loop control as future work. Interpretability is demonstrated. Deployment readiness is a separate question.\n\nPaper: Learning Visually Interpretable Oscillator Networks for Soft Continuum Robots From Video, arXiv:2511.18322\n\n#softrobotics #continuumrobots #robotlearning #latentdynamics #interpretableAI #roboticresearch #controlsystems",
+      "caption_tiktok": "5.8x better predictions. No robot model. Just a camera. Soft robot dynamics learned from video and you can SEE what it learned. #softrobotics #robotics #machinelearning #robotresearch",
+      "post_bluesky": "5.8x error cut on soft robot dynamics. No model, no sensors, just video. The attention maps show you exactly which pixels drive each latent state. Clever. http://ieeexplore.ieee.org/document/11560904",
+      "bluesky_thread": [
+        "The genuinely interesting part: their oscillator network autonomously recovered a chain topology for a two-segment robot. No one told it the robot had segments. That kind of structure emergence from pure video data is worth watching carefully.",
+        "Honest flag: every test is benchtop, clean lighting, controlled background. The paper says control applications are future work. So right now you have an interpretable model. Whether it holds in messy real conditions is the actual open question. What do you think breaks first, the attention maps…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T16:22:48.651771+00:00",
+    "media": {
+      "figures": [
+        "media/81f7b766/fig_00.png"
+      ],
+      "bsky": [
+        "media/81f7b766/bsky_00.png",
+        "media/81f7b766/bsky_01.png",
+        "media/81f7b766/bsky_02.png",
+        "media/81f7b766/bsky_03.png"
+      ],
+      "slides": [
+        "media/81f7b766/slide_00.png",
+        "media/81f7b766/slide_01.png",
+        "media/81f7b766/slide_02.png",
+        "media/81f7b766/slide_03.png",
+        "media/81f7b766/slide_04.png",
+        "media/81f7b766/slide_05.png",
+        "media/81f7b766/slide_06.png",
+        "media/81f7b766/slide_07.png"
+      ]
+    },
+    "issue": 66
   }
 ]

@@ -1,36 +1,36 @@
 [
   {
-    "id": "rss-529a86340f",
-    "title": "PACE: Power-Aware Compliance via Hardware Energy Tanks",
-    "abstract": "Admittance control enables safe physical human-robot interaction (pHRI), but on battery-powered manipulators it creates a hidden crisis: conventional stability proofs guarantee passivity in theory yet permit instantaneous power bursts exceeding 200 W that drain batteries nonlinearly, trip thermal-protection circuits, and collapse joint velocity loops under voltage sag. We present PACE (Power-Aware Compliance Engine), a certifiably-stable admittance controller that co-designs interaction compliance with a real-time power budget. PACE introduces a hardware energy tank, a Lyapunov-certified scalar state integrated on FPGA at 50 kHz, that continuously modulates the admittance stiffness and damping matrices to keep instantaneous draw below a user-specified budget $P_{\\max }$ while preserving interaction quality. We prove PACE renders the closed-loop system passive with respect to a modified storage function even when the budget saturates, and we establish a formal sampled-data stability result showing that Euler integration of the tank state at sampling period $T_{s}$ preserves the passivity certificate provided $T_{s} \\leq \\lambda _{\\min }(\\mathbf {D}_{d}^{\\min }) / (2L_{K} L_{v} + \\gamma L_{P})$, where $L_{K}$, $L_{v}$, and $L_{P}$ bound the compliance rate, peak end-effector velocity, and power Lipschitz constant respectively; at 50 kHz ($T_{s}\\!=\\!20\\,\\mu$s) this condition is satisfied with a margin of $4.1\\,\\times$. Experiments on a battery-powered 7-DOF Kinova Gen3 arm demon",
+    "id": "rss-d80f13ec6f",
+    "title": "Continuum Robot State Estimation With Actuation Uncertainty",
+    "abstract": "Continuum robots are flexible, slender manipulators well suited for confined surgical environments. In these settings, unknown interaction forces and model uncertainty significantly affect robot shape, motivating state estimation from external observations. Existing estimation methods either neglect actuation modeling or rely on simplified deterministic actuation models. In contrast, we jointly estimate robot shape, external loads, and actuation inputs using mechanically principled actuation priors. To achieve this, we present a discrete Cosserat rod formulation with piecewise-linear strain integration that provides high numerical accuracy while inducing a sparse factor graph structure for efficient nonlinear optimization. We extend the framework to tendon-driven and parallel robots in simulation and validate it experimentally on a surgical concentric tube robot. Overall, our approach enables principled real-time estimation across multiple robot architectures while providing direct access to manipulator Jacobians through the linearized factor graph.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11576558",
+    "url": "http://ieeexplore.ieee.org/document/11560916",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "journal": true,
+    "score": 7.7
+  },
+  {
+    "id": "rss-810ba0995c",
+    "title": "SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation",
+    "abstract": "Learning transferable visuomotor imitation policies that generalize across diverse manipulation tasks and adapt rapidly to new tasks from only a handful of demonstrations remains challenging. Most modern policies are trained end-to-end to map observations directly to low-level actions, offering little explicit structure for reusing and recombining behaviors across tasks and making transfer data-inefficient under limited supervision. We propose SkillPlug, a plug-in framework that augments an existing visuomotor policy with a skill-conditioning module and mines a shared, transferable skill library from raw multi-task demonstrations. SkillPlug learns skills via self-supervised objectives that promote compact, reusable, and non-redundant behavior-level primitives, forming a task-shared prior for compositional control. After skill mining, we keep the learned skills fixed and specialize to unseen tasks by fine-tuning only lightweight router and action head, enabling efficient adaptation without full end-to-end retraining. We evaluate SkillPlug on two simulation benchmarks and on a real robot, and observe that the mined transferable skills consistently improve both multi-task performance and few-shot adaptation. Overall, SkillPlug offers a scalable way to mine reusable skills that improve data-efficient generalization in robotic manipulation.",
+    "authors": [],
+    "url": "http://ieeexplore.ieee.org/document/11568506",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "journal": true,
+    "score": 7.5
+  },
+  {
+    "id": "rss-a8b4daf213",
+    "title": "FIRE-Grasp: Failure-Informed Regrasping With Multimodal Evidence",
+    "abstract": "Robotic grasping represents a fundamental capability for autonomous manipulation, yet real-world deployments continue to exhibit significant failure rates, undermining operational reliability. Ensuring operational continuity and minimizing risk necessitate effective failure recovery mechanisms, making regrasping after grasp failure a critical capability. Prior approaches either operate in an open-loop manner that ignores post-failure recovery or develop multimodal failure perception models that fail to translate diagnostic insights into executable regrasp actions. Consequently, a persistent gap exists between the rich multimodal evidence captured during execution and the low-level, actionable decisions required for reliable regrasping in real-world deployments. In this paper, we propose FIRE-Grasp (Failure-Informed Regrasping with multimodal Evidence), a closed-loop regrasping framework that converts first-attempt multimodal failure feedback into executable regrasp corrections, which comprises (i) FIRE-Net, a multimodal failure diagnosis network that outputs a structured Failure Feedback Vector encoding both the predicted failure type and temporally localized event evidence, along with global reliability estimates; and (ii) FIRE-Adapter, which maps FFV to planner-consumable corrections via risk-aware candidate re-ranking and conservative low-dimensional execution-parameter updates. To enable fine-grained failure diagnosis, FailGrasp, a real-world dataset of 2,428 grasp failur",
+    "authors": [],
+    "url": "http://ieeexplore.ieee.org/document/11576551",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
     "score": 7.3
-  },
-  {
-    "id": "rss-2463dcc607",
-    "title": "Surface-Conforming Modular Jamming Pads for Enhanced Contact and Friction",
-    "abstract": "Granular jamming has been widely explored for adaptive robotic grasping, but conventional designs typically rely on single spherical jamming structures that limit contact distribution and modularity. This paper presents a flexure-based robotic gripper integrating modular square-shaped granular jamming pads as distributed adaptive contact interfaces. The design combines structural compliance from paired-Crossed Flexural Hinges (p-CFH) with material compliance from granular jamming, enabling passive surface conformity while improving frictional coupling and pad maintainability. Systematic experiments analyze the influence of pad geometry, granular material, gap distance, pad height, and vacuum pressure on grasp performance. Results show that the proposed square pad achieves 280% higher grip force than a spherical pad, while providing stable jamming behavior with EPDM granules. Compared with silicone pads, the jamming pad produces 30% higher friction and 197% larger contact area under identical loading conditions. Additional experiments further demonstrate robust grasping under varying contact orientations, positional offsets, and fragile objects. These results demonstrate that modular granular-jamming pads can serve as effective distributed contact interfaces for multi-finger robotic grippers.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11576639",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 7.1
-  },
-  {
-    "id": "rss-79d30792dc",
-    "title": "Learning Visually Interpretable Oscillator Networks for Soft Continuum Robots From Video",
-    "abstract": "Learning soft continuum robot (SCR) dynamics from video offers flexibility but existing methods lack interpretability or rely on prior assumptions. Model-based approaches require prior knowledge and manual design. We bridge this gap by introducing: (1) The Attention Broadcast Decoder (ABCD), a plug-and-play module for autoencoder-based latent dynamics learning that generates pixel-accurate attention maps localizing each latent dimension’s contribution while filtering static backgrounds, enabling visual interpretability via spatially grounded latents and on-image overlays. (2) Visual Oscillator Networks (VONs), a 2D latent oscillator network coupled to ABCD attention maps for on-image visualization of learned masses, coupling stiffness, and forces, thereby enabling mechanical interpretability. We validate our approach on single- and double-segment SCRs, demonstrating that ABCD-based models significantly improve multi-step prediction accuracy with 5.8× error reduction for Koopman operators and 3.5× for oscillator networks on a two-segment robot. VONs autonomously discover a chain structure of oscillators. This fully data-driven approach yields compact, mechanically interpretable models with potential relevance for future control applications.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11560904",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 7.0
   },
   {
     "id": "2507.04321",

@@ -192,5 +192,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "1da23089",
+    "paper_id": "2607.07491v1",
+    "title": "Smooth Operator: A Real-Time Sampling-Based Algorithm for Kinematic Hand Retargeting",
+    "format": "carousel",
+    "hook": "Your teleoperation data is only as good as your retargeter.",
+    "posted_at": "2026-07-09T16:23:03.984928+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqa26x6iv42f",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
