@@ -3652,7 +3652,7 @@
         "The limit I'd push on: single-DOF means height adaptation only, and all tests assume reasonably known geometry. Post-earthquake rubble or flooded ducts won't cooperate. How robust is the grayscale encoding when your ceiling height sensor is noisy? That's the real field question."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:42:35.300511+00:00",
     "media": {
       "bsky": [
