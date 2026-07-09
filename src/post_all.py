@@ -56,6 +56,21 @@ def post_bluesky(draft, cfg):
             print(f"Bluesky video upload failed, using images: {e}")
 
     text = draft["content"]["post_bluesky"][:300]
+    # idempotency against Bluesky itself: if a recent post has this same text,
+    # the draft already went out (state was lost in a race) — do NOT repost
+    try:
+        feed = requests.get(f"{base}/app.bsky.feed.getAuthorFeed",
+                            params={"actor": did, "limit": 30},
+                            headers=H, timeout=30).json()
+        probe = text[:60]
+        for item in feed.get("feed", []):
+            prev = (item.get("post", {}).get("record", {}).get("text") or "")
+            if probe and prev[:60] == probe:
+                uri = item["post"]["uri"]
+                print(f"Bluesky: identical recent post exists ({uri}); skipping repost.")
+                return uri
+    except Exception as e:
+        print(f"Dedup check failed (posting anyway): {e}")
     record = {
         "$type": "app.bsky.feed.post", "text": text,
         "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),

@@ -1,0 +1,32 @@
+name: Cleanup duplicate Bluesky posts
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run shows what would be deleted; delete removes duplicates (keeps oldest)"
+        type: choice
+        options: [dry-run, delete]
+        default: dry-run
+permissions:
+  contents: read
+concurrency: robopost-data
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Find (and optionally delete) duplicates
+        env:
+          BLUESKY_HANDLE: "${{ secrets.BLUESKY_HANDLE }}"
+          BLUESKY_APP_PASSWORD: "${{ secrets.BLUESKY_APP_PASSWORD }}"
+        run: |
+          if [ "${{ inputs.mode }}" = "delete" ]; then
+            python src/cleanup_bluesky.py delete
+          else
+            python src/cleanup_bluesky.py
+          fi

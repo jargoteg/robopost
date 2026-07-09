@@ -11,7 +11,7 @@ permissions:
   contents: write
   issues: write
   actions: write
-concurrency: robopost-post
+concurrency: robopost-data
 jobs:
   drain:
     runs-on: ubuntu-latest
