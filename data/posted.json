@@ -20,7 +20,7 @@
       "instagram": {},
       "tiktok": {}
     },
-    "metrics_at": "2026-07-08T22:58:09.446636+00:00"
+    "metrics_at": "2026-07-09T23:05:04.824111+00:00"
   },
   {
     "draft_id": "0a9bea4b",
@@ -39,7 +39,7 @@
       "instagram": {},
       "tiktok": {}
     },
-    "metrics_at": "2026-07-08T22:58:09.446665+00:00"
+    "metrics_at": "2026-07-09T23:05:04.824135+00:00"
   },
   {
     "draft_id": "ee6df781",
@@ -62,7 +62,7 @@
       "instagram": {},
       "tiktok": {}
     },
-    "metrics_at": "2026-07-08T22:58:10.064611+00:00"
+    "metrics_at": "2026-07-09T23:05:05.242161+00:00"
   },
   {
     "draft_id": "0a9bea4b",
@@ -78,14 +78,14 @@
     },
     "metrics": {
       "bluesky": {
-        "likes": 0,
+        "likes": 1,
         "reposts": 0,
         "replies": 1
       },
       "instagram": {},
       "tiktok": {}
     },
-    "metrics_at": "2026-07-08T22:58:10.944484+00:00"
+    "metrics_at": "2026-07-09T23:05:05.659842+00:00"
   },
   {
     "draft_id": "6c53cce6",
@@ -101,14 +101,14 @@
     },
     "metrics": {
       "bluesky": {
-        "likes": 0,
+        "likes": 1,
         "reposts": 0,
-        "replies": 1
+        "replies": 2
       },
       "instagram": {},
       "tiktok": {}
     },
-    "metrics_at": "2026-07-08T22:58:11.408782+00:00"
+    "metrics_at": "2026-07-09T23:05:06.046959+00:00"
   },
   {
     "draft_id": "7cfeb789",
@@ -124,14 +124,14 @@
     },
     "metrics": {
       "bluesky": {
-        "likes": 1,
+        "likes": 3,
         "reposts": 0,
         "replies": 1
       },
       "instagram": {},
       "tiktok": {}
     },
-    "metrics_at": "2026-07-08T22:58:11.919096+00:00"
+    "metrics_at": "2026-07-09T23:05:07.030402+00:00"
   },
   {
     "draft_id": "f28b83bc",
@@ -146,7 +146,16 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:07.425361+00:00"
   },
   {
     "draft_id": "b4c40b4f",
@@ -161,7 +170,16 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:07.818226+00:00"
   },
   {
     "draft_id": "22f3e6a6",
@@ -176,7 +194,16 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 0,
+        "reposts": 1,
+        "replies": 1
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:08.214250+00:00"
   },
   {
     "draft_id": "657349b6",
@@ -191,7 +218,16 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 1,
+        "reposts": 0,
+        "replies": 0
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:08.637687+00:00"
   },
   {
     "draft_id": "1da23089",
@@ -207,7 +243,12 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {},
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:09.034887+00:00"
   },
   {
     "draft_id": "ea2afac7",
@@ -223,7 +264,16 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:09.430937+00:00"
   },
   {
     "draft_id": "96a3dc2e",
@@ -239,7 +289,16 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 1
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:09.821597+00:00"
   },
   {
     "draft_id": "4455d4d7",
@@ -255,6 +314,15 @@
       "instagram": "skipped",
       "tiktok": "skipped"
     },
-    "metrics": {}
+    "metrics": {
+      "bluesky": {
+        "likes": 0,
+        "reposts": 0,
+        "replies": 0
+      },
+      "instagram": {},
+      "tiktok": {}
+    },
+    "metrics_at": "2026-07-09T23:05:10.223164+00:00"
   }
 ]
