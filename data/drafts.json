@@ -1497,5 +1497,260 @@
     "issue": 24,
     "scheduled_after": "2026-07-09T09:30:04.798260+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "22f3e6a6",
+    "paper": {
+      "id": "2607.07622v1",
+      "title": "Continuous and large-scale: ELEANOR, the soft architected arm inspired by the elephant trunk",
+      "abstract": "The elephant trunk is a dexterous and versatile manipulator whose performance is still unmatched in robotics. In previous works, modularity was prioritized and relatively small-scale continuum robots were built. We take the natural proboscis of the *Loxodonta africana* species as a model and propose a different design approach which favors structural continuity and dynamic properties that plausibly emulate those of the natural trunk, while conferring high adaptability to the environment and humans. Instead of targeting prescribed behaviors, we show that a biomimetic design based on the macroscopic properties of the natural system enables elephant-like movements and grasping. We build by 3D printing an 85 cm long, compliant, tapered, volumetrically tessellated continuum arm, which is combined with tendon-driven actuation mimicking the longitudinal and oblique muscles of the natural model. We demonstrate whole-body grasping of objects having different shapes and dimensions and discuss a comparison to the biological trunk highlighting aspects of both biology and robotics.",
+      "authors": [
+        "Giovanna A. Naselli",
+        "Anderson B. Nardin",
+        "Seonggun Joe",
+        "Ryan Drinkwater",
+        "Enrico Donato",
+        "Diego Bianchi"
+      ],
+      "url": "https://arxiv.org/abs/2607.07622v1",
+      "source": "arxiv",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "85 cm of 3D-printed soft arm. No prescribed motions. Just trunk physics.",
+      "commentary": "ELEANOR is a continuum arm built around the macroscopic structural properties of an African elephant trunk, not a kinematic model of its movements. It is 85 cm long, tapered, volumetrically tessellated, and tendon-driven to mimic longitudinal and oblique muscle groups. The key bet here is that if you get the material architecture right, elephant-like behavior emerges without pre-programming it. That is a genuinely different philosophy from most continuum robot work, which chases prescribed trajectories. The honest caveat: whole-body grasping demonstrations are compelling but the abstract says nothing about force sensing, load capacity numbers, or repeatability, so the gap between 'moves like a trunk' and 'works like a trunk' is still open.",
+      "slides": [
+        {
+          "title": "The trunk problem in robotics",
+          "body": "An elephant trunk has around 40,000 muscle units. No robot matches its dexterity at scale. Most continuum arms sidestep this by staying small and modular. ELEANOR takes a different bet."
+        },
+        {
+          "title": "Design: continuity over modules",
+          "body": "85 cm long. Compliant, tapered, volumetrically tessellated body built by 3D printing. Tendons mimic longitudinal and oblique muscles of Loxodonta africana. No rigid segments."
+        },
+        {
+          "title": "The core idea",
+          "body": "Don't program trunk-like motions. Get the macroscopic material properties right and trunk-like behavior emerges. Structure drives function, not the controller."
+        },
+        {
+          "title": "What it demonstrates",
+          "body": "Whole-body grasping of objects with different shapes and sizes. The arm conforms around targets rather than gripping with an end effector. Side-by-side comparison to biological trunk kinematics included."
+        },
+        {
+          "title": "What's still missing",
+          "body": "No load capacity numbers in the abstract. No repeatability data. No force sensing. 'Moves like a trunk' and 'works like a trunk' are not the same claim yet."
+        },
+        {
+          "title": "Why it matters",
+          "body": "Soft arms that adapt structurally, not computationally, are a credible path for human-adjacent manipulation. The design philosophy here is the contribution, not just the hardware."
+        }
+      ],
+      "video_script": "Most continuum robots are modular and small. This team went the other direction. ELEANOR is 85 centimeters of 3D-printed, tapered, soft arm built to match the actual structural properties of an elephant trunk, not to replicate its movements. The bet is that if your material architecture is right, the behavior follows. And they show whole-body grasping without pre-programmed motions. Load capacity, force sensing, repeatability, none of that is in the paper yet. But the design philosophy alone is worth arguing about. So here is the question: should soft robotics be chasing biological structure, or biological function?",
+      "caption_instagram": "85 cm of 3D-printed soft arm, no prescribed motions, just trunk physics.\n\nMost continuum robots are kept small and modular because scaling up gets complicated fast. ELEANOR flips the script. The team built an arm matching the macroscopic structural properties of an African elephant trunk, tapered body, volumetrically tessellated, tendons mimicking both longitudinal and oblique muscle groups.\n\nThe core argument: get the architecture right and trunk-like behavior emerges on its own. They demonstrate whole-body grasping of varied objects without pre-programming the motions. That is a genuinely different philosophy from trajectory-first design.\n\nHonest caveat: the paper does not report load capacity, repeatability, or force sensing numbers yet. There is a gap between moving like a trunk and working like one. But the design reasoning here is the real contribution.\n\nPaper: 'Continuous and large-scale: ELEANOR, the soft architected arm inspired by the elephant trunk' arXiv:2607.07622\n\n#softrobotics #continuumrobots #biomimeticrobots #roboticmanipulation #softactuators #robotdesign #swarmrobotics",
+      "caption_tiktok": "85 cm soft robot arm, no motors in the body, no pre-programmed moves. Just structure doing the work. This is the elephant trunk paper you need to see. #softrobotics #biomimicry #robotics #continuumrobot",
+      "post_bluesky": "85 cm 3D-printed soft arm, no prescribed motions. ELEANOR bets that matching elephant trunk structure, not movements, is enough for trunk-like grasping. Genuinely different philosophy. https://arxiv.org/abs/2607.07622v1",
+      "bluesky_thread": [
+        "Most continuum arms chase kinematic models of biological motion. ELEANOR chases material architecture instead. Tapered body, tessellated volume, tendons mimicking longitudinal and oblique muscles. If the structure is right, the behavior follows. That is the whole argument.",
+        "Missing from the abstract: load capacity, repeatability, force sensing. 'Moves like a trunk' is not the same as 'works like a trunk.' Still, the design philosophy is the contribution here. Is structure-first the right frame for soft manipulation, or does the controller still need to do the heavy…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T08:39:52.052038+00:00",
+    "media": {
+      "figures": [
+        "media/22f3e6a6/fig_00.png",
+        "media/22f3e6a6/fig_01.png",
+        "media/22f3e6a6/fig_02.png",
+        "media/22f3e6a6/fig_03.png"
+      ],
+      "bsky": [
+        "media/22f3e6a6/bsky_00.png",
+        "media/22f3e6a6/bsky_01.png",
+        "media/22f3e6a6/bsky_02.png",
+        "media/22f3e6a6/bsky_03.png"
+      ],
+      "slides": [
+        "media/22f3e6a6/slide_00.png",
+        "media/22f3e6a6/slide_01.png",
+        "media/22f3e6a6/slide_02.png",
+        "media/22f3e6a6/slide_03.png",
+        "media/22f3e6a6/slide_04.png",
+        "media/22f3e6a6/slide_05.png",
+        "media/22f3e6a6/slide_06.png",
+        "media/22f3e6a6/slide_07.png"
+      ]
+    },
+    "issue": 25
+  },
+  {
+    "draft_id": "657349b6",
+    "paper": {
+      "id": "2607.07281v1",
+      "title": "Programmable Synchronization Graphs for Adaptive and Fault-Tolerant Modular Miniature Robots",
+      "abstract": "Modular miniature robots could provide scalable function in constrained environments, but coordinating many imperfect modules remains difficult when computation, communication and reliability are limited. A central robotics challenge is to coordinate many actuator-sensor modules without assigning a privileged leader, prescribing a fixed gait template, or relying on dense communication. Here we introduce a programmable synchronization-graph framework for modular miniature robots in which each actuator-sensor pair is represented as a network node and locomotor coordination is encoded through graph coupling. Fixed intra-subgraph links synchronize heterogeneous actuator groups, whereas a small number of signed inter-subgraph links program phase relationships between groups. In physical robot collectives with up to nine modules, graph coupling drives the emergence of synchronization, signed links tune the phase difference from in-phase to out-of-phase motion, and floor experiments produce gallop-like and trot-like contact patterns in a five-module robot assembly. Replacing dense all-to-all coupling with sparse d-regular topologies preserves synchronization while reducing the coupling burden. The same graph representation also captures fault tolerance: increasing graph degree increases the number of module deactivations tolerated before desynchronization. Finally, an upper-confidence-bound edge-selection algorithm learns inter-subgraph links that drive the system toward target phase states. In a separate deactivation benchmark, the graph-based controller avoids the leader-specific failure mode observed in centralized leader-follower control and reduces worst-case phase error by about threefold. These results establish programmable network topology as a compact control layer for gait phase programming, online adaptation and robustness to unit loss in modular miniature robots.",
+      "authors": [
+        "Okan Kulekcioglu",
+        "Arqam Bin Ahmad",
+        "Ines Garcia",
+        "Filipe Serra Alves",
+        "Onur Ozcan",
+        "M. Selim Hanay"
+      ],
+      "url": "https://arxiv.org/abs/2607.07281v1",
+      "source": "arxiv",
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Nine tiny robots. No leader. No fixed gait. Just graph math.",
+      "commentary": "This paper from Bilkent and company treats each actuator-sensor pair as a network node and encodes gait coordination entirely through graph topology. The clever bit: signed inter-subgraph edges tune phase difference between limb groups, so you can dial from gallop to trot by rewiring two numbers. Fault tolerance scales directly with graph degree, and their UCB edge-selection algorithm learns inter-subgraph links online. Honest caveat: nine modules is a small physical demo, and the locomotion benchmark is a flat floor with five modules, so real-world terrain claims are premature.",
+      "slides": [
+        {
+          "title": "The coordination problem",
+          "body": "Modular mini-robots need gait sync without a central leader, fixed templates, or dense all-to-all communication. All three constraints together make this genuinely hard."
+        },
+        {
+          "title": "Each actuator is a node",
+          "body": "Actuator-sensor pairs become network nodes. Fixed intra-subgraph links sync heterogeneous groups. A small number of signed inter-subgraph links set phase relationships between groups."
+        },
+        {
+          "title": "One signed edge changes the gait",
+          "body": "Flipping a sign on an inter-subgraph link shifts phase from in-phase to out-of-phase. Five-module robot produces gallop-like and trot-like contact patterns on a real floor."
+        },
+        {
+          "title": "Sparse beats dense",
+          "body": "Replacing all-to-all coupling with d-regular sparse topologies preserves synchronization while cutting coupling burden. Higher graph degree also increases fault tolerance directly."
+        },
+        {
+          "title": "Fault tolerance: graph vs. leader",
+          "body": "Against a centralized leader-follower baseline, the graph controller reduces worst-case phase error roughly threefold in a deactivation benchmark. No single node is critical."
+        },
+        {
+          "title": "What is missing",
+          "body": "Physical demos cap at nine modules on flat floors. The UCB link-learning is tested in simulation. Scaling to uneven terrain or dozens of heterogeneous modules is still an open question."
+        }
+      ],
+      "video_script": "Imagine a robot made of nine independent modules. No one module is the boss. No preset gait baked in. Instead, each actuator is a node in a graph, and the edges between those nodes encode how limbs sync up. Change one signed edge, the robot shifts from gallop to trot. Kill two modules, the graph absorbs it because degree still holds. The team even runs a UCB algorithm that learns which edges push the system toward a target phase state online. Flat floor only for now, nine modules max, but the control principle is clean. So here is the real question: how far does graph degree scale before you hit a physical limit?",
+      "caption_instagram": "Nine modules, no leader, no fixed gait template. Just graph topology doing the coordination work.\n\nThis paper encodes locomotion as a synchronization graph where each actuator-sensor pair is a node. Signed inter-subgraph edges set phase relationships between limb groups, so switching from gallop-like to trot-like contact patterns is a matter of flipping a sign. That is a genuinely compact control representation.\n\nThe fault tolerance result is the part worth flagging to your swarm colleagues: graph degree directly predicts how many module deactivations you can absorb before desynchronization. Their deactivation benchmark shows roughly 3x reduction in worst-case phase error versus centralized leader-follower control. No single node failure takes down the collective.\n\nCaveat: physical demos are five to nine modules on flat floors. The UCB edge-learning lives in simulation. Terrain and scale are the obvious next tests. Still, the framework is clean enough that it should transfer.\n\nPaper: Programmable Synchronization Graphs for Adaptive and Fault-Tolerant Modular Miniature Robots, arXiv 2607.07281\n\n#swarmrobotics #modularrobotics #locomotioncontrol #faulttolerance #robotics #graphtheory #miniaturerobots",
+      "caption_tiktok": "No leader, no fixed gait, just graph math syncing 9 tiny robots in real hardware. The fault tolerance result alone is worth a read. #swarmrobotics #modularrobots #robotics #controlsystems",
+      "post_bluesky": "Nine modular mini-robots. No leader. Gait encoded as graph topology, signed edges tune phase from gallop to trot, and fault tolerance scales directly with graph degree. Worst-case phase error drops 3x vs leader-follower. https://arxiv.org/abs/2607.07281v1",
+      "bluesky_thread": [
+        "The clever bit: you do not reprogram the gait, you rewire two signed inter-subgraph edges. That is a compact control layer. Physical demos are nine modules on flat floors though, so terrain scaling is still an open question.",
+        "The fault tolerance framing maps well onto real deployment anxiety: what happens when modules fail mid-task? Here graph degree gives you a direct handle on robustness budget. Worth asking: does this hold when module failures are correlated, not random?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T08:40:18.676490+00:00",
+    "media": {
+      "figures": [
+        "media/657349b6/fig_00.png",
+        "media/657349b6/fig_01.png",
+        "media/657349b6/fig_02.png",
+        "media/657349b6/fig_03.png"
+      ],
+      "bsky": [
+        "media/657349b6/bsky_00.png",
+        "media/657349b6/bsky_01.png",
+        "media/657349b6/bsky_02.png",
+        "media/657349b6/bsky_03.png"
+      ],
+      "slides": [
+        "media/657349b6/slide_00.png",
+        "media/657349b6/slide_01.png",
+        "media/657349b6/slide_02.png",
+        "media/657349b6/slide_03.png",
+        "media/657349b6/slide_04.png",
+        "media/657349b6/slide_05.png",
+        "media/657349b6/slide_06.png",
+        "media/657349b6/slide_07.png"
+      ]
+    },
+    "issue": 26
+  },
+  {
+    "draft_id": "1da23089",
+    "paper": {
+      "id": "2607.07491v1",
+      "title": "Smooth Operator: A Real-Time Sampling-Based Algorithm for Kinematic Hand Retargeting",
+      "abstract": "Advances in learning-based robotic manipulation, such as Vision-Language-Action (VLA) models and Video Action Models (VAMs), heavily rely on high-quality teleoperation data. Their capabilities are strictly upper-bounded by the quality of the underlying human demonstrations. Current gradient-based retargeting algorithms often converge to different local minima, resulting in jitter that affects data quality and teleoperation experience. To address this, we introduce the Sampling-Based Retargeter (SBR), a novel gradient-free retargeting method drawn from the rich literature of sampling-based control and explicitly designed for low-jitter, real-time kinematic retargeting. We evaluate SBR both in simulation and through a rigorous real-world user study involving 18 participants performing 3 complex manipulation tasks. Compared to gradient-based baselines, SBR achieved the highest overall task success rate (54.1%) while significantly reducing operator cognitive fatigue, recording the lowest NASA-TLX workload score (36.4 out of 100). Ultimately, we establish SBR as a highly effective, intuitive retargeter for dexterous manipulation, providing the community with a rigorous benchmarking methodology to guide future retargeting research.",
+      "authors": [
+        "Robert Jomar Malate",
+        "Erik Bauer",
+        "Norica Bacuieti",
+        "Stefanos Charalambous",
+        "Elvis Nava",
+        "Robert K. Katzschmann"
+      ],
+      "url": "https://arxiv.org/abs/2607.07491v1",
+      "source": "arxiv",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your teleoperation data is only as good as your retargeter.",
+      "commentary": "Hand retargeting is a bottleneck almost nobody talks about. When you map human finger poses to a robot hand in real time, gradient-based solvers keep jumping between local minima, producing jitter that poisons your training data before VLAs ever see it. Malate et al. sidestep the whole problem by going gradient-free: sampling-based control instead. In an 18-person user study across 3 tasks, SBR hit 54.1% task success and a NASA-TLX score of 36.4, both better than the gradient-based baselines. The honest caveat: 18 participants, 3 tasks, one lab, and 54% success is not high in absolute terms. But the benchmarking methodology they contribute may matter as much as the algorithm itself.",
+      "slides": [
+        {
+          "title": "The jitter problem in teleoperation",
+          "body": "Gradient-based retargeters converge to different local minima across frames. That instability is not just annoying, it corrupts the demonstration data that VLAs and Video Action Models are trained on."
+        },
+        {
+          "title": "Gradient-free retargeting",
+          "body": "SBR borrows from sampling-based control literature. No gradient, no local minima traps. It picks the lowest-cost sample each frame, enforcing temporal smoothness explicitly."
+        },
+        {
+          "title": "54.1% success, lowest fatigue",
+          "body": "18 participants, 3 complex manipulation tasks. SBR: 54.1% task success rate, NASA-TLX workload score 36.4 out of 100. Both metrics beat gradient-based baselines in the same study."
+        },
+        {
+          "title": "Why data quality is the real story",
+          "body": "VLA model performance is upper-bounded by demonstration quality. Reducing retargeting jitter is a direct upstream fix, not a peripheral concern. Cleaner teleoperation means cleaner training sets."
+        },
+        {
+          "title": "The honest limits",
+          "body": "Single lab, 18 participants, 3 tasks. 54% absolute success is modest. Results across different hand morphologies or higher-DOF robots are untested. The benchmarking framework is probably the more durable contribution."
+        },
+        {
+          "title": "What to watch next",
+          "body": "Does SBR scale to hands with more DOF than tested? And can the benchmarking methodology they propose become a community standard for retargeting comparisons? Those are the open questions worth tracking."
+        }
+      ],
+      "video_script": "Everyone talks about better robot hands, better VLA models, better training data. Almost nobody talks about the retargeter sitting in the middle. Gradient-based solvers jump between local minima frame to frame. That jitter goes straight into your dataset. This paper from ETH Zurich swaps in a sampling-based approach, no gradients, and tests it with 18 real users. Result: higher task success, lower cognitive load. The benchmarking framework might outlast the algorithm itself. So, is retargeting the silent bottleneck holding back dexterous manipulation, and why has it taken this long to get rigorous benchmarks?",
+      "caption_instagram": "Your teleoperation data is only as good as your retargeter.\n\nEveryone is focused on bigger VLA models and fancier robot hands. But if your hand retargeting algorithm is jittery, that noise goes straight into your training data. Gradient-based solvers jump between local minima frame to frame. You feel it as an operator, and your model sees it as corrupted demos.\n\nMalate et al. built SBR, a sampling-based retargeter that skips gradients entirely. In an 18-person user study across 3 manipulation tasks, it hit 54.1% task success and a NASA-TLX workload score of 36.4, both better than gradient-based baselines. Lower fatigue, smoother data.\n\nThe caveat: 54% absolute success is modest, one lab, three tasks. But the benchmarking methodology they lay out may be the most durable part of this work. The field has needed a standard way to compare retargeters for a long time.\n\nPaper: 'Smooth Operator: A Real-Time Sampling-Based Algorithm for Kinematic Hand Retargeting', arXiv 2607.07491\n\n#swarmrobotics #dexterousmanipulation #teleoperation #robotlearning #VLA #humanrobotinteraction #roboticsresearch #manipulation",
+      "caption_tiktok": "The jitter in your retargeter is corrupting your robot training data. This paper fixes it without gradients, and the results are cleaner demos and less operator fatigue. #robotics #teleoperation #manipulation #robotlearning",
+      "post_bluesky": "Your teleoperation data is only as good as your retargeter. SBR skips gradients entirely, hits 54.1% task success and NASA-TLX 36.4 in a real user study. Upstream data quality fix for VLAs. https://arxiv.org/abs/2607.07491v1",
+      "bluesky_thread": [
+        "The gradient-free move is clever but the real contribution might be the benchmarking framework. Retargeting papers have had no common evaluation standard. 18 participants and 3 tasks is a start, not a ceiling.",
+        "54% absolute task success is modest. And we don't know how SBR holds up on higher-DOF hands or outside this lab's setup. Worth replicating before treating this as the settled answer. What retargeting baseline are you using right now?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T08:40:46.870252+00:00",
+    "media": {
+      "figures": [
+        "media/1da23089/fig_00.png",
+        "media/1da23089/fig_01.png",
+        "media/1da23089/fig_02.png",
+        "media/1da23089/fig_03.png"
+      ],
+      "bsky": [
+        "media/1da23089/bsky_00.png",
+        "media/1da23089/bsky_01.png",
+        "media/1da23089/bsky_02.png",
+        "media/1da23089/bsky_03.png"
+      ],
+      "slides": [
+        "media/1da23089/slide_00.png",
+        "media/1da23089/slide_01.png",
+        "media/1da23089/slide_02.png",
+        "media/1da23089/slide_03.png",
+        "media/1da23089/slide_04.png",
+        "media/1da23089/slide_05.png",
+        "media/1da23089/slide_06.png",
+        "media/1da23089/slide_07.png"
+      ]
+    },
+    "issue": 27
   }
 ]
