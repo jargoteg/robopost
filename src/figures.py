@@ -452,20 +452,53 @@ def find_github_repo(title, arxiv_id=None):
     except Exception as e:
         print(f"PapersWithCode lookup failed: {e}")
 
-    # 2) arXiv API 'comment' field (authors often put the repo here) + abstract
+    # 2) arXiv API 'comment' + 'summary' (abstract) fields, and abstract page
     try:
         if arxiv_id:
             r = requests.get(
                 f"http://export.arxiv.org/api/query?id_list={arxiv_id}",
                 timeout=30, headers={"User-Agent": "RoboPost/1.0"})
-            for m in re.finditer(r"github\.com/([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)", r.text):
+            # arXiv API returns links html-escaped sometimes; unescape first
+            import html as _html
+            text = _html.unescape(r.text)
+            for m in re.finditer(r"github\.com/([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)", text):
                 candidates.append(clean_repo(m.group(1)))
             r2 = requests.get(f"https://arxiv.org/abs/{arxiv_id}", timeout=30,
                               headers={"User-Agent": "RoboPost/1.0"})
-            for m in re.finditer(r"github\.com/([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)", r2.text):
+            text2 = _html.unescape(r2.text)
+            for m in re.finditer(r"github\.com/([A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+)", text2):
                 candidates.append(clean_repo(m.group(1)))
+            print(f"arXiv scan candidates: {[c for c in candidates if c]}")
     except Exception as e:
         print(f"arXiv repo scan failed: {e}")
+
+    # 3) GitHub code/repo search by paper title (catches repos not linked in
+    #    the abstract, and cases where the arXiv scan was blocked)
+    try:
+        import os
+        h = {"User-Agent": "RoboPost/1.0", "Accept": "application/vnd.github+json"}
+        if os.environ.get("GITHUB_TOKEN"):
+            h["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+        # short, distinctive title query
+        q = re.sub(r"[^A-Za-z0-9 ]", " ", title).strip()
+        q = " ".join(q.split()[:8])
+        r = requests.get("https://api.github.com/search/repositories",
+                         params={"q": q, "sort": "stars", "per_page": 5},
+                         headers=h, timeout=30)
+        import difflib
+
+        def norm(s):
+            return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+        tn = norm(title)
+        for item in r.json().get("items", []):
+            full = item.get("full_name", "")
+            desc = item.get("description") or ""
+            # accept if repo name or description strongly echoes the title
+            if (difflib.SequenceMatcher(None, tn, norm(item.get("name"))).ratio() > 0.5
+                    or difflib.SequenceMatcher(None, tn, norm(desc)).ratio() > 0.6):
+                candidates.append(clean_repo(full))
+    except Exception as e:
+        print(f"GitHub search failed: {e}")
 
     # first candidate that actually exists on GitHub
     for repo in [c for c in candidates if c]:
