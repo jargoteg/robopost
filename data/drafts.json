@@ -1673,7 +1673,7 @@
       ]
     },
     "issue": 26,
-    "scheduled_after": "2026-07-09T13:13:27.521949+00:00",
+    "scheduled_after": "2026-07-09T13:13:27.521953+00:00",
     "queue_notified": true
   },
   {
@@ -1760,7 +1760,7 @@
       ]
     },
     "issue": 27,
-    "scheduled_after": "2026-07-09T13:13:27.521949+00:00",
+    "scheduled_after": "2026-07-09T13:13:27.521953+00:00",
     "queue_notified": true
   },
   {
@@ -1930,7 +1930,7 @@
       ]
     },
     "issue": 29,
-    "scheduled_after": "2026-07-09T13:13:27.521949+00:00",
+    "scheduled_after": "2026-07-09T13:13:27.521953+00:00",
     "queue_notified": true
   },
   {
@@ -2238,7 +2238,7 @@
         "My caveat: 'large-scale offshore' in a controlled test is not a biofouled pipeline at 300m in a 1-knot current. Elevation ambiguity is still the fundamental physical limit. What would it take for you to trust this reconstruction on an actual inspection AUV mission?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:37:49.872702+00:00",
     "media": {
       "figures": [],
@@ -2561,5 +2561,231 @@
       ]
     },
     "issue": 37
+  },
+  {
+    "draft_id": "020d50a5",
+    "paper": {
+      "id": "rss-b8b8e588a7",
+      "title": "NAS-GS: Noise-Aware Sonar Gaussian Splatting",
+      "abstract": "Underwater sonar imaging plays a crucial role in various applications, including autonomous navigation in murky water, marine archaeology, and environmental monitoring. However, the unique characteristics of sonar images, such as complex noise patterns and the lack of elevation information, pose significant challenges for 3D reconstruction and view synthesis. In this paper, we present NAS-GS, a novel Noise-Aware Sonar Gaussian Splatting framework specifically designed to address these challenges. Our approach introduces a Two-Ways Splatting technique that accurately models the dual directions for intensity accumulation and transmittance calculation inherent in sonar imaging, significantly improving rendering speed without sacrificing quality. Moreover, we propose a Gaussian Mixture Model (GMM) based noise model that captures complex sonar noise patterns, including side-lobes, speckle, and multi-path noise. This model enhances the realism of synthesized images while preventing 3D Gaussian overfitting to noise, thereby improving reconstruction accuracy. We demonstrate state-of-the-art performance on both simulated and real-world large-scale offshore sonar scenarios, achieving superior results in view synthesis and 3D reconstruction.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576559",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.7,
+      "redo_notes": "there's no images. Find and include always."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Sonar 3D reconstruction finally gets noise-aware Gaussian splatting",
+      "commentary": "Subsea inspection and autonomous underwater vehicles have long suffered from the same problem: sonar gives you range but not elevation, and the noise signatures are brutal. NAS-GS tackles this by building a Gaussian Mixture Model specifically for sonar artifacts, side-lobes, speckle, and multi-path, rather than borrowing noise assumptions from optical imaging. The Two-Ways Splatting trick is clever, modeling intensity accumulation in both directions to match how sonar physically works. The honest caveat: 'state-of-the-art on simulated and real offshore scenarios' is doing a lot of work here. We need to see how this degrades at depth, in heavy sediment plumes, or with a moving platform. Lab-to-field attrition in subsea sensing is brutal.",
+      "slides": [
+        {
+          "title": "Sonar has a noise problem",
+          "body": "Underwater sonar imaging carries side-lobe artifacts, speckle, and multi-path noise. Standard 3D reconstruction methods borrowed from optics fail here. The physics are just different."
+        },
+        {
+          "title": "What NAS-GS does",
+          "body": "Gaussian Splatting adapted for sonar. A Gaussian Mixture Model captures the specific noise signatures. A Two-Ways Splatting pass models how sonar actually accumulates intensity. Not a copy-paste from NeRF or 3DGS."
+        },
+        {
+          "title": "The clever part: Two-Ways Splatting",
+          "body": "Standard splatting assumes one-directional light accumulation. Sonar transmits and receives along the same axis. Modeling both directions improves render speed without dropping reconstruction quality."
+        },
+        {
+          "title": "Why noise modeling matters",
+          "body": "Without it, Gaussians overfit to noise artifacts as if they were real structure. The GMM acts as a learned prior that separates signal from acoustic clutter during scene fitting."
+        },
+        {
+          "title": "Real-world test: offshore sonar",
+          "body": "Results shown on simulated and large-scale real offshore datasets. View synthesis and 3D reconstruction both beat prior methods. But platform motion and sediment conditions are not detailed."
+        },
+        {
+          "title": "Why this matters for AUVs",
+          "body": "Autonomous inspection of pipelines, cables, and wrecks needs dense 3D maps from sonar. A noise-aware representation is step one. Field robustness under turbidity and vehicle dynamics is the next test."
+        }
+      ],
+      "video_script": "Sonar sees through murky water but the images are a mess. Side-lobes, speckle, multi-path echo. If you try to build a 3D map from that, your reconstruction overfits to the noise. NAS-GS fixes this with a Gaussian Mixture Model built specifically for sonar physics, and a splatting approach that actually models how acoustic intensity travels both ways. Results on real offshore data look strong. But subsea inspection demands this works on a moving AUV in a sediment plume. Does this hold up when the platform is moving and visibility is near zero?",
+      "caption_instagram": "Sonar-based 3D reconstruction has always been hamstrung by one thing: the noise is nothing like optical imaging.\n\nNAS-GS builds a Gaussian Mixture Model tuned specifically for side-lobes, speckle, and multi-path artifacts. The Gaussians stop overfitting to noise and start representing actual structure. That matters enormously for subsea inspection pipelines.\n\nThe Two-Ways Splatting technique is the part I find genuinely clever. Sonar physically accumulates intensity along the transmit and receive path. Modeling both directions is correct physics, not a hack.\n\nResults on real offshore sonar scenarios are strong. My question is deployment reality: moving AUV platform, sediment turbidity, deep water pressure effects on transducer behavior. That's where these methods earn their keep or don't.\n\nPaper: NAS-GS: Noise-Aware Sonar Gaussian Splatting. IEEE Xplore, 2026.\n\n#underwaterrobotics #AUV #sonar #3Dreconstruction #GaussianSplatting #subseainspection #marinetech",
+      "caption_tiktok": "Sonar 3D maps fail because noise gets baked into the geometry. This paper fixes that with physics-aware Gaussian Splatting built specifically for acoustic imaging. #robotics #AUV #sonar #underwatertech",
+      "post_bluesky": "Sonar 3D reconstruction, done with actual sonar physics. NAS-GS models side-lobe, speckle, and multi-path noise explicitly via GMM and splats intensity in both acoustic directions. Strong offshore results. Field conditions with a moving AUV are the real…\nhttp://ieeexplore.ieee.org/document/11576559",
+      "bluesky_thread": [
+        "The Two-Ways Splatting is the part worth pausing on. Standard Gaussian Splatting assumes one-directional accumulation, fine for optics. Sonar transmits and receives on the same axis. Ignoring that produces structurally wrong reconstructions. Matching the physics first is the right call.",
+        "Caveat: 'real-world large-scale offshore' covers a lot of variation. Sediment plumes, platform motion, transducer degradation at depth, these are where subsea inspection methods usually break. Would love to see ablations on SNR degradation. Anyone working on AUV-mounted versions of this?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T11:51:15.116454+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/020d50a5/bsky_00.png",
+        "media/020d50a5/bsky_01.png",
+        "media/020d50a5/bsky_02.png",
+        "media/020d50a5/bsky_03.png"
+      ],
+      "slides": [
+        "media/020d50a5/slide_00.png",
+        "media/020d50a5/slide_01.png",
+        "media/020d50a5/slide_02.png",
+        "media/020d50a5/slide_03.png",
+        "media/020d50a5/slide_04.png",
+        "media/020d50a5/slide_05.png",
+        "media/020d50a5/slide_06.png",
+        "media/020d50a5/slide_07.png"
+      ]
+    },
+    "issue": 38
+  },
+  {
+    "draft_id": "d898738c",
+    "paper": {
+      "id": "rss-7a03a15ff8",
+      "title": "Vision-Assisted Bipedal Locomotion on Challenging Terrains via Terrain-Related Adversarial Motion Priors",
+      "abstract": "Humanoid locomotion on challenging terrains requires reliable perception and terrain-adaptive gait regulation to maintain stability under complex contact conditions. Although recent perceptive locomotion methods have made substantial progress, many rely on explicit terrain representations, auxiliary geometry-related supervision, or multi-stage training pipelines, which can increase system complexity and training cost. This paper presents a lightweight single-stage reinforcement learning framework for vision-assisted humanoid locomotion using only onboard proprioception and low-cost depth sensing. A hierarchical feature extractor learns compact latent representations of robot dynamics and terrain context, which are integrated into a mixture-of-experts actor for terrain-aware behavior modulation. We further introduce a terrain-related adversarial motion prior constructed from flat-ground and stair locomotion demonstrations to encourage terrain-compatible motion patterns within the unified policy. Extensive simulation and real-world experiments on a physical humanoid robot show that the learned policy achieves robust and energy-efficient locomotion across slopes, stairs, elevated platforms, and wide gaps, while maintaining stable foot– terrain interactions in cluttered outdoor scenes.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578326",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.7
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One policy, no terrain maps, real stairs. Does it hold up?",
+      "commentary": "This paper trains a single RL policy for humanoid locomotion using only proprioception and a cheap depth camera, no point clouds, no terrain segmentation, no multi-stage curriculum. The clever bit is a mixture-of-experts actor conditioned on latent terrain features, plus an adversarial motion prior built from flat-ground and stair demos that nudges the policy toward terrain-appropriate gaits without explicit labels. Real-world results on slopes, stairs, gaps, and cluttered outdoor scenes look genuinely solid for a lightweight system. The honest caveat: 'extensive real-world experiments' in humanoid papers usually means tens of trials in a controlled outdoor area, not hundreds of deployments in unknown environments. Energy efficiency claims also need longer-horizon data to mean much.",
+      "slides": [
+        {
+          "title": "The problem with terrain-aware walking",
+          "body": "Most perceptive humanoid locomotion methods need explicit terrain maps, geometry supervision, or multi-stage training pipelines. That complexity adds cost and failure points before the robot even steps outside."
+        },
+        {
+          "title": "One stage, one policy",
+          "body": "Single-stage RL with onboard proprioception plus low-cost depth sensing only. No terrain reconstruction. A hierarchical feature extractor builds compact latent representations of robot state and terrain context."
+        },
+        {
+          "title": "Mixture-of-experts does the heavy lifting",
+          "body": "The actor is a mixture-of-experts network. Latent terrain features gate which experts activate, so the same policy modulates gait for slopes, stairs, elevated platforms, and wide gaps without mode-switching logic."
+        },
+        {
+          "title": "Adversarial motion prior: the clever part",
+          "body": "A terrain-related adversarial prior is built from flat-ground and stair demos. It penalizes terrain-incompatible motion patterns, encouraging appropriate foot placement without manual per-terrain reward shaping."
+        },
+        {
+          "title": "Real robot, outdoor scenes",
+          "body": "Policy tested on a physical humanoid across slopes, stairs, elevated platforms, wide gaps, and cluttered outdoor environments. Claims robust foot-terrain contact and energy-efficient gait. Trial count and failure rates: not reported."
+        },
+        {
+          "title": "What this actually proves and what it does not",
+          "body": "Lightweight single-stage design is a real engineering win. But 'extensive real-world experiments' in a conference paper rarely means deployment-grade robustness. Stair geometry range, lighting conditions, and slip rates are all unknown from the abstract."
+        }
+      ],
+      "video_script": "Everyone is posting humanoid robot videos right now. Most of them are hiding the terrain map, the motion capture, or the three engineers standing off-camera. This paper tries something leaner: one policy, a cheap depth camera, no explicit terrain reconstruction. A mixture-of-experts actor reads latent terrain features and picks the right gait. An adversarial prior from stair and flat-ground demos keeps the motion sensible. Real robot, real outdoor stairs. It works in the demo. The question I have: how many falls didn't make the video?",
+      "caption_instagram": "One policy. Cheap depth camera. Real outdoor stairs.\n\nMost humanoid locomotion papers come with terrain maps, geometry supervisors, and multi-stage training pipelines. This one strips most of that out. Single-stage RL, proprioception plus depth sensing, and a mixture-of-experts actor gated by latent terrain features.\n\nThe genuinely clever addition is what they call a terrain-related adversarial motion prior. Built from flat-ground and stair demonstrations, it pushes the policy toward terrain-appropriate motion without per-terrain reward engineering. Clean idea.\n\nReal-robot results on slopes, stairs, elevated platforms, and cluttered outdoor scenes look promising. But the paper does not report trial counts, failure rates, or the range of stair geometries tested. 'Extensive experiments' covers a lot of ground. Worth reading, worth replicating before trusting it on an actual deployment.\n\nPaper: Vision-Assisted Bipedal Locomotion on Challenging Terrains via Terrain-Related Adversarial Motion Priors. IEEE Xplore, 2026.\n\n#swarmrobotics #humanoidrobots #locomotion #reinforcementlearning #learnedcontrol #fieldrobotics #robotics",
+      "caption_tiktok": "Humanoid walks real stairs with one policy and a cheap depth camera. Clever design, honest questions about how many falls didn't make the clip. #robotics #humanoidrobot #reinforcementlearning #legged",
+      "post_bluesky": "One RL policy, cheap depth camera, no terrain maps. Mixture-of-experts actor gated by latent terrain features. Real humanoid on outdoor stairs. Clever adversarial motion prior keeps gait sensible. Trial counts and failure rates: not reported. http://ieeexplore.ieee.org/document/11578326",
+      "bluesky_thread": [
+        "The adversarial motion prior is the part worth stealing. Flat-ground + stair demos used adversarially to discourage terrain-incompatible patterns, no per-terrain reward shaping needed. Cleaner than most curriculum approaches I've seen for this problem.",
+        "My real question: what stair geometry did they test? Rise, run, surface material, wet or dry? 'Cluttered outdoor scenes' in a lab paper can mean a parking lot with a leaf on it. Anyone seen the supplementary footage?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T11:51:43.610744+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/d898738c/bsky_00.png",
+        "media/d898738c/bsky_01.png",
+        "media/d898738c/bsky_02.png",
+        "media/d898738c/bsky_03.png"
+      ],
+      "slides": [
+        "media/d898738c/slide_00.png",
+        "media/d898738c/slide_01.png",
+        "media/d898738c/slide_02.png",
+        "media/d898738c/slide_03.png",
+        "media/d898738c/slide_04.png",
+        "media/d898738c/slide_05.png",
+        "media/d898738c/slide_06.png",
+        "media/d898738c/slide_07.png"
+      ]
+    },
+    "issue": 39
+  },
+  {
+    "draft_id": "4455d4d7",
+    "paper": {
+      "id": "rss-5af37135ce",
+      "title": "High-Speed Vision-Based Flight in Clutter With Safety-Shielded Reinforcement Learning",
+      "abstract": "Quadrotor uncrewed aerial vehicles (UAVs) are increasingly deployed in complex missions that demand reliable autonomous navigation and robust obstacle avoidance. However, traditional modular pipelines often incur cumulative latency, whereas purely reinforcement learning (RL) approaches typically provide limited formal safety guarantees. To bridge this gap, we propose an end-to-end RL framework augmented with model-based safety mechanisms. We incorporate physical priors in both training and deployment. During training, we design a physics-informed reward structure that provides global navigational guidance. During deployment, we integrate a real-time safety filter that projects the policy outputs onto a provably safe set to enforce strict collision-avoidance constraints. This hybrid architecture reconciles high-speed flight with robust safety assurances. Benchmark evaluations demonstrate that our method outperforms both traditional planners and recent end-to-end obstacle avoidance approaches based on differentiable physics. Extensive experiments demonstrate strong generalization, enabling reliable high-speed navigation in dense clutter and challenging outdoor forest environments at velocities up to $7.5 \\text{ m/s}$.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563604",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.3
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "7.5 m/s through dense forest. No crash. Here's why this matters.",
+      "commentary": "This paper attacks a real problem: modular nav pipelines accumulate latency, pure RL gives you no formal safety proof. Their fix is a hybrid, end-to-end RL policy with a real-time safety filter that projects outputs onto a provably safe set before actuation. The physics-informed reward during training is a nice touch too. Honest caveat: 7.5 m/s in a forest is impressive, but forest tests are still cherry-picked runs, not 100-flight statistical validation. The gap between 'extensive experiments' and a deployment-ready safety case for, say, inspection inside a mine or near power lines is still very wide.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Modular pipelines: sense, plan, act. Each step adds latency. At 7+ m/s, latency is a crash. Pure RL fixes latency but offers no collision guarantee. This paper targets both problems at once."
+        },
+        {
+          "title": "Their hybrid approach",
+          "body": "End-to-end RL policy trained with physics-informed rewards. At deployment, a real-time safety filter projects policy outputs onto a provably safe set before any motor command is issued."
+        },
+        {
+          "title": "What provably safe means here",
+          "body": "Not 'usually safe.' The filter enforces hard collision-avoidance constraints at runtime, overriding the RL policy when needed. Control barrier functions do this kind of work. Formal guarantee, not just a penalty term."
+        },
+        {
+          "title": "Benchmark result",
+          "body": "Outperforms traditional planners and recent differentiable-physics end-to-end methods. Dense clutter and outdoor forest runs at up to 7.5 m/s. Generalizes beyond training environments."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Forest demos are not statistical validation. No failure-rate numbers in the abstract. A safety case for real inspection missions, subsea, nuclear, mining, requires far more than 'extensive experiments.'"
+        },
+        {
+          "title": "Why it still matters",
+          "body": "The architecture is sound: learned speed plus formal safety. That combination is exactly what field deployment needs. The proof-of-concept is credible. The deployment gap is real but this is the right direction."
+        }
+      ],
+      "video_script": "A quadrotor at 7.5 meters per second through a dense forest. No crash. That's not luck, it's architecture. This paper combines end-to-end reinforcement learning with a real-time safety filter that provably overrides the policy before any unsafe command reaches the motors. Training uses physics-informed rewards. Deployment uses hard constraints. It beats both traditional planners and recent RL methods on benchmarks. The honest question is whether 'extensive experiments' in a forest becomes a certified safety case for an inspection drone inside a mine. That gap is still huge. Where do you think formal safety proofs belong in field robotics?",
+      "caption_instagram": "7.5 m/s through dense forest, no crash. Here's the architecture behind it.\n\nMost fast UAV systems pick a lane: modular pipelines with formal guarantees but too much latency, or end-to-end RL with speed but no safety proof. This paper refuses to pick.\n\nThey train an RL policy with physics-informed rewards for global nav guidance, then wrap it at deployment with a real-time safety filter that projects every policy output onto a provably safe set before it touches the motors. Formal collision-avoidance constraints, not just a heavy penalty term in training.\n\nIt beats traditional planners and recent differentiable-physics approaches on benchmarks. Forest generalization looks real. The caveat: 'extensive experiments' is not a certified safety case. For inspection UAVs near power lines or inside confined industrial spaces, you need failure-rate statistics and adversarial conditions, not highlight runs.\n\nStill, the architecture is the right idea. Learned agility plus formal runtime safety is exactly what field deployment demands.\n\nPaper: 'High-Speed Vision-Based Flight in Clutter With Safety-Shielded Reinforcement Learning' via IEEE Xplore.\n\n#SwarmRobotics #UAV #FieldRobotics #ReinforcementLearning #SafetyShield #InspectionRobotics #AutonomousNavigation #DroneResearch",
+      "caption_tiktok": "7.5 m/s through a forest with a formal safety guarantee. This is the hybrid RL architecture doing it. #DroneResearch #FieldRobotics #UAV #ReinforcementLearning",
+      "post_bluesky": "7.5 m/s through dense forest, formal collision guarantee intact. This IEEE paper fuses end-to-end RL with a real-time safety filter that overrides the policy before unsafe commands reach motors. Right architecture. Forest demos still aren't a deployment…\nhttp://ieeexplore.ieee.org/document/11563604",
+      "bluesky_thread": [
+        "The clever bit: safety filter runs at deployment, not just training. It projects RL outputs onto a provably safe set in real time. That's not a penalty term, it's a hard constraint. Learned speed, formal safety, same system. That combination has been the missing piece for serious field UAV work.",
+        "Honest question for the field inspection crowd: at what point does 'outperforms benchmarks in forest runs' become evidence you'd trust for a confined-space inspection mission, say inside a tunnel or near live infrastructure? What does that validation bar actually look like to you?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T11:52:12.254700+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/4455d4d7/bsky_00.png",
+        "media/4455d4d7/bsky_01.png",
+        "media/4455d4d7/bsky_02.png",
+        "media/4455d4d7/bsky_03.png"
+      ],
+      "slides": [
+        "media/4455d4d7/slide_00.png",
+        "media/4455d4d7/slide_01.png",
+        "media/4455d4d7/slide_02.png",
+        "media/4455d4d7/slide_03.png",
+        "media/4455d4d7/slide_04.png",
+        "media/4455d4d7/slide_05.png",
+        "media/4455d4d7/slide_06.png",
+        "media/4455d4d7/slide_07.png"
+      ]
+    },
+    "issue": 40
   }
 ]

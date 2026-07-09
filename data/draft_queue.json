@@ -1,25 +1,25 @@
 [
   {
-    "id": "rss-7a03a15ff8",
-    "title": "Vision-Assisted Bipedal Locomotion on Challenging Terrains via Terrain-Related Adversarial Motion Priors",
-    "abstract": "Humanoid locomotion on challenging terrains requires reliable perception and terrain-adaptive gait regulation to maintain stability under complex contact conditions. Although recent perceptive locomotion methods have made substantial progress, many rely on explicit terrain representations, auxiliary geometry-related supervision, or multi-stage training pipelines, which can increase system complexity and training cost. This paper presents a lightweight single-stage reinforcement learning framework for vision-assisted humanoid locomotion using only onboard proprioception and low-cost depth sensing. A hierarchical feature extractor learns compact latent representations of robot dynamics and terrain context, which are integrated into a mixture-of-experts actor for terrain-aware behavior modulation. We further introduce a terrain-related adversarial motion prior constructed from flat-ground and stair locomotion demonstrations to encourage terrain-compatible motion patterns within the unified policy. Extensive simulation and real-world experiments on a physical humanoid robot show that the learned policy achieves robust and energy-efficient locomotion across slopes, stairs, elevated platforms, and wide gaps, while maintaining stable foot– terrain interactions in cluttered outdoor scenes.",
+    "id": "rss-2d043c8dc9",
+    "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+    "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11578326",
+    "url": "http://ieeexplore.ieee.org/document/11578324",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.7
+    "score": 8.0
   },
   {
-    "id": "rss-5af37135ce",
-    "title": "High-Speed Vision-Based Flight in Clutter With Safety-Shielded Reinforcement Learning",
-    "abstract": "Quadrotor uncrewed aerial vehicles (UAVs) are increasingly deployed in complex missions that demand reliable autonomous navigation and robust obstacle avoidance. However, traditional modular pipelines often incur cumulative latency, whereas purely reinforcement learning (RL) approaches typically provide limited formal safety guarantees. To bridge this gap, we propose an end-to-end RL framework augmented with model-based safety mechanisms. We incorporate physical priors in both training and deployment. During training, we design a physics-informed reward structure that provides global navigational guidance. During deployment, we integrate a real-time safety filter that projects the policy outputs onto a provably safe set to enforce strict collision-avoidance constraints. This hybrid architecture reconciles high-speed flight with robust safety assurances. Benchmark evaluations demonstrate that our method outperforms both traditional planners and recent end-to-end obstacle avoidance approaches based on differentiable physics. Extensive experiments demonstrate strong generalization, enabling reliable high-speed navigation in dense clutter and challenging outdoor forest environments at velocities up to $7.5 \\text{ m/s}$.",
+    "id": "rss-7989e9fa70",
+    "title": "Collision-Free Humanoid Traversal in Cluttered Indoor Scenes",
+    "abstract": "We study the problem of collision-free humanoid traversal in cluttered indoor scenes, such as hurdling over objects scattered on the floor, crouching under low-hanging obstacles, or squeezing through narrow passages. To achieve this goal, the humanoid needs to map its perception of surrounding obstacles with diverse spatial layouts and geometries to the corresponding traversal skills. However, the lack of an effective representation that captures humanoid–obstacle relationships during collision avoidance makes directly learning such mappings difficult. We therefore propose Humanoid Potential Field (HumanoidPF), which encodes these relationships as collision-free motion directions, significantly facilitating RL-based traversal skill learning. We also find that HumanoidPF exhibits a surprisingly negligible sim-to-real gap as a perceptual representation. To further enable generalizable traversal skills through diverse and challenging cluttered indoor scenes, we further propose a hybrid scene generation method, incorporating crops of realistic 3D indoor scenes and procedurally synthesized obstacles. We successfully transfer our policy to the real world and develop a teleoperation system where users could command the humanoid to traverse in cluttered indoor scenes with just a single click. Extensive experiments are conducted in both simulation and the real world to validate the effectiveness of our method. Project page: https://axian12138.github.io/CAT/.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11563604",
+    "url": "http://ieeexplore.ieee.org/document/11563633",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.3
+    "score": 7.5
   },
   {
     "id": "2507.04321",
