@@ -1988,7 +1988,7 @@
         "The scaling law claim is bold for a tech report. No external peer review, goalposts are self-set. But if the quadruped motion tracking curve holds up under scrutiny, it's a real finding. Who else is working on scaling laws for non-humanoid embodiments right now?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T09:44:46.991902+00:00",
     "media": {
       "figures": [
@@ -2015,5 +2015,91 @@
       ]
     },
     "issue": 30
+  },
+  {
+    "draft_id": "851259b2",
+    "paper": {
+      "id": "2607.07370v1",
+      "title": "Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report",
+      "abstract": "In embodied intelligence systems, the motion controller serves as the critical bridge between semantic reasoning and physical execution. Humanoid control has progressed rapidly through large-scale human motion-capture data and motion-tracking paradigm. However, producing quadruped robots motion corpora with scalability and physical feasibility faces more fundamental obstacles: animal motion data is scarce, and cross-embodiment retargeting remains fragile. We present ABot-C0, a generalist motion-control system for quadruped robots that establishes three complementary behavior foundations: a scalable multi-source motion-data pipeline, robust policy learning across motion tracking, locomotion, and scene interaction, and a unified deployment stack for reliable real-world operation. Fundamentally, we construct a data pyramid through conditional video-generation synthesis, annotated motion capture, teleoperation and human design, producing 16,074 physically feasible motion clips as the data foundation for various motion learning demands. We then train a Flow-Matching generalist policy that demonstrates for the first time quadruped motion tracking scaling law that its performance improves consistently as training scales up, with zero-shot capability to track unseen motions. Then, we push a step further for robust all-terrain traversal locomotion by adopting a three-stage privileged-to-perceptive framework with temporal LiDAR memory and terrain-predictive supervision. Collectively, these components form a motion generalist that coordinates multi-policy execution, smooth behavior transitions, energy-efficient control, and safety mechanisms for real-world deployment. Extensive experiments on urban-terrain autonomous navigation and companion-style multimodal interaction demonstrate that quadruped robots move beyond single-function demos toward product-level behavioral intelligence.",
+      "authors": [
+        "Xufeng Zhao",
+        "Fuzhi Yang",
+        "Jianhui Chen",
+        "Li Gao",
+        "Zhang Meng",
+        "Jie Gao"
+      ],
+      "url": "https://arxiv.org/abs/2607.07370v1",
+      "source": "arxiv",
+      "score": 7.0,
+      "redo_notes": "the title of the first card seems to be incomplete or didn't fit. Also, the story is not clear, the motivation etc"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Quadruped robots lack what humanoids got free: motion data.",
+      "commentary": "ABot-C0 attacks the quadruped data problem directly. Animal motion capture is scarce and cross-embodiment retargeting breaks constantly, so they built a data pyramid combining video-generation synthesis, mocap, teleoperation, and hand-designed clips, producing 16,074 physically feasible motion clips total. The Flow-Matching policy trained on this shows a clear scaling law for motion tracking, which is a concrete, falsifiable claim worth watching. The three-stage privileged-to-perceptive locomotion stack with temporal LiDAR memory is genuinely well-engineered. Honest caveat: 'product-level behavioral intelligence' in the abstract is doing a lot of work, and urban-terrain demos in a tech report are not the same as a shipping product.",
+      "slides": [
+        {
+          "title": "The Quadruped Data Problem",
+          "body": "Humanoid control scaled on human mocap. Quadrupeds don't have that. Animal motion data is scarce. Cross-embodiment retargeting breaks. ABot-C0 is built around solving this gap first."
+        },
+        {
+          "title": "16,074 Motion Clips: How",
+          "body": "A data pyramid: conditional video-generation synthesis at the base, then annotated mocap, teleoperation, and hand-designed clips. Result is 16,074 physically feasible clips covering diverse motion demands."
+        },
+        {
+          "title": "A Scaling Law for Motion Tracking",
+          "body": "They train a Flow-Matching generalist policy and show tracking performance improves consistently with scale. First reported scaling law for quadruped motion tracking. Zero-shot transfer to unseen motions is the stress test."
+        },
+        {
+          "title": "All-Terrain Locomotion Stack",
+          "body": "Three stages: privileged training, then perceptive policy with temporal LiDAR memory, then terrain-predictive supervision. Designed for urban deployment, not just flat lab floors."
+        },
+        {
+          "title": "What It Actually Demonstrates",
+          "body": "Urban-terrain navigation and companion-style multimodal interaction. Multi-policy coordination with smooth transitions. Energy-efficient control and safety mechanisms included. Tech report level, not peer-reviewed benchmark."
+        },
+        {
+          "title": "The Honest Read",
+          "body": "'Product-level behavioral intelligence' is the authors' framing. The scaling law claim is testable and interesting. The data pipeline is the real contribution. Watch for independent replication."
+        }
+      ],
+      "video_script": "Humanoid robots got a head start because human motion capture data is everywhere. Quadrupeds don't have that luxury. ABot-C0 builds a data pyramid from scratch: video synthesis, mocap, teleoperation, 16,000 clips total. Then they train a single Flow-Matching policy and show it improves consistently as you scale, which is a real claim, not a marketing line. Add a three-stage locomotion stack with LiDAR memory and you have something that runs urban terrain. Is a scaling law for quadruped motion the unlock this field needed?",
+      "caption_instagram": "Humanoid robots scaled fast because human motion capture data is abundant. Quadruped robots don't get that shortcut.\n\nABot-C0 confronts this directly. The team builds a data pyramid: conditional video-generation synthesis, annotated mocap, teleoperation, and hand-designed clips, totaling 16,074 physically feasible motion clips. That corpus trains a Flow-Matching generalist policy.\n\nThe concrete claim worth scrutinizing: they report the first scaling law for quadruped motion tracking, where performance improves consistently as training data grows, with zero-shot transfer to unseen motions. The locomotion stack adds temporal LiDAR memory and terrain-predictive supervision across three training stages.\n\nHonest read: the data pipeline is the real contribution here. 'Product-level behavioral intelligence' is doing heavy lifting in the abstract. Urban-terrain demos in a tech report need independent replication before that label sticks. Still, the scaling law framing is falsifiable, which puts this above most quadruped papers I've read this year.\n\nPaper: Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report, arXiv 2607.07370\n\n#swarmrobotics #quadrupedrobot #robotlearning #embodiedAI #locomotion #robotics #learnedcontrol",
+      "caption_tiktok": "Quadrupeds don't have human mocap to lean on. ABot-C0 builds 16k motion clips from scratch and finds a scaling law. That's the interesting part. #robotics #quadruped #robotlearning #embodiedAI",
+      "post_bluesky": "Humanoid robots scaled on human mocap. Quadrupeds can't. ABot-C0 builds 16k motion clips from scratch and reports the first scaling law for quadruped motion tracking. The data pipeline is the real story. https://arxiv.org/abs/2607.07370v1",
+      "bluesky_thread": [
+        "The Flow-Matching policy with zero-shot transfer to unseen motions is the testable claim I'd watch. Scaling laws in robot control are still rare enough that this deserves scrutiny, not just applause. Independent replication needed.",
+        "The 'product-level behavioral intelligence' framing in a self-published tech report is exactly the kind of language the community should push back on. Urban-terrain demos are promising. They are not a product. What's your bar for that label?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T09:59:27.507653+00:00",
+    "media": {
+      "figures": [
+        "media/851259b2/fig_00.png",
+        "media/851259b2/fig_01.png",
+        "media/851259b2/fig_02.png",
+        "media/851259b2/fig_03.png"
+      ],
+      "bsky": [
+        "media/851259b2/bsky_00.png",
+        "media/851259b2/bsky_01.png",
+        "media/851259b2/bsky_02.png",
+        "media/851259b2/bsky_03.png"
+      ],
+      "slides": [
+        "media/851259b2/slide_00.png",
+        "media/851259b2/slide_01.png",
+        "media/851259b2/slide_02.png",
+        "media/851259b2/slide_03.png",
+        "media/851259b2/slide_04.png",
+        "media/851259b2/slide_05.png",
+        "media/851259b2/slide_06.png",
+        "media/851259b2/slide_07.png"
+      ]
+    },
+    "issue": 31
   }
 ]
