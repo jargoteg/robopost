@@ -159,5 +159,12 @@
     "item_type": "paper",
     "reason": "figures missing",
     "date": "2026-07-09"
+  },
+  {
+    "title": "CubeDVO: Cubemap-Spherical Deep Visual Odometry for a Monocular 360-Degree Camera",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "no figure",
+    "date": "2026-07-09"
   }
 ]
