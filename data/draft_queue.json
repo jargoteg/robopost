@@ -1,36 +1,42 @@
 [
   {
-    "id": "rss-1ac7611630",
-    "title": "PADLOS: Deformable Linear Objects Segmentation With Pseudo-Depth Guidance and Attribute Constraints",
-    "abstract": "Deformable Linear Object (DLO) instance segmentation plays a critical role in robotic perception for wire harness assembly, cable routing, and other automation tasks involving flexible structures. Existing RGB-based methods often struggle with occlusions, entanglements, and depth ambiguities. In this paper, we propose PADLOS, a novel framework that integrates pseudo-depth maps and attribute-level structural cues to achieve robust and precise DLO instance segmentation. By leveraging pseudo-depth priors derived from RGB inputs, our model gains implicit spatial understanding to distinguish crossing and overlapping DLOs. Furthermore, we introduce attribute-constrained representations, including centerline topology, local thickness, and physical plausibility, to enhance structural consistency in segmentation. Experimental results on synthetic and real-world datasets demonstrate that PADLOS outperforms existing baselines in both segmentation quality and physical plausibility, particularly in complex scenes.",
+    "id": "rss-9e0042cc98",
+    "title": "CubeDVO: Cubemap-Spherical Deep Visual Odometry for a Monocular 360-Degree Camera",
+    "abstract": "This paper proposes CubeDVO, a learning-based visual odometry system specifically designed for a monocular 360-degree camera. While recent methods apply spherical convolutions to equirectangular images, their core operations still rely on the distorted 2D domain, which inherently degrades tracking accuracy. To address this limitation, our method introduces a unified cubemap-spherical representation that decouples the pose estimation pipeline from the equirectangular image space. We extract features on cubemap planes to reduce projection-induced distortion while enabling standard 2D convolutions, and perform geometric optimization on the unit sphere for consistent pose estimation. Our architecture incorporates a geometry-aware flow estimation network and a differentiable spherical bundle adjustment module. CubeDVO is evaluated against state-of-the-art spherical and conventional perspective visual odometry methods. Experimental results demonstrate that our method achieves robust performance under aggressive motion while maintaining high accuracy and practical computational efficiency.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11568531",
+    "url": "http://ieeexplore.ieee.org/document/11576546",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.0
+    "score": 6.7
   },
   {
-    "id": "rss-f83d1dda41",
-    "title": "DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks",
-    "abstract": "Learning robust manipulation policies typically demands large and diverse datasets, whose collection is time-consuming, labor-intensive, and impractical in dynamic environments. We present DynaMimicGen (D-MG), a scalable data-generation framework that enables policy learning from minimal human supervision while uniquely supporting data synthesis in dynamic task conditions. Starting from only a few human demonstrations – potentially as few as a single example – D-MG segments the demonstrations into sub-tasks and uses Dynamic Movement Primitives (DMPs) to generalize each skill to novel and continually changing scenes. Unlike prior methods that assume static environments or rely on simple interpolation, D-MG synthesizes smooth, physically plausible Cartesian trajectories that remain task-consistent while adapting in real time to variations in object pose, robot configuration, and scene geometry. Our method supports basic, contact-rich, and long-horizon tasks in both static and dynamic settings. DynaMimicGen increases dataset-generation success rates by 3.6% (Stack), 59.5% (Square), 124.7% (HammerCleanup), 232.7% (MugCleanup), and 4.60% (NutAssembly) over MimicGen (which requires ten demonstrations), while remaining robust to perturbations. By injecting dynamic perturbations during data generation, D-MG increases dataset variability, enabling Diffusion Policy and Behavior Cloning agents to achieve strong performance across all tasks and consistently outperform MG-trained policies",
+    "id": "2607.04434",
+    "title": "RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies",
+    "abstract": "Generalist robot manipulation policies have advanced rapidly, yet existing benchmarks remain limited in systematically evaluating their capabilities. Many rely on simple, short-horizon, or skill-narrow tasks with limited capability coverage, and are often conducted only in simulation or only in the real world. Simulation enables scalable feedback but misses physical deployment challenges, while real-world evaluation is costly, time-consuming, and difficult to reproduce. We introduce RoboDojo, a unified sim-and-real benchmark for comprehensive evaluation of generalist robot manipulation policies. RoboDojo includes 42 simulation tasks and 18 real-world tasks covering diverse and complementary manipulation capabilities. The simulation benchmark evaluates five dimensions: generalization, memory, precision, long-horizon execution, and open-vocabulary instruction following, while the real-world benchmark exposes policies to challenging physical-world deployment conditions. RoboDojo supports scalable evaluation through heterogeneous parallel simulation in Isaac Sim and provides RoboDojo-RealEval, a reproducible real-world evaluation system with remote cloud access, standardized hardware, scene reset, evaluation protocol, and deployment interface. Together with XPolicyLab, policies can be integrated once and evaluated across simulation and real-world settings with minimal adaptation. We integrate 30 policies into XPolicyLab and evaluate them on RoboDojo, establishing a public leaderboard and systematic analysis of current policy performance. The website is available at http://robodojo-benchmark.com/.",
+    "authors": [
+      "Tianxing Chen",
+      "Yue Chen",
+      "Zixuan Li",
+      "Junyuan Tang",
+      "Kailun Su",
+      "Haoran Lu"
+    ],
+    "url": "https://arxiv.org/abs/2607.04434",
+    "source": "hf_daily",
+    "hf_upvotes": 6,
+    "score": 6.5
+  },
+  {
+    "id": "rss-e77d4ada80",
+    "title": "Appliances Describe Themselves: Part–Function–State Modeling for Appliance Manipulation Planning",
+    "abstract": "The use of household appliances often involves a sequence of operations and judgments that must jointly consider the functional semantics of the operated components and the current state of the device. Notably, such critical information is often explicitly presented on appliance control panels. In this work, we propose a Part–Function–State–based appliance manipulation planning framework that enables robots to directly leverage the information embedded in appliances to guide manipulation. The framework first employs a multi-model collaborative scheme to parse control panels under open-vocabulary settings, identifying actionable components and their functional semantics, thereby effectively suppressing functional hallucinations in Vision–Language Models (VLMs). To address the limitations of VLMs in geometric reasoning, we further introduce a Geometry-Enhanced Module (GEM) that transforms implicit rotational states of control components, such as knobs, into explicit geometric visual prompts. In addition, we construct and release the HA-Knob dataset, which provides real-world knob images annotated with keypoints and state labels, serving as a benchmark resource for state-aware perception. Experimental results demonstrate that the proposed approach significantly outperforms existing methods in functional recognition, state estimation, and task-level planning accuracy, while generalizing effectively to unseen appliances. Real-robot demonstrations further suggest its potential for ",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11568504",
+    "url": "http://ieeexplore.ieee.org/document/11576562",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
     "score": 6.5
-  },
-  {
-    "id": "rss-cf311ddab2",
-    "title": "RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avoidance for Manipulator Motion in Dynamic Environments",
-    "abstract": "Reactive collision avoidance for robot manipulators in close-proximity dynamic environments requires not only contact avoidance, but also smooth preservation of goal-directed motion. This letter proposes RMPflow-Magnetic and supports an encounter-driven design perspective: in reactive policy-fusion frameworks, the metric activation controlling policy strength should be co-designed with the steering force, jointly derived from the same urgency signal—here, closing-speed from radar Doppler measurements. This unified co-design yields better goal-preserving avoidance than decoupled approaches. Building on this perspective, we develop a velocity-aware magnetic avoidance leaf for RMP/RMPflow where radar-derived distance and closing speed jointly shape both tangential steering and metric activation. We analyze local stability under bounded-residual conditions and validate on a 6-DOF manipulator with end-of-arm radar in static, dynamic, multi-obstacle, and dual-robot scenarios with transparent obstacles. Real-robot experiments demonstrate improved safety margin, reactivity, and goal preservation compared with potential-field-based baselines while maintaining real-time performance.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11576574",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 6.0
   },
   {
     "id": "2507.04321",

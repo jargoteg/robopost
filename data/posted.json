@@ -224,5 +224,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "96a3dc2e",
+    "paper_id": "web-018ed5147c",
+    "title": "Underwater Suit-Wearing Cyborg Insect Capable of Hours-Long Diving and Terra-Aqua Travel",
+    "format": "carousel",
+    "hook": "They put a diving suit on a cockroach. It worked for 3 hours.",
+    "posted_at": "2026-07-09T20:27:02.944497+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqaht75dap2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

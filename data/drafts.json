@@ -2167,7 +2167,7 @@
         "60k accesses in under two weeks. Nature Comms, open access, strong altmetric. This will reach well outside robotics. Which means the insect cyborg ethics question, welfare, consent frameworks, regulatory status, lands in public before the field has agreed on answers. Where do you draw the line on…"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T11:37:21.062782+00:00",
     "media": {
       "figures": [
@@ -2192,7 +2192,9 @@
     },
     "issue": 32,
     "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "123b45cc",
@@ -2800,7 +2802,7 @@
       ]
     },
     "issue": 40,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -3022,7 +3024,7 @@
       ]
     },
     "issue": 44,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -3192,7 +3194,7 @@
       ]
     },
     "issue": 46,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -3919,7 +3921,7 @@
       ]
     },
     "issue": 55,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -4076,7 +4078,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -4236,7 +4238,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -4321,7 +4323,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -4485,7 +4487,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-09T19:36:58.326472+00:00",
+    "scheduled_after": "2026-07-09T21:57:02.944493+00:00",
     "queue_notified": true
   },
   {
@@ -5027,5 +5029,239 @@
       ]
     },
     "issue": 69
+  },
+  {
+    "draft_id": "96da7c67",
+    "paper": {
+      "id": "rss-1ac7611630",
+      "title": "PADLOS: Deformable Linear Objects Segmentation With Pseudo-Depth Guidance and Attribute Constraints",
+      "abstract": "Deformable Linear Object (DLO) instance segmentation plays a critical role in robotic perception for wire harness assembly, cable routing, and other automation tasks involving flexible structures. Existing RGB-based methods often struggle with occlusions, entanglements, and depth ambiguities. In this paper, we propose PADLOS, a novel framework that integrates pseudo-depth maps and attribute-level structural cues to achieve robust and precise DLO instance segmentation. By leveraging pseudo-depth priors derived from RGB inputs, our model gains implicit spatial understanding to distinguish crossing and overlapping DLOs. Furthermore, we introduce attribute-constrained representations, including centerline topology, local thickness, and physical plausibility, to enhance structural consistency in segmentation. Experimental results on synthetic and real-world datasets demonstrate that PADLOS outperforms existing baselines in both segmentation quality and physical plausibility, particularly in complex scenes.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568531",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't robots tell two tangled wires apart?",
+      "commentary": "PADLOS attacks a genuinely hard perception problem: segmenting individual cables when they cross, overlap, and occlude each other. The clever move is using pseudo-depth, depth estimated from RGB alone, not a real depth sensor, to give the model implicit 3D understanding without extra hardware. Attribute constraints on centerline topology and local thickness then enforce physical plausibility, which most segmentation models completely ignore. Real gains on complex scenes are credible. The honest caveat: pseudo-depth from RGB is notoriously unreliable on thin, reflective, or low-contrast objects, which describes most industrial cables exactly, so sim-to-real transfer and sensor noise in real wire harness environments will be the real test.",
+      "slides": [
+        {
+          "title": "The problem: tangled cables",
+          "body": "Wire harness assembly robots fail when cables cross. RGB cameras see a knot, not individual wires. Standard segmentation treats overlapping DLOs as a single blob. That breaks downstream grasping."
+        },
+        {
+          "title": "Pseudo-depth: no depth sensor needed",
+          "body": "PADLOS estimates a depth map from the RGB image itself. This gives the model implicit spatial ordering, which wire is in front, without adding a structured-light or ToF sensor to the setup."
+        },
+        {
+          "title": "Attribute constraints enforce physics",
+          "body": "Centerline topology, local thickness, and physical plausibility are baked into the loss. Segmentation masks that violate cable geometry get penalized. Most prior methods produce physically impossible shapes and nobody checks."
+        },
+        {
+          "title": "Results: beats baselines on complex scenes",
+          "body": "PADLOS outperforms existing methods on both synthetic and real-world datasets, with the gap largest in high-occlusion cases. Segmentation quality and physical plausibility both improve together."
+        },
+        {
+          "title": "The real question: does it survive the factory?",
+          "body": "Pseudo-depth struggles with thin, shiny, low-contrast objects. Industrial cables are all three. Performance on clean benchmarks may not hold under harsh lighting, grease, or cable bundles of 50-plus wires."
+        },
+        {
+          "title": "Why it matters for field robotics",
+          "body": "Cable routing and harness assembly are high-value, error-prone manual tasks. Better DLO segmentation is a prerequisite for automating them. This is the perception layer that has to work before the arm can."
+        }
+      ],
+      "video_script": "Robots are pretty good at picking up rigid objects. Cables are a different problem entirely. When two wires cross, most vision systems just see a mess. PADLOS gets around this by estimating depth from a regular RGB camera, no extra sensors, and then adding constraints that force the model to respect actual cable geometry. Centerlines, thickness, physical plausibility. The benchmarks look solid. But pseudo-depth on shiny thin cables in real factory lighting? That's where I'd want to see the next paper. Would you trust this on a 50-wire automotive harness?",
+      "caption_instagram": "Why can't robots tell two tangled wires apart?\n\nWire harness assembly is one of those tasks that looks simple and is genuinely brutal for machine perception. Cables cross, overlap, reflect light, and sit right next to identical cables. Standard RGB segmentation collapses completely.\n\nPADLOS proposes a two-part fix. First, it estimates pseudo-depth from the RGB image itself, giving the model a sense of which wire is in front without adding a depth sensor. Second, it constrains predictions using centerline topology, local thickness, and physical plausibility, so the output actually looks like a cable and not a random mask.\n\nThe results on complex, occluded scenes are genuinely better than prior methods. The honest concern: pseudo-depth is weakest on thin, shiny, low-contrast objects. That describes most industrial cables exactly. Lab benchmarks and factory floor lighting are very different environments.\n\nThis is foundational perception work for cable routing and harness automation. It has to be solved before the arm can do anything useful.\n\nPaper: PADLOS: Deformable Linear Objects Segmentation With Pseudo-Depth Guidance and Attribute Constraints. IEEE Xplore.\n\n#swarmrobotics #robotperception #industrialautomation #computervision #robotics #wireharness #factoryautomation #fieldrobotics",
+      "caption_tiktok": "Robots can't tell tangled cables apart. PADLOS uses fake depth maps and physics constraints to fix that. Smart idea, real limitations. #robotics #computervision #automation #industrialrobotics",
+      "post_bluesky": "Why can't robots tell tangled cables apart? PADLOS uses pseudo-depth from plain RGB to give models implicit 3D wire ordering, plus physics-based constraints on centerlines and thickness. Clever. Real test is shiny cables under factory lighting. http://ieeexplore.ieee.org/document/11568531",
+      "bluesky_thread": [
+        "The pseudo-depth trick is the interesting part. No extra sensor, just depth estimated from RGB. Works well on benchmarks. Problem: thin, reflective, low-contrast surfaces are exactly where monocular depth estimation falls apart. Industrial cables hit all three.",
+        "If the attribute constraints, centerline topology, physical plausibility, were applied to other deformable object problems like surgical sutures or agricultural vines, that would be worth watching. Anyone seen DLO segmentation tested outside controlled lighting?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T20:25:26.687944+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/96da7c67/bsky_00.png",
+        "media/96da7c67/bsky_01.png",
+        "media/96da7c67/bsky_02.png",
+        "media/96da7c67/bsky_03.png"
+      ],
+      "slides": [
+        "media/96da7c67/slide_00.png",
+        "media/96da7c67/slide_01.png",
+        "media/96da7c67/slide_02.png",
+        "media/96da7c67/slide_03.png",
+        "media/96da7c67/slide_04.png",
+        "media/96da7c67/slide_05.png",
+        "media/96da7c67/slide_06.png",
+        "media/96da7c67/slide_07.png"
+      ]
+    },
+    "issue": 70
+  },
+  {
+    "draft_id": "0f2d09b6",
+    "paper": {
+      "id": "rss-f83d1dda41",
+      "title": "DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks",
+      "abstract": "Learning robust manipulation policies typically demands large and diverse datasets, whose collection is time-consuming, labor-intensive, and impractical in dynamic environments. We present DynaMimicGen (D-MG), a scalable data-generation framework that enables policy learning from minimal human supervision while uniquely supporting data synthesis in dynamic task conditions. Starting from only a few human demonstrations – potentially as few as a single example – D-MG segments the demonstrations into sub-tasks and uses Dynamic Movement Primitives (DMPs) to generalize each skill to novel and continually changing scenes. Unlike prior methods that assume static environments or rely on simple interpolation, D-MG synthesizes smooth, physically plausible Cartesian trajectories that remain task-consistent while adapting in real time to variations in object pose, robot configuration, and scene geometry. Our method supports basic, contact-rich, and long-horizon tasks in both static and dynamic settings. DynaMimicGen increases dataset-generation success rates by 3.6% (Stack), 59.5% (Square), 124.7% (HammerCleanup), 232.7% (MugCleanup), and 4.60% (NutAssembly) over MimicGen (which requires ten demonstrations), while remaining robust to perturbations. By injecting dynamic perturbations during data generation, D-MG increases dataset variability, enabling Diffusion Policy and Behavior Cloning agents to achieve strong performance across all tasks and consistently outperform MG-trained policies",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568504",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5,
+      "open_version": "https://arxiv.org/abs/2511.16223"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One human demo. Hundreds of training episodes. How?",
+      "commentary": "DynaMimicGen wraps Dynamic Movement Primitives around a data synthesis pipeline to turn a single human demonstration into a large, varied training dataset, including in dynamic scenes where objects are moving. The MugCleanup numbers are striking: 232.7% more successful synthetic episodes than MimicGen, which itself already needs ten demos to start. The clever part is injecting perturbations during generation, not just at test time, so the downstream policy sees genuine variation. Honest caveat: the tasks here are tabletop manipulation benchmarks, and the gap between a moving mug on a lab bench and real unstructured environments is large. Whether DMPs stay physically plausible when the dynamics get messier is an open question the paper does not answer.",
+      "slides": [
+        {
+          "title": "The demo bottleneck problem",
+          "body": "Collecting robot manipulation data is slow and expensive. Most imitation learning methods need dozens of human demos per task. DynaMimicGen targets that cost directly: start with as few as one demo."
+        },
+        {
+          "title": "How it works",
+          "body": "Demos are segmented into sub-tasks. Dynamic Movement Primitives generalize each sub-task to new object poses, robot configs, and scene layouts. Output: smooth, physically plausible trajectories at scale."
+        },
+        {
+          "title": "The key differentiator",
+          "body": "Prior work assumes static scenes. D-MG synthesizes data under dynamic conditions: objects move during generation. Perturbations are baked in, not added after. That variability trains more robust policies."
+        },
+        {
+          "title": "The numbers",
+          "body": "Dataset-generation success rate gains over MimicGen: +3.6% Stack, +59.5% Square, +124.7% HammerCleanup, +232.7% MugCleanup, +4.6% NutAssembly. MimicGen required 10 demos; D-MG often needs just one."
+        },
+        {
+          "title": "What the policy learns",
+          "body": "Diffusion Policy and Behavior Cloning agents trained on D-MG data consistently outperform MimicGen-trained equivalents across all tested tasks, static and dynamic."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "All tasks are tabletop benchmarks. DMPs assume smooth, predictable dynamics. Real field conditions, contact-rich clutter, sensor noise, unknown objects, are a different story. Lab wins do not transfer automatically."
+        }
+      ],
+      "video_script": "Teaching a robot a new task usually means recording dozens of human demonstrations. DynaMimicGen cuts that to one. It chops the demo into sub-tasks, uses Dynamic Movement Primitives to adapt each one to new scenes, and then deliberately injects disturbances during data generation. The result: over 200 percent more usable synthetic episodes on some tasks compared to MimicGen. Policies trained on this data outperform the baseline consistently. The caveat: everything here is tabletop manipulation in simulation. The real question is whether DMPs hold up when the world stops being polite. What environment would you want to test this in first?",
+      "caption_instagram": "One human demo. Hundreds of training episodes. How?\n\nMost imitation learning pipelines need 10 to 50 human demonstrations before they can synthesize useful training data. DynaMimicGen cuts that to one, and it does it in dynamic scenes where objects are actually moving during generation.\n\nThe trick: segment the demo into sub-tasks, fit Dynamic Movement Primitives to each segment, then generalize across new poses, configurations, and geometries. Inject perturbations during synthesis rather than at test time. The result is a dataset with real variability baked in, not patched on. Diffusion Policy and BC agents trained on this data consistently beat MimicGen-trained equivalents. The MugCleanup task saw a 232.7% improvement in dataset generation success rate over MimicGen, which itself requires ten demos to start.\n\nHonest take: these are tabletop benchmarks. DMPs produce smooth, physically plausible trajectories when the dynamics are cooperative. Cluttered, contact-rich, unstructured real environments are a harder test. The field deployment story is not written yet.\n\nPaper: DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks. arXiv:2511.16223\n\n#swarmrobotics #robotlearning #manipulationpolicy #imitationlearning #diffusionpolicy #robotics #dataaugmentation #robotmanipulation",
+      "caption_tiktok": "One robot demo turned into hundreds of training episodes, in moving scenes. The MugCleanup gain is 232%. The caveat is real though. #robotics #robotlearning #imitationlearning #diffusionpolicy #manipulation",
+      "post_bluesky": "One human demo. Hundreds of training episodes. DynaMimicGen uses DMPs to synthesize data in dynamic scenes, +232% dataset success on MugCleanup vs MimicGen. Clever. Caveat: all tabletop benchmarks. http://ieeexplore.ieee.org/document/11568504",
+      "bluesky_thread": [
+        "The key move: inject perturbations during data generation, not just at test time. That forces the synthesized dataset to contain real variation. Downstream Diffusion Policy and BC agents both benefit consistently across tasks. That is the part worth stealing.",
+        "The open question for me: DMPs assume smooth, well-behaved dynamics. What happens when contact is messy, objects are unknown, or the scene is genuinely cluttered? Anyone tested DMP-based synthesis outside curated tabletop settings? Curious what held up and what broke."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T20:25:56.595366+00:00",
+    "media": {
+      "figures": [
+        "media/0f2d09b6/fig_04.png",
+        "media/0f2d09b6/fig_00.png",
+        "media/0f2d09b6/fig_03.png",
+        "media/0f2d09b6/fig_01.png"
+      ],
+      "bsky": [
+        "media/0f2d09b6/bsky_00.png",
+        "media/0f2d09b6/bsky_01.png",
+        "media/0f2d09b6/bsky_02.png",
+        "media/0f2d09b6/bsky_03.png"
+      ],
+      "slides": [
+        "media/0f2d09b6/slide_00.png",
+        "media/0f2d09b6/slide_01.png",
+        "media/0f2d09b6/slide_02.png",
+        "media/0f2d09b6/slide_03.png",
+        "media/0f2d09b6/slide_04.png",
+        "media/0f2d09b6/slide_05.png",
+        "media/0f2d09b6/slide_06.png",
+        "media/0f2d09b6/slide_07.png"
+      ]
+    },
+    "issue": 71
+  },
+  {
+    "draft_id": "f9cc0b14",
+    "paper": {
+      "id": "rss-cf311ddab2",
+      "title": "RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avoidance for Manipulator Motion in Dynamic Environments",
+      "abstract": "Reactive collision avoidance for robot manipulators in close-proximity dynamic environments requires not only contact avoidance, but also smooth preservation of goal-directed motion. This letter proposes RMPflow-Magnetic and supports an encounter-driven design perspective: in reactive policy-fusion frameworks, the metric activation controlling policy strength should be co-designed with the steering force, jointly derived from the same urgency signal—here, closing-speed from radar Doppler measurements. This unified co-design yields better goal-preserving avoidance than decoupled approaches. Building on this perspective, we develop a velocity-aware magnetic avoidance leaf for RMP/RMPflow where radar-derived distance and closing speed jointly shape both tangential steering and metric activation. We analyze local stability under bounded-residual conditions and validate on a 6-DOF manipulator with end-of-arm radar in static, dynamic, multi-obstacle, and dual-robot scenarios with transparent obstacles. Real-robot experiments demonstrate improved safety margin, reactivity, and goal preservation compared with potential-field-based baselines while maintaining real-time performance.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576574",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't robots dodge fast-moving obstacles without losing their goal?",
+      "commentary": "Most reactive avoidance systems treat metric activation and steering as separate problems. This paper argues they should share the same urgency signal, specifically radar Doppler closing-speed, and derives both from it together. The result on a 6-DOF arm is better goal preservation while avoiding dynamic obstacles, including transparent ones that completely fool vision-based systems. Real robot validation across static, dynamic, multi-obstacle, and dual-robot cases is solid for a letter. The honest caveat: 'bounded-residual' stability conditions are local guarantees, so fast unpredictable humans in truly cluttered scenes remain an open question.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Reactive avoiders often sacrifice goal-directed motion to dodge obstacles. They steer away fine but forget where they were going. In dynamic environments this compounds fast."
+        },
+        {
+          "title": "One signal, two jobs",
+          "body": "RMPflow-Magnetic uses radar Doppler closing-speed as a single urgency signal. It drives both the tangential steering force and the metric activation weight simultaneously, keeping them physically consistent."
+        },
+        {
+          "title": "Why radar, not cameras?",
+          "body": "Radar sees transparent obstacles. Glass panels, acrylic guards, plastic enclosures all register clearly. Vision and lidar miss them. In real factory or lab cells this matters a lot."
+        },
+        {
+          "title": "What the experiments show",
+          "body": "6-DOF arm, end-of-arm radar, four scenario types including dual-robot interaction. Better safety margin and goal preservation than potential-field baselines. Real-time performance maintained throughout."
+        },
+        {
+          "title": "The stability caveat",
+          "body": "Stability proof holds under bounded-residual conditions. That is a local guarantee. Fast, unpredictable dynamic obstacles near joint limits are not covered. Do not deploy in a crowded human workspace without more analysis."
+        },
+        {
+          "title": "Why co-design matters",
+          "body": "The core contribution is the design principle, not just this implementation. If you build RMP-based controllers, this argument for co-deriving strength and steering from one signal is worth reading carefully."
+        }
+      ],
+      "video_script": "Most robot arms avoid obstacles by pushing away from them. Simple enough. But that push usually kills goal-directed motion at the same time. This paper asks a sharper question: what if the signal that tells the robot how urgent the threat is, also directly shaped how it steers around it? They use radar Doppler, closing speed measured in real time, to drive both the avoidance force and its weight simultaneously. The result is an arm that dodges and keeps going toward its target. And radar picks up transparent obstacles that cameras miss entirely. So here is the question: should co-designed urgency signals be the standard in reactive motion planning?",
+      "caption_instagram": "Why can't robots dodge fast-moving obstacles without losing their goal?\n\nMost reactive avoidance systems treat the steering force and its activation weight as separate design problems. This paper argues that is the wrong split. If both come from the same urgency signal, radar Doppler closing-speed in this case, they stay physically consistent and goal preservation improves.\n\nThe real-robot results on a 6-DOF manipulator are convincing across four scenario types including dual-robot and transparent-obstacle cases. Radar seeing through acrylic and glass is not a small detail in real industrial cells.\n\nHonest limitation: the stability proof is local, bounded-residual conditions only. Fast unpredictable humans in cluttered spaces are not covered. Worth being clear-eyed about that before anyone thinks about deployment.\n\nPaper: RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avoidance for Manipulator Motion in Dynamic Environments. IEEE RA-L 2026.\n\n#swarmrobotics #roboticmanipulation #motionplanning #industrialrobotics #reactiveplanning #robotsafety #fieldrobotics",
+      "caption_tiktok": "Robot arms that dodge obstacles AND keep their goal? Radar Doppler makes the difference. The design principle here is the real contribution. #robotics #motionplanning #industrialrobotics #manipulators",
+      "post_bluesky": "Why do reactive avoiders lose their goal mid-dodge? Because steering and activation are designed separately. This paper derives both from one radar Doppler signal. Real 6-DOF arm, transparent obstacles included. Worth reading. http://ieeexplore.ieee.org/document/11576574",
+      "bluesky_thread": [
+        "The transparent-obstacle result is underrated. Cameras and lidar miss acrylic guards and glass panels. End-of-arm radar doesn't. If you work in real factory or lab cells you know how often that matters. Vision-only avoidance has a real blind spot here.",
+        "Main caveat: stability holds under bounded-residual conditions. Local guarantee only. Fast unpredictable humans near joint limits are out of scope. The co-design principle is solid but the deployment envelope is still narrow. How far does your team push local stability results before real-world…"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T20:26:26.731680+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/f9cc0b14/bsky_00.png",
+        "media/f9cc0b14/bsky_01.png",
+        "media/f9cc0b14/bsky_02.png",
+        "media/f9cc0b14/bsky_03.png"
+      ],
+      "slides": [
+        "media/f9cc0b14/slide_00.png",
+        "media/f9cc0b14/slide_01.png",
+        "media/f9cc0b14/slide_02.png",
+        "media/f9cc0b14/slide_03.png",
+        "media/f9cc0b14/slide_04.png",
+        "media/f9cc0b14/slide_05.png",
+        "media/f9cc0b14/slide_06.png",
+        "media/f9cc0b14/slide_07.png"
+      ]
+    },
+    "issue": 72
   }
 ]
