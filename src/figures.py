@@ -128,6 +128,24 @@ def get_figures(draft) -> list[str]:
     return figs
 
 
+def _find_doi(title):
+    """Resolve a paper title to a DOI via Crossref (for Unpaywall)."""
+    import difflib
+    try:
+        r = requests.get("https://api.crossref.org/works",
+                         params={"query.bibliographic": title[:200], "rows": 3},
+                         timeout=30, headers={"User-Agent": "RoboPost/1.0 (mailto:robopost@users.noreply.github.com)"})
+        def norm(s):
+            return re.sub(r"[^a-z0-9 ]", "", (s or "").lower()).strip()
+        for it in r.json().get("message", {}).get("items", []):
+            ct = " ".join(it.get("title") or [])
+            if ct and difflib.SequenceMatcher(None, norm(title), norm(ct)).ratio() >= 0.85:
+                return it.get("DOI")
+    except Exception as e:
+        print(f"Crossref DOI lookup failed: {e}")
+    return None
+
+
 def find_open_version(title, authors=None):
     """Find an open-access version of a paywalled paper. Returns a dict with
     an 'arxiv_id' and/or a direct 'pdf_url' if found, else None.
@@ -163,7 +181,37 @@ def find_open_version(title, authors=None):
     except Exception as e:
         print(f"arXiv title search failed: {e}")
 
-    # 2) Semantic Scholar: openAccessPdf if available
+    # 2) Unpaywall (by DOI): best OA PDF anywhere, incl. institutional repos
+    doi = _find_doi(title)
+    if doi:
+        try:
+            r = requests.get(f"https://api.unpaywall.org/v2/{doi}",
+                             params={"email": "robopost@users.noreply.github.com"},
+                             timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+            loc = (r.json() or {}).get("best_oa_location") or {}
+            pdf = loc.get("url_for_pdf") or loc.get("url")
+            if pdf:
+                print(f"Open version: Unpaywall OA {pdf[:60]}")
+                return {"pdf_url": pdf}
+        except Exception as e:
+            print(f"Unpaywall lookup failed: {e}")
+
+    # 3) OpenAlex (by title): also exposes OA PDF locations
+    try:
+        r = requests.get("https://api.openalex.org/works",
+                         params={"search": title[:200], "per_page": 3},
+                         timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+        for w in r.json().get("results", []):
+            if difflib.SequenceMatcher(None, tnorm, norm(w.get("title"))).ratio() >= 0.85:
+                oa = (w.get("best_oa_location") or w.get("primary_location") or {})
+                pdf = oa.get("pdf_url")
+                if pdf:
+                    print(f"Open version: OpenAlex OA {pdf[:60]}")
+                    return {"pdf_url": pdf}
+    except Exception as e:
+        print(f"OpenAlex lookup failed: {e}")
+
+    # 4) Semantic Scholar: openAccessPdf if available
     try:
         r = requests.get(
             "https://api.semanticscholar.org/graph/v1/paper/search",
@@ -193,6 +241,10 @@ def figures_from_pdf_url(pdf_url, out_dir):
     try:
         r = requests.get(pdf_url, timeout=60, headers={"User-Agent": "RoboPost/1.0"})
         r.raise_for_status()
+        ct = r.headers.get("content-type", "")
+        if "pdf" not in ct.lower() and not r.content[:4] == b"%PDF":
+            print(f"OA link was not a PDF ({ct}); skipping")
+            return []
         doc = fitz.open(stream=r.content, filetype="pdf")
         found, seen = [], set()
         for page in doc[:10]:
