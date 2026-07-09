@@ -112,7 +112,7 @@ def create_issues():
 {slides}
 
 ---
-**Reply with a comment:** `/approve` · `/reject <why — teaches the curator>` · `/redo <your notes>`
+**Reply with a comment:** `/approve` · `/reject <why>` · `/redo <notes>` · `/refig` (re-hunt figures incl. open-access + YouTube)
 """
         issue = gh("POST", "/issues", {
             "title": f"[DRAFT {d['draft_id']}] {p['title'][:80]}",
@@ -182,6 +182,32 @@ def apply_command(d, text, num):
                 comment(num, "🗑 Rejected. Tip: add a reason (/reject too incremental) "
                              "and the system learns what to avoid.")
             close(num)
+        elif re.match(r"/refig\b", text):
+            # re-run figure extraction in place (uses the open-version fallback)
+            try:
+                from figures import get_figures
+                import visuals
+                cfg = load_config()
+                # force a fresh figure hunt, ignoring any cached figures
+                d.get("media", {}).pop("figures", None)
+                figs = get_figures(d)
+                if figs:
+                    d.setdefault("media", {})["figures"] = figs
+                    visuals.build_carousel(d, cfg)  # re-renders slides + bsky set
+                    base = cfg["media_base_url"].rstrip("/")
+                    cards = "\n".join(
+                        f"![card {i}]({base}/{rel})"
+                        for i, rel in enumerate(d["media"].get("bsky", [])))
+                    src = d["paper"].get("open_version", "")
+                    extra = f"\n\nFigures from open version: {src}" if src else ""
+                    comment(num, f"🖼 Found {len(figs)} figure(s) and re-rendered the "
+                                 f"cards:{extra}\n\n{cards}\n\n_Approve to post with these._")
+                else:
+                    comment(num, "🔍 No figures found even via open-access lookup or "
+                                 "YouTube search. This one stays text-only.")
+            except Exception as e:
+                comment(num, f"refig failed (non-fatal): {e}")
+
         elif m := re.match(r"/redo\s*(.*)", text, re.S):
             d["status"] = "rejected"
             paper = dict(d["paper"], redo_notes=m.group(1).strip())
