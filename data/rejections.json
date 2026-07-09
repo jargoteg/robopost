@@ -145,5 +145,12 @@
     "item_type": "paper",
     "reason": "interesting but not robust study",
     "date": "2026-07-09"
+  },
+  {
+    "title": "PADLOS: Deformable Linear Objects Segmentation With Pseudo-Depth Guidance and Attribute Constraints",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "not interested",
+    "date": "2026-07-09"
   }
 ]
