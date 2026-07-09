@@ -3073,7 +3073,7 @@
         "My caveat: five benchmark datasets is good, but 'adverse weather' in AD benchmarks usually means moderate rain. Mining sites, ports, construction yards face dust, sleet, sensor icing. Would love to see this tested there. Anyone running radar-LiDAR fusion in actual harsh environments? Code…"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:06:59.718761+00:00",
     "media": {
       "bsky": [
@@ -3267,5 +3267,253 @@
       ]
     },
     "issue": 47
+  },
+  {
+    "draft_id": "994a4a97",
+    "paper": {
+      "id": "rss-2d043c8dc9",
+      "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+      "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578324",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "redo_notes": "figures cropped wrongly",
+      "open_version": "https://arxiv.org/abs/2603.07920",
+      "repo_url": "https://github.com/QiZS-BIT/RLPR",
+      "fig_source": "https://github.com/QiZS-BIT/RLPR"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your LiDAR map works great. Until it rains.",
+      "commentary": "RLPR tackles a real deployment headache: you've already built a LiDAR map of your environment, but your onboard sensor is radar because weather. The key insight is stripping out RCS and Doppler signatures entirely and matching only on shared spatial structure, which sounds counterintuitive but buys you cross-radar-type generalization for free. The two-stage asymmetric alignment is clever because it acknowledges that radar and LiDAR descriptors don't live in the same feature space and shouldn't be forced into one symmetrically. Honest caveat: five datasets is solid, but all appear to be autonomous driving scenarios, so the zero-shot claim needs stress-testing in truly novel geometry like underground tunnels or ports before inspection and field robotics teams get excited.",
+      "slides": [
+        {
+          "title": "The infrastructure problem",
+          "body": "LiDAR maps are already built. Rebuilding them in radar is expensive. RLPR lets a radar-equipped vehicle localize against an existing LiDAR map, no new mapping required."
+        },
+        {
+          "title": "Drop the modality-specific noise",
+          "body": "RCS values and Doppler velocity differ across radar types. RLPR deliberately discards both, matching only on spatial structure. One model works for scanning and phased-array radars."
+        },
+        {
+          "title": "Asymmetry is the point",
+          "body": "Radar and LiDAR features are not symmetric. RLPR uses a pre-trained radar branch as a fixed anchor and aligns LiDAR to it, not the other way around. Two-stage process, order matters."
+        },
+        {
+          "title": "State-of-the-art on 5 datasets",
+          "body": "Tested across five benchmarks with strong zero-shot generalization. The dual-stream design avoids modality collapse, a common failure mode in cross-modal retrieval."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "All five datasets are road-driving scenarios. Geometry is relatively flat and structured. Claims of generalization to underground, port, or off-road environments need separate validation."
+        },
+        {
+          "title": "Why this matters for field robotics",
+          "body": "Fog, rain, and dust kill LiDAR performance in mines, ports, and construction sites. Radar-to-LiDAR place recognition could reuse existing survey maps with weather-robust sensors onboard."
+        }
+      ],
+      "video_script": "Your autonomous vehicle has a LiDAR map. Works great in sunshine. But LiDAR degrades in rain, fog, dust. Radar doesn't. Problem: building a second radar map is expensive and slow. RLPR solves this by letting a radar sensor localize directly against your existing LiDAR map. The trick is ignoring everything radar-specific, no RCS, no Doppler, and matching only on spatial structure. It works across radar types and generalizes zero-shot to new environments. The question for field teams: does that generalization hold underground or in open-pit mines, where geometry looks nothing like a road?",
+      "caption_instagram": "Your LiDAR map works great. Until it rains.\n\nRLPR is a cross-modal place recognition system that lets a radar-equipped vehicle localize against an existing LiDAR map. No rebuilding the map in radar. No expensive new survey runs.\n\nThe clever part: the authors strip out all modality-specific features like RCS and Doppler velocity and match only on shared spatial structure. That one design choice makes it compatible with both scanning radars and phased-array radars simultaneously.\n\nThe two-stage asymmetric alignment treats radar and LiDAR as fundamentally different feature spaces, which they are, and anchors the alignment to the radar branch rather than forcing a symmetric solution. Tested on five datasets with zero-shot generalization results.\n\nCaveat worth noting: all five datasets are autonomous driving scenarios. Flat, structured road geometry. Field robotics teams in mining, tunnels, or ports should treat the generalization claim as a hypothesis to test, not a given.\n\nPaper: RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving | arXiv 2603.07920\n\n#SwarmRobotics #FieldRobotics #Localization #Radar #LiDAR #AutonomousDriving #PlaceRecognition",
+      "caption_tiktok": "LiDAR maps already exist. RLPR lets radar use them directly, rain or fog included. Asymmetric alignment is the key move. #Robotics #Radar #LiDAR #Localization #FieldRobotics #SLAM",
+      "post_bluesky": "Your LiDAR map works great. Until it rains. RLPR localizes radar against existing LiDAR maps, no remapping needed. Strips RCS+Doppler, matches spatial structure only. Clever asymmetric alignment. Five datasets, solid zero-shot results. http://ieeexplore.ieee.org/document/11578324",
+      "bluesky_thread": [
+        "The asymmetry observation is the part I keep thinking about. Radar and LiDAR descriptors genuinely don't live in the same space. Most cross-modal work pretends they do and applies symmetric loss. Using the radar branch as a fixed anchor is a cleaner solution to a real problem.",
+        "Honest concern: all five datasets are road driving. Structured geometry, relatively predictable. Mining tunnels, open-pit sites, ports, these have geometry that looks nothing like a road. Would love to see a zero-shot test in one of those environments. Anyone tried this in underground localization?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:36:37.592260+00:00",
+    "media": {
+      "figures": [
+        "media/994a4a97/fig_00.png",
+        "media/994a4a97/fig_01.png",
+        "media/994a4a97/fig_02.png",
+        "media/994a4a97/fig_03.png",
+        "media/994a4a97/fig_04.png"
+      ],
+      "bsky": [
+        "media/994a4a97/bsky_00.png",
+        "media/994a4a97/bsky_01.png",
+        "media/994a4a97/bsky_02.png",
+        "media/994a4a97/bsky_03.png"
+      ],
+      "slides": [
+        "media/994a4a97/slide_00.png",
+        "media/994a4a97/slide_01.png",
+        "media/994a4a97/slide_02.png",
+        "media/994a4a97/slide_03.png",
+        "media/994a4a97/slide_04.png",
+        "media/994a4a97/slide_05.png",
+        "media/994a4a97/slide_06.png",
+        "media/994a4a97/slide_07.png"
+      ]
+    },
+    "issue": 48
+  },
+  {
+    "draft_id": "ae978811",
+    "paper": {
+      "id": "rss-2360bdfd68",
+      "title": "CycleRL: Sim-to-Real Deep Reinforcement Learning for Robust Autonomous Bicycle Control",
+      "abstract": "Autonomous bicycles offer a promising agile solution for urban mobility and last-mile logistics. However, conventional control strategies often struggle with underactuated nonlinear dynamics, suffering from sensitivity to model mismatches and limited adaptability to real-world uncertainties. To address this, we develop CycleRL, a comprehensive sim-to-real framework for robust autonomous bicycle control. Our approach establishes a direct perception-to-action mapping within the high-fidelity NVIDIA Isaac Sim environment, leveraging Proximal Policy Optimization (PPO) to optimize the control policy. The framework features a composite reward function tailored for concurrent balance maintenance, velocity tracking, and steering control. Crucially, systematic domain randomization is employed to reduce the reliance on precise system modeling, bridge the simulation-to-reality gap and facilitate direct transfer. In simulation, CycleRL achieves promising performance, including a 99.90% balance success rate, a heading tracking error of $1.15^{\\circ }$, and a velocity tracking error of 0.18 m/s. These quantitative results, coupled with successful hardware deployment, validate DRL as an effective paradigm for autonomous bicycle control, offering superior adaptability over traditional methods.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568521",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5,
+      "open_version": "https://arxiv.org/abs/2603.15013"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A bicycle that balances itself. Sim-to-real. Does it actually work?",
+      "commentary": "CycleRL trains a PPO policy in NVIDIA Isaac Sim to balance, steer, and track velocity on an autonomous bicycle, then deploys it directly on hardware using domain randomization as the bridge. The sim numbers are clean: 99.9% balance rate, 1.15 degree heading error, 0.18 m/s velocity error. The honest caveat is that 'successful hardware deployment' in the abstract is doing a lot of work with no quantitative real-world numbers to back it up. Underactuated nonlinear dynamics on a bicycle are genuinely hard, and the sim-to-real gap on balance-critical systems tends to bite hardest in exactly the edge cases that matter for last-mile deployment on real urban surfaces.",
+      "slides": [
+        {
+          "title": "Autonomous bicycle, no training wheels",
+          "body": "CycleRL: a sim-to-real PPO framework for bicycle balance, steering, and velocity tracking. Trained entirely in NVIDIA Isaac Sim. Deployed on real hardware."
+        },
+        {
+          "title": "Why bicycles are genuinely hard",
+          "body": "Underactuated nonlinear dynamics. One tipping point from total failure. Traditional controllers need precise models. Any mismatch and the bike goes down. Fast."
+        },
+        {
+          "title": "Sim numbers are strong",
+          "body": "99.90% balance success rate. Heading error: 1.15 degrees. Velocity error: 0.18 m/s. All in simulation with domain randomization bridging the gap to reality."
+        },
+        {
+          "title": "Domain randomization does the heavy lifting",
+          "body": "Instead of precise system ID, they randomize mass, friction, and sensor noise across training. The policy learns to cope with variance rather than fit one exact model."
+        },
+        {
+          "title": "Real hardware: the open question",
+          "body": "Paper confirms successful real-world deployment but reports no quantitative outdoor metrics. Sim balance rate was 99.9%. What is the real-world number? That gap matters."
+        },
+        {
+          "title": "Why this matters for field robotics",
+          "body": "Last-mile delivery on a bicycle chassis is lightweight, cheap, and agile. If sim-to-real transfer holds on wet pavement, gravel, and urban curbs, this is worth watching."
+        }
+      ],
+      "video_script": "Autonomous bicycles sound simple until you remember a bike is always falling over. CycleRL trains a reinforcement learning policy entirely in simulation, then drops it onto real hardware. Sim results: 99.9 percent balance rate, heading error under 1.2 degrees. The trick is domain randomization, vary mass, friction, and noise during training so the policy never overfits one model. Real-world deployment is confirmed but the outdoor numbers aren't published yet. For last-mile logistics this chassis is cheap and agile. But here's the question: how does that balance rate hold on a wet cobblestone street?",
+      "caption_instagram": "A self-balancing bicycle that learned everything in simulation. No hand-tuned PID, no precise system model. Just PPO and a lot of domain randomization.\n\nCycleRL trains a direct perception-to-action policy in NVIDIA Isaac Sim. Composite reward covers balance, velocity tracking, and steering simultaneously. Sim results are strong: 99.9% balance success, 1.15 degree heading error, 0.18 m/s velocity error.\n\nThe sim-to-real story hinges on domain randomization. Randomize mass, friction, sensor noise during training and the policy stops memorizing one model and starts generalizing. That's the right instinct for real deployment.\n\nBig caveat though: 'successful hardware deployment' appears in the abstract with no outdoor quantitative metrics attached. For a balance-critical system, that's exactly the number I want to see. Cobblestones, wet roads, and sudden pedestrians will stress-test this in ways a simulator cannot fully capture.\n\nStill, bicycle chassis for last-mile logistics is genuinely interesting. Lightweight, agile, cheap. Worth following as outdoor data comes in.\n\nPaper: CycleRL: Sim-to-Real Deep Reinforcement Learning for Robust Autonomous Bicycle Control | arXiv 2603.15013\n\n#SwarmRobotics #AutonomousRobots #ReinforcementLearning #SimToReal #FieldRobotics #LastMileDelivery #RoboticsResearch",
+      "caption_tiktok": "Self-balancing bike learns in sim, deploys on real hardware. 99.9% balance rate in simulation. The outdoor number? Not published yet. That's the one that counts. #Robotics #ReinforcementLearning #SimToReal #AutonomousVehicles",
+      "post_bluesky": "A bicycle that balances itself using RL trained purely in sim. 99.9% balance rate, 1.15° heading error in simulation. Real hardware deployment confirmed. Outdoor quantitative results: not reported. That's the number that matters. http://ieeexplore.ieee.org/document/11568521",
+      "bluesky_thread": [
+        "The domain randomization approach here is the right call for an underactuated system like a bike. You can't perfectly model tire-ground contact, so you train the policy to cope with variance instead. Sensible. The question is how wide that randomization envelope actually was.",
+        "For last-mile logistics this chassis concept is genuinely attractive: cheap, agile, low energy. But 'successful deployment' without outdoor balance metrics after a 99.9% sim claim is a classic sim-to-real paper gap. Anyone seen real-world balance data on RL-controlled bicycles at speed?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:37:12.118490+00:00",
+    "media": {
+      "figures": [
+        "media/ae978811/fig_00.png",
+        "media/ae978811/fig_01.png",
+        "media/ae978811/fig_02.png"
+      ],
+      "bsky": [
+        "media/ae978811/bsky_00.png",
+        "media/ae978811/bsky_01.png",
+        "media/ae978811/bsky_02.png",
+        "media/ae978811/bsky_03.png"
+      ],
+      "slides": [
+        "media/ae978811/slide_00.png",
+        "media/ae978811/slide_01.png",
+        "media/ae978811/slide_02.png",
+        "media/ae978811/slide_03.png",
+        "media/ae978811/slide_04.png",
+        "media/ae978811/slide_05.png",
+        "media/ae978811/slide_06.png",
+        "media/ae978811/slide_07.png"
+      ]
+    },
+    "issue": 49
+  },
+  {
+    "draft_id": "cb899458",
+    "paper": {
+      "id": "rss-3f1417e1a7",
+      "title": "DPL: Depth-Only Perceptive Humanoid Locomotion via Realistic Depth Synthesis and Cross-Attention Terrain Reconstruction",
+      "abstract": "Recent advancements in legged robot perceptive locomotion have shown promising progress. However, terrain-aware humanoid locomotion remains largely constrained to two paradigms: depth image-based end-to-end learning and elevation map-based methods. The former suffers from limited training efficiency and a significant sim-to-real gap in depth perception, while the latter depends heavily on multiple vision sensors and localization systems, resulting in latency and reduced robustness. To overcome these challenges, we propose a novel framework that tightly integrates three key components: (1) Terrain-Aware Locomotion Policy with a Blind Backbone, which leverages pre-trained elevation map-based perception to guide reinforcement learning with minimal visual input; (2) Multi-Modality Cross-Attention Transformer, which reconstructs structured terrain representations from noisy depth images; (3) Realistic Depth Images Synthetic Method, which employs self-occlusion-aware ray casting and noise-aware modeling to synthesize realistic depth observations, achieving over 30% reduction in terrain reconstruction error. This combination enables efficient policy training with limited data and hardware resources, while preserving critical terrain features essential for generalization. We validate our framework on a full-sized humanoid robot, demonstrating agile and adaptive locomotion across diverse and challenging terrains.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563611",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2510.07152"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Humanoid locomotion without the sensor stack. Does it hold up?",
+      "commentary": "DPL trains a humanoid locomotion policy using only a single depth camera, replacing the usual multi-sensor elevation map pipeline with a cross-attention transformer that reconstructs terrain on the fly. The clever part is the synthetic depth generation: self-occlusion-aware ray casting cuts terrain reconstruction error by over 30%, which is a real number worth paying attention to. The blind backbone pre-training trick is also smart, it lets the visual policy bootstrap from a stronger proprioceptive prior rather than learning terrain from scratch. Honest caveat: 'diverse and challenging terrains' in a full-sized humanoid validation still needs specifics, walking on what surfaces, at what speeds, over how many trials, before I trust it outside a controlled hall.",
+      "slides": [
+        {
+          "title": "One sensor, full locomotion",
+          "body": "DPL runs a full-sized humanoid on depth camera input only. No lidar, no multi-camera rig, no external localization. That cuts hardware cost and failure points significantly."
+        },
+        {
+          "title": "The sim-to-real depth problem",
+          "body": "Simulated depth images look nothing like real ones. DPL uses self-occlusion-aware ray casting plus noise modeling to synthesize realistic training data. Result: 30% reduction in terrain reconstruction error."
+        },
+        {
+          "title": "Cross-attention terrain reconstruction",
+          "body": "A Multi-Modality Cross-Attention Transformer takes noisy raw depth and outputs a structured elevation representation. Structured input means the locomotion policy generalizes better than end-to-end pixel methods."
+        },
+        {
+          "title": "Bootstrapping from a blind backbone",
+          "body": "Pre-train on elevation maps, then guide visual policy learning from that stronger prior. Less data needed, cheaper compute, and the visual policy inherits terrain-awareness it didn't have to learn from zero."
+        },
+        {
+          "title": "What it doesn't tell us yet",
+          "body": "Field conditions mean wet floors, dust-coated lenses, reflective surfaces, strong backlighting. None of these appear in the validation. The 30% reconstruction gain may not survive a real deployment environment."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "Stripping the sensor stack is necessary for practical humanoid deployment. If depth-only locomotion reaches real robustness, it changes what a deployable humanoid actually costs to operate."
+        }
+      ],
+      "video_script": "Most humanoid locomotion research needs a full sensor suite: multiple cameras, lidar, localization systems. This paper strips it down to one depth camera and asks if you can still get agile terrain-aware walking. The answer involves three pieces: a blind backbone pre-trained on elevation maps, a cross-attention transformer reconstructing terrain from noisy depth, and a synthetic depth generator that cuts reconstruction error by over 30 percent. The results on a full-sized robot look solid, but the real question is what happens when that depth sensor gets dirty, wet, or overexposed. How do you think depth-only stacks hold up in actual field conditions?",
+      "caption_instagram": "Humanoid locomotion with just one depth camera. No lidar, no multi-sensor rig, no external localization.\n\nDPL proposes three tightly integrated pieces: a blind backbone pre-trained on elevation maps to guide policy learning, a cross-attention transformer to reconstruct structured terrain from noisy depth, and a synthetic depth generator that uses self-occlusion-aware ray casting to close the sim-to-real gap. That last part cuts terrain reconstruction error by over 30%. That is a concrete improvement worth noting.\n\nThe bootstrapping trick is what I find genuinely clever. Instead of asking the visual policy to learn terrain from scratch, it starts from a stronger prior. Less data, less compute, better generalization.\n\nMy caveat: 'challenging terrains' on a full-sized humanoid needs field specifics to be convincing. Reflective floors, dusty lenses, outdoor lighting variation, none of that appears in the abstract. The 30% gain is measured in controlled synthesis. The real test is messier.\n\nPaper: DPL: Depth-Only Perceptive Humanoid Locomotion via Realistic Depth Synthesis and Cross-Attention Terrain Reconstruction. arXiv:2510.07152\n\n#swarmrobotics #leggedrobotics #humanoidrobots #perceptivelocomotion #fieldrobotics #roboticsresearch #reinforcementlearning",
+      "caption_tiktok": "Humanoid robot, one depth camera, no lidar. 30% terrain error drop with smarter sim data. Clever bootstrapping, but show me the dusty floor test. #humanoidrobotics #leggedrobotics #robotics #simtoreal",
+      "post_bluesky": "Humanoid locomotion, one depth camera, no multi-sensor stack. DPL gets 30%+ terrain reconstruction gain via self-occlusion-aware synthetic depth and cross-attention terrain rebuilding. Clever blind-backbone bootstrap. Real question: does it survive a…\nhttp://ieeexplore.ieee.org/document/11563611",
+      "bluesky_thread": [
+        "The synthetic depth generation is the part I keep coming back to. Ray casting with self-occlusion modeling is not new, but tying it tightly to noise-aware training and then feeding that to a cross-attention transformer for elevation reconstruction is a clean pipeline. 30% error reduction in…",
+        "My honest concern: full-sized humanoid validation on 'diverse terrains' without surface or condition specifics is hard to evaluate. After watching Aidol collapse on flat ground this week, I want failure mode data, not just success demos. What conditions would actually break the depth-only…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:37:44.993359+00:00",
+    "media": {
+      "figures": [
+        "media/cb899458/fig_00.png",
+        "media/cb899458/fig_01.png",
+        "media/cb899458/fig_02.png",
+        "media/cb899458/fig_03.png",
+        "media/cb899458/fig_04.png",
+        "media/cb899458/fig_05.png"
+      ],
+      "bsky": [
+        "media/cb899458/bsky_00.png",
+        "media/cb899458/bsky_01.png",
+        "media/cb899458/bsky_02.png",
+        "media/cb899458/bsky_03.png"
+      ],
+      "slides": [
+        "media/cb899458/slide_00.png",
+        "media/cb899458/slide_01.png",
+        "media/cb899458/slide_02.png",
+        "media/cb899458/slide_03.png",
+        "media/cb899458/slide_04.png",
+        "media/cb899458/slide_05.png",
+        "media/cb899458/slide_06.png",
+        "media/cb899458/slide_07.png"
+      ]
+    },
+    "issue": 50
   }
 ]

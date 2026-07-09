@@ -1,14 +1,25 @@
 [
   {
-    "id": "rss-2360bdfd68",
-    "title": "CycleRL: Sim-to-Real Deep Reinforcement Learning for Robust Autonomous Bicycle Control",
-    "abstract": "Autonomous bicycles offer a promising agile solution for urban mobility and last-mile logistics. However, conventional control strategies often struggle with underactuated nonlinear dynamics, suffering from sensitivity to model mismatches and limited adaptability to real-world uncertainties. To address this, we develop CycleRL, a comprehensive sim-to-real framework for robust autonomous bicycle control. Our approach establishes a direct perception-to-action mapping within the high-fidelity NVIDIA Isaac Sim environment, leveraging Proximal Policy Optimization (PPO) to optimize the control policy. The framework features a composite reward function tailored for concurrent balance maintenance, velocity tracking, and steering control. Crucially, systematic domain randomization is employed to reduce the reliance on precise system modeling, bridge the simulation-to-reality gap and facilitate direct transfer. In simulation, CycleRL achieves promising performance, including a 99.90% balance success rate, a heading tracking error of $1.15^{\\circ }$, and a velocity tracking error of 0.18 m/s. These quantitative results, coupled with successful hardware deployment, validate DRL as an effective paradigm for autonomous bicycle control, offering superior adaptability over traditional methods.",
+    "id": "rss-41e4715186",
+    "title": "Height-Aware Navigation Framework for Single-DOF Deformable Mobile Robots Based on 3D Encoding",
+    "abstract": "A deformable mobile robot with single-degree-of-freedom (single-DOF) can autonomously navigate and avoid obstacles in complex environments by altering its three-dimensional dimensions through deformation. This capability allows it to traverse passages that fixed-size robots cannot, such as height-restricted or narrow channels, thereby improving task efficiency. This paper proposes a height-aware navigation framework that projects the varying 3D geometric constraints into a grid map and costmap, enabling coupled motion-deformation planning for single-DOF robots. To achieve this, the height restrictions in complex three-dimensional environments are projected as grayscale information into a two-dimensional grid map. Using these grayscale values, we design a costmap layer to reflect the robot’s footprint dimensions in different deformation states. An A* algorithm with height encoding then obtains a global path containing the robot’s height constraints Finally, an enhanced Dynamic Window Approach (DWA) algorithm is proposed to calculate the robot’s movement and deformation speeds, enabling it to utilize its single-DOF deformation capability to traverse height-restricted or narrow obstacle passages. To validate the effectiveness of each core module and highlight the advantages over traditional methods, simulations and experiments were conducted using a Miura-ori-based single-DOF deployable robot.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11568521",
+    "url": "http://ieeexplore.ieee.org/document/11563816",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.5
+    "score": 7.0
+  },
+  {
+    "id": "rss-eb434800d8",
+    "title": "CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations",
+    "abstract": "Deploying massive large language models (LLMs) as continuous cognitive engines for robotics is bottlenecked by the time-to-first-token (TTFT) latency required to process extensive state histories. Existing solutions like RAG or sliding windows compromise global context or incur prohibitive re-computation costs. We formalize the optimal task structure for minimizing latency and theoretically prove that prefix stability, incremental extensibility, and asynchronous state reconciliation are necessary conditions for real-time performance. Building on these proofs, we introduce the Cached State Representation (CSR) framework as the practical instantiation of these properties, ensuring optimal KV-cache reuse. To sustain these properties over infinite horizons, we further propose an Asynchronous State Reconciliation (ASR) algorithm that offloads state memory eviction to a parallel computational resource to eliminate latency spikes. On a physical robot wirelessly connected to an on-premise GPU server, CSR achieves a 26-fold latency reduction (14.67 s to 0.56 s) for 120 K token contexts with a 235B parameter model compared to a standard baseline. On an embodied AI benchmark, we achieve SOTA recall (0.836 vs. 0.459) while maintaining RAG-level latency. ASR is validated to sustain bounded, spike-free TTFT over 10 eviction cycles in continuous real-world operation. Together, CSR and ASR enable massive LLMs to function as continuously operating, high-frequency ($\\ge$ 2 Hz) embodied policie",
+    "authors": [],
+    "url": "http://ieeexplore.ieee.org/document/11568517",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "journal": true,
+    "score": 6.0
   },
   {
     "id": "2507.04321",
