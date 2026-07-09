@@ -1237,5 +1237,261 @@
       ]
     },
     "issue": 21
+  },
+  {
+    "draft_id": "bc91c0fa",
+    "paper": {
+      "id": "2607.07608v1",
+      "title": "Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation",
+      "abstract": "Mainstream Vision-Language-Action (VLA) models predict actions primarily from the current observation under a Markovian assumption, thus struggling with long-horizon, temporally dependent tasks. Existing memory-augmented VLAs either expand the observation window or retrieve history from the memory bank as auxiliary policy-side context. However, they leave memory outside the native latent embedding space of VLA reasoning, preventing historical experience from being fluidly interleaved with multimodal reasoning and action formation. To this end, we introduce LaMem-VLA, a latent-memory-native framework that reconstructs historical experience into latent memory tokens and directly interweaves them with VLA reasoning. At its core, LaMem-VLA introduces four coordinated components: (i) a curator that organizes historical experience into two complementary short-term and long-term memory vaults; (ii) a seeker that queries both vaults using the multimodal cognition to retrieve context-relevant evidence; (iii) a condenser that reconstructs the retrieved evidence into compact short-term and long-term latent memory tokens; and (iv) a weaver that injects these memory tokens with the current observation and instruction into one continuous embedding sequence. By representing, retrieving, and consuming historical experience entirely in the same continuous latent space, LaMem-VLA enables memory to directly participate in VLA reasoning and guide action generation under a bounded context. Extensive experiments on SimplerEnv and LIBERO demonstrate the superiority of our LaMem-VLA.",
+      "authors": [
+        "Hongyu Qu",
+        "Jianzhe Gao",
+        "Xiaobin Hu",
+        "Shaohuan Yang",
+        "Xinlei Yu",
+        "Rui Yan"
+      ],
+      "url": "https://arxiv.org/abs/2607.07608v1",
+      "source": "arxiv",
+      "score": 7.8
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "VLA models forget everything between steps. This one doesn't.",
+      "commentary": "LaMem-VLA targets a real weakness: standard VLA models assume the world is Markov, so each action prediction ignores everything that happened before. The fix is architectural. They keep two memory vaults, short-term and long-term, and reconstruct retrieved history directly into latent tokens that sit inside the same embedding sequence as the current observation. That is meaningfully different from bolting retrieved frames onto the input as extra images. The honest caveat: both evaluation benchmarks, SimplerEnv and LIBERO, are simulated and relatively controlled. Whether the dual-vault retrieval holds up in real hardware with noisy, high-frequency observations is still an open question the paper does not answer.",
+      "slides": [
+        {
+          "title": "The Markov problem in VLAs",
+          "body": "Most VLA models predict actions from the current frame only. Long-horizon tasks with dependencies across steps break this assumption. The robot forgets what it just did."
+        },
+        {
+          "title": "Two memory vaults",
+          "body": "LaMem-VLA organizes history into short-term and long-term vaults. A seeker module queries both using multimodal context, not raw pixel similarity."
+        },
+        {
+          "title": "Memory lives inside the latent space",
+          "body": "Retrieved history is compressed into latent tokens, then woven directly into the VLA's embedding sequence. Memory participates in reasoning, not just observation concatenation."
+        },
+        {
+          "title": "Four coordinated components",
+          "body": "Curator organizes history. Seeker retrieves. Condenser compresses to tokens. Weaver injects into the continuous embedding sequence. Each has a distinct job."
+        },
+        {
+          "title": "Tested on SimplerEnv and LIBERO",
+          "body": "Both are simulated benchmarks. Results show superiority over prior memory-augmented VLAs on these suites. Real-robot transfer with noisy sensors is not yet evaluated."
+        },
+        {
+          "title": "What this means practically",
+          "body": "If latent-native memory scales, long-horizon tasks like multi-step assembly become tractable without growing context windows indefinitely. That is the architectural bet here."
+        }
+      ],
+      "video_script": "Most VLA models treat every timestep like it's the first. They assume Markov. That works for pick-and-place but falls apart the moment a task has dependencies across steps. LaMem-VLA fixes this by keeping two memory vaults, short-term and long-term, and it doesn't just paste history onto the input. It reconstructs retrieved experience as latent tokens, woven directly into the reasoning sequence. The memory is native to the model, not bolted on. Results on SimplerEnv and LIBERO look solid. But the real question is: does this hold on physical hardware with messy, real-world sensor noise?",
+      "caption_instagram": "VLA models have a memory problem. Most of them assume the world is Markov, meaning every action prediction starts from scratch with only the current frame. That is fine for simple pick-and-place. It breaks for anything with temporal dependencies.\n\nLaMem-VLA introduces dual latent memory: a short-term vault and a long-term vault. A seeker queries both, a condenser compresses retrieved history into compact tokens, and a weaver injects those tokens directly into the model's continuous embedding sequence. Memory is not appended as extra images. It lives inside the latent space.\n\nThe architecture is genuinely clever. Keeping memory native to the latent space, rather than treating it as auxiliary context, is the right instinct. Evaluations run on SimplerEnv and LIBERO show clear gains over prior memory-augmented baselines.\n\nThe gap: both benchmarks are simulated. High-frequency real-robot data with sensor noise is a different problem. That test is still missing.\n\nPaper: Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation, arXiv 2607.07608\n\n#SwarmRobotics #VLA #RoboticManipulation #EmbodiedAI #RobotLearning #FoundationModels #HRI",
+      "caption_tiktok": "VLA robots forget everything between steps. This paper puts two memory vaults inside the latent space itself, not pasted on top. Clever architecture, but real-robot results still missing. #Robotics #VLA #AIRobotics #RobotManipulation",
+      "post_bluesky": "VLA models assume Markov. Every step, they forget. LaMem-VLA fixes this with dual latent memory tokens woven directly into the reasoning sequence, not appended as extra frames. Genuine architectural difference. https://arxiv.org/abs/2607.07608v1",
+      "bluesky_thread": [
+        "The clever bit: retrieval feeds a condenser that outputs compact latent tokens, then a weaver injects them into the same embedding sequence as the current obs. Memory participates in reasoning, not just observation. That is not what most memory-augmented VLAs do.",
+        "Honest caveat: all evals are on SimplerEnv and LIBERO, both simulated. Real hardware with noisy high-freq sensors is a very different stress test. Does the dual-vault retrieval stay coherent there? That is the paper I want to see next."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T05:01:21.571914+00:00",
+    "media": {
+      "figures": [
+        "media/bc91c0fa/fig_00.png",
+        "media/bc91c0fa/fig_01.png",
+        "media/bc91c0fa/fig_02.png",
+        "media/bc91c0fa/fig_03.png"
+      ],
+      "bsky": [
+        "media/bc91c0fa/bsky_00.png",
+        "media/bc91c0fa/bsky_01.png",
+        "media/bc91c0fa/bsky_02.png",
+        "media/bc91c0fa/bsky_03.png"
+      ],
+      "slides": [
+        "media/bc91c0fa/slide_00.png",
+        "media/bc91c0fa/slide_01.png",
+        "media/bc91c0fa/slide_02.png",
+        "media/bc91c0fa/slide_03.png",
+        "media/bc91c0fa/slide_04.png",
+        "media/bc91c0fa/slide_05.png",
+        "media/bc91c0fa/slide_06.png",
+        "media/bc91c0fa/slide_07.png"
+      ]
+    },
+    "issue": 22
+  },
+  {
+    "draft_id": "f28b83bc",
+    "paper": {
+      "id": "2607.07287v1",
+      "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+      "abstract": "Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.",
+      "authors": [
+        "Jianyi Zhou",
+        "Feiyang Hong",
+        "Yunhao Li",
+        "Yicheng Zhao",
+        "Yongjue Cen",
+        "Zirui Liu"
+      ],
+      "url": "https://arxiv.org/abs/2607.07287v1",
+      "source": "arxiv",
+      "score": 7.8
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Touch as a world model, not just a sensor stream",
+      "commentary": "TouchWorld attacks a real architectural problem: most tactile policies run touch through the same slow loop as task reasoning, which means slip correction arrives too late. The fix here is a hierarchy that separates language-level planning, nominal action generation, and a high-frequency residual corrector that patches contact errors online. 65% success on six long-horizon dexterous tasks, 53.7% under live human perturbations, and a 15.7 to 18.5 point gap over the strongest baseline are numbers worth respecting. The honest caveat: we don't know the baseline lineup yet, and 65% clean success on contact-rich tasks still leaves a lot of failures, so this is progress, not a solved problem. The hierarchy idea is the genuinely clever part and worth stealing for other sensing modalities.",
+      "slides": [
+        {
+          "title": "The problem with touch today",
+          "body": "Most policies pipe tactile data into one monolithic loop alongside task reasoning. Slip happens at milliseconds. Task reasoning runs at seconds. The mismatch costs you the grasp."
+        },
+        {
+          "title": "Three layers, three timescales",
+          "body": "High-level: vision-language subtask planning plus tactile subgoal prediction. Mid-level: visuo-tactile goal-conditioned action chunks. Low-level: high-frequency residual correction from live tactile and proprioceptive feedback."
+        },
+        {
+          "title": "Touch predicts, then reacts",
+          "body": "The key idea: touch is a world-model input at planning time AND a fast error-correction signal at execution time. Previous work picked one role. TouchWorld uses both in separate loops."
+        },
+        {
+          "title": "The numbers",
+          "body": "65.0% success, clean setting. 53.7% under human perturbations. Outperforms next-best baseline by 15.7 pts clean and 18.5 pts perturbed. Tested across six long-horizon contact-rich tasks."
+        },
+        {
+          "title": "What's genuinely clever",
+          "body": "Tactile subgoal prediction at the high level means the policy knows what contact should feel like before it happens. That turns touch from a reactive crutch into a planning primitive."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "65% clean success means 35% failure on tasks a human does without thinking. Baseline identities matter. And real deployment means sensor noise, worn fingertips, and objects that don't match training."
+        }
+      ],
+      "video_script": "Most robots treat touch like a smoke alarm: it only fires when something already went wrong. TouchWorld flips that. It uses tactile sensing at two levels simultaneously: predicting what contact should feel like before it happens, and correcting local errors in real time when things drift. The result is a three-layer hierarchy where vision handles semantics, nominal actions handle motion, and a fast residual loop patches slip and misalignment at high frequency. 65% success on six dexterous tasks, nearly 54% under live human interference. The architecture is the real contribution here. So the question I keep asking: why aren't we doing this for every contact-rich robot, not just dexterous hands?",
+      "caption_instagram": "Touch as a world model, not just a sensor stream.\n\nMost tactile robot policies have a timing problem. Slip and misalignment happen in milliseconds. Task-level reasoning runs in seconds. Coupling them in one loop means the correction always arrives late.\n\nTouchWorld splits the hierarchy: vision-language planning at the top, goal-conditioned action generation in the middle, and a high-frequency residual corrector at the bottom that patches contact errors online using live tactile and proprioceptive feedback. The clever part is that touch feeds BOTH the planning layer (predicting what contact should feel like) and the correction layer (fixing it when it drifts).\n\nResults across six long-horizon dexterous tasks: 65.0% success in clean conditions, 53.7% under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points respectively. Respect the numbers, but note that 65% clean still means a lot of failures on tasks humans do without thinking.\n\nThe hierarchy idea is what I'd steal for other sensing modalities. Paper: TouchWorld (arXiv 2607.07287v1).\n\n#SwarmRobotics #DexterousManipulation #TactileSensing #RoboticsResearch #ContactRichManipulation #FoundationModels #HapticFeedback",
+      "caption_tiktok": "Your robot's sense of touch is running too slow. TouchWorld fixes that with a 3-layer hierarchy, and the numbers show it. arXiv 2607.07287v1\n#Robotics #DexterousManipulation #TactileSensing #RoboticsResearch",
+      "post_bluesky": "Touch as a world model, not just a sensor. TouchWorld splits tactile into a planning signal AND a fast residual corrector, 65% success on 6 dexterous tasks, +15.7pts over best baseline. The hierarchy is the idea worth stealing. https://arxiv.org/abs/2607.07287v1",
+      "bluesky_thread": [
+        "The genuinely clever bit: tactile subgoal prediction at planning time means the policy knows what contact should feel like *before* it happens. That reframes touch from reactive fallback to planning primitive. Most work picks one role. This uses both in separate loops.",
+        "Honest caveat: 65% clean success means 35% of grasps still fail on tasks humans do without thinking. And we don't see the full baseline lineup yet. Progress is real, solved problem is not. Curious what sensing modalities you'd apply this hierarchy to beyond fingertips."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T05:01:50.329603+00:00",
+    "media": {
+      "figures": [
+        "media/f28b83bc/fig_00.png",
+        "media/f28b83bc/fig_01.png",
+        "media/f28b83bc/fig_02.png",
+        "media/f28b83bc/fig_03.png"
+      ],
+      "bsky": [
+        "media/f28b83bc/bsky_00.png",
+        "media/f28b83bc/bsky_01.png",
+        "media/f28b83bc/bsky_02.png",
+        "media/f28b83bc/bsky_03.png"
+      ],
+      "slides": [
+        "media/f28b83bc/slide_00.png",
+        "media/f28b83bc/slide_01.png",
+        "media/f28b83bc/slide_02.png",
+        "media/f28b83bc/slide_03.png",
+        "media/f28b83bc/slide_04.png",
+        "media/f28b83bc/slide_05.png",
+        "media/f28b83bc/slide_06.png",
+        "media/f28b83bc/slide_07.png"
+      ]
+    },
+    "issue": 23
+  },
+  {
+    "draft_id": "b4c40b4f",
+    "paper": {
+      "id": "2607.06558",
+      "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+      "abstract": "Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator's hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.",
+      "authors": [
+        "Haoyu Zhao",
+        "Xingyue Zhao",
+        "Hangyu Li",
+        "Biao Gong",
+        "Kehan Li",
+        "Siteng Huang"
+      ],
+      "url": "https://arxiv.org/abs/2607.06558",
+      "source": "hf_daily",
+      "hf_upvotes": 69,
+      "score": 7.8
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "What if you never needed a real robot to collect robot data?",
+      "commentary": "RynnWorld-Teleop replaces the physical robot entirely during data collection. An operator streams hand poses, a video diffusion transformer synthesizes what the robot would see, and the pose stream becomes an embodiment-agnostic action label you can retarget to any hardware. The 40+ FPS on a single H100 is genuinely impressive for a diffusion-based system. The honest caveat: 'zero-shot Sim2Real transfer' on dexterous bimanual tasks is the hardest claim to evaluate from an abstract alone, and success rates on those tasks are not quantified here. If the Sim2Real gap is small, this actually matters for scaling. If it is not, this is a very expensive video generator.",
+      "slides": [
+        {
+          "title": "The data bottleneck is real",
+          "body": "Every robot demonstration today requires an operator, specific hardware, and a physical workspace. You cannot parallelize that. RynnWorld-Teleop attacks this directly."
+        },
+        {
+          "title": "Replace the robot with a world model",
+          "body": "Operator streams hand poses. A video Diffusion Transformer synthesizes egocentric robot video from one reference image. No physical robot needed during collection."
+        },
+        {
+          "title": "Actions stay hardware-agnostic",
+          "body": "The recorded pose stream is retargeted to any robot after the fact. One teleoperation session, multiple embodiments. Standard imitation learning takes it from there."
+        },
+        {
+          "title": "40+ FPS on one H100",
+          "body": "Streaming autoregressive distillation compresses diffusion into single-pass inference. Real-time interactive generation is the threshold that makes operator sessions actually usable."
+        },
+        {
+          "title": "Policies trained on synthetic data only",
+          "body": "Zero-shot Sim2Real on dexterous bimanual tasks is claimed. Augmenting real datasets with this synthetic data also consistently raises success rates. Both results need task-level numbers to fully trust."
+        },
+        {
+          "title": "The open question",
+          "body": "Sim2Real gap size is everything here. A world model that hallucinates contact physics convincingly is still wrong. Watch for the full paper's quantitative breakdowns on task success."
+        }
+      ],
+      "video_script": "Robot data collection has a simple problem. Every demonstration needs a real robot, a real workspace, and a human standing there operating it. RynnWorld-Teleop cuts the physical robot out entirely. You stream hand poses, a world model generates what the robot would see, and your action labels are hardware-agnostic from day one. They hit 40 frames per second on a single H100, which is the threshold where this becomes interactive. Policies trained only on this synthetic data claim zero-shot transfer to real dexterous tasks. The question I want answered: how big is the Sim2Real gap when contact physics gets hard?",
+      "caption_instagram": "What if you never needed a real robot to collect robot data?\n\nRynnWorld-Teleop decouples data collection from hardware entirely. An operator streams hand poses, a video Diffusion Transformer synthesizes egocentric robot video from a single reference image, and the pose stream becomes an embodiment-agnostic action label. Retarget it to any robot afterward.\n\nThe 40+ FPS on one H100 is the detail that catches my attention. Real-time interactive generation is the bar that makes operator sessions practical, not just technically impressive. Streaming autoregressive distillation is doing real work here.\n\nThe claim I am watching carefully: zero-shot Sim2Real transfer on dexterous bimanual tasks, using policies trained exclusively on synthetic data. The abstract does not give task-level success numbers. If the Sim2Real gap is genuinely small, this is a serious data engine. If contact physics breaks down, it is a compelling video generator with a scaling problem.\n\nPaper: RynnWorld-Teleop, arXiv 2607.06558\n\n#swarmrobotics #robotlearning #imitationlearning #worldmodels #teleoperation #sim2real #roboticsresearch",
+      "caption_tiktok": "No robot needed to train a robot. World model replaces the hardware during data collection, 40fps on one GPU. The Sim2Real gap question is everything. #robotics #worldmodel #robotlearning #imitation",
+      "post_bluesky": "What if you never needed a real robot to collect robot data? RynnWorld-Teleop replaces the physical hardware with a generative world model. Hand poses in, egocentric video out, embodiment-agnostic labels for any robot. 40+ FPS on one H100. https://arxiv.org/abs/2607.06558",
+      "bluesky_thread": [
+        "The clever part: the action label (hand pose stream) stays hardware-agnostic by design. One teleoperation session can retarget to multiple embodiments after the fact. That is the actual scaling argument, not the video quality.",
+        "The part I want to stress-test: 'zero-shot Sim2Real on dexterous bimanual tasks' with no task-level success numbers in the abstract. World models that look right but hallucinate contact physics are a known failure mode. Anyone seen the full results? What tasks did they actually test?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T05:02:17.306830+00:00",
+    "media": {
+      "figures": [
+        "media/b4c40b4f/fig_00.png",
+        "media/b4c40b4f/fig_01.png",
+        "media/b4c40b4f/fig_02.png",
+        "media/b4c40b4f/fig_03.png"
+      ],
+      "bsky": [
+        "media/b4c40b4f/bsky_00.png",
+        "media/b4c40b4f/bsky_01.png",
+        "media/b4c40b4f/bsky_02.png",
+        "media/b4c40b4f/bsky_03.png"
+      ],
+      "slides": [
+        "media/b4c40b4f/slide_00.png",
+        "media/b4c40b4f/slide_01.png",
+        "media/b4c40b4f/slide_02.png",
+        "media/b4c40b4f/slide_03.png",
+        "media/b4c40b4f/slide_04.png",
+        "media/b4c40b4f/slide_05.png",
+        "media/b4c40b4f/slide_06.png",
+        "media/b4c40b4f/slide_07.png"
+      ]
+    },
+    "issue": 24
   }
 ]
