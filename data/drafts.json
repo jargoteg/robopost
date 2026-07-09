@@ -2101,5 +2101,234 @@
       ]
     },
     "issue": 31
+  },
+  {
+    "draft_id": "96a3dc2e",
+    "paper": {
+      "id": "web-018ed5147c",
+      "title": "Underwater Suit-Wearing Cyborg Insect Capable of Hours-Long Diving and Terra-Aqua Travel",
+      "abstract": "Researchers built a wearable diving suit for a Madagascar hissing cockroach, turning a land insect into an amphibious cyborg robot. A miniaturised oxygen generator (H2O2 + MnO2 catalyst, no electronics) feeds oxygen to the insect's thoracic spiracles through a waterproof flexible shell, sustaining respiration and controlled locomotion underwater for up to 3 hours. The suit-wearing cyborg hit 1.0 body-lengths/sec underwater, outpacing most amphibious robots, and traversed a mixed CO2-and-water hazard tunnel plus a 2 cm underwater crevice with a fully implanted controller. Nature Communications, open access, published 29 June 2026.",
+      "authors": [
+        "Zifu Fan",
+        "Kazuki Kai",
+        "Hirotaka Sato",
+        "et al. (NTU Singapore / Waseda)"
+      ],
+      "url": "https://www.nature.com/articles/s41467-026-74235-1",
+      "source": "Nature Communications",
+      "item_type": "paper",
+      "journal": true,
+      "user_notes": "High-visibility journal paper (60k accesses, 958 Altmetric already). Lead with the striking image. Honest angle: this is a clever hardware and chemistry result for search-and-rescue in flooded spaces, but it is a biohybrid cyborg using a living insect, so note the ethics/where-it-fits question that will drive replies. The oxygen comes from a catalytic reaction, not a battery, which is the genuinely neat engineering bit."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "They put a diving suit on a cockroach. It worked for 3 hours.",
+      "commentary": "NTU Singapore fitted a Madagascar hissing cockroach with a waterproof exoskeleton shell and a passive oxygen supply from H2O2/MnO2 catalysis, no battery, no electronics in the gas generator. The insect breathes through its thoracic spiracles and keeps locomoting underwater at 1.0 body-lengths per second, which beats most purpose-built amphibious microrobots. The chemistry is the clever part: catalytic O2 on demand, sized to last hours, weighs almost nothing. Honest caveat: this is a living animal under implanted electrical control, and Nature Comms publishing it at scale means the field needs to have the ethics conversation out loud, not in a footnote. Deployment path for flooded rubble or pipe inspection is real but distant.",
+      "slides": [
+        {
+          "title": "A cockroach that dives",
+          "body": "A Madagascar hissing cockroach wearing a sealed flexible suit sustained underwater locomotion for up to 3 hours. Speed: 1.0 body-lengths per second. That beats most purpose-built amphibious microrobots."
+        },
+        {
+          "title": "No battery. Just chemistry.",
+          "body": "Oxygen comes from H2O2 decomposed by MnO2 catalyst. No electronics in the gas generator. The reaction feeds the insect's thoracic spiracles directly through the suit shell. Passive, lightweight, hours-long."
+        },
+        {
+          "title": "What the suit actually does",
+          "body": "Waterproof flexible exoskeleton seals the body. A miniaturised implanted controller still steers locomotion. The insect navigated a CO2-and-water hazard tunnel and a 2 cm underwater crevice in testing."
+        },
+        {
+          "title": "Why anyone would build this",
+          "body": "Flooded rubble after earthquakes or pipe interiors after industrial failures. A biohybrid this small goes where cameras and wheeled robots cannot. Search and rescue in confined, mixed-phase environments is the stated use case."
+        },
+        {
+          "title": "The honest question",
+          "body": "This is a living insect under electrical stimulation, now also deprived of its natural environment. Nature Comms published it. 60k accesses in days. The ethics framework for insect cyborgs is underdeveloped relative to the engineering."
+        },
+        {
+          "title": "What comes next",
+          "body": "Longer dives, smaller suits, other species. The catalytic O2 approach could transfer to purely synthetic microrobots if miniaturised further. But the biohybrid path will hit regulatory and ethical walls before deployment walls."
+        }
+      ],
+      "video_script": "Researchers at NTU Singapore just put a diving suit on a cockroach. Not a metaphor. A waterproof shell, a passive oxygen generator running on hydrogen peroxide and a manganese catalyst, no battery, and an implanted controller. The insect breathes, moves, and navigates underwater for three hours at one body-length per second. That outpaces most purpose-built amphibious microrobots. The chemistry is genuinely clever. The ethics are genuinely unresolved. So here is the question: at what point does a biohybrid stop being a robot and start being something we need a different framework to talk about?",
+      "caption_instagram": "They put a diving suit on a cockroach and it swam for 3 hours.\n\nNTU Singapore published this in Nature Communications last week and it already has 60,000 accesses. The engineering core is a passive oxygen generator, hydrogen peroxide over a manganese dioxide catalyst, no electronics, no battery, feeding breathable O2 directly to the insect's thoracic spiracles through a waterproof flexible shell. The cockroach keeps locomoting at 1.0 body-lengths per second underwater. That number is competitive with purpose-built amphibious microrobots that took years of mechanical design to reach.\n\nThe use case is real: flooded rubble after structural collapse, confined pipe interiors, mixed-phase search environments where cameras on wheels simply do not fit. A biohybrid at insect scale changes the geometry of what is reachable.\n\nBut this is a living animal under implanted electrical control, now also submerged against its biology. The paper is rigorous. The ethics section is thin. With publication at this visibility, the field needs that conversation to happen in the open, not buried in supplementary material.\n\nPaper: 'Underwater Suit-Wearing Cyborg Insect Capable of Hours-Long Diving and Terra-Aqua Travel', Nature Communications, June 29 2026. Open access.\n\n#swarmrobotics #searchandrescue #biohybridrobotics #microrobotics #fieldrobotics #roboticsresearch #naturecommunications",
+      "caption_tiktok": "Scientists built a scuba suit for a cockroach. It navigates flooded tunnels for 3 hours on pure chemistry. The engineering is clever. The ethics conversation is overdue. #robotics #biohybrid #microrobotics #searchandrescue",
+      "post_bluesky": "They built a scuba suit for a cockroach. Passive O2 from H2O2+MnO2, no battery, 3 hours underwater, 1.0 body-lengths/sec. Beats most amphibious microrobots. The chemistry is clever. The ethics framework is not keeping pace. https://www.nature.com/articles/s41467-026-74235-1",
+      "bluesky_thread": [
+        "The genuinely neat bit: the oxygen generator has zero electronics. Catalytic reaction, sized to last hours, weighs almost nothing. That approach could transfer to fully synthetic microrobots eventually. But right now it only works because there is a living insect doing the locomotion.",
+        "60k accesses in under two weeks. Nature Comms, open access, strong altmetric. This will reach well outside robotics. Which means the insect cyborg ethics question, welfare, consent frameworks, regulatory status, lands in public before the field has agreed on answers. Where do you draw the line on…"
+      ]
+    },
+    "status": "pending_review",
+    "created": "2026-07-09T11:37:21.062782+00:00",
+    "media": {
+      "figures": [
+        "media/96a3dc2e/fig_00.png"
+      ],
+      "bsky": [
+        "media/96a3dc2e/bsky_00.png",
+        "media/96a3dc2e/bsky_01.png",
+        "media/96a3dc2e/bsky_02.png",
+        "media/96a3dc2e/bsky_03.png"
+      ],
+      "slides": [
+        "media/96a3dc2e/slide_00.png",
+        "media/96a3dc2e/slide_01.png",
+        "media/96a3dc2e/slide_02.png",
+        "media/96a3dc2e/slide_03.png",
+        "media/96a3dc2e/slide_04.png",
+        "media/96a3dc2e/slide_05.png",
+        "media/96a3dc2e/slide_06.png",
+        "media/96a3dc2e/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "123b45cc",
+    "paper": {
+      "id": "rss-b8b8e588a7",
+      "title": "NAS-GS: Noise-Aware Sonar Gaussian Splatting",
+      "abstract": "Underwater sonar imaging plays a crucial role in various applications, including autonomous navigation in murky water, marine archaeology, and environmental monitoring. However, the unique characteristics of sonar images, such as complex noise patterns and the lack of elevation information, pose significant challenges for 3D reconstruction and view synthesis. In this paper, we present NAS-GS, a novel Noise-Aware Sonar Gaussian Splatting framework specifically designed to address these challenges. Our approach introduces a Two-Ways Splatting technique that accurately models the dual directions for intensity accumulation and transmittance calculation inherent in sonar imaging, significantly improving rendering speed without sacrificing quality. Moreover, we propose a Gaussian Mixture Model (GMM) based noise model that captures complex sonar noise patterns, including side-lobes, speckle, and multi-path noise. This model enhances the realism of synthesized images while preventing 3D Gaussian overfitting to noise, thereby improving reconstruction accuracy. We demonstrate state-of-the-art performance on both simulated and real-world large-scale offshore sonar scenarios, achieving superior results in view synthesis and 3D reconstruction.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576559",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.7
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Sonar sees murky water. Gaussian splatting hates sonar noise.",
+      "commentary": "NAS-GS applies 3D Gaussian Splatting to forward-look sonar, which is genuinely hard because sonar images carry side-lobe artifacts, speckle, and multi-path returns that look like structure. The clever part is using a Gaussian Mixture Model as a noise prior, so the Gaussians fit geometry instead of fitting noise. The Two-Ways Splatting handles sonar's intensity accumulation direction, which standard NeRF-style rendering ignores. Caveat: 'large-scale offshore' is doing a lot of work here. Pipeline inspection at 300m with biofouling and strong currents is a different beast from controlled offshore test sites, and the elevation ambiguity problem is acknowledged but not fully solved.",
+      "slides": [
+        {
+          "title": "Sonar 3D reconstruction is hard",
+          "body": "Sonar images lack elevation data. They carry speckle, side-lobes, and multi-path noise. Standard Gaussian Splatting treats all of that as geometry. It overfits badly."
+        },
+        {
+          "title": "The core idea: noise-aware Gaussians",
+          "body": "A Gaussian Mixture Model explicitly models sonar noise patterns. Gaussians are pushed to represent real structure, not artifacts. Result: cleaner 3D without discarding noisy-but-valid returns."
+        },
+        {
+          "title": "Two-Ways Splatting explained",
+          "body": "Sonar accumulates intensity in two directions along each beam. Standard splatting ignores this. NAS-GS models both directions, improving render speed without quality loss."
+        },
+        {
+          "title": "Where it was tested",
+          "body": "Simulated data plus real-world large-scale offshore sonar scenes. State-of-the-art on view synthesis and 3D reconstruction metrics in both settings."
+        },
+        {
+          "title": "The honest gap",
+          "body": "Elevation ambiguity is not solved, just better managed. Field deployment in turbid shallow water, strong currents, or biofouled surfaces will stress these noise priors in ways no test set captures."
+        },
+        {
+          "title": "Why this matters for subsea ops",
+          "body": "AUV-based inspection relies on sonar maps. Better 3D reconstruction from fewer passes means lower mission time and cost. This is a real step toward usable subsea scene models."
+        }
+      ],
+      "video_script": "Underwater robots doing real work rely on sonar, not cameras. And sonar is messy. Side-lobes, speckle, multi-path returns. When you throw Gaussian Splatting at that, it learns the noise, not the structure. NAS-GS fixes that with a Gaussian Mixture Model noise prior that separates artifact from geometry. They also rework how intensity accumulates along sonar beams. Results look strong on real offshore data. The open question: does this hold when currents are real, surfaces are fouled, and you are 300 meters down? What would you need to see to trust this on an actual inspection AUV?",
+      "caption_instagram": "Sonar sees where cameras go blind. But sonar 3D reconstruction has a noise problem nobody talks about enough.\n\nStandard Gaussian Splatting trained on sonar just learns the artifacts. Side-lobes look like walls. Speckle looks like sediment. Multi-path returns ghost real structure. NAS-GS uses a Gaussian Mixture Model as an explicit noise prior so the 3D Gaussians represent actual geometry.\n\nThe Two-Ways Splatting technique is the other clever piece. Sonar intensity accumulates along beam directions differently than visible light. Modeling both directions matters for accurate reconstruction and speeds up rendering.\n\nResults are state-of-the-art on simulated and real offshore scenes. Elevation ambiguity is still a fundamental limit of 2D sonar physics, and murky shallow-water field conditions will stress these priors hard. But for AUV inspection pipelines, better scene models from fewer sonar passes is genuinely useful progress.\n\nPaper: NAS-GS: Noise-Aware Sonar Gaussian Splatting, IEEE ieeexplore.ieee.org/document/11576559\n\n#swarmrobotics #underwaterrobotics #AUV #sonar #3Dreconstruction #subsea #fieldrobotics #roboticsinspection",
+      "caption_tiktok": "Gaussian Splatting meets sonar. The noise problem is real and they actually address it. #underwaterrobotics #AUV #sonar #robotics #3Dreconstruction",
+      "post_bluesky": "Sonar Gaussian Splatting sounds simple. It isn't. Speckle, side-lobes, and multi-path returns look like structure to a naive model. NAS-GS adds a GMM noise prior so Gaussians fit geometry, not artifacts. Real offshore results. http://ieeexplore.ieee.org/document/11576559",
+      "bluesky_thread": [
+        "The Two-Ways Splatting piece is underrated in the abstract. Sonar accumulates intensity in two beam directions. Standard NeRF-style rendering ignores this entirely. Fixing it improves both speed and accuracy. Small modeling choice, real difference.",
+        "My caveat: 'large-scale offshore' in a controlled test is not a biofouled pipeline at 300m in a 1-knot current. Elevation ambiguity is still the fundamental physical limit. What would it take for you to trust this reconstruction on an actual inspection AUV mission?"
+      ]
+    },
+    "status": "pending_review",
+    "created": "2026-07-09T11:37:49.872702+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/123b45cc/bsky_00.png",
+        "media/123b45cc/bsky_01.png",
+        "media/123b45cc/bsky_02.png",
+        "media/123b45cc/bsky_03.png"
+      ],
+      "slides": [
+        "media/123b45cc/slide_00.png",
+        "media/123b45cc/slide_01.png",
+        "media/123b45cc/slide_02.png",
+        "media/123b45cc/slide_03.png",
+        "media/123b45cc/slide_04.png",
+        "media/123b45cc/slide_05.png",
+        "media/123b45cc/slide_06.png",
+        "media/123b45cc/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "08bb0017",
+    "paper": {
+      "id": "rss-fde41a7136",
+      "title": "Breaking Time: A Fully Gaussian Framework for Distributed and Continuous-Time SLAM",
+      "abstract": "Continuous-time SLAM provides a principled framework for fusing heterogeneous sensors while estimating smooth trajectories, and is particularly well-suited for handling heterogeneous, asynchronous sensor streams with non-uniform readout patterns, such as rolling shutter cameras, LiDAR scanners, radar sweeps, or event-based sensors. In this work, we introduce G-solver, a fully Gaussian and distributed framework that combines Gaussian Belief Propagation (GBP) with Gaussian Process (GP) motion priors for continuous-time trajectory estimation. Our GP model provides a probabilistic representation of the trajectory, enabling consistent interpolation and the use of data-driven hyperparameters, while GBP offers a scalable message-passing formulation well-suited for decentralized settings. The resulting solver naturally extends to multi-camera scenarios without specialized synchronization or engineering effort. We evaluate the approach on synthetic and real data, including rolling shutter and distributed multi-camera optimization, demonstrating accurate and stable estimation with runtimes comparable to existing continuous-time methods.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560907",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your SLAM solver assumes time is discrete. It probably shouldn't.",
+      "commentary": "G-solver tackles a real pain point: fusing rolling shutter cameras, LiDAR, radar, and event cameras that all output data at different rates and timestamps. The combo of Gaussian Belief Propagation for distributed inference and Gaussian Process motion priors for continuous-time trajectory interpolation is technically clean. The multi-camera case extending naturally without extra synchronization engineering is the genuinely useful bit. Honest caveat: runtimes are 'comparable' to existing methods, not faster, and real-world robustness across degraded sensor conditions is untested in the paper. Field deployers will want those numbers.",
+      "slides": [
+        {
+          "title": "The sync problem nobody talks about",
+          "body": "Rolling shutter cameras, spinning LiDAR, radar sweeps, event cameras: all fire at different times. Standard discrete-time SLAM forces them into a common clock. That introduces error by design."
+        },
+        {
+          "title": "Continuous-time changes the question",
+          "body": "Instead of 'what was the pose at each keyframe?' ask 'what is the smooth trajectory function?' Gaussian Process priors let you query any point in time, not just sensor timestamps."
+        },
+        {
+          "title": "GBP makes it distributed",
+          "body": "Gaussian Belief Propagation passes messages across a factor graph. No central solver needed. Multiple cameras can optimize jointly without a synchronization layer or custom engineering per rig."
+        },
+        {
+          "title": "Data-driven hyperparameters",
+          "body": "The GP motion model learns its own noise parameters from data. This matters: hand-tuning motion priors for different platforms (ground vehicle vs. UAV vs. legged robot) is a real deployment burden."
+        },
+        {
+          "title": "What the results show",
+          "body": "Evaluated on synthetic and real rolling-shutter and multi-camera sequences. Accuracy and stability hold up. Runtime is comparable to existing continuous-time methods, not a clear speedup."
+        },
+        {
+          "title": "The open question for field use",
+          "body": "Comparable runtime is fine in a lab. Subsea, mining, or underground rescue add vibration, packet loss between distributed nodes, and sensor dropout. None of that is tested here. Someone needs to run it."
+        }
+      ],
+      "video_script": "Most SLAM systems treat time like a grid. Fixed timestamps, synchronized sensors, uniform intervals. But your sensors don't care about your grid. A rolling shutter camera, a spinning LiDAR, and a radar sweep all fire whenever they fire. G-solver handles this with Gaussian Process trajectory models: the robot's path becomes a continuous function you can query at any moment. Gaussian Belief Propagation handles the distributed side without a central server. Runtimes match existing methods. The architecture is clean. The question is: does it survive a real mine or a subsea hull? Because the lab is not the field.",
+      "caption_instagram": "Your SLAM solver assumes time is discrete. It probably shouldn't.\n\nSensors don't synchronize themselves. Rolling shutter cameras, LiDAR scanners, radar, event cameras: each has its own readout pattern. Forcing them onto a shared discrete clock is a patch, not a solution.\n\nThis paper, 'Breaking Time: A Fully Gaussian Framework for Distributed and Continuous-Time SLAM,' proposes G-solver. The core idea: model the robot trajectory as a Gaussian Process, a continuous probabilistic function you can query at any timestamp. Pair that with Gaussian Belief Propagation for distributed, decentralized inference and you get a solver that handles multi-camera rigs without custom synchronization code.\n\nResults on synthetic and real data look solid. Accuracy holds, runtime is comparable to existing continuous-time methods. The data-driven hyperparameter learning for the GP motion prior is a practical win for anyone tired of hand-tuning per platform.\n\nMy honest read: the architecture is the contribution, not raw speed. The field test is missing. Subsea, underground, or heavy-vibration environments will stress both the GP assumptions and the GBP message-passing in ways the lab sequences don't. That's the next paper someone needs to write.\n\n#SLAM #FieldRobotics #SwarmRobotics #SensorFusion #GaussianProcesses #DistributedRobotics #RoboticsResearch",
+      "caption_tiktok": "Sensors don't share a clock. G-solver builds SLAM around that reality instead of fighting it. Continuous-time, distributed, no sync hacks required.\n#SLAM #Robotics #SensorFusion #FieldRobotics #RoboticsResearch",
+      "post_bluesky": "Your SLAM solver assumes discrete time. G-solver doesn't. GP motion priors + Gaussian Belief Propagation = continuous-time, distributed trajectory estimation with no sync hacks. Works on rolling shutter + multi-camera. Runtime: comparable (not faster)…\nhttp://ieeexplore.ieee.org/document/11560907",
+      "bluesky_thread": [
+        "The genuinely clever bit: data-driven GP hyperparameters. You stop hand-tuning motion noise per platform. That alone saves real engineering hours when you swap from a ground vehicle to a legged robot to a UAV.",
+        "The gap I want closed: GBP assumes nodes can pass messages reliably. In subsea or underground settings, comms drop out. Does the estimator degrade gracefully or does it diverge? That's the experiment that earns field deployment trust. Anyone tested this in a harsh-comms setting?"
+      ]
+    },
+    "status": "pending_review",
+    "created": "2026-07-09T11:38:19.580983+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/08bb0017/bsky_00.png",
+        "media/08bb0017/bsky_01.png",
+        "media/08bb0017/bsky_02.png",
+        "media/08bb0017/bsky_03.png"
+      ],
+      "slides": [
+        "media/08bb0017/slide_00.png",
+        "media/08bb0017/slide_01.png",
+        "media/08bb0017/slide_02.png",
+        "media/08bb0017/slide_03.png",
+        "media/08bb0017/slide_04.png",
+        "media/08bb0017/slide_05.png",
+        "media/08bb0017/slide_06.png",
+        "media/08bb0017/slide_07.png"
+      ]
+    }
   }
 ]
