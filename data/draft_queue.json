@@ -1,14 +1,25 @@
 [
   {
-    "id": "rss-0e3caf1a21",
-    "title": "Illumination-Adaptive Ordered Checkerboard Corner Detection for Underwater-Acquired Calibration Images",
-    "abstract": "Reliable underwater calibration pipelines require a robust front-end that can localize checkerboard corners at sub-pixel accuracy and assign consistent row–column indices across views. Underwater-acquired calibration images often suffer from spatially varying illumination, motion blur, specular highlights, dome-port distortion, and large viewpoint changes, which weaken corner evidence and reduce the fraction of calibration-usable views. We present an illumination-adaptive framework for ordered checkerboard corner detection in underwater-acquired calibration images. The method combines illumination-adaptive feature enhancement, structured prediction of corner confidence, sub-pixel offsets, and row/column indices, and Hungarian assignment for topology-consistent decoding. On an independent synthetic degradation benchmark, the proposed method achieves 75.4% view-aware correct corner rate (VCCR) at a 0.5-pixel threshold on the composite degradation setting, outperforming the best baseline with Multi-Scale Retinex with Color Restoration preprocessing by 9.9 percentage points. On real underwater data, under a shared OpenCV calibration backend, it achieves the lowest reprojection error among compared ordered-output methods and remains best on a fixed common-view subset. In downstream stereo reconstruction on a second real-world underwater stereo dataset, our calibration increases the common valid stereo area ratio from 67.3% to 88.8% and reduces checkerboard plane/edge root mean squ",
+    "id": "rss-7a03a15ff8",
+    "title": "Vision-Assisted Bipedal Locomotion on Challenging Terrains via Terrain-Related Adversarial Motion Priors",
+    "abstract": "Humanoid locomotion on challenging terrains requires reliable perception and terrain-adaptive gait regulation to maintain stability under complex contact conditions. Although recent perceptive locomotion methods have made substantial progress, many rely on explicit terrain representations, auxiliary geometry-related supervision, or multi-stage training pipelines, which can increase system complexity and training cost. This paper presents a lightweight single-stage reinforcement learning framework for vision-assisted humanoid locomotion using only onboard proprioception and low-cost depth sensing. A hierarchical feature extractor learns compact latent representations of robot dynamics and terrain context, which are integrated into a mixture-of-experts actor for terrain-aware behavior modulation. We further introduce a terrain-related adversarial motion prior constructed from flat-ground and stair locomotion demonstrations to encourage terrain-compatible motion patterns within the unified policy. Extensive simulation and real-world experiments on a physical humanoid robot show that the learned policy achieves robust and energy-efficient locomotion across slopes, stairs, elevated platforms, and wide gaps, while maintaining stable foot– terrain interactions in cluttered outdoor scenes.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11560917",
+    "url": "http://ieeexplore.ieee.org/document/11578326",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 8.0
+    "score": 7.7
+  },
+  {
+    "id": "rss-5af37135ce",
+    "title": "High-Speed Vision-Based Flight in Clutter With Safety-Shielded Reinforcement Learning",
+    "abstract": "Quadrotor uncrewed aerial vehicles (UAVs) are increasingly deployed in complex missions that demand reliable autonomous navigation and robust obstacle avoidance. However, traditional modular pipelines often incur cumulative latency, whereas purely reinforcement learning (RL) approaches typically provide limited formal safety guarantees. To bridge this gap, we propose an end-to-end RL framework augmented with model-based safety mechanisms. We incorporate physical priors in both training and deployment. During training, we design a physics-informed reward structure that provides global navigational guidance. During deployment, we integrate a real-time safety filter that projects the policy outputs onto a provably safe set to enforce strict collision-avoidance constraints. This hybrid architecture reconciles high-speed flight with robust safety assurances. Benchmark evaluations demonstrate that our method outperforms both traditional planners and recent end-to-end obstacle avoidance approaches based on differentiable physics. Extensive experiments demonstrate strong generalization, enabling reliable high-speed navigation in dense clutter and challenging outdoor forest environments at velocities up to $7.5 \\text{ m/s}$.",
+    "authors": [],
+    "url": "http://ieeexplore.ieee.org/document/11563604",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "journal": true,
+    "score": 7.3
   },
   {
     "id": "2507.04321",

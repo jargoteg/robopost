@@ -162,5 +162,20 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "22f3e6a6",
+    "paper_id": "2607.07622v1",
+    "title": "Continuous and large-scale: ELEANOR, the soft architected arm inspired by the elephant trunk",
+    "format": "carousel",
+    "hook": "85 cm of 3D-printed soft arm. No prescribed motions. Just trunk physics.",
+    "posted_at": "2026-07-09T11:43:27.521953+00:00",
+    "bsky_variant": "thread",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq7kkxbvsd2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

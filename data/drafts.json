@@ -1557,7 +1557,7 @@
         "Missing from the abstract: load capacity, repeatability, force sensing. 'Moves like a trunk' is not the same as 'works like a trunk.' Still, the design philosophy is the contribution here. Is structure-first the right frame for soft manipulation, or does the controller still need to do the heavy…"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T08:39:52.052038+00:00",
     "media": {
       "figures": [
@@ -1585,7 +1585,9 @@
     },
     "issue": 25,
     "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "657349b6",
@@ -1671,7 +1673,7 @@
       ]
     },
     "issue": 26,
-    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
+    "scheduled_after": "2026-07-09T13:13:27.521949+00:00",
     "queue_notified": true
   },
   {
@@ -1758,7 +1760,7 @@
       ]
     },
     "issue": 27,
-    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
+    "scheduled_after": "2026-07-09T13:13:27.521949+00:00",
     "queue_notified": true
   },
   {
@@ -1928,7 +1930,7 @@
       ]
     },
     "issue": 29,
-    "scheduled_after": "2026-07-09T11:18:27.543862+00:00",
+    "scheduled_after": "2026-07-09T13:13:27.521949+00:00",
     "queue_notified": true
   },
   {
@@ -2311,7 +2313,7 @@
         "The gap I want closed: GBP assumes nodes can pass messages reliably. In subsea or underground settings, comms drop out. Does the estimator degrade gracefully or does it diverge? That's the experiment that earns field deployment trust. Anyone tested this in a harsh-comms setting?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:38:19.580983+00:00",
     "media": {
       "figures": [],
@@ -2333,5 +2335,231 @@
       ]
     },
     "issue": 34
+  },
+  {
+    "draft_id": "303aea48",
+    "paper": {
+      "id": "rss-fde41a7136",
+      "title": "Breaking Time: A Fully Gaussian Framework for Distributed and Continuous-Time SLAM",
+      "abstract": "Continuous-time SLAM provides a principled framework for fusing heterogeneous sensors while estimating smooth trajectories, and is particularly well-suited for handling heterogeneous, asynchronous sensor streams with non-uniform readout patterns, such as rolling shutter cameras, LiDAR scanners, radar sweeps, or event-based sensors. In this work, we introduce G-solver, a fully Gaussian and distributed framework that combines Gaussian Belief Propagation (GBP) with Gaussian Process (GP) motion priors for continuous-time trajectory estimation. Our GP model provides a probabilistic representation of the trajectory, enabling consistent interpolation and the use of data-driven hyperparameters, while GBP offers a scalable message-passing formulation well-suited for decentralized settings. The resulting solver naturally extends to multi-camera scenarios without specialized synchronization or engineering effort. We evaluate the approach on synthetic and real data, including rolling shutter and distributed multi-camera optimization, demonstrating accurate and stable estimation with runtimes comparable to existing continuous-time methods.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560907",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "redo_notes": "there is no image or video in this post. That is important"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your SLAM solver doesn't know what time it is. This one does.",
+      "commentary": "G-solver tackles a real pain point: most SLAM systems assume sensors fire in sync, which is false in any serious field deployment. Rolling shutter cameras, spinning LiDARs, and radar sweeps all have different timing signatures. The combination of Gaussian Belief Propagation for distributed inference and GP motion priors for continuous-time trajectory gives you a single principled framework instead of a pile of synchronization hacks. Honest caveat: runtimes are 'comparable' to existing methods, not faster, and the evaluation leans heavily on synthetic data, so field robustness under vibration and sensor dropout is still an open question.",
+      "slides": [
+        {
+          "title": "The sync problem nobody fixes",
+          "body": "Rolling shutter cameras, LiDAR sweeps, and radar all read out at different times. Most SLAM systems pretend they don't. That pretense breaks trajectory estimates in fast or cluttered motion."
+        },
+        {
+          "title": "Continuous-time trajectory, not discrete poses",
+          "body": "A Gaussian Process models the full trajectory as a continuous function. You query it at any timestamp. No interpolation hack needed. The GP hyperparameters can be learned from data, not hand-tuned."
+        },
+        {
+          "title": "GBP: distributed by design",
+          "body": "Gaussian Belief Propagation passes messages between factor nodes. No central solver. Multi-camera rigs or multi-robot teams can run the same algorithm without specialized synchronization or extra engineering."
+        },
+        {
+          "title": "What they tested",
+          "body": "Synthetic benchmarks plus real rolling-shutter and multi-camera sequences. Runtime is comparable to existing continuous-time solvers. Accuracy and stability hold across both setups."
+        },
+        {
+          "title": "Where it gets interesting for field robots",
+          "body": "Subsea vehicles mix DVL, IMU, and sonar with wildly different sample rates. Construction robots carry rolling-shutter cameras on vibrating platforms. This framework handles asynchrony without bespoke sensor glue code."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Synthetic data dominates the evaluation. Sensor dropout, packet loss, and physical shock are not tested. 'Comparable runtime' is not faster. Field validation on a real multi-sensor platform is the missing chapter."
+        }
+      ],
+      "video_script": "Most SLAM systems have a hidden assumption: your sensors all fire at the same time. They don't. A rolling shutter camera, a spinning LiDAR, and a radar sweep each have their own clock. G-solver treats the robot trajectory as a continuous Gaussian Process, so it can fuse any sensor at any timestamp without synchronization hacks. And Gaussian Belief Propagation makes the whole thing distributed, no central solver required. The evaluation is solid but leans on synthetic data. The real question is: how does this hold up on a subsea vehicle or a mining robot where sensors fail mid-run?",
+      "caption_instagram": "Your SLAM solver doesn't know what time it is. This one does.\n\nMost localization systems discretize time and assume sensors are roughly synchronized. On a real platform, that assumption is wrong. Rolling shutter cameras expose row by row. LiDARs spin. Radar sweeps. They all timestamp differently.\n\nG-solver combines Gaussian Process motion priors with Gaussian Belief Propagation to handle this properly. The GP gives you a continuous trajectory you can query at any timestamp. GBP makes the inference distributed and message-passing-based, so multi-camera or multi-robot setups don't need extra sync engineering.\n\nRuntime is comparable to existing continuous-time SLAM methods, not faster. And the evaluation is heavier on synthetic data than field data. That gap matters if you care about deployment on a vibrating construction platform or a subsea AUV mixing DVL and IMU at different rates.\n\nPaper: \"Breaking Time: A Fully Gaussian Framework for Distributed and Continuous-Time SLAM\" via IEEE Xplore.\n\n#SLAM #FieldRobotics #StateEstimation #SwarmRobotics #MultiRobot #GaussianProcesses #RobotLocalization",
+      "caption_tiktok": "Most robots lie to themselves about what time their sensors fired. G-solver actually fixes that with continuous-time GP priors and distributed inference. #SLAM #Robotics #FieldRobotics #StateEstimation",
+      "post_bluesky": "Your SLAM solver discretizes time and prays your sensors agree. G-solver uses GP motion priors + Gaussian Belief Propagation to fuse rolling-shutter, LiDAR, and radar at their actual timestamps. Distributed, no sync hacks needed. http://ieeexplore.ieee.org/document/11560907",
+      "bluesky_thread": [
+        "The GBP formulation is the clever bit. Message-passing over a factor graph means multi-camera rigs and multi-robot teams plug in without a central solver. That's a real engineering win, not a theoretical one.",
+        "Caveat: evaluation leans heavily on synthetic data. Field robots deal with sensor dropout, vibration, and packet loss. Has anyone actually run continuous-time SLAM through those failure modes on a real AUV or mining platform? Genuinely asking."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T11:42:14.917236+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/303aea48/bsky_00.png",
+        "media/303aea48/bsky_01.png",
+        "media/303aea48/bsky_02.png",
+        "media/303aea48/bsky_03.png"
+      ],
+      "slides": [
+        "media/303aea48/slide_00.png",
+        "media/303aea48/slide_01.png",
+        "media/303aea48/slide_02.png",
+        "media/303aea48/slide_03.png",
+        "media/303aea48/slide_04.png",
+        "media/303aea48/slide_05.png",
+        "media/303aea48/slide_06.png",
+        "media/303aea48/slide_07.png"
+      ]
+    },
+    "issue": 35
+  },
+  {
+    "draft_id": "6cc35e0d",
+    "paper": {
+      "id": "rss-0e3caf1a21",
+      "title": "Illumination-Adaptive Ordered Checkerboard Corner Detection for Underwater-Acquired Calibration Images",
+      "abstract": "Reliable underwater calibration pipelines require a robust front-end that can localize checkerboard corners at sub-pixel accuracy and assign consistent row–column indices across views. Underwater-acquired calibration images often suffer from spatially varying illumination, motion blur, specular highlights, dome-port distortion, and large viewpoint changes, which weaken corner evidence and reduce the fraction of calibration-usable views. We present an illumination-adaptive framework for ordered checkerboard corner detection in underwater-acquired calibration images. The method combines illumination-adaptive feature enhancement, structured prediction of corner confidence, sub-pixel offsets, and row/column indices, and Hungarian assignment for topology-consistent decoding. On an independent synthetic degradation benchmark, the proposed method achieves 75.4% view-aware correct corner rate (VCCR) at a 0.5-pixel threshold on the composite degradation setting, outperforming the best baseline with Multi-Scale Retinex with Color Restoration preprocessing by 9.9 percentage points. On real underwater data, under a shared OpenCV calibration backend, it achieves the lowest reprojection error among compared ordered-output methods and remains best on a fixed common-view subset. In downstream stereo reconstruction on a second real-world underwater stereo dataset, our calibration increases the common valid stereo area ratio from 67.3% to 88.8% and reduces checkerboard plane/edge root mean squ",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560917",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Underwater camera calibration is broken. Here is one fix.",
+      "commentary": "Calibrating a stereo camera rig underwater is genuinely hard: spatially varying illumination, dome-port distortion, and specular highlights eat your checkerboard corners before you even get to the solver. This paper attacks the front-end problem directly, combining illumination-adaptive enhancement with a structured corner predictor and Hungarian assignment to keep row/column topology consistent across views. The headline number is a 9.9 percentage point gain in view-aware correct corner rate at 0.5-pixel threshold over the best preprocessing baseline, and the downstream payoff is real: valid stereo area jumps from 67.3% to 88.8% on a real dataset. Honest caveat: the benchmark is synthetic degradation plus two real datasets, which is a thin slice of deployment diversity. Turbid water, biofouling on the calibration target, and strong current-induced blur are the kinds of conditions that will stress-test this further.",
+      "slides": [
+        {
+          "title": "The problem nobody talks about",
+          "body": "Underwater stereo rigs need calibration. But uneven lighting, dome distortion, and specular highlights destroy checkerboard corner detection before the solver even starts."
+        },
+        {
+          "title": "What the method does",
+          "body": "Illumination-adaptive enhancement, structured corner confidence prediction, sub-pixel offset regression, and Hungarian assignment for topology-consistent row/column decoding. One pipeline, ordered output."
+        },
+        {
+          "title": "The key benchmark number",
+          "body": "75.4% view-aware correct corner rate at 0.5-pixel threshold on composite synthetic degradation. That is 9.9 percentage points above the best baseline using Multi-Scale Retinex preprocessing."
+        },
+        {
+          "title": "Downstream: where it actually matters",
+          "body": "On real stereo data, valid stereo area ratio increases from 67.3% to 88.8%. Lowest reprojection error among ordered-output methods under a shared OpenCV backend."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Two real datasets. Turbid water, strong current blur, biofouling on the target board: none of those appear in the benchmark. Field robustness is still an open question."
+        },
+        {
+          "title": "Why it matters for subsea work",
+          "body": "Better calibration means better 3D reconstruction from existing hardware. For inspection ROVs, that is a free performance gain without swapping sensors or adding compute."
+        }
+      ],
+      "video_script": "Underwater stereo vision has a dirty secret. Your calibration is probably worse than you think, because the front-end corner detector is failing silently on half your images. This paper fixes that with an illumination-adaptive pipeline that keeps checkerboard topology consistent even under the garbage lighting conditions you actually get subsea. The result: valid stereo area jumps from 67 to nearly 89 percent on real data. No new sensors, just a better front-end. The question I want to know: how does it hold up when the calibration target gets fouled after a week on a working ROV?",
+      "caption_instagram": "Underwater camera calibration is broken. Here is one fix.\n\nIf you run stereo vision on an ROV or underwater inspection platform, your calibration pipeline almost certainly loses a large fraction of usable frames before the solver even sees them. Spatially varying illumination, dome-port distortion, and specular highlights destroy checkerboard corner detection in ways that are easy to miss until your 3D reconstruction falls apart.\n\nThis paper builds an illumination-adaptive front-end that combines enhancement, structured corner confidence prediction, sub-pixel offset regression, and Hungarian assignment for consistent row/column ordering. On composite synthetic degradation, it hits 75.4% view-aware correct corner rate at 0.5 pixels, which is 9.9 points above the best preprocessing baseline. On real data, valid stereo area goes from 67.3% to 88.8%.\n\nThe caveat: two real datasets is a thin validation. Turbid water, biofouling, and strong surge motion are the real stress tests. But for inspection ROVs running existing hardware, this is the kind of unglamorous fix that actually moves reconstruction quality.\n\nPaper: Illumination-Adaptive Ordered Checkerboard Corner Detection for Underwater-Acquired Calibration Images. IEEE ieeexplore.ieee.org/document/11560917\n\n#underwaterrobotics #subsearobotics #ROV #stereovision #cameracalibration #computervision #robotics",
+      "caption_tiktok": "Your underwater stereo rig's calibration is quietly failing and you probably don't know it. This paper fixes the corner detector that's losing half your frames. Valid stereo area: 67% to 89%. Real data. #underwaterrobotics #ROV #computervision #robotics",
+      "post_bluesky": "Underwater stereo calibration fails quietly. Bad lighting and dome distortion kill your corners before the solver sees them. This paper fixes the front-end: 9.9pp gain on detection, stereo area 67->89% on real data. http://ieeexplore.ieee.org/document/11560917",
+      "bluesky_thread": [
+        "The clever part is topology-consistent decoding via Hungarian assignment. Row/column ordering breaks under partial occlusion and viewpoint change. Most methods just drop the view. This one recovers it. That is what drives the stereo area gain.",
+        "Honest limit: two real datasets, both relatively controlled. I want to see this on a working inspection ROV after a week subsea with a fouled calibration target and surge-induced motion blur. That is where these pipelines actually live or die. Anyone testing this in the field?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T11:42:45.066355+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/6cc35e0d/bsky_00.png",
+        "media/6cc35e0d/bsky_01.png",
+        "media/6cc35e0d/bsky_02.png",
+        "media/6cc35e0d/bsky_03.png"
+      ],
+      "slides": [
+        "media/6cc35e0d/slide_00.png",
+        "media/6cc35e0d/slide_01.png",
+        "media/6cc35e0d/slide_02.png",
+        "media/6cc35e0d/slide_03.png",
+        "media/6cc35e0d/slide_04.png",
+        "media/6cc35e0d/slide_05.png",
+        "media/6cc35e0d/slide_06.png",
+        "media/6cc35e0d/slide_07.png"
+      ]
+    },
+    "issue": 36
+  },
+  {
+    "draft_id": "c3e6cc9c",
+    "paper": {
+      "id": "rss-0615e128d4",
+      "title": "IAOM: An Intention-Aware Optimization Model With GNN-Based Policy Learning for Dynamic Multi-Robot Cooperative Task Allocation",
+      "abstract": "This paper studies dynamic multi-robot cooperative task allocation in multi-stage scout-rescue missions with unknown and evolving task demands. We propose IAOM, an Intention-Aware Optimization Model that encodes each robotś decision state–target task, role, and planner-derived ETA–as an intention vector and organizes robots and tasks into an execution-aware intention graph capturing residual demand and active commitments. A GAT-PPO policy is learned on this graph and coupled to a hybrid A* based motion layer, so that allocation, coalition formation, and congestion handling are optimized within a single framework. We evaluate IAOM on grid based urban rescue benchmarks with multiple map sizes and resource density regimes against optimization-, heuristic-, and learning-based baselines. Under abundant and normal resources, IAOM consistently reduces mission makespan and average completion time relative to the best baseline, achieving up to about 20% shorter makespan and about 50% lower completion time with comparable load balance. Under tight resources where robots barely meet total demand, gains are smaller and all methods are largely bounded by resource scarcity, but IAOM remains competitive. This paper was recommended for publication by Editor M. Ani Hsieh upon evaluation of the Associate Editor and Reviewers’ comments.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560910",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "50% faster task completion in urban rescue. But read the fine print.",
+      "commentary": "IAOM tackles dynamic multi-robot task allocation in scout-rescue missions where task demands are unknown and shift mid-mission. The clever part is encoding each robot's current target, role, and estimated arrival time as an intention vector, then building a graph over those intentions so the learned policy sees who is committed to what before making new assignments. GAT-PPO on that graph plus hybrid A* for motion gives a unified allocation-to-navigation pipeline. The 50% completion time reduction is real but applies under abundant or normal resources. Under tight resource regimes, every method converges toward the same wall: you simply don't have enough robots. That caveat matters enormously for real search-and-rescue deployments where gear is always scarce.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Urban rescue tasks appear and change mid-mission. Static allocation fails. You need robots that reassign themselves as the situation evolves, without stepping on each other."
+        },
+        {
+          "title": "What IAOM actually does",
+          "body": "Each robot broadcasts an intention vector: current target, role, and ETA. A graph is built over these commitments. A GAT-PPO policy reads the graph and reallocates. Hybrid A* handles motion."
+        },
+        {
+          "title": "The numbers",
+          "body": "Up to 20% shorter mission makespan. Up to 50% lower average task completion time vs. best baseline. Results hold across multiple map sizes and resource density conditions."
+        },
+        {
+          "title": "Where the gains shrink",
+          "body": "Under tight resources, all methods plateau. When robots barely cover total demand, smarter allocation cannot compensate. IAOM stays competitive but stops winning big."
+        },
+        {
+          "title": "The real-world gap",
+          "body": "Benchmarks use grid maps with known topology. Real rubble is 3D, sensors fail, and comms drop. Intention vectors assume reliable state sharing between robots."
+        },
+        {
+          "title": "Why it matters anyway",
+          "body": "Encoding commitment, not just position, into the policy input is a sound idea. Coalitions form around actual workload, not proximity. Worth watching for field trials."
+        }
+      ],
+      "video_script": "Multi-robot rescue sounds simple: send robots, save people. The hard part is coordination when tasks keep appearing and robots keep committing to different things. IAOM solves this by making each robot broadcast its intention, then learning a policy over those commitments as a graph. Result: up to 50% faster task completion in simulation. The catch? When resources are tight, no algorithm fixes that. The robots just don't have enough capacity. So the question is: does intention-aware coordination survive comms noise and partial observability in real rubble?",
+      "caption_instagram": "50% faster average task completion in simulated urban rescue. That number is real, but here is what the paper is actually showing you.\n\nIAOM encodes each robot's target, role, and arrival estimate as an intention vector. Build a graph over those vectors. Train a graph attention policy on top. The result is a system that reallocates tasks based on actual commitments, not just who is closest.\n\nThe 20% makespan reduction and 50% completion time drop hold under abundant and normal resource conditions across multiple map sizes. Under tight resources, every method converges. You cannot allocate your way out of not having enough robots.\n\nThe honest limitation: grid-based urban benchmarks with assumed reliable communication. Real search and rescue has intermittent comms, 3D terrain, and sensors that lie. Intention sharing only works if robots can actually talk to each other.\n\nStill, encoding commitment state into the policy input is a concrete step forward over position-based approaches. Worth tracking for field validation.\n\nPaper: IAOM: An Intention-Aware Optimization Model With GNN-Based Policy Learning for Dynamic Multi-Robot Cooperative Task Allocation. IEEE Xplore 11560910.\n\n#swarmrobotics #multirobotsystems #searchandrescue #taskallocation #graphneuralnetworks #roboticsinspection #fieldsrobotics",
+      "caption_tiktok": "Robots that know what their teammates are planning, not just where they are. 50% faster rescue task completion. The catch is in the resource math. #swarmrobotics #searchandrescue #robotics #multiagent",
+      "post_bluesky": "50% lower task completion time in urban rescue sim. IAOM works by encoding each robot's commitment (target, role, ETA) into a graph and learning policy on top. Clever. Caveat: tight resources erase the gains. http://ieeexplore.ieee.org/document/11560910",
+      "bluesky_thread": [
+        "The intention vector idea is the real contribution here. Most multi-robot allocators see positions and task locations. IAOM sees who is already committed and to what. That changes the policy's input fundamentally and explains the gains under normal conditions.",
+        "But grid-based benchmarks with clean comms are a long way from rubble. If one robot's intention broadcast drops out, the graph is wrong and the policy acts on stale data. Has anyone tested graceful degradation under partial observability here? That's the number I want to see."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T11:43:13.705496+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/c3e6cc9c/bsky_00.png",
+        "media/c3e6cc9c/bsky_01.png",
+        "media/c3e6cc9c/bsky_02.png",
+        "media/c3e6cc9c/bsky_03.png"
+      ],
+      "slides": [
+        "media/c3e6cc9c/slide_00.png",
+        "media/c3e6cc9c/slide_01.png",
+        "media/c3e6cc9c/slide_02.png",
+        "media/c3e6cc9c/slide_03.png",
+        "media/c3e6cc9c/slide_04.png",
+        "media/c3e6cc9c/slide_05.png",
+        "media/c3e6cc9c/slide_06.png",
+        "media/c3e6cc9c/slide_07.png"
+      ]
+    },
+    "issue": 37
   }
 ]
