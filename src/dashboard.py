@@ -14,6 +14,57 @@ def esc(s):
     return html.escape(str(s or ""))
 
 
+def cron_section(cfg):
+    """Automation panel: every cron, when it's next due, and its last run."""
+    import glob
+    import yaml
+    import requests
+    from croniter import croniter
+    from datetime import datetime, timezone
+    parts = cfg["media_base_url"].split("/")
+    repo = f"{parts[3]}/{parts[4]}"
+    now = datetime.now(timezone.utc)
+    last = {}
+    try:
+        r = requests.get(f"https://api.github.com/repos/{repo}/actions/runs",
+                         params={"per_page": 40}, timeout=20).json()
+        for run in r.get("workflow_runs", []):
+            n = run["name"]
+            if n not in last:
+                last[n] = (run.get("conclusion") or run.get("status") or "?",
+                           run.get("updated_at", "")[:16].replace("T", " "))
+    except Exception as e:
+        print(f"runs API skipped: {e}")
+    rows = []
+    for p in sorted(glob.glob(".github/workflows/*.yml")):
+        try:
+            wf = yaml.safe_load(open(p))
+        except Exception:
+            continue
+        name = wf.get("name", p)
+        trig = wf.get(True, wf.get("on", {})) or {}
+        for t in (trig.get("schedule") or []):
+            c = t.get("cron", "")
+            try:
+                nxt = croniter(c, now).get_next(datetime)
+                mins = int((nxt - now).total_seconds() // 60)
+                due = f"{nxt.strftime('%H:%M')} UTC (~{mins}m)"
+            except Exception:
+                due = "?"
+            st, when = last.get(name, ("no runs yet", ""))
+            icon = {"success": "✅", "failure": "❌", "in_progress": "⏳"}.get(st, "▫️")
+            rows.append(f"<tr><td>{esc(name)}</td><td class='mono'>{esc(c)}</td>"
+                        f"<td class='mono'>{esc(due)}</td>"
+                        f"<td>{icon} {esc(st)} <span class='mono'>{esc(when)}</span></td></tr>")
+    if not rows:
+        return ""
+    return ('<h2>Automation schedule</h2><div class="panel">'
+            '<p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p>'
+            '<table><tr><td>workflow</td><td class="mono">cron</td>'
+            '<td class="mono">next due</td><td>last run</td></tr>'
+            + "".join(rows) + "</table></div>")
+
+
 def build():
     cfg = load_config()
     drafts = load_json("drafts.json", [])
@@ -86,6 +137,7 @@ def build():
         items = ", ".join(f'#{d.get("issue","?")}' for d in failing)
         fail_banner = f'<div class="banner">Posting failed and will retry: {items}. Check the issue comments.</div>'
 
+    crons_html = cron_section(cfg)
     page = f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(cfg["account"]["name"])} · mission control</title>
@@ -135,6 +187,7 @@ footer{{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}}
 <div class="strip">{strip}</div>
 <h2>Queue · exactly as it will post</h2>
 {queue_html}
+{crons_html}
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
