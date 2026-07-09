@@ -11,10 +11,11 @@ from utils import MEDIA
 
 
 def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
-    """Extract figures from an arXiv PDF by rendering whole image REGIONS of
-    the page (figure plus its rendered caption stay intact), rather than
-    pulling raw embedded image streams which often slice multi-panel figures
-    or split captions. Aspect ratio is always preserved."""
+    """Extract figures from an arXiv PDF. Anchors on the figure CAPTION text
+    ('Figure N', 'Fig. N') so it captures VECTOR diagrams too (architecture /
+    pipeline figures drawn with PDF vector commands, which embedded-image
+    extraction misses), not only raster photos/plots. Captures the block above
+    each caption plus the caption itself. Aspect ratio is always preserved."""
     import fitz
     pid = paper["id"]
     url = f"https://arxiv.org/pdf/{pid}"
@@ -22,53 +23,74 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
     r.raise_for_status()
     doc = fitz.open(stream=r.content, filetype="pdf")
     candidates = []
+    cap_re = re.compile(r"^\s*(figure|fig\.?)\s*\d+", re.I)
+
     for page in doc:
-        # union image rectangles on the page into figure regions
-        rects = []
+        pr = page.rect
+        # 1) locate figure captions on the page
+        caption_blocks = []
+        for b in page.get_text("blocks"):
+            x0, y0, x1, y1, text = b[0], b[1], b[2], b[3], b[4]
+            if cap_re.match(text or ""):
+                caption_blocks.append(fitz.Rect(x0, y0, x1, y1))
+        # 2) image rects (for raster figures / to refine bounds)
+        img_rects = []
         for img in page.get_images(full=True):
             try:
-                for r_ in page.get_image_rects(img[0]):
-                    if r_.width > 60 and r_.height > 60:
-                        rects.append(fitz.Rect(r_))
+                for ir in page.get_image_rects(img[0]):
+                    if ir.width > 40 and ir.height > 40:
+                        img_rects.append(fitz.Rect(ir))
             except Exception:
                 continue
-        if not rects:
-            continue
-        # merge only truly overlapping panels (same figure), not merely nearby
-        merged = []
-        for rc in sorted(rects, key=lambda r: (round(r.y0), round(r.x0))):
-            placed = False
-            for i, m in enumerate(merged):
-                gap = fitz.Rect(m)
-                gap += (-4, -4, 4, 12)  # small pad: real overlap only
-                # require genuine overlap area, not just touching, to avoid
-                # chaining separate figures on a dense page into one block
-                inter = gap & rc
-                if gap.intersects(rc) and inter.get_area() > 0.10 * min(
-                        max(rc.get_area(), 1), max(m.get_area(), 1)):
-                    merged[i] = m | rc
-                    placed = True
-                    break
-            if not placed:
-                merged.append(fitz.Rect(rc))
-        for m in merged:
-            # expand downward to capture the rendered caption line(s)
-            cap = fitz.Rect(m.x0, m.y0, m.x1, min(page.rect.y1, m.y1 + 44))
-            w, h = cap.width, cap.height
-            if w < 150 or h < 100 or w / h > 7 or h / w > 7:
+
+        used_imgs = set()
+        # For each caption, the figure is the whitespace/content ABOVE it,
+        # bounded below by the caption and above by the previous caption or
+        # the top of the column. Include any image rects that fall in there.
+        for cap in sorted(caption_blocks, key=lambda r: r.y0):
+            top = pr.y0 + 40
+            for other in caption_blocks:
+                if other.y1 < cap.y0 and other.y1 > top:
+                    top = other.y1 + 6      # don't cross into a figure above
+            # same column horizontally: start from caption's x-span, widen to
+            # any image rects sitting above the caption in that band
+            left, right = cap.x0, cap.x1
+            block_top = cap.y0
+            for i, ir in enumerate(img_rects):
+                if ir.y1 <= cap.y0 + 4 and ir.y0 >= top - 4 and \
+                   ir.x1 > cap.x0 - 40 and ir.x0 < cap.x1 + 40:
+                    left = min(left, ir.x0)
+                    right = max(right, ir.x1)
+                    block_top = min(block_top, ir.y0)
+                    used_imgs.add(i)
+            block_top = min(block_top, cap.y0)
+            # figure region = content above caption + caption text itself
+            region = fitz.Rect(min(left, cap.x0) - 6, max(top, block_top) - 6,
+                               max(right, cap.x1) + 6, cap.y1 + 4)
+            w, h = region.width, region.height
+            if w < 120 or h < 90 or w / h > 8 or h / w > 8:
                 continue
-            area = w * h
-            candidates.append((area, page.number, cap))
-    # earliest pages first (teaser/method figures), largest first
+            candidates.append((w * h, page.number, region))
+
+        # 3) fallback: large image rects with NO caption matched (rare) —
+        # keep them so we never lose a real figure
+        for i, ir in enumerate(img_rects):
+            if i in used_imgs:
+                continue
+            if ir.width > 200 and ir.height > 150:
+                cap = fitz.Rect(ir.x0 - 6, ir.y0 - 6, ir.x1 + 6,
+                               min(pr.y1, ir.y1 + 40))
+                candidates.append((cap.width * cap.height, page.number, cap))
+
+    # earliest pages first (teaser/method figures), largest first within a page
     candidates.sort(key=lambda c: (c[1], -c[0]))
     paths, used = [], []
     for area, pnum, rect in candidates:
-        # skip only heavy overlaps with an already-picked region (same figure)
         dup = False
         for pn, r in used:
             if pn == pnum and r.intersects(rect):
                 ov = (r & rect).get_area()
-                if ov > 0.8 * min(area, r.get_area()):
+                if ov > 0.6 * min(area, r.get_area()):
                     dup = True
                     break
         if dup:
