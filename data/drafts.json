@@ -3238,7 +3238,7 @@
         "Real limit: synthetic negatives encode your assumptions about danger. Loose shale, waterlogged peat, cracked permafrost, real terrain doesn't read the same playbook. How are people handling distribution shift in long-term outdoor deployment? Genuinely curious what's working."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:08:01.735826+00:00",
     "media": {
       "bsky": [
@@ -3515,5 +3515,243 @@
       ]
     },
     "issue": 50
+  },
+  {
+    "draft_id": "c4e68ad9",
+    "paper": {
+      "id": "rss-db62a6d856",
+      "title": "SyNeT: Synthetic Negatives for Traversability Learning",
+      "abstract": "Reliable traversability estimation is crucial for autonomous robots to navigate complex outdoor environments safely. Existing self-supervised learning frameworks primarily rely on positive and unlabeled data; however, the lack of explicit negative data remains a critical limitation, hindering the model's ability to accurately identify diverse non-traversable regions. To address this issue, we introduce a method to explicitly construct synthetic negatives, representing plausible but non-traversable, and integrate them into vision-based traversability learning. Our approach is formulated as a training strategy that can be seamlessly integrated into both Positive–Unlabeled (PU) and Positive–Negative (PN) frameworks without modifying inference architectures. Complementing standard pixel-wise metrics, we introduce an object-centric FPR evaluation approach that analyzes predictions in regions where synthetic negatives are inserted. This evaluation provides an indirect measure of the model's ability to consistently identify non-traversable regions without additional manual labeling. Extensive experiments on both public and self-collected datasets demonstrate that our approach significantly enhances robustness across diverse environments.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568528",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2602.00814",
+      "redo_notes": "figures cropped wrongly"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your robot ignores the cliff because nobody showed it one",
+      "commentary": "SyNeT tackles a real gap in self-supervised traversability: you can learn what's safe from robot experience, but non-traversable terrain is rare and dangerous to collect. They synthesize plausible negative examples and inject them during training without touching inference, which is pragmatically smart. The object-centric FPR metric is a genuine contribution, measuring whether the model actually catches non-traversable patches rather than just averaging over pixels where most of the image is fine. Honest caveat: synthetic negatives are only as good as the synthesis model, and sim-to-real mismatch on the negative distribution could quietly hurt you in novel terrain types. For field teams running legged robots or UGVs in mining or search and rescue, this is the kind of training-time fix that could matter a lot before it matters fatally.",
+      "slides": [
+        {
+          "title": "The gap nobody talks about",
+          "body": "Self-supervised traversability models learn from robot experience. Safe terrain is common. Non-traversable terrain is rare and risky to collect. So models see almost no explicit negatives during training."
+        },
+        {
+          "title": "SyNeT: build the negatives",
+          "body": "The method synthesizes plausible but non-traversable patches and inserts them during training. No architecture changes at inference. Plugs into both PU and PN learning frameworks."
+        },
+        {
+          "title": "A smarter evaluation metric",
+          "body": "Pixel-wise metrics hide failures when most pixels are traversable. SyNeT introduces object-centric FPR: does the model flag the inserted negative region? Catches failures standard metrics miss."
+        },
+        {
+          "title": "Where this matters in the field",
+          "body": "Mining tunnels, SAR debris, nuclear plant floors. Robots that miss non-traversable zones don't get second chances. Training-time fixes are cheaper than hardware casualties."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Synthetic negatives inherit the synthesis model's biases. If your field environment has terrain types outside the synthesis distribution, those negatives may not help. Validation on truly novel terrain is still needed."
+        },
+        {
+          "title": "Bottom line",
+          "body": "Practical training-side fix for a real deployment problem. Pair with the arXiv preprint (2602.00814) for full method details. Object-centric FPR alone is worth borrowing for your own evaluations."
+        }
+      ],
+      "video_script": "Your traversability model learned what's safe by watching your robot drive around. Great. But how many times did it drive off a ledge on purpose to learn that's bad? It didn't. SyNeT fixes this by synthesizing plausible negative examples and injecting them at training time. No inference changes. And they introduce a metric that actually checks whether your model catches those danger zones, not just averages over pixels. For field robotics, this is the kind of quiet improvement that stops quiet disasters. Question: how are you currently validating non-traversable detection in your outdoor deployments?",
+      "caption_instagram": "Your robot ignores the cliff because nobody showed it one.\n\nSelf-supervised traversability learning has a structural problem. Robots collect experience by driving safely, so training data is dominated by positive examples. Non-traversable terrain is underrepresented by design.\n\nSyNeT inserts synthetic negatives at training time. Plausible patches, labeled non-traversable, no changes to inference. It also introduces an object-centric false positive rate metric that checks model predictions specifically in the regions where negatives were placed. Pixel-wise accuracy hides failures when 90% of your image is open ground.\n\nCaveat worth noting: the synthetic negatives only cover what the synthesis process can imagine. Novel terrain in a real mining site or disaster zone may fall outside that distribution. Field validation on out-of-distribution surfaces is still on you.\n\nPaper: SyNeT: Synthetic Negatives for Traversability Learning. arXiv 2602.00814.\n\n#swarmrobotics #fieldrobotics #autonomousnavigation #traversability #robotlearning #outdoorrobotics #searchandrescue",
+      "caption_tiktok": "Robots learn safe terrain from experience. Nobody lets them fall on purpose. SyNeT synthesizes the negatives they never saw. Smart fix for a real field problem.\n\n#fieldrobotics #robotics #autonomousrobots #traversability #robotai",
+      "post_bluesky": "Your traversability model never saw a cliff on purpose. SyNeT synthesizes plausible non-traversable patches at training time, no inference changes, plus a smarter object-centric FPR metric. Practical fix for a real field gap. http://ieeexplore.ieee.org/document/11568528",
+      "bluesky_thread": [
+        "The object-centric FPR metric is the part I'd steal for my own eval pipeline. Pixel-wise accuracy looks fine when most of the image is traversable. This checks specifically whether the model catches the dangerous region. Simple idea, should have been standard already.",
+        "Main caveat: synthetic negatives reflect what your synthesis model knows. Deploy in a terrain type it never imagined and those negatives may not generalize. How are others validating non-traversable detection in truly novel outdoor environments? Curious what's working in practice."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:41:34.183290+00:00",
+    "media": {
+      "figures": [
+        "media/c4e68ad9/fig_00.png",
+        "media/c4e68ad9/fig_01.png",
+        "media/c4e68ad9/fig_02.png",
+        "media/c4e68ad9/fig_03.png",
+        "media/c4e68ad9/fig_04.png",
+        "media/c4e68ad9/fig_05.png"
+      ],
+      "bsky": [
+        "media/c4e68ad9/bsky_00.png",
+        "media/c4e68ad9/bsky_01.png",
+        "media/c4e68ad9/bsky_02.png",
+        "media/c4e68ad9/bsky_03.png"
+      ],
+      "slides": [
+        "media/c4e68ad9/slide_00.png",
+        "media/c4e68ad9/slide_01.png",
+        "media/c4e68ad9/slide_02.png",
+        "media/c4e68ad9/slide_03.png",
+        "media/c4e68ad9/slide_04.png",
+        "media/c4e68ad9/slide_05.png",
+        "media/c4e68ad9/slide_06.png",
+        "media/c4e68ad9/slide_07.png"
+      ]
+    },
+    "issue": 51
+  },
+  {
+    "draft_id": "1a5622d8",
+    "paper": {
+      "id": "rss-41e4715186",
+      "title": "Height-Aware Navigation Framework for Single-DOF Deformable Mobile Robots Based on 3D Encoding",
+      "abstract": "A deformable mobile robot with single-degree-of-freedom (single-DOF) can autonomously navigate and avoid obstacles in complex environments by altering its three-dimensional dimensions through deformation. This capability allows it to traverse passages that fixed-size robots cannot, such as height-restricted or narrow channels, thereby improving task efficiency. This paper proposes a height-aware navigation framework that projects the varying 3D geometric constraints into a grid map and costmap, enabling coupled motion-deformation planning for single-DOF robots. To achieve this, the height restrictions in complex three-dimensional environments are projected as grayscale information into a two-dimensional grid map. Using these grayscale values, we design a costmap layer to reflect the robot’s footprint dimensions in different deformation states. An A* algorithm with height encoding then obtains a global path containing the robot’s height constraints Finally, an enhanced Dynamic Window Approach (DWA) algorithm is proposed to calculate the robot’s movement and deformation speeds, enabling it to utilize its single-DOF deformation capability to traverse height-restricted or narrow obstacle passages. To validate the effectiveness of each core module and highlight the advantages over traditional methods, simulations and experiments were conducted using a Miura-ori-based single-DOF deployable robot.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563816",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your robot can't fit. So it shrinks. Then navigates anyway.",
+      "commentary": "This paper tackles a real constraint: fixed-size robots fail in height-restricted passages like ducts, rubble voids, or low-clearance tunnels. The clever part is projecting 3D height constraints as grayscale into a 2D grid, then feeding that into a modified A* and DWA planner so the robot co-plans motion and deformation simultaneously. The Miura-ori folding mechanism gives a clean single-DOF deformation, which makes the planning tractable. Honest caveat: single-DOF is limiting in truly irregular terrain, and lab corridors with known ceiling heights are a long way from a post-earthquake collapse site where geometry is unpredictable and sensor noise is brutal.",
+      "slides": [
+        {
+          "title": "The problem: size kills access",
+          "body": "Fixed-dimension robots cannot enter height-restricted passages. A robot that deforms on demand can. But deformation and motion must be planned together, not sequentially."
+        },
+        {
+          "title": "3D constraints in a 2D map",
+          "body": "Height restrictions along the path are encoded as grayscale values in a 2D grid. Darker pixel means lower ceiling. The costmap layer reads these values to select the correct robot footprint per deformation state."
+        },
+        {
+          "title": "Height-aware A* global planner",
+          "body": "A* is extended to carry height encoding at each node. The global path returned includes not just waypoints but required deformation states at each segment."
+        },
+        {
+          "title": "Enhanced DWA handles the rest",
+          "body": "A modified Dynamic Window Approach computes movement speed and deformation speed together. The robot can slow, compress, pass through, then re-expand, all in one motion loop."
+        },
+        {
+          "title": "Miura-ori robot as testbed",
+          "body": "The platform uses origami-inspired Miura-ori folding for single-DOF deformation. Elegant mechanically, but one degree of freedom means height-only adaptation. Width-variable passages need more."
+        },
+        {
+          "title": "Where this matters most",
+          "body": "Search and rescue, duct inspection, post-collapse access. The framework generalises to any single-DOF deformable mobile robot. The gap: unknown geometry and sensor noise in real deployments remain untested."
+        }
+      ],
+      "video_script": "Most robots fail in restricted spaces because they're the wrong size and can't do anything about it. This paper builds a navigation framework for a robot that deforms on the fly. Height constraints along the path get encoded as grayscale in a 2D map. A modified A-star plans which deformation state the robot needs at each step. Then a dynamic window approach calculates motion and deformation speed together. The robot compresses, passes through, expands. Tested on a Miura-ori origami platform. Single degree of freedom, so height only for now. But the planning architecture is the real contribution. Would this survive a real search-and-rescue environment?",
+      "caption_instagram": "Your robot hits a low ceiling. Game over. Unless it shrinks.\n\nThis paper from IEEE proposes a height-aware navigation framework for deformable mobile robots. The key idea: encode 3D height restrictions as grayscale values in a 2D grid map, then let a modified A* planner pick paths that account for what deformation state the robot needs at every segment. A modified Dynamic Window Approach then handles simultaneous motion and deformation speed.\n\nThe testbed is a Miura-ori origami robot with single-DOF folding. That single degree of freedom is both the strength and the limit. It keeps planning tractable. It also means the robot adapts height only, not width or shape more generally. Real collapsed structures don't cooperate like that.\n\nThe architecture is worth watching for inspection robotics, duct work, and search and rescue. But the leap from known-geometry lab corridors to unpredictable field conditions is where papers like this have to prove themselves next.\n\nPaper: Height-Aware Navigation Framework for Single-DOF Deformable Mobile Robots Based on 3D Encoding. IEEE Xplore, document 11563816.\n\n#swarmrobotics #fieldrobotics #inspectionrobotics #searchandrescue #mobilerobots #robotnavigation #origamirobotics",
+      "caption_tiktok": "Robot too big to fit? It folds, replans, squeezes through. Height-aware navigation for deformable robots. This is how you do confined-space inspection. #robotics #fieldrobotics #searchandrescue #inspectionrobot",
+      "post_bluesky": "Robot too tall for the passage? It deforms, replans, fits through. This paper encodes 3D height constraints as grayscale in a 2D costmap, then runs a modified A* + DWA to co-plan motion and deformation. Tested on a Miura-ori origami bot. http://ieeexplore.ieee.org/document/11563816",
+      "bluesky_thread": [
+        "The clever bit: height restrictions become grayscale pixel values in the grid. The planner reads that to pick the right robot footprint per deformation state. Keeps everything in 2D math while respecting 3D reality. Clean.",
+        "The limit I'd push on: single-DOF means height adaptation only, and all tests assume reasonably known geometry. Post-earthquake rubble or flooded ducts won't cooperate. How robust is the grayscale encoding when your ceiling height sensor is noisy? That's the real field question."
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:42:35.300511+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/1a5622d8/bsky_00.png",
+        "media/1a5622d8/bsky_01.png",
+        "media/1a5622d8/bsky_02.png",
+        "media/1a5622d8/bsky_03.png"
+      ],
+      "slides": [
+        "media/1a5622d8/slide_00.png",
+        "media/1a5622d8/slide_01.png",
+        "media/1a5622d8/slide_02.png",
+        "media/1a5622d8/slide_03.png",
+        "media/1a5622d8/slide_04.png",
+        "media/1a5622d8/slide_05.png",
+        "media/1a5622d8/slide_06.png",
+        "media/1a5622d8/slide_07.png"
+      ]
+    },
+    "issue": 52
+  },
+  {
+    "draft_id": "5b32e46e",
+    "paper": {
+      "id": "rss-eb434800d8",
+      "title": "CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations",
+      "abstract": "Deploying massive large language models (LLMs) as continuous cognitive engines for robotics is bottlenecked by the time-to-first-token (TTFT) latency required to process extensive state histories. Existing solutions like RAG or sliding windows compromise global context or incur prohibitive re-computation costs. We formalize the optimal task structure for minimizing latency and theoretically prove that prefix stability, incremental extensibility, and asynchronous state reconciliation are necessary conditions for real-time performance. Building on these proofs, we introduce the Cached State Representation (CSR) framework as the practical instantiation of these properties, ensuring optimal KV-cache reuse. To sustain these properties over infinite horizons, we further propose an Asynchronous State Reconciliation (ASR) algorithm that offloads state memory eviction to a parallel computational resource to eliminate latency spikes. On a physical robot wirelessly connected to an on-premise GPU server, CSR achieves a 26-fold latency reduction (14.67 s to 0.56 s) for 120 K token contexts with a 235B parameter model compared to a standard baseline. On an embodied AI benchmark, we achieve SOTA recall (0.836 vs. 0.459) while maintaining RAG-level latency. ASR is validated to sustain bounded, spike-free TTFT over 10 eviction cycles in continuous real-world operation. Together, CSR and ASR enable massive LLMs to function as continuously operating, high-frequency ($\\ge$ 2 Hz) embodied policie",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568517",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/abs/2605.07325"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "14.67 seconds to 0.56 seconds. That's the LLM latency gap killing real robots.",
+      "commentary": "Running a 235B parameter LLM as a robot's cognitive engine is brutal on latency: processing 120K tokens of context history takes nearly 15 seconds before the robot does anything. CSR fixes this by proving, formally, that three properties are necessary for real-time operation: prefix stability, incremental extensibility, and asynchronous eviction. The 26x speedup is real and measured on physical hardware over a wireless link, not a simulation. The honest caveat is 2 Hz, which is plenty for slow manipulation or inspection tasks but nowhere near fast enough for dynamic locomotion or anything that reacts to fast-moving hazards.",
+      "slides": [
+        {
+          "title": "The problem: LLMs are too slow",
+          "body": "A 235B model processing 120K tokens takes 14.67 s before the robot acts. At 2+ Hz, you need under 0.5 s. That gap is not an implementation detail, it's a wall."
+        },
+        {
+          "title": "Three necessary conditions, proven",
+          "body": "Authors formally prove real-time LLM policies require: prefix stability (cache stays valid), incremental extensibility (append without recompute), and asynchronous eviction (no latency spikes during memory cleanup)."
+        },
+        {
+          "title": "CSR: cache everything, recompute nothing",
+          "body": "Cached State Representation ensures KV-cache is maximally reused across timesteps. Result: 0.56 s TTFT on 120K context, 26x faster than standard inference. Measured on a physical robot over Wi-Fi to an on-premise GPU server."
+        },
+        {
+          "title": "ASR handles the eviction problem",
+          "body": "Asynchronous State Reconciliation offloads cache eviction to a parallel process. Over 10 eviction cycles in continuous real-world operation, TTFT stays bounded with no spikes. This is the part most papers skip entirely."
+        },
+        {
+          "title": "Benchmark: recall 0.836 vs. 0.459",
+          "body": "On an embodied AI benchmark, CSR beats RAG recall by nearly double (0.836 vs 0.459) at comparable latency. RAG's context compression was costing more than anyone admitted."
+        },
+        {
+          "title": "What 2 Hz actually means for deployment",
+          "body": "Fine for manipulation, inspection rovers, or subsea survey tasks. Not fine for dynamic legged robots or fast-response search and rescue. Know your use case before you celebrate."
+        }
+      ],
+      "video_script": "Everyone wants to run a massive LLM as a robot brain. The problem nobody talks about: processing 120 thousand tokens of history takes almost 15 seconds before the robot does a single thing. This paper proves, mathematically, exactly what conditions you need to fix that, then builds a system that does it. 26 times faster. On a real robot. Over Wi-Fi. The catch? You top out at 2 Hz. That's fine for inspection robots and manipulation tasks, not fine for anything that needs to dodge something fast. So the real question is: what class of robot actually benefits from a 235 billion parameter brain in the loop?",
+      "caption_instagram": "14.67 seconds to 0.56 seconds. That is not a tuning trick, it is a formal proof turned into working hardware.\n\nRunning a 235B LLM as a continuous robot policy sounds great until you realize processing 120K tokens of context takes nearly 15 seconds per step. For reference, a slow inspection robot needs sub-second responses. This paper proves three conditions are mathematically necessary for real-time LLM policies, then builds CSR and ASR to actually satisfy them.\n\nThe numbers that matter: 26x latency reduction on a physical robot over a wireless GPU link, recall of 0.836 vs 0.459 against RAG on an embodied AI benchmark, and zero latency spikes across 10 eviction cycles in continuous operation. The asynchronous eviction piece is quietly the most important contribution, because cache cleanup is exactly where most systems silently die.\n\nThe ceiling is 2 Hz. That covers subsea inspection, manipulation, construction site monitoring, a lot of real deployment scenarios. It does not cover fast dynamic locomotion or anything reacting to sudden hazards. Worth knowing before you architect your system around this.\n\nPaper: CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations, IEEE Xplore 2026.\n\n#swarmrobotics #fieldinspection #embodiedai #roboticsresearch #llmrobotics #autonomoussystems #robotdeployment",
+      "caption_tiktok": "26x faster LLM inference on a real robot. The math actually checks out. Here is what 2 Hz gets you and what it does not. #robotics #embodiedai #llm #fieldinspection",
+      "post_bluesky": "14.67 s to 0.56 s TTFT for a 235B model on a real robot over Wi-Fi. CSR proves, formally, what cache properties make real-time LLM policies possible, then delivers. Recall 0.836 vs RAG's 0.459. Ceiling is 2 Hz. http://ieeexplore.ieee.org/document/11568517",
+      "bluesky_thread": [
+        "The asynchronous eviction result is the part I keep coming back to. Most papers hit a good average latency then quietly blow up during memory cleanup. ASR validates bounded, spike-free TTFT over 10 eviction cycles in continuous operation. That is the deployment-relevant number.",
+        "2 Hz is the honest constraint here. Subsea survey, construction monitoring, nuclear inspection: totally workable. Fast-response SAR or dynamic legged locomotion: not a fit. What task would you actually trust a 235B LLM to run in the loop on?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T14:43:36.278712+00:00",
+    "media": {
+      "figures": [
+        "media/5b32e46e/fig_00.png",
+        "media/5b32e46e/fig_01.png"
+      ],
+      "bsky": [
+        "media/5b32e46e/bsky_00.png",
+        "media/5b32e46e/bsky_01.png",
+        "media/5b32e46e/bsky_02.png",
+        "media/5b32e46e/bsky_03.png"
+      ],
+      "slides": [
+        "media/5b32e46e/slide_00.png",
+        "media/5b32e46e/slide_01.png",
+        "media/5b32e46e/slide_02.png",
+        "media/5b32e46e/slide_03.png",
+        "media/5b32e46e/slide_04.png",
+        "media/5b32e46e/slide_05.png",
+        "media/5b32e46e/slide_06.png",
+        "media/5b32e46e/slide_07.png"
+      ]
+    },
+    "issue": 53
   }
 ]
