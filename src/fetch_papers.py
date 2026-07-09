@@ -252,6 +252,9 @@ def _rank_batch(batch, listing, feedback, conf, boost):
     result = claude_json(
         f"""Today is {__import__('datetime').date.today().isoformat()}.
 You curate papers for a social account about: {cfg['account']['niche']}.
+This account especially values FIELD and INSPECTION robotics (real-world
+deployment: subsea, mining, construction, agriculture, nuclear, search and
+rescue, infrastructure inspection, legged/all-terrain). Score such work higher.
 {journal_note}
 Priority topics: {boost}.
 

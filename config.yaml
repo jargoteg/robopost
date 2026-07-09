@@ -13,6 +13,10 @@ sources:
     - https://www.nature.com/natmachintell.rss                                    # Nature Machine Intelligence
     - https://www.nature.com/ncomms.rss                                           # Nature Communications
     - https://www.nature.com/subjects/robotics.rss                                # Nature (robotics subject)
+    - https://onlinelibrary.wiley.com/feed/15564967/most-recent                   # Journal of Field Robotics
+    - https://onlinelibrary.wiley.com/feed/15564967/most-cited                    # JFR most-cited (evergreen field work)
+    - https://ieeexplore.ieee.org/rss/TOC7083369.XML                              # IEEE Robotics & Automation Letters (RA-L)
+    - https://ieeexplore.ieee.org/rss/TOC8860                                     # IEEE Trans. Robotics (T-RO)
   journal_priority: true               # journal papers get a ranking boost over arXiv
   journal_names:                       # used to tag + boost; matched loosely in source/url
     - science robotics
@@ -24,6 +28,12 @@ sources:
     - cell
     - pnas
     - ieee
+    - field robotics
+    - jfr
+    - robotics and automation letters
+    - transactions on robotics
+    - ra-l
+    - t-ro
   evergreen:
     enabled: true                      # daily: 1 older landmark/underrated paper
     per_day: 1                         # enters ranking alongside fresh papers
@@ -42,6 +52,14 @@ sources:
     - swarm
     - multi-robot
     - collective
+    - inspection
+    - field robot
+    - search and rescue
+    - subsea
+    - underwater
+    - mining
+    - offshore
+    - pipeline
   watch_pages:                         # news pages WITHOUT an RSS feed —
     - https://www.bristolroboticslab.com/brl-news   # fetched + items extracted by Claude
   youtube_enrichment: true             # find project/demo videos for picked items
@@ -58,6 +76,23 @@ sources:
     - "swarm robotics"
     - "collective behavior"
     - "multi-robot"
+    - "field robotics"
+    - inspection
+    - "search and rescue"
+    - subsea
+    - underwater
+    - mining
+    - construction
+    - agriculture
+    - forestry
+    - nuclear
+    - "confined space"
+    - "offshore"
+    - "pipeline"
+    - "infrastructure inspection"
+    - "legged"
+    - "all-terrain"
+    - "disaster response"
 
 posting:
   min_gap_minutes: 90                  # spacing between posts; queue drains every 30 min
@@ -92,6 +127,8 @@ visuals:
 media_base_url: "https://raw.githubusercontent.com/jargoteg/robopost/main"
 
 conferences:
-  track: [ICRA, IROS, RSS, CoRL, DARS, MRS, Humanoids, RoboCup, ICSR]
+  track: [ICRA, IROS, RSS, CoRL, DARS, MRS, Humanoids, RoboCup, ICSR, FSR, SSRR, ICUR, "IEEE OCEANS", CASE, WAFR]
+  # FSR=Field & Service Robotics, SSRR=Safety Security & Rescue Robotics,
+  # OCEANS=marine robotics, CASE=Automation Science & Eng, WAFR=algorithmic
   window_before_days: 21               # boost/preview window before start
   window_after_days: 10                # results coverage window after end
