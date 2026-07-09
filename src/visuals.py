@@ -164,6 +164,14 @@ def build_carousel(draft, cfg) -> list[str]:
     figs = draft.get("media", {}).get("figures") or get_figures(draft)
     draft.setdefault("media", {})["figures"] = figs
 
+    # if figures came from an open version, credit THAT exact source, not the
+    # paywalled origin — so every card is traceable to where its figure is from
+    ov = p.get("open_version", "")
+    if figs and ov:
+        from urllib.parse import urlparse
+        m = re.search(r"arxiv\.org/abs/(\S+)", ov)
+        ref = f"arXiv:{m.group(1)}" if m else ("fig: " + urlparse(ov).netloc.replace("www.", ""))
+
     # plan cards: hero, then slides (figure-backed where figures remain), takeaway
     plan = []
     fig_i = 1
