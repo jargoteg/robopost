@@ -1642,7 +1642,7 @@
         "The fault tolerance framing maps well onto real deployment anxiety: what happens when modules fail mid-task? Here graph degree gives you a direct handle on robustness budget. Worth asking: does this hold when module failures are correlated, not random?"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T08:40:18.676490+00:00",
     "media": {
       "figures": [
@@ -1668,7 +1668,9 @@
         "media/657349b6/slide_07.png"
       ]
     },
-    "issue": 26
+    "issue": 26,
+    "scheduled_after": "2026-07-09T09:30:04.798260+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "1da23089",
