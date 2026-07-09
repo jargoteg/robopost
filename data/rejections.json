@@ -68,5 +68,19 @@
     "item_type": "paper",
     "reason": "no images found",
     "date": "2026-07-09"
+  },
+  {
+    "title": "CSR: Infinite-Horizon Real-Time Policies With Massive Cached State Representations",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "not interested in learning optimization",
+    "date": "2026-07-09"
+  },
+  {
+    "title": "CycleRL: Sim-to-Real Deep Reinforcement Learning for Robust Autonomous Bicycle Control",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "not interested",
+    "date": "2026-07-09"
   }
 ]

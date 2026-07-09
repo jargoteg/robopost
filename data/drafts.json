@@ -2694,7 +2694,7 @@
         "My real question: what stair geometry did they test? Rise, run, surface material, wet or dry? 'Cluttered outdoor scenes' in a lab paper can mean a parking lot with a leaf on it. Anyone seen the supplementary footage?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T11:51:43.610744+00:00",
     "media": {
       "bsky": [
@@ -3406,7 +3406,7 @@
         "For last-mile logistics this chassis concept is genuinely attractive: cheap, agile, low energy. But 'successful deployment' without outdoor balance metrics after a 99.9% sim claim is a classic sim-to-real paper gap. Anyone seen real-world balance data on RL-controlled bicycles at speed?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:37:12.118490+00:00",
     "media": {
       "figures": [
@@ -3486,7 +3486,7 @@
         "My honest concern: full-sized humanoid validation on 'diverse terrains' without surface or condition specifics is hard to evaluate. After watching Aidol collapse on flat ground this week, I want failure mode data, not just success demos. What conditions would actually break the depth-only…"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:37:44.993359+00:00",
     "media": {
       "figures": [
@@ -3570,7 +3570,7 @@
         "Main caveat: synthetic negatives reflect what your synthesis model knows. Deploy in a terrain type it never imagined and those negatives may not generalize. How are others validating non-traversable detection in truly novel outdoor environments? Curious what's working in practice."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:41:34.183290+00:00",
     "media": {
       "figures": [
@@ -3727,7 +3727,7 @@
         "2 Hz is the honest constraint here. Subsea survey, construction monitoring, nuclear inspection: totally workable. Fast-response SAR or dynamic legged locomotion: not a fit. What task would you actually trust a 235B LLM to run in the loop on?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:43:36.278712+00:00",
     "media": {
       "figures": [
@@ -3886,11 +3886,6 @@
     "status": "in_review",
     "created": "2026-07-09T15:01:02.649992+00:00",
     "media": {
-      "figures": [
-        "media/e4bac5f6/fig_00.png",
-        "media/e4bac5f6/fig_01.png",
-        "media/e4bac5f6/fig_02.png"
-      ],
       "bsky": [
         "media/e4bac5f6/bsky_00.png",
         "media/e4bac5f6/bsky_01.png",
@@ -3906,6 +3901,11 @@
         "media/e4bac5f6/slide_05.png",
         "media/e4bac5f6/slide_06.png",
         "media/e4bac5f6/slide_07.png"
+      ],
+      "figures": [
+        "media/e4bac5f6/fig_01.png",
+        "media/e4bac5f6/fig_00.png",
+        "media/e4bac5f6/fig_02.png"
       ]
     },
     "issue": 55
@@ -4064,5 +4064,247 @@
       ]
     },
     "issue": 57
+  },
+  {
+    "draft_id": "17aa3741",
+    "paper": {
+      "id": "rss-7a03a15ff8",
+      "title": "Vision-Assisted Bipedal Locomotion on Challenging Terrains via Terrain-Related Adversarial Motion Priors",
+      "abstract": "Humanoid locomotion on challenging terrains requires reliable perception and terrain-adaptive gait regulation to maintain stability under complex contact conditions. Although recent perceptive locomotion methods have made substantial progress, many rely on explicit terrain representations, auxiliary geometry-related supervision, or multi-stage training pipelines, which can increase system complexity and training cost. This paper presents a lightweight single-stage reinforcement learning framework for vision-assisted humanoid locomotion using only onboard proprioception and low-cost depth sensing. A hierarchical feature extractor learns compact latent representations of robot dynamics and terrain context, which are integrated into a mixture-of-experts actor for terrain-aware behavior modulation. We further introduce a terrain-related adversarial motion prior constructed from flat-ground and stair locomotion demonstrations to encourage terrain-compatible motion patterns within the unified policy. Extensive simulation and real-world experiments on a physical humanoid robot show that the learned policy achieves robust and energy-efficient locomotion across slopes, stairs, elevated platforms, and wide gaps, while maintaining stable foot– terrain interactions in cluttered outdoor scenes.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578326",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.7,
+      "redo_notes": ""
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do humanoid robots still stumble on stairs in 2026?",
+      "commentary": "This paper trains a single-stage RL policy for humanoid locomotion using only proprioception and a depth camera, no lidar, no explicit terrain maps. The mixture-of-experts actor is the clever bit: it modulates gait based on compact latent terrain context without needing separate sub-policies per terrain type. The adversarial motion prior seeded from flat-ground and stair demos is a tidy way to bias the policy toward physically plausible foot placement without geometry supervision. Honest caveat: 'robust' in outdoor cluttered scenes is doing heavy lifting here, and the paper's energy-efficiency claims need numbers across terrain types, not just qualitative stability.",
+      "slides": [
+        {
+          "title": "The stair problem, still unsolved",
+          "body": "Most perceptive humanoid locomotion needs explicit terrain maps, extra geometry supervision, or multi-stage training. All of that adds complexity and cost. This paper asks: can one policy handle all of it?"
+        },
+        {
+          "title": "One stage, one policy",
+          "body": "Single-stage RL. Inputs: onboard proprioception plus a low-cost depth sensor. No lidar. No terrain reconstruction. A hierarchical feature extractor builds compact latent representations of robot dynamics and terrain context."
+        },
+        {
+          "title": "Mixture-of-experts actor",
+          "body": "Instead of separate policies per terrain, a mixture-of-experts actor reads the latent terrain context and modulates gait accordingly. Slopes, stairs, elevated platforms, and wide gaps all handled by one unified policy."
+        },
+        {
+          "title": "Adversarial motion priors",
+          "body": "A terrain-related adversarial motion prior is trained from flat-ground and stair demonstrations. It penalizes physically implausible foot placements without requiring explicit geometry labels. Tidy shortcut."
+        },
+        {
+          "title": "What the real-world tests showed",
+          "body": "Stable foot-terrain contact across slopes, stairs, platforms, and gaps on a physical humanoid. Cluttered outdoor scenes included. Energy efficiency is claimed but terrain-specific numbers are thin in the abstract."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "'Robust' outdoors is a big word. Lab-to-field transfer on humanoids is still the hard problem. Depth sensing degrades in rain, dust, and direct sunlight. Field inspection use cases will stress-test this fast."
+        }
+      ],
+      "video_script": "Humanoid robots have been stumbling on stairs for years. This paper tries to fix that with a single reinforcement learning policy and nothing fancier than a depth camera. No explicit terrain map. No multi-stage training. Just a mixture-of-experts actor reading compact terrain context and adjusting gait on the fly. An adversarial motion prior borrowed from stair demos keeps foot placement physically honest. It ran on a real humanoid outdoors. The question I keep asking is: what happens when that depth camera hits direct sunlight or construction dust?",
+      "caption_instagram": "Why do humanoid robots still stumble on stairs in 2026?\n\nThis paper takes a shot at simplifying the whole pipeline. One RL policy, one depth camera, proprioception only. No lidar, no terrain reconstruction, no multi-stage training. A mixture-of-experts actor reads compact latent terrain context and adjusts gait for slopes, stairs, platforms, and wide gaps.\n\nThe clever part is the adversarial motion prior. Instead of labeling terrain geometry, they train a prior from flat-ground and stair demos to keep foot placement physically plausible. Cleaner than it sounds.\n\nReal-world tests on a physical humanoid in cluttered outdoor scenes. Results look solid. But depth sensing degrades in rain, dust, and sunlight, and the energy-efficiency claims need terrain-specific numbers before I'm fully convinced.\n\nPaper: Vision-Assisted Bipedal Locomotion on Challenging Terrains via Terrain-Related Adversarial Motion Priors. IEEE ieeexplore.ieee.org/document/11578326\n\n#swarmrobotics #humanoidrobots #locomotion #reinforcementlearning #fieldrobotics #roboticsresearch #learnedcontrol",
+      "caption_tiktok": "One RL policy. One depth camera. A humanoid walking over stairs, gaps, and slopes outdoors. Here is how they did it. #humanoidrobotics #reinforcementlearning #robotics #fieldrobotics",
+      "post_bluesky": "Why do humanoid robots still stumble on stairs? This paper: one RL policy, depth camera only, no terrain maps. Mixture-of-experts actor + adversarial motion priors from stair demos. Ran on a real humanoid outdoors. http://ieeexplore.ieee.org/document/11578326",
+      "bluesky_thread": [
+        "The clever bit is the adversarial motion prior. No geometry labels needed. They just bias foot placement using flat-ground and stair demos as a reference. Cleaner than explicit supervision. The mixture-of-experts actor handling all terrain types in one policy is also underrated here.",
+        "Honest concern: 'robust in cluttered outdoor scenes' is doing a lot of work. Depth cameras degrade fast in dust, rain, and direct sun. Anyone deploying humanoids in construction or field inspection will hit this wall immediately. What terrain conditions did they actually test? That's the number I…"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:45:30.723470+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/17aa3741/bsky_00.png",
+        "media/17aa3741/bsky_01.png",
+        "media/17aa3741/bsky_02.png",
+        "media/17aa3741/bsky_03.png"
+      ],
+      "slides": [
+        "media/17aa3741/slide_00.png",
+        "media/17aa3741/slide_01.png",
+        "media/17aa3741/slide_02.png",
+        "media/17aa3741/slide_03.png",
+        "media/17aa3741/slide_04.png",
+        "media/17aa3741/slide_05.png",
+        "media/17aa3741/slide_06.png",
+        "media/17aa3741/slide_07.png"
+      ]
+    },
+    "issue": 58
+  },
+  {
+    "draft_id": "b99963f0",
+    "paper": {
+      "id": "rss-3f1417e1a7",
+      "title": "DPL: Depth-Only Perceptive Humanoid Locomotion via Realistic Depth Synthesis and Cross-Attention Terrain Reconstruction",
+      "abstract": "Recent advancements in legged robot perceptive locomotion have shown promising progress. However, terrain-aware humanoid locomotion remains largely constrained to two paradigms: depth image-based end-to-end learning and elevation map-based methods. The former suffers from limited training efficiency and a significant sim-to-real gap in depth perception, while the latter depends heavily on multiple vision sensors and localization systems, resulting in latency and reduced robustness. To overcome these challenges, we propose a novel framework that tightly integrates three key components: (1) Terrain-Aware Locomotion Policy with a Blind Backbone, which leverages pre-trained elevation map-based perception to guide reinforcement learning with minimal visual input; (2) Multi-Modality Cross-Attention Transformer, which reconstructs structured terrain representations from noisy depth images; (3) Realistic Depth Images Synthetic Method, which employs self-occlusion-aware ray casting and noise-aware modeling to synthesize realistic depth observations, achieving over 30% reduction in terrain reconstruction error. This combination enables efficient policy training with limited data and hardware resources, while preserving critical terrain features essential for generalization. We validate our framework on a full-sized humanoid robot, demonstrating agile and adaptive locomotion across diverse and challenging terrains.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11563611",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2510.07152",
+      "redo_notes": ""
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does humanoid locomotion still need five sensors to cross a curb?",
+      "commentary": "DPL tackles a real tension in perceptive humanoid locomotion: depth-based end-to-end learning is sim-to-real fragile, while elevation map methods demand heavy sensor suites and localization pipelines. Their fix is a cross-attention transformer that reconstructs structured terrain from a single noisy depth image, trained with synthetic depth that cuts terrain reconstruction error by over 30%. The blind-backbone pre-training trick is genuinely clever, bootstrapping the policy from elevation map supervision before weaning it off the rich input. Honest caveat: 'diverse and challenging terrains' in a lab demo does not tell us how this holds up on wet concrete, mud, or dust-clogged optics, which is where field humanoids actually fail.",
+      "slides": [
+        {
+          "title": "One depth camera, full terrain",
+          "body": "Most humanoid walkers need elevation maps from multiple sensors plus localization. DPL uses a single depth image. That is the entire hardware bet."
+        },
+        {
+          "title": "Three pieces, one tight loop",
+          "body": "Blind backbone policy pre-trained on elevation maps. Cross-attention transformer reconstructing terrain. Synthetic depth with self-occlusion-aware ray casting. All three trained together."
+        },
+        {
+          "title": "The sim-to-real depth problem",
+          "body": "Raw simulated depth looks nothing like real sensor output. Their noise-aware synthesis models real sensor artifacts explicitly, cutting terrain reconstruction error by over 30% versus naive depth."
+        },
+        {
+          "title": "Cross-attention does the heavy lifting",
+          "body": "A multi-modality transformer fuses noisy depth with the policy's terrain expectations. It recovers structured features the raw image alone would lose to noise and occlusion."
+        },
+        {
+          "title": "What the demo proves and what it does not",
+          "body": "Full-sized humanoid, multiple indoor terrains, policy generalizes. No data on sensor degradation, outdoor lighting, or wet surfaces. Sim-to-real gap in optics is not fully closed."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "Sensor-light humanoid locomotion is a prerequisite for real deployment. Fewer sensors mean fewer failure points. The cross-attention reconstruction approach is worth watching as terrain complexity scales."
+        }
+      ],
+      "video_script": "Humanoid robots crossing terrain still lean on stacks of sensors and localization pipelines. This paper asks: what if one depth camera was enough? DPL trains a cross-attention transformer to reconstruct structured terrain from a single noisy depth image, bootstrapped by a blind policy pre-trained on elevation maps. Synthetic depth with self-occlusion modeling cuts reconstruction error by thirty percent. Full-sized humanoid, real terrain, minimal hardware. The open question is how this survives outdoors, in dirt, in rain. Does lighter sensing actually beat richer sensing when conditions degrade?",
+      "caption_instagram": "Why does humanoid locomotion still need five sensors to cross a curb?\n\nMost terrain-aware humanoid walkers either use depth end-to-end (fragile sim-to-real) or build full elevation maps from multiple sensors with localization pipelines (expensive, latency-prone). DPL takes a third path: one depth camera, a cross-attention transformer, and a clever pre-training trick.\n\nThe blind backbone is pre-trained on rich elevation map supervision, then the depth reconstruction module takes over. Noisy simulated depth is made realistic via self-occlusion-aware ray casting, cutting terrain reconstruction error by over 30%.\n\nValidated on a full-sized humanoid across varied terrain. The hardware simplicity argument is real. The open caveat: no outdoor data, no degraded sensor conditions, no mud. That is where field robots live and where this approach still needs proof.\n\nPaper: DPL: Depth-Only Perceptive Humanoid Locomotion via Realistic Depth Synthesis and Cross-Attention Terrain Reconstruction. arXiv 2510.07152. Open access link in bio.\n\n#swarmrobotics #leggedrobotics #humanoidrobotics #locomotion #simtoreal #reinforcementlearning #fieldrobotics",
+      "caption_tiktok": "One depth camera instead of a full sensor suite for humanoid terrain walking. Clever pre-training, 30% better reconstruction. Still needs outdoor proof.\n#humanoidrobotics #leggedrobot #robotics #simtoreal #RL",
+      "post_bluesky": "Why does humanoid locomotion still need five sensors to cross a curb? DPL uses one depth camera + cross-attention terrain reconstruction to replace the whole elevation map pipeline. 30% reconstruction error drop. Full-sized humanoid demo. http://ieeexplore.ieee.org/document/11563611",
+      "bluesky_thread": [
+        "The clever bit: they pre-train a blind backbone on rich elevation map supervision, then switch to noisy single-camera depth at deployment. Bootstraps the policy without expensive real-world data. The cross-attention transformer does the terrain recovery work.",
+        "Honest concern: 'diverse terrains' here means controlled indoor environments. Wet surfaces, dust on optics, outdoor lighting variance: none of that is tested. Sensor-light only wins in the field if the optics survive the field. What conditions would actually break this first?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:46:00.190240+00:00",
+    "media": {
+      "figures": [
+        "media/b99963f0/fig_00.png",
+        "media/b99963f0/fig_04.png",
+        "media/b99963f0/fig_01.png"
+      ],
+      "bsky": [
+        "media/b99963f0/bsky_00.png",
+        "media/b99963f0/bsky_01.png",
+        "media/b99963f0/bsky_02.png",
+        "media/b99963f0/bsky_03.png"
+      ],
+      "slides": [
+        "media/b99963f0/slide_00.png",
+        "media/b99963f0/slide_01.png",
+        "media/b99963f0/slide_02.png",
+        "media/b99963f0/slide_03.png",
+        "media/b99963f0/slide_04.png",
+        "media/b99963f0/slide_05.png",
+        "media/b99963f0/slide_06.png",
+        "media/b99963f0/slide_07.png"
+      ]
+    },
+    "issue": 59
+  },
+  {
+    "draft_id": "c563ba4d",
+    "paper": {
+      "id": "rss-db62a6d856",
+      "title": "SyNeT: Synthetic Negatives for Traversability Learning",
+      "abstract": "Reliable traversability estimation is crucial for autonomous robots to navigate complex outdoor environments safely. Existing self-supervised learning frameworks primarily rely on positive and unlabeled data; however, the lack of explicit negative data remains a critical limitation, hindering the model's ability to accurately identify diverse non-traversable regions. To address this issue, we introduce a method to explicitly construct synthetic negatives, representing plausible but non-traversable, and integrate them into vision-based traversability learning. Our approach is formulated as a training strategy that can be seamlessly integrated into both Positive–Unlabeled (PU) and Positive–Negative (PN) frameworks without modifying inference architectures. Complementing standard pixel-wise metrics, we introduce an object-centric FPR evaluation approach that analyzes predictions in regions where synthetic negatives are inserted. This evaluation provides an indirect measure of the model's ability to consistently identify non-traversable regions without additional manual labeling. Extensive experiments on both public and self-collected datasets demonstrate that our approach significantly enhances robustness across diverse environments.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568528",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2602.00814",
+      "redo_notes": ""
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do robots drive into ditches they can clearly see?",
+      "commentary": "SyNeT tackles a real gap in self-supervised traversability learning: models trained only on positive and unlabeled data never explicitly see what non-traversable looks like, so they generalize poorly to novel obstacles. The fix is elegant, construct synthetic negatives by inserting plausible but impassable regions into training, with no architecture changes at inference. The object-centric FPR metric is a genuinely useful addition, it catches failures that pixel-wise averages smooth over. Honest caveat: synthetic negatives are only as diverse as your generation process, and the paper leaves open how well this transfers to truly out-of-distribution terrain like flooded paths or deformable surfaces. For field deployment in mining or forestry, that gap is the hard part.",
+      "slides": [
+        {
+          "title": "Robots still drive into obstacles",
+          "body": "Self-supervised traversability models train on positive examples of safe ground. They never explicitly learn what non-traversable looks like. Result: high false-negative rates on novel hazards."
+        },
+        {
+          "title": "The missing training signal",
+          "body": "Positive-Unlabeled learning assumes unlabeled pixels encode enough signal. They do not. Without hard negatives, models underfit to walls, drop-offs, and dense vegetation at field scale."
+        },
+        {
+          "title": "SyNeT: inject synthetic negatives",
+          "body": "SyNeT constructs plausible but non-traversable regions and inserts them into training. No inference architecture changes. Plugs into both PU and PN frameworks as a training strategy only."
+        },
+        {
+          "title": "New metric: object-centric FPR",
+          "body": "Standard pixel-wise metrics average over images, masking localized failures. Object-centric FPR scores predictions specifically around inserted synthetic negatives, exposing exactly where models fail."
+        },
+        {
+          "title": "Results across diverse terrain",
+          "body": "Tested on public and self-collected outdoor datasets. Robustness improves across varied environments with no manual labeling of negatives. Key gap: out-of-distribution terrain like mud or flooded paths untested."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Mining haulers, forestry UGVs, and inspection crawlers all need traversability models that generalize. SyNeT makes the negative class explicit without expensive annotation. Deployment validation is the next open question."
+        }
+      ],
+      "video_script": "Here is the problem. You train a robot to recognize safe ground. It sees thousands of examples of terrain it can cross. But it almost never explicitly sees what it cannot cross. So it hedges. It misses drop-offs. It drives into dense brush. SyNeT fixes this by constructing synthetic negatives during training. Plausible obstacles, inserted without touching the inference model. They also introduce an object-centric false positive rate metric that actually catches localized failures pixel averages hide. The real question: does this hold up in a muddy mine or a flooded field? That is where traversability models go to die. What terrain would you trust this on?",
+      "caption_instagram": "Why do autonomous robots still drive into obstacles they could visually detect?\n\nThe answer is in the training data. Self-supervised traversability models learn from positive examples of safe ground and unlabeled pixels. They rarely see an explicit example of what they cannot cross. So the negative class stays fuzzy.\n\nSyNeT addresses this directly. It constructs synthetic negatives, regions that look plausible but are non-traversable, and inserts them into training without changing the inference architecture. It also introduces an object-centric false positive rate metric that exposes localized failures pixel-level averages quietly absorb.\n\nResults improve across diverse outdoor datasets with zero additional manual labeling. The honest limitation: synthetic diversity only covers what you think to generate. Truly novel terrain, flooded paths, deformable ground, active construction zones, remains an open test. For anyone deploying ground robots in real unstructured environments, this paper is worth reading carefully.\n\nPaper: SyNeT: Synthetic Negatives for Traversability Learning | arXiv 2602.00814\nFull open-access: arxiv.org/abs/2602.00814\n\n#SwarmRobotics #FieldRobotics #AutonomousNavigation #TraversabilityEstimation #RobotLearning #MobileRobotics #UGV",
+      "caption_tiktok": "Robots drive into ditches because nobody trained them on what NOT to drive into. SyNeT fixes that with synthetic negatives, no extra labeling needed. Smart paper. #FieldRobotics #AutonomousRobots #RoboticsResearch #UGV",
+      "post_bluesky": "Why do robots drive into obstacles they can see? They were never trained on explicit negatives. SyNeT constructs synthetic non-traversable regions during training, no inference changes needed. Smart fix for a real field problem. http://ieeexplore.ieee.org/document/11568528",
+      "bluesky_thread": [
+        "The object-centric FPR metric is the underrated contribution here. Pixel-wise averages hide localized failures. Measuring specifically around inserted synthetic negatives tells you where the model actually breaks. More papers should do this.",
+        "Honest gap: synthetic negatives are only as diverse as what you think to generate. Flooded terrain, deformable mud, active construction zones, that is where field traversability models fail hardest. Has anyone tested this class of approach in a real mining or forestry deployment? Curious what you…"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:46:31.877288+00:00",
+    "media": {
+      "figures": [
+        "media/c563ba4d/fig_00.png",
+        "media/c563ba4d/fig_01.png",
+        "media/c563ba4d/fig_05.png",
+        "media/c563ba4d/fig_02.png"
+      ],
+      "bsky": [
+        "media/c563ba4d/bsky_00.png",
+        "media/c563ba4d/bsky_01.png",
+        "media/c563ba4d/bsky_02.png",
+        "media/c563ba4d/bsky_03.png"
+      ],
+      "slides": [
+        "media/c563ba4d/slide_00.png",
+        "media/c563ba4d/slide_01.png",
+        "media/c563ba4d/slide_02.png",
+        "media/c563ba4d/slide_03.png",
+        "media/c563ba4d/slide_04.png",
+        "media/c563ba4d/slide_05.png",
+        "media/c563ba4d/slide_06.png",
+        "media/c563ba4d/slide_07.png"
+      ]
+    },
+    "issue": 60
   }
 ]
