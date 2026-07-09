@@ -2727,7 +2727,8 @@
       "source": "ieeexplore.ieee.org",
       "item_type": "paper",
       "journal": true,
-      "score": 7.3
+      "score": 7.3,
+      "open_version": "https://arxiv.org/abs/2602.08653"
     },
     "content": {
       "format": "carousel",
@@ -2786,6 +2787,12 @@
         "media/4455d4d7/slide_05.png",
         "media/4455d4d7/slide_06.png",
         "media/4455d4d7/slide_07.png"
+      ],
+      "figures": [
+        "media/4455d4d7/fig_00.png",
+        "media/4455d4d7/fig_01.png",
+        "media/4455d4d7/fig_02.png",
+        "media/4455d4d7/fig_03.png"
       ]
     },
     "issue": 40
@@ -2994,12 +3001,6 @@
     "status": "in_review",
     "created": "2026-07-09T12:08:45.760269+00:00",
     "media": {
-      "figures": [
-        "media/f76ab756/fig_00.png",
-        "media/f76ab756/fig_01.png",
-        "media/f76ab756/fig_02.png",
-        "media/f76ab756/fig_03.png"
-      ],
       "bsky": [
         "media/f76ab756/bsky_00.png",
         "media/f76ab756/bsky_01.png",
@@ -3015,6 +3016,12 @@
         "media/f76ab756/slide_05.png",
         "media/f76ab756/slide_06.png",
         "media/f76ab756/slide_07.png"
+      ],
+      "figures": [
+        "media/f76ab756/fig_00.png",
+        "media/f76ab756/fig_01.png",
+        "media/f76ab756/fig_02.png",
+        "media/f76ab756/fig_03.png"
       ]
     },
     "issue": 44
