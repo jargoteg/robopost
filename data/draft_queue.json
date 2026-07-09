@@ -1,27 +1,5 @@
 [
   {
-    "id": "rss-88b239ee4b",
-    "title": "Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking",
-    "abstract": "Capturing 4D spatiotemporal scene structure is crucial for the safe and reliable operation of robots in dynamic environments. However, existing approaches typically address only part of the problem: they either provide coarse geometric tracking via bounding boxes or detailed 3D occupancy estimates that lack explicit temporal association and instance-level reasoning. In this work, we present Latent Gaussian Splatting (LaGS) for 4D Panoptic Occupancy Tracking (4D-POT). We revisit the underlying representation and model 3D features as a sparse set of feature-bearing Gaussians. These act as dynamic, volume-oriented keypoints that enable spatially continuous, distance-weighted aggregation of multi-view features before being splatted into a voxel grid for decoding. This point-centric formulation enables flexible, data-dependent receptive fields and long-range spatial interactions that are difficult to capture with local and dense voxel-based operators. A hierarchical Gaussian representation further enables multi-scale reasoning by combining global context from coarse super-points with fine-grained detail from higher-resolution streams. Extensive experiments on Occ3D nuScenes and Waymo demonstrate state-of-the-art performance for 4D-POT.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11568514",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 6.0
-  },
-  {
-    "id": "rss-c35f31f665",
-    "title": "Target-Aware Change Detection for Efficient VLM Gating in Mobile Robots",
-    "abstract": "Vision-Language Models (VLMs) offer strong semantic reasoning for robotic scene understanding, but their high computational cost makes continuous inference impractical for real-time navigation. We propose an efficient vision-based triggering framework that gates expensive VLM inference using object-level change evidence, activating VLM reasoning only when task-relevant changes suggest potentially abnormal situations. To improve reliability in mobile robotic environments, we introduce a target-aware change detection strategy that evaluates changes only for predefined task-relevant objects, substantially suppressing false alarms caused by viewpoint variations and irrelevant scene dynamics. Our method is built on a single YOLOX backbone that unifies view recognition for retrieving viewpoint-aligned reference images and a lightweight cross-attention-based change head for object-centric change prediction, avoiding additional heavy modules. Experiments on real and synthetic benchmarks demonstrate a strong accuracy–efficiency trade-off; for example, our model runs at 10 FPS with 6 M parameters and achieves an AUROC of 0.838 on a QRB5165 robotics platform, outperforming prior change detection baselines that use substantially larger backbones.",
-    "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11568535",
-    "source": "ieeexplore.ieee.org",
-    "item_type": "paper",
-    "journal": true,
-    "score": 6.0
-  },
-  {
     "id": "2507.04321",
     "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
     "url": "https://arxiv.org/abs/2507.04321",

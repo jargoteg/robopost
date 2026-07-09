@@ -3324,7 +3324,7 @@
         "Honest concern: all five datasets are road driving. Structured geometry, relatively predictable. Mining tunnels, open-pit sites, ports, these have geometry that looks nothing like a road. Would love to see a zero-shot test in one of those environments. Anyone tried this in underground localization?"
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T14:36:37.592260+00:00",
     "media": {
       "figures": [
@@ -3753,5 +3753,245 @@
       ]
     },
     "issue": 53
+  },
+  {
+    "draft_id": "7f00955b",
+    "paper": {
+      "id": "rss-2d043c8dc9",
+      "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+      "abstract": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Radar is inherently weather-resilient; however, in scenarios where LiDAR-based maps already serve as the foundational infrastructure, constructing radar maps at scale would incur non-trivial additional overhead. To leverage the existing infrastructure with weather-robust onboard sensors, radar-to-LiDAR place recognition has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with both scanning radars and phased-array radars. We design a dual-stream network that matches solely on shared spatial structures, deliberately discarding modality-specific signatures such as RCS and Doppler velocity in exchange for compatibility across radar types. Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on five datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578324",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "redo_notes": "",
+      "open_version": "https://arxiv.org/abs/2603.07920",
+      "repo_url": "https://github.com/QiZS-BIT/RLPR",
+      "fig_source": "https://github.com/QiZS-BIT/RLPR"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your LiDAR map is useless in a blizzard. Radar isn't.",
+      "commentary": "RLPR tackles a genuinely practical problem: you've already built LiDAR maps for autonomous driving, but your onboard LiDAR degrades in rain, fog, and snow. Radar works in those conditions but speaks a completely different geometric language. The clever move here is the asymmetric alignment strategy, TACMA, which uses a pre-trained radar branch as the anchor rather than forcing symmetric cross-modal training. Discarding RCS and Doppler on purpose to match only shared spatial structure is an interesting tradeoff, buying compatibility across both scanning and phased-array radar types at the cost of sensor-specific discriminability. Honest caveat: five datasets for evaluation sounds solid, but autonomous driving benchmarks are still heavily biased toward structured road environments, so how this holds in degraded infrastructure or off-road inspection contexts remains an open question.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "LiDAR place recognition breaks in bad weather. Radar doesn't, but rebuilding radar maps from existing LiDAR infrastructure is expensive. RLPR bridges the gap: localize with radar against LiDAR maps already in the field."
+        },
+        {
+          "title": "The key design choice",
+          "body": "RLPR deliberately drops modality-specific features, no RCS, no Doppler. It matches only on shared spatial structure. This buys compatibility across scanning and phased-array radar types, at the cost of sensor-specific discriminability."
+        },
+        {
+          "title": "Asymmetric alignment: why it matters",
+          "body": "Radar and LiDAR are not symmetric modalities. TACMA uses the pre-trained radar branch as a fixed discriminative anchor to guide LiDAR alignment, rather than forcing both branches to meet in the middle."
+        },
+        {
+          "title": "What the results show",
+          "body": "State-of-the-art recall on five datasets. Strong zero-shot generalization across radar types without retraining. The cross-modal gap is real and RLPR narrows it without requiring new map infrastructure."
+        },
+        {
+          "title": "Honest caveat",
+          "body": "All benchmarks are structured driving environments. Performance in degraded infrastructure, construction zones, or dense clutter is untested. Lab-to-field gap applies here, especially for inspection use cases."
+        },
+        {
+          "title": "Why it matters beyond cars",
+          "body": "Any system running LiDAR-built maps but needing weather-robust localization at query time could use this. Underground mining, port logistics, outdoor inspection robots in fog all face the same cross-modal mismatch."
+        }
+      ],
+      "video_script": "You spent months building LiDAR maps for autonomous localization. Then it rains. Or snows. Or a dust storm rolls in. Your maps are still there, but your sensor can't see. Radar can. RLPR is a framework that lets a radar-equipped robot localize against existing LiDAR maps without rebuilding anything. The trick is asymmetric alignment, treating radar and LiDAR as what they are: fundamentally different sensors that happen to share spatial structure. Five datasets, strong zero-shot generalization, no Doppler or RCS needed. So: is sensor-agnostic map reuse the practical path forward for field deployment?",
+      "caption_instagram": "Your LiDAR map is useless in a blizzard. Radar isn't.\n\nThis paper solves a very real infrastructure problem. You have LiDAR maps already deployed. Your onboard LiDAR degrades in rain, fog, snow. Rebuilding those maps with radar costs time and money nobody has. RLPR lets you query existing LiDAR maps using radar, no new map infrastructure required.\n\nThe genuinely clever part is the asymmetric cross-modal alignment strategy. Rather than forcing radar and LiDAR to meet symmetrically in feature space, they use a pre-trained radar branch as a fixed anchor. RCS and Doppler are dropped entirely, only shared spatial structure gets matched. That's a principled tradeoff that also happens to work across both scanning and phased-array radar types.\n\nCaveat worth noting: all five evaluation datasets are structured driving environments. How this degrades in cluttered, unstructured, or underground spaces is still open. The cross-modal gap is real and the field deployment story isn't written yet.\n\nPaper: RLPR, arxiv 2603.07920\n\n#swarmrobotics #autonomousdriving #LiDAR #radarlocalization #fieldrobotics #sensorFusion #placerecoginition #robotics",
+      "caption_tiktok": "LiDAR maps already built. Blizzard incoming. Radar saves the mission. RLPR shows how to cross the modal gap without rebuilding your infrastructure. #robotics #autonomousdriving #LiDAR #radar #fieldrobotics #sensorfusion",
+      "post_bluesky": "LiDAR maps break in bad weather. Radar doesn't. RLPR lets radar localize against existing LiDAR maps, no rebuild needed. Asymmetric alignment is the clever part. Real caveat: all benchmarks are structured roads. http://ieeexplore.ieee.org/document/11578324",
+      "bluesky_thread": [
+        "The design choice I respect: they deliberately drop RCS and Doppler. No modality-specific features at all. Match only on spatial structure. Loses some discriminability but gains compatibility across scanning AND phased-array radar. That's a principled tradeoff, not a shortcut.",
+        "Open question for anyone working in field inspection or mining: LiDAR maps already exist for a lot of underground and port environments. If this zero-shot generalization holds outside structured roads, the deployment case gets interesting fast. Anyone tested cross-modal localization in GPS-denied…"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:00:32.751335+00:00",
+    "media": {
+      "figures": [
+        "media/7f00955b/fig_00.png",
+        "media/7f00955b/fig_01.png",
+        "media/7f00955b/fig_02.png",
+        "media/7f00955b/fig_03.png",
+        "media/7f00955b/fig_04.png"
+      ],
+      "bsky": [
+        "media/7f00955b/bsky_00.png",
+        "media/7f00955b/bsky_01.png",
+        "media/7f00955b/bsky_02.png",
+        "media/7f00955b/bsky_03.png"
+      ],
+      "slides": [
+        "media/7f00955b/slide_00.png",
+        "media/7f00955b/slide_01.png",
+        "media/7f00955b/slide_02.png",
+        "media/7f00955b/slide_03.png",
+        "media/7f00955b/slide_04.png",
+        "media/7f00955b/slide_05.png",
+        "media/7f00955b/slide_06.png",
+        "media/7f00955b/slide_07.png"
+      ]
+    },
+    "issue": 54
+  },
+  {
+    "draft_id": "e4bac5f6",
+    "paper": {
+      "id": "rss-88b239ee4b",
+      "title": "Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking",
+      "abstract": "Capturing 4D spatiotemporal scene structure is crucial for the safe and reliable operation of robots in dynamic environments. However, existing approaches typically address only part of the problem: they either provide coarse geometric tracking via bounding boxes or detailed 3D occupancy estimates that lack explicit temporal association and instance-level reasoning. In this work, we present Latent Gaussian Splatting (LaGS) for 4D Panoptic Occupancy Tracking (4D-POT). We revisit the underlying representation and model 3D features as a sparse set of feature-bearing Gaussians. These act as dynamic, volume-oriented keypoints that enable spatially continuous, distance-weighted aggregation of multi-view features before being splatted into a voxel grid for decoding. This point-centric formulation enables flexible, data-dependent receptive fields and long-range spatial interactions that are difficult to capture with local and dense voxel-based operators. A hierarchical Gaussian representation further enables multi-scale reasoning by combining global context from coarse super-points with fine-grained detail from higher-resolution streams. Extensive experiments on Occ3D nuScenes and Waymo demonstrate state-of-the-art performance for 4D-POT.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568514",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/abs/2602.23172"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Bounding boxes lie. Voxels forget. This paper tries to fix both.",
+      "commentary": "LaGS tackles 4D panoptic occupancy tracking, meaning it wants to know what every voxel is, which object it belongs to, and where that object was a moment ago, all at once. The clever bit is treating 3D scene features as sparse Gaussians rather than dense voxel operators, which gives data-dependent receptive fields and long-range spatial reasoning without the memory wall of dense grids. Results on Occ3D nuScenes and Waymo are state-of-the-art for the 4D-POT task. The honest caveat: nuScenes and Waymo are clean, well-lit, highway-biased datasets. Whether sparse Gaussian keypoints stay stable in a dusty mining tunnel, a cluttered construction site, or degraded sensor conditions is a completely open question.",
+      "slides": [
+        {
+          "title": "The gap this paper targets",
+          "body": "Bounding boxes track objects but miss geometry. Voxel occupancy maps give geometry but lose instance identity over time. Neither gives you the full 4D picture a robot actually needs."
+        },
+        {
+          "title": "Core idea: Gaussians as keypoints",
+          "body": "Scene features are modeled as a sparse set of feature-bearing 3D Gaussians, not dense voxels. Each acts as a dynamic keypoint that aggregates multi-view information with distance-weighted, spatially continuous receptive fields."
+        },
+        {
+          "title": "Why sparse beats dense here",
+          "body": "Dense voxel operators struggle with long-range spatial interactions and scale poorly. Sparse Gaussians let the model allocate capacity where the scene is complex, not uniformly across empty space."
+        },
+        {
+          "title": "Hierarchical scale reasoning",
+          "body": "A two-level Gaussian hierarchy: coarse super-points capture global context, high-resolution streams add fine-grained detail. Multi-scale reasoning without running two separate networks."
+        },
+        {
+          "title": "Benchmarks: strong, but know the caveat",
+          "body": "State-of-the-art on Occ3D nuScenes and Waymo for 4D panoptic occupancy tracking. Both datasets are highway-dominant, clean-sensor environments. Field deployment conditions are untested."
+        },
+        {
+          "title": "What matters for real deployment",
+          "body": "Any mobile robot in a dynamic environment needs this: what is there, whose object is it, and is it moving. LaGS is the clearest unified answer so far. The gap is harsh-environment validation."
+        }
+      ],
+      "video_script": "Your robot needs to answer three questions at once. What occupies this space. Which object does it belong to. And where was that object a moment ago. Most methods answer one, maybe two. Latent Gaussian Splatting tries to answer all three by treating scene features as sparse 3D Gaussians instead of dense voxels. You get long-range spatial reasoning, instance tracking, and multi-scale geometry in one pass. It hits state-of-the-art on nuScenes and Waymo. But those are clean highway datasets. Would this hold up underground, in dust, or in rain? That's the question nobody has answered yet.",
+      "caption_instagram": "Bounding boxes lie about geometry. Voxel maps forget which object is which. For a robot moving through a dynamic scene, you need both solved simultaneously.\n\nLatent Gaussian Splatting for 4D Panoptic Occupancy Tracking models scene features as sparse, feature-bearing 3D Gaussians rather than dense voxels. This gives you data-dependent receptive fields and long-range spatial interactions without the memory cost of dense grids. A hierarchical representation adds multi-scale reasoning on top.\n\nState-of-the-art results on Occ3D nuScenes and Waymo for the 4D-POT task. The representation is genuinely clever and the unification of geometry, instance identity, and temporal association in one framework is the right problem to be solving.\n\nHonest caveat: nuScenes and Waymo are clean, highway-biased benchmarks. Sparse Gaussian keypoints may behave very differently in a degraded sensor environment, a cluttered construction site, or underground. That validation work still needs to happen before this shows up in field robots.\n\nPaper: Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking, arXiv 2602.23172. Open access link in bio.\n\n#swarmrobotics #fieldrobotics #autonomousrobots #3Doccupancy #robotperception #mobilerobotics #sceneunderstanding",
+      "caption_tiktok": "Your robot needs to know what's there, whose object it is, and whether it's moving. This paper builds one model that answers all three. State-of-the-art on nuScenes and Waymo. Clean datasets only so far. #robotics #autonomousvehicles #robotperception #computervision",
+      "post_bluesky": "Bounding boxes lie about geometry. Voxels forget object identity. LaGS models scene features as sparse 3D Gaussians to solve 4D panoptic occupancy tracking in one pass. SOTA on nuScenes + Waymo. Clean datasets though. http://ieeexplore.ieee.org/document/11568514",
+      "bluesky_thread": [
+        "The clever bit: sparse Gaussians give data-dependent receptive fields and long-range spatial interactions that dense voxel operators just can't match efficiently. Hierarchical super-points add multi-scale context on top. Representation choice genuinely matters here.",
+        "My honest worry: nuScenes and Waymo are highway-dominant, clean-sensor benchmarks. Does a sparse Gaussian keypoint representation stay stable in dust, rain, or a cluttered underground site? That's the experiment I want to see. Anyone aware of similar work tested in harsher conditions?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:01:02.649992+00:00",
+    "media": {
+      "figures": [
+        "media/e4bac5f6/fig_00.png",
+        "media/e4bac5f6/fig_01.png",
+        "media/e4bac5f6/fig_02.png"
+      ],
+      "bsky": [
+        "media/e4bac5f6/bsky_00.png",
+        "media/e4bac5f6/bsky_01.png",
+        "media/e4bac5f6/bsky_02.png",
+        "media/e4bac5f6/bsky_03.png"
+      ],
+      "slides": [
+        "media/e4bac5f6/slide_00.png",
+        "media/e4bac5f6/slide_01.png",
+        "media/e4bac5f6/slide_02.png",
+        "media/e4bac5f6/slide_03.png",
+        "media/e4bac5f6/slide_04.png",
+        "media/e4bac5f6/slide_05.png",
+        "media/e4bac5f6/slide_06.png",
+        "media/e4bac5f6/slide_07.png"
+      ]
+    },
+    "issue": 55
+  },
+  {
+    "draft_id": "837d0e8f",
+    "paper": {
+      "id": "rss-c35f31f665",
+      "title": "Target-Aware Change Detection for Efficient VLM Gating in Mobile Robots",
+      "abstract": "Vision-Language Models (VLMs) offer strong semantic reasoning for robotic scene understanding, but their high computational cost makes continuous inference impractical for real-time navigation. We propose an efficient vision-based triggering framework that gates expensive VLM inference using object-level change evidence, activating VLM reasoning only when task-relevant changes suggest potentially abnormal situations. To improve reliability in mobile robotic environments, we introduce a target-aware change detection strategy that evaluates changes only for predefined task-relevant objects, substantially suppressing false alarms caused by viewpoint variations and irrelevant scene dynamics. Our method is built on a single YOLOX backbone that unifies view recognition for retrieving viewpoint-aligned reference images and a lightweight cross-attention-based change head for object-centric change prediction, avoiding additional heavy modules. Experiments on real and synthetic benchmarks demonstrate a strong accuracy–efficiency trade-off; for example, our model runs at 10 FPS with 6 M parameters and achieves an AUROC of 0.838 on a QRB5165 robotics platform, outperforming prior change detection baselines that use substantially larger backbones.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568535",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your VLM doesn't need to run every frame. Here's proof.",
+      "commentary": "This paper solves a real deployment headache: VLMs are too slow for continuous mobile robot inference, so the authors build a lightweight gating system that only triggers the VLM when something task-relevant actually changes. The key move is target-aware change detection, restricting the change signal to predefined objects rather than the whole scene, which kills false alarms from viewpoint shifts. One YOLOX backbone handles both view alignment and change prediction at 10 FPS with 6M parameters, hitting AUROC 0.838 on a real Qualcomm QRB5165 board. Honest caveat: AUROC 0.838 is decent but not dominant, and the predefined object list assumption will hurt badly in unstructured inspection environments where you can't know the target class in advance.",
+      "slides": [
+        {
+          "title": "The Problem With VLMs On Robots",
+          "body": "VLMs give strong semantic reasoning. But continuous inference is too slow and too power-hungry for real-time mobile navigation. You need a smarter trigger."
+        },
+        {
+          "title": "Gate the VLM, Don't Run It Blind",
+          "body": "Their framework runs a cheap change detector first. VLM only fires when task-relevant object changes suggest something abnormal. Most frames: no VLM call at all."
+        },
+        {
+          "title": "Target-Aware Change Detection",
+          "body": "Change is evaluated only for predefined task-relevant objects. Viewpoint shifts and irrelevant scene motion are suppressed. This is what kills false alarms in practice."
+        },
+        {
+          "title": "One Backbone, Two Jobs",
+          "body": "Single YOLOX backbone handles viewpoint-aligned reference retrieval and change prediction via a lightweight cross-attention head. 6M parameters, 10 FPS on a QRB5165 board."
+        },
+        {
+          "title": "Numbers On Real Hardware",
+          "body": "AUROC 0.838 on real and synthetic benchmarks, outperforming larger-backbone baselines. Runs on a Qualcomm robotics platform, not a server rack."
+        },
+        {
+          "title": "The Catch For Field Deployment",
+          "body": "Predefined target objects are a strong assumption. In unstructured inspection, mining, or SAR, you often can't enumerate relevant objects ahead of time. Open-vocabulary extension is the next problem to solve."
+        }
+      ],
+      "video_script": "VLMs are too slow to run every frame on a mobile robot. This paper asks a better question: when do you actually need the VLM to fire? Their answer is a lightweight gating system that watches for change in task-relevant objects only, ignoring viewpoint shifts and background noise. One backbone, six million parameters, ten frames per second on real hardware. AUROC 0.838 on a Qualcomm robotics board. The honest catch: you have to define your target objects upfront. Fine for structured inspection, messy for search and rescue. So, what does open-vocabulary change detection look like on a compute-constrained platform?",
+      "caption_instagram": "Your VLM doesn't need to run every frame. Here's proof.\n\nRunning a Vision-Language Model continuously on a mobile robot is a compute trap. This paper builds a gating layer that watches for meaningful change first, then calls the VLM only when something task-relevant shifts. Most frames get skipped entirely.\n\nThe clever part is making change detection target-aware. Instead of flagging any motion or scene difference, it only evaluates predefined objects. Viewpoint changes stop triggering false alarms. One YOLOX backbone handles view alignment and change prediction together, 6M parameters, 10 FPS on a Qualcomm QRB5165 robotics board.\n\nAUROC 0.838 on real hardware is solid, but the predefined object list is a real constraint. Unstructured field environments like search and rescue or subsea inspection don't let you enumerate targets in advance. That's the open problem this work leaves on the table.\n\nPaper: Target-Aware Change Detection for Efficient VLM Gating in Mobile Robots. IEEE ieeexplore.ieee.org/document/11568535\n\n#swarmrobotics #mobilerobotics #inspectionrobotics #computervision #edgerobotics #fieldrobotics #embodiedai",
+      "caption_tiktok": "VLMs are too slow for every frame. This paper builds a gating system that only calls the VLM when something actually changed. 6M params, 10 FPS, real hardware. #robotics #computervision #edgeai #fieldrobotics",
+      "post_bluesky": "Your VLM doesn't need to run every frame. This paper gates VLM inference using target-aware change detection: 6M params, 10 FPS, AUROC 0.838 on real hardware. Smart idea with one real-world catch. http://ieeexplore.ieee.org/document/11568535",
+      "bluesky_thread": [
+        "The clever part: change detection only evaluates predefined task-relevant objects. Viewpoint shifts and background dynamics stop generating false alarms. One YOLOX backbone handles both view alignment and change prediction. No extra heavy modules bolted on.",
+        "The honest caveat: predefined target objects is a strong assumption. Works well in structured inspection. Falls apart in SAR or subsea where you can't enumerate relevant objects upfront. Open-vocabulary change detection on constrained hardware is the unsolved piece. Anyone working on that?"
+      ]
+    },
+    "status": "in_review",
+    "created": "2026-07-09T15:01:30.102900+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/837d0e8f/bsky_00.png",
+        "media/837d0e8f/bsky_01.png",
+        "media/837d0e8f/bsky_02.png",
+        "media/837d0e8f/bsky_03.png"
+      ],
+      "slides": [
+        "media/837d0e8f/slide_00.png",
+        "media/837d0e8f/slide_01.png",
+        "media/837d0e8f/slide_02.png",
+        "media/837d0e8f/slide_03.png",
+        "media/837d0e8f/slide_04.png",
+        "media/837d0e8f/slide_05.png",
+        "media/837d0e8f/slide_06.png",
+        "media/837d0e8f/slide_07.png"
+      ]
+    },
+    "issue": 56
   }
 ]
