@@ -3241,14 +3241,6 @@
     "status": "in_review",
     "created": "2026-07-09T14:08:01.735826+00:00",
     "media": {
-      "figures": [
-        "media/a028df39/fig_00.png",
-        "media/a028df39/fig_01.png",
-        "media/a028df39/fig_02.png",
-        "media/a028df39/fig_03.png",
-        "media/a028df39/fig_04.png",
-        "media/a028df39/fig_05.png"
-      ],
       "bsky": [
         "media/a028df39/bsky_00.png",
         "media/a028df39/bsky_01.png",
@@ -3264,6 +3256,14 @@
         "media/a028df39/slide_05.png",
         "media/a028df39/slide_06.png",
         "media/a028df39/slide_07.png"
+      ],
+      "figures": [
+        "media/a028df39/fig_00.png",
+        "media/a028df39/fig_01.png",
+        "media/a028df39/fig_02.png",
+        "media/a028df39/fig_03.png",
+        "media/a028df39/fig_04.png",
+        "media/a028df39/fig_05.png"
       ]
     },
     "issue": 47
