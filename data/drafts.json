@@ -1907,7 +1907,7 @@
         "Honest caveat: actuator-disk theory with directional attenuation is clean but it is still a proxy. Complex confined spaces, hull inspections, reef crevices, will have flow interactions this model underestimates. Tank results and open-water results are not the same thing. How much does that gap…"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T09:44:20.315608+00:00",
     "media": {
       "figures": [
@@ -1935,7 +1935,9 @@
     },
     "issue": 29,
     "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "b2e163fe",
@@ -2189,7 +2191,7 @@
       ]
     },
     "issue": 32,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -2798,7 +2800,7 @@
       ]
     },
     "issue": 40,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -3020,7 +3022,7 @@
       ]
     },
     "issue": 44,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -3190,7 +3192,7 @@
       ]
     },
     "issue": 46,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -3891,7 +3893,7 @@
         "My honest worry: nuScenes and Waymo are highway-dominant, clean-sensor benchmarks. Does a sparse Gaussian keypoint representation stay stable in dust, rain, or a cluttered underground site? That's the experiment I want to see. Anyone aware of similar work tested in harsher conditions?"
       ]
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-09T15:01:02.649992+00:00",
     "media": {
       "bsky": [
@@ -3916,7 +3918,9 @@
         "media/e4bac5f6/fig_02.png"
       ]
     },
-    "issue": 55
+    "issue": 55,
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "837d0e8f",
@@ -4072,7 +4076,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -4232,7 +4236,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -4317,7 +4321,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -4481,7 +4485,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-09T17:53:03.984928+00:00",
+    "scheduled_after": "2026-07-09T19:36:58.326466+00:00",
     "queue_notified": true
   },
   {
@@ -4612,7 +4616,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T16:21:47.832984+00:00",
     "media": {
       "figures": [],
@@ -4688,7 +4692,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T16:22:17.028272+00:00",
     "media": {
       "figures": [],
@@ -4792,5 +4796,236 @@
       ]
     },
     "issue": 66
+  },
+  {
+    "draft_id": "678946ff",
+    "paper": {
+      "id": "rss-d80f13ec6f",
+      "title": "Continuum Robot State Estimation With Actuation Uncertainty",
+      "abstract": "Continuum robots are flexible, slender manipulators well suited for confined surgical environments. In these settings, unknown interaction forces and model uncertainty significantly affect robot shape, motivating state estimation from external observations. Existing estimation methods either neglect actuation modeling or rely on simplified deterministic actuation models. In contrast, we jointly estimate robot shape, external loads, and actuation inputs using mechanically principled actuation priors. To achieve this, we present a discrete Cosserat rod formulation with piecewise-linear strain integration that provides high numerical accuracy while inducing a sparse factor graph structure for efficient nonlinear optimization. We extend the framework to tendon-driven and parallel robots in simulation and validate it experimentally on a surgical concentric tube robot. Overall, our approach enables principled real-time estimation across multiple robot architectures while providing direct access to manipulator Jacobians through the linearized factor graph.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11560916",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.7,
+      "open_version": "https://arxiv.org/abs/2601.04493"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Real-time surgical robot shape estimation without knowing your own forces.",
+      "commentary": "Continuum robots in surgery are fighting a fundamental problem: tendon friction, tube interactions, and unknown tissue loads mean your commanded shape and your actual shape are different things. This paper jointly estimates robot shape, external loads, AND actuation inputs simultaneously using a discrete Cosserat rod model with piecewise-linear strain integration. The clever bit is the sparse factor graph structure that makes this tractable in real time. Validated on a concentric tube robot, not just simulation. Honest caveat: validation is still lab-bench surgical hardware, and the jump to intraoperative conditions with moving tissue, blood, and partial occlusion is a different problem entirely.",
+      "slides": [
+        {
+          "title": "Your robot is lying to you",
+          "body": "In continuum surgical robots, commanded actuation and actual shape diverge. Tissue forces, tendon friction, and model error compound. You need to estimate what the robot is actually doing, not what you told it to do."
+        },
+        {
+          "title": "The problem with existing methods",
+          "body": "Prior state estimators either ignore actuation entirely or use simplified deterministic models. Both approaches leave systematic errors on the table. Neither gives you a principled uncertainty over the robot's true configuration."
+        },
+        {
+          "title": "Joint estimation across three unknowns",
+          "body": "This work simultaneously estimates robot shape, external loads, and actuation inputs. Mechanically principled actuation priors replace the deterministic shortcut. All three unknowns are resolved in one optimization pass."
+        },
+        {
+          "title": "Sparse factor graph keeps it real-time",
+          "body": "Discrete Cosserat rods with piecewise-linear strain integration produce a sparse factor graph. Sparsity is what makes nonlinear optimization fast enough for real-time use. Jacobians fall out of the linearized graph directly."
+        },
+        {
+          "title": "Validated on concentric tube hardware",
+          "body": "Extended to tendon-driven and parallel robots in simulation. Experimentally tested on a concentric tube surgical robot. Real hardware, not just synthetic benchmarks."
+        },
+        {
+          "title": "What still needs to happen",
+          "body": "Lab validation is step one. Intraoperative tissue contact, partial visibility, and dynamic loads are step two. The framework is principled. The operating room will stress-test every assumption."
+        }
+      ],
+      "video_script": "Continuum surgical robots are flexible, slender, and built for tight spaces. But here is the catch: you never really know their shape. Tendon friction, tissue forces, model error, they all add up. This paper estimates robot shape, external loads, and actuation inputs at the same time, using a sparse factor graph that runs in real time. Validated on actual concentric tube hardware. The math is solid. But does it survive the operating room? That is the real question.",
+      "caption_instagram": "Real-time shape estimation for surgical robots, without knowing your own actuation forces.\n\nContinuum robots flex and deform under tissue loads in ways your model never predicted. Commanded shape and actual shape are not the same thing. This paper tackles that directly.\n\nThe core idea: jointly estimate robot shape, external loads, AND actuation inputs using mechanically principled priors. A discrete Cosserat rod formulation with piecewise-linear strain integration gives high accuracy and, critically, a sparse factor graph structure that makes real-time nonlinear optimization feasible. Jacobians are available directly from the linearized graph.\n\nValidated experimentally on a concentric tube robot. Extended to tendon-driven and parallel architectures in simulation. The lab results look strong. The honest question is whether the framework holds when tissue is moving, visibility is partial, and everything is wet.\n\nPaper: \"Continuum Robot State Estimation With Actuation Uncertainty\" arXiv:2601.04493\n\n#continuumrobotics #surgicalrobotics #stateestimation #robotics #factorgraph #medicalrobotics #roboticsresearch",
+      "caption_tiktok": "Surgical robots don't actually know their own shape. This paper fixes that in real time. #surgicalrobotics #continuumrobot #robotics #stateestimation",
+      "post_bluesky": "Surgical continuum robots don't know their own shape. Tissue forces + tendon friction mean commanded ≠ actual. This paper jointly estimates shape, loads, AND actuation in real time via sparse factor graphs. Validated on real hardware. http://ieeexplore.ieee.org/document/11560916",
+      "bluesky_thread": [
+        "The clever part: piecewise-linear strain integration on discrete Cosserat rods gives high accuracy AND a sparse graph structure. Sparsity is what buys you real-time performance. Most prior work either drops actuation modeling or uses a deterministic shortcut. Both leak error.",
+        "Lab validation on a concentric tube robot is a real step up from pure sim. But intraoperative conditions, moving tissue, partial occlusion, dynamic loads, are a different regime. How much does the actuation prior degrade when nothing is as clean as the bench? Curious if anyone has pushed this…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T18:05:38.684415+00:00",
+    "media": {
+      "figures": [
+        "media/678946ff/fig_00.png"
+      ],
+      "bsky": [
+        "media/678946ff/bsky_00.png",
+        "media/678946ff/bsky_01.png",
+        "media/678946ff/bsky_02.png",
+        "media/678946ff/bsky_03.png"
+      ],
+      "slides": [
+        "media/678946ff/slide_00.png",
+        "media/678946ff/slide_01.png",
+        "media/678946ff/slide_02.png",
+        "media/678946ff/slide_03.png",
+        "media/678946ff/slide_04.png",
+        "media/678946ff/slide_05.png",
+        "media/678946ff/slide_06.png",
+        "media/678946ff/slide_07.png"
+      ]
+    },
+    "issue": 67
+  },
+  {
+    "draft_id": "5edee1f2",
+    "paper": {
+      "id": "rss-810ba0995c",
+      "title": "SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation",
+      "abstract": "Learning transferable visuomotor imitation policies that generalize across diverse manipulation tasks and adapt rapidly to new tasks from only a handful of demonstrations remains challenging. Most modern policies are trained end-to-end to map observations directly to low-level actions, offering little explicit structure for reusing and recombining behaviors across tasks and making transfer data-inefficient under limited supervision. We propose SkillPlug, a plug-in framework that augments an existing visuomotor policy with a skill-conditioning module and mines a shared, transferable skill library from raw multi-task demonstrations. SkillPlug learns skills via self-supervised objectives that promote compact, reusable, and non-redundant behavior-level primitives, forming a task-shared prior for compositional control. After skill mining, we keep the learned skills fixed and specialize to unseen tasks by fine-tuning only lightweight router and action head, enabling efficient adaptation without full end-to-end retraining. We evaluate SkillPlug on two simulation benchmarks and on a real robot, and observe that the mined transferable skills consistently improve both multi-task performance and few-shot adaptation. Overall, SkillPlug offers a scalable way to mine reusable skills that improve data-efficient generalization in robotic manipulation.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11568506",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One skill library. Any manipulation task. Few shots.",
+      "commentary": "SkillPlug treats the skill-reuse problem correctly: mine primitives from existing multi-task demos first, freeze them, then adapt only a router and action head to new tasks. That separation is the clever bit. Most imitation learning just retrains everything end-to-end, which is why few-shot transfer falls apart. The real-robot results matter more than the sim benchmarks here, though the abstract gives no numbers on how few 'few-shot' actually means. Honest caveat: 'plug-in framework' claims always depend heavily on the base policy quality, and manipulation benchmarks in simulation rarely capture contact-noise or calibration drift you get on actual hardware.",
+      "slides": [
+        {
+          "title": "The problem with imitation",
+          "body": "End-to-end visuomotor policies map pixels to actions with no reusable structure. Every new task needs retraining from scratch. Data-efficient transfer is nearly impossible."
+        },
+        {
+          "title": "What SkillPlug does",
+          "body": "Mines a shared skill library from raw multi-task demos using self-supervised objectives. Skills stay compact, non-redundant, and task-agnostic. No manual labeling required."
+        },
+        {
+          "title": "How adaptation works",
+          "body": "Mined skills are frozen after training. Only a lightweight router and action head are fine-tuned for unseen tasks. Full end-to-end retraining is never needed."
+        },
+        {
+          "title": "The real-robot test",
+          "body": "Evaluated on two sim benchmarks plus physical hardware. Transferable skills improved both multi-task performance and few-shot adaptation across all settings tested."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Performance depends on the base policy quality. Sim benchmarks rarely capture contact noise or calibration drift. 'Few-shot' numbers need scrutiny before trusting deployment claims."
+        },
+        {
+          "title": "Why this architecture matters",
+          "body": "Freezing skills and tuning only routing is a scalable pattern. If the library generalizes, you add tasks without touching core weights. That is the real engineering value here."
+        }
+      ],
+      "video_script": "Most robot manipulation policies are black boxes. Pixels go in, actions come out, and if you want the robot to do something new, you retrain everything. SkillPlug breaks that pattern. It mines reusable skill primitives from existing demos, freezes them, and only tunes a small router when a new task arrives. Fewer demonstrations, faster adaptation. They tested it on real hardware, which most skill-learning papers skip. The caveat: sim results and real-world contact forces are very different problems. So here is my question: how many real-robot demos did few-shot actually mean?",
+      "caption_instagram": "One skill library that transfers across manipulation tasks, adapted with just a handful of demos.\n\nSkillPlug mines behavior primitives from raw multi-task demonstrations using self-supervised learning. No manual skill labeling. The primitives stay frozen after training, and only a lightweight router plus action head get fine-tuned for new tasks.\n\nThe separation of mining and adaptation is the key design choice. It means you are not paying the cost of full retraining every time a new task appears. Tested in simulation and on a physical robot, which earns some credibility points.\n\nThe caveat I keep coming back to: 'few-shot' needs a hard number, and sim manipulation benchmarks are still far friendlier than real contact dynamics. Promising pattern, but field deployment would stress-test the skill library fast.\n\nPaper: SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation. ieeexplore.ieee.org/document/11568506\n\n#swarmrobotics #roboticmanipulation #imitationlearning #robotlearning #fewshot #visuomotorpolicy #roboticsresearch",
+      "caption_tiktok": "Freeze your skills, tune only the router. SkillPlug makes few-shot manipulation adaptation actually work. Caveat: real contact forces are messier than sim. #robotics #manipulation #robotlearning #imitationlearning",
+      "post_bluesky": "One skill library mined from raw demos, frozen, then adapted to new tasks by tuning only a tiny router. SkillPlug gets the architecture right. Real-robot results help. 'Few-shot' still needs a hard number. http://ieeexplore.ieee.org/document/11568506",
+      "bluesky_thread": [
+        "The clever bit: skills are self-supervised, non-redundant, and task-agnostic. No manual labeling. That is how you make a library that actually scales instead of just memorizing the training tasks.",
+        "My honest concern: plug-in frameworks live or die by base policy quality, and sim manipulation benchmarks are generous with contact conditions. How many real-robot demos did 'few-shot' mean in practice? Anyone who has read the full paper, drop the number."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T18:06:06.201934+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/5edee1f2/bsky_00.png",
+        "media/5edee1f2/bsky_01.png",
+        "media/5edee1f2/bsky_02.png",
+        "media/5edee1f2/bsky_03.png"
+      ],
+      "slides": [
+        "media/5edee1f2/slide_00.png",
+        "media/5edee1f2/slide_01.png",
+        "media/5edee1f2/slide_02.png",
+        "media/5edee1f2/slide_03.png",
+        "media/5edee1f2/slide_04.png",
+        "media/5edee1f2/slide_05.png",
+        "media/5edee1f2/slide_06.png",
+        "media/5edee1f2/slide_07.png"
+      ]
+    },
+    "issue": 68
+  },
+  {
+    "draft_id": "0b90d055",
+    "paper": {
+      "id": "rss-a8b4daf213",
+      "title": "FIRE-Grasp: Failure-Informed Regrasping With Multimodal Evidence",
+      "abstract": "Robotic grasping represents a fundamental capability for autonomous manipulation, yet real-world deployments continue to exhibit significant failure rates, undermining operational reliability. Ensuring operational continuity and minimizing risk necessitate effective failure recovery mechanisms, making regrasping after grasp failure a critical capability. Prior approaches either operate in an open-loop manner that ignores post-failure recovery or develop multimodal failure perception models that fail to translate diagnostic insights into executable regrasp actions. Consequently, a persistent gap exists between the rich multimodal evidence captured during execution and the low-level, actionable decisions required for reliable regrasping in real-world deployments. In this paper, we propose FIRE-Grasp (Failure-Informed Regrasping with multimodal Evidence), a closed-loop regrasping framework that converts first-attempt multimodal failure feedback into executable regrasp corrections, which comprises (i) FIRE-Net, a multimodal failure diagnosis network that outputs a structured Failure Feedback Vector encoding both the predicted failure type and temporally localized event evidence, along with global reliability estimates; and (ii) FIRE-Adapter, which maps FFV to planner-consumable corrections via risk-aware candidate re-ranking and conservative low-dimensional execution-parameter updates. To enable fine-grained failure diagnosis, FailGrasp, a real-world dataset of 2,428 grasp failur",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576551",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.3
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Most grasping systems fail silently. FIRE-Grasp reads the failure.",
+      "commentary": "FIRE-Grasp closes the loop that most manipulation pipelines leave open: what happens after a grasp fails. It extracts a structured Failure Feedback Vector from multimodal evidence during the failed attempt, then maps that directly to corrected regrasp parameters. The 2,428 real-world failure dataset (FailGrasp) is the most honest part of this work: that number reflects someone actually running robots until they drop things, repeatedly. The caveat is the familiar one: rack-mounted lab setups with controlled lighting and known objects are a long way from field manipulation on an unstructured surface. The risk-aware re-ranking step is genuinely clever but its robustness to sensor noise in dirty environments is untested.",
+      "slides": [
+        {
+          "title": "Grasping fails. Now what?",
+          "body": "Most manipulation pipelines ignore post-failure state. FIRE-Grasp builds a closed-loop recovery that reads multimodal evidence from the failed attempt and acts on it."
+        },
+        {
+          "title": "Two-part architecture",
+          "body": "FIRE-Net diagnoses the failure type and timestamps the event. FIRE-Adapter converts that into corrected grasp parameters. Diagnosis and action are kept deliberately separate."
+        },
+        {
+          "title": "Failure Feedback Vector",
+          "body": "The FFV encodes failure type, temporally localized event evidence, and a global reliability score. It is the structured handoff between perception and planning."
+        },
+        {
+          "title": "2,428 real failures logged",
+          "body": "FailGrasp is a real-world dataset of grasp failures captured during physical experiments. That scale of documented failure data is rare and actually useful for training a diagnostic model."
+        },
+        {
+          "title": "Risk-aware candidate re-ranking",
+          "body": "FIRE-Adapter re-ranks regrasp candidates by risk before committing to low-dimensional execution corrections. Conservative by design: prefers recoverable postures over aggressive corrections."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Lab results on known objects under controlled conditions. Sensor noise, surface contamination, and unpredictable object geometry are the real test. Field deployment data does not yet exist."
+        }
+      ],
+      "video_script": "Most robot grasping research papers show the successes. FIRE-Grasp is built around the failures. When a grasp goes wrong, the system reads multimodal evidence from that failed attempt and builds a Failure Feedback Vector: what went wrong, when it went wrong, how confident the system is. Then FIRE-Adapter converts that into a corrected regrasp action. They logged 2,428 real failures to train on. That is not a simulation count. The question is: does this survive contact with a genuinely dirty, unstructured environment?",
+      "caption_instagram": "Most manipulation pipelines treat a failed grasp as a reset. FIRE-Grasp treats it as data.\n\nThe system captures multimodal evidence during the failed attempt, encodes it into a structured Failure Feedback Vector, and maps that directly to corrected regrasp parameters. Diagnosis and action are two separate modules. That separation matters: it means you can swap the planner without retraining the failure classifier.\n\nThe part I keep coming back to is FailGrasp: 2,428 documented real-world grasp failures collected during physical experiments. That is a serious commitment to cataloguing what actually goes wrong, not just what works in simulation.\n\nThe open question is field robustness. Risk-aware re-ranking is a sound idea, but surface contamination, lighting variation, and geometry surprises are exactly where multimodal confidence scores get unreliable. Lab-to-field transfer is still the hard problem.\n\nPaper: FIRE-Grasp: Failure-Informed Regrasping With Multimodal Evidence. IEEE Xplore.\n\n#swarmrobotics #manipulation #robotgrasping #fieldrobotics #autonomoussystems #robotlearning #failurerecovery",
+      "caption_tiktok": "Your robot drops it. FIRE-Grasp reads why and fixes the next attempt. 2,428 real failures went into this. #robotics #manipulation #AI #robotlearning",
+      "post_bluesky": "Most manipulation systems ignore failure evidence. FIRE-Grasp reads it: multimodal feedback from the failed attempt feeds a Failure Feedback Vector that drives the regrasp. 2,428 real failures in the training set. http://ieeexplore.ieee.org/document/11576551",
+      "bluesky_thread": [
+        "The clever bit is the separation of FIRE-Net (diagnosis) from FIRE-Adapter (action). You get a structured vector encoding failure type, timing, and reliability before anything touches the planner. Clean interface, swappable components.",
+        "My skepticism: the risk-aware re-ranking step sounds robust until you put the sensor suite in a dusty or wet environment. Lab multimodal confidence scores are optimistic. Has anyone tested closed-loop failure recovery under real contamination conditions? Genuinely asking."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-09T18:06:34.132027+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/0b90d055/bsky_00.png",
+        "media/0b90d055/bsky_01.png",
+        "media/0b90d055/bsky_02.png",
+        "media/0b90d055/bsky_03.png"
+      ],
+      "slides": [
+        "media/0b90d055/slide_00.png",
+        "media/0b90d055/slide_01.png",
+        "media/0b90d055/slide_02.png",
+        "media/0b90d055/slide_03.png",
+        "media/0b90d055/slide_04.png",
+        "media/0b90d055/slide_05.png",
+        "media/0b90d055/slide_06.png",
+        "media/0b90d055/slide_07.png"
+      ]
+    },
+    "issue": 69
   }
 ]

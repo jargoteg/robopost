@@ -208,5 +208,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ea2afac7",
+    "paper_id": "2607.07139v1",
+    "title": "Disturbance-aware Motion Planning for Over-actuated Underwater Vehicles Exploiting Actuation Redundancy for High-fidelity 3D Reconstruction",
+    "format": "carousel",
+    "hook": "Your ROV thruster is destroying the thing you came to image.",
+    "posted_at": "2026-07-09T18:06:58.326472+00:00",
+    "bsky_variant": "single",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqa7yqh43m2s",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

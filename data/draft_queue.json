@@ -1,36 +1,36 @@
 [
   {
-    "id": "rss-d80f13ec6f",
-    "title": "Continuum Robot State Estimation With Actuation Uncertainty",
-    "abstract": "Continuum robots are flexible, slender manipulators well suited for confined surgical environments. In these settings, unknown interaction forces and model uncertainty significantly affect robot shape, motivating state estimation from external observations. Existing estimation methods either neglect actuation modeling or rely on simplified deterministic actuation models. In contrast, we jointly estimate robot shape, external loads, and actuation inputs using mechanically principled actuation priors. To achieve this, we present a discrete Cosserat rod formulation with piecewise-linear strain integration that provides high numerical accuracy while inducing a sparse factor graph structure for efficient nonlinear optimization. We extend the framework to tendon-driven and parallel robots in simulation and validate it experimentally on a surgical concentric tube robot. Overall, our approach enables principled real-time estimation across multiple robot architectures while providing direct access to manipulator Jacobians through the linearized factor graph.",
+    "id": "rss-1ac7611630",
+    "title": "PADLOS: Deformable Linear Objects Segmentation With Pseudo-Depth Guidance and Attribute Constraints",
+    "abstract": "Deformable Linear Object (DLO) instance segmentation plays a critical role in robotic perception for wire harness assembly, cable routing, and other automation tasks involving flexible structures. Existing RGB-based methods often struggle with occlusions, entanglements, and depth ambiguities. In this paper, we propose PADLOS, a novel framework that integrates pseudo-depth maps and attribute-level structural cues to achieve robust and precise DLO instance segmentation. By leveraging pseudo-depth priors derived from RGB inputs, our model gains implicit spatial understanding to distinguish crossing and overlapping DLOs. Furthermore, we introduce attribute-constrained representations, including centerline topology, local thickness, and physical plausibility, to enhance structural consistency in segmentation. Experimental results on synthetic and real-world datasets demonstrate that PADLOS outperforms existing baselines in both segmentation quality and physical plausibility, particularly in complex scenes.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11560916",
+    "url": "http://ieeexplore.ieee.org/document/11568531",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.7
+    "score": 7.0
   },
   {
-    "id": "rss-810ba0995c",
-    "title": "SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation",
-    "abstract": "Learning transferable visuomotor imitation policies that generalize across diverse manipulation tasks and adapt rapidly to new tasks from only a handful of demonstrations remains challenging. Most modern policies are trained end-to-end to map observations directly to low-level actions, offering little explicit structure for reusing and recombining behaviors across tasks and making transfer data-inefficient under limited supervision. We propose SkillPlug, a plug-in framework that augments an existing visuomotor policy with a skill-conditioning module and mines a shared, transferable skill library from raw multi-task demonstrations. SkillPlug learns skills via self-supervised objectives that promote compact, reusable, and non-redundant behavior-level primitives, forming a task-shared prior for compositional control. After skill mining, we keep the learned skills fixed and specialize to unseen tasks by fine-tuning only lightweight router and action head, enabling efficient adaptation without full end-to-end retraining. We evaluate SkillPlug on two simulation benchmarks and on a real robot, and observe that the mined transferable skills consistently improve both multi-task performance and few-shot adaptation. Overall, SkillPlug offers a scalable way to mine reusable skills that improve data-efficient generalization in robotic manipulation.",
+    "id": "rss-f83d1dda41",
+    "title": "DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks",
+    "abstract": "Learning robust manipulation policies typically demands large and diverse datasets, whose collection is time-consuming, labor-intensive, and impractical in dynamic environments. We present DynaMimicGen (D-MG), a scalable data-generation framework that enables policy learning from minimal human supervision while uniquely supporting data synthesis in dynamic task conditions. Starting from only a few human demonstrations – potentially as few as a single example – D-MG segments the demonstrations into sub-tasks and uses Dynamic Movement Primitives (DMPs) to generalize each skill to novel and continually changing scenes. Unlike prior methods that assume static environments or rely on simple interpolation, D-MG synthesizes smooth, physically plausible Cartesian trajectories that remain task-consistent while adapting in real time to variations in object pose, robot configuration, and scene geometry. Our method supports basic, contact-rich, and long-horizon tasks in both static and dynamic settings. DynaMimicGen increases dataset-generation success rates by 3.6% (Stack), 59.5% (Square), 124.7% (HammerCleanup), 232.7% (MugCleanup), and 4.60% (NutAssembly) over MimicGen (which requires ten demonstrations), while remaining robust to perturbations. By injecting dynamic perturbations during data generation, D-MG increases dataset variability, enabling Diffusion Policy and Behavior Cloning agents to achieve strong performance across all tasks and consistently outperform MG-trained policies",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11568506",
+    "url": "http://ieeexplore.ieee.org/document/11568504",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.5
+    "score": 6.5
   },
   {
-    "id": "rss-a8b4daf213",
-    "title": "FIRE-Grasp: Failure-Informed Regrasping With Multimodal Evidence",
-    "abstract": "Robotic grasping represents a fundamental capability for autonomous manipulation, yet real-world deployments continue to exhibit significant failure rates, undermining operational reliability. Ensuring operational continuity and minimizing risk necessitate effective failure recovery mechanisms, making regrasping after grasp failure a critical capability. Prior approaches either operate in an open-loop manner that ignores post-failure recovery or develop multimodal failure perception models that fail to translate diagnostic insights into executable regrasp actions. Consequently, a persistent gap exists between the rich multimodal evidence captured during execution and the low-level, actionable decisions required for reliable regrasping in real-world deployments. In this paper, we propose FIRE-Grasp (Failure-Informed Regrasping with multimodal Evidence), a closed-loop regrasping framework that converts first-attempt multimodal failure feedback into executable regrasp corrections, which comprises (i) FIRE-Net, a multimodal failure diagnosis network that outputs a structured Failure Feedback Vector encoding both the predicted failure type and temporally localized event evidence, along with global reliability estimates; and (ii) FIRE-Adapter, which maps FFV to planner-consumable corrections via risk-aware candidate re-ranking and conservative low-dimensional execution-parameter updates. To enable fine-grained failure diagnosis, FailGrasp, a real-world dataset of 2,428 grasp failur",
+    "id": "rss-cf311ddab2",
+    "title": "RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avoidance for Manipulator Motion in Dynamic Environments",
+    "abstract": "Reactive collision avoidance for robot manipulators in close-proximity dynamic environments requires not only contact avoidance, but also smooth preservation of goal-directed motion. This letter proposes RMPflow-Magnetic and supports an encounter-driven design perspective: in reactive policy-fusion frameworks, the metric activation controlling policy strength should be co-designed with the steering force, jointly derived from the same urgency signal—here, closing-speed from radar Doppler measurements. This unified co-design yields better goal-preserving avoidance than decoupled approaches. Building on this perspective, we develop a velocity-aware magnetic avoidance leaf for RMP/RMPflow where radar-derived distance and closing speed jointly shape both tangential steering and metric activation. We analyze local stability under bounded-residual conditions and validate on a 6-DOF manipulator with end-of-arm radar in static, dynamic, multi-obstacle, and dual-robot scenarios with transparent obstacles. Real-robot experiments demonstrate improved safety margin, reactivity, and goal preservation compared with potential-field-based baselines while maintaining real-time performance.",
     "authors": [],
-    "url": "http://ieeexplore.ieee.org/document/11576551",
+    "url": "http://ieeexplore.ieee.org/document/11576574",
     "source": "ieeexplore.ieee.org",
     "item_type": "paper",
     "journal": true,
-    "score": 7.3
+    "score": 6.0
   },
   {
     "id": "2507.04321",
