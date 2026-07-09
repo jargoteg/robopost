@@ -10,6 +10,23 @@ def generate_draft(paper: dict, cfg) -> dict:
     feedback = get_feedback_notes()
     from conference_radar import conference_context
     conf = conference_context(cfg)
+    # Resolve the code repo (and open-access version) BEFORE writing, so the
+    # copy can link them. Best-effort and non-fatal.
+    try:
+        import re as _re
+        from figures import find_open_version, find_github_repo
+        aid = paper["id"] if _re.match(r"\d{4}\.\d{4,5}", str(paper.get("id", ""))) else None
+        if not aid and paper.get("item_type") == "paper" and not paper.get("repo_url"):
+            info = find_open_version(paper.get("title", ""), paper.get("authors"))
+            if info and info.get("arxiv_id"):
+                aid = info["arxiv_id"]
+                paper["open_version"] = f"https://arxiv.org/abs/{aid}"
+        if aid and not paper.get("repo_url"):
+            repo = find_github_repo(paper.get("title", ""), aid)
+            if repo:
+                paper["repo_url"] = f"https://github.com/{repo}"
+    except Exception as e:
+        print(f"pre-generation repo lookup skipped: {e}")
     result = claude_json(
         f"""Today's date: {__import__('datetime').date.today().strftime('%B %d, %Y')}.
 Use it: "this year" means {__import__('datetime').date.today().year}, recent

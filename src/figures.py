@@ -221,21 +221,25 @@ def get_figures(draft) -> list[str]:
 
         # GitHub repo FIRST: cleanest figures + a real demo video. Try it for
         # any paper with an arXiv id, before PDF extraction (which can yield
-        # blank/vector-only regions).
-        if aid and not p.get("repo_url"):
-            print(f"Looking up GitHub repo for arXiv:{aid}...")
-            repo = find_github_repo(p.get("title", ""), aid)
-            if repo:
-                mined = mine_github_repo(repo, out_dir)
-                p["repo_url"] = mined["repo_url"]
-                if mined.get("video_url") and not p.get("video_url"):
-                    p["video_url"] = mined["video_url"]
-                if mined["figures"]:
-                    figs = mined["figures"]
-                    p["fig_source"] = mined["repo_url"]
-                    print(f"Using {len(figs)} repo figures from {repo}")
+        # blank/vector-only regions). Mine even if repo_url was pre-discovered.
+        known_repo = ""
+        if p.get("repo_url"):
+            known_repo = p["repo_url"].split("github.com/")[-1].strip("/")
+        repo = known_repo or (find_github_repo(p.get("title", ""), aid) if aid else None)
+        if repo and not p.get("fig_source"):
+            print(f"Mining GitHub repo {repo}...")
+            mined = mine_github_repo(repo, out_dir)
+            p["repo_url"] = mined["repo_url"]
+            if mined.get("video_url") and not p.get("video_url"):
+                p["video_url"] = mined["video_url"]
+            if mined["figures"]:
+                figs = mined["figures"]
+                p["fig_source"] = mined["repo_url"]
+                print(f"Using {len(figs)} repo figures from {repo}")
             else:
-                print("No GitHub repo found.")
+                print(f"Repo {repo} had no usable figures; will try PDF.")
+        elif aid:
+            print(f"No GitHub repo for arXiv:{aid}.")
 
         # PDF extraction only if repo gave us nothing usable
         if not figs and aid:
@@ -521,7 +525,7 @@ def mine_github_repo(repo, out_dir, max_figs=6):
     out = {"figures": [], "video_url": None, "repo_url": f"https://github.com/{repo}"}
     try:
         meta = requests.get(f"{base}/repos/{repo}", headers=headers, timeout=30).json()
-        branch = meta.get("default_branch", "main")
+        branch = meta.get("default_branch") or "main"
         rm = requests.get(f"{base}/repos/{repo}/readme", headers=headers, timeout=30).json()
         import base64
         readme = base64.b64decode(rm.get("content", "")).decode("utf-8", "ignore")
@@ -530,33 +534,65 @@ def mine_github_repo(repo, out_dir, max_figs=6):
         return out
 
     raw = f"https://raw.githubusercontent.com/{repo}/{branch}"
-    # video: YouTube link in README wins (real demo, we link not re-host)
+
+    def to_raw(src):
+        """Normalize any README image reference to a downloadable raw URL."""
+        if not src.startswith("http"):
+            return f"{raw}/{src.lstrip('./')}"
+        # github.com/owner/repo/blob/branch/path -> raw.githubusercontent.com/...
+        m = re.match(r"https?://github\.com/([^/]+/[^/]+)/blob/(.+)", src)
+        if m:
+            return f"https://raw.githubusercontent.com/{m.group(1)}/{m.group(2)}"
+        # github.com/owner/repo/raw/branch/path -> raw host
+        m = re.match(r"https?://github\.com/([^/]+/[^/]+)/raw/(.+)", src)
+        if m:
+            return f"https://raw.githubusercontent.com/{m.group(1)}/{m.group(2)}"
+        return src
+
+    # video: YouTube link in README (real demo, we link not re-host)
     ym = re.search(r"(https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)[\w-]+)", readme)
     if ym:
         out["video_url"] = ym.group(1)
 
-    # images in README (markdown ![..](url) and <img src="..">)
-    imgs = re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme)
-    imgs += re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', readme)
-    picked = 0
-    for src in imgs:
+    # collect image references from README, in order
+    srcs = re.findall(r"!\[[^\]]*\]\(([^)\s]+)", readme)
+    srcs += re.findall(r'<img[^>]+src=["\']([^"\']+)["\']', readme)
+
+    # also enumerate common asset folders directly (repos keep figures there)
+    for folder in ("assets", "images", "imgs", "figs", "figures", "docs", "media"):
+        try:
+            rr = requests.get(f"{base}/repos/{repo}/contents/{folder}",
+                              headers=headers, timeout=30)
+            if rr.ok:
+                for f in rr.json():
+                    if f.get("type") == "file" and f["name"].lower().endswith(
+                            (".png", ".jpg", ".jpeg", ".gif")):
+                        srcs.append(f["download_url"])
+        except Exception:
+            continue
+
+    seen, picked = set(), 0
+    for src in srcs:
         if picked >= max_figs:
             break
         low = src.lower().split("?")[0]
         if low.endswith((".svg", ".ico")) or "badge" in low or "shields.io" in low:
-            continue  # skip badges/logos
-        url = src if src.startswith("http") else f"{raw}/{src.lstrip('./')}"
+            continue
+        url = to_raw(src)
+        if url in seen:
+            continue
+        seen.add(url)
         try:
             rr = requests.get(url, timeout=30, headers={"User-Agent": "RoboPost/1.0"})
-            if not rr.ok or len(rr.content) < 8000:
+            ct = rr.headers.get("content-type", "")
+            if not rr.ok or "image" not in ct or len(rr.content) < 6000:
                 continue
             from PIL import Image
             import io
             im = Image.open(io.BytesIO(rr.content))
-            # animated GIF: grab a representative middle frame (aspect preserved)
             if getattr(im, "is_animated", False):
-                im.seek(im.n_frames // 2)
-            if im.width < 300 or im.height < 200:
+                im.seek(im.n_frames // 2)   # representative GIF frame, aspect kept
+            if im.width < 280 or im.height < 180:
                 continue
             p = out_dir / f"fig_{picked:02d}.png"
             im.convert("RGB").save(p)

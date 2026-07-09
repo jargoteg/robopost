@@ -2873,9 +2873,7 @@
       "source": "ieeexplore.ieee.org",
       "item_type": "paper",
       "journal": true,
-      "score": 8.0,
-      "open_version": "https://arxiv.org/abs/2603.07920",
-      "repo_url": "https://github.com/QiZS-BIT/RLPR"
+      "score": 8.0
     },
     "content": {
       "format": "carousel",
@@ -2934,13 +2932,6 @@
         "media/491af231/slide_05.png",
         "media/491af231/slide_06.png",
         "media/491af231/slide_07.png"
-      ],
-      "figures": [
-        "media/491af231/fig_00.png",
-        "media/491af231/fig_01.png",
-        "media/491af231/fig_02.png",
-        "media/491af231/fig_03.png",
-        "media/491af231/fig_04.png"
       ]
     },
     "issue": 43
