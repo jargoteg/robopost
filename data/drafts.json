@@ -3076,9 +3076,6 @@
     "status": "in_review",
     "created": "2026-07-09T14:06:59.718761+00:00",
     "media": {
-      "figures": [
-        "media/c8db1744/fig_00.png"
-      ],
       "bsky": [
         "media/c8db1744/bsky_00.png",
         "media/c8db1744/bsky_01.png",
@@ -3094,6 +3091,13 @@
         "media/c8db1744/slide_05.png",
         "media/c8db1744/slide_06.png",
         "media/c8db1744/slide_07.png"
+      ],
+      "figures": [
+        "media/c8db1744/fig_00.png",
+        "media/c8db1744/fig_01.png",
+        "media/c8db1744/fig_02.png",
+        "media/c8db1744/fig_03.png",
+        "media/c8db1744/fig_04.png"
       ]
     },
     "issue": 45
