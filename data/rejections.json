@@ -138,5 +138,12 @@
     "item_type": "paper",
     "reason": "not interested and no images",
     "date": "2026-07-09"
+  },
+  {
+    "title": "Continuum Robot State Estimation With Actuation Uncertainty",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "interesting but not robust study",
+    "date": "2026-07-09"
   }
 ]
