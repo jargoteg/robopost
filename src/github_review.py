@@ -333,14 +333,20 @@ def sweep():
     issues that the instant run missed (e.g. cancelled by concurrency)."""
     drafts = load_json("drafts.json", [])
     by_issue = {d.get("issue"): d for d in drafts if d.get("issue")}
-    open_issues = gh("GET", "?labels=draft&state=open&per_page=50") or []
+    open_issues = gh("GET", "/issues?labels=draft&state=open&per_page=50")
+    if not isinstance(open_issues, list):
+        print(f"Sweep: unexpected issues response, skipping: {str(open_issues)[:120]}")
+        return
+    open_issues = [i for i in open_issues if "pull_request" not in i]
     acted = 0
     for issue in open_issues:
         num = issue["number"]
         d = by_issue.get(num)
         if not d or d["status"] != "in_review":
             continue
-        comments = gh("GET", f"/{num}/comments?per_page=30") or []
+        comments = gh("GET", f"/issues/{num}/comments?per_page=30")
+        if not isinstance(comments, list):
+            continue
         for c in comments:
             text = (c.get("body") or "").strip()
             if not text.startswith("/"):
