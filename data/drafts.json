@@ -1758,5 +1758,255 @@
     "issue": 27,
     "scheduled_after": "2026-07-09T09:30:04.798260+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "7a483f84",
+    "paper": {
+      "id": "2607.06989v1",
+      "title": "Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm",
+      "abstract": "Table tennis, a dynamic, compact, and popular sport, has received significant attention as a robotics benchmark over the last decades. Most of the research has focused on the rally aspect - returning an incoming ball - requiring high-speed vision, agile motion planning, and tight closed-loop control. However, the other component of table tennis gameplay - the serve - is comparatively a quite unexplored research problem, that in fact requires pushing physics modeling and control to the extremes. Achieving competitive serves with a robot presents domain-specific challenges, such as high-spin generation from a spinless ball, precise aiming, or multi-objective optimization. In this work, we present a novel approach for generating official rule-compliant serves by combining motion primitives, Model Predictive Control, and Bayesian Optimization. Serves generated in this way offer a wide and controllable variation of spins of up to 550 rad/s, and speeds of up to 6.7 m/s, matching and even surpassing those of elite table tennis players.",
+      "authors": [
+        "Guillem Torrente",
+        "Guilherme Jorge Maeda",
+        "Divij Grover",
+        "Megumu Tsukamoto",
+        "Hamdi Sahloul",
+        "Peter Dürr"
+      ],
+      "url": "https://arxiv.org/abs/2607.06989v1",
+      "source": "arxiv",
+      "score": 7.8
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A robot arm now serves table tennis at elite human level",
+      "commentary": "This paper takes the serve problem seriously where almost everyone else chases the rally. The combo of motion primitives, MPC, and Bayesian Optimization gets to 550 rad/s spin and 6.7 m/s ball speed, numbers that genuinely sit at the top of competitive human performance. The clever bit is treating spin generation as a multi-objective optimization problem rather than just replaying a fixed trajectory. Honest caveat: the serve is open-loop relative to an opponent, so this sidesteps the hardest real-game feedback loop. Still, the physics modeling work here is the kind of unglamorous infrastructure the field needs.",
+      "slides": [
+        {
+          "title": "Serving vs. rallying: different beasts",
+          "body": "Most table tennis robotics research targets ball returns. The serve is comparatively ignored, yet demands extreme spin generation from a stationary, spinless ball and precise rule-compliant placement."
+        },
+        {
+          "title": "Three methods, one pipeline",
+          "body": "Motion primitives define the stroke shape. Model Predictive Control tracks it precisely. Bayesian Optimization tunes spin, speed, and placement together. Each component handles a different timescale of the problem."
+        },
+        {
+          "title": "550 rad/s. That's elite human territory.",
+          "body": "The system produces spins up to 550 rad/s and ball speeds up to 6.7 m/s. These figures match or exceed what competitive human players generate, according to the authors' benchmarking."
+        },
+        {
+          "title": "What's genuinely hard here",
+          "body": "Generating high spin from a stationary ball with a robot arm requires precise contact geometry and velocity profiles. Small errors compound. The physics modeling to make this reliable is the real contribution."
+        },
+        {
+          "title": "The honest limitation",
+          "body": "The serve is open-loop. No opponent is reacting. The full game requires reading a return, which is a different class of problem. This paper solves one well-defined piece, not the whole match."
+        },
+        {
+          "title": "Why it matters anyway",
+          "body": "Precise, high-spin manipulation on a tight time budget has direct analogs in industrial tasks. Table tennis is the benchmark. If you can nail 550 rad/s contact control, a lot of other problems get easier."
+        }
+      ],
+      "video_script": "Everyone is building robots that return table tennis shots. This paper asks a different question: can a robot arm generate a professional-level serve? Spin up to 550 radians per second, ball speed up to 6.7 meters per second. Those are elite human numbers. They get there by combining motion primitives, model predictive control, and Bayesian Optimization into one pipeline. The serve is open-loop, so no opponent feedback yet. But the underlying contact physics work here is serious. What would it take to close the loop and actually play a full match?",
+      "caption_instagram": "A robot arm now serves table tennis at elite human level, and almost nobody was working on this problem.\n\nThe rally side of table tennis robotics gets all the attention: high-speed vision, fast returns, closed-loop control. The serve has been sitting there, barely touched. This paper finally takes it seriously.\n\nThe approach combines motion primitives, Model Predictive Control, and Bayesian Optimization to hit 550 rad/s spin and 6.7 m/s ball speed. Those numbers match competitive human players. The hard part is generating that spin from a stationary, spinless ball with a robot arm where tiny contact errors blow up fast.\n\nHonest caveat: the serve is open-loop. No opponent, no reaction required. The full game is a harder problem. But solving this piece well, with real physics modeling, gives the field infrastructure it was missing.\n\nPaper: \"Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm\" arXiv:2607.06989\n\n#swarmrobotics #roboticsbenchmark #motionplanning #mpc #bayesianoptimization #robotlearning #manipulationrobotics",
+      "caption_tiktok": "Robot arm serves table tennis at 550 rad/s spin. Elite human level. The serve problem was basically unsolved until now. #robotics #motionplanning #tabletennis #robotarm",
+      "post_bluesky": "Everyone chases the table tennis rally. This paper tackles the serve: 550 rad/s spin, 6.7 m/s speed, elite human numbers. MPC + Bayesian Opt + motion primitives. Unglamorous physics work that actually matters. https://arxiv.org/abs/2607.06989v1",
+      "bluesky_thread": [
+        "The clever bit is framing spin generation as multi-objective optimization, not a fixed replay. Small contact errors compound fast when you're spinning a stationary ball. That's why almost nobody attempted this cleanly before.",
+        "Caveat worth saying out loud: it's open-loop. No opponent, no return to read. The full game is a different class of problem. But if your contact control can hit 550 rad/s reliably, what other manipulation tasks does that unlock?"
+      ]
+    },
+    "status": "pending_review",
+    "created": "2026-07-09T09:43:50.184339+00:00",
+    "media": {
+      "figures": [
+        "media/7a483f84/fig_00.png",
+        "media/7a483f84/fig_01.png",
+        "media/7a483f84/fig_02.png",
+        "media/7a483f84/fig_03.png"
+      ],
+      "bsky": [
+        "media/7a483f84/bsky_00.png",
+        "media/7a483f84/bsky_01.png",
+        "media/7a483f84/bsky_02.png",
+        "media/7a483f84/bsky_03.png"
+      ],
+      "slides": [
+        "media/7a483f84/slide_00.png",
+        "media/7a483f84/slide_01.png",
+        "media/7a483f84/slide_02.png",
+        "media/7a483f84/slide_03.png",
+        "media/7a483f84/slide_04.png",
+        "media/7a483f84/slide_05.png",
+        "media/7a483f84/slide_06.png",
+        "media/7a483f84/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ea2afac7",
+    "paper": {
+      "id": "2607.07139v1",
+      "title": "Disturbance-aware Motion Planning for Over-actuated Underwater Vehicles Exploiting Actuation Redundancy for High-fidelity 3D Reconstruction",
+      "abstract": "Underwater robots often operate near delicate targets where high-power thrusters resuspend sediments and induce turbulence, degrading image quality at the sensor input. Conventional controllers optimize vehicle-centric objectives, such as tracking and stability, without accounting for the impact of actuation on sensing. We address this actuation-to-perception coupling by exploiting redundancy in over-actuated platforms. For an eight-thruster ROV, multiple thrust allocations can yield the same motion; we search this null space to minimize predicted disturbance in a task-relevant target region while enforcing motion constraints. Our method uses a control-oriented thruster-wake proxy derived from actuator-disk theory with directional attenuation and validated by PIV ($R^2 = 0.99$ near the wake axis; $R^2 > 0.82$ in the primary wake region), together with a real-time redundancy-resolving allocator running at 10 Hz (45 ms/solve). Across 440 trials, the approach reduces target-region particle velocity by 67% ($p < 0.001$), improves 3D reconstruction RMSE by 55% versus a disturbance-unaware baseline ($1.9 \\pm 0.4$ mm vs. $4.3 \\pm 1.8$ mm), and achieves a 98.5% reconstruction success rate. The framework supports autonomous scanning, which is quantitatively evaluated, and operator-assisted inspection, which is demonstrated in the supplementary materials.",
+      "authors": [
+        "Yuer Gao",
+        "Tongqing Xu",
+        "Qingyang Liu",
+        "Yi Cai"
+      ],
+      "url": "https://arxiv.org/abs/2607.07139v1",
+      "source": "arxiv",
+      "score": 7.2
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your ROV thruster is destroying the thing you came to image.",
+      "commentary": "This paper tackles something controllers almost always ignore: the thruster wake from your own vehicle is stirring up sediment and wrecking your reconstruction quality. The key insight is that an eight-thruster ROV is over-actuated, meaning many thrust combinations produce the same net motion, so you can search that null space to pick the one that minimizes disturbance at the target. The PIV-validated wake proxy is the clever piece, R-squared of 0.99 near the axis, runs at 10 Hz, and the result is a 67% drop in particle velocity and 55% better reconstruction RMSE. Honest caveat: the wake model is derived from actuator-disk theory with directional attenuation, which is clean but still a proxy, and real-world flow interactions near complex structures will be messier than a controlled tank.",
+      "slides": [
+        {
+          "title": "The problem nobody solved",
+          "body": "Standard ROV controllers optimize tracking and stability. None of them ask: is my thruster wake destroying the sensor data I need? Near sediment or coral, it often is."
+        },
+        {
+          "title": "Over-actuated means redundant",
+          "body": "An 8-thruster ROV has more actuators than degrees of freedom. Many thrust combinations produce identical motion. That null space is wasted by every conventional allocator."
+        },
+        {
+          "title": "Search the null space for calm water",
+          "body": "The allocator picks the thrust solution that minimizes predicted particle velocity in the target region. Wake model uses actuator-disk theory, validated by PIV: R2 = 0.99 near wake axis."
+        },
+        {
+          "title": "The numbers across 440 trials",
+          "body": "67% reduction in target-region particle velocity. 3D reconstruction RMSE: 1.9 mm vs. 4.3 mm baseline. 98.5% reconstruction success rate. Solver runs at 10 Hz, 45 ms per solve."
+        },
+        {
+          "title": "What this does not solve",
+          "body": "The wake proxy is a clean model, not CFD. Real coral reefs, ship hulls, and confined spaces create flow interactions the model will underestimate. Tank validation is a start, not a finish."
+        },
+        {
+          "title": "Why it matters for field robotics",
+          "body": "Actuation-to-perception coupling is underexplored across all robot types, not just underwater. Any platform where actuators physically disturb the sensing environment has this problem."
+        }
+      ],
+      "video_script": "Your underwater robot has a thruster problem. Not a failure problem. A physics problem. Every thruster fires a wake, and that wake stirs up whatever you came to image. This paper says: stop ignoring it. An eight-thruster ROV has redundant actuation, so they search the null space, the set of thrust solutions that all produce identical motion, to find the one that causes least disturbance. Validated with PIV, runs at 10 Hz, cuts reconstruction error by 55 percent. The question is: how many other robots are trashing their own sensor data and we just never measured it?",
+      "caption_instagram": "Your ROV thruster is destroying the thing you came to image.\n\nThis paper from Gao et al. points out something that should have been obvious: an underwater vehicle firing thrusters near sediment or coral is stirring up particles right in front of its camera. Standard controllers do not care. They track a trajectory and call it done.\n\nThe fix is elegant. An 8-thruster ROV is over-actuated, meaning many thrust combinations produce the same net motion. The authors search that null space at 10 Hz and pick the solution that minimizes disturbance in the target region. The wake model is derived from actuator-disk theory, validated with PIV to R-squared of 0.99 near the axis.\n\nAcross 440 trials: 67% drop in particle velocity, 55% better 3D reconstruction RMSE, 1.9 mm vs. 4.3 mm. The honest caveat is that tank validation and real-world confined spaces are different things. But the core principle, that actuation affects perception and you can optimize for both simultaneously, is one the field has been slow to adopt.\n\nPaper: Disturbance-aware Motion Planning for Over-actuated Underwater Vehicles Exploiting Actuation Redundancy for High-fidelity 3D Reconstruction, arXiv 2607.07139\n\n#swarmrobotics #underwaterrobotics #ROV #motionplanning #robotperception #fieldrobotics #robotics",
+      "caption_tiktok": "Your robot's thrusters are ruining your data. This paper fixes it by searching the null space of a redundant actuator set. 55% better reconstruction. Smart. #robotics #underwaterrobotics #ROV #engineeringbreakdown",
+      "post_bluesky": "Your ROV thruster wake is destroying the reconstruction you came to get. This paper searches the null space of an 8-thruster system to find the thrust combo that causes least disturbance. 55% better RMSE. 10 Hz. Clever. https://arxiv.org/abs/2607.07139v1",
+      "bluesky_thread": [
+        "The PIV validation is what makes me take this seriously. R2 = 0.99 near the wake axis, >0.82 in the primary region. That is not a hand-wavy fluid model. The 440-trial result, 1.9 mm vs 4.3 mm RMSE, is a real gap for coral or shipwreck inspection work.",
+        "Honest caveat: actuator-disk theory with directional attenuation is clean but it is still a proxy. Complex confined spaces, hull inspections, reef crevices, will have flow interactions this model underestimates. Tank results and open-water results are not the same thing. How much does that gap…"
+      ]
+    },
+    "status": "pending_review",
+    "created": "2026-07-09T09:44:20.315608+00:00",
+    "media": {
+      "figures": [
+        "media/ea2afac7/fig_00.png",
+        "media/ea2afac7/fig_01.png",
+        "media/ea2afac7/fig_02.png",
+        "media/ea2afac7/fig_03.png"
+      ],
+      "bsky": [
+        "media/ea2afac7/bsky_00.png",
+        "media/ea2afac7/bsky_01.png",
+        "media/ea2afac7/bsky_02.png",
+        "media/ea2afac7/bsky_03.png"
+      ],
+      "slides": [
+        "media/ea2afac7/slide_00.png",
+        "media/ea2afac7/slide_01.png",
+        "media/ea2afac7/slide_02.png",
+        "media/ea2afac7/slide_03.png",
+        "media/ea2afac7/slide_04.png",
+        "media/ea2afac7/slide_05.png",
+        "media/ea2afac7/slide_06.png",
+        "media/ea2afac7/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "b2e163fe",
+    "paper": {
+      "id": "2607.07370v1",
+      "title": "Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report",
+      "abstract": "In embodied intelligence systems, the motion controller serves as the critical bridge between semantic reasoning and physical execution. Humanoid control has progressed rapidly through large-scale human motion-capture data and motion-tracking paradigm. However, producing quadruped robots motion corpora with scalability and physical feasibility faces more fundamental obstacles: animal motion data is scarce, and cross-embodiment retargeting remains fragile. We present ABot-C0, a generalist motion-control system for quadruped robots that establishes three complementary behavior foundations: a scalable multi-source motion-data pipeline, robust policy learning across motion tracking, locomotion, and scene interaction, and a unified deployment stack for reliable real-world operation. Fundamentally, we construct a data pyramid through conditional video-generation synthesis, annotated motion capture, teleoperation and human design, producing 16,074 physically feasible motion clips as the data foundation for various motion learning demands. We then train a Flow-Matching generalist policy that demonstrates for the first time quadruped motion tracking scaling law that its performance improves consistently as training scales up, with zero-shot capability to track unseen motions. Then, we push a step further for robust all-terrain traversal locomotion by adopting a three-stage privileged-to-perceptive framework with temporal LiDAR memory and terrain-predictive supervision. Collectively, these components form a motion generalist that coordinates multi-policy execution, smooth behavior transitions, energy-efficient control, and safety mechanisms for real-world deployment. Extensive experiments on urban-terrain autonomous navigation and companion-style multimodal interaction demonstrate that quadruped robots move beyond single-function demos toward product-level behavioral intelligence.",
+      "authors": [
+        "Xufeng Zhao",
+        "Fuzhi Yang",
+        "Jianhui Chen",
+        "Li Gao",
+        "Zhang Meng",
+        "Jie Gao"
+      ],
+      "url": "https://arxiv.org/abs/2607.07370v1",
+      "source": "arxiv",
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Quadruped robots have a data problem. This team built 16,074 clips to fix it.",
+      "commentary": "ABot-C0 tackles the core bottleneck in quadruped control: you can't just retarget human mocap onto a dog-shaped robot. Their fix is a data pyramid combining video-generation synthesis, mocap annotation, teleoperation, and manual design to produce 16,074 physically feasible motion clips. The Flow-Matching policy trained on this shows a scaling law for quadruped motion tracking, which is a real finding if it holds up. The three-stage privileged-to-perceptive locomotion stack with temporal LiDAR memory is the most technically interesting piece. Honest caveat: 'product-level behavioral intelligence' is doing a lot of work in the abstract, and urban navigation demos in a tech report are not the same as deployment data.",
+      "slides": [
+        {
+          "title": "The quadruped data gap",
+          "body": "Humanoid control scaled fast on human mocap. Quadrupeds don't have that. Animal motion data is scarce and cross-embodiment retargeting breaks down. ABot-C0 starts by confronting this directly."
+        },
+        {
+          "title": "16,074 motion clips: how?",
+          "body": "A four-source pyramid: conditional video-generation synthesis, annotated mocap, teleoperation, and human-designed clips. Each source fills a different gap in physical feasibility and behavioral coverage."
+        },
+        {
+          "title": "Scaling law for motion tracking",
+          "body": "Their Flow-Matching policy shows consistent performance gains as training data scales. They claim zero-shot tracking of unseen motions. First reported scaling law for quadruped motion tracking, if replicated."
+        },
+        {
+          "title": "Getting over terrain",
+          "body": "Three-stage training: privileged teacher policy, then perceptive student with temporal LiDAR memory, then terrain-predictive supervision. The memory buffer is the key detail most locomotion papers skip."
+        },
+        {
+          "title": "What it can actually do",
+          "body": "Urban autonomous navigation and companion-style multimodal interaction tested in real-world conditions. Multi-policy coordination with smooth behavior transitions. Deployment stack included, not just lab results."
+        },
+        {
+          "title": "The honest read",
+          "body": "Tech reports set their own goalposts. The scaling law claim needs peer review. But the data pipeline methodology and the LiDAR memory design are worth studying regardless of the headline claims."
+        }
+      ],
+      "video_script": "Quadruped robots keep hitting the same wall. You can't just borrow human motion capture data and retarget it onto four legs. It breaks. ABot-C0 builds a solution from scratch: sixteen thousand motion clips from four different sources, a policy that actually scales with more data, and a three-stage locomotion stack with temporal LiDAR memory. The scaling law claim is the one to watch. If it replicates, this changes how people think about quadruped generalist policies. So here's the question: do you trust a scaling law reported in a tech report, or do you wait for the ablations?",
+      "caption_instagram": "Quadruped robots have a data problem nobody talks about enough.\n\nHumanoid control scaled by throwing human mocap at large models. Quadrupeds can't do that. Animal motion data barely exists and retargeting across embodiments is fragile. ABot-C0 builds a 16,074-clip data pyramid from four sources: video-generation synthesis, annotated mocap, teleoperation, and manual design.\n\nThe Flow-Matching policy trained on this claims a scaling law for quadruped motion tracking. That's a specific, testable claim. They also built a three-stage locomotion framework using temporal LiDAR memory and terrain-predictive supervision, which is the most technically interesting part of the system.\n\nMy honest read: tech reports write their own success criteria, and 'product-level behavioral intelligence' is marketing language. But the data pipeline design and the LiDAR memory buffer are concrete contributions worth reading carefully.\n\nPaper: \"Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report\" arXiv:2607.07370\n\n#swarmrobotics #quadrupedrobotics #robotlearning #locomotion #embodiedai #motioncontrol #robotics",
+      "caption_tiktok": "They built 16,074 motion clips so a quadruped robot could move like it means it. The scaling law claim is bold. Let's see if it replicates. #robotics #quadruped #robotlearning #embodiedai",
+      "post_bluesky": "Quadruped robots can't borrow human mocap data. ABot-C0 builds 16,074 clips from 4 sources instead, trains a Flow-Matching policy, and claims a scaling law for motion tracking. The LiDAR memory stack is the real contribution. https://arxiv.org/abs/2607.07370v1",
+      "bluesky_thread": [
+        "The three-stage locomotion framework is what I'd actually read the paper for. Privileged teacher to perceptive student to terrain-predictive supervision, with a temporal LiDAR memory buffer. Most locomotion papers treat memory as an afterthought. This one doesn't.",
+        "The scaling law claim is bold for a tech report. No external peer review, goalposts are self-set. But if the quadruped motion tracking curve holds up under scrutiny, it's a real finding. Who else is working on scaling laws for non-humanoid embodiments right now?"
+      ]
+    },
+    "status": "pending_review",
+    "created": "2026-07-09T09:44:46.991902+00:00",
+    "media": {
+      "figures": [
+        "media/b2e163fe/fig_00.png",
+        "media/b2e163fe/fig_01.png",
+        "media/b2e163fe/fig_02.png",
+        "media/b2e163fe/fig_03.png"
+      ],
+      "bsky": [
+        "media/b2e163fe/bsky_00.png",
+        "media/b2e163fe/bsky_01.png",
+        "media/b2e163fe/bsky_02.png",
+        "media/b2e163fe/bsky_03.png"
+      ],
+      "slides": [
+        "media/b2e163fe/slide_00.png",
+        "media/b2e163fe/slide_01.png",
+        "media/b2e163fe/slide_02.png",
+        "media/b2e163fe/slide_03.png",
+        "media/b2e163fe/slide_04.png",
+        "media/b2e163fe/slide_05.png",
+        "media/b2e163fe/slide_06.png",
+        "media/b2e163fe/slide_07.png"
+      ]
+    }
   }
 ]
