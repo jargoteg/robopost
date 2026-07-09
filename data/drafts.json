@@ -1295,7 +1295,7 @@
         "Honest caveat: all evals are on SimplerEnv and LIBERO, both simulated. Real hardware with noisy high-freq sensors is a very different stress test. Does the dual-vault retrieval stay coherent there? That is the paper I want to see next."
       ]
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T05:01:21.571914+00:00",
     "media": {
       "figures": [

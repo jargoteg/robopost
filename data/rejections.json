@@ -5,5 +5,12 @@
     "item_type": "article",
     "reason": "no reason given",
     "date": "2026-07-08"
+  },
+  {
+    "title": "Dual Latent Memory in Vision-Language-Action Models for Robotic Manipulation",
+    "source": "arxiv",
+    "item_type": "paper",
+    "reason": "less papers about learning, or robot manipulation. More robots about mobile robotics and real robot experiments.",
+    "date": "2026-07-09"
   }
 ]
