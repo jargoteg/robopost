@@ -1380,7 +1380,7 @@
         "Honest caveat: 65% clean success means 35% of grasps still fail on tasks humans do without thinking. And we don't see the full baseline lineup yet. Progress is real, solved problem is not. Curious what sensing modalities you'd apply this hierarchy to beyond fingertips."
       ]
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-09T05:01:50.329603+00:00",
     "media": {
       "figures": [
@@ -1406,7 +1406,9 @@
         "media/f28b83bc/slide_07.png"
       ]
     },
-    "issue": 23
+    "issue": 23,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "b4c40b4f",

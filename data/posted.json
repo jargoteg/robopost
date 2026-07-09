@@ -132,5 +132,20 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-08T22:58:11.919096+00:00"
+  },
+  {
+    "draft_id": "f28b83bc",
+    "paper_id": "2607.07287v1",
+    "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+    "format": "carousel",
+    "hook": "Touch as a world model, not just a sensor stream",
+    "posted_at": "2026-07-09T08:00:04.798260+00:00",
+    "bsky_variant": "thread",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mq763iyeez2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
