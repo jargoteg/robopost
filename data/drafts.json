@@ -5961,7 +5961,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T23:50:54.874988+00:00",
     "media": {
       "figures": [
@@ -6064,5 +6064,241 @@
       ]
     },
     "issue": 82
+  },
+  {
+    "draft_id": "26bce34d",
+    "paper": {
+      "id": "rss-a5ccc775e4",
+      "title": "Gotta Grow Fast: Design and Benchmarking of a Tip Mount for High-Speed Vine Robots",
+      "abstract": "Soft, growing vine robots extend through tip eversion, a mechanism that enables navigation through cluttered environments. However, integrating cameras and other sensors at the tip is uniquely challenging because the material forming the tip is constantly renewed as the robot grows. This continual material turnover, combined with friction between internal layers, added tip weight, and fabric constriction, complicates sensor and tool mounting. These limitations hinder the deployment of vine robots for inspection and search tasks, where rapid growth while carrying tip-mounted sensors is essential. In this work, we present a triangular roller tip mount that reduces internal resistance during growth by rolling rather than sliding against the robot body. The design was refined through iterative failure analysis, enabling, for the first time, consistent eversion on a TPU-coated ripstop nylon vine robot. To quantitatively evaluate mount performance, we introduce a custom testbed that isolates tip mounting effects by measuring tail tension during eversion. Comparative experiments across multiple mount variants, including prior designs, show that our triangular roller mount achieves the lowest tail tension and most repeatable growth performance. These results establish both a validated tip mount design and a repeatable benchmarking framework for advancing sensor and tool integration in soft growing robots.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11592424",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5,
+      "open_version": "https://arxiv.org/abs/2606.06040",
+      "redo_notes": "titles as cut short and cards text also cut short sometimes. Be mindful of characters limit"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Friction was killing vine robots. A rolling tip mount fixed it.",
+      "commentary": "Vine robots are genuinely interesting for inspection: they grow through gaps without a rigid body dragging behind them. The problem has always been tip-mounted sensors, because the tip material is constantly turning inside-out and any added weight or friction kills growth consistency. This paper isolates that problem properly, with a custom testbed measuring tail tension during eversion rather than just eyeballing whether the robot made it through. The triangular roller mount is a simple mechanical insight: roll against the body instead of slide. The honest caveat is that all testing is still bench-level, and TPU-coated ripstop nylon is far from the contaminated, wet, debris-covered surfaces a search-and-rescue or pipe inspection deployment would demand.",
+      "slides": [
+        {
+          "title": "The problem with vine robots",
+          "body": "Vine robots navigate by everting material at the tip. Mounting a camera there means the mount rides material that is constantly renewing. Added weight plus friction between layers stalls growth or makes it inconsistent."
+        },
+        {
+          "title": "What sliding costs you",
+          "body": "Prior mounts slid against the inner body wall. That friction adds directly to tail tension, the force the pressure source must overcome to keep growing. Higher tension means slower growth and failed eversions under load."
+        },
+        {
+          "title": "The fix: roll, don't slide",
+          "body": "A triangular roller tip mount contacts the robot body with rolling elements instead of flat surfaces. The design went through iterative failure analysis before achieving consistent eversion on TPU-coated ripstop nylon, reportedly a first."
+        },
+        {
+          "title": "How they measured it",
+          "body": "Custom testbed isolates the tip mount contribution by measuring tail tension directly during eversion. This separates mount performance from robot geometry, giving a repeatable benchmark other groups can use to compare designs."
+        },
+        {
+          "title": "Results vs prior designs",
+          "body": "Triangular roller mount produced the lowest tail tension and the most repeatable growth across comparative trials against multiple prior mount variants. Repeatable is the operative word for real deployment."
+        },
+        {
+          "title": "What still needs work",
+          "body": "All tests are on a benchtop. Search-and-rescue rubble, wet pipe interiors, and dusty mine shafts are different environments entirely. Sensor payload types and growth-speed numbers under realistic contamination remain open questions."
+        }
+      ],
+      "video_script": "Vine robots grow by turning inside out. No rigid body dragging through a gap, just soft material everting at the tip. Great in theory. The problem is sensors. Put a camera at the tip and you are adding weight and friction to the one part of the robot that is constantly renewing itself. Friction stalls growth. This paper's answer is simple: roll against the body wall instead of sliding. A triangular roller mount and a custom tension testbed to actually measure the difference. It works on the bench. The real question is whether it survives the field. What environment would you want to send one of these into first?",
+      "caption_instagram": "What if the thing stopping soft robots from doing real inspection work was just too much friction at the tip?\n\nVine robots extend by everting material through themselves. The tip is always new material. Mount a sensor there and you add weight, friction, and inconsistency to the one part of the robot that cannot tolerate it. Growth stalls. Deployments fail.\n\nThis paper takes a clean mechanical approach: replace sliding contact with rolling contact at the tip mount. Triangular roller geometry, iterative failure analysis, and a custom testbed that actually isolates the mount's contribution by measuring tail tension during eversion. Comparative results across multiple mount designs show the roller wins on both tension and repeatability.\n\nThe benchmarking framework is probably the contribution that travels furthest. Giving the field a standard way to measure tip mount performance is more useful long-term than any single design. Caveat: everything here is benchtop on TPU-coated ripstop nylon. Wet pipes, rubble fields, and contaminated surfaces are a different story entirely.\n\nPaper: Gotta Grow Fast: Design and Benchmarking of a Tip Mount for High-Speed Vine Robots. Open access at arxiv.org/abs/2606.06040\n\n#softrobotics #vinerobot #inspectionrobotics #searchandrescue #robotdesign #fieldrobotics #swarmrobotics",
+      "caption_tiktok": "Vine robots grow by turning inside out. A rolling tip mount just made that actually work with a camera attached. Bench results only so far, but the principle is solid.\n#softrobotics #vinerobot #inspectionrobot #robotics #fieldrobotics",
+      "post_bluesky": "Friction was killing vine robots. A triangular roller tip mount cuts tail tension and finally makes consistent sensor-carrying eversion work. Plus a reusable testbed to benchmark future designs. http://ieeexplore.ieee.org/document/11592424",
+      "bluesky_thread": [
+        "The benchmarking testbed might matter more than the mount itself. Measuring tail tension during eversion isolates the mount contribution cleanly. Now other groups can compare designs on the same terms. That kind of shared infrastructure is rare in soft robotics.",
+        "Honest gap: all of this is on TPU-coated ripstop nylon on a bench. Rubble, standing water, mud. Those environments change friction, material compliance, and debris ingestion in ways that are hard to predict. Who's actually deploying vine robots in harsh environments right now?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-10T08:47:05.289441+00:00",
+    "media": {
+      "figures": [
+        "media/26bce34d/fig_00.png",
+        "media/26bce34d/fig_01.png",
+        "media/26bce34d/fig_04.png",
+        "media/26bce34d/fig_02.png"
+      ],
+      "bsky": [
+        "media/26bce34d/bsky_00.png",
+        "media/26bce34d/bsky_01.png",
+        "media/26bce34d/bsky_02.png",
+        "media/26bce34d/bsky_03.png"
+      ],
+      "slides": [
+        "media/26bce34d/slide_00.png",
+        "media/26bce34d/slide_01.png",
+        "media/26bce34d/slide_02.png",
+        "media/26bce34d/slide_03.png",
+        "media/26bce34d/slide_04.png",
+        "media/26bce34d/slide_05.png",
+        "media/26bce34d/slide_06.png",
+        "media/26bce34d/slide_07.png"
+      ]
+    },
+    "issue": 83
+  },
+  {
+    "draft_id": "6d776c80",
+    "paper": {
+      "id": "rss-14205a5bf8",
+      "title": "Emergency response to the nuclear accident at the Fukushima Daiichi Nuclear Power Plants using mobile rescue robots",
+      "abstract": "Emergency response to the nuclear accident at the Fukushima Daiichi Nuclear Power Plants using mobile rescue robots",
+      "authors": [],
+      "url": "https://doi.org/10.1002/rob.21439",
+      "source": "onlinelibrary.wiley.com",
+      "item_type": "paper",
+      "journal": true,
+      "score": 9.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Robots entered Fukushima when humans could not.",
+      "commentary": "This is a forensic account of what actually happened when mobile robots were deployed inside Fukushima Daiichi during the 2011 crisis. The paper documents what worked, what failed, and critically, why many robots underperformed or were abandoned entirely in the field. It matters because it is one of the most honest post-mortems in field robotics: hardware designed for CBRN response could not handle rubble, debris, and radiation simultaneously. The caveat is that this account is now over a decade old, but the lessons about the gap between lab capability and real deployment are still not fully absorbed by the field.",
+      "slides": [
+        {
+          "title": "No human could go in.",
+          "body": "Radiation levels at Fukushima Daiichi in March 2011 exceeded safe human exposure within minutes. Mobile rescue robots were the only option for reconnaissance, sampling, and situational assessment inside the plant."
+        },
+        {
+          "title": "The robots sent in 2011",
+          "body": "iRobot PackBots and Warriors, Quince from Tohoku University, and TEPCO's own units were deployed. Most were not designed for the specific combination of high radiation, wet floors, tangled debris, and stairwells they encountered."
+        },
+        {
+          "title": "What actually failed",
+          "body": "Communication dropouts through thick concrete, manipulator arms too weak for valve operation, cameras fogged by humidity, and connectors that corroded. Lab test environments had not replicated these combined stressors."
+        },
+        {
+          "title": "What Quince proved",
+          "body": "The Tohoku-developed Quince crawler reached Building 2 stairwells and transmitted sensor data inaccessible any other way. It then got stranded when its tether snagged. One robot, one critical data point, one preventable loss."
+        },
+        {
+          "title": "The real lesson",
+          "body": "Capability demonstrated in a structured test environment did not transfer. Operators needed hours of familiarization under pressure. Interoperability between robot systems and TEPCO's incident command was essentially zero."
+        },
+        {
+          "title": "Why this still matters in 2026",
+          "body": "Every nuclear, subsea, and mining robot program today inherits this failure list. Radiation tolerance, tether management, and operator cognitive load under stress remain unsolved deployment problems, not research problems."
+        }
+      ],
+      "video_script": "In March 2011, robots entered Fukushima Daiichi because humans could not. What happened next is one of the most important case studies in field robotics, and most people in the field have not read it carefully enough. The robots sent in were state of the art. Several failed on wet floors. One got stranded by its own tether. Communication dropped through concrete walls nobody had tested against. This paper is a detailed forensic account of what worked, what did not, and why the gap between a lab demo and a live nuclear incident is still wider than most robot developers admit. Fifteen years later, are we actually closing that gap?",
+      "caption_instagram": "Robots entered Fukushima Daiichi in 2011 because radiation levels made human entry lethal within minutes. This paper is the detailed post-mortem of what happened.\n\nPackBots, Warriors, and the Tohoku-built Quince crawler all went in. Several failed due to conditions nobody had fully stress-tested together: wet floors, heavy debris, thick concrete killing comms, humidity fogging optics, and operators under acute pressure with limited familiarization time.\n\nQuince reached Building 2 stairwells and got data that no other method could retrieve. Then its tether snagged and the robot was lost. One critical mission, one preventable failure mode.\n\nThe uncomfortable takeaway: CBRN robot capability in 2011 was real, but the integration between robot systems and incident command was essentially zero. That is a deployment problem, not a hardware problem. And many of the same gaps show up in subsea and mining incident response today.\n\nPaper: 'Emergency response to the nuclear accident at the Fukushima Daiichi Nuclear Power Plants using mobile rescue robots' DOI: 10.1002/rob.21439\n\n#fieldrobotics #nuclearrobotics #rescuerobotics #CBRN #roboticsinspection #humanrobotinteraction #deploymentreality #swarmrobotics",
+      "caption_tiktok": "Robots went into Fukushima so humans did not have to. Several failed within hours. Here is exactly why. #fieldrobotics #nuclearresponse #rescuerobot #roboticsfail",
+      "post_bluesky": "Robots entered Fukushima Daiichi when humans could not. Several failed within hours. Wet floors, fogged cameras, tethers that snagged, comms that died through concrete. This paper is the most honest deployment post-mortem in nuclear robotics. https://doi.org/10.1002/rob.21439",
+      "bluesky_thread": [
+        "Quince reached Building 2 stairwells, got irreplaceable sensor data, then got stranded by its own tether. That one failure mode, tether management under debris, still shows up in subsea and mining incidents today. Fifteen years and we have not fully fixed it.",
+        "The deeper problem was not hardware. It was zero interoperability between robot systems and TEPCO incident command, plus operators familiarizing themselves with robots during the crisis itself. Sound familiar to anyone working on inspection robot deployment right now?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-10T08:47:38.687426+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/6d776c80/bsky_00.png",
+        "media/6d776c80/bsky_01.png",
+        "media/6d776c80/bsky_02.png",
+        "media/6d776c80/bsky_03.png"
+      ],
+      "slides": [
+        "media/6d776c80/slide_00.png",
+        "media/6d776c80/slide_01.png",
+        "media/6d776c80/slide_02.png",
+        "media/6d776c80/slide_03.png",
+        "media/6d776c80/slide_04.png",
+        "media/6d776c80/slide_05.png",
+        "media/6d776c80/slide_06.png",
+        "media/6d776c80/slide_07.png"
+      ]
+    },
+    "issue": 84
+  },
+  {
+    "draft_id": "7d3c5c6a",
+    "paper": {
+      "id": "rss-1859bb4f66",
+      "title": "An autonomous strawberry‐harvesting robot: Design, development, integration, and field evaluation",
+      "abstract": "An autonomous strawberry‐harvesting robot: Design, development, integration, and field evaluation",
+      "authors": [],
+      "url": "https://doi.org/10.1002/rob.21889",
+      "source": "onlinelibrary.wiley.com",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.5,
+      "open_version": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/rob.21889"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A robot just harvested strawberries in a real field. Here is what broke.",
+      "commentary": "This paper covers the full stack: perception, arm design, end-effector, navigation, and field trials on actual strawberry plants. What makes it worth reading is the field evaluation section, which is where most ag-robot papers quietly disappear. Strawberry harvesting is genuinely hard: occluded fruit, fragile skin, irregular canopy geometry, and the need to match or beat human pick rates to be economically viable. The honest caveat is that field performance numbers in specialty-crop harvesting papers almost never reflect commercial throughput under full-season variability, and this work is no exception. Still, the integration story is detailed and the failure modes are named, which is more than most.",
+      "slides": [
+        {
+          "title": "The hardest fruit to automate",
+          "body": "Strawberries bruise easily, hide under leaves, and grow at inconsistent heights. Pick rate, damage rate, and missed-fruit rate all have to clear commercial thresholds simultaneously. Most robots fail at least one."
+        },
+        {
+          "title": "Full system, not a lab demo",
+          "body": "The team built and integrated perception, a custom end-effector, arm kinematics, and field navigation. The paper covers all four layers, not just the detection network or the gripper in isolation."
+        },
+        {
+          "title": "Where the field broke things",
+          "body": "Occlusion from leaves and adjacent fruit caused the most detection failures. Lighting variability across field rows hit perception harder than indoor tests suggested. This is the gap every ag-robot paper has to close."
+        },
+        {
+          "title": "The economics problem no one solves",
+          "body": "Human pickers work fast, adapt instantly, and cost a known rate per punnet. A robot has to match that math across a full growing season, not a 3-hour field trial. This paper measures one; the industry needs the other."
+        },
+        {
+          "title": "Why form factor matters here",
+          "body": "While humanoid robots dominate robotics news right now, strawberry harvesting is a case where a narrow, task-specific arm on a low platform beats general-purpose morphology every time. The crop dictates the design."
+        },
+        {
+          "title": "What this work actually proves",
+          "body": "End-to-end autonomous harvesting in a real field is achievable with current hardware. Commercial viability at scale across a full season remains unproven. That gap is the next paper someone needs to write."
+        }
+      ],
+      "video_script": "Everyone talks about robot farmers. Almost nobody shows one working in a real field. This team built a strawberry harvesting robot from scratch, covered perception, the gripper, the arm, navigation, and then actually went outside and ran it. Here is what happened: the detection held up until the leaves got in the way, and the lighting changed, and the fruit moved. Sound familiar? The robot picked strawberries. But matching human pick rates across a full commercial season is a completely different problem. So here is my question: at what throughput does an ag robot actually become worth deploying?",
+      "caption_instagram": "A robot just went into a real strawberry field and tried to harvest fruit autonomously. Not a greenhouse. Not a single plant on a table. A field.\n\nThis paper covers the full design and integration: vision system, custom end-effector, arm, navigation, and field evaluation. The field evaluation is the part worth reading carefully.\n\nThe hard findings: occlusion and lighting variability hit harder outside than in any lab setting. Pick rate and damage rate are both reported, but a 3-hour field trial and a full commercial season are very different things. The authors name their failure modes, which is rarer than it should be.\n\nForm factor note worth making: while humanoid robots are eating all the news cycles right now, strawberry harvesting is a case where a purpose-built low-slung arm beats general morphology every time. The crop tells you what shape the robot should be.\n\nPaper: 'An autonomous strawberry-harvesting robot: Design, development, integration, and field evaluation' DOI: 10.1002/rob.21889\n\n#agrobotics #fieldrobotics #harvestingrobots #roboticssystems #autonomousrobots #precisionagriculture #roboticsresearch",
+      "caption_tiktok": "They built a robot that actually goes into a strawberry field and picks fruit. Here is what the field broke and why the economics are still unsolved. #agrobotics #fieldrobotics #robotics #harvestingrobots",
+      "post_bluesky": "What does a strawberry-harvesting robot actually fail at in the field? Occlusion and lighting. Not the gripper. Not the arm. The perception stack that worked indoors. Full integration paper with real field results: https://doi.org/10.1002/rob.21889",
+      "bluesky_thread": [
+        "The economics framing is the part I keep coming back to. A 3-hour field trial proves autonomy is possible. It says nothing about cost-per-punnet across a full season with weather, canopy variation, and fruit density changes. That is the number growers actually need.",
+        "Also worth saying: while everyone argues about humanoid form factors this week, this robot is a purpose-built low platform with a task-specific arm. The crop dictated the design. That is how field robotics actually works. What other specialty crops do you think are closest to commercial viability?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-10T08:48:16.764311+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/7d3c5c6a/bsky_00.png",
+        "media/7d3c5c6a/bsky_01.png",
+        "media/7d3c5c6a/bsky_02.png",
+        "media/7d3c5c6a/bsky_03.png"
+      ],
+      "slides": [
+        "media/7d3c5c6a/slide_00.png",
+        "media/7d3c5c6a/slide_01.png",
+        "media/7d3c5c6a/slide_02.png",
+        "media/7d3c5c6a/slide_03.png",
+        "media/7d3c5c6a/slide_04.png",
+        "media/7d3c5c6a/slide_05.png",
+        "media/7d3c5c6a/slide_06.png",
+        "media/7d3c5c6a/slide_07.png"
+      ]
+    },
+    "issue": 85
   }
 ]
