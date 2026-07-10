@@ -340,5 +340,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "e18a70da",
+    "paper_id": "rss-4234682556",
+    "title": "Scaling Rough Terrain Locomotion With Automatic Curriculum Reinforcement Learning",
+    "format": "carousel",
+    "hook": "ANYmal D hitting 2.5 m/s on stairs without hand-crafted curricula",
+    "posted_at": "2026-07-10T03:58:15.014523+00:00",
+    "bsky_variant": "single",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqbazzqibl2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

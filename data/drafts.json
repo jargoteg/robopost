@@ -3169,7 +3169,7 @@
         "Caveat worth flagging: no wet or debris conditions, no long-duration runs, no reported failure modes. 'Real-world applicability' in the abstract is ambitious framing for what is still a controlled study. Open access at arxiv 2601.17428. Anyone tested ANYmal policies on actual underground or…"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T14:07:33.508703+00:00",
     "media": {
       "figures": [
@@ -3199,7 +3199,9 @@
     },
     "issue": 46,
     "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "a028df39",
@@ -3925,7 +3927,7 @@
       ]
     },
     "issue": 55,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
@@ -4082,7 +4084,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
@@ -4242,7 +4244,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
@@ -4327,7 +4329,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
@@ -4491,7 +4493,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
@@ -5348,7 +5350,7 @@
       ]
     },
     "issue": 73,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
@@ -5817,7 +5819,7 @@
       ]
     },
     "issue": 79,
-    "scheduled_after": "2026-07-10T01:11:23.280800+00:00",
+    "scheduled_after": "2026-07-10T05:28:15.014517+00:00",
     "queue_notified": true
   },
   {
