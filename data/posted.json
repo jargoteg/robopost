@@ -372,5 +372,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "dc0e86a9",
+    "paper_id": "rss-2d043c8dc9",
+    "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+    "format": "carousel",
+    "hook": "Your LiDAR map is useless in fog. Your radar doesn't know the map.",
+    "posted_at": "2026-07-10T09:40:11.691056+00:00",
+    "bsky_variant": "single",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqbu5i4i4o2z",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

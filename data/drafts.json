@@ -4062,7 +4062,7 @@
         "Caveat: 'five datasets' in autonomous driving usually means tidy urban roads. The deployment case for this is actually mining haul routes, port yards, and flood-prone rural roads. Has anyone tested cross-modal place recognition in genuinely unstructured conditions? Code…"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T15:24:00.073480+00:00",
     "media": {
       "figures": [
@@ -4087,7 +4087,9 @@
     },
     "issue": 57,
     "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "17aa3741",
@@ -4246,7 +4248,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
+    "scheduled_after": "2026-07-10T11:10:11.691049+00:00",
     "queue_notified": true
   },
   {
@@ -4331,7 +4333,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
+    "scheduled_after": "2026-07-10T11:10:11.691049+00:00",
     "queue_notified": true
   },
   {
@@ -4495,7 +4497,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
+    "scheduled_after": "2026-07-10T11:10:11.691049+00:00",
     "queue_notified": true
   },
   {
@@ -5352,7 +5354,7 @@
       ]
     },
     "issue": 73,
-    "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
+    "scheduled_after": "2026-07-10T11:10:11.691049+00:00",
     "queue_notified": true
   },
   {
@@ -5820,7 +5822,7 @@
       ]
     },
     "issue": 79,
-    "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
+    "scheduled_after": "2026-07-10T11:10:11.691049+00:00",
     "queue_notified": true
   },
   {
@@ -5904,7 +5906,7 @@
       ]
     },
     "issue": 80,
-    "scheduled_after": "2026-07-10T09:17:21.172983+00:00",
+    "scheduled_after": "2026-07-10T11:10:11.691049+00:00",
     "queue_notified": true
   },
   {
@@ -6359,7 +6361,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-10T09:39:52.550257+00:00",
     "media": {
       "figures": [
@@ -6384,6 +6386,7 @@
         "media/ec94208e/slide_06.png",
         "media/ec94208e/slide_07.png"
       ]
-    }
+    },
+    "issue": 86
   }
 ]
