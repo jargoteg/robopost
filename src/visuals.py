@@ -239,6 +239,19 @@ def main():
         if d["status"] != "pending_media":
             continue
         d.setdefault("media", {})["slides"] = build_carousel(d, cfg)
+        # AUTO-REJECT: no usable figure found anywhere (repo, PDF, open
+        # version, YouTube, og:image) or vision vetting rejected them all.
+        # A figureless post underperforms; don't waste a review slot on it.
+        if not d["media"].get("figures") and not d["paper"].get("video_url"):
+            d["status"] = "rejected"
+            reason = "auto: no usable figures found (all sources + vetting)"
+            rej = load_json("rejections.json", [])
+            rej.append({"title": d["paper"].get("title", ""),
+                        "reason": reason, "auto": True})
+            save_json("rejections.json", rej[-200:])
+            print(f"AUTO-REJECTED {d['draft_id']} — {reason}: "
+                  f"{d['paper'].get('title', '')[:50]}")
+            continue
         d["status"] = "pending_video" if d["content"]["format"] == "video" else "pending_review"
         print(f"Rendered {len(d['media']['slides'])} cards "
               f"({len(d['media'].get('figures', []))} figures) for {d['draft_id']}")
