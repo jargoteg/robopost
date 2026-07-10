@@ -3901,7 +3901,7 @@
         "My honest worry: nuScenes and Waymo are highway-dominant, clean-sensor benchmarks. Does a sparse Gaussian keypoint representation stay stable in dust, rain, or a cluttered underground site? That's the experiment I want to see. Anyone aware of similar work tested in harsher conditions?"
       ]
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T15:01:02.649992+00:00",
     "media": {
       "bsky": [
@@ -3928,7 +3928,9 @@
     },
     "issue": 55,
     "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "837d0e8f",
@@ -4084,7 +4086,7 @@
       ]
     },
     "issue": 57,
-    "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
+    "scheduled_after": "2026-07-10T09:17:21.172978+00:00",
     "queue_notified": true
   },
   {
@@ -4244,7 +4246,7 @@
       ]
     },
     "issue": 59,
-    "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
+    "scheduled_after": "2026-07-10T09:17:21.172978+00:00",
     "queue_notified": true
   },
   {
@@ -4329,7 +4331,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
+    "scheduled_after": "2026-07-10T09:17:21.172978+00:00",
     "queue_notified": true
   },
   {
@@ -4493,7 +4495,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
+    "scheduled_after": "2026-07-10T09:17:21.172978+00:00",
     "queue_notified": true
   },
   {
@@ -5350,7 +5352,7 @@
       ]
     },
     "issue": 73,
-    "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
+    "scheduled_after": "2026-07-10T09:17:21.172978+00:00",
     "queue_notified": true
   },
   {
@@ -5819,7 +5821,7 @@
       ]
     },
     "issue": 79,
-    "scheduled_after": "2026-07-10T05:28:15.014523+00:00",
+    "scheduled_after": "2026-07-10T09:17:21.172978+00:00",
     "queue_notified": true
   },
   {

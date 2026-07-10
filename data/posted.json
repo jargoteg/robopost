@@ -356,5 +356,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "e4bac5f6",
+    "paper_id": "rss-88b239ee4b",
+    "title": "Latent Gaussian Splatting for 4D Panoptic Occupancy Tracking",
+    "format": "carousel",
+    "hook": "Bounding boxes lie. Voxels forget. This paper tries to fix both.",
+    "posted_at": "2026-07-10T07:47:21.172983+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqbntogs6727",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
