@@ -452,5 +452,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f9ffe6b0",
+    "paper_id": "rss-10489dc266",
+    "title": "The Secret to Marathon-Winning Humanoid Robots",
+    "format": "carousel",
+    "hook": "Faster than a human. The secret is boring physics.",
+    "posted_at": "2026-07-10T19:56:07.124818+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqcwkt6trx2c",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
