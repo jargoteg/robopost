@@ -420,5 +420,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ea170559",
+    "paper_id": "rss-e3c8cb5bc2",
+    "title": "Pixel2Catch: Multi-Agent Sim-to-Real Transfer for Agile Manipulation With a Single RGB Camera",
+    "format": "carousel",
+    "hook": "No depth sensor. No 3D tracker. Just pixels and timing.",
+    "posted_at": "2026-07-10T16:01:09.217010+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqcjgntthz26",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
