@@ -1,58 +1,53 @@
-# Engagement lessons (auto-updated 2026-07-09)
+# Engagement lessons (auto-updated 2026-07-10)
 
 # Content Team Brief — Lessons Learned
 
----
-
 ## 1. Topic Performance
 
-**Over-performed:** Real-world event coverage (RoboCup Day 1: 3 likes, 1 reply) and sports-AI crossovers (TacticAI: 1 like, 2 replies) generated the most replies — suggesting *narrative stakes* and *familiar contexts* drive conversation. Swarm robotics also pulled a reply + repost.
+**Over-performed:** Real-world event coverage (RoboCup day 1: 3L/1R, marathon humanoid: 2L/1R/2Re) and recognizable brand hooks (Liverpool/DeepMind: 1L/2Re). Tangible, visual "what does it *do*" papers outperform abstract method papers.
 
-**Under-performed:** Learning optimization papers (CSR, CycleRL, SkillPlug) were rejected outright. Perception/CV papers (checkerboard detection, VLM gating, odometry) showed zero traction or failed at intake. The owner is clearly **not interested in pure learning/training methodology** — avoid unless the physical result is visually dramatic.
+**Under-performed:** Learning optimization (CSR, Token Expand-Merge), perception-only pipelines (RLPR, SyNeT: 0 engagement), and niche hardware (jamming pads, continuum robots). Underwater/bio-hybrid content (cyborg cockroach) earned replies but no reposts.
 
 ---
 
-## 2. Hook Styles
+## 2. Hook Styles That Worked
 
-Data is too sparse for statistical confidence, but directionally:
-- **Tension hooks** ("Your ROV thruster is destroying...") and **curiosity-gap** ("What if your robot swarm behaved like a liquid...") both generated at least one reply
-- **Number-stat hooks** ("7.5 m/s through dense forest," "Nine tiny robots") produced zero engagement despite strong specificity
-- **Bold claims tied to recognizable brands** (Liverpool/DeepMind) outperformed abstract technical hooks
+Narrative contrast ("boring physics," "never needed a real robot") and brand-name drops (Liverpool FC, ANYmal) outperformed generic stat hooks. Concrete verbs in hooks correlate with replies.
 
-### 3a. Hook-Style Weighting (recommended, to test)
-| Style | Weight | Rationale |
+---
+
+## 3. Carousel vs. Video
+
+Data is **100% carousel** — no video has been published. Cannot evaluate. **Recommend testing one short-form video post next sprint.**
+
+### 3a. Hook-Style A/B
+| Style | Posts | Total Engagement |
 |---|---|---|
-| Curiosity-gap | 40% | Consistent reply generation |
-| Tension | 30% | Prompts defense/discussion |
-| Bold claim | 20% | Works when brand/stakes are legible |
-| Number-stat | 10% | Currently underperforming; don't abandon yet |
+| tension | 3 | 5 (2L/1R/2Re) |
+| curiosity_gap | 2 | 1 |
+| number_stat | 1 | 0 |
+| unlabeled | ~18 | ~19 |
 
----
+**Too sparse for statistical confidence.** Tension leads; curiosity_gap underperforms. Recommend weighting: **tension 50%, curiosity_gap 30%, number_stat 20%** — but run 5+ posts per style before concluding.
 
-## 3. Carousel vs Video
+### 3b. Bluesky Thread vs. Single
+| Format | Avg Likes | Avg Replies |
+|---|---|---|
+| thread | 0.57 | 0.86 |
+| single | 0.22 | 0.11 |
 
-All posts are carousels — **no comparative data exists**. Cannot assess. Recommend piloting one short video (reels/TikTok format) in the next two weeks to begin baseline collection.
-
-### 3b. Bluesky Thread vs Single
-| Format | Likes | Reposts | Replies | Total |
-|---|---|---|---|---|
-| Thread (3 posts) | 0+0+0 = **0** | 1+0+0 = **1** | 1+1+1 = **3** | **4** |
-| Single (4 posts) | 1+0+1+0 = **2** | 0+0+0+0 = **0** | 0+0+0+0 = **0** | **2** |
-
-Threads earn **2× more total engagement**, driven entirely by replies. Singles earn more likes but generate no conversation. Given that replies signal genuine interest and algorithmic reach on Bluesky:
-
-**Recommended split: 65% thread / 35% single**
+**Threads clearly earn more replies.** Recommend **70/30 thread/single split.**
 
 ---
 
 ## 4. Three Concrete Recommendations
 
-1. **Prioritize event coverage and real-world demos over methodology papers.** RoboCup and TacticAI are your two highest-reply posts. Pipeline more "this just happened" and "famous org did X with robots" angles. Reject papers with no striking visual output before they reach the owner.
+1. **Prioritize live events and named institutions.** RoboCup day 1 and Liverpool FC were top performers. Queue papers tied to identifiable labs, competitions, or companies — add institution name to hook when possible.
 
-2. **Reframe number-stat hooks as tension setups.** "7.5 m/s through dense forest" landed flat. Test rewriting as: *"A drone just flew faster than a sprinting human through dense forest — without a crash map."* The number becomes evidence for a claim, not the hook itself.
+2. **Kill number_stat hooks until further notice.** "4 kg box moved 0.228 m" earned zero engagement. Numbers only work with intuitive scale ("7.5 m/s through dense forest" worked *because* of context, not the number alone). Reframe stats as consequences, not measurements.
 
-3. **Enforce a figures-first intake filter.** 10 of 20 rejections cited missing or inaccessible figures. Add an automated pre-screen: if a paper has fewer than 3 usable figures, it should not reach the owner's review queue. This alone would cut rejection rate by ~50%.
+3. **Publish your first video post this sprint** — pick the marathon humanoid or RoboCup content (already proven as topics) and repackage as a 30-second clip. Current carousel-only strategy means format performance is entirely unmeasured.
 
 ---
 
-*⚠ Sample size caveat: n=14 posts, most with near-zero metrics. Treat all directional findings as hypotheses to test over the next 30 posts before locking strategy.*
+*⚠️ Overall caveat: sample sizes are small (most posts: 0–1 likes). Trends are directional, not conclusive. Prioritize volume and consistency before heavy optimization.*
