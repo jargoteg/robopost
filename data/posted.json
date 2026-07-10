@@ -404,5 +404,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "c563ba4d",
+    "paper_id": "rss-db62a6d856",
+    "title": "SyNeT: Synthetic Negatives for Traversability Learning",
+    "format": "carousel",
+    "hook": "Why do robots drive into ditches they can clearly see?",
+    "posted_at": "2026-07-10T13:22:30.597203+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqcakyzuwm2z",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
