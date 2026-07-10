@@ -436,5 +436,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "b3e66624",
+    "paper_id": "rss-f83d1dda41",
+    "title": "DynaMimicGen: A Data Generation Framework for Robot Learning of Dynamic Tasks",
+    "format": "carousel",
+    "hook": "One demo is enough. Here's how they made it work.",
+    "posted_at": "2026-07-10T18:04:58.644099+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqcqe3u2472a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
