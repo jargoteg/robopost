@@ -6300,5 +6300,90 @@
       ]
     },
     "issue": 85
+  },
+  {
+    "draft_id": "ec94208e",
+    "paper": {
+      "id": "2607.07972v1",
+      "title": "In vivo feasibility study of humanoid robots in surgery",
+      "abstract": "Recent advances in actuation, control and learning have rapidly pushed humanoid robots from a distant vision towards near-term real-world deployment. Healthcare is a particularly pressing domain, in which staffing shortages and increasing care demand are widening the gap between clinical workload and available skilled labour. Although current automation has largely focused on digital and logistical tasks, much hospital work remains embodied, requiring mobility, manipulation and safe interaction in human-designed environments. Humanoid form factors offer unique potential, particularly for assisting with surgical tasks. Traditionally, robotic systems for surgery are purpose-built platforms such as Intuitive Surgical's da Vinci Surgical System, and it remains unclear how close current humanoid systems are to meeting the precision, control and safety requirements of minimally invasive surgery. Here we present a systematic evaluation of contemporary humanoid technology for laparoscopic surgical tasks. We develop a humanoid-based laparoscopic teleoperation framework using general-purpose instruments and assess its abilities through benchtop characterization, dry-laboratory user studies spanning diverse surgical experience levels and in vivo porcine studies. Across these evaluations, we quantify technical feasibility, task performance and clinical readiness relative to established surgical platforms. Together, our study provides an evidence-based assessment of current humanoid abilities and limitations for surgical applications, highlighting both their promise and key technical challenges that must be addressed before clinical deployment.",
+      "authors": [
+        "Zekai Liang",
+        "Nikita Thareja",
+        "Peihan Zhang",
+        "Calvin Joyce",
+        "Soofiyan Atar",
+        "Florian Richter"
+      ],
+      "url": "https://arxiv.org/abs/2607.07972v1",
+      "source": "arxiv",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't a humanoid robot just pick up a scalpel?",
+      "commentary": "This paper actually puts a general-purpose humanoid into a porcine laparoscopic task and measures it against da Vinci benchmarks, which almost nobody has done in vivo. The teleoperation framework is the real contribution: they adapt off-the-shelf instruments rather than custom hardware, which keeps the comparison honest. Performance gaps are quantified, not hand-waved, which is rare. Caveat: this is still teleoperation, not autonomy, so it tells us about form-factor feasibility rather than replacing surgical skill. The gap to da Vinci precision is real and the authors don't hide it.",
+      "slides": [
+        {
+          "title": "Humanoid meets the OR",
+          "body": "Staffing shortages are widening the gap between surgical demand and available hands. This paper asks: could a general-purpose humanoid fill some of that gap? They tested it in vivo, not just in simulation."
+        },
+        {
+          "title": "The setup: no custom tools",
+          "body": "Key choice: standard laparoscopic instruments, not purpose-built robotics hardware. Teleoperation framework maps humanoid arms to surgical motion. This tests whether the form factor itself is viable, not a tailored rig."
+        },
+        {
+          "title": "Three-tier evaluation",
+          "body": "Benchtop characterization, dry-lab user studies across multiple surgical experience levels, then porcine in vivo trials. Each layer adds a real constraint. Most papers stop at the dry lab."
+        },
+        {
+          "title": "What the numbers showed",
+          "body": "Task performance and precision metrics fell below da Vinci benchmarks across evaluations. The authors quantify the delta rather than obscuring it. Tremor, workspace limits, and control latency are named as specific blockers."
+        },
+        {
+          "title": "Why this still matters",
+          "body": "Da Vinci costs over $1M and is fixed-purpose. A general humanoid could theoretically assist, reposition, and hand instruments across an entire procedure. The ceiling is high even if current performance is not."
+        },
+        {
+          "title": "The honest verdict",
+          "body": "Not clinically ready. But this is the first systematic in vivo evidence base for humanoid surgery, not a demo reel. It defines what actually needs to improve: a more useful output than another promising prototype video."
+        }
+      ],
+      "video_script": "Everyone's debating whether humanoid robots are real or vaporware. This paper skips the debate and puts one in a surgical setting with actual porcine tissue. They used standard laparoscopic tools, no custom hardware, and measured performance against the da Vinci head to head. The result: not ready, but now we know exactly why. Tremor, latency, workspace. Those are solvable engineering problems. So here's the question: is a general-purpose humanoid surgeon ten years away, or fifty?",
+      "caption_instagram": "Why can't a humanoid robot just pick up a scalpel?\n\nMost surgical robotics research uses purpose-built systems like the da Vinci, which costs over $1M and does one job. This paper asks a different question: what if a general-purpose humanoid handled surgical tasks instead? They built a teleoperation framework using standard laparoscopic instruments and tested it across benchtop work, dry-lab user studies at multiple experience levels, and porcine in vivo trials.\n\nThe honest answer from the data: not clinically ready. Precision falls short of da Vinci benchmarks. Tremor, control latency, and workspace constraints are the named culprits, not vague 'challenges'.\n\nBut here's what makes this paper worth reading. It's the first systematic in vivo evidence base for humanoid surgery. It defines the gap rather than selling the vision. That's rare, and it's exactly what the field needs before anyone puts one of these near a patient.\n\nPaper: 'In vivo feasibility study of humanoid robots in surgery' arXiv:2607.07972\n\n#surgicalrobotics #humanoidrobots #medicalrobotics #robotics #laparoscopy #roboticsresearch #clinicalrobotics",
+      "caption_tiktok": "They actually put a humanoid robot into live surgery. Here's what happened. #surgicalrobotics #humanoidrobots #robotics #medtech",
+      "post_bluesky": "Why can't a humanoid just pick up a scalpel? Someone finally tested it in vivo. Teleoperation, standard laparoscopic tools, porcine tissue, benchmarked against da Vinci. Result: not ready, but now the gaps are quantified. https://arxiv.org/abs/2607.07972v1",
+      "bluesky_thread": [
+        "The precision deficit vs da Vinci is real and the authors name it directly: tremor, latency, workspace limits. That's more useful than another 'promising early results' abstract. Dry-lab plus in vivo is a serious evaluation stack for this stage of research.",
+        "Community is dunking on humanoid hype hard right now, and fair enough. But 'not ready' backed by porcine data is different from 'not ready' backed on vibes. What's the actual timeline you'd put on humanoid-assisted surgery reaching a consent form?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-10T09:39:52.550257+00:00",
+    "media": {
+      "figures": [
+        "media/ec94208e/fig_00.png",
+        "media/ec94208e/fig_01.png",
+        "media/ec94208e/fig_02.png",
+        "media/ec94208e/fig_03.png"
+      ],
+      "bsky": [
+        "media/ec94208e/bsky_00.png",
+        "media/ec94208e/bsky_01.png",
+        "media/ec94208e/bsky_02.png",
+        "media/ec94208e/bsky_03.png"
+      ],
+      "slides": [
+        "media/ec94208e/slide_00.png",
+        "media/ec94208e/slide_01.png",
+        "media/ec94208e/slide_02.png",
+        "media/ec94208e/slide_03.png",
+        "media/ec94208e/slide_04.png",
+        "media/ec94208e/slide_05.png",
+        "media/ec94208e/slide_06.png",
+        "media/ec94208e/slide_07.png"
+      ]
+    }
   }
 ]
