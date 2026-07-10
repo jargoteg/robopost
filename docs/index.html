@@ -42,9 +42,9 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-10 16:01 UTC </p></header>
+<p>@jahirargote · generated 2026-07-10 18:09 UTC </p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">6</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">3</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">19</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">6</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">2</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">20</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
   <header><span class="chip in_review">in review</span>
@@ -83,14 +83,14 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
   <div class="reply">The clever bit: aligning two platform frames with no markers. A short in-flight maneuver does it online. That&#x27;s the piece that makes the whole architecture actually deployable rather than just a nice idea.</div><div class="reply">Honest gap: calibration assumes a stable UGV during the alignment flight. Dynamic ground platforms, think tracked vehicles on rough terrain, weren&#x27;t tested. That&#x27;s the exact condition most field inspection teams face. Anyone seen this tested on a moving base?</div>
 </article><article class="post">
   <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 17:31 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/80" target="_blank">issue #80</a></header>
+  <span class="chip">carousel</span><span class="chip warn">posts after 19:34 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/80" target="_blank">issue #80</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">What if legs replaced the arm entirely? Wheeled biped slides a 4 kg box using only its feet, hardware validated. The key is modeling stick-slip contact transitions explicitly. Genuinely clever, and worth knowing about. http://ieeexplore.ieee.org/document/11578266</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e383bcbd/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e383bcbd/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e383bcbd/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e383bcbd/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The NMPC runs on a three-rigid-body model with explicit hip roll, which lets the robot handle lateral stepping AND object contact simultaneously. That unification is the technical contribution. Most approaches treat loco and manipulation as separate problems.</div><div class="reply">Honest limit: flat floor, rigid boxes, 0.228 m travel. The stick-slip model will face a real test on gritty or uneven surfaces. For field inspection robots that need to occasionally clear an object without carrying a full arm, this is the right direction. Would you trust this on a construction…</div>
 </article><article class="post">
   <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 17:31 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/79" target="_blank">issue #79</a></header>
+  <span class="chip">carousel</span><span class="chip warn">posts after 19:34 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/79" target="_blank">issue #79</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">A humanoid just beat the human half-marathon world record by 7 min. The secret: boring thermal physics, not AI. Unitree brought an ice backpack. Honor didn&#x27;t need one. That gap is gearing and heat management. spectrum.ieee.org/china-humanoid-robot-marathon</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f9ffe6b0/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f9ffe6b0/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f9ffe6b0/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f9ffe6b0/bsky_03.png" alt="" loading="lazy"></div>
@@ -103,21 +103,16 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 http://ieeexplore.ieee.org/document/11576542</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e287ba94/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e287ba94/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e287ba94/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/e287ba94/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The disturbance observer estimating human joint torques in real time is the load-bearing piece here. Without it, the controller can&#x27;t accommodate voluntary deviation, it just fights you. The stability proofs cover estimation error boundedness, which is more rigorous than typical preliminary work.</div><div class="reply">All 6 participants were non-disabled. That&#x27;s the gap. Pathological gait, spasticity, asymmetric loading: these are exactly the conditions where a momentum-based observer gets stressed. Has anyone seen centroidal momentum methods tested on stroke or CP populations yet? Curious what the community…</div>
-</article><article class="post">
-  <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 17:31 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/73" target="_blank">issue #73</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">Everyone assumes you need hundreds of demos to train a manipulation policy. DynaMimicGen starts from one, uses DMPs to rebuild trajectories for dynamic scenes, and beats MimicGen by 232% on MugCleanup. Still sim-only, but the architecture matters. http://ieeexplore.ieee.org/document/11568504</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b3e66624/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b3e66624/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b3e66624/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/b3e66624/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The clever bit is injecting dynamic perturbations *during* data generation, not just at test time. That is what lets Diffusion Policy and BC agents generalize. Most prior work treats data gen as a static problem.</div><div class="reply">Honest caveat though: MimicGen needing 10 demos is a favorable baseline, and controlled sim perturbations are not a moving conveyor or a coworker nudging the part. Who&#x27;s tried DMPs for data gen on real hardware? Curious what breaks first.</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~3658m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~838m)</td><td>✅ success <span class='mono'>2026-07-10 09:40</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~358m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>16:20 UTC (~18m)</td><td>✅ success <span class='mono'>2026-07-10 13:30</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>16:30 UTC (~28m)</td><td>⏳ in_progress <span class='mono'>2026-07-10 16:00</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>18:00 UTC (~118m)</td><td>✅ success <span class='mono'>2026-07-10 14:26</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~3530m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~710m)</td><td>✅ success <span class='mono'>2026-07-10 09:40</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~230m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>18:20 UTC (~10m)</td><td>✅ success <span class='mono'>2026-07-10 18:05</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>18:30 UTC (~20m)</td><td>⏳ in_progress <span class='mono'>2026-07-10 18:08</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~350m)</td><td>✅ success <span class='mono'>2026-07-10 14:26</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-10 16:01</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-10 18:04</td>
+<td>DynaMimicGen: A Data Generation Framework for Robot </td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-10 16:01</td>
 <td>Pixel2Catch: Multi-Agent Sim-to-Real Transfer for Ag</td><td class="mono">thread</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-10 13:22</td>
 <td>SyNeT: Synthetic Negatives for Traversability Learni</td><td class="mono">single</td>
@@ -145,17 +140,15 @@ http://ieeexplore.ieee.org/document/11576542</p>
 <td>Continuous and large-scale: ELEANOR, the soft archit</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 1, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-09 09:48</td>
 <td>RynnWorld-Teleop: An Action-Conditioned World Model </td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-09 08:00</td>
-<td>TouchWorld: A Predictive and Reactive Tactile Founda</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>A Passive Clamping Capstan Brake for Strap-Based Wearabl</b> · not interested</li><li><b>RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avo</b> · no figure</li><li><b>RoboDojo: A Unified Sim-and-Real Benchmark for Comprehen</b> · too learning focused</li><li><b>FIRE-Grasp: Failure-Informed Regrasping With Multimodal </b> · no fig found</li><li><b>CubeDVO: Cubemap-Spherical Deep Visual Odometry for a Mo</b> · no figure</li><li><b>Appliances Describe Themselves: Part–Function–State Mode</b> · figures missing</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09"],datasets:[{data:[909],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10"],datasets:[
- {label:"likes",data:[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-09", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10"],datasets:[
+ {label:"likes",data:[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
