@@ -468,5 +468,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "e383bcbd",
+    "paper_id": "rss-68f2e0406f",
+    "title": "Mobile Pedipulation for Object Sliding via Hierarchical Control on a Wheeled Bipedal Robot",
+    "format": "carousel",
+    "hook": "4 kg box moved 0.228 m by a robot using only its feet.",
+    "posted_at": "2026-07-10T21:37:02.468751+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqd47bqlgu2x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
