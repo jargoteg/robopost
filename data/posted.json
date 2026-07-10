@@ -388,5 +388,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "b99963f0",
+    "paper_id": "rss-3f1417e1a7",
+    "title": "DPL: Depth-Only Perceptive Humanoid Locomotion via Realistic Depth Synthesis and Cross-Attention Terrain Reconstruction",
+    "format": "carousel",
+    "hook": "Why does humanoid locomotion still need five sensors to cross a curb?",
+    "posted_at": "2026-07-10T11:13:03.762306+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqbzdiyn4b2d",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

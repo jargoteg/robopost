@@ -4222,7 +4222,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-09T15:46:00.190240+00:00",
     "media": {
       "figures": [
@@ -4249,7 +4249,9 @@
     },
     "issue": 59,
     "scheduled_after": "2026-07-10T11:10:11.691056+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "c563ba4d",
@@ -4333,7 +4335,7 @@
       ]
     },
     "issue": 60,
-    "scheduled_after": "2026-07-10T11:10:11.691056+00:00",
+    "scheduled_after": "2026-07-10T12:43:03.762300+00:00",
     "queue_notified": true
   },
   {
@@ -4497,7 +4499,7 @@
       ]
     },
     "issue": 62,
-    "scheduled_after": "2026-07-10T11:10:11.691056+00:00",
+    "scheduled_after": "2026-07-10T12:43:03.762300+00:00",
     "queue_notified": true
   },
   {
@@ -5354,7 +5356,7 @@
       ]
     },
     "issue": 73,
-    "scheduled_after": "2026-07-10T11:10:11.691056+00:00",
+    "scheduled_after": "2026-07-10T12:43:03.762300+00:00",
     "queue_notified": true
   },
   {
@@ -5723,7 +5725,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T22:40:28.617408+00:00",
     "media": {
       "figures": [],
@@ -5822,7 +5824,7 @@
       ]
     },
     "issue": 79,
-    "scheduled_after": "2026-07-10T11:10:11.691056+00:00",
+    "scheduled_after": "2026-07-10T12:43:03.762300+00:00",
     "queue_notified": true
   },
   {
@@ -5906,7 +5908,7 @@
       ]
     },
     "issue": 80,
-    "scheduled_after": "2026-07-10T11:10:11.691056+00:00",
+    "scheduled_after": "2026-07-10T12:43:03.762300+00:00",
     "queue_notified": true
   },
   {
@@ -6047,7 +6049,6 @@
     "status": "in_review",
     "created": "2026-07-09T23:51:24.834970+00:00",
     "media": {
-      "figures": [],
       "bsky": [
         "media/5e76c42c/bsky_00.png",
         "media/5e76c42c/bsky_01.png",
