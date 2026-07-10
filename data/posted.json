@@ -574,5 +574,21 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-10T22:55:00.477143+00:00"
+  },
+  {
+    "draft_id": "26bce34d",
+    "paper_id": "rss-a5ccc775e4",
+    "title": "Gotta Grow Fast: Design and Benchmarking of a Tip Mount for High-Speed Vine Robots",
+    "format": "carousel",
+    "hook": "Friction was killing vine robots. A rolling tip mount fixed it.",
+    "posted_at": "2026-07-10T23:08:17.830168+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqdbch6mns2w",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

@@ -5656,7 +5656,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T22:39:59.287904+00:00",
     "media": {
       "bsky": [
@@ -6056,7 +6056,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-09T23:51:24.834970+00:00",
     "media": {
       "bsky": [
@@ -6133,7 +6133,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-10T08:47:05.289441+00:00",
     "media": {
       "figures": [
@@ -6161,7 +6161,9 @@
     },
     "issue": 83,
     "scheduled_after": "2026-07-10T23:07:02.468751+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "6d776c80",
@@ -6400,7 +6402,249 @@
       ]
     },
     "issue": 86,
-    "scheduled_after": "2026-07-10T23:07:02.468751+00:00",
+    "scheduled_after": "2026-07-11T00:38:17.830161+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "6a751b5c",
+    "paper": {
+      "id": "rss-0746e7b963",
+      "title": "M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking",
+      "abstract": "Building a general-purpose whole-body controller is essential for enabling diverse motion capabilities in humanoid robots across a wide range of downstream tasks, including locomotion and loco-manipulation. Different tasks rely on distinct motion reference modalities: locomotion primarily depends on coordinated robot joint trajectories, whereas manipulation requires precise end-effector trajectory tracking. Existing methods often overlook the representational mismatch between dense robot joint angles and sparse end-effector poses. To address this, we propose Multi-Modal Mimic (M3imic), a versatile multi-modal whole-body control framework that unifies heterogeneous motion reference modalities, including robot joint angles, human pose trajectories, and end-effector poses, using modality-specific encoders to map them into a shared latent space. Leveraging large-scale reinforcement learning in the simulator, we train a single policy that achieves sim-to-real transfer across multiple motion reference modalities without modality-specific retraining. Extensive simulation and real-world experiments on the Unitree G1 robot are conducted to evaluate the proposed framework. In simulation, the policy achieves a peak success rate of 98.42% on an unseen test dataset, demonstrating its exceptional generalization capability.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576560",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2606.04829",
+      "repo_url": "https://github.com/Renforce-Dynamics/MultiModalWBC",
+      "video_url": "https://www.youtube.com/watch?v=FIMD-Bb91pI",
+      "fig_source": "https://github.com/Renforce-Dynamics/MultiModalWBC"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One policy. Three motion languages. Real robot.",
+      "commentary": "M3imic tackles a real headache in humanoid control: joint-angle references and end-effector pose references live in completely different representational spaces, and most controllers pick one or retrofit a hack. The fix here is modality-specific encoders projecting everything into a shared latent space, then a single RL-trained policy handles all three modalities without retraining per task. 98.42% sim success is the kind of number that sounds great until you remember sim-to-real gaps love to eat humanoid whole-body controllers alive, especially under contact. The Unitree G1 real-world results are the part that actually matters, and the abstract is light on specifics there, so treat the sim headline with appropriate skepticism.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Locomotion controllers use joint angle trajectories. Manipulation controllers use end-effector poses. These are not the same representation. Most systems pick one and ignore the mismatch. M3imic does not."
+        },
+        {
+          "title": "What M3imic actually does",
+          "body": "Three input types: robot joint angles, human pose trajectories, end-effector poses. Each gets a modality-specific encoder. All map into one shared latent space. One policy trained via large-scale RL in simulation."
+        },
+        {
+          "title": "The headline number",
+          "body": "98.42% success rate on unseen test motions in simulation. That is on a held-out dataset, not the training set. Generalization to novel motions is the harder claim here, not the success rate itself."
+        },
+        {
+          "title": "Tested on Unitree G1",
+          "body": "Sim-to-real transfer demonstrated on physical hardware without modality-specific retraining. The same policy runs locomotion and loco-manipulation tasks. Real-world quantitative results are not detailed in the abstract."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "98% in sim does not transfer cleanly to 98% on hardware. Whole-body contact tasks on humanoids degrade fast under real sensor noise and floor compliance. The G1 demos matter more than the simulation curves."
+        },
+        {
+          "title": "Why this architecture choice matters",
+          "body": "A single retraining-free policy across modalities means you can plug in motion references from MoCap, human video, or planner output without rebuilding the controller. That modularity has practical value downstream."
+        }
+      ],
+      "video_script": "Most humanoid controllers speak one language. Joint angles for walking, end-effector poses for manipulation. M3imic says: why choose? Three separate encoders map all three motion reference types into a shared space. One RL policy runs the whole thing on a Unitree G1 without retraining per task. Simulation numbers hit 98 percent on unseen motions. But here is the real question: does that survive contact on hardware? The sim-to-real gap on whole-body loco-manipulation is where these frameworks live or die. What do you think breaks first?",
+      "caption_instagram": "One controller to handle walking, manipulation, and human motion references, without retraining for each. That is the core claim of M3imic, just published via IEEE.\n\nThe clever bit is the architecture. Joint angles and end-effector poses are not the same representation, and papering over that mismatch is how you get brittle controllers. Modality-specific encoders project everything into a shared latent space, then a single RL policy takes over. Tested on the Unitree G1 in real hardware trials.\n\nThe sim headline is 98.42% success on unseen test motions. That is a strong generalization result. The part I want to see more of is the real-world breakdown, how does it hold up under contact, uneven floors, sensor noise? The abstract is quiet on those specifics.\n\nModularity is the underrated story here. If you can drop in motion references from MoCap, video, or a planner without rebuilding the controller, that is genuinely useful for downstream integration work.\n\nPaper: M3imic, arxiv 2606.04829. Code linked in my profile.\n\n#swarmrobotics #humanoidrobots #reinforcementlearning #sim2real #locomotion #wholebody #roboticsresearch",
+      "caption_tiktok": "One humanoid policy that handles walking AND manipulation, no retraining. 98% in sim. Now show me the hardware contact tests. #humanoidrobotics #robotics #sim2real #RL #unitree",
+      "post_bluesky": "One policy handles joint-angle, human-pose, AND end-effector references on a Unitree G1. No modality-specific retraining. 98.42% on unseen sim motions. The real-world contact story is what I want to see next. http://ieeexplore.ieee.org/document/11576560",
+      "bluesky_thread": [
+        "The architecture insight is real: joint angles and end-effector poses are different representational spaces and most controllers just pick one. Modality-specific encoders into a shared latent space is a clean solution. Whether it survives contact dynamics on hardware is the unresolved question.",
+        "Code is live at github.com/Renforce-Dynamics/MultiModalWBC and the open-access preprint is arxiv.org/abs/2606.04829. Curious if anyone has run this on hardware other than G1. How much does sim-to-real degrade on the manipulation side versus locomotion?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-10T23:06:39.369747+00:00",
+    "media": {
+      "figures": [
+        "media/6a751b5c/fig_00.png"
+      ],
+      "bsky": [
+        "media/6a751b5c/bsky_00.png",
+        "media/6a751b5c/bsky_01.png",
+        "media/6a751b5c/bsky_02.png",
+        "media/6a751b5c/bsky_03.png"
+      ],
+      "slides": [
+        "media/6a751b5c/slide_00.png",
+        "media/6a751b5c/slide_01.png",
+        "media/6a751b5c/slide_02.png",
+        "media/6a751b5c/slide_03.png",
+        "media/6a751b5c/slide_04.png",
+        "media/6a751b5c/slide_05.png",
+        "media/6a751b5c/slide_06.png",
+        "media/6a751b5c/slide_07.png"
+      ]
+    },
+    "issue": 87
+  },
+  {
+    "draft_id": "b55b5daa",
+    "paper": {
+      "id": "rss-f380a2ff6b",
+      "title": "A Flexible Wrist With Anisotropic and Selectable Stiffness for Robust Contact-Rich Manipulation",
+      "abstract": "Contact-rich manipulation tasks in unstructured environments pose significant robustness challenges for robot learning, where unexpected collisions can cause damage and hinder policy acquisition. Existing flexible end-effectors face fundamental limitations: they either provide a limited deformation range, lack directional stiffness control, or require complex actuation systems that compromise practicality. This study introduces CLAW (Compliant Leaf-spring Anisotropic flexible Wrist), a novel flexible wrist mechanism that addresses these limitations through a simple yet effective design using two orthogonal leaf springs and rotary joints with a locking mechanism. CLAW provides large six-degree-of-freedom (6-DoF) deformation capability (40 mm lateral, 20 mm vertical) and mode-switchable anisotropic stiffness across three discrete locking modes, while maintaining lightweight construction (330 g) at low cost (${\\sim }$${\\$}$550). Experimental evaluations using imitation learning demonstrate that CLAW achieves a 76% success rate in benchmark peg-insertion tasks, outperforming both the Fin Ray gripper (43%) and rigid gripper baseline (36%). CLAW successfully handles diverse contact-rich scenarios, including precision assembly with tight tolerances and delicate object manipulation, demonstrating its potential to enable more robust execution of contact-rich manipulation under learned policies.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11592748",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A $550 wrist beats rigid grippers at peg insertion by 2x.",
+      "commentary": "CLAW uses two orthogonal leaf springs plus a locking mechanism to get 6-DoF compliance with selectable stiffness, three discrete modes, 40 mm lateral and 20 mm vertical deflection, and the whole thing weighs 330 g. The 76% peg-insertion success versus 36% for rigid is a real gap, not a rounding error. What's clever is the anisotropic angle: you can stiffen one axis while keeping compliance in another, which is something soft grippers can't do. Honest caveat: 'benchmark peg-insertion' is still a lab fixture on a known surface, not a rattling industrial assembly line with grease and positional drift. The three discrete modes also mean you're committing to a stiffness choice before contact, not adapting online. Still, 330 g and $550 puts this in a category where someone actually builds it.",
+      "slides": [
+        {
+          "title": "The wrist costs $550",
+          "body": "CLAW weighs 330 g and costs roughly $550. Two orthogonal leaf springs plus rotary locking joints. No exotic actuation, no pneumatics. Simple enough to actually build."
+        },
+        {
+          "title": "76% vs 36% on peg insertion",
+          "body": "Rigid gripper baseline: 36% success. Fin Ray flexible gripper: 43%. CLAW: 76%. Same imitation learning policy, same task. The wrist is doing the robustness work the policy can't."
+        },
+        {
+          "title": "Compliance in 6 DoF",
+          "body": "40 mm lateral deflection, 20 mm vertical. Handles unexpected collisions without stopping the policy. Contact-rich tasks like precision assembly become less brittle."
+        },
+        {
+          "title": "Anisotropic stiffness, three modes",
+          "body": "You pick a stiffness configuration before contact: stiff in one axis, compliant in another. Soft grippers can't do this. The tradeoff: you're committing ahead of time, not adapting online."
+        },
+        {
+          "title": "Where this breaks down",
+          "body": "Tests use fixed lab fixtures. Real assembly lines add positional drift, grease, vibration, and part variation. Three discrete modes also means no continuous stiffness tuning mid-task."
+        },
+        {
+          "title": "Why it matters",
+          "body": "Robot learning researchers spend enormous effort on policy robustness. CLAW argues some of that burden belongs in hardware. A cheap compliant wrist as standard kit changes what policies need to do."
+        }
+      ],
+      "video_script": "Everyone's trying to make robot manipulation policies more robust with better training data and bigger models. This paper says: put a better wrist on the robot instead. CLAW is two leaf springs, a locking mechanism, 330 grams, 550 dollars. It goes from 36% to 76% success on peg insertion using the exact same policy. The trick is anisotropic stiffness: you choose which axes are stiff and which are compliant before contact. Lab conditions still, but the logic is hard to argue with. Is hardware compliance the piece the learning community keeps undervaluing?",
+      "caption_instagram": "A $550 wrist just doubled peg-insertion success rates. Same policy, same task, completely different hardware.\n\nCLAW uses two orthogonal leaf springs and a rotary locking mechanism to give a robot wrist 6-DoF compliance: 40 mm lateral, 20 mm vertical deflection, selectable stiffness across three modes. It weighs 330 g and costs less than a mid-range GPU fan.\n\nThe result: rigid gripper baseline sits at 36% on benchmark peg insertion. Fin Ray, a popular flexible option, gets 43%. CLAW hits 76%. That gap is the policy not having to be perfect because the hardware absorbs the error.\n\nHonest take: these are lab fixtures, not a real assembly line with grease, vibration, and part variation. Three discrete stiffness modes also means no online adaptation. But the core argument is sound. We keep throwing compute at manipulation robustness. Sometimes the answer is a smarter wrist.\n\nPaper: A Flexible Wrist With Anisotropic and Selectable Stiffness for Robust Contact-Rich Manipulation. IEEE Xplore: ieeexplore.ieee.org/document/11592748\n\n#swarmrobotics #robotmanipulation #contactrichmanipulation #robotlearning #imitationlearning #hardwaredesign #fieldrobotics",
+      "caption_tiktok": "76% success vs 36% for rigid grippers. Same AI policy, different wrist. $550 of leaf springs changed everything.\n#robotics #manipulation #robotlearning #engineering #hardwaredesign",
+      "post_bluesky": "A $550 wrist just doubled peg-insertion success: 36% rigid, 76% CLAW. Same policy, same task. Two leaf springs, 330 g, 6-DoF compliance, selectable stiffness. Sometimes hardware is the robustness fix. http://ieeexplore.ieee.org/document/11592748",
+      "bluesky_thread": [
+        "The clever bit is anisotropic stiffness across 3 discrete modes. You stiffen one axis, keep compliance in another. Soft grippers can't do that. The catch: you commit before contact, no online adaptation. Lab fixtures also aren't factory floors.",
+        "We pour enormous effort into making learned policies robust. CLAW argues some of that work belongs in the wrist, not the training loop. At $550 and 330 g, it's cheap enough to test that argument. Would you add a compliant wrist before tuning your policy further?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "rejected",
+    "created": "2026-07-10T23:07:09.437242+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/b55b5daa/bsky_00.png",
+        "media/b55b5daa/bsky_01.png",
+        "media/b55b5daa/bsky_02.png",
+        "media/b55b5daa/bsky_03.png"
+      ],
+      "slides": [
+        "media/b55b5daa/slide_00.png",
+        "media/b55b5daa/slide_01.png",
+        "media/b55b5daa/slide_02.png",
+        "media/b55b5daa/slide_03.png",
+        "media/b55b5daa/slide_04.png",
+        "media/b55b5daa/slide_05.png",
+        "media/b55b5daa/slide_06.png",
+        "media/b55b5daa/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "4dd9cdfc",
+    "paper": {
+      "id": "2607.07873v1",
+      "title": "STEMbot: A Compliant Robot for Under-Canopy Plant Navigation",
+      "abstract": "The scalability of organic agriculture is partially limited by the labor costs associated with monitoring for pests. While drones and rovers are well-suited for agricultural monitoring from above or next to plants, many pests live on the underside of leaves or on plant stems, making them detectable only after they have caused significant damage. To enable early pest detection we present STEMbot, a miniature climbing robot system designed for autonomous navigation under plant canopies. Unlike existing climbing platforms that lack on-board perception or are restricted to unbranched vertical trunks, STEMbot integrates a fully geometric PIN-SLAM pipeline with a semantic OcTree to achieve robust localization and mapping while climbing the plant. To plan STEMbot's motion we propose a manifold-constrained A* planner along with ray-tracing goal specification to enable branch-aware traversal and the inspection of occluded targets. We validate our system through hardware experiments, demonstrating reliable traversal of stems ranging from 7-33mm and autonomous navigation across four distinct plant specimens. Quantitative evaluations show that our system achieves high-fidelity geometric reconstructions with an average Chamfer distance of less than 1cm relative to an offline photogrammetry baseline, confirming that STEMbot maintains the globally consistent odometry needed for autonomous navigation.",
+      "authors": [
+        "Zachary Charlick",
+        "Nilay Roy Choudhury",
+        "Haoyu Ma",
+        "Xiaonan Huang",
+        "Dmitry Berenson"
+      ],
+      "url": "https://arxiv.org/abs/2607.07873v1",
+      "source": "arxiv",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "This robot climbs inside your tomato plants to find pests.",
+      "commentary": "STEMbot is a miniature climbing robot that navigates plant stems from 7 to 33mm diameter, autonomously, with onboard SLAM and a semantic OcTree for branch-aware path planning. The manifold-constrained A* planner is genuinely clever, it treats the plant skeleton as a graph and uses ray-tracing to specify inspection targets on leaf undersides that a camera can't directly see. Chamfer distance under 1cm against photogrammetry ground truth is solid for this scale. The honest caveat: four plant specimens in a lab is a long way from a commercial greenhouse with humidity, varying lighting, and hundreds of plants per row. Compliance helps with stem variation, but branching topology in real crops is messier than any tidy specimen.",
+      "slides": [
+        {
+          "title": "The pest detection gap",
+          "body": "Drones see canopy tops. Rovers see stems from the side. Pests live on leaf undersides. By the time damage is visible from above, the infestation is already established."
+        },
+        {
+          "title": "STEMbot: what it is",
+          "body": "Miniature compliant climbing robot. Handles stems 7 to 33mm diameter. Carries full onboard perception: PIN-SLAM pipeline plus semantic OcTree for branch-aware localization."
+        },
+        {
+          "title": "The planner is the clever part",
+          "body": "Manifold-constrained A* treats the plant skeleton as a navigation graph. Ray-tracing goal specification lets the robot plan routes to occluded targets it cannot directly observe."
+        },
+        {
+          "title": "Hardware results",
+          "body": "Validated on four distinct plant specimens. Average Chamfer distance under 1cm vs. offline photogrammetry baseline. Globally consistent odometry maintained throughout climbing traversal."
+        },
+        {
+          "title": "The gap to the field",
+          "body": "Four lab specimens is not a commercial greenhouse. Real crops: variable humidity, dense canopies, irregular branching, hundreds of plants per row. Compliance buys tolerance, not immunity."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "Early pest detection changes the economics of organic agriculture. A robot that maps a plant's interior geometry could eventually trigger targeted intervention before any visible damage appears."
+        }
+      ],
+      "video_script": "Most agricultural robots look down from above. STEMbot goes inside the plant. It's a compliant climbing robot that grips stems from 7 to 33 millimeters, builds a 3D map of the plant as it climbs, and plans routes to leaf undersides where pests actually hide. The planner treats the whole plant as a graph and uses ray-tracing to find occluded targets. Under 1 centimeter mapping error against photogrammetry ground truth. Four plants tested in a lab. The gap to a commercial greenhouse is real. But the geometry is right. Could this scale to a row of tomatoes?",
+      "caption_instagram": "This robot climbs inside your tomato plants to find pests.\n\nMost ag robots look down or sideways. By the time canopy cameras spot pest damage, the infestation is already established. STEMbot attacks the detection lag directly: it's a miniature compliant climber that navigates plant stems from 7 to 33mm and maps leaf undersides using onboard SLAM.\n\nThe planning approach is what stands out. A manifold-constrained A* planner treats the plant skeleton as a navigation graph. Ray-tracing goal specification lets it route to occluded targets it cannot directly see. Average mapping error under 1cm against a photogrammetry baseline. That's the odometry consistency you actually need for autonomous navigation at this scale.\n\nHonest caveat: four plant specimens in a controlled lab is a long way from a commercial greenhouse. Real crops bring humidity, variable lighting, irregular branching topology, and hundreds of plants per row. Compliance handles stem diameter variation. It doesn't handle everything.\n\nThe direction is right though. Early detection changes the economics of organic farming entirely. Paper: STEMbot: A Compliant Robot for Under-Canopy Plant Navigation, arXiv 2607.07873.\n\n#swarmrobotics #fieldrobotics #agritech #plantrobotics #inspectionrobotics #SLAM #precisionagriculture",
+      "caption_tiktok": "A robot that climbs inside your plants to find pests before you can see the damage. This is where field robotics gets interesting. #agritech #fieldrobotics #robotics #inspectionrobot",
+      "post_bluesky": "This robot climbs inside your tomato plants. STEMbot navigates stems 7-33mm, builds a 3D plant map with onboard SLAM, and plans routes to leaf undersides where pests hide. Clever manifold A* planner, <1cm mapping error. Four lab plants so far. https://arxiv.org/abs/2607.07873v1",
+      "bluesky_thread": [
+        "The planner is the part worth studying. Manifold-constrained A* on the plant skeleton plus ray-tracing goal spec for occluded targets. That's a clean solution to a genuinely hard problem: how do you navigate to a surface you can't directly observe from your current position.",
+        "Honest question for anyone in precision ag: what's the actual bottleneck here? Is it the climbing mechanism, the canopy mapping, or just the sheer number of plants per hectare that makes per-plant inspection uneconomical regardless of robot cost?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-10T23:07:36.997181+00:00",
+    "media": {
+      "figures": [
+        "media/4dd9cdfc/fig_00.png",
+        "media/4dd9cdfc/fig_02.png",
+        "media/4dd9cdfc/fig_01.png",
+        "media/4dd9cdfc/fig_04.png"
+      ],
+      "bsky": [
+        "media/4dd9cdfc/bsky_00.png",
+        "media/4dd9cdfc/bsky_01.png",
+        "media/4dd9cdfc/bsky_02.png",
+        "media/4dd9cdfc/bsky_03.png"
+      ],
+      "slides": [
+        "media/4dd9cdfc/slide_00.png",
+        "media/4dd9cdfc/slide_01.png",
+        "media/4dd9cdfc/slide_02.png",
+        "media/4dd9cdfc/slide_03.png",
+        "media/4dd9cdfc/slide_04.png",
+        "media/4dd9cdfc/slide_05.png",
+        "media/4dd9cdfc/slide_06.png",
+        "media/4dd9cdfc/slide_07.png"
+      ]
+    },
+    "issue": 88
   }
 ]

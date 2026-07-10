@@ -194,5 +194,24 @@
     "item_type": "paper",
     "reason": "not interested",
     "date": "2026-07-10"
+  },
+  {
+    "title": "A Ground-Centric UAV-UGV Cooperative System for Autonomous Launch and Recovery",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "no reason given",
+    "date": "2026-07-10"
+  },
+  {
+    "title": "Task-Agnostic Assistance via Centroidal Momentum Shaping: Preliminary Validations on a Hip Exoskeleton",
+    "source": "ieeexplore.ieee.org",
+    "item_type": "paper",
+    "reason": "no reason given",
+    "date": "2026-07-10"
+  },
+  {
+    "title": "A Flexible Wrist With Anisotropic and Selectable Stiffness for Robust Contact-Rich Manipulation",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
