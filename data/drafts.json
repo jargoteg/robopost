@@ -7411,7 +7411,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-11T11:30:12.621243+00:00",
     "media": {
       "bsky": [
@@ -7437,7 +7437,9 @@
     },
     "issue": 96,
     "scheduled_after": "2026-07-11T19:06:26.858825+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "065c9745",
@@ -7590,7 +7592,7 @@
       ]
     },
     "issue": 97,
-    "scheduled_after": "2026-07-11T19:06:26.858825+00:00",
+    "scheduled_after": "2026-07-11T20:47:12.486799+00:00",
     "queue_notified": true
   },
   {
@@ -7746,7 +7748,7 @@
       ]
     },
     "issue": 98,
-    "scheduled_after": "2026-07-11T19:06:26.858825+00:00",
+    "scheduled_after": "2026-07-11T20:47:12.486799+00:00",
     "queue_notified": true
   },
   {
@@ -8130,5 +8132,79 @@
       ]
     },
     "issue": 101
+  },
+  {
+    "draft_id": "8b759996",
+    "paper": {
+      "id": "rss-dee7345195",
+      "title": "Video Friday: Do Robots Even Need Legs?",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO IROS 2026 : 27 September–1 October 2026, PITTSBURGH Enjoy today’s videos! Eno is our first agentic robot: an AI agent and a general-purpose robot working as one system. It reasons, plans, and acts in the real world. Human in capability, not in form. Every detail with a purpose, reduced to what matters. Designed not to resemble us, but to extend us. Eno is built end to end at Genesis. [ Genesis ] Engineers from NASA’s Jet Propulsion Laboratory are field-testing advanced capabilities for potential future Moon and Mars rovers. In the Colorado Desert near Plaster City, California, teams used a prototype rover called ERNEST (Exploration Rover for Navigating Extreme Sloped Terrain) to test software for a potential future long-range lunar mission . The software enables the rover, developed at JPL, to operate autonomously and travel extreme distances with minimal intervention from human operators. ERNEST is a lot more capable than it may look; here’s some recent research showing the kinds of terrain it can handle: [ NASA's Jet Propulsion Lab ] Table tennis can produce moments that are difficult",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-agentic-ai-robot",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Legs are a design choice, not a destiny.",
+      "commentary": "IEEE Spectrum's Video Friday this week lands perfectly into the ongoing humanoid skepticism cycle. The Genesis Eno robot is the most interesting entry: explicitly designed to avoid human form while claiming human-level capability, which is either honest engineering or clever marketing positioning against the Optimus backlash. The JPL ERNEST rover testing in Colorado desert is the real field robotics story here, autonomous long-range traversal on extreme slopes with minimal human intervention, exactly the kind of unglamorous work that actually matters for planetary exploration. Honest caveat: these are curated demo clips, not peer-reviewed field results, so we are seeing best-case footage for all of them.",
+      "slides": [
+        {
+          "title": "Legs are a design choice",
+          "body": "Half the robotics community is arguing about humanoid form factors this week. This Video Friday quietly asks the better question: what does the task actually require?"
+        },
+        {
+          "title": "Genesis Eno: no legs, no apology",
+          "body": "Eno is pitched as 'human in capability, not in form.' No arms, no bipedal drama. It reasons, plans, acts. Whether that claim holds up outside a demo is the real question."
+        },
+        {
+          "title": "JPL ERNEST tests in Colorado desert",
+          "body": "NASA JPL field-tested autonomous long-range rover software on extreme sloped terrain near Plaster City, CA. Minimal human intervention. This is the unglamorous work planetary missions actually depend on."
+        },
+        {
+          "title": "The form factor debate is a distraction",
+          "body": "ERNEST does not have legs. Eno does not have legs. Both are targeting capability, not aesthetics. Meanwhile, corporate humanoid demos keep collapsing on stage."
+        },
+        {
+          "title": "What the clips don't show",
+          "body": "These are curated best-takes. Failure rates, edge case handling, and long-duration autonomy data are absent. Field performance routinely diverges from demo footage."
+        },
+        {
+          "title": "Coming up: RSS 2026, IROS 2026",
+          "body": "RSS runs 13-17 July in Sydney. IROS hits Pittsburgh late September. Expect actual peer-reviewed results to stress-test the claims made in this week's videos."
+        }
+      ],
+      "video_script": "Everyone is talking about humanoid robots this week. Elon's Optimus, the Russian Aidol collapse going viral. But this week's IEEE Spectrum Video Friday quietly makes the better argument. Genesis Eno: no legs, no human shape, claims human-level capability. JPL's ERNEST rover: four wheels, extreme desert slopes, autonomous long-range traversal for future Moon missions. Neither robot is trying to look like us. Both are trying to work. So here is the real question: when did legs become the point?",
+      "caption_instagram": "Legs are a design choice, not a destiny.\n\nThe robotics community is deep in humanoid skepticism this week and honestly, rightfully so. But while everyone debates form factor, this IEEE Spectrum Video Friday dropped two robots that quietly ignore the whole argument.\n\nGenesis Eno is designed explicitly to not look human. It reasons and plans in the real world. No legs, no arms in the traditional sense, just capability. That framing is either genuinely principled engineering or very smart positioning against the Optimus backlash. Probably some of both.\n\nThe more interesting clip is JPL's ERNEST rover testing autonomous long-range navigation on extreme desert slopes in California. That is real field work targeting Moon and Mars missions. Minimal human intervention. Unglamorous. Exactly the kind of result that matters.\n\nHonest take: these are demo clips, not field deployment data. Best-case footage is always the headline. But the underlying point holds: the task defines the morphology, not the other way around.\n\n#swarmrobotics #fieldrobotics #planetaryrobotics #autonomousrobotics #robotdesign #roverrobotics #IROS2026",
+      "caption_tiktok": "Humanoid robots keep collapsing on stage. JPL's legless rover is quietly preparing for the Moon. Maybe legs were never the point. #robotics #NASA #humanoidrobot #fieldrobotics",
+      "post_bluesky": "Legs are a design choice, not a destiny. While humanoid demos keep falling over, JPL's ERNEST rover is doing autonomous long-range navigation on extreme desert slopes. Genesis Eno skips the human form entirely. This week's Video Friday makes…\nhttps://spectrum.ieee.org/video-friday-agentic-ai-robot",
+      "bluesky_thread": [
+        "The Genesis Eno pitch is interesting: 'human in capability, not in form.' That framing is doing a lot of work against this week's Optimus skepticism wave. Whether the capability claim survives outside a demo reel is the only question that matters.",
+        "JPL's ERNEST is the quieter story and the better one. Extreme sloped terrain, minimal human intervention, targeting actual lunar mission software. No legs. No face. Just field testing in the California desert. What morphology does the Moon actually require?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T19:17:00.699288+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/8b759996/bsky_00.png",
+        "media/8b759996/bsky_01.png",
+        "media/8b759996/bsky_02.png",
+        "media/8b759996/bsky_03.png"
+      ],
+      "slides": [
+        "media/8b759996/slide_00.png",
+        "media/8b759996/slide_01.png",
+        "media/8b759996/slide_02.png",
+        "media/8b759996/slide_03.png",
+        "media/8b759996/slide_04.png",
+        "media/8b759996/slide_05.png",
+        "media/8b759996/slide_06.png",
+        "media/8b759996/slide_07.png"
+      ]
+    }
   }
 ]

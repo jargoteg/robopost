@@ -702,5 +702,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "6867076d",
+    "paper_id": "rss-9055518988",
+    "title": "Ultralightweight sonar plus AI lets tiny drones navigate like bats",
+    "format": "carousel",
+    "hook": "This drone navigates blind using sound, no camera, no LiDAR",
+    "posted_at": "2026-07-11T19:17:12.486805+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqfeu5uk3b2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

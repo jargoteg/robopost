@@ -278,5 +278,10 @@
     "item_type": "article",
     "reason": "no reason given",
     "date": "2026-07-11"
+  },
+  {
+    "title": "Video Friday: Do Robots Even Need Legs?",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
