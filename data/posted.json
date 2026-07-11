@@ -718,5 +718,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "aaecdbf8",
+    "paper_id": "rss-3f705e5bcc",
+    "title": "How JPL Keeps the 13-Year-Old Curiosity Rover Doing Science",
+    "format": "carousel",
+    "hook": "37 km driven. 42 rocks drilled. Zero maintenance visits.",
+    "posted_at": "2026-07-11T21:00:17.932629+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqfkmjfakj2w",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
