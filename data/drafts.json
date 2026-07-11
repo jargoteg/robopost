@@ -7750,7 +7750,7 @@
       ]
     },
     "issue": 98,
-    "scheduled_after": "2026-07-11T22:30:17.932625+00:00",
+    "scheduled_after": "2026-07-11T22:30:17.932629+00:00",
     "queue_notified": true
   },
   {
@@ -8134,7 +8134,7 @@
       ]
     },
     "issue": 101,
-    "scheduled_after": "2026-07-11T22:30:17.932625+00:00",
+    "scheduled_after": "2026-07-11T22:30:17.932629+00:00",
     "queue_notified": true
   },
   {
@@ -8436,5 +8436,83 @@
       ]
     },
     "issue": 102
+  },
+  {
+    "draft_id": "171ea4ac",
+    "paper": {
+      "id": "rss-2988b04f67",
+      "title": "A multi-armed robot for assisting with agricultural tasks",
+      "abstract": "Humans often use one hand to grasp the branch for better accessibility, while the other hand is used to perform primary tasks like (a) branch pruning and (b) hand pollination of the flower. (c) An overview of the approach used by Madhav and colleagues, where one robot manipulates the branch to move the flower to [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/a-multi-armed-robot-for-assisting-with-agricultural-tasks/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One hand holds the branch. The other does the work.",
+      "commentary": "Madhav et al. tackle a genuinely hard agricultural manipulation problem: many crop tasks require bimanual coordination, where one hand repositions a branch while the other performs the primary action like pruning or pollination. The multi-arm setup mirrors human strategy directly rather than trying to engineer around it. That's honest design thinking. The honest caveat is that field agriculture is brutal on robot hardware, and a controlled demo on a positioned plant is very different from navigating a dense canopy with variable lighting, wind, and branch compliance. Pollination especially needs consistency at scale before this competes with hand labor or existing pollination strategies.",
+      "slides": [
+        {
+          "title": "The problem with one arm",
+          "body": "Pruning and pollination both need two hands. One stabilizes the branch, one does the task. Most ag robots ignore this and pay for it in grasp failures."
+        },
+        {
+          "title": "Copy the human strategy",
+          "body": "The multi-arm system assigns one manipulator to reposition the branch, moving the flower or stem into a workspace where the second arm can reliably operate."
+        },
+        {
+          "title": "Tasks targeted: pruning + pollination",
+          "body": "Branch pruning requires positioning then cutting. Hand pollination requires precise contact with a flower. Both demand coordinated, sequential manipulation, not just reaching."
+        },
+        {
+          "title": "Why this matters for field deployment",
+          "body": "Labor shortages in specialty crop farming are real and accelerating. Pollination in particular is time-critical. A robot that can assist, not just observe, changes the economics."
+        },
+        {
+          "title": "What the demo doesn't prove yet",
+          "body": "Controlled plant positioning is not a canopy. Real orchards have occlusion, wind, branch compliance variation, and mud. The gap between bench result and field result is large here."
+        },
+        {
+          "title": "The honest question",
+          "body": "Multi-arm coordination adds cost, weight, and failure modes. Does repositioning a branch outperform redesigning the end-effector to tolerate branch variation? That comparison isn't made yet."
+        }
+      ],
+      "video_script": "Most ag robots have one arm. But watch a farm worker prune or pollinate and you notice something immediately: they always use two hands. One holds the branch, the other does the job. This robot from Madhav and colleagues copies that directly. One arm repositions, the other acts. It sounds obvious because it is. The real question is whether that coordination holds up in a real orchard, not a lab bench. So: is bimanual the right architecture, or do we need smarter end-effectors instead?",
+      "caption_instagram": "One hand holds the branch. The other does the work.\n\nMost agricultural robots are built around a single manipulator. But pruning and hand pollination both require what humans do naturally: one hand stabilizes, the other performs. Madhav and colleagues built a multi-arm system that copies this directly, assigning branch repositioning to one arm so the second can reliably reach the target.\n\nThe design logic is sound. Stop engineering around the bimanual requirement and just meet it. Pollination especially is time-critical and labor-intensive, and labor availability in specialty crop farming is getting worse every season.\n\nThe honest caveat: a positioned plant in a lab is not a dense orchard canopy with wind, occlusion, and variable branch compliance. The jump from controlled demo to field deployment is where most ag robotics projects stall. The question worth asking is whether coordinated repositioning beats a more robust end-effector design. That comparison hasn't been made yet.\n\nWorth watching. The approach is principled. The field test is the real paper.\n\n#agriculturalrobotics #fieldrobotics #manipulator #robotics #precisionagriculture #harvestrobotics #roboticfarming",
+      "caption_tiktok": "Two arms, one job: copy what humans already do in the orchard. Sounds obvious. Executing it isn't. #agriculturerobotics #fieldrobotics #robotics #manipulation",
+      "post_bluesky": "One hand holds the branch. The other does the work. This multi-arm ag robot stops pretending single-arm manipulation is enough for pruning and pollination, and just mirrors what humans do. Principled. Lab-to-field gap…\nhttps://robohub.org/a-multi-armed-robot-for-assisting-with-agricultural-tasks/",
+      "bluesky_thread": [
+        "The design logic here is honest: bimanual tasks need bimanual robots. Branch repositioning so the second arm has a clean workspace is exactly how a skilled worker approaches this. Hard to argue with the architecture on paper.",
+        "My concern is the demo-to-orchard gap. Wind, canopy occlusion, branch compliance variation, mud on sensors. Ag robotics has a graveyard of systems that worked beautifully on positioned plants. Does the repositioning strategy actually outperform a more robust end-effector? That's the experiment I…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T21:27:11.325855+00:00",
+    "media": {
+      "figures": [
+        "media/171ea4ac/fig_01.png",
+        "media/171ea4ac/fig_00.png"
+      ],
+      "bsky": [
+        "media/171ea4ac/bsky_00.png",
+        "media/171ea4ac/bsky_01.png",
+        "media/171ea4ac/bsky_02.png",
+        "media/171ea4ac/bsky_03.png"
+      ],
+      "slides": [
+        "media/171ea4ac/slide_00.png",
+        "media/171ea4ac/slide_01.png",
+        "media/171ea4ac/slide_02.png",
+        "media/171ea4ac/slide_03.png",
+        "media/171ea4ac/slide_04.png",
+        "media/171ea4ac/slide_05.png",
+        "media/171ea4ac/slide_06.png",
+        "media/171ea4ac/slide_07.png"
+      ]
+    },
+    "issue": 103
   }
 ]
