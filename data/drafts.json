@@ -6771,7 +6771,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-11T01:02:24.330172+00:00",
     "media": {
       "figures": [
@@ -6795,7 +6795,9 @@
     },
     "issue": 89,
     "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "58d64d2b",
@@ -7025,7 +7027,7 @@
       ]
     },
     "issue": 91,
-    "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
+    "scheduled_after": "2026-07-11T14:09:47.959841+00:00",
     "queue_notified": true
   },
   {
@@ -7191,7 +7193,7 @@
       ]
     },
     "issue": 93,
-    "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
+    "scheduled_after": "2026-07-11T14:09:47.959841+00:00",
     "queue_notified": true
   },
   {
@@ -7275,7 +7277,7 @@
       ]
     },
     "issue": 94,
-    "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
+    "scheduled_after": "2026-07-11T14:09:47.959841+00:00",
     "queue_notified": true
   },
   {

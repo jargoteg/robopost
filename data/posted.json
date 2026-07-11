@@ -638,5 +638,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "1308ea97",
+    "paper_id": "rss-1e3a622b50",
+    "title": "#RoboCup2026 – humanoid league knockout stages",
+    "format": "carousel",
+    "hook": "Why do humanoid robots still fall over at RoboCup?",
+    "posted_at": "2026-07-11T12:39:47.959846+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqeonjiije2w",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
