@@ -8356,5 +8356,83 @@
         "media/886f5a0f/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "44e3ec46",
+    "paper": {
+      "id": "rss-c4c4338d9b",
+      "title": "Robot Talk Episode 160 – Robotic blacksmiths, with Edward Mehr",
+      "abstract": "Claire chatted to Edward Mehr from Machina Labs about their RoboCraftsman that shapes complex metal parts for the aerospace, defence, and automotive industries. Edward Mehr is an entrepreneur and engineer specializing in advanced manufacturing, robotics, and artificial intelligence. As the Co-Founder and CEO of Machina Labs, he leads efforts to integrate AI-driven robotics into flexible, [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/robot-talk-episode-160-robotic-blacksmiths-with-edward-mehr/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No dies, no molds. Two robot arms hammer any shape.",
+      "commentary": "Machina Labs uses two opposing robot arms to do incremental sheet forming, basically robotic blacksmithing, on aerospace-grade metals. No custom tooling per part means the setup cost for a new geometry drops from months to days. The clever bit is using AI to plan and correct the forming path in real time, accounting for springback and material variation. Honest caveat: incremental forming has known throughput limits compared to stamping at scale, so this wins on flexibility and low-volume custom parts, not mass production. If the aerospace and defense supply chain is as tooling-constrained as Mehr implies, that tradeoff is actually the right one.",
+      "slides": [
+        {
+          "title": "Robotic blacksmithing at scale",
+          "body": "Machina Labs RoboCraftsman uses two robot arms pressing against each other to form sheet metal into complex 3D shapes. No molds. No dies. Just coordinated force."
+        },
+        {
+          "title": "Why tooling is the bottleneck",
+          "body": "Traditional sheet metal forming needs custom dies per part. Lead time: weeks to months, cost: tens of thousands. A software update to the robot path costs almost nothing."
+        },
+        {
+          "title": "AI corrects the metal in real time",
+          "body": "Sheet metal springs back after forming. Their system models and compensates for material springback live, adjusting the tool path mid-process. This is the hard part most labs skip."
+        },
+        {
+          "title": "Who actually buys this",
+          "body": "Aerospace, defense, automotive. Low-volume, high-mix, tight geometry tolerance. Exactly the parts where stamping tooling costs cannot be justified for a 50-unit run."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Incremental forming is slow compared to stamping. Cycle time per part is longer. This is not a stamping replacement. It wins on flexibility, not throughput."
+        },
+        {
+          "title": "Why it matters now",
+          "body": "Defense supply chains under pressure need parts fast without retooling. Machina Labs is betting the flexibility premium is worth the throughput tradeoff. Aerospace orders suggest they are right."
+        }
+      ],
+      "video_script": "What if a robot could forge any metal shape, no molds, no dies, just two arms and a plan? That is what Machina Labs built. Two robot arms press against opposite sides of a metal sheet, incrementally hammering it into shape while AI corrects for springback in real time. New geometry means a new software path, not a new factory tool. The customers are aerospace and defense, buying flexibility, not volume. Does this finally break the tooling bottleneck in advanced manufacturing, or is cycle time still the wall?",
+      "caption_instagram": "Two robot arms. No dies. No molds. Just coordinated force and a lot of AI path planning.\n\nMachina Labs built what they call a RoboCraftsman: a system where opposing robot arms do incremental sheet forming on aerospace-grade metal. Change the part geometry and you update the software path, not the tooling. For low-volume, high-mix manufacturing that tradeoff is enormous.\n\nThe genuinely hard problem they are solving is springback. Sheet metal does not hold its shape after forming. Their AI corrects the tool path in real time to compensate. That is where most academic incremental forming work stops short.\n\nReal limit worth naming: incremental forming is slower per part than stamping. This is not replacing a stamping line. It is replacing the six-month tooling lead time for a 50-unit defense contract. Different problem, right answer.\n\nFull conversation with Edward Mehr on Robohub Robot Talk Episode 160. Link in bio.\n\n#advancedmanufacturing #sheetmetalforming #industrialrobotics #robotics #aerospace #defensetech #manufacturingrobotics #AIrobotics",
+      "caption_tiktok": "No molds. No dies. Two robot arms forge any metal shape on demand. This is how aerospace gets custom parts without a six-month tooling wait. #robotics #manufacturing #aerospace #advancedmanufacturing",
+      "post_bluesky": "No dies, no molds. Machina Labs uses two opposing robot arms to hammer sheet metal into aerospace parts, any geometry, just update the software path. AI corrects springback live. The tooling bottleneck in…\nhttps://robohub.org/robot-talk-episode-160-robotic-blacksmiths-with-edward-mehr/",
+      "bluesky_thread": [
+        "Honest limit: incremental forming is slower per part than stamping. This is not a mass production story. It is a low-volume, high-mix story, 50-unit defense runs where custom die tooling costs are completely unjustifiable.",
+        "The part I want more data on is dimensional tolerance in production, not the demo. Springback compensation in real time is clever, but how does it hold up across material batch variation over hundreds of parts? That is the field-deployment question no podcast can fully answer."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T20:26:54.215323+00:00",
+    "media": {
+      "figures": [
+        "media/44e3ec46/fig_00.png",
+        "media/44e3ec46/fig_01.png"
+      ],
+      "bsky": [
+        "media/44e3ec46/bsky_00.png",
+        "media/44e3ec46/bsky_01.png",
+        "media/44e3ec46/bsky_02.png",
+        "media/44e3ec46/bsky_03.png"
+      ],
+      "slides": [
+        "media/44e3ec46/slide_00.png",
+        "media/44e3ec46/slide_01.png",
+        "media/44e3ec46/slide_02.png",
+        "media/44e3ec46/slide_03.png",
+        "media/44e3ec46/slide_04.png",
+        "media/44e3ec46/slide_05.png",
+        "media/44e3ec46/slide_06.png",
+        "media/44e3ec46/slide_07.png"
+      ]
+    },
+    "issue": 102
   }
 ]
