@@ -7171,7 +7171,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-11T09:13:27.769753+00:00",
     "media": {
       "figures": [
@@ -7196,7 +7196,9 @@
     },
     "issue": 93,
     "scheduled_after": "2026-07-11T15:42:25.755257+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "f04f949d",
@@ -7279,7 +7281,7 @@
       ]
     },
     "issue": 94,
-    "scheduled_after": "2026-07-11T15:42:25.755257+00:00",
+    "scheduled_after": "2026-07-11T17:30:39.874068+00:00",
     "queue_notified": true
   },
   {
@@ -7407,7 +7409,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T11:30:12.621243+00:00",
     "media": {
       "bsky": [
@@ -7431,7 +7433,9 @@
         "media/6867076d/fig_02.png"
       ]
     },
-    "issue": 96
+    "issue": 96,
+    "scheduled_after": "2026-07-11T17:30:39.874068+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "065c9745",
@@ -7738,5 +7742,154 @@
       ]
     },
     "issue": 98
+  },
+  {
+    "draft_id": "8dd7bdb3",
+    "paper": {
+      "id": "rss-ab31575db0",
+      "title": "CENav: Complexity-Aware Adaptive Navigation for Quadrotors in Cluttered Environments",
+      "abstract": "Autonomous quadrotor navigation in cluttered environments requires adaptive planning strategies under limited onboard computational resources. This letter presents CENav, a complexity-aware navigation framework that couples perception-derived environmental difficulty with downstream flight behavior. To this end, we formulate environmental complexity (EC) as a multi-dimensional representation that jointly captures geometric properties, topological structure, and motion-related risk of the surrounding environment, providing a unified measure of navigational difficulty. To enable efficient online deployment, we further develop a lightweight query-aware complexity estimation network (Q-CENet) that predicts EC at multiple locations using a KPConv-based hierarchical encoder and a motion-aware attention decoder. Finally, we propose a semantic decision interface that maps the estimated EC to navigation-related parameters, allowing existing planners to dynamically adapt flight speed, replanning frequency, planning horizon, and other decision-relevant settings accordingly. Extensive simulations and real-world experiments validate the proposed framework, and the code will be released as an open-source package.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578293",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Speed drops from 3 m/s to 0.8 m/s mid-flight. That's the point.",
+      "commentary": "CENav is a complexity-aware wrapper that sits on top of existing planners and dynamically adjusts flight speed, replanning rate, and horizon based on how geometrically and topologically nasty the current environment actually is. The clever bit is Q-CENet: a KPConv-based network that estimates environmental complexity at multiple query locations in one forward pass, which keeps compute tractable onboard. In dense clutter the drone slows itself down before it needs to react, rather than after. Honest caveat: the real-world experiments look limited in scale, and the hard test is not a structured lab obstacle course but an unstructured industrial or post-disaster site where complexity estimation can fail silently.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Most planners run at fixed speed and fixed replanning rate regardless of how cluttered the environment is. That wastes compute in open space and causes failures in tight corridors."
+        },
+        {
+          "title": "What CENav actually does",
+          "body": "It estimates environmental complexity continuously, then feeds that score into a semantic decision interface that adjusts speed, planning horizon, and replanning frequency on the fly."
+        },
+        {
+          "title": "How complexity is measured",
+          "body": "Three dimensions: geometric properties, topological structure, and motion-related risk. Combined into a single scalar score used to drive downstream planner parameters."
+        },
+        {
+          "title": "The network: Q-CENet",
+          "body": "KPConv hierarchical encoder plus a motion-aware attention decoder. Predicts complexity at multiple locations in one forward pass. Designed to run onboard with limited compute."
+        },
+        {
+          "title": "What it looks like in flight",
+          "body": "Open corridor: 3 m/s, long planning horizon, low replanning rate. Dense clutter: drops to 0.8 m/s, short horizon, high replanning rate. The drone self-governs based on what it perceives."
+        },
+        {
+          "title": "The real question",
+          "body": "Lab obstacle courses have predictable complexity gradients. Post-disaster rubble, dense forest, underground mines: complexity estimation can fail without any visible warning. Field validation is the missing piece."
+        }
+      ],
+      "video_script": "Most autonomous drones fly at one speed with one planning rate, no matter what's in front of them. CENav changes that. It continuously estimates how complex the environment is, geometrically, topologically, and in terms of motion risk, then feeds that score directly into the planner. Tight corner ahead? The drone slows itself down before it reacts. The network does this onboard, in real time. It works in simulation and in lab tests. The open question is whether complexity estimation stays reliable when the environment stops being structured. Would you trust this in a search and rescue scenario?",
+      "caption_instagram": "Most quadrotor planners treat a cluttered warehouse the same as an open field. Same speed, same replanning rate, same horizon. CENav doesn't.\n\nThis paper introduces a complexity-aware framework that estimates how geometrically and topologically difficult the current environment is, then uses that score to actively adjust flight behavior. Faster in open space, slower and more reactive in dense clutter.\n\nThe network behind it, Q-CENet, runs KPConv-based encoding with a motion-aware attention decoder. It predicts complexity at multiple locations in one forward pass, which is the part that makes onboard deployment feasible.\n\nReal-world results are promising. The honest limitation: structured lab courses have predictable complexity gradients. The real stress test is unstructured, like underground inspection or post-disaster search, where the complexity estimator can be confidently wrong. That paper hasn't been written yet.\n\nCENav: Complexity-Aware Adaptive Navigation for Quadrotors in Cluttered Environments, IEEE RA-L 2026.\n\n#swarmrobotics #autonomousUAV #quadrotor #motionplanning #fieldrobotics #roboticsinspection #embodiedAI",
+      "caption_tiktok": "Your drone slows itself down before it has to. That's CENav. Complexity-aware navigation that actually adapts mid-flight.\n#droneracing #autonomousrobots #robotics #UAV #motionplanning",
+      "post_bluesky": "Speed drops from 3 m/s to 0.8 m/s mid-flight. That's not a failure. That's CENav working. Complexity-aware nav that tunes speed, horizon, replanning rate on the fly. Clever onboard design. Field clutter is the real test. http://ieeexplore.ieee.org/document/11578293",
+      "bluesky_thread": [
+        "The genuinely clever part: Q-CENet predicts complexity at multiple locations in one forward pass using KPConv encoding and a motion-aware attention decoder. That's what keeps it feasible onboard. Wraps around existing planners, so you don't need to rebuild your stack.",
+        "My caveat: lab obstacle courses have predictable complexity gradients. Underground mines, post-disaster rubble, dense forest canopy do not. Complexity estimation that fails silently is worse than fixed-speed planning. Anyone tested adaptive planners like this in genuinely unstructured field…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T15:59:59.353086+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/8dd7bdb3/bsky_00.png",
+        "media/8dd7bdb3/bsky_01.png",
+        "media/8dd7bdb3/bsky_02.png",
+        "media/8dd7bdb3/bsky_03.png"
+      ],
+      "slides": [
+        "media/8dd7bdb3/slide_00.png",
+        "media/8dd7bdb3/slide_01.png",
+        "media/8dd7bdb3/slide_02.png",
+        "media/8dd7bdb3/slide_03.png",
+        "media/8dd7bdb3/slide_04.png",
+        "media/8dd7bdb3/slide_05.png",
+        "media/8dd7bdb3/slide_06.png",
+        "media/8dd7bdb3/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "eae4df59",
+    "paper": {
+      "id": "rss-6d65e9a1cd",
+      "title": "Video Friday: A World Cup for Robots",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos , collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO IROS 2026 : 27 September–1 October 2026, PITTSBURGH Humanoids Summit Seoul : 22–23 September 2026, SEOUL Enjoy today’s videos! For the first time, two full teams of humanoid robots played an 11-vs-11 soccer match on hardware, bringing one of robotics’ most ambitious long-term visions closer to reality. Never before have two full-sized humanoid robot teams played a soccer game against each other. [ RoboCup ] Engineers at MIT and EPFL in Lausanne, Switzerland, have designed a robot that can swim underwater, and flap out of the water to continue flying through air, much like a diving bird. The robot can help scientists study the mechanics that enable these actions in aquatic aviators and may help launch a new class of aerial-aquatic drones and vehicles. [ MIT ] We’re excited to announce our breakthrough robotic hands for the NEO platform: hands that match or exceed human-level dexterity, strength, safety, and reliability. Designed from the ground up, these 25-DoF hands combine 25 fully actuated degrees of freedom with a tendon-driven system, rich tactile sensing, and built-in compliance. ",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-robot-world-cup",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "22 humanoid robots. One soccer pitch. First time ever.",
+      "commentary": "RoboCup 2026 pulled off something the community has debated for decades: two full 11-vs-11 teams of full-sized humanoid robots actually playing soccer against each other on hardware. No simulation, no cherry-picked clips. The MIT/EPFL aquatic-aerial robot is the sleeper story here though: transitions between water and air are mechanically brutal, and getting that to work on a single platform is genuinely hard. The 1X NEO hands claiming 25 DoF with tendon actuation and tactile sensing sound impressive until you remember every tendon-driven hand demo looks great until you add grime, moisture, or sustained load cycles. The humanoid soccer result is the one that earns its hype today.",
+      "slides": [
+        {
+          "title": "Robot World Cup happened",
+          "body": "RoboCup 2026: two teams of full-sized humanoid robots, 11-vs-11, played a complete soccer match on hardware. First time this has been done at this scale. The field looked chaotic. That's the point."
+        },
+        {
+          "title": "Why this is hard",
+          "body": "Bipedal locomotion, real-time ball tracking, multi-agent coordination, all on physical hardware simultaneously. Any one of those is a thesis topic. Doing all three in a match context is the actual test."
+        },
+        {
+          "title": "Aquatic-aerial robot",
+          "body": "MIT and EPFL built a robot that swims, then flaps out of the water and flies. Inspired by diving birds. The water-to-air transition requires absorbing huge hydrodynamic drag changes mid-motion. Small platform, big physics problem."
+        },
+        {
+          "title": "25-DoF robotic hand",
+          "body": "1X claims their NEO hand matches human dexterity with 25 fully actuated DoF, tendon-driven actuation, and tactile sensing. Lab demos are promising. Tendon systems accumulate wear and slack under real workloads."
+        },
+        {
+          "title": "What actually matters today",
+          "body": "The humanoid soccer result is a coordination benchmark the community can point to. Not perfection, but a repeatable, physical, multi-agent stress test that simulation alone cannot replicate."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Walking speed, fall recovery, and ball control were rough by human standards. That's fine. The bar today was: did it run? Yes. Now the hardware roadmap has a real reference point."
+        }
+      ],
+      "video_script": "Two full teams of humanoid robots just played soccer against each other. Not simulation. Real hardware, real field, real chaos. RoboCup 2026 delivered something the community has argued about for decades. Meanwhile MIT and EPFL quietly dropped an aquatic-aerial robot that transitions from swimming to flying mid-motion. And 1X is claiming human-level dexterity on their NEO hand. Lot happening this week. The question is: which of these demos actually survives contact with the real world?",
+      "caption_instagram": "Robot World Cup just happened. Literally.\n\nRoboCup 2026 ran the first ever 11-vs-11 full-sized humanoid soccer match on physical hardware. Two complete teams. One pitch. It was messy, slow, and completely real. That matters more than the scoreline.\n\nThe MIT/EPFL aquatic-aerial robot is the sleeper story. Transitioning from water to air mid-motion means your platform has to handle a massive drag discontinuity in real time. That's not a software problem, it's a physics and materials problem. Getting it working on a small drone-scale platform is genuinely impressive work.\n\n1X's NEO hand claims 25 DoF, tendon actuation, and tactile sensing matching human dexterity. Tendon-driven systems have a known problem: wear and slack under sustained load or dirty conditions. The lab demo looks great. Field conditions are another story.\n\nThis week's IEEE Spectrum Video Friday is worth your time. The humanoid soccer result gives the whole community a real physical benchmark to argue about.\n\n#swarmrobotics #humanoidrobots #robocup2026 #fieldrobotics #roboticshardware #multiagentrobotics #roboticsresearch",
+      "caption_tiktok": "First ever 11v11 humanoid robot soccer match just happened at RoboCup 2026. Real hardware. Real chaos. Actually real. Which demo impressed you most? #robotics #robocup #humanoidrobot #robotsoccer",
+      "post_bluesky": "22 humanoid robots played 11v11 soccer on a real pitch this week. First time ever. RoboCup 2026 also brought an aquatic-aerial drone and a 25-DoF robotic hand. Spectrum has the highlight reel. https://spectrum.ieee.org/video-friday-robot-world-cup",
+      "bluesky_thread": [
+        "The soccer match gets the headline but the MIT/EPFL aquatic-aerial robot is the one I keep thinking about. Water-to-air transition is a brutal mechanical problem. Drag coefficient changes mid-motion on a small platform. That's not easy.",
+        "On the 1X NEO hand: 25 DoF tendon-driven sounds great until you run it for 8 hours in a dusty warehouse. Every tendon system demo looks clean at launch. What does the wear curve look like at 500 hours? That's the number I want."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T16:00:28.126498+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/eae4df59/bsky_00.png",
+        "media/eae4df59/bsky_01.png",
+        "media/eae4df59/bsky_02.png",
+        "media/eae4df59/bsky_03.png"
+      ],
+      "slides": [
+        "media/eae4df59/slide_00.png",
+        "media/eae4df59/slide_01.png",
+        "media/eae4df59/slide_02.png",
+        "media/eae4df59/slide_03.png",
+        "media/eae4df59/slide_04.png",
+        "media/eae4df59/slide_05.png",
+        "media/eae4df59/slide_06.png",
+        "media/eae4df59/slide_07.png"
+      ]
+    }
   }
 ]

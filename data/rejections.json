@@ -261,5 +261,15 @@
     "title": "Video Friday: Watch This Running Robot Not Fall Down Stairs",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "CENav: Complexity-Aware Adaptive Navigation for Quadrotors in Cluttered Environments",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Video Friday: A World Cup for Robots",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]

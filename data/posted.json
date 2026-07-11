@@ -670,5 +670,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "19925431",
+    "paper_id": "rss-a62cb9ab2c",
+    "title": "Boston Dynamics brings its legged robots to the FIFA World Cup",
+    "format": "carousel",
+    "hook": "Spot is patrolling the World Cup. Atlas is doing footwork drills.",
+    "posted_at": "2026-07-11T16:00:39.874072+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqezupi34h2f",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
