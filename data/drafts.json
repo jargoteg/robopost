@@ -8514,5 +8514,82 @@
       ]
     },
     "issue": 103
+  },
+  {
+    "draft_id": "7104352c",
+    "paper": {
+      "id": "rss-4042cf2896",
+      "title": "Restoring surgeons’ sense of touch with robotic fingertips",
+      "abstract": "By Anthony King Modern surgery has gone from long incisions to tiny cuts guided by robots and AI. In the process, however, surgeons have lost something vital: the chance to feel inside the body directly. Without palpation, it becomes harder to detect tissue abnormalities during an operation. A group of surgeons and engineers across Europe [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/restoring-surgeons-sense-of-touch-with-robotic-fingertips/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "There is a reason surgeons keep asking for their fingers back",
+      "commentary": "Robotic surgery traded tactile feedback for precision optics, and surgeons have been flying blind ever since. This European consortium is building sensorized fingertip-scale devices that restore palpation cues during minimally invasive procedures, letting surgeons feel tissue stiffness differentials without a hand inside the cavity. The honest caveat: lab tissue phantoms are forgiving, and real surgical environments involve blood, variable pressure, and instrument drift that sensor calibration rarely survives. Worth watching, but the gap between 'feels real on the bench' and 'trusted in the OR' is where most haptic projects stall.",
+      "slides": [
+        {
+          "title": "Surgery lost the sense of touch",
+          "body": "Minimally invasive robotics replaced large incisions with cameras and instruments. Benefit: smaller cuts. Cost: surgeons can no longer feel tissue directly. Palpation is how you find tumors, calcifications, structural anomalies."
+        },
+        {
+          "title": "What palpation actually tells you",
+          "body": "A trained hand detects stiffness gradients that cameras miss entirely. Cancerous tissue and healthy tissue can look identical. Without touch, surgeons rely on visual proxies that are slower and less reliable."
+        },
+        {
+          "title": "The fingertip sensor approach",
+          "body": "European surgeons and engineers built small sensorized devices scaled to surgical instrument tips. Goal: relay contact force and tissue stiffness cues back to the operating surgeon in real time during a procedure."
+        },
+        {
+          "title": "Why haptic feedback keeps failing",
+          "body": "Most haptic systems work in clean labs on uniform phantoms. Real tissue is wet, variable, and attached to a moving patient. Calibration drifts. Latency spikes. The OR is a brutal environment for delicate sensors."
+        },
+        {
+          "title": "What success actually requires",
+          "body": "Sterilization compatibility, sub-10ms latency, robustness to blood and saline, and surgeon trust built over dozens of procedures. None of that shows up in a bench demo. That is where this work needs to go next."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "If even partial stiffness feedback reduces missed intraoperative findings, patient outcomes improve measurably. The clinical question is sharper than the engineering one: how much touch is enough to matter?"
+        }
+      ],
+      "video_script": "Robotic surgery made incisions smaller, but it took something away: the surgeon's sense of touch. Without palpation, feeling tissue stiffness, you can miss what cameras cannot see. A European team is building sensor-equipped fingertips for surgical robots that feed tactile cues back to the surgeon in real time. The engineering is clever. The real test is whether it survives sterilization cycles, blood, and a live OR. Lab results are not clinical results. So here is the question: how much haptic fidelity does a surgeon actually need before they trust it?",
+      "caption_instagram": "Robotic surgery is precise. It is also numb.\n\nWhen procedures moved to tiny incisions and camera guidance, surgeons lost direct contact with tissue. Palpation, pressing and feeling for abnormalities, is one of the most reliable diagnostic tools a surgeon has. Cameras do not replace it.\n\nA cross-European team of surgeons and engineers is building sensorized fingertip-scale devices that restore tactile feedback during minimally invasive procedures. The goal is letting a surgeon feel tissue stiffness differentials without a hand inside the body.\n\nThe honest caveat: haptic systems fail this test constantly. Real surgical environments involve saline, blood, motion artifacts, and sterilization cycles that destroy sensor calibration. The gap between a convincing lab demo and a trusted OR tool is where most of these projects stop. This one is worth following to see if the clinical validation catches up to the concept.\n\nFull article via Robohub, linked in bio.\n\n#surgicalrobotics #haptics #medicalrobotics #minimally invasivesurgery #roboticsresearch #sensorfusion #humanrobotinteraction",
+      "caption_tiktok": "Robotic surgery is precise but surgeons literally cannot feel anything. This team is trying to fix that with sensorized fingertips. Harder than it sounds. #surgicalrobotics #haptics #medtech #robotics",
+      "post_bluesky": "There is a reason surgeons keep asking for their fingers back. Robotic surgery removed the incision and the sense of touch together. This European team is building sensor fingertips to restore palpation feedback in the…\nhttps://robohub.org/restoring-surgeons-sense-of-touch-with-robotic-fingertips/",
+      "bluesky_thread": [
+        "The hard part is not sensing tissue stiffness in a lab. It is doing it through a sterilized, blood-covered instrument tip with sub-10ms latency while the patient moves. That is where haptic projects go quiet. Bench demo to OR is not one step, it is a decade.",
+        "Curious what surgeons in the thread actually think: is partial haptic feedback useful, or does incomplete touch sense create false confidence that makes things worse? I genuinely do not know the answer and the literature is thin on it."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T22:27:45.451264+00:00",
+    "media": {
+      "figures": [
+        "media/7104352c/fig_00.png"
+      ],
+      "bsky": [
+        "media/7104352c/bsky_00.png",
+        "media/7104352c/bsky_01.png",
+        "media/7104352c/bsky_02.png",
+        "media/7104352c/bsky_03.png"
+      ],
+      "slides": [
+        "media/7104352c/slide_00.png",
+        "media/7104352c/slide_01.png",
+        "media/7104352c/slide_02.png",
+        "media/7104352c/slide_03.png",
+        "media/7104352c/slide_04.png",
+        "media/7104352c/slide_05.png",
+        "media/7104352c/slide_06.png",
+        "media/7104352c/slide_07.png"
+      ]
+    },
+    "issue": 104
   }
 ]
