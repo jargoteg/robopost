@@ -606,5 +606,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "4dd9cdfc",
+    "paper_id": "2607.07873v1",
+    "title": "STEMbot: A Compliant Robot for Under-Canopy Plant Navigation",
+    "format": "carousel",
+    "hook": "This robot climbs inside your tomato plants to find pests.",
+    "posted_at": "2026-07-11T08:45:39.374223+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqebktl2ns27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
