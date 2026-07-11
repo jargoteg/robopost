@@ -7246,7 +7246,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T10:53:11.206842+00:00",
     "media": {
       "figures": [
@@ -7272,7 +7272,9 @@
         "media/f04f949d/slide_07.png"
       ]
     },
-    "issue": 94
+    "issue": 94,
+    "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "d8b53126",
@@ -7350,5 +7352,77 @@
       ]
     },
     "issue": 95
+  },
+  {
+    "draft_id": "6867076d",
+    "paper": {
+      "id": "rss-9055518988",
+      "title": "Ultralightweight sonar plus AI lets tiny drones navigate like bats",
+      "abstract": "This small drone is using sonar, similar to bats’ echolocation, to navigate through a grove of trees. Image credit: Nitin Sanket. By Nitin Sanket, Worcester Polytechnic Institute To help small aerial robots navigate in the dark and other low-visibility environments, my colleagues and I developed an ultrasound-based perception system inspired by bat echolocation. Current robots [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/ultralightweight-sonar-plus-ai-lets-tiny-drones-navigate-like-bats/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "This drone navigates blind using sound, no camera, no LiDAR",
+      "commentary": "WPI's team built an ultrasound-based perception system light enough for small MAVs, letting them dodge obstacles in darkness and low-visibility without the weight penalty of cameras or LiDAR. The bat inspiration is real engineering, not metaphor: they're using pulse-echo timing to reconstruct obstacle geometry on-board. Clever for GPS-denied indoor or underground inspection where lighting is absent. Honest caveat: tree groves in a controlled grove test are not a collapsed mine shaft or a flooding tunnel, and sonar has well-known multipath headaches in cluttered hard-surface environments. I want to see the failure cases before I believe the field story.",
+      "slides": [
+        {
+          "title": "No camera, no LiDAR, no light",
+          "body": "A small drone navigates a grove of trees using only ultrasound pulses and AI processing. Total sensor weight: low enough for a palm-sized MAV. Cameras and LiDAR are left on the bench."
+        },
+        {
+          "title": "Bat echolocation, literally",
+          "body": "The system emits ultrasound pulses and measures echo return times to estimate obstacle distance and geometry. Same physical principle bats use. Implemented in real hardware, not simulation."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Underground inspection, post-collapse search and rescue, smoky warehouses: all environments where cameras fail. A sonar-only MAV could operate where optical sensors are useless."
+        },
+        {
+          "title": "The honest limitation",
+          "body": "Sonar suffers multipath reflections in hard-walled spaces like tunnels or metal ducts. An outdoor tree grove is a best-case scenario. Hard surfaces and clutter will stress-test this differently."
+        },
+        {
+          "title": "What to watch for next",
+          "body": "Can it handle faster flight speeds? Does accuracy degrade in reverberant indoor spaces? And what is the actual obstacle avoidance success rate at the tested distances? Numbers from the paper will decide this."
+        }
+      ],
+      "video_script": "Imagine sending a drone into a collapsed building. No light, no GPS, cameras useless. Researchers at WPI just built a drone that navigates like a bat, using ultrasound pulses instead of cameras or LiDAR. It's light enough for a palm-sized vehicle and it dodged real trees in real tests. But sonar gets messy in hard-walled spaces. Tunnels, concrete rubble, metal structures, those are where this needs to prove itself next. Could this be the sensor stack for underground search and rescue?",
+      "caption_instagram": "A drone that navigates like a bat. No camera, no LiDAR, just ultrasound.\n\nResearchers at Worcester Polytechnic Institute built an ultrasound-based perception system light enough for small MAVs. It emits pulses, listens to echoes, and builds enough of a spatial picture to dodge obstacles in complete darkness.\n\nThe tree grove demo is compelling. But the real test is whether it survives reverberant hard-surface environments: collapsed buildings, mine shafts, flooded tunnels. Sonar multipath is a genuine headache and outdoor trees are a gentler case than anything you'd find underground.\n\nStill, the weight budget alone is interesting. If you can swap a camera stack for a sonar system and keep the MAV airborne longer, that matters for inspection missions where lighting is zero and flight time is everything.\n\nFull piece via Robohub: 'Ultralightweight sonar plus AI lets tiny drones navigate like bats'\n\n#swarmrobotics #MAV #droneresearch #searchandrescue #inspectionrobotics #fieldrobotics #robotics #autonomoussystems",
+      "caption_tiktok": "Drone navigates a forest with zero cameras, just bat-style sonar. The hard question is whether it works underground where walls bounce sound everywhere. #dronetech #robotics #searchandrescue #fieldrobotics",
+      "post_bluesky": "A tiny drone navigating a tree grove with zero cameras, zero LiDAR, pure ultrasound. Bat echolocation as actual engineering. Impressive weight budget. The real test: hard-walled underground environments where…\nhttps://robohub.org/ultralightweight-sonar-plus-ai-lets-tiny-drones-navigate-like-bats/",
+      "bluesky_thread": [
+        "The outdoor grove demo is a gentle case. Smooth-barked trees, open spacing, soft ground absorbing reflections. Try this in a mine tunnel with concrete walls and metal supports and the multipath problem becomes a different beast entirely. That's where I want to see the next test.",
+        "The weight argument is the strongest part of this work. Camera plus compute is heavy. If sonar-plus-AI hits the same obstacle avoidance reliability at a fraction of the mass, you get longer flight time in GPS-denied spaces. That tradeoff matters enormously for real inspection missions. What field…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T11:30:12.621243+00:00",
+    "media": {
+      "figures": [
+        "media/6867076d/fig_00.png"
+      ],
+      "bsky": [
+        "media/6867076d/bsky_00.png",
+        "media/6867076d/bsky_01.png",
+        "media/6867076d/bsky_02.png",
+        "media/6867076d/bsky_03.png"
+      ],
+      "slides": [
+        "media/6867076d/slide_00.png",
+        "media/6867076d/slide_01.png",
+        "media/6867076d/slide_02.png",
+        "media/6867076d/slide_03.png",
+        "media/6867076d/slide_04.png",
+        "media/6867076d/slide_05.png",
+        "media/6867076d/slide_06.png"
+      ]
+    },
+    "issue": 96
   }
 ]
