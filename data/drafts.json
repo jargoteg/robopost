@@ -6796,5 +6796,82 @@
       ]
     },
     "issue": 89
+  },
+  {
+    "draft_id": "58d64d2b",
+    "paper": {
+      "id": "rss-c1fa51f65a",
+      "title": "Ground Robots Inherit the Kill Zone",
+      "abstract": "Borys Drozhak has a vision: a frontline almost free of humans, patrolled by flying drones and ground robots, and continuously monitored by AI-controlled sensor networks. And it’s not a pipe dream. Ukrainian roboticists have made major strides in that direction over the past four years. Remotely controlled ground vehicles fitted with machine guns and grenade launchers now patrol the no-man’s land straddling the front, part of a robotic legion that has stymied Russia’s territorial ambitions so far this year. Drozhak is a co-founder and CEO of RoverTech , which manufactures the Zmyi, one of Ukraine’s most successful ground robots. Zmyi, Ukrainian for snake, is an 800-kilogram (1,700-pound) rover, 2.15 by 1.5 meters in size, with 75-centimeter diameter wheels. The Zmyi comes in various configurations—for demining, logistics, fighting fires, firing a machine gun, or launching grenades. According to Drozhak, the UGV is a record-breaker among Ukrainian ground robots. It’s engineered to be nearly noiseless and emit as little heat as possible, helping it to elude Russia’s intelligence, surveillance, and reconnaissance (ISR) drones. As a result, a Zmyi rover completes on average 57 missions across the kill zone before being destroyed. The kill zone is the roughly 35-kilometer-wide swath of land that straddles the front line; its width is variable and determined mainly by the growing range of the drones. “Usually, a UGV [uncrewed ground vehicle] on the battlefield lasts about seven miss",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/ukraine-ground-drones",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "57 missions before it dies. Average UGV lasts 7.",
+      "commentary": "Ukraine's Zmyi UGV survives an average of 57 missions across the kill zone before being destroyed. The baseline is 7. That gap comes from deliberate engineering choices: near-silent electric drive, minimal thermal signature, and 75cm wheels that handle terrain most ground robots can't. This is field robotics under genuinely lethal selection pressure, which is a faster feedback loop than any lab. The caveat: these numbers come from the manufacturer, and 'missions' is undefined. But even discounted, the operational pattern here, cheap expendable UGVs absorbing ISR and combat roles to keep humans back, is already reshaping how the front works.",
+      "slides": [
+        {
+          "title": "Average UGV lasts 7 missions",
+          "body": "On the Ukrainian front line, the kill zone is roughly 35 km wide. Most ground robots don't survive it. The Zmyi averages 57 missions before destruction. That 8x difference comes from specific engineering choices, not luck."
+        },
+        {
+          "title": "What the Zmyi actually is",
+          "body": "800 kg, 2.15 x 1.5 m frame, 75 cm diameter wheels. Configurable for demining, logistics, firefighting, machine gun, or grenade launcher. Electric drive, low thermal output, near-silent operation to evade ISR drones."
+        },
+        {
+          "title": "Why the thermal signature matters",
+          "body": "Russia's ISR drones hunt by heat and sound. Zmyi's electric powertrain and heat suppression make it harder to detect. This is not a bonus feature. It is the primary reason the vehicle survives long enough to complete a mission."
+        },
+        {
+          "title": "Expendable by design",
+          "body": "RoverTech CEO Drozhak's stated goal: a frontline nearly free of humans. UGVs are not replacing soldiers because they are better. They are replacing soldiers because losing a robot costs money, not lives."
+        },
+        {
+          "title": "Field pressure no lab replicates",
+          "body": "Combat gives you ground truth immediately. A robot that fails gets destroyed. Iteration cycles in Ukraine are months, not years. The engineering feedback loop here is unlike anything in a test environment."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Mission counts come from the manufacturer. 'Mission' is undefined. Survivability may reflect terrain sector, operator skill, or mission type, not hardware alone. Still, even half the claimed figure would be a meaningful result."
+        }
+      ],
+      "video_script": "Most ground robots die after 7 missions in Ukraine's kill zone. One is averaging 57. The Zmyi is 800 kilograms, nearly silent, runs cool enough to hide from thermal drones, and can carry a machine gun or demining kit depending on the day. It's not autonomous. It's remote-controlled. But the point isn't autonomy right now. The point is keeping humans 35 kilometers away from the front. This is what field robotics under live selection pressure looks like. The question is: what do we actually learn from this that transfers back to civilian field deployments?",
+      "caption_instagram": "57 missions before it dies. The average Ukrainian frontline UGV lasts 7.\n\nThe Zmyi is an 800 kg ground robot built by RoverTech. Near-silent electric drive. Low thermal output to hide from Russian ISR drones. 75 cm wheels. Modular payload: demining, logistics, machine gun, or grenade launcher depending on the day.\n\nThis is field robotics with real stakes. No simulated environment, no controlled test track. Every design decision gets validated or punished in weeks. The feedback loop is brutal and honest in a way no lab can replicate.\n\nThe caveat worth noting: those mission counts come from the manufacturer, and the definition of 'mission' is unspecified. But even corrected for that, the survivability gap over baseline UGVs points to something real in the engineering.\n\nRead the full IEEE Spectrum piece to understand where Ukrainian roboticists think this goes next.\n\n#swarmrobotics #fieldrobotics #UGV #groundrobots #autonomoussystems #defensetech #robotics",
+      "caption_tiktok": "57 missions. Most robots last 7. Ukraine's frontline UGV is doing something right. #UGV #fieldrobotics #defensetech #robotics",
+      "post_bluesky": "57 missions before it's destroyed. Average UGV on Ukraine's front lasts 7. The Zmyi's edge: near-silent electric drive, low thermal signature, 75cm wheels. Combat is the harshest field test there is. https://spectrum.ieee.org/ukraine-ground-drones",
+      "bluesky_thread": [
+        "What stands out to me: the goal isn't autonomy yet. These are remote-controlled. The win is just keeping humans 35 km back from the kill zone. Practical deployment before full autonomy. More field programs should think this way.",
+        "Caveat: mission counts are manufacturer-reported and 'mission' is undefined. Could reflect terrain sector or operator skill as much as hardware. Still, the survivability gap is large enough to be real even if the number is generous. What metric would you actually trust here?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T04:23:52.293157+00:00",
+    "media": {
+      "figures": [
+        "media/58d64d2b/fig_00.png"
+      ],
+      "bsky": [
+        "media/58d64d2b/bsky_00.png",
+        "media/58d64d2b/bsky_01.png",
+        "media/58d64d2b/bsky_02.png",
+        "media/58d64d2b/bsky_03.png"
+      ],
+      "slides": [
+        "media/58d64d2b/slide_00.png",
+        "media/58d64d2b/slide_01.png",
+        "media/58d64d2b/slide_02.png",
+        "media/58d64d2b/slide_03.png",
+        "media/58d64d2b/slide_04.png",
+        "media/58d64d2b/slide_05.png",
+        "media/58d64d2b/slide_06.png",
+        "media/58d64d2b/slide_07.png"
+      ]
+    },
+    "issue": 90
   }
 ]
