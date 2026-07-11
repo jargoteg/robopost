@@ -824,5 +824,21 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-11T22:40:44.959696+00:00"
+  },
+  {
+    "draft_id": "0d09b9a2",
+    "paper_id": "rss-6f1532b006",
+    "title": "AURA Foresight Reaches Global XPRIZE Wildfire Finals in Alaska",
+    "format": "carousel",
+    "hook": "4 teams left. 130 started. Wildfire robots head to Alaska.",
+    "posted_at": "2026-07-11T23:14:46.420085+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqfs4xqetl2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

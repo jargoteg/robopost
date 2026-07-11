@@ -7723,7 +7723,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-11T15:03:37.976754+00:00",
     "media": {
       "figures": [
@@ -7751,7 +7751,9 @@
     },
     "issue": 98,
     "scheduled_after": "2026-07-11T22:30:17.932629+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "8dd7bdb3",
@@ -8134,7 +8136,7 @@
       ]
     },
     "issue": 101,
-    "scheduled_after": "2026-07-11T22:30:17.932629+00:00",
+    "scheduled_after": "2026-07-12T00:44:46.420082+00:00",
     "queue_notified": true
   },
   {
