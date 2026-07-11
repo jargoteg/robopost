@@ -232,5 +232,10 @@
     "title": "FC-Vision: Real-Time Visibility-Aware Replanning for Occlusion-Free Aerial Target Structure Scanning in Unknown Environments",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Multi-Touch and Bending Sensing Using Electrical Impedance Tomography for Robotics",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]

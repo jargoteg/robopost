@@ -6873,5 +6873,156 @@
       ]
     },
     "issue": 90
+  },
+  {
+    "draft_id": "a59dfa2d",
+    "paper": {
+      "id": "rss-7660b71627",
+      "title": "Multi-Touch and Bending Sensing Using Electrical Impedance Tomography for Robotics",
+      "abstract": "Electrical Impedance Tomography (EIT) offers a promising solution for distributed tactile sensing with minimal wiring and full-surface coverage in robotic applications. However, EIT-based tactile sensors face significant challenges during surface bending. Deformation alters the baseline impedance distribution and couples with touch-induced conductivity variations, complicating signal interpretation. To address this challenge, we present a novel sensing framework that integrates a deep neural network for interaction state classification with a dynamic adaptive reference strategy to decouple touch and deformation signals, while a data-driven regression model translates EIT voltage changes into continuous bending angles. The framework is validated using a magnetic hydrogel composite sensor that conforms to bendable surfaces. Experimental evaluations demonstrate that the proposed framework achieves precise and robust bending angle estimation, high accuracy in distinguishing touch, bending, and idle states, and significantly improves touch localization quality under bending deformation compared to conventional fixed-reference methods. Real-time experiments confirm the system’s capability to reliably detect multi-touch interactions and track bending angles across varying deformation conditions. This work paves the way for flexible EIT-based robotic skins capable of rich multimodal sensing in robotics and human–robot interaction.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11592741",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Bending breaks tactile sensors. This one bends with the robot.",
+      "commentary": "EIT-based skin is genuinely appealing for robotics: you inject current through a conductive sheet, measure boundary voltages, and reconstruct touch location with very few wires. The nasty problem is that bending the surface shifts the baseline impedance field, so the sensor hallucinates touches that aren't there. This paper attacks that directly with a dynamic adaptive reference that updates the baseline as the surface deforms, plus a DNN classification layer to split bending from actual contact. The real-time validation on a magnetic hydrogel sensor is a good sign. Honest caveat: 'real-time experiments' here means controlled bench deformation, not a robot finger crumpling against a pipe in the dark, so field durability of the hydrogel composite is the open question nobody has answered yet.",
+      "slides": [
+        {
+          "title": "The core problem with robot skin",
+          "body": "EIT-based tactile sensors read touch by mapping conductivity changes across a surface. Bend the surface and the baseline shifts. The sensor can no longer tell a finger press from a flex. Standard fixed-reference methods fall apart."
+        },
+        {
+          "title": "What EIT actually does",
+          "body": "Inject small currents through electrode pairs around the sensor boundary. Measure resulting voltages. Reconstruct internal conductivity via inverse problem. Full-surface coverage, minimal wiring. The tradeoff: the inverse problem is sensitive to any geometry change."
+        },
+        {
+          "title": "The fix: adaptive reference",
+          "body": "Instead of comparing to a fixed idle-state map, the framework continuously updates the reference as bending changes the baseline. A regression model extracts bending angle. A DNN classifies state: touch, bend, or idle. Signals are decoupled rather than mixed."
+        },
+        {
+          "title": "What the numbers show",
+          "body": "The framework improves multi-touch localization accuracy under bending versus conventional fixed-reference methods. Bending angle tracking runs in real time. The sensor substrate is a magnetic hydrogel composite that conforms to curved surfaces."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Legs, grippers, and inspection arms all deform under load. A skin that only works on a flat bench is decorative. Decoupling deformation from contact signals is the prerequisite for any tactile feedback that survives real deployment."
+        },
+        {
+          "title": "What still needs proving",
+          "body": "Hydrogel durability in wet, abrasive, or high-temperature environments is untested. Bench deformation is not a robot joint cycling 10,000 times. Scaling electrode count and maintaining real-time reconstruction speed on embedded hardware are open problems."
+        }
+      ],
+      "video_script": "Robot skin sounds simple until you try to make it work on a surface that actually moves. Electrical impedance tomography gives you full coverage with almost no wiring, but bend the sensor and the baseline shifts, and now your skin thinks everything is a touch. This paper fixes that with a dynamic reference that updates as the surface deforms, a regression model for bending angle, and a classifier to split contact from flex. Real-time results on a hydrogel composite look solid. But hydrogel on a bench and hydrogel on a field robot joint are very different things. What environment would you want this tested in first?",
+      "caption_instagram": "Tactile skin for robots keeps hitting the same wall: the moment the surface bends, the sensor loses its mind.\n\nElectrical impedance tomography is one of the more elegant approaches out there. Inject current around the boundary of a conductive sheet, measure the voltages, reconstruct where contact happened. Minimal wiring, full coverage. The problem is that bending shifts the baseline impedance map and the standard fixed-reference approach conflates deformation with touch.\n\nThis paper from IEEE tackles it with a dynamic adaptive reference that tracks how the surface is deforming, a regression model that extracts continuous bending angle, and a DNN that classifies whether the sensor is idle, bending, or being touched. Validated on a magnetic hydrogel composite in real-time bench experiments.\n\nThe approach is genuinely smart. The open question is durability. Hydrogel composites in controlled lab deformation cycles are not the same as a gripper finger on a pipe inspection robot working in saltwater for six hours. That test still hasn't been published.\n\nPaper: Multi-Touch and Bending Sensing Using Electrical Impedance Tomography for Robotics. IEEE Xplore 11592741.\n\n#swarmrobotics #tactile #softrobotics #robotskin #EIT #fieldrobotics #haptics #robotics",
+      "caption_tiktok": "Robot skin that actually works when the robot bends. Decoupling touch from deformation with EIT and a dynamic adaptive reference. Clever bench result, now put it in saltwater. #robotics #tactile #softrobotics #EIT #robotskin",
+      "post_bluesky": "Bending breaks EIT-based robot skin. The baseline shifts and the sensor hallucinates touches. This paper fixes it with a dynamic adaptive reference that tracks deformation in real time, then decouples it from actual contact. Clever approach. Hydrogel…\nhttp://ieeexplore.ieee.org/document/11592741",
+      "bluesky_thread": [
+        "The clever bit: instead of one fixed idle-state reference, the framework continuously updates as the surface deforms. A regression model extracts bending angle, a DNN classifies touch vs bend vs idle. Signals stay separated even during simultaneous touch and flex.",
+        "My caveat: 'real-time experiments' here is controlled bench deformation. A manipulator joint cycling under load in a dirty environment is a different thing entirely. Hydrogel composite lifespan under abrasion or temperature swings is still an open question. Who's testing this on actual hardware?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T08:00:35.666110+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/a59dfa2d/bsky_00.png",
+        "media/a59dfa2d/bsky_01.png",
+        "media/a59dfa2d/bsky_02.png",
+        "media/a59dfa2d/bsky_03.png"
+      ],
+      "slides": [
+        "media/a59dfa2d/slide_00.png",
+        "media/a59dfa2d/slide_01.png",
+        "media/a59dfa2d/slide_02.png",
+        "media/a59dfa2d/slide_03.png",
+        "media/a59dfa2d/slide_04.png",
+        "media/a59dfa2d/slide_05.png",
+        "media/a59dfa2d/slide_06.png",
+        "media/a59dfa2d/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "57411d20",
+    "paper": {
+      "id": "rss-3d55ad1a50",
+      "title": "#RoboCup2026 – humanoid league day 2",
+      "abstract": "The second day’s play at RoboCup 2026 has drawn to a close with another bumper set of matches. Teams have come from far and wide to take part in the humanoid soccer competition this year, with 17 different countries represented. China is the most represented country, boasting 15 teams across the three divisions. Other countries […]",
+      "authors": [],
+      "url": "https://robohub.org/robocup2026-humanoid-league-day-2/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "17 countries. 3 divisions. Day 2 at RoboCup humanoid league.",
+      "commentary": "Day 2 of RoboCup 2026 humanoid soccer wrapped with a full slate of matches across all three size divisions. China's 15-team presence shows how seriously institutions there are investing in legged robot R&D at competition pace. The real value here isn't the scoreline, it's watching locomotion and vision pipelines stress-tested by an actual opponent, a real ball, and a surface that doesn't cooperate. Caveat: competition conditions are still controlled relative to open-world deployment, but the pace of improvement year-over-year at RoboCup is one of the clearest benchmarks we have for embodied autonomy under pressure.",
+      "slides": [
+        {
+          "title": "Day 2 is done",
+          "body": "RoboCup 2026 humanoid league day 2 complete. 17 countries competing. Three divisions: KidSize, TeenSize, AdultSize. China leads with 15 teams, more than any other nation."
+        },
+        {
+          "title": "Why this competition matters",
+          "body": "A real ball, a real opponent, real-time decisions. No mocap, no scripted demo. Humanoid soccer stress-tests locomotion, vision, and planning in one package. Lab benchmarks don't offer that."
+        },
+        {
+          "title": "China's 15-team signal",
+          "body": "15 Chinese teams across divisions isn't an accident. It reflects years of university investment in legged robotics pipelines. The depth of that bench will shape the scoreboard by finals day."
+        },
+        {
+          "title": "What to watch on the field",
+          "body": "Look for recovery behavior after falls, not goals. A robot that gets up fast and re-orients tells you more about real deployment readiness than a clean shot on goal from a set position."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "RoboCup fields are flat, lit, and predictable. Performance here is a ceiling estimate for structured indoor tasks, not a floor estimate for field deployment. Still the best open stress test we have."
+        },
+        {
+          "title": "Finals incoming",
+          "body": "Day 2 narrows the bracket. Watch which teams maintain consistent locomotion across a full match duration. Fatigue in the hardware shows up in the second half, not the first."
+        }
+      ],
+      "video_script": "Day 2 of RoboCup 2026 humanoid league is done. Seventeen countries, three divisions, and China showing up with fifteen teams alone. This isn't a demo. There's a real opponent, a real ball, and a surface that doesn't forgive bad footwork. What you're watching is embodied autonomy under pressure, the closest thing robotics has to a live benchmark. The scorelines matter less than the recovery time after a fall. Which team kept moving consistently in the second half? That's the real result. Who do you think takes the humanoid title this year?",
+      "caption_instagram": "Day 2 at RoboCup 2026 humanoid league is in the books.\n\n17 countries. 3 divisions. China alone sent 15 teams. The bracket is tightening and the matches are telling us things that lab papers can't.\n\nHere's what I'm actually watching: not the goals, the falls. Specifically, how fast a robot gets up and re-orients. That recovery behavior is the real signal for deployment readiness. A clean scripted demo hides that. A live opponent doesn't.\n\nHonest caveat: RoboCup fields are flat, well-lit, and structured. Results here are a ceiling for controlled indoor tasks, not a floor for open-world field deployment. But it's still the most rigorous open stress test embodied robotics has at this scale.\n\nFinals are coming. Watch the second half performance, not the first.\n\n#RoboCup2026 #HumanoidRobotics #LeggedRobots #SwarmRobotics #EmbodiedAI #RoboticsResearch #AutonomousSystems",
+      "caption_tiktok": "17 countries, 3 divisions, day 2 done at RoboCup 2026. Watch the falls, not the goals. Recovery speed is the real benchmark. #RoboCup2026 #HumanoidRobots #Robotics #EmbodiedAI",
+      "post_bluesky": "Day 2 at RoboCup 2026 humanoid league is done. 17 countries. China alone sent 15 teams. Real ball, real opponent, no script. Watch fall recovery, not goals. That's the actual benchmark. https://robohub.org/robocup2026-humanoid-league-day-2/",
+      "bluesky_thread": [
+        "China's 15-team presence is the structural story of this competition. That's not a fluke, it's years of university pipeline investment showing up on one field. Depth like that compounds by finals day.",
+        "Honest take: RoboCup fields are flat and well-lit. Great stress test for structured indoor autonomy, but don't extrapolate to field deployment. Still, second-half locomotion consistency tells you more than any lab paper this year. Which team are you backing for the humanoid title?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-11T08:01:03.007086+00:00",
+    "media": {
+      "figures": [
+        "media/57411d20/fig_00.png"
+      ],
+      "bsky": [
+        "media/57411d20/bsky_00.png",
+        "media/57411d20/bsky_01.png",
+        "media/57411d20/bsky_02.png",
+        "media/57411d20/bsky_03.png"
+      ],
+      "slides": [
+        "media/57411d20/slide_00.png",
+        "media/57411d20/slide_01.png",
+        "media/57411d20/slide_02.png",
+        "media/57411d20/slide_03.png",
+        "media/57411d20/slide_04.png",
+        "media/57411d20/slide_05.png",
+        "media/57411d20/slide_06.png",
+        "media/57411d20/slide_07.png"
+      ]
+    }
   }
 ]
