@@ -7948,7 +7948,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-11T16:29:53.812246+00:00",
     "media": {
       "figures": [
@@ -7972,5 +7972,83 @@
       ]
     },
     "issue": 99
+  },
+  {
+    "draft_id": "87ddd60c",
+    "paper": {
+      "id": "rss-25f42fcdf8",
+      "title": "Beyond da Vinci: Why versatile humanoid robots are the next frontier in surgery",
+      "abstract": "For the first time, teleoperated humanoid robots successfully performed surgeries during a UC San Diego preclinical trial. The post Beyond da Vinci: Why versatile humanoid robots are the next frontier in surgery appeared first on The Robot Report .",
+      "authors": [],
+      "url": "https://www.therobotreport.com/beyond-da-vinci-why-versatile-humanoid-robots-are-next-frontier-surgery/",
+      "source": "therobotreport.com",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A humanoid robot just performed surgery. Not a simulation.",
+      "commentary": "UC San Diego ran preclinical trials where teleoperated humanoid robots completed surgical tasks, which is a genuine first worth noting. The da Vinci framing is clever positioning: that system is purpose-built, expensive, and locked to fixed roles. A general-purpose humanoid arm could theoretically adapt to more procedures without a new hardware platform per task. The honest caveat is that 'teleoperated preclinical trial' is a very long way from autonomous OR deployment, and the dexterity gap between a surgical robot designed from the ground up versus a humanoid hand repurposed for the OR is not small. The headline buries that this is still a human driving the robot, not the robot making decisions.",
+      "slides": [
+        {
+          "title": "Humanoid robots enter the OR",
+          "body": "UC San Diego ran the first preclinical surgical trials using teleoperated humanoid robots. Not purpose-built surgical arms. General-purpose humanoids doing real tissue work."
+        },
+        {
+          "title": "Why not just use da Vinci?",
+          "body": "da Vinci is optimized for specific procedures and costs $2M+. A versatile humanoid platform could adapt across tasks without a new hardware system per procedure. That's the economic argument."
+        },
+        {
+          "title": "Teleoperation, not autonomy",
+          "body": "A surgeon is still driving. This is remote dexterity, not surgical AI. Important distinction the headline glosses over. Autonomy in the OR is a different and much harder problem."
+        },
+        {
+          "title": "The dexterity gap is real",
+          "body": "Surgical robots have micron-level precision and haptic feedback built for tissue. Humanoid hands are designed for general tasks. Bridging that gap in a sterile, high-stakes environment is not solved here."
+        },
+        {
+          "title": "What this actually proves",
+          "body": "Humanoid hardware can be adapted for surgical teleoperation in a controlled preclinical setting. That's meaningful. It does not prove reliability, sterility compliance, or readiness for human patients."
+        },
+        {
+          "title": "The real question",
+          "body": "Can a single versatile platform justify the regulatory and safety investment over a purpose-built system? That's what the next five years of surgical robotics will fight over."
+        }
+      ],
+      "video_script": "A humanoid robot just performed surgery at UC San Diego. Not a demo. An actual preclinical trial. The pitch is simple: da Vinci costs two million dollars and only does a handful of procedures. A general-purpose humanoid could theoretically adapt to anything. But here's what the headline skips: a surgeon was still at the controls. This is teleoperation, not autonomy. And humanoid hands were not designed for micron-level tissue work. So is this a genuine shift in surgical robotics, or just a very expensive proof of concept?",
+      "caption_instagram": "A humanoid robot just performed surgery. That actually happened.\n\nUC San Diego completed the first preclinical surgical trials using teleoperated humanoid robots. The argument against da Vinci-style systems is real: purpose-built surgical robots are expensive, inflexible, and locked to specific procedures. A general humanoid platform could adapt.\n\nBut read carefully. A surgeon was driving the robot the entire time. This is remote dexterity, not surgical AI. And the dexterity gap between a system engineered from scratch for the OR versus a repurposed humanoid hand is not a footnote.\n\nWhat this proves: the hardware can be adapted for surgical teleoperation in a controlled setting. What it doesn't prove: sterility reliability, haptic precision at scale, or anything close to human patient readiness. The next question is whether a versatile platform can ever justify the regulatory burden over a purpose-built one.\n\n#surgicalrobotics #humanoidrobots #medicalrobotics #teleoperation #roboticsresearch #HRI #fieldrobotics",
+      "caption_tiktok": "Humanoid robot just did surgery at UC San Diego. Still a human driving it, but the hardware proof is real. How far are we from actual autonomy in the OR?\n#surgicalrobotics #humanoidrobots #robotics #medtech",
+      "post_bluesky": "A humanoid robot performed surgery in a UC San Diego preclinical trial. First time. It's teleoperated, not autonomous, and humanoid hands weren't designed for micron-level tissue work. But the…\nhttps://www.therobotreport.com/beyond-da-vinci-why-versatile-humanoid-robots-are-next-frontier-surgery/",
+      "bluesky_thread": [
+        "The headline buries the key detail: a surgeon was driving the whole time. Teleoperation is real progress, but it's not the same problem as surgical autonomy. da Vinci has been teleoperated since 2000. What's actually new here is the hardware platform, not the control paradigm.",
+        "The economic case is genuinely interesting though. One versatile humanoid vs. a $2M purpose-built system per procedure type. If the dexterity and sterility problems get solved, that math changes fast. What's your read: platform flexibility or purpose-built precision wins in the OR long term?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T16:51:10.609857+00:00",
+    "media": {
+      "figures": [
+        "media/87ddd60c/fig_01.png",
+        "media/87ddd60c/fig_00.png"
+      ],
+      "bsky": [
+        "media/87ddd60c/bsky_00.png",
+        "media/87ddd60c/bsky_01.png",
+        "media/87ddd60c/bsky_02.png",
+        "media/87ddd60c/bsky_03.png"
+      ],
+      "slides": [
+        "media/87ddd60c/slide_00.png",
+        "media/87ddd60c/slide_01.png",
+        "media/87ddd60c/slide_02.png",
+        "media/87ddd60c/slide_03.png",
+        "media/87ddd60c/slide_04.png",
+        "media/87ddd60c/slide_05.png",
+        "media/87ddd60c/slide_06.png",
+        "media/87ddd60c/slide_07.png"
+      ]
+    },
+    "issue": 100
   }
 ]

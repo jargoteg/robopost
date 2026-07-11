@@ -271,5 +271,12 @@
     "title": "Video Friday: A World Cup for Robots",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "What’s coming up at #RoboCup2026?",
+    "source": "robohub.org",
+    "item_type": "article",
+    "reason": "no reason given",
+    "date": "2026-07-11"
   }
 ]
