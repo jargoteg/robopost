@@ -6849,7 +6849,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-11T04:23:52.293157+00:00",
     "media": {
       "figures": [
@@ -7001,7 +7001,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T08:01:03.007086+00:00",
     "media": {
       "figures": [
@@ -7024,7 +7024,9 @@
         "media/57411d20/slide_07.png"
       ]
     },
-    "issue": 91
+    "issue": 91,
+    "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "3afa16d2",
@@ -7424,5 +7426,157 @@
       ]
     },
     "issue": 96
+  },
+  {
+    "draft_id": "065c9745",
+    "paper": {
+      "id": "rss-e5c9917357",
+      "title": "TCLL: Temporal-Aware Contrastive Latent Learning for Heterogeneous Legged Robots Locomotion",
+      "abstract": "Recent research on legged robot locomotion control had made significant progress, particularly in reinforcement learning approaches that demonstrated remarkable capabilities in complex environments. However, current robot reinforcement learning for locomotion control still relied on privileged information during training. Although such information accelerated convergence and raised the performance ceiling, it was unavailable at deployment, thereby widening the sim-to-real gap. This study presented a novel locomotion control method for legged robots, temporal-aware contrastive latent learning (TCLL), which operated using only limited proprioceptive data. TCLL enabled legged robots to navigate challenging terrains without relying on privileged data. To validate the effectiveness of TCLL, we conducted comprehensive simulations and physical robot experiments. The results showed that our control method outperformed existing algorithms, thereby advancing the development and practical application of legged robots in complex environments.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576557",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No exteroception. No privileged data. Still walks.",
+      "commentary": "TCLL tackles a real deployment problem: privileged information (terrain maps, contact forces, ground truth states) is available in simulation but vanishes on real hardware. The approach uses contrastive learning in latent space with temporal awareness to estimate what it can't directly sense, relying only on proprioception. That's the right constraint to work under. The honest caveat: 'outperformed existing algorithms' in sim-to-real is a claim that needs a named baseline and specific terrain categories before it means much. Legged locomotion papers live or die by what the real robot actually walked over, and this abstract is vague on those details.",
+      "slides": [
+        {
+          "title": "The deployment problem",
+          "body": "RL locomotion controllers train with privileged data: contact states, terrain geometry, external forces. None of that exists at deployment. The sim-to-real gap is partly an information gap."
+        },
+        {
+          "title": "TCLL: proprioception only",
+          "body": "Temporal-Aware Contrastive Latent Learning estimates terrain context from proprioceptive history alone. No exteroceptors. No privileged teacher signal at test time. Learns a latent representation that generalizes across heterogeneous robot morphologies."
+        },
+        {
+          "title": "Why contrastive + temporal",
+          "body": "Contrastive loss separates latent states for different terrain conditions. The temporal component captures how those states evolve across steps. Both matter: terrain context is not a static snapshot, it's a sequence."
+        },
+        {
+          "title": "What 'heterogeneous' means here",
+          "body": "One controller framework validated across different legged robot morphologies. That claim needs scrutiny, but if it holds, it reduces per-platform training overhead significantly."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Baselines are unnamed in the abstract. Real-robot terrain trials are described as 'challenging' without specifics. A locomotion result without a mud test, a stair height, or a slope angle is hard to calibrate against field needs."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Removing privileged data from the deployment path is necessary for inspection, search and rescue, and mining robots where sensor suites are fixed and environments are unstructured. The research direction is correct."
+        }
+      ],
+      "video_script": "Most legged robot controllers cheat. Not maliciously, but they cheat: during training they get access to contact forces, terrain maps, ground truth state. That information doesn't exist on the real robot. TCLL removes it entirely. Proprioception only. A contrastive latent model learns to infer what it can't see from the history of what it can feel. The idea is sound. The question I'd ask the authors: what's the hardest real terrain that robot actually walked? That's where the story is.",
+      "caption_instagram": "Most legged robot controllers are secretly privileged.\n\nThey train with terrain geometry, contact forces, and external state estimates. None of that survives deployment on a real robot in a real environment.\n\nTCLL addresses this directly. Temporal-Aware Contrastive Latent Learning builds a latent representation of terrain context from proprioceptive history only. No exteroceptors. No privileged teacher at test time. The contrastive objective separates latent states across terrain types; the temporal component captures how context evolves across steps.\n\nFor field robotics, that constraint matters. Inspection, search and rescue, and underground mining platforms don't get to choose their sensor suites. A controller that works on proprioception alone is a controller that might actually deploy.\n\nCaveat: the abstract doesn't name baselines or describe real-terrain trials with specifics. 'Challenging environments' is doing a lot of work. The direction is right. The evidence needs to be sharper.\n\nPaper: TCLL: Temporal-Aware Contrastive Latent Learning for Heterogeneous Legged Robots Locomotion, IEEE Xplore.\n\n#leggedrobotics #simtoreal #reinforcementlearning #fieldrobotics #locomotioncontrol #swarmrobotics #robotics",
+      "caption_tiktok": "Legged robot. No terrain sensors. No privileged data. Just proprioception and a clever latent model. The deployment gap is real and this is one serious attempt at closing it.\n#leggedrobotics #simtoreal #roboticsresearch #locomotion",
+      "post_bluesky": "Most legged locomotion controllers train with info that vanishes at deployment. TCLL uses proprioception only, no privileged data, and a contrastive latent model to fill the gap. Right constraint to work under. http://ieeexplore.ieee.org/document/11576557",
+      "bluesky_thread": [
+        "The contrastive + temporal combination is the interesting bit. Terrain context isn't a static state, it evolves across steps. Encoding that history in latent space and separating terrain conditions with contrastive loss is a principled approach, not a trick.",
+        "Honest question for anyone who read the full paper: what are the named baselines, and what does the real-robot terrain look like? 'Challenging environments' in an abstract tells me nothing. Mud? Stairs? Angle? That's where I'd want the numbers."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T11:34:39.932597+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/065c9745/bsky_00.png",
+        "media/065c9745/bsky_01.png",
+        "media/065c9745/bsky_02.png",
+        "media/065c9745/bsky_03.png"
+      ],
+      "slides": [
+        "media/065c9745/slide_00.png",
+        "media/065c9745/slide_01.png",
+        "media/065c9745/slide_02.png",
+        "media/065c9745/slide_03.png",
+        "media/065c9745/slide_04.png",
+        "media/065c9745/slide_05.png",
+        "media/065c9745/slide_06.png",
+        "media/065c9745/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "aaecdbf8",
+    "paper": {
+      "id": "rss-3f705e5bcc",
+      "title": "How JPL Keeps the 13-Year-Old Curiosity Rover Doing Science",
+      "abstract": "Thirteen years ago last August, I was camped out in NASA’s Jet Propulsion Laboratory press room in Pasadena, Calif., waiting to see whether the Curiosity rover would survive its descent and skycrane-assisted landing on the surface of Mars. It did, and it was awesome . Since then, Curiosity (also known as Mars Science Laboratory) has traveled nearly 37 kilometers , drilled into and sampled 42 different rocks , and as of publication has snapped nearly 763,000 photos . The fact that this robot is still hard at work , getting real science done at the age of 13, is absolutely incredible—not only is Mars an actively hostile environment for robots, but the only kind of maintenance that JPL engineers can do is to send very, very careful software updates. Nevertheless, the clever folks at JPL have managed to keep Curiosity safe, warm, mobile, and sciencing, despite well-worn wheels and less and less power every day. One of those folks is Alexandra Holloway , the assistant team chief for engineering operations for Curiosity, who spoke to IEEE Spectrum about keeping Curiosity roving, what its future looks like, and how JPL has used that experience to make rovers like Perseverance even more capable. How astonished should we be that after 13 years on Mars, Curiosity is not only still doing science, but actually getting more capable? Alexandra Holloway is the assistant team chief for engineering operations on the Curiosity Mars rover at the Jet Propulsion Laboratory. Alexandra Holloway Ale",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/curiosity-rover-jpl-mars-science",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "37 km driven. 42 rocks drilled. Zero maintenance visits.",
+      "commentary": "Curiosity is 13 years old and still returning science data from one of the most hostile environments a robot has ever operated in. JPL keeps it alive through software only, no physical repair ever possible, which means every patch has to be right the first time. The wheel wear and declining RTG power are real constraints now, and the team actively routes around damaged terrain to preserve mobility. What's genuinely impressive here is the operations discipline, not the hardware specs. The honest caveat: this is a one-of-a-kind mission with a team size and budget no field robotics program can replicate, so 'lessons learned' transfer slowly.",
+      "slides": [
+        {
+          "title": "13 years. Still doing science.",
+          "body": "Curiosity has driven 37 km, drilled 42 rocks, and taken 763,000 photos on Mars. No human has touched it since August 2012. It keeps going."
+        },
+        {
+          "title": "The only maintenance: software",
+          "body": "JPL engineers cannot swap a wheel or replace a battery. Every fix is a software update sent across 250 million km, written carefully enough to work the first time."
+        },
+        {
+          "title": "Wheels are the critical constraint",
+          "body": "Mars terrain punched holes in Curiosity's aluminum wheels early. The team now routes around sharp rocks and monitors damage actively. Mobility preservation drives every traverse plan."
+        },
+        {
+          "title": "Power is shrinking every sol",
+          "body": "The RTG loses roughly 4 watts per year. The team prioritizes instruments, scales back heating, and schedules science windows around a steadily shrinking energy budget."
+        },
+        {
+          "title": "What this means for field robotics",
+          "body": "Remote, no-repair deployment with degrading hardware is the extreme version of what inspection robots face in subsea or nuclear environments. Curiosity's ops model is worth studying seriously."
+        },
+        {
+          "title": "Perseverance learned from this",
+          "body": "JPL used Curiosity's wheel failures to redesign Perseverance's wheels with thicker aluminum and different tread patterns. Hard-won field data changing the next platform."
+        }
+      ],
+      "video_script": "Thirteen years ago Curiosity landed on Mars. Since then it has driven 37 kilometers, drilled 42 rocks, and taken 763,000 photos. Nobody has touched it once. Every fix JPL makes is a software patch sent across 250 million kilometers. The wheels are damaged. The power is shrinking. And it is still returning science. That is not luck. That is operations discipline at a level most robotics programs never reach. What does your robot do when maintenance is physically impossible?",
+      "caption_instagram": "37 km driven. 42 rocks drilled. 763,000 photos taken. Zero maintenance visits. Ever.\n\nCuriosity is 13 years old and JPL is still coaxing science out of it using only software updates sent across 250 million km. No wheel swap. No battery replacement. No site visit.\n\nThe real story here is operations, not hardware. The team actively plans traverses around known wheel damage and shrinks the science schedule to fit a steadily declining power budget from an aging RTG. Every patch has to be right the first time.\n\nFor anyone working on remote or no-repair deployments, subsea, nuclear, deep mine, this is the most extreme version of your problem. And JPL has 13 years of hard data on how to handle it.\n\nFull interview with Alexandra Holloway, assistant team chief for engineering operations, at IEEE Spectrum. Link in bio.\n\n#marsrover #fieldrobotics #spaceengineering #roboticsmaintenance #JPL #systemsengineering #remoteoperations #robustrobotics",
+      "caption_tiktok": "13 years. No repairs. Still doing science on Mars. The ops story behind Curiosity is wild. #marsrover #robotics #JPL #fieldrobotics",
+      "post_bluesky": "37 km driven, 42 rocks drilled, zero maintenance visits. Curiosity is 13 and still returning science. JPL keeps it alive through software alone, no physical repair ever possible. The wheel and power constraints are very real now. https://spectrum.ieee.org/curiosity-rover-jpl-mars-science",
+      "bluesky_thread": [
+        "The part that sticks with me: every software patch has to work first time, sent 250 million km with no fallback. That's the ops discipline most field robotics teams never have to develop because a technician can always drive out to the robot.",
+        "Wheel degradation forcing terrain-aware path planning, shrinking RTG power reshaping the science schedule. These are the same constraints subsea and nuclear inspection robots face, just slower and farther away. What's the hardest no-repair deployment constraint you've had to design around?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T11:35:06.507542+00:00",
+    "media": {
+      "figures": [
+        "media/aaecdbf8/fig_00.png"
+      ],
+      "bsky": [
+        "media/aaecdbf8/bsky_00.png",
+        "media/aaecdbf8/bsky_01.png",
+        "media/aaecdbf8/bsky_02.png",
+        "media/aaecdbf8/bsky_03.png"
+      ],
+      "slides": [
+        "media/aaecdbf8/slide_00.png",
+        "media/aaecdbf8/slide_01.png",
+        "media/aaecdbf8/slide_02.png",
+        "media/aaecdbf8/slide_03.png",
+        "media/aaecdbf8/slide_04.png",
+        "media/aaecdbf8/slide_05.png",
+        "media/aaecdbf8/slide_06.png",
+        "media/aaecdbf8/slide_07.png"
+      ]
+    },
+    "issue": 97
   }
 ]
