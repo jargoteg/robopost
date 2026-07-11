@@ -622,5 +622,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "3afa16d2",
+    "paper_id": "rss-0746e7b963",
+    "title": "M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking",
+    "format": "carousel",
+    "hook": "One policy. Three motion languages. Real robot.",
+    "posted_at": "2026-07-11T10:48:37.059177+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqeigq3us726",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
