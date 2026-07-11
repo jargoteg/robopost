@@ -6218,7 +6218,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-10T08:47:38.687426+00:00",
     "media": {
       "figures": [],
@@ -6295,7 +6295,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-10T08:48:16.764311+00:00",
     "media": {
       "bsky": [
@@ -6375,7 +6375,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-10T09:39:52.550257+00:00",
     "media": {
       "figures": [
@@ -6403,7 +6403,9 @@
     },
     "issue": 86,
     "scheduled_after": "2026-07-11T00:38:17.830168+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "6a751b5c",
@@ -6646,5 +6648,153 @@
       ]
     },
     "issue": 88
+  },
+  {
+    "draft_id": "8ce2c9fd",
+    "paper": {
+      "id": "rss-41011bd388",
+      "title": "FC-Vision: Real-Time Visibility-Aware Replanning for Occlusion-Free Aerial Target Structure Scanning in Unknown Environments",
+      "abstract": "Autonomous aerial scanning of target structures is crucial for practical applications, requiring online adaptation to unknown obstacles during flight. Existing methods largely emphasize collision avoidance and efficiency, but overlook occlusion-induced visibility degradation, severely compromising scanning quality. This study proposes FC-Vision, an on-the-fly visibility-aware replanning framework that proactively and safely prevents target occlusions while preserving full target coverage and efficiency of the original plan. Our approach explicitly enforces dense surface-visibility constraints to regularize replanning behavior in real-time via an efficient two-level decomposition: occlusion-free viewpoint repair that maintains coverage with minimal deviation from the nominal scan, followed by segment-wise clean-sensing connection in 5-DoF space. A plug-in integration strategy is also presented to seamlessly interface FC-Vision with existing UAV scanning systems without architectural changes. Comprehensive simulation and real-world evaluations show that FC-Vision consistently improves scanning quality under unexpected occluders, delivering a maximum coverage gain of 55.32% and a 73.17% reduction in the occlusion ratio, while achieving real-time performance with a moderate increase in flight time.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11593136",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/pdf/2602.13720"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do aerial inspection drones keep missing the spots that matter most?",
+      "commentary": "FC-Vision tackles a real blind spot in UAV inspection: unexpected objects blocking the sensor view mid-mission, not just collision risk. The two-level fix is smart: repair the viewpoint first, then reconnect the trajectory in 5-DoF space, all without redesigning your existing pipeline. A 55% coverage gain and 73% occlusion reduction in real-world tests are numbers worth taking seriously. Honest caveat: 'unexpected occluders' in testing are still controlled enough to question how this holds up in a truly chaotic construction site or post-disaster scene where occlusions compound rapidly. The plug-in architecture is the practical selling point here.",
+      "slides": [
+        {
+          "title": "The missed-spot problem",
+          "body": "Aerial inspection plans assume a clear view. Unexpected objects mid-flight block sensors, leaving coverage gaps the original planner never recovers from. Most systems prioritize collision avoidance, not visibility."
+        },
+        {
+          "title": "FC-Vision: visibility as a constraint",
+          "body": "Enforces dense surface-visibility constraints in real time. Replanning is split into two levels: fix the viewpoint first, then reconnect the path in 5-DoF space. Runs online, no mission halt required."
+        },
+        {
+          "title": "Results from real-world tests",
+          "body": "Maximum coverage gain: 55.32%. Occlusion ratio cut by 73.17%. Flight time increase is moderate. Tested in both simulation and physical environments with real UAVs and real occluders."
+        },
+        {
+          "title": "The plug-in design matters",
+          "body": "FC-Vision wraps around existing UAV scanning systems without architectural changes. That is the practical hook: labs and operators do not need to rebuild their stack to get visibility-aware replanning."
+        },
+        {
+          "title": "Where I'd push back",
+          "body": "Test occluders are controlled. A real construction site or post-disaster building stacks occlusions unpredictably and dynamically. How does the 5-DoF replan hold up when new obstacles appear faster than one fix at a time?"
+        },
+        {
+          "title": "Why this matters for field inspection",
+          "body": "Bridge, tower, and infrastructure scans fail silently when occlusion goes unhandled. A missed weld or crack costs more than extra flight time. Visibility-aware replanning is the right problem to be solving."
+        }
+      ],
+      "video_script": "Aerial inspection drones fly a plan. Then something gets in the way, a crane, a scaffold, another structure, and the sensor misses a section. Most systems dodge the obstacle but never recover the lost view. FC-Vision treats visibility as a hard constraint, not an afterthought. It repairs the viewpoint, reconnects the path in real time, and plugs into your existing system without a full rebuild. Real-world tests show a 55 percent coverage gain. The question is: does that hold when the construction site is throwing surprises faster than one fix at a time?",
+      "caption_instagram": "Why do aerial inspection drones keep missing the spots that matter most?\n\nCollision avoidance gets all the engineering attention. But there is a quieter failure mode: an unexpected object blocks your sensor mid-mission, and the planner just keeps flying. You land, process the data, and find gaps nobody noticed.\n\nFC-Vision attacks that problem directly. It enforces dense surface-visibility constraints in real time, repairs the viewpoint when an occluder appears, then reconnects the trajectory in 5-DoF space. And it wraps around your existing UAV system as a plug-in, no architectural rebuild needed.\n\nReal-world results: 55.32% maximum coverage gain, 73.17% reduction in occlusion ratio, moderate increase in flight time. For bridge, tower, or infrastructure inspection, where a missed surface crack is a liability, that tradeoff looks very reasonable.\n\nMy caveat: test occluders are still controlled. A live construction site stacks dynamic, compounding occlusions in ways that staged tests do not capture. That is the paper to write next.\n\nPaper: FC-Vision: Real-Time Visibility-Aware Replanning for Occlusion-Free Aerial Target Structure Scanning in Unknown Environments. IEEE Xplore.\n\n#swarmrobotics #UAVinspection #aerialrobotics #infrastructureinspection #fieldrobotics #autonomousinspection #roboticsresearch",
+      "caption_tiktok": "Drones dodge obstacles but forget to look back at what they missed. FC-Vision fixes that, 55% more coverage in real tests. The plug-in architecture is the smart part. #dronetech #aerialinspection #robotics #UAV",
+      "post_bluesky": "Why do aerial inspection drones keep missing the spots that matter? FC-Vision adds real-time visibility constraints, patches the viewpoint, reconnects in 5-DoF. 55% coverage gain in real tests. The plug-in design is the practical win. http://ieeexplore.ieee.org/document/11593136",
+      "bluesky_thread": [
+        "The 73% occlusion ratio reduction is the headline number. But the architecture choice matters more: it wraps existing UAV scan planners without changes. That is how you actually get this deployed, not a full rebuild.",
+        "My real question: test occluders are controlled and singular. Real infrastructure sites stack dynamic occlusions fast. Does the 5-DoF viewpoint repair cascade gracefully or does it thrash when obstacles compound? Anyone tested this in genuinely chaotic scenes?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T01:01:56.234078+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/8ce2c9fd/bsky_00.png",
+        "media/8ce2c9fd/bsky_01.png",
+        "media/8ce2c9fd/bsky_02.png",
+        "media/8ce2c9fd/bsky_03.png"
+      ],
+      "slides": [
+        "media/8ce2c9fd/slide_00.png",
+        "media/8ce2c9fd/slide_01.png",
+        "media/8ce2c9fd/slide_02.png",
+        "media/8ce2c9fd/slide_03.png",
+        "media/8ce2c9fd/slide_04.png",
+        "media/8ce2c9fd/slide_05.png",
+        "media/8ce2c9fd/slide_06.png",
+        "media/8ce2c9fd/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "1308ea97",
+    "paper": {
+      "id": "rss-1e3a622b50",
+      "title": "#RoboCup2026 – humanoid league knockout stages",
+      "abstract": "This weekend saw the finale of the league competitions at RoboCup 2026 in Incheon, South Korea, with the winners in the small, middle, and large humanoid divisions decided. Congratulations to the following teams, who finished in the top three positions in each size class: Small division Invic, Wuhan University, China Hamburg Bit-Bots, Universität Hamburg, Germany […]",
+      "authors": [],
+      "url": "https://robohub.org/robocup2026-humanoid-league-knockout-stages/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do humanoid robots still fall over at RoboCup?",
+      "commentary": "RoboCup 2026 Incheon wrapped the humanoid league knockouts with Invic (Wuhan University) taking small division, Hamburg Bit-Bots claiming their spot, and the large class decided. These are genuinely autonomous robots playing football under real game conditions, no remote control, no scripted plays. That matters enormously when corporate demos keep hiding the joystick. The honest caveat: RoboCup humanoids are still slow, still fall, and the gap to bipedal locomotion you see in Boston Dynamics videos is vast. But the gap to 'autonomous' PR stunts is even bigger in the other direction.",
+      "slides": [
+        {
+          "title": "RoboCup 2026 Incheon: Results",
+          "body": "Humanoid league knockouts finished this weekend. Small, middle, and large divisions decided. Invic from Wuhan University won small. Hamburg Bit-Bots placed in the top three. Fully autonomous, no teleoperation."
+        },
+        {
+          "title": "What autonomous actually means here",
+          "body": "Every kick, every fall recovery, every positioning decision: onboard compute only. No human in the loop. That is the baseline corporate humanoid demos routinely fail to meet, yet RoboCup student teams do it every year."
+        },
+        {
+          "title": "Why falling is the honest metric",
+          "body": "Robots fall. Repeatedly. And they get back up. That recovery behavior under adversarial contact from other robots is harder than any choreographed warehouse walkthrough. Contact is the killer of scripted demos."
+        },
+        {
+          "title": "The gap nobody talks about",
+          "body": "RoboCup humanoids move slowly and still struggle with ball tracking under variable lighting. The benchmark is rigorous but narrow. Real deployment needs more than football skills. Progress is real, ceiling is still high."
+        },
+        {
+          "title": "Why this competition still matters in 2026",
+          "body": "With humanoid hype at peak noise this year, RoboCup is one of the few public venues running repeatable, refereed trials on autonomous bipeds. The scoreboard does not lie. Corporate press releases often do."
+        }
+      ],
+      "video_script": "Humanoid robots are everywhere in the news right now. Most of what you're seeing is demo theater. This weekend at RoboCup 2026 in Incheon, something different happened. Student teams ran fully autonomous humanoid robots through competitive knockout football. No remote control. Real falls, real recoveries, real goals. Invic from Wuhan University won the small division. Hamburg Bit-Bots were in the mix. These robots are slow and they fall a lot. But they are genuinely autonomous. So here is my question: why does this competition get less coverage than every corporate humanoid announcement?",
+      "caption_instagram": "RoboCup 2026 humanoid knockouts just wrapped in Incheon and honestly it is the most rigorous public test of autonomous bipedal robots running right now.\n\nInvic from Wuhan University took the small division. Hamburg Bit-Bots placed in the top three. Fully autonomous, onboard compute only, adversarial contact from other robots, variable real-world conditions.\n\nWhile everyone is debating whether that corporate humanoid video had a hidden operator, these student teams are running repeatable trials under refereed conditions. The scoreboard is the ground truth.\n\nThe robots fall. A lot. Recovery from unexpected contact is genuinely hard and watching them do it tells you more about the state of bipedal autonomy than any polished product launch ever will.\n\nCoverage from robohub.org linked in bio.\n\n#RoboCup2026 #HumanoidRobotics #SwarmRobotics #AutonomousRobots #RoboticsResearch #Incheon #BipedalRobots",
+      "caption_tiktok": "Corporate humanoid robots: choreographed. RoboCup humanoids: falling over and getting back up autonomously. One of these is harder. #RoboCup2026 #Robotics #HumanoidRobot #AutonomousRobots",
+      "post_bluesky": "Why do humanoid robots still fall at RoboCup? Because they're actually autonomous. Incheon 2026 knockouts just finished. Invic, Bit-Bots, fully onboard compute, real contact, real falls, real recovery. More rigorous than any…\nhttps://robohub.org/robocup2026-humanoid-league-knockout-stages/",
+      "bluesky_thread": [
+        "The thing RoboCup does that no product launch does: adversarial contact. Other robots kick you, push you, crowd you. Your recovery behavior has to generalize. That is the test. Scripted warehouse walks do not touch it.",
+        "Genuine question for anyone who watched the matches: how did large division handle ball tracking under the arena lighting in Incheon? That has historically been the failure mode nobody fixes between competitions. Did it improve?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T01:02:24.330172+00:00",
+    "media": {
+      "figures": [
+        "media/1308ea97/fig_00.png"
+      ],
+      "bsky": [
+        "media/1308ea97/bsky_00.png",
+        "media/1308ea97/bsky_01.png",
+        "media/1308ea97/bsky_02.png",
+        "media/1308ea97/bsky_03.png"
+      ],
+      "slides": [
+        "media/1308ea97/slide_00.png",
+        "media/1308ea97/slide_01.png",
+        "media/1308ea97/slide_02.png",
+        "media/1308ea97/slide_03.png",
+        "media/1308ea97/slide_04.png",
+        "media/1308ea97/slide_05.png",
+        "media/1308ea97/slide_06.png"
+      ]
+    },
+    "issue": 89
   }
 ]

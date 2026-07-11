@@ -590,5 +590,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ec94208e",
+    "paper_id": "2607.07972v1",
+    "title": "In vivo feasibility study of humanoid robots in surgery",
+    "format": "carousel",
+    "hook": "Why can't a humanoid robot just pick up a scalpel?",
+    "posted_at": "2026-07-11T01:02:38.554356+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqdhowsncw2f",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

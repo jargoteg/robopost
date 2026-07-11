@@ -213,5 +213,24 @@
     "title": "A Flexible Wrist With Anisotropic and Selectable Stiffness for Robust Contact-Rich Manipulation",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "An autonomous strawberry‐harvesting robot: Design, development, integration, and field evaluation",
+    "source": "onlinelibrary.wiley.com",
+    "item_type": "paper",
+    "reason": "no reason given",
+    "date": "2026-07-11"
+  },
+  {
+    "title": "Emergency response to the nuclear accident at the Fukushima Daiichi Nuclear Power Plants using mobile rescue robots",
+    "source": "onlinelibrary.wiley.com",
+    "item_type": "paper",
+    "reason": "no figs",
+    "date": "2026-07-11"
+  },
+  {
+    "title": "FC-Vision: Real-Time Visibility-Aware Replanning for Occlusion-Free Aerial Target Structure Scanning in Unknown Environments",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]

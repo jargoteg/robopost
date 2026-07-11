@@ -42,11 +42,19 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-10 23:08 UTC <span class="chip ok">+3 today</span></p></header>
+<p>@jahirargote · generated 2026-07-11 01:02 UTC <span class="chip ok">+3 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">4</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">1</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">23</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">3</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">24</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
+  <header><span class="chip in_review">in review</span>
+  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/89" target="_blank">issue #89</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">Why do humanoid robots still fall at RoboCup? Because they&#x27;re actually autonomous. Incheon 2026 knockouts just finished. Invic, Bit-Bots, fully onboard compute, real contact, real falls, real recovery. More rigorous than any…
+https://robohub.org/robocup2026-humanoid-league-knockout-stages/</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1308ea97/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1308ea97/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1308ea97/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1308ea97/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The thing RoboCup does that no product launch does: adversarial contact. Other robots kick you, push you, crowd you. Your recovery behavior has to generalize. That is the test. Scripted warehouse walks do not touch it.</div><div class="reply">Genuine question for anyone who watched the matches: how did large division handle ball tracking under the arena lighting in Incheon? That has historically been the failure mode nobody fixes between competitions. Did it improve?</div>
+</article><article class="post">
   <header><span class="chip in_review">in review</span>
   <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/88" target="_blank">issue #88</a></header>
   <div class="handle">@jahirargote</div>
@@ -60,35 +68,16 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
   <p class="ptext">One policy handles joint-angle, human-pose, AND end-effector references on a Unitree G1. No modality-specific retraining. 98.42% on unseen sim motions. The real-world contact story is what I want to see next. http://ieeexplore.ieee.org/document/11576560</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6a751b5c/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6a751b5c/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6a751b5c/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6a751b5c/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The architecture insight is real: joint angles and end-effector poses are different representational spaces and most controllers just pick one. Modality-specific encoders into a shared latent space is a clean solution. Whether it survives contact dynamics on hardware is the unresolved question.</div><div class="reply">Code is live at github.com/Renforce-Dynamics/MultiModalWBC and the open-access preprint is arxiv.org/abs/2606.04829. Curious if anyone has run this on hardware other than G1. How much does sim-to-real degrade on the manipulation side versus locomotion?</div>
-</article><article class="post">
-  <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 00:38 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/86" target="_blank">issue #86</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">Why can&#x27;t a humanoid just pick up a scalpel? Someone finally tested it in vivo. Teleoperation, standard laparoscopic tools, porcine tissue, benchmarked against da Vinci. Result: not ready, but now the gaps are quantified. https://arxiv.org/abs/2607.07972v1</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ec94208e/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ec94208e/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ec94208e/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/ec94208e/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The precision deficit vs da Vinci is real and the authors name it directly: tremor, latency, workspace limits. That&#x27;s more useful than another &#x27;promising early results&#x27; abstract. Dry-lab plus in vivo is a serious evaluation stack for this stage of research.</div><div class="reply">Community is dunking on humanoid hype hard right now, and fair enough. But &#x27;not ready&#x27; backed by porcine data is different from &#x27;not ready&#x27; backed on vibes. What&#x27;s the actual timeline you&#x27;d put on humanoid-assisted surgery reaching a consent form?</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/85" target="_blank">issue #85</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">What does a strawberry-harvesting robot actually fail at in the field? Occlusion and lighting. Not the gripper. Not the arm. The perception stack that worked indoors. Full integration paper with real field results: https://doi.org/10.1002/rob.21889</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7d3c5c6a/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7d3c5c6a/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7d3c5c6a/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7d3c5c6a/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The economics framing is the part I keep coming back to. A 3-hour field trial proves autonomy is possible. It says nothing about cost-per-punnet across a full season with weather, canopy variation, and fruit density changes. That is the number growers actually need.</div><div class="reply">Also worth saying: while everyone argues about humanoid form factors this week, this robot is a purpose-built low platform with a task-specific arm. The crop dictated the design. That is how field robotics actually works. What other specialty crops do you think are closest to commercial viability?</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/84" target="_blank">issue #84</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">Robots entered Fukushima Daiichi when humans could not. Several failed within hours. Wet floors, fogged cameras, tethers that snagged, comms that died through concrete. This paper is the most honest deployment post-mortem in nuclear robotics. https://doi.org/10.1002/rob.21439</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6d776c80/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6d776c80/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6d776c80/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6d776c80/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">Quince reached Building 2 stairwells, got irreplaceable sensor data, then got stranded by its own tether. That one failure mode, tether management under debris, still shows up in subsea and mining incidents today. Fifteen years and we have not fully fixed it.</div><div class="reply">The deeper problem was not hardware. It was zero interoperability between robot systems and TEPCO incident command, plus operators familiarizing themselves with robots during the crisis itself. Sound familiar to anyone working on inspection robot deployment right now?</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~3231m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~411m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~1371m)</td><td>✅ success <span class='mono'>2026-07-10 22:55</span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>23:20 UTC (~11m)</td><td>▫️ pending <span class='mono'>2026-07-10 23:05</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>23:30 UTC (~21m)</td><td>▫️ cancelled <span class='mono'>2026-07-10 23:05</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~51m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~3117m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~297m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~1257m)</td><td>✅ success <span class='mono'>2026-07-10 22:55</span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>01:20 UTC (~17m)</td><td>✅ success <span class='mono'>2026-07-10 23:37</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>01:30 UTC (~27m)</td><td>⏳ in_progress <span class='mono'>2026-07-11 00:59</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>06:00 UTC (~297m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-10 23:08</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-11 01:02</td>
+<td>In vivo feasibility study of humanoid robots in surg</td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-10 23:08</td>
 <td>Gotta Grow Fast: Design and Benchmarking of a Tip Mo</td><td class="mono">thread</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-10 21:37</td>
 <td>Mobile Pedipulation for Object Sliding via Hierarchi</td><td class="mono">single</td>
@@ -116,17 +105,15 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 <td>Underwater Suit-Wearing Cyborg Insect Capable of Hou</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-09 18:06</td>
 <td>Disturbance-aware Motion Planning for Over-actuated </td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-09 16:23</td>
-<td>Smooth Operator: A Real-Time Sampling-Based Algorith</td><td class="mono">thread</td>
-<td class="mono">{}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
-<div class="panel"><ul><li><b>A Flexible Wrist With Anisotropic and Selectable Stiffne</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Task-Agnostic Assistance via Centroidal Momentum Shaping</b> · no reason given</li><li><b>A Ground-Centric UAV-UGV Cooperative System for Autonomo</b> · no reason given</li><li><b>A Passive Clamping Capstan Brake for Strap-Based Wearabl</b> · not interested</li><li><b>RMPflow-Magnetic: End-of-Arm Radar-Grounded Reactive Avo</b> · no figure</li><li><b>RoboDojo: A Unified Sim-and-Real Benchmark for Comprehen</b> · too learning focused</li></ul></div>
+<div class="panel"><ul><li><b>FC-Vision: Real-Time Visibility-Aware Replanning for Occ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Emergency response to the nuclear accident at the Fukush</b> · no figs</li><li><b>An autonomous strawberry‐harvesting robot: Design, devel</b> · no reason given</li><li><b>A Flexible Wrist With Anisotropic and Selectable Stiffne</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Task-Agnostic Assistance via Centroidal Momentum Shaping</b> · no reason given</li><li><b>A Ground-Centric UAV-UGV Cooperative System for Autonomo</b> · no reason given</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10"],datasets:[{data:[909, 912],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-09", "07-09", "07-09", "07-09", "07-09", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10"],datasets:[
- {label:"likes",data:[0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-09", "07-09", "07-09", "07-09", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-10", "07-11"],datasets:[
+ {label:"likes",data:[0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
