@@ -6771,7 +6771,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T01:02:24.330172+00:00",
     "media": {
       "figures": [
@@ -6793,7 +6793,9 @@
         "media/1308ea97/slide_06.png"
       ]
     },
-    "issue": 89
+    "issue": 89,
+    "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "58d64d2b",
@@ -7189,5 +7191,164 @@
     "issue": 93,
     "scheduled_after": "2026-07-11T12:18:37.059177+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "f04f949d",
+    "paper": {
+      "id": "rss-e8b595821c",
+      "title": "Learning Category-Level Last-Meter Navigation From RGB Demonstrations of a Single-Instance",
+      "abstract": "Achieving precise positioning of the mobile manipulator’s base is essential for successful manipulation actions that follow. Most of the RGB-based navigation systems only guarantee coarse, meter-level accuracy, making them less suitable for the precise positioning phase of mobile manipulation. This gap prevents manipulation policies from operating within the distribution of their training demonstrations, resulting in frequent execution failures. We address this gap by introducing an object-centric imitation learning framework for last-meter navigation, enabling a quadruped mobile manipulator robot to achieve manipulation-ready positioning using only RGB observations from its onboard cameras. Our method conditions the navigation policy on three inputs: goal images, multi-view RGB observations from the onboard cameras, and a text prompt specifying the target object. A language-driven segmentation module and a spatial score-matrix decoder then supply explicit object grounding and relative pose reasoning. Using real-world data from a single object instance within a category, the system generalizes to unseen object instances across diverse environments with challenging lighting and background conditions. To comprehensively evaluate this, we introduce two metrics: an edge-alignment metric, which uses ground truth orientation, and an object-alignment metric, which evaluates how well the robot visually faces the target. Under these metrics, our policy achieves average success rates o",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578303",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/abs/2512.11173"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Coarse positioning kills manipulation. Here's the fix.",
+      "commentary": "Mobile manipulators fail at the last meter because most RGB navigation systems deliver meter-level accuracy, which is too sloppy for manipulation policies trained on precise demonstrations. This paper attacks that with an imitation learning framework that combines goal images, multi-view RGB, and text prompts to get a quadruped arm combo into manipulation-ready position using only onboard cameras. Trained on a single object instance, it generalizes across unseen instances under varied lighting. The two custom metrics, edge-alignment and object-alignment, are a genuinely useful contribution since the field lacks good standards here. The honest caveat: 'average success rates' in the truncated abstract need full numbers before you know if this beats simpler depth-based baselines.",
+      "slides": [
+        {
+          "title": "The last-meter problem",
+          "body": "Meter-level RGB navigation is fine for getting close. It is not fine for manipulation. Grasping policies trained on precise demos fail when base positioning is off by even centimeters."
+        },
+        {
+          "title": "One instance, many objects",
+          "body": "Train on RGB demos of a single object instance. Deploy on unseen instances in new environments with different lighting and backgrounds. The system uses language-driven segmentation to ground the target object."
+        },
+        {
+          "title": "Three inputs, one policy",
+          "body": "Goal image, multi-view RGB from onboard cameras, text prompt naming the target. A spatial score-matrix decoder reasons about relative pose without depth sensors or fiducials."
+        },
+        {
+          "title": "Two new metrics",
+          "body": "Edge-alignment uses ground truth orientation data. Object-alignment checks how well the robot visually faces the target. Neither metric existed in standard benchmarks. That's the other contribution."
+        },
+        {
+          "title": "What's still missing",
+          "body": "Full success rate numbers are truncated in the abstract. No direct comparison to depth-based or proprioceptive baselines shown. Field conditions beyond lab lighting variation are untested."
+        },
+        {
+          "title": "Why it matters for mobile manipulation",
+          "body": "If base positioning is solved with RGB alone, you remove a dependency on expensive depth sensors. That changes what hardware a manipulation pipeline needs in real deployments."
+        }
+      ],
+      "video_script": "Mobile manipulators have a dirty secret. You can navigate to the right room, the right table, even the right general area, and still fail to grasp anything because you stopped two centimeters in the wrong direction. This paper trains a quadruped arm robot to nail last-meter positioning from just RGB cameras and a text prompt. One object instance in training, generalizes across a whole category. They even had to invent new metrics because existing ones don't capture this. The question is whether it holds up outside the lab. What do you think breaks first in a real warehouse?",
+      "caption_instagram": "Mobile manipulation has a positioning problem nobody talks about enough.\n\nMost RGB navigation gets you close. Close is not close enough. Manipulation policies trained on precise demonstrations fall apart the moment base positioning is off, because the robot is now operating outside its training distribution.\n\nThis paper introduces an imitation learning framework for last-meter navigation on a quadruped mobile manipulator. It uses only onboard RGB cameras, a goal image, multi-view observations, and a text prompt for the target object. Train on one object instance, generalize to the whole category across lighting and background variation.\n\nThe metric contribution is underrated. Edge-alignment and object-alignment fill a real gap since there's no standard way to evaluate this precise positioning phase. Full numbers need scrutiny, and I want to see depth-baseline comparisons before declaring victory, but the framing of the problem is exactly right.\n\nPaper: 'Learning Category-Level Last-Meter Navigation From RGB Demonstrations of a Single-Instance' arXiv 2412.11173 open access link in bio.\n\n#mobilemanipulation #quadrupedrobotics #robotnavigation #imitationlearning #robotlearning #fieldrobotics #roboticsgrasping",
+      "caption_tiktok": "Your robot can navigate the whole building but fumble the last 10cm. This paper fixes that with just RGB cameras and a text prompt. #robotics #mobilemanipulation #robotlearning #quadruped",
+      "post_bluesky": "Coarse RGB navigation gets you to the table. It won't get you to manipulation-ready position. This paper uses imitation learning, goal images, and a text prompt to nail last-meter positioning on a quadruped arm, from a single training instance. http://ieeexplore.ieee.org/document/11578303",
+      "bluesky_thread": [
+        "The metric contribution is undersold. No standard benchmark captures precise base positioning for manipulation. They built edge-alignment and object-alignment from scratch. That's useful regardless of whether the policy itself holds up. Open access: https://arxiv.org/abs/2512.11173",
+        "My caveat: 'average success rates' is where the abstract cuts off. Before comparing this to depth-sensor pipelines, you need those numbers. RGB-only is a real hardware win if it works, but the bar needs to be explicit. Anyone seen the full results?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T10:53:11.206842+00:00",
+    "media": {
+      "figures": [
+        "media/f04f949d/pdf/fig_00.png",
+        "media/f04f949d/pdf/fig_02.png",
+        "media/f04f949d/pdf/fig_03.png",
+        "media/f04f949d/pdf/fig_01.png"
+      ],
+      "bsky": [
+        "media/f04f949d/bsky_00.png",
+        "media/f04f949d/bsky_01.png",
+        "media/f04f949d/bsky_02.png",
+        "media/f04f949d/bsky_03.png"
+      ],
+      "slides": [
+        "media/f04f949d/slide_00.png",
+        "media/f04f949d/slide_01.png",
+        "media/f04f949d/slide_02.png",
+        "media/f04f949d/slide_03.png",
+        "media/f04f949d/slide_04.png",
+        "media/f04f949d/slide_05.png",
+        "media/f04f949d/slide_06.png",
+        "media/f04f949d/slide_07.png"
+      ]
+    },
+    "issue": 94
+  },
+  {
+    "draft_id": "d8b53126",
+    "paper": {
+      "id": "rss-835fca8d27",
+      "title": "Table tennis robot defeats some of world’s best players – why this has major implications for robotics",
+      "abstract": "Ace rotates its paddle as it prepares to return the ball back to its human opponent, Yamato Kawamata, during a match in December 2025. Credit: Sony AI. By Kartikeya Walia, Nottingham Trent University A table tennis robot has outperformed elite players in recent evaluations. The robot, called Ace, marks a significant step toward artificial intelligence [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/table-tennis-robot-defeats-some-of-worlds-best-players-why-this-has-major-implications-for-robotics/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Lab robot beats elite table tennis players. So what?",
+      "commentary": "Sony AI's Ace defeated players ranked around the top 0.3% globally in December 2025, which is genuinely impressive for real-time dynamic manipulation under physical uncertainty. The clever part is perception-action latency tight enough to return professional-level spin. The honest caveat: table tennis is a constrained, repeatable environment with known ball physics and a fixed camera setup. The 'implications for robotics' framing in the Robohub piece is doing a lot of work. Fast reactive control in a bounded task does not straightforwardly transfer to unstructured field environments, and the article leans harder on inspiration than on mechanism.",
+      "slides": [
+        {
+          "title": "Sony Ace beats elite humans",
+          "body": "In December 2025, Ace defeated players in the top 0.3% globally. Opponent Yamato Kawamata is a competitive professional. This is real performance under real conditions, not a controlled demo."
+        },
+        {
+          "title": "What makes this hard",
+          "body": "Table tennis balls travel at 10+ m/s with heavy spin. The robot must perceive spin state, predict trajectory, plan paddle angle, and execute a return, all in under 100 ms. Latency tolerance is near zero."
+        },
+        {
+          "title": "What Ace actually does well",
+          "body": "Tight perception-to-actuation loops. Spin estimation from vision. Adaptive play style against different opponents. These are genuine technical achievements in dynamic, high-speed manipulation."
+        },
+        {
+          "title": "Where the analogy breaks",
+          "body": "Table tennis has fixed geometry, consistent lighting, and known ball physics. Field robots face mud, vibration, sensor noise, and novel objects. The loop closure that works here rarely survives unstructured environments."
+        },
+        {
+          "title": "What this actually signals",
+          "body": "Real-time reactive control at professional human speed is solvable in bounded domains. The research value is in the control architecture and latency stack, not the sport itself."
+        },
+        {
+          "title": "The real question",
+          "body": "Can the fast reactive control principles from Ace transfer to tasks like catching falling debris, dynamic grasping in warehouses, or legged recovery from sudden disturbances? That paper hasn't been written yet."
+        }
+      ],
+      "video_script": "A table tennis robot beat elite human players in December 2025. Not lab amateurs. Players in the top 0.3% globally. Sony AI's Ace can read spin, predict trajectory, and return a professional serve in under 100 milliseconds. That is a real technical achievement. But here's where I'd pump the brakes on the implications talk. Table tennis is bounded. Fixed table, known ball, consistent lighting. The hard part of field robotics is none of those things. So what exactly transfers? That's the question the community needs to answer next.",
+      "caption_instagram": "Sony AI's Ace defeated elite table tennis players in December 2025. We're talking opponents in the top 0.3% globally.\n\nThe technical achievement is real: spin estimation from vision, sub-100ms perception-to-actuation loops, adaptive play against different human styles. That's hard to build and harder to get right under pressure.\n\nBut the 'implications for all of robotics' framing needs some friction. Table tennis is one of the most constrained dynamic tasks you can pick. Known ball, fixed geometry, consistent lighting, predictable physics. Field robots live in none of those conditions.\n\nThe actual research value here is in the latency stack and reactive control architecture. Whether that transfers to dynamic grasping, legged recovery, or SAR scenarios is a genuinely open question, and an exciting one. Let's see that paper.\n\nArticle: 'Table tennis robot defeats some of world's best players' via Robohub.org\n\n#swarmrobotics #robotics #AIrobotics #mobilemanipulation #fieldrobotics #reactiverobotics #humanrobotinteraction",
+      "caption_tiktok": "Robot beats elite table tennis players. Impressive. But 'implications for all robotics'? Let's talk about what actually transfers and what doesn't. #robotics #AIrobotics #sonyai #tabletennis",
+      "post_bluesky": "Lab robot beats elite table tennis players. Genuinely impressive control. But 'implications for robotics' is doing heavy lifting here. Bounded task, fixed geometry, known…\nhttps://robohub.org/table-tennis-robot-defeats-some-of-worlds-best-players-why-this-has-major-implications-for-robotics/",
+      "bluesky_thread": [
+        "The real prize in the Ace work is the perception-to-actuation loop tight enough to handle professional-level spin. Sub-100ms reactive control against a human who is actively trying to beat you. That's a useful benchmark for dynamic manipulation research.",
+        "But every time a bounded-domain robot wins at something, we get 'this changes everything for robotics.' Table tennis has fixed lighting, known ball physics, and a static table. When does the field robot version of this paper come out? That's where I'd actually get excited."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T10:53:38.978760+00:00",
+    "media": {
+      "figures": [
+        "media/d8b53126/fig_00.png"
+      ],
+      "bsky": [
+        "media/d8b53126/bsky_00.png",
+        "media/d8b53126/bsky_01.png",
+        "media/d8b53126/bsky_02.png",
+        "media/d8b53126/bsky_03.png"
+      ],
+      "slides": [
+        "media/d8b53126/slide_00.png",
+        "media/d8b53126/slide_01.png",
+        "media/d8b53126/slide_02.png",
+        "media/d8b53126/slide_03.png",
+        "media/d8b53126/slide_04.png",
+        "media/d8b53126/slide_05.png",
+        "media/d8b53126/slide_06.png",
+        "media/d8b53126/slide_07.png"
+      ]
+    },
+    "issue": 95
   }
 ]
