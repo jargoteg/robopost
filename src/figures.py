@@ -210,22 +210,55 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
 
 
 def og_image(url: str, out_dir: Path) -> list[str]:
-    """Publisher's social-share image for articles/news."""
+    """All usable images from an article page: og:image PLUS in-body figures.
+    Vetting downstream picks the best of the pool."""
     try:
+        from urllib.parse import urljoin
         r = requests.get(url, timeout=30, headers={
             "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
-        m = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)', r.text) \
-            or re.search(r'content=["\']([^"\']+)["\']\s+property=["\']og:image', r.text)
-        if not m:
-            return []
-        img = requests.get(m.group(1), timeout=30).content
-        p = out_dir / "fig_00.png"
+        html = r.text
+        srcs = []
+        m = re.search(r'property=["\']og:image["\']\s+content=["\']([^"\']+)', html) \
+            or re.search(r'content=["\']([^"\']+)["\']\s+property=["\']og:image', html)
+        if m:
+            srcs.append(m.group(1))
+        # in-body images (largest-candidate from srcset when present)
+        for im in re.finditer(r'<img[^>]+(?:src|data-src)=["\']([^"\']+)["\']', html):
+            srcs.append(im.group(1))
+        skip = ("logo", "avatar", "icon", "banner", "badge", "gravatar",
+                "sponsor", "advert", "share", "button", "header", "footer")
+        picked, seen = [], set()
         from PIL import Image
         import io
-        Image.open(io.BytesIO(img)).convert("RGB").save(p)
-        return [str(p.relative_to(MEDIA.parent))]
+        for src in srcs:
+            if len(picked) >= 6:
+                break
+            if src.startswith("data:"):
+                continue
+            full = urljoin(url, src.split("?")[0])
+            low = full.lower()
+            if full in seen or low.endswith((".svg", ".ico")) or any(k in low for k in skip):
+                continue
+            seen.add(full)
+            try:
+                rr = requests.get(full, timeout=30, headers={
+                    "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
+                if not rr.ok or "image" not in rr.headers.get("content-type", ""):
+                    continue
+                im = Image.open(io.BytesIO(rr.content))
+                if getattr(im, "is_animated", False):
+                    im.seek(im.n_frames // 2)
+                if im.width < 420 or im.height < 260:
+                    continue  # thumbnails/inline icons
+                p = out_dir / f"fig_{len(picked):02d}.png"
+                im.convert("RGB").save(p)
+                picked.append(str(p.relative_to(MEDIA.parent)))
+            except Exception:
+                continue
+        print(f"Article images: {len(picked)} usable from {url[:50]}")
+        return picked
     except Exception as e:
-        print(f"og:image failed for {url}: {e}")
+        print(f"article image scrape failed for {url}: {e}")
         return []
 
 
