@@ -654,5 +654,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "57411d20",
+    "paper_id": "rss-3d55ad1a50",
+    "title": "#RoboCup2026 – humanoid league day 2",
+    "format": "carousel",
+    "hook": "17 countries. 3 divisions. Day 2 at RoboCup humanoid league.",
+    "posted_at": "2026-07-11T14:12:25.755257+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqett6ylqk27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
