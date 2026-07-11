@@ -132,3 +132,9 @@ def claude_vision_json(images: list, prompt: str, max_tokens: int = 1500):
     m = _re.search(r"[\[{].*[\]}]", text, flags=_re.S)
     import json as _json
     return _json.loads(m.group(0) if m else text)
+
+
+def norm_title(t: str) -> str:
+    """Normalize a title for cross-source dedup: same paper/article often
+    arrives with different ids (arXiv vs RSS vs manual web adds)."""
+    return "".join(c for c in (t or "").lower() if c.isalnum())[:80]

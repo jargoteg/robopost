@@ -346,7 +346,19 @@ def main():
     if active_windows(cfg):
         print("Conference window active — widening the net.")
         cfg["pipeline"]["drafts_per_day"] = cfg["pipeline"]["drafts_per_day"] + 1
-    papers = [p for p in papers if p["id"] not in seen]
+    from utils import norm_title
+    hist = load_json("drafts.json", [])
+    known_ids = {str(x["paper"].get("id")) for x in hist}
+    known_titles = {norm_title(x["paper"].get("title")) for x in hist}
+    known_titles.discard("")
+    before = len(papers)
+    papers = [p for p in papers
+              if p["id"] not in seen
+              and str(p["id"]) not in known_ids
+              and norm_title(p.get("title")) not in known_titles]
+    if before - len(papers):
+        print(f"Dedup: dropped {before - len(papers)} already-drafted candidates "
+              f"(id or title match against full history).")
     if papers:
         ranked = rank_papers(papers, cfg)
         n = cfg["pipeline"]["drafts_per_day"]
