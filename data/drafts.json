@@ -6421,8 +6421,7 @@
       "score": 7.0,
       "open_version": "https://arxiv.org/abs/2606.04829",
       "repo_url": "https://github.com/Renforce-Dynamics/MultiModalWBC",
-      "video_url": "https://www.youtube.com/watch?v=FIMD-Bb91pI",
-      "fig_source": "https://github.com/Renforce-Dynamics/MultiModalWBC"
+      "video_url": "https://www.youtube.com/watch?v=FIMD-Bb91pI"
     },
     "content": {
       "format": "carousel",
@@ -6467,9 +6466,6 @@
     "status": "in_review",
     "created": "2026-07-10T23:06:39.369747+00:00",
     "media": {
-      "figures": [
-        "media/6a751b5c/fig_00.png"
-      ],
       "bsky": [
         "media/6a751b5c/bsky_00.png",
         "media/6a751b5c/bsky_01.png",

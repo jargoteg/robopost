@@ -308,9 +308,23 @@ def get_figures(draft) -> list[str]:
         elif aid:
             print(f"No GitHub repo for arXiv:{aid}.")
 
-        # PDF extraction only if repo gave us nothing usable
-        if not figs and aid:
-            figs = arxiv_figures({"id": aid}, out_dir)
+        # RSS/journal items carry no arXiv id: resolve one by title so the
+        # paper's own figures are reachable too
+        if not aid and p.get("item_type") == "paper":
+            info = find_open_version(p.get("title", ""), p.get("authors"))
+            if info and info.get("arxiv_id"):
+                aid = info["arxiv_id"]
+                p.setdefault("open_version", f"https://arxiv.org/abs/{aid}")
+
+        # Supplement: if the repo gave few figures, ALSO pull the paper's PDF
+        # figures — vetting keeps the best of the combined pool
+        if aid and len(figs) < 3:
+            pdf_dir = out_dir / "pdf"
+            pdf_dir.mkdir(exist_ok=True)
+            extra = arxiv_figures({"id": aid}, pdf_dir, max_figs=6)
+            if extra:
+                print(f"Supplemented with {len(extra)} PDF figures from arXiv:{aid}")
+                figs = figs + [f for f in extra if f not in figs]
         elif not figs and p.get("open_version", "").endswith(".pdf"):
             figs = figures_from_pdf_url(p["open_version"], out_dir)
 

@@ -94,6 +94,18 @@ def post_bluesky(draft, cfg):
     draft["bsky_variant"] = "thread" if posted_count % 2 == 0 else "single"
     replies = draft["content"].get("bluesky_thread", [])[:2] \
         if draft["bsky_variant"] == "thread" else []
+    # hard guarantee: demo video + code repo are always linked. If the writer
+    # didn't weave them in, append a links reply.
+    all_text = " ".join([draft["content"].get("post_bluesky", "")] + replies)
+    links = []
+    vurl_ = draft["paper"].get("video_url", "")
+    rurl_ = draft["paper"].get("repo_url", "")
+    if vurl_ and vurl_ not in all_text:
+        links.append(f"🎥 Demo video: {vurl_}")
+    if rurl_ and rurl_ not in all_text:
+        links.append(f"💻 Code: {rurl_}")
+    if links:
+        replies = replies + ["\n".join(links)]
     print(f"Bluesky variant: {draft['bsky_variant']}")
     parent = root
     for reply_text in replies:
