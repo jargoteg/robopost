@@ -7195,7 +7195,7 @@
       ]
     },
     "issue": 93,
-    "scheduled_after": "2026-07-11T15:42:25.755253+00:00",
+    "scheduled_after": "2026-07-11T15:42:25.755257+00:00",
     "queue_notified": true
   },
   {
@@ -7279,7 +7279,7 @@
       ]
     },
     "issue": 94,
-    "scheduled_after": "2026-07-11T15:42:25.755253+00:00",
+    "scheduled_after": "2026-07-11T15:42:25.755257+00:00",
     "queue_notified": true
   },
   {
@@ -7658,5 +7658,85 @@
         "media/46df871b/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "0d09b9a2",
+    "paper": {
+      "id": "rss-6f1532b006",
+      "title": "AURA Foresight Reaches Global XPRIZE Wildfire Finals in Alaska",
+      "abstract": "One of only four teams remaining from more than 130 competitors worldwide, our team AURA Foresight is developing autonomous technology to stop wildfires before they grow out of control. AURA Foresight has been selected as a finalist in the prestigious XPRIZE Wildfire Autonomous Wildfire Response competition, emerging as one of just four teams remaining from [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/aura-foresight-reaches-global-xprize-wildfire-finals-in-alaska/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "4 teams left. 130 started. Wildfire robots head to Alaska.",
+      "commentary": "AURA Foresight made it to the XPRIZE Wildfire finals, one of four teams from 130+ global entrants. The pitch is autonomous detection and suppression before a fire crowns, which is the right problem: most wildfire fatalities and billion-dollar losses happen in the first hours. Alaska as the test environment is genuinely punishing, not a PR backdrop, with variable terrain, smoke obscuring sensors, and wind that makes aerial systems unreliable. The caveat is that XPRIZE competitions reward demo conditions, and autonomous wildfire response at scale requires coordination with fire crews, airspace deconfliction, and regulatory frameworks that no robot team controls. Winning the competition and deploying operationally are very different finish lines.",
+      "slides": [
+        {
+          "title": "4 teams from 130+",
+          "body": "AURA Foresight is one of four finalists in XPRIZE Wildfire Autonomous Wildfire Response. Over 130 teams entered. Finals take place in Alaska, chosen for its demanding and unpredictable terrain."
+        },
+        {
+          "title": "The actual problem",
+          "body": "Wildfires are manageable in the first minutes to hours. After that, suppression cost and risk scale exponentially. The competition targets early autonomous detection and response, before human crews can safely engage."
+        },
+        {
+          "title": "Why Alaska is the real test",
+          "body": "Smoke occludes optical sensors. Wind destabilizes aerial platforms. Temperature swings affect battery performance and actuation. A system that works in a controlled burn in mild conditions may fail here."
+        },
+        {
+          "title": "What autonomous response means",
+          "body": "Not just detection. The system must locate ignition, assess fire behavior, and initiate suppression or coordinate response without a human in the loop. Each step compounds the failure modes."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "XPRIZE demos reward performance in defined scenarios. Real deployment requires FAA airspace coordination, integration with incident command structures, and liability frameworks. No robot team controls those variables."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Pushing autonomous systems into extreme field conditions, even for a competition, produces real engineering lessons. Four teams are now stress-testing wildfire robotics in Alaska. That data has value regardless of who wins."
+        }
+      ],
+      "video_script": "130 teams entered a global wildfire robotics competition. Four are left. AURA Foresight is one of them, and their finals are in Alaska. That's not a soft test environment. Smoke kills your sensors. Wind takes down your drones. Temperature swings drain your batteries. The goal is autonomous response before a fire gets large enough to kill people. The technology is real, the conditions are brutal, and the gap between winning a competition and actually deploying at scale is where most field robotics lives and dies. What do you think it takes to close that gap?",
+      "caption_instagram": "130 teams entered the XPRIZE Wildfire competition. 4 remain. AURA Foresight is heading to Alaska for the finals.\n\nThe problem they're targeting is the right one. Wildfires are manageable in the first hour. After that, the math gets brutal fast. Autonomous early response, before human crews can safely reach a fire, is where the real leverage is.\n\nAlaska as the test venue is not a soft choice. Smoke occludes optical sensors. Wind destabilizes aerial platforms. Cold affects batteries and actuators. If a system works there, it's earned something real.\n\nThe honest caveat: XPRIZE demos are structured scenarios. Real wildfire response requires airspace deconfliction, incident command integration, and regulatory clearance. No robot team controls those variables. Winning the competition and deploying operationally are different finish lines. But the field data from these four teams in Alaska? That has value regardless of the trophy.\n\n#wildfirerobots #autonomoussystems #fieldobotics #xprize #swarmrobotics #UAV #roboticsinspection",
+      "caption_tiktok": "130 teams. 4 left. Wildfire robots head to Alaska for the finals. The terrain is brutal and that's the point. #wildfire #autonomousrobots #xprize #fieldrobotics",
+      "post_bluesky": "4 teams from 130+ in the XPRIZE Wildfire finals. AURA Foresight heads to Alaska, one of the hardest field environments you can pick for autonomous fire response. Smoke, wind, cold. The gap between winning a demo…\nhttps://robohub.org/aura-foresight-reaches-global-xprize-wildfire-finals-in-alaska/",
+      "bluesky_thread": [
+        "Alaska is a deliberately hard choice. Smoke occludes sensors, wind destabilizes aerial platforms, cold degrades batteries. Most wildfire robot demos happen in benign conditions. Testing here forces real engineering tradeoffs.",
+        "Biggest open question isn't the robot. It's airspace deconfliction with water bombers, integration with incident command, and who holds liability when an autonomous system makes the wrong call. How do you think those get solved?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T15:03:37.976754+00:00",
+    "media": {
+      "figures": [
+        "media/0d09b9a2/fig_04.png",
+        "media/0d09b9a2/fig_02.png",
+        "media/0d09b9a2/fig_00.png",
+        "media/0d09b9a2/fig_03.png"
+      ],
+      "bsky": [
+        "media/0d09b9a2/bsky_00.png",
+        "media/0d09b9a2/bsky_01.png",
+        "media/0d09b9a2/bsky_02.png",
+        "media/0d09b9a2/bsky_03.png"
+      ],
+      "slides": [
+        "media/0d09b9a2/slide_00.png",
+        "media/0d09b9a2/slide_01.png",
+        "media/0d09b9a2/slide_02.png",
+        "media/0d09b9a2/slide_03.png",
+        "media/0d09b9a2/slide_04.png",
+        "media/0d09b9a2/slide_05.png",
+        "media/0d09b9a2/slide_06.png",
+        "media/0d09b9a2/slide_07.png"
+      ]
+    },
+    "issue": 98
   }
 ]
