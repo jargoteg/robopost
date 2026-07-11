@@ -283,5 +283,17 @@
     "title": "Video Friday: Do Robots Even Need Legs?",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Beyond da Vinci: Why versatile humanoid robots are the next frontier in surgery",
+    "source": "therobotreport.com",
+    "item_type": "article",
+    "reason": "too similar to already posted articles",
+    "date": "2026-07-11"
+  },
+  {
+    "title": "Video Friday: Heavy Robotic Machinery Operates Itself",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]

@@ -8029,7 +8029,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-11T16:51:10.609857+00:00",
     "media": {
       "figures": [
@@ -8204,6 +8204,80 @@
         "media/8b759996/slide_05.png",
         "media/8b759996/slide_06.png",
         "media/8b759996/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "e0d9e925",
+    "paper": {
+      "id": "rss-44d0a0f764",
+      "title": "Video Friday: Heavy Robotic Machinery Operates Itself",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. ICRA 2026 : 1–5 June 2026, VIENNA RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO Enjoy today’s videos! Bulk material handling is a critical, labor-intensive operation across various industries, traditionally performed by human operators using heavy hydraulic manipulators equipped with free-swinging, underactuated grippers. This work presents the first complete autonomous material-handling solution deployed on a real-world 40-ton material handler. [ ETH Zurich ] I don’t want to minimize this bedroom tidying by Figure (although I suppose I’m going to), but in the context of doing a task like this in place of a human, it really illustrates what these robots are comfortable with, and what they’re not. [ Figure ] Give me this over videos of robots doing backflips any day. [ Hello Robot ] Okay, but can it get them out of the can? [ Generalist ] The world’s first production-ready manned mecha. It can transform. It’s a civilian vehicle. It weighs ~500 kilograms with you inside. [ Unitree ] Curious about what happens when street dance meets embodied AI? From smooth choreography to dynamic flips, NIX is exploring movement, rhythm, and real-wo",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-material-handling-robots",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does nobody automate the 40-ton machines first?",
+      "commentary": "ETH Zurich put autonomous control on a real 40-ton material handler doing bulk handling in the field. That is not a lab demo. The gripper is free-swinging and underactuated, which is the honest hard version of this problem. Most manipulation research sidesteps exactly that dynamic. The caveat: one deployment on one machine class is a proof of concept, not a fleet. Scaling to variable material types, weather, and site geometry is where these things historically stall.",
+      "slides": [
+        {
+          "title": "40 tons, no driver",
+          "body": "ETH Zurich deployed the first fully autonomous control system on a real 40-ton hydraulic material handler. Not a scaled testbed. The actual machine, on an actual site."
+        },
+        {
+          "title": "The gripper is the hard part",
+          "body": "Free-swinging, underactuated grippers are chaotic to model. Most manipulation research uses rigid, actuated end-effectors. This system had to work with the gripper that ships with the machine."
+        },
+        {
+          "title": "Why heavy industry, not humanoids?",
+          "body": "Bulk material handling is labor-intensive, hazardous, and repetitive. Automating one 40-ton handler removes a human from a dangerous cab for thousands of cycles per shift."
+        },
+        {
+          "title": "What the Figure video actually shows",
+          "body": "A humanoid tidying a bedroom. Slow, careful, narrow task scope. Useful comparison: same week, same news roundup, very different readiness levels."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "One machine, one material type, controlled deployment. Variable debris, weather, and site layout remain unsolved. Field robustness at scale is a different problem than first deployment."
+        },
+        {
+          "title": "The right question",
+          "body": "There are hundreds of thousands of heavy handlers operating in mining, ports, and demolition globally. Autonomous operation there matters more than backflips. Why is this getting less attention?"
+        }
+      ],
+      "video_script": "Everyone is talking about humanoids folding laundry. Meanwhile ETH Zurich just put autonomous control on a forty-ton hydraulic material handler. Real machine, real site, real bulk material. The gripper is free-swinging and underactuated, which is the version nobody wants to solve in a lab. One deployment is not a fleet. But it is the first complete autonomous system on a machine this size. So here is my question: why does this get a paragraph in a video roundup while a robot tidying a bedroom gets a press cycle?",
+      "caption_instagram": "Why does nobody automate the 40-ton machines first?\n\nETH Zurich just dropped a video of the first fully autonomous material handler at 40-ton scale. Real hydraulic machine, real bulk material, free-swinging underactuated gripper. That last part matters: most manipulation research swaps in a clean rigid end-effector. This team had to work with the gripper that actually ships on the machine.\n\nSame week, Figure posted a humanoid tidying a bedroom. Slow, careful, and impressive in its own way. But the contrast is worth sitting with. One system is solving a hazardous, high-cycle industrial task. The other is demonstrating narrow dexterity in a controlled home environment.\n\nHonest caveat: one deployment is not a scalable fleet. Variable material types, outdoor weather, and site geometry are all still open problems. First deployment and robust deployment are different claims.\n\nBut there are hundreds of thousands of heavy handlers running in mining, ports, and demolition. Autonomy there compounds fast. Via IEEE Spectrum Video Friday.\n\n#swarmrobotics #fieldrobotics #constructionrobotics #industrialautomation #miningtech #robotics #ETHZurich",
+      "caption_tiktok": "40-ton autonomous machine vs. humanoid tidying a bedroom. One of these is being overshadowed. #fieldrobotics #industrialrobotics #robotics #ETHZurich",
+      "post_bluesky": "Why does nobody automate the 40-ton machines first? ETH Zurich just did. Full autonomous control on a real material handler, free-swinging gripper included. Same week as the humanoid bedroom demo. Compare the two. https://spectrum.ieee.org/video-friday-material-handling-robots",
+      "bluesky_thread": [
+        "The free-swinging underactuated gripper is the detail that matters. Most manipulation papers quietly swap that out for something rigid and actuated. ETH kept the real hardware. That is a harder problem and closer to actual deployment conditions.",
+        "One machine, one site, one material type. That is a proof of concept, not a fleet. Scaling to variable debris, weather, and operator handoff is where field systems usually stall. What would it take to see this running on 50 machines? Genuinely asking."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T19:27:30.518367+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/e0d9e925/bsky_00.png",
+        "media/e0d9e925/bsky_01.png",
+        "media/e0d9e925/bsky_02.png",
+        "media/e0d9e925/bsky_03.png"
+      ],
+      "slides": [
+        "media/e0d9e925/slide_00.png",
+        "media/e0d9e925/slide_01.png",
+        "media/e0d9e925/slide_02.png",
+        "media/e0d9e925/slide_03.png",
+        "media/e0d9e925/slide_04.png",
+        "media/e0d9e925/slide_05.png",
+        "media/e0d9e925/slide_06.png",
+        "media/e0d9e925/slide_07.png"
       ]
     }
   }
