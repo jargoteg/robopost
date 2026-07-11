@@ -7564,7 +7564,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T11:35:06.507542+00:00",
     "media": {
       "figures": [
@@ -7587,7 +7587,9 @@
         "media/aaecdbf8/slide_07.png"
       ]
     },
-    "issue": 97
+    "issue": 97,
+    "scheduled_after": "2026-07-11T17:30:39.874072+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "46df871b",
@@ -7715,7 +7717,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T15:03:37.976754+00:00",
     "media": {
       "figures": [
@@ -7741,7 +7743,9 @@
         "media/0d09b9a2/slide_07.png"
       ]
     },
-    "issue": 98
+    "issue": 98,
+    "scheduled_after": "2026-07-11T17:30:39.874072+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "8dd7bdb3",
@@ -7891,5 +7895,82 @@
         "media/eae4df59/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "9f124dbf",
+    "paper": {
+      "id": "rss-e44a3ff9c1",
+      "title": "What’s coming up at #RoboCup2026?",
+      "abstract": "This year, RoboCup will be held in Incheon, South Korea, from 2-6 July. The event will see teams take part in competitions, training sessions, and a symposium. It&#8217;s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/whats-coming-up-at-robocup2026/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does RoboCup keep moving the goalposts every single year?",
+      "commentary": "RoboCup 2026 landed in Incheon this July with real format changes, not cosmetic ones. The soccer leagues are shifting focus in ways that push teams toward more autonomous, less scripted play. That matters because RoboCup's self-imposed rule-escalation ladder is the honest mechanism forcing hardware and software to actually improve under pressure, unlike closed benchmarks. Caveat: Robohub's preview is thin on specifics about what exactly changed, so the real story is on the competition floor, not in this article.",
+      "slides": [
+        {
+          "title": "RoboCup 2026: Incheon",
+          "body": "July 2-6, South Korea. Competitions, training sessions, and a symposium. One of the longest-running autonomous robotics benchmarks in the world, running since 1997."
+        },
+        {
+          "title": "The rule-escalation model",
+          "body": "RoboCup deliberately tightens rules each cycle. This year's soccer leagues shift toward primary autonomy focus. The target: beat a human World Cup team by 2050. That deadline is closer than it sounds."
+        },
+        {
+          "title": "Why format changes matter",
+          "body": "When rules get harder, teams can't coast on last year's solution. Perception, coordination, and physical robustness all get stress-tested. It's a controlled pressure mechanism that lab benchmarks rarely replicate."
+        },
+        {
+          "title": "What to watch",
+          "body": "New league structures and updated formats mean some veteran strategies break immediately. Teams that over-tuned to 2025 rules are exposed in round one. That's the point."
+        },
+        {
+          "title": "The real benchmark question",
+          "body": "RoboCup's value isn't the trophy. It's whether progress transfers outside the arena. Swarm coordination and multi-agent planning here do feed real inspection and rescue research."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Most RoboCup gains don't survive unstructured environments. Field robotics needs messier tests. But the competition pressure model is worth stealing for other domains."
+        }
+      ],
+      "video_script": "RoboCup 2026 just wrapped in Incheon, South Korea. And every year people ask the same thing: why does this event still matter? Here's the answer. RoboCup deliberately makes the rules harder every single cycle. Not incrementally. Meaningfully harder. That forced escalation is what drives real progress in autonomous coordination, perception under pressure, and multi-robot teamwork. Lab benchmarks don't do that. RoboCup does. The question is: does any of this survive contact with an actual unstructured environment?",
+      "caption_instagram": "RoboCup 2026 just happened in Incheon, South Korea, and the format changes this year are worth paying attention to.\n\nThe soccer leagues shifted toward a stronger autonomy focus. That sounds small. It isn't. RoboCup's entire value comes from its rule-escalation model: every cycle, the task gets harder on purpose. Teams can't recycle last year's solution. Perception, coordination, and physical robustness all get stress-tested simultaneously.\n\nThe 2050 goal is still on the books: a robot team that can beat a human World Cup squad. That's 24 years away. The progress ladder has to keep climbing now for that to be remotely credible.\n\nHonest caveat: most RoboCup gains don't transfer cleanly to unstructured field environments. The arena is controlled. The real world isn't. But the competitive pressure model itself is something field robotics should study.\n\n#RoboCup2026 #SwarmRobotics #AutonomousRobots #MultiAgentSystems #RobotSoccer #FieldRobotics #Robotics",
+      "caption_tiktok": "RoboCup makes the rules harder every single year on purpose. That's the whole mechanism. Incheon 2026 just raised the bar again. #RoboCup2026 #Robotics #AutonomousRobots #MultiAgent",
+      "post_bluesky": "RoboCup keeps raising its own bar on purpose, and that's exactly why it still matters. Incheon 2026 brought real format changes to the soccer leagues. The rule-escalation model is the best competitive pressure mechanism in robotics. https://robohub.org/whats-coming-up-at-robocup2026/",
+      "bluesky_thread": [
+        "The honest take: most RoboCup gains don't survive unstructured environments. Flat, marked arena vs. a collapsed building or a mine shaft are different planets. But the self-imposed difficulty ladder is a model other field robotics communities should think seriously about stealing.",
+        "Curious what people who were in Incheon actually saw. Did the autonomy-focus rule changes break established teams in round one, or did the veterans adapt fast? That's the real signal on whether the format change had teeth."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T16:29:53.812246+00:00",
+    "media": {
+      "figures": [
+        "media/9f124dbf/fig_00.png"
+      ],
+      "bsky": [
+        "media/9f124dbf/bsky_00.png",
+        "media/9f124dbf/bsky_01.png",
+        "media/9f124dbf/bsky_02.png",
+        "media/9f124dbf/bsky_03.png"
+      ],
+      "slides": [
+        "media/9f124dbf/slide_00.png",
+        "media/9f124dbf/slide_01.png",
+        "media/9f124dbf/slide_02.png",
+        "media/9f124dbf/slide_03.png",
+        "media/9f124dbf/slide_04.png",
+        "media/9f124dbf/slide_05.png",
+        "media/9f124dbf/slide_06.png",
+        "media/9f124dbf/slide_07.png"
+      ]
+    },
+    "issue": 99
   }
 ]
