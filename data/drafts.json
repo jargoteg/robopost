@@ -7254,7 +7254,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-11T10:53:11.206842+00:00",
     "media": {
       "figures": [
@@ -7282,7 +7282,9 @@
     },
     "issue": 94,
     "scheduled_after": "2026-07-11T17:30:39.874072+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "d8b53126",
@@ -7434,7 +7436,7 @@
       ]
     },
     "issue": 96,
-    "scheduled_after": "2026-07-11T17:30:39.874072+00:00",
+    "scheduled_after": "2026-07-11T19:06:26.858820+00:00",
     "queue_notified": true
   },
   {
@@ -7588,7 +7590,7 @@
       ]
     },
     "issue": 97,
-    "scheduled_after": "2026-07-11T17:30:39.874072+00:00",
+    "scheduled_after": "2026-07-11T19:06:26.858820+00:00",
     "queue_notified": true
   },
   {
@@ -7744,7 +7746,7 @@
       ]
     },
     "issue": 98,
-    "scheduled_after": "2026-07-11T17:30:39.874072+00:00",
+    "scheduled_after": "2026-07-11T19:06:26.858820+00:00",
     "queue_notified": true
   },
   {
@@ -8050,5 +8052,83 @@
       ]
     },
     "issue": 100
+  },
+  {
+    "draft_id": "dde028ba",
+    "paper": {
+      "id": "rss-acb6fbdd5f",
+      "title": "Vine-inspired robotic gripper gently lifts heavy and fragile objects",
+      "abstract": "The researchers demonstrated that the vine robot can safely and stably lift a variety of heavy and fragile objects, like a watermelon. Image credit: Courtesy of the researchers By Jennifer Chu In the horticultural world, some vines are especially grabby. As they grow, the woody tendrils can wrap around obstacles with enough force to pull [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/vine-inspired-robotic-gripper-gently-lifts-heavy-and-fragile-objects/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Watermelon lifted. Zero damage. No fingers.",
+      "commentary": "The vine robot wraps around objects by growing into contact rather than closing rigid fingers, distributing grip force along the whole contact surface. That's why it can handle a watermelon without bruising it while still generating enough force to lift something heavy. The clever bit is borrowing tendril geometry so the wrap is passive and self-conforming. Honest caveat: lab demos on known objects are one thing, and agricultural field conditions with mud, variable stem geometry, and time pressure are a very different story. I'd want to see cycle counts and grip reliability on irregular produce before calling this harvest-ready.",
+      "slides": [
+        {
+          "title": "The problem with robot grippers",
+          "body": "Most grippers close from the outside in. Point forces bruise soft produce, slip on wet surfaces, and fail on irregular shapes. A watermelon is a worst-case test object: heavy, smooth, fragile skin."
+        },
+        {
+          "title": "How vines actually grip",
+          "body": "Woody tendrils grow into contact and wrap continuously around an obstacle. Force distributes along the full contact length, not at two or three fingertip points. Pressure stays low even as grip force increases."
+        },
+        {
+          "title": "The vine robot mechanism",
+          "body": "The robot extends and wraps by growing its body around the target object. No motors closing finger joints. The wrap is self-conforming, meaning the contact surface adapts to whatever shape it meets."
+        },
+        {
+          "title": "Watermelon: the demo object",
+          "body": "Lifted a watermelon intact. The surface load stays distributed, so no bruising. Same mechanism handles objects that vary widely in size and stiffness without reconfiguring the gripper."
+        },
+        {
+          "title": "Where this actually matters",
+          "body": "Soft fruit harvest, fragile specimen collection, search and rescue debris handling. Any task where rigid grippers either slip or crush. Nuclear and pharmaceutical handling of irregular containers is another real candidate."
+        },
+        {
+          "title": "The honest question",
+          "body": "Lab demos on clean, static objects are step one. Field deployment needs cycle life data, performance on wet or dirty surfaces, and speed. None of that is in this article yet."
+        }
+      ],
+      "video_script": "Most robot grippers work like a claw machine. They close from the outside in, concentrate force at a few points, and bruise anything soft. This vine-inspired gripper does the opposite. It grows around the object, wrapping like a woody tendril, spreading force along the whole contact surface. Result: it lifted a watermelon without damaging it. The mechanism is passive and self-conforming, no finger joints, no tuning per object. It sounds simple because it copies something plants solved millions of years ago. The real test is whether it survives an actual harvest field. Would you trust this on a commercial soft-fruit line?",
+      "caption_instagram": "A robot gripper that lifts a watermelon without bruising it, by doing what fingers cannot.\n\nMost grippers concentrate force at two or three contact points. That works for rigid objects and fails badly on anything soft, wet, or irregularly shaped. This vine-inspired design wraps continuously around the target, distributing load along the full contact surface the same way woody plant tendrils grip a fence post.\n\nThe result is a gripper that handles both heavy and fragile objects without reconfiguring, because the wrap geometry self-adapts. That matters a lot for soft-fruit harvest, specimen handling, and any field task where object geometry is unpredictable.\n\nHonest note: this is a lab demonstration. Cycle life, performance on muddy or wet surfaces, and throughput speed are the questions that determine whether it survives a real deployment. Exciting mechanism, still needs field data.\n\nFull article at Robohub, linked in bio.\n\n#swarmrobotics #fieldrobotics #softrobotics #agriculturalrobotics #roboticsgripper #harvestrobotics #roboticsresearch",
+      "caption_tiktok": "Vine robot lifts a watermelon with zero damage. Nature solved this problem a long time ago. #softrobotics #robotics #agriculturalrobotics #roboticsgripper",
+      "post_bluesky": "A gripper that wraps like a plant tendril just lifted a watermelon intact. No finger joints. Force distributes along the whole contact surface, not at two points. Clever bio-inspired mechanism. Field…\nhttps://robohub.org/vine-inspired-robotic-gripper-gently-lifts-heavy-and-fragile-objects/",
+      "bluesky_thread": [
+        "The self-conforming wrap is the key idea here. Rigid grippers fail on soft produce because point forces bruise. Distributing load along continuous contact solves that without per-object tuning. Genuinely useful for irregular shapes.",
+        "What I want to see next: cycle count data, performance on wet or muddy surfaces, and grip reliability when the object orientation varies. Lab demos on clean watermelons are step one. Would this survive a commercial harvest line? That's the paper I'm waiting for."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T17:36:02.452852+00:00",
+    "media": {
+      "figures": [
+        "media/dde028ba/fig_00.png",
+        "media/dde028ba/fig_01.png"
+      ],
+      "bsky": [
+        "media/dde028ba/bsky_00.png",
+        "media/dde028ba/bsky_01.png",
+        "media/dde028ba/bsky_02.png",
+        "media/dde028ba/bsky_03.png"
+      ],
+      "slides": [
+        "media/dde028ba/slide_00.png",
+        "media/dde028ba/slide_01.png",
+        "media/dde028ba/slide_02.png",
+        "media/dde028ba/slide_03.png",
+        "media/dde028ba/slide_04.png",
+        "media/dde028ba/slide_05.png",
+        "media/dde028ba/slide_06.png",
+        "media/dde028ba/slide_07.png"
+      ]
+    },
+    "issue": 101
   }
 ]

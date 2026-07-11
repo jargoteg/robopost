@@ -686,5 +686,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f04f949d",
+    "paper_id": "rss-e8b595821c",
+    "title": "Learning Category-Level Last-Meter Navigation From RGB Demonstrations of a Single-Instance",
+    "format": "carousel",
+    "hook": "Coarse positioning kills manipulation. Here's the fix.",
+    "posted_at": "2026-07-11T17:36:26.858825+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqf77ywrod2z",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
