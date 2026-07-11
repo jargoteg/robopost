@@ -8136,7 +8136,7 @@
       ]
     },
     "issue": 101,
-    "scheduled_after": "2026-07-12T00:44:46.420082+00:00",
+    "scheduled_after": "2026-07-12T00:44:46.420085+00:00",
     "queue_notified": true
   },
   {
@@ -8593,5 +8593,78 @@
       ]
     },
     "issue": 104
+  },
+  {
+    "draft_id": "f96368c6",
+    "paper": {
+      "id": "rss-b80d11a48f",
+      "title": "Handle with care: Soft robot gripper picks ripe fruit without bruising",
+      "abstract": "Cornell researchers used stretchable fiber-optic sensors to create a soft robot gripper that can predict the ripeness of strawberries by touch. Credit: Anand Mishra. By David Nutt When assessing the ripeness of fruit, sight and smell can tell you a lot, but the best indicator is often how the fruit feels. Cornell researchers used stretchable [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/handle-with-care-soft-robot-gripper-picks-ripe-fruit-without-bruising/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A robot tells ripeness by touch. No cameras, no chemicals.",
+      "commentary": "Cornell's gripper embeds stretchable fiber-optic sensors in soft silicone fingers to read mechanical deformation as the gripper contacts fruit. The sensor data predicts strawberry ripeness during the grasp itself, not as a separate sensing step. That integration is the clever part: perception and manipulation happen simultaneously, which matters for cycle time in real harvesting. Honest caveat: strawberry fields are brutal environments, dirt, moisture, varying stem angles, and the paper demonstrates a controlled lab result. Getting this to 95% uptime across a 10-hour harvest shift is a completely different engineering problem.",
+      "slides": [
+        {
+          "title": "Ripe by touch, not by sight",
+          "body": "Cornell's soft gripper predicts strawberry ripeness during the grasp. No separate inspection step. Stretchable fiber-optic sensors read deformation as fingers close around fruit."
+        },
+        {
+          "title": "The sensor is the structure",
+          "body": "Fiber-optic strands are embedded in the silicone fingers themselves. Stretch changes how light transmits. That signal maps to tissue firmness, which correlates with ripeness stage."
+        },
+        {
+          "title": "Why firmness matters in harvest",
+          "body": "Ripe strawberries bruise in under 10 Newtons of grip force. Most vision systems can't distinguish ripe from nearly-ripe at speed. Touch fills that gap directly."
+        },
+        {
+          "title": "The real-world problem they haven't solved",
+          "body": "Lab demos use clean, upright, well-lit fruit. Field strawberries sit at angles, under leaves, covered in soil. Sensor calibration drift from dirt and moisture is not addressed here."
+        },
+        {
+          "title": "Why this approach is worth watching",
+          "body": "Integrating sensing into soft structure cuts hardware complexity. No force/torque wrist sensor needed. If it survives field conditions, cost-per-unit drops significantly for small farm deployments."
+        }
+      ],
+      "video_script": "A robot gripper closes around a strawberry and already knows if it's ripe. Not from a camera, not from a spectrometer. From touch. Cornell researchers built stretchable fiber-optic sensors directly into soft silicone fingers. As the gripper closes, light transmission through the fibers changes, and that signal maps to fruit firmness. Ripe fruit, unripe fruit, different signal. The gripper picks without bruising. The clever part: sensing and grasping happen at the same time. The hard part still ahead: mud, rain, and 10-hour harvest shifts. Would you trust this in an actual field?",
+      "caption_instagram": "A robot that picks strawberries and knows if they're ripe, by feel alone.\n\nCornell researchers embedded stretchable fiber-optic sensors inside soft silicone fingers. As the gripper closes on fruit, the sensors read how the material deforms. Ripe strawberries have a specific firmness signature. The system predicts ripeness during the grasp itself, no separate camera inspection step.\n\nWhat's genuinely clever: the sensor is part of the structure. No bolt-on force sensor, no wrist-mounted spectrometer. The fiber optics are the fingers. That keeps the design simple and potentially cheap enough for small-scale farm deployment.\n\nHonest caveat: this is a lab result. Real strawberry fields mean soil contamination, moisture, inconsistent fruit angles, and continuous operation. Sensor drift under those conditions isn't covered here. The gap between a clean bench demo and a working field robot is where most agricultural robotics papers live.\n\nStill worth watching. Touch-based ripeness detection during grasp is a practical idea with real commercial pressure behind it.\n\nVia Robohub: 'Handle with care: Soft robot gripper picks ripe fruit without bruising'\n\n#agriculturalrobotics #softrobotics #roboticsgripper #fieldrobotics #precisionagriculture #sensorintegration #harvestrobotics",
+      "caption_tiktok": "Robot fingers that feel if a strawberry is ripe. No camera needed. Cornell built fiber-optic sensors into the gripper itself. Smart design, but wait until you see the mud problem. #softrobotics #agriculturalrobotics #robotics #harvesttech",
+      "post_bluesky": "A soft gripper that predicts strawberry ripeness by touch, during the grasp itself. No separate inspection step. Stretchable fiber-optics embedded in the silicone fingers. Clever integration. Field…\nhttps://robohub.org/handle-with-care-soft-robot-gripper-picks-ripe-fruit-without-bruising/",
+      "bluesky_thread": [
+        "The clever bit: sensing and manipulation happen simultaneously. Deformation of the soft finger changes light transmission through embedded fiber-optic strands. That maps to firmness, which maps to ripeness. No wrist F/T sensor, no external camera. The sensor IS the structure.",
+        "But strawberry fields are filthy, wet, and run 10-hour shifts. Lab firmness calibration drifts badly with soil residue on the fingers. That's not a criticism of the research, it's the actual next problem. Does anyone have field trial data on soft gripper sensor degradation over a harvest season?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T23:34:37.348725+00:00",
+    "media": {
+      "figures": [
+        "media/f96368c6/fig_01.png",
+        "media/f96368c6/fig_00.png"
+      ],
+      "bsky": [
+        "media/f96368c6/bsky_00.png",
+        "media/f96368c6/bsky_01.png",
+        "media/f96368c6/bsky_02.png",
+        "media/f96368c6/bsky_03.png"
+      ],
+      "slides": [
+        "media/f96368c6/slide_00.png",
+        "media/f96368c6/slide_01.png",
+        "media/f96368c6/slide_02.png",
+        "media/f96368c6/slide_03.png",
+        "media/f96368c6/slide_04.png",
+        "media/f96368c6/slide_05.png",
+        "media/f96368c6/slide_06.png"
+      ]
+    },
+    "issue": 105
   }
 ]
