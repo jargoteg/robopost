@@ -6463,7 +6463,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-10T23:06:39.369747+00:00",
     "media": {
       "bsky": [
@@ -7023,5 +7023,167 @@
       ]
     },
     "issue": 91
+  },
+  {
+    "draft_id": "3afa16d2",
+    "paper": {
+      "id": "rss-0746e7b963",
+      "title": "M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking",
+      "abstract": "Building a general-purpose whole-body controller is essential for enabling diverse motion capabilities in humanoid robots across a wide range of downstream tasks, including locomotion and loco-manipulation. Different tasks rely on distinct motion reference modalities: locomotion primarily depends on coordinated robot joint trajectories, whereas manipulation requires precise end-effector trajectory tracking. Existing methods often overlook the representational mismatch between dense robot joint angles and sparse end-effector poses. To address this, we propose Multi-Modal Mimic (M3imic), a versatile multi-modal whole-body control framework that unifies heterogeneous motion reference modalities, including robot joint angles, human pose trajectories, and end-effector poses, using modality-specific encoders to map them into a shared latent space. Leveraging large-scale reinforcement learning in the simulator, we train a single policy that achieves sim-to-real transfer across multiple motion reference modalities without modality-specific retraining. Extensive simulation and real-world experiments on the Unitree G1 robot are conducted to evaluate the proposed framework. In simulation, the policy achieves a peak success rate of 98.42% on an unseen test dataset, demonstrating its exceptional generalization capability.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576560",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2606.04829",
+      "repo_url": "https://github.com/Renforce-Dynamics/MultiModalWBC",
+      "video_url": "https://www.youtube.com/watch?v=FIMD-Bb91pI",
+      "redo_notes": "",
+      "fig_source": "https://github.com/Renforce-Dynamics/MultiModalWBC"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One policy. Three motion languages. Real robot.",
+      "commentary": "M3imic trains a single whole-body controller on the Unitree G1 that handles joint trajectories, human pose references, and end-effector poses simultaneously, without retraining per modality. The core insight is that the representational gap between dense joint angles and sparse end-effector poses was quietly killing generalization in prior work. Modality-specific encoders map everything into a shared latent space, then one RL policy learns from all of it. 98.42% success on unseen test data in sim is impressive but sim is sim. The real question is how gracefully it degrades when a human reference pose asks for something the G1 physically cannot replicate.",
+      "slides": [
+        {
+          "title": "The mismatch nobody fixed",
+          "body": "Joint-angle references are dense. End-effector poses are sparse. Most controllers pick one. M3imic argues that forcing both through the same encoder was the hidden bottleneck for whole-body generalization."
+        },
+        {
+          "title": "Three inputs, one policy",
+          "body": "Modality-specific encoders compress robot joint angles, human pose trajectories, and end-effector poses into a shared latent space. One RL policy trained in sim then drives all three modes on the physical Unitree G1."
+        },
+        {
+          "title": "Sim numbers: 98.42% success",
+          "body": "Tested on unseen motion sequences across all three modalities. No modality-specific retraining at any point. The policy had never seen these test motions during training."
+        },
+        {
+          "title": "Sim-to-real on the G1",
+          "body": "Real-world demos cover locomotion, object interaction, and human-pose mimicking. The framework transfers without per-modality fine-tuning, which is the actual engineering claim worth scrutinizing."
+        },
+        {
+          "title": "Honest caveat",
+          "body": "98% sim success does not tell you how the policy fails. Human pose references can request configurations outside the G1's joint limits. The paper does not clearly report how often that happens in real-world trials."
+        },
+        {
+          "title": "Why it matters",
+          "body": "Humanoid deployment needs one controller that accepts whatever reference source is convenient: mocap, teleoperation, task planner. A modality-agnostic backbone is the right architectural bet for that future."
+        }
+      ],
+      "video_script": "Most humanoid controllers speak one language: joint angles, or end-effector poses, or human motion capture. Pick one. M3imic says that was the wrong constraint. Researchers trained a single policy on the Unitree G1 that understands all three simultaneously, using modality-specific encoders feeding into a shared latent space. Ninety-eight percent success on unseen test sequences in sim, and it transfers to the real robot without retraining. The question I keep coming back to: when a human reference pose asks for something physically impossible on the G1, how does this policy decide to fail gracefully?",
+      "caption_instagram": "One policy, three motion languages, one real humanoid.\n\nMost whole-body controllers for humanoids are trained for a single reference type: dense joint angles for locomotion, sparse end-effector poses for manipulation, or human mocap for teleoperation. Switching between them usually means retraining. M3imic treats that as an architecture problem, not a data problem.\n\nModality-specific encoders map all three reference types into a shared latent space. A single RL policy trained in simulation then handles all modes on the Unitree G1, with no modality-specific fine-tuning at transfer. Sim results hit 98.42% success on unseen test motions, which is strong. Real-world demos cover locomotion and loco-manipulation.\n\nThe honest caveat: sim performance at that level almost always compresses failures into edge cases the metric does not fully capture. Human pose references can request configurations the G1 cannot physically achieve, and the paper is quiet on how frequently that shows up in real trials.\n\nStill, the architectural framing is right. Any practical humanoid deployment needs a controller that accepts whatever reference format the upstream task planner or operator hands it. Paper: M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking, arXiv 2606.04829. Full video in bio.\n\n#humanoidrobotics #wholebody #reinforcementlearning #simtoreal #locomotion #swarmrobotics #fieldrobotics",
+      "caption_tiktok": "One humanoid controller that understands joint angles, end-effector poses, AND human mocap simultaneously. No retraining between modes. arXiv 2606.04829. #humanoid #robotics #reinforcementlearning #simtoreal",
+      "post_bluesky": "One policy, three motion reference types, one real G1. M3imic argues the bottleneck was always the representational mismatch between joint angles and end-effector poses. Modality-specific encoders fix it. http://ieeexplore.ieee.org/document/11576560",
+      "bluesky_thread": [
+        "98.42% sim success on unseen motions is the headline. The question I'd push the authors on: how often does a human pose reference exceed the G1's joint limits in real trials, and what does the policy actually do when it does? That failure mode matters a lot for practical teleoperation.",
+        "Code is up at github.com/Renforce-Dynamics/MultiModalWBC and the arXiv preprint is open at arxiv.org/abs/2606.04829. If you're working on unified humanoid controllers, the encoder architecture here is worth reading closely before the IEEE paywall fully locks it."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T09:12:59.465595+00:00",
+    "media": {
+      "figures": [
+        "media/3afa16d2/pdf/fig_01.png",
+        "media/3afa16d2/pdf/fig_02.png",
+        "media/3afa16d2/pdf/fig_00.png"
+      ],
+      "bsky": [
+        "media/3afa16d2/bsky_00.png",
+        "media/3afa16d2/bsky_01.png",
+        "media/3afa16d2/bsky_02.png",
+        "media/3afa16d2/bsky_03.png"
+      ],
+      "slides": [
+        "media/3afa16d2/slide_00.png",
+        "media/3afa16d2/slide_01.png",
+        "media/3afa16d2/slide_02.png",
+        "media/3afa16d2/slide_03.png",
+        "media/3afa16d2/slide_04.png",
+        "media/3afa16d2/slide_05.png",
+        "media/3afa16d2/slide_06.png",
+        "media/3afa16d2/slide_07.png"
+      ]
+    },
+    "issue": 92
+  },
+  {
+    "draft_id": "19925431",
+    "paper": {
+      "id": "rss-a62cb9ab2c",
+      "title": "Boston Dynamics brings its legged robots to the FIFA World Cup",
+      "abstract": "Around the 2026 FIFA World Cup, Hyundai and Boston Dynamics have taught footwork to the Atlas humanoid, while the Spot robot is on patrol. The post Boston Dynamics brings its legged robots to the FIFA World Cup appeared first on The Robot Report .",
+      "authors": [],
+      "url": "https://www.therobotreport.com/boston-dynamics-brings-its-legged-robots-to-the-fifa-world-cup/",
+      "source": "therobotreport.com",
+      "item_type": "article",
+      "score": 8.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Spot is patrolling the World Cup. Atlas is doing footwork drills.",
+      "commentary": "Hyundai and Boston Dynamics deployed Spot for security patrol at the 2026 FIFA World Cup venues, and Atlas has been trained on soccer-specific footwork, which is a smart brand alignment move. The real story here is Spot doing actual operational work in a crowd-dense, high-stakes environment, not a lab. Atlas kicking a ball is impressive optics but tells us nothing about reliability outside a controlled demo. The honest caveat: we get no data on uptime, incident rate, or how often a handler had to intervene. Brand activation and genuine deployment are very different things.",
+      "slides": [
+        {
+          "title": "Robots at the World Cup",
+          "body": "Hyundai and Boston Dynamics brought two platforms to the 2026 FIFA World Cup. Spot on patrol duty. Atlas doing football footwork. Very different jobs, very different levels of operational seriousness."
+        },
+        {
+          "title": "Spot: the operational one",
+          "body": "Spot is handling security patrol at match venues. Crowd-dense, high-noise, unpredictable terrain. This is closer to a real deployment than most robot demos you will see this year."
+        },
+        {
+          "title": "Atlas: the showpiece",
+          "body": "Atlas was trained on football-specific footwork for the occasion. Visually compelling. But a choreographed soccer kick in a controlled space is not the same thing as autonomous operation."
+        },
+        {
+          "title": "What we do not know",
+          "body": "No published uptime figures. No incident rate. No handler intervention count. Brand activation events rarely release operational data, so treat the 'deployment' framing with appropriate skepticism."
+        },
+        {
+          "title": "Why Spot here matters",
+          "body": "Patrol in a 90,000-person stadium is genuinely harsh: acoustic noise, crowd pressure, unpredictable human movement. If Spot ran reliably across multiple match days, that is worth knowing about."
+        },
+        {
+          "title": "The real question",
+          "body": "Spot at the World Cup fits a pattern: legged robots earning operational credibility in public-safety roles. Whether this was a pilot or pure PR depends on data nobody is publishing yet."
+        }
+      ],
+      "video_script": "Spot the robot dog is patrolling the 2026 FIFA World Cup. Not a demo booth. Patrol duty, inside venues with tens of thousands of people. Meanwhile Atlas, the humanoid, has been trained on football footwork for the occasion. One of these is a real deployment story. One is great marketing. Spot operating in a packed stadium is genuinely interesting: acoustic chaos, crowd pressure, unpredictable humans. Atlas kicking a ball cleanly looks impressive. But we have no uptime data, no incident reports, nothing operational. So here is the question: when does a brand activation become a real-world test, and who decides?",
+      "caption_instagram": "Spot is on patrol at the 2026 FIFA World Cup. Atlas is doing footwork drills. Two robots, two very different stories.\n\nSpot doing security patrol in a high-density stadium environment is the closest thing to a genuine field deployment Boston Dynamics has shown in a public event setting. Crowd noise, unpredictable movement, real stakes. That actually matters.\n\nAtlas kicking a soccer ball is visually impressive and will get millions of views. It is also a choreographed demo in a controlled space. Those are not the same category of achievement.\n\nThe honest gap: no published uptime data, no handler intervention rates, no failure reporting. Until that exists, 'World Cup deployment' and 'World Cup appearance' mean different things.\n\n#swarmrobotics #fieldrobotics #bostondynamics #spotrobot #atlasrobot #leggedrobotics #robotics2026 #realworldrobotics",
+      "caption_tiktok": "Spot is patrolling the World Cup. Atlas is doing footwork. One is a real job, one is a great photo op. Can you tell which is which? #bostondynamics #spotrobot #robotics #worldcup2026",
+      "post_bluesky": "Spot is patrolling FIFA World Cup venues. Atlas is doing football footwork drills. One is an actual field deployment. One is marketing. Crowd-dense stadiums are genuinely hard environments. Still waiting…\nhttps://www.therobotreport.com/boston-dynamics-brings-its-legged-robots-to-the-fifa-world-cup/",
+      "bluesky_thread": [
+        "Spot on patrol in a 90k-person stadium is the interesting bit. Acoustic noise, crowd press, real humans doing unpredictable things. If it ran reliably across multiple match days that is a legitimate data point for legged robots in public-safety roles.",
+        "Atlas kicking a ball cleanly: impressive optics, zero operational signal. No uptime figures, no incident rate, no handler logs released. 'Deployed at the World Cup' covers a lot of ground between 'ran autonomously all week' and 'appeared for one photo.' Which was it?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-11T09:13:27.769753+00:00",
+    "media": {
+      "figures": [
+        "media/19925431/fig_00.png"
+      ],
+      "bsky": [
+        "media/19925431/bsky_00.png",
+        "media/19925431/bsky_01.png",
+        "media/19925431/bsky_02.png",
+        "media/19925431/bsky_03.png"
+      ],
+      "slides": [
+        "media/19925431/slide_00.png",
+        "media/19925431/slide_01.png",
+        "media/19925431/slide_02.png",
+        "media/19925431/slide_03.png",
+        "media/19925431/slide_04.png",
+        "media/19925431/slide_05.png",
+        "media/19925431/slide_06.png",
+        "media/19925431/slide_07.png"
+      ]
+    },
+    "issue": 93
   }
 ]
