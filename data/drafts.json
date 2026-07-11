@@ -8107,7 +8107,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T17:36:02.452852+00:00",
     "media": {
       "figures": [
@@ -8131,7 +8131,9 @@
         "media/dde028ba/slide_07.png"
       ]
     },
-    "issue": 101
+    "issue": 101,
+    "scheduled_after": "2026-07-11T20:47:12.486805+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "8b759996",
@@ -8278,6 +8280,80 @@
         "media/e0d9e925/slide_05.png",
         "media/e0d9e925/slide_06.png",
         "media/e0d9e925/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "886f5a0f",
+    "paper": {
+      "id": "rss-72bd9c9bec",
+      "title": "Hello Robot Sets the Standard for Practical, Safe Home Robots",
+      "abstract": "Many roboticists (and at least one robotics journalist) have been seduced by the dream of a robot butler. And the rampant popularity of videos showing humanoid robots doing household tasks in improbably clean kitchens and unrealistically tidy bedrooms suggests that we’re not the only ones interested in a robot that can do our chores. But for all kinds of reasons , legged humanoids are not yet ready for industrial or commercial applications at scale, and home applications ( if people even want them ), I would argue, are even farther away. Even so, ludicrously well-funded humanoid robotics companies are now ramping production while explicitly promising that their robots will be doing ‘ housework .’ So what about that robot butler dream, then? It still exists! All you have to do is forget about legs, arms, hands, faces, and focus on what really matters: mobility and manipulation. This is what Hello Robot’s Stretch robot is unapologetically all about, and the newest version being announced today, Stretch 4, is closer than ever to a robot that could safely do practical work in the home at an accessible cost. Hello Robot says Stretch 4 is “built for the real world.” Hello Robot “With Stretch 4, we wanted to make the transition from a research platform to something that is truly deployable,” explains Aaron Edsinger , Hello Robot co-founder and CEO. This version, while ready for research and enterprise customers now, is designed for pilot deployments to help Hello Robot understand ho",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/stretch-4-home-robot",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Legs and faces are the wrong problem to solve.",
+      "commentary": "The Stretch 4 is Hello Robot doubling down on a genuinely contrarian bet: that home robotics doesn't need a humanoid form factor, it needs a tall, skinny, wheeled platform that can actually reach a light switch and won't fall over. The article makes a real point about cost and safety that the humanoid hype cycle actively buries. That said, 'deployable' is doing heavy lifting here. Pilot deployments in research and enterprise settings are not the same as your aunt's kitchen. The honest caveat: we've seen this 'research to real world' framing before, and the gap between a tidy lab demo and a cluttered lived-in home is where most manipulation pipelines quietly die.",
+      "slides": [
+        {
+          "title": "Humanoids don't clean houses",
+          "body": "Legs, arms, faces, and hands solve problems humans have, not problems robots have. Hello Robot's Stretch 4 strips all of that out and focuses on the two things that actually matter: mobility and manipulation."
+        },
+        {
+          "title": "What Stretch 4 actually is",
+          "body": "A tall, wheeled mobile manipulator with a telescoping arm. Reaches counters, opens doors, operates in narrow hallways. No balance control problem. No fall recovery problem. Lower cost than any humanoid on the market."
+        },
+        {
+          "title": "The real engineering bet here",
+          "body": "The hardest home robotics problem isn't locomotion. It's safe, reliable manipulation around unpredictable humans in cluttered spaces. Stretch 4 bets that wheeled stability buys enough compute budget to focus on the hard part."
+        },
+        {
+          "title": "Where this breaks down",
+          "body": "Pilot deployments with enterprise customers are not 'the real world.' Real homes have wet floors, loose cables, toys on stairs, and people who leave cabinet doors half-open. Lab-to-home transfer is where manipulation fails quietly."
+        },
+        {
+          "title": "Why this matters right now",
+          "body": "Ludicrously funded humanoid companies are promising housework robots at scale in 2026. If Stretch 4 can do even 5 useful tasks reliably in unstructured homes, it wins the practical argument before the humanoids ship volume."
+        },
+        {
+          "title": "The real question",
+          "body": "Not whether the form factor is right. Whether Hello Robot can document failure modes honestly during pilots and iterate fast enough. That transparency gap is what separates a research platform from a deployable product."
+        }
+      ],
+      "video_script": "Everyone's watching humanoid robots fold laundry in suspiciously clean kitchens. Hello Robot just announced Stretch 4 and made a quieter, more interesting bet. Forget legs. Forget the face. Put your compute budget into a wheeled base that doesn't fall over, a telescoping arm that reaches your countertop, and manipulation software that works in real homes. Is it unsexy? Yes. Is it closer to actually useful? Probably yes. The question I keep coming back to is: what does 'deployable' actually mean when your pilot users are enterprise customers, not real households?",
+      "caption_instagram": "Legs and faces are the wrong problem to solve for home robots.\n\nWhile humanoid companies burn capital promising housework bots with knees and expressive faces, Hello Robot just announced Stretch 4: a wheeled, telescoping mobile manipulator that makes no apology for looking like a floor lamp.\n\nThe engineering argument is solid. No balance problem means no fall recovery compute tax. A tall, narrow footprint works in actual hallways. Lower cost than any humanoid shipping today. That's real design discipline.\n\nBut 'built for the real world' and 'enterprise pilot deployments' are not the same sentence. The graveyard of home manipulation systems is full of robots that worked in the lab and failed in kitchens with yesterday's dishes still in the sink.\n\nThe honest take: Stretch 4 is probably the most credible near-term home robot platform right now. Whether Hello Robot can document real failure modes during pilots and iterate honestly is the whole game from here.\n\nArticle: 'Hello Robot Sets the Standard for Practical, Safe Home Robots' via IEEE Spectrum\n\n#swarmrobotics #mobilerobotics #homerobots #manipulationrobotics #fieldrobotics #hellorobot #roboticsresearch #humanoidrobotics",
+      "caption_tiktok": "Humanoids are not cleaning your house anytime soon. This wheeled robot with a telescoping arm might actually be closer. #homerobots #robotics #manipulation #hellorobot #stretch4",
+      "post_bluesky": "Legs and faces are the wrong problem. Hello Robot's Stretch 4 skips humanoid form factor entirely, bets on wheeled stability + telescoping manipulation. Unsexy. Probably more deployable than anything with knees. https://spectrum.ieee.org/stretch-4-home-robot",
+      "bluesky_thread": [
+        "The real test isn't the form factor argument, which Hello Robot wins on paper. It's whether 'enterprise pilot deployments' surfaces honest failure data. Home manipulation dies in cluttered, unpredictable spaces. Show me the failure modes, not the highlight reel.",
+        "With every humanoid company promising housework at scale this year, Stretch 4 makes a quiet counterpoint: reliable beats impressive. If it can do 5 tasks consistently in real homes, does the form factor debate even matter? Curious what the manipulation folks here think."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T19:36:37.758971+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/886f5a0f/bsky_00.png",
+        "media/886f5a0f/bsky_01.png",
+        "media/886f5a0f/bsky_02.png",
+        "media/886f5a0f/bsky_03.png"
+      ],
+      "slides": [
+        "media/886f5a0f/slide_00.png",
+        "media/886f5a0f/slide_01.png",
+        "media/886f5a0f/slide_02.png",
+        "media/886f5a0f/slide_03.png",
+        "media/886f5a0f/slide_04.png",
+        "media/886f5a0f/slide_05.png",
+        "media/886f5a0f/slide_06.png",
+        "media/886f5a0f/slide_07.png"
       ]
     }
   }
