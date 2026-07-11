@@ -7027,7 +7027,7 @@
       ]
     },
     "issue": 91,
-    "scheduled_after": "2026-07-11T14:09:47.959841+00:00",
+    "scheduled_after": "2026-07-11T14:09:47.959846+00:00",
     "queue_notified": true
   },
   {
@@ -7193,7 +7193,7 @@
       ]
     },
     "issue": 93,
-    "scheduled_after": "2026-07-11T14:09:47.959841+00:00",
+    "scheduled_after": "2026-07-11T14:09:47.959846+00:00",
     "queue_notified": true
   },
   {
@@ -7277,7 +7277,7 @@
       ]
     },
     "issue": 94,
-    "scheduled_after": "2026-07-11T14:09:47.959841+00:00",
+    "scheduled_after": "2026-07-11T14:09:47.959846+00:00",
     "queue_notified": true
   },
   {
@@ -7582,5 +7582,79 @@
       ]
     },
     "issue": 97
+  },
+  {
+    "draft_id": "46df871b",
+    "paper": {
+      "id": "rss-072fbd4dea",
+      "title": "Video Friday: Watch This Running Robot Not Fall Down Stairs",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO Enjoy today’s videos! It’s been a while since a humanoid robot video actually impressed me, but the beginning of this does. Hard to know how much of that recovery was luck, though. [ Deep Robotics ] When you’re very confident in your MPC-based balance controller... I feel you, buddy. And thanks for posting this. We’ve all been there, in one way or another. [ DARoS Lab ] GENE01 designed from scratch and sent to batch production. Two scalable lower bodies. Physical AI deployed for motor control and world-action modeling. All in three months. Generative Bionics is running. [ Generative Bionics ] Alex, the newest humanoid robot built entirely by ‪IHMCRobotics‬, takes its first steps outdoors! This was a significant milestone for our team, especially because Alex is the first humanoid robot developed entirely by IHMC Robotics to venture outside the lab. These outdoor trials were conducted in preparation for a demonstration in Maryland, where Alex later successfully walked completely untethered. [ IHMC ] Built on the Enlight platform, Flexiv Mico is a compact dual-arm system engineered for sa",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-humanoid-robot-running",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do robots still fail at stairs nobody designed to trick them?",
+      "commentary": "This week's IEEE Spectrum Video Friday is worth a pause because of the Deep Robotics clip specifically. A running humanoid recovers mid-stair in a way that looks genuinely reactive, not scripted. The honest caveat the article itself raises: hard to know how much was controller robustness versus a lucky perturbation that happened to resolve itself. IHMC's Alex walking untethered outdoors is the quieter story worth watching. IHMC has the longest track record of anyone doing real bipedal outdoor work, so first outdoor steps from them means the kinematics are actually ready, not just the PR.",
+      "slides": [
+        {
+          "title": "Humanoid video roundup July 2026",
+          "body": "IEEE Spectrum's weekly digest dropped some clips worth actually watching. Not all of them. Three stood out for different reasons."
+        },
+        {
+          "title": "Deep Robotics: stair recovery",
+          "body": "Running humanoid recovers mid-stair without a scripted catch. Looks reactive. Spectrum's own take: hard to know if that recovery was controller skill or a forgiving perturbation. Honest framing, rare for a promo clip."
+        },
+        {
+          "title": "IHMC's Alex steps outside",
+          "body": "First outdoor untethered walk for a humanoid built entirely in-house by IHMC. IHMC has 20+ years of bipedal field work. When they call outdoor trials a milestone, it means the hardware is genuinely ready, not just the demo."
+        },
+        {
+          "title": "Generative Bionics: 3 months to production",
+          "body": "GENE01 designed, iterated, and sent to batch production in three months. MPC-based motor control plus world-action modeling. Fast cycle time, but production batch for a brand-new humanoid raises obvious quality questions."
+        },
+        {
+          "title": "The real question nobody asks",
+          "body": "Stair recovery in a controlled corridor is not the same as irregular terrain, wet surfaces, or unexpected obstacles. Field conditions eat controllers that look polished in video. Recovery rate under repeated novel perturbations is the number that matters."
+        },
+        {
+          "title": "What to watch for in 2026",
+          "body": "IHMC outdoor trials and Deep Robotics stair work point toward real deployment prep. The gap between a clean recovery clip and a robot that handles 1000 varied failures is still enormous. RSS 2026 in Sydney next week may give us data."
+        }
+      ],
+      "video_script": "A humanoid running and recovering on stairs sounds routine in 2026. It is not. Most recovery demos are cherry-picked attempts against predictable perturbations. The Deep Robotics clip this week looks different, reactive rather than pre-planned. IHMC's Alex walked outside untethered for the first time, and that matters because IHMC does not hype milestones. But here is the real question: how many attempts did each of these take, and what does failure look like? That number never makes the highlight reel.",
+      "caption_instagram": "Humanoid robots are everywhere this week and most of the clips are not worth your time. These three are.\n\nThe Deep Robotics stair recovery is the most interesting. It looks reactive, not scripted. Spectrum's editors flagged the obvious caveat: luck versus control is impossible to separate from one clip. That honesty matters.\n\nIHMC's Alex walking untethered outdoors is the quiet one to watch. IHMC has been doing serious bipedal field work longer than most labs have existed. First outdoor steps from them is a real signal.\n\nGenerative Bionics built GENE01 and shipped to batch production in three months. Fast is impressive. But production quality for a brand-new humanoid platform is an open question nobody in the clip answers.\n\nRSS 2026 starts in Sydney next week. Expect actual data to follow some of these demos.\n\nVia IEEE Spectrum Video Friday, July 2026.\n\n#swarmrobotics #humanoidrobotics #bipedal #fieldrobotics #IHMCRobotics #robotics2026 #leggedrobots",
+      "caption_tiktok": "Humanoid stair recovery, outdoor walking, 3-month production cycle. Three clips worth watching and one honest caveat for each. #humanoidrobot #robotics #fieldrobotics #IHMC",
+      "post_bluesky": "IHMC's Alex walked outside untethered for the first time. Deep Robotics recovered mid-stair, maybe by design, maybe luck. Both matter more than the hype around them. IEEE Spectrum's Video Friday is worth 5 minutes. https://spectrum.ieee.org/video-friday-humanoid-robot-running",
+      "bluesky_thread": [
+        "The Deep Robotics stair clip is the interesting one. Recovery looks reactive. But a single clip cannot separate good control from a perturbation that resolved itself favorably. What you actually want is a failure rate across 100 random perturbations, not a highlight.",
+        "IHMC calling outdoor untethered walking a milestone means something. They have the longest track record in serious bipedal work and they do not oversell. RSS 2026 starts in Sydney on the 13th. If there is real data behind these demos, that is where it will surface. What are you expecting from RSS…"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-11T13:44:11.805725+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/46df871b/bsky_00.png",
+        "media/46df871b/bsky_01.png",
+        "media/46df871b/bsky_02.png",
+        "media/46df871b/bsky_03.png"
+      ],
+      "slides": [
+        "media/46df871b/slide_00.png",
+        "media/46df871b/slide_01.png",
+        "media/46df871b/slide_02.png",
+        "media/46df871b/slide_03.png",
+        "media/46df871b/slide_04.png",
+        "media/46df871b/slide_05.png",
+        "media/46df871b/slide_06.png",
+        "media/46df871b/slide_07.png"
+      ]
+    }
   }
 ]
