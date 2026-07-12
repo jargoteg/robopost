@@ -9116,7 +9116,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-12T09:10:36.638820+00:00",
     "media": {
       "figures": [
@@ -9139,6 +9139,8 @@
         "media/148c62f5/slide_07.png"
       ]
     },
-    "issue": 109
+    "issue": 109,
+    "scheduled_after": "2026-07-12T11:56:03.424499+00:00",
+    "queue_notified": true
   }
 ]
