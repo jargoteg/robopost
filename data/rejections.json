@@ -312,5 +312,12 @@
     "title": "This DIY Bipedal Robot Used Pneumatic “Air-Muscles” Instead of Motors",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Robot Talk Episode 160 – Robotic blacksmiths, with Edward Mehr",
+    "source": "robohub.org",
+    "item_type": "article",
+    "reason": "more papers,less news article",
+    "date": "2026-07-12"
   }
 ]

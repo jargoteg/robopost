@@ -8415,7 +8415,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-11T20:26:54.215323+00:00",
     "media": {
       "figures": [
@@ -8493,7 +8493,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-11T21:27:11.325855+00:00",
     "media": {
       "figures": [
@@ -8517,7 +8517,9 @@
         "media/171ea4ac/slide_07.png"
       ]
     },
-    "issue": 103
+    "issue": 103,
+    "scheduled_after": "2026-07-12T07:36:06.707176+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "7104352c",
@@ -8744,5 +8746,82 @@
         "media/25098fc1/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "63e8e498",
+    "paper": {
+      "id": "rss-a8a092f51a",
+      "title": "Coding for underwater robotics",
+      "abstract": "Lincoln Laboratory intern Ivy Mahncke developed and tested algorithms to help human divers and robots navigate underwater.",
+      "authors": [],
+      "url": "https://robohub.org/coding-for-underwater-robotics/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Underwater robots still need a human to babysit them. Here's the fix.",
+      "commentary": "An MIT Lincoln Lab intern built navigation algorithms to help divers and autonomous underwater vehicles share the same operational space, which is a genuinely hard problem that commercial AUV deployments routinely sidestep by just keeping humans out of the water entirely. The interesting angle is human-robot teaming in the same physical medium, not just remote operation. Caveat: this is an internship project reported via Robohub, so we're working with surface-level detail. No depth on test conditions, vehicle platform, or error rates. Worth watching if it matures into a full paper.",
+      "slides": [
+        {
+          "title": "The problem nobody talks about",
+          "body": "Commercial AUVs solve human-robot coordination by separation: robots dive, humans stay topside. That breaks down in mixed diver-robot operations like inspection, search and rescue, and scientific surveys."
+        },
+        {
+          "title": "What Mahncke built",
+          "body": "Navigation algorithms designed so human divers and underwater robots can operate in the same water column without collision risk or constant surface comms. Developed and tested during an MIT Lincoln Lab internship."
+        },
+        {
+          "title": "Why underwater is brutal",
+          "body": "No GPS. Acoustic comms at low bandwidth and high latency. Visibility under 2 meters in turbid water. Any nav algorithm has to work without the sensor stack we take for granted on land."
+        },
+        {
+          "title": "The real value: teaming, not autonomy",
+          "body": "Full autonomy is the wrong frame here. The goal is reliable enough behavior that a human diver can trust the robot nearby. That trust threshold is much harder to hit than demo-quality solo operation."
+        },
+        {
+          "title": "What we don't know yet",
+          "body": "Platform, depth range, test conditions, and failure modes are not reported. Internship projects rarely survive contact with a real dive site. This needs a field trial paper before the results mean much."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Subsea inspection and underwater SAR both require mixed human-robot teams eventually. Someone has to do the foundational work. Early-stage algorithms like this are where that story starts."
+        }
+      ],
+      "video_script": "Underwater robots have a dirty secret. Most of the time, you solve the coordination problem by keeping humans out of the water entirely. Robots dive alone. But inspection jobs, search and rescue, scientific surveys: those need divers and robots in the same space at the same time. A Lincoln Lab intern built navigation algorithms to make that work. No GPS, acoustic comms with high latency, sometimes under two meters of visibility. It's early stage, and we need field trial data before we believe it. But the question is real: when do we actually trust a robot next to a diver in open water?",
+      "caption_instagram": "Underwater robots still need a human to babysit them. Here's the fix.\n\nMost commercial AUV deployments solve the coordination problem by keeping humans and robots separated. Robots go alone. It works until the job actually requires a diver in the water.\n\nLincoln Lab intern Ivy Mahncke built navigation algorithms for mixed human-diver and robot operations. That's the genuinely hard case: no GPS, acoustic comms with brutal latency, and visibility that can drop under two meters.\n\nThis is early-stage work and we don't have field trial numbers yet. But mixed human-robot teaming in the subsea environment is an unsolved problem that the industry mostly avoids rather than fixes.\n\nSource: Robohub, 'Coding for underwater robotics' | robohub.org\n\n#underwaterrobotics #AUV #subsearobotics #marinerobotics #fieldrobotics #humanrobotteaming #roboticsinspection",
+      "caption_tiktok": "Underwater robots and human divers in the same water: harder than it sounds. Here's the algorithm work trying to make it real. #underwaterrobotics #AUV #fieldrobotics #robotics",
+      "post_bluesky": "Underwater robots avoid the hard problem by keeping humans topside. Mixed diver-robot ops in the same water column: brutal comms, no GPS, 2m visibility. Lincoln Lab intern built nav algorithms for exactly that. Early stage, needs field data, but…\nhttps://robohub.org/coding-for-underwater-robotics/",
+      "bluesky_thread": [
+        "The honest caveat: this is an internship write-up, not a peer-reviewed field trial. We don't know the vehicle platform, depth range, or how the algorithms fail. Robohub pieces like this are useful signals, not results.",
+        "The interesting research question buried here: what's the trust threshold that lets a diver actually rely on a nearby robot? Full autonomy is the wrong frame. It's about predictable enough behavior under failure. Anyone working on that explicitly?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-12T06:44:35.241963+00:00",
+    "media": {
+      "figures": [
+        "media/63e8e498/fig_00.png"
+      ],
+      "bsky": [
+        "media/63e8e498/bsky_00.png",
+        "media/63e8e498/bsky_01.png",
+        "media/63e8e498/bsky_02.png",
+        "media/63e8e498/bsky_03.png"
+      ],
+      "slides": [
+        "media/63e8e498/slide_00.png",
+        "media/63e8e498/slide_01.png",
+        "media/63e8e498/slide_02.png",
+        "media/63e8e498/slide_03.png",
+        "media/63e8e498/slide_04.png",
+        "media/63e8e498/slide_05.png",
+        "media/63e8e498/slide_06.png",
+        "media/63e8e498/slide_07.png"
+      ]
+    },
+    "issue": 106
   }
 ]
