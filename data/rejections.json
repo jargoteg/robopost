@@ -319,5 +319,10 @@
     "item_type": "article",
     "reason": "more papers,less news article",
     "date": "2026-07-12"
+  },
+  {
+    "title": "Modeling and Analysis of a Coupled Human–Robot System With Walking Assistance by Exoskeletons",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]

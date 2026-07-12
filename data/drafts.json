@@ -8823,5 +8823,239 @@
       ]
     },
     "issue": 106
+  },
+  {
+    "draft_id": "56b9c32b",
+    "paper": {
+      "id": "rss-327e582561",
+      "title": "PEPA: A Persistently Autonomous Embodied Agent With Personalities",
+      "abstract": "Living organisms exhibit persistent autonomy through internally generated goals and self-sustaining behavioral organization, yet current embodied agents remain driven by externally scripted objectives. This dependence on predefined task specifications limits their capacity for long-term deployment in dynamic, unstructured environments where continuous human intervention is impractical. We propose that personality traits provide an intrinsic organizational principle for achieving persistent autonomy. Analogous to genotypic biases shaping biological behavioral tendencies, personalities enable agents to autonomously generate goals and sustain behavioral evolution without external supervision. To realize this, we develop PEPA, a three-layer cognitive architecture that operates through three interacting systems: Sys3 autonomously synthesizes personality-aligned goals and refines them via episodic memory and daily self-reflection; Sys2 performs deliberative reasoning to translate goals into executable action plans; Sys1 grounds the agent in sensorimotor interaction, executing actions and recording experiences. This closed loop of goal generation, execution, memory consolidation, and reflection enables the agent to continuously redefine objectives and adapt behavior over extended operational periods. We validate the framework through real-world deployment on a quadruped robot in a multi-floor office building. Operating without reliance on fixed task specifications, the robot autonom",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576554",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://arxiv.org/abs/2603.00117"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "There is a reason robots cannot survive without someone writing them a to-do list.",
+      "commentary": "PEPA is a three-layer cognitive architecture where personality traits generate internal goals instead of waiting for external task specs. The quadruped runs continuously in a multi-floor office building without human scripting. That deployment setting is genuinely honest about what autonomous really means. Honest caveat: 'personality' here is an organizational heuristic, not psychology. The real test is whether goal drift produces useful behavior or just purposeful wandering.",
+      "slides": [
+        {
+          "title": "Every robot waits for orders",
+          "body": "Current embodied agents need predefined task specs. Swap the environment or remove the operator and they stop. Long-term deployment in unstructured spaces requires something else."
+        },
+        {
+          "title": "Personality as an internal compass",
+          "body": "PEPA uses personality traits as a proxy for biological genotypic biases. Traits generate goals autonomously. No external script needed. The robot decides what to do next based on its own behavioral tendencies."
+        },
+        {
+          "title": "Three layers doing three jobs",
+          "body": "Sys3 synthesizes goals via daily self-reflection and episodic memory. Sys2 converts goals into action plans. Sys1 grounds everything in sensorimotor execution. The loop closes continuously."
+        },
+        {
+          "title": "Deployed on a quadruped, multi-floor office",
+          "body": "Real hardware, real building, no fixed task sequence. The robot operates across floors without human intervention. That is a more honest testbed than most LLM-agent papers offer."
+        },
+        {
+          "title": "What this does not prove yet",
+          "body": "Useful autonomy requires useful goals. Personality-derived goals could drift toward repetitive or trivial behavior. Long-run goal quality metrics are the missing number in this paper."
+        },
+        {
+          "title": "Why it matters for field robotics",
+          "body": "Subsea, nuclear, and mining robots face exactly this problem: extended deployment, no operator, no task list. Persistent autonomy without scripting is the real bottleneck. This is an early serious attempt."
+        }
+      ],
+      "video_script": "Every robot we deploy is really just following a script someone wrote beforehand. Change the environment, lose the operator, and it stops. PEPA tries to fix that. Personality traits act like internal biases that generate goals from scratch, no external task spec needed. A quadruped ran this in a multi-floor office building, making its own decisions across shifts. The honest question is whether those self-generated goals are actually useful or just purposeful wandering. What do you think persistent autonomy actually needs to look like in the field?",
+      "caption_instagram": "There is a reason robots cannot survive without someone writing them a to-do list.\n\nEvery embodied agent we deploy right now depends on predefined task specifications. Remove the operator or change the environment and the robot stops being useful. For long-term field deployment, that is a fundamental problem.\n\nPEPA proposes personality traits as an internal organizational principle. Three layers handle goal synthesis via self-reflection and episodic memory, deliberative planning, and sensorimotor execution. The loop runs continuously. The quadruped was deployed in a multi-floor office building with no fixed task sequence.\n\nThe honest caveat: personality here is a behavioral heuristic borrowed from biology, not psychology. The paper does not yet show whether self-generated goals stay useful over weeks or drift toward repetitive noise. That is the metric that will matter for real field deployment in mining, nuclear, or subsea contexts.\n\nPaper: PEPA: A Persistently Autonomous Embodied Agent With Personalities, arXiv 2603.00117\n\n#swarmrobotics #fieldrobotics #embodiedai #autonomoussystems #quadrupedrobot #roboticsresearch #deployedrobotics",
+      "caption_tiktok": "A robot that writes its own to-do list. Deployed in a real building, no human scripting. Here is what the architecture actually does. #robotics #autonomousrobots #quadruped #fieldrobotics #embodiedai",
+      "post_bluesky": "There is a reason robots cannot survive without someone writing them a to-do list. PEPA uses personality traits to generate internal goals continuously, no task spec needed. Quadruped, real office building, multi-floor. arxiv.org/abs/2603.00117",
+      "bluesky_thread": [
+        "The three-layer design is the honest part: Sys3 generates personality-aligned goals via daily self-reflection and episodic memory, Sys2 plans, Sys1 executes. The loop never waits for an operator. That closed loop is what makes it interesting for long-duration field deployment.",
+        "The open question nobody in this space has answered yet: do self-generated goals stay useful or do they just become purposeful wandering? Goal quality metrics over weeks are missing here. For nuclear or subsea applications, that gap matters a lot. Would you trust this architecture underground?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-12T08:22:24.496477+00:00",
+    "media": {
+      "figures": [
+        "media/56b9c32b/pdf/fig_00.png",
+        "media/56b9c32b/pdf/fig_01.png",
+        "media/56b9c32b/pdf/fig_02.png",
+        "media/56b9c32b/pdf/fig_03.png"
+      ],
+      "bsky": [
+        "media/56b9c32b/bsky_00.png",
+        "media/56b9c32b/bsky_01.png",
+        "media/56b9c32b/bsky_02.png",
+        "media/56b9c32b/bsky_03.png"
+      ],
+      "slides": [
+        "media/56b9c32b/slide_00.png",
+        "media/56b9c32b/slide_01.png",
+        "media/56b9c32b/slide_02.png",
+        "media/56b9c32b/slide_03.png",
+        "media/56b9c32b/slide_04.png",
+        "media/56b9c32b/slide_05.png",
+        "media/56b9c32b/slide_06.png",
+        "media/56b9c32b/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ed564fa9",
+    "paper": {
+      "id": "rss-1125e6e6c7",
+      "title": "Modeling and Analysis of a Coupled Human–Robot System With Walking Assistance by Exoskeletons",
+      "abstract": "Systematic evaluation of an exoskeleton based on dynamics analysis is important for optimization of mechanical design and control strategy. Most existing evaluation methods are based on metabolic cost or Electromyography (EMG) signals. Both these kinds of methods do not directly provide whole body muscle force information from the human-exoskeleton coupled system, thus presenting limitations in revealing muscle-level dynamic mechanisms. In this work, we establish an inverse dynamics calculation approach of human-exoskeleton coupled systems by combining a human musculoskeletal model, an exoskeleton model, and a Kelvin-Voigt model. Human motion experiments at three walking speeds in unloaded condition and wearing a powered hip exoskeleton with transparent condition and three assistance conditions are also conducted. An optical motion capture, an EMG measurement device and a force sensing treadmill are used to collect motion data. The effects of exoskeleton assistance condition on human joint torques and muscle forces during specific gait phases are analyzed. Thus human-performance-augmentation exoskeletons can be evaluated based on muscle-level dynamics, which could be helpful in exploring insights into motion assistance mechanisms and optimizing the motion control strategy of exoskeletons.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11576556",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't EMG tell you what your muscles are actually doing?",
+      "commentary": "This paper tackles a real gap: EMG and metabolic cost tell you something is happening at the muscle level, but not what specifically. The authors combine a musculoskeletal model, an exoskeleton model, and a Kelvin-Voigt contact model to run inverse dynamics on the full coupled human-robot system, then validate across three walking speeds and four assistance conditions. The clever part is treating the exoskeleton and human as a single mechanical system rather than bolting on corrections post-hoc. Honest caveat: transparent condition validation is the hard test, and the paper stays in lab-controlled treadmill territory, so how this holds up with unconstrained overground gait or clinical populations remains an open question.",
+      "commentary_internal_note": "Field robotics connection is weak here, exoskeleton assistance is closer to wearable robotics than inspection/field work, so not leaning into harsh deployment framing.",
+      "slides": [
+        {
+          "title": "The problem with EMG",
+          "body": "EMG tells you a muscle is active. Metabolic cost tells you energy is spent. Neither tells you the actual force a specific muscle produces during a given gait phase. That gap limits exoskeleton design."
+        },
+        {
+          "title": "One coupled system, not two",
+          "body": "The authors model human musculoskeletal dynamics, exoskeleton mechanics, and human-exoskeleton contact (Kelvin-Voigt model) as a single inverse dynamics problem. Contact forces at the interface are not assumed, they are computed."
+        },
+        {
+          "title": "What they measured",
+          "body": "Optical motion capture, force-sensing treadmill, EMG. Three walking speeds. Four conditions: unloaded, transparent, and three powered assistance levels on a hip exoskeleton."
+        },
+        {
+          "title": "What you get out",
+          "body": "Joint torques and individual muscle forces at specific gait phases, broken down by assistance condition. You can see which muscles are offloaded and by how much, not just whether total metabolic cost dropped."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Treadmill only. Controlled lab conditions. Musculoskeletal models carry their own assumptions and personalization limits. Overground gait, varied terrain, or clinical populations are a different problem entirely."
+        },
+        {
+          "title": "Why it matters for design",
+          "body": "If you can trace assistance directly to muscle-level force changes, you can optimize control strategy for specific muscles and gait phases rather than tuning by feel or averaged metabolic proxies."
+        }
+      ],
+      "video_script": "EMG is everywhere in exoskeleton research. But here is the problem: it tells you a muscle fired, not how hard. This paper builds a full inverse dynamics model of the human and the exoskeleton together, treating them as one coupled mechanical system. Add a force treadmill, motion capture, and four assistance conditions, and you can finally trace exactly which muscles are offloaded and when. The limitation is real, this is treadmill lab work, not a clinic. But the framework is the useful part. So: is muscle-level validation the missing piece in exoskeleton control optimization, or are we still too far from personalized musculoskeletal models for this to scale?",
+      "caption_instagram": "Why can't EMG tell you what your muscles are actually doing?\n\nEMG tells you a muscle is active. Metabolic cost tells you energy is spent. But neither gives you the actual force a specific muscle produces at a specific gait phase. That gap is a real problem if you are trying to optimize an exoskeleton controller.\n\nThis IEEE paper builds an inverse dynamics model of the full human-exoskeleton coupled system, combining a musculoskeletal model, an exoskeleton model, and a Kelvin-Voigt contact model. Three walking speeds, four assistance conditions, optical motion capture, force treadmill, and EMG. Output: joint torques and muscle forces broken down by gait phase and assistance level.\n\nThe clever move is treating the human and robot as one mechanical system from the start. The honest limit: this is treadmill-only, controlled lab conditions, and musculoskeletal models carry personalization assumptions that get harder in clinical populations.\n\nPaper: Modeling and Analysis of a Coupled Human-Robot System With Walking Assistance by Exoskeletons. IEEE Xplore 11576556.\n\n#exoskeleton #wearablerobotics #biomechanics #musculoskeletalmodeling #robotics #gaitanalysis #humanrobotinteraction",
+      "caption_tiktok": "EMG can't tell you actual muscle force. This paper does the inverse dynamics on the full human-exoskeleton system instead. Treadmill only, but the framework is solid. #exoskeleton #wearablerobotics #robotics #biomechanics",
+      "post_bluesky": "Why can't EMG tell you what your muscles are actually doing?\n\nThis paper computes actual muscle forces from the full coupled human-exoskeleton system using inverse dynamics. Not a proxy. The interface contact is modeled, not assumed.\n\nhttp://ieeexplore.ieee.org/document/11576556",
+      "bluesky_thread": [
+        "The setup: musculoskeletal model + exoskeleton model + Kelvin-Voigt contact, solved together. Three speeds, four assistance conditions, force treadmill + mocap + EMG. You get per-muscle force estimates at specific gait phases, not just aggregate metabolic cost.",
+        "Honest limit: treadmill lab, controlled conditions, and personalized musculoskeletal models are still a hard problem at scale. But if the framework holds, you can finally tie control strategy decisions to specific muscle offloading. Is that the piece missing from most exo control papers you've read?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-12T08:22:54.972035+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/ed564fa9/bsky_00.png",
+        "media/ed564fa9/bsky_01.png",
+        "media/ed564fa9/bsky_02.png",
+        "media/ed564fa9/bsky_03.png"
+      ],
+      "slides": [
+        "media/ed564fa9/slide_00.png",
+        "media/ed564fa9/slide_01.png",
+        "media/ed564fa9/slide_02.png",
+        "media/ed564fa9/slide_03.png",
+        "media/ed564fa9/slide_04.png",
+        "media/ed564fa9/slide_05.png",
+        "media/ed564fa9/slide_06.png",
+        "media/ed564fa9/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "f416cc55",
+    "paper": {
+      "id": "rss-5d56cfb23b",
+      "title": "Robot Talk Episode 156 – Rugged robots for dangerous missions, with Gavin Kenneally",
+      "abstract": "Claire chatted to Gavin Kenneally from Ghost Robotics about robot dogs for defence, security, and public safety. Gavin Kenneally is the Co-Founder and CEO of Ghost Robotics, a company that has gained a reputation for pushing the boundaries of legged robotics technology. In his current role, Gavin spearheads a team of highly skilled engineers and [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/robot-talk-episode-156-rugged-robots-for-dangerous-missions-with-gavin-kenneally/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Ghost Robotics builds dogs for war. Here is what that actually means.",
+      "commentary": "Gavin Kenneally's Robohub interview covers Ghost Robotics' Vision 60 and its real deployments: base perimeter security, EOD support, contested logistics. The honest thread here is that legged robots earn their cost premium only when wheeled platforms genuinely cannot operate, and Ghost has found those niches in defence and public safety. Caveat: this is a founder interview, not a peer-reviewed deployment study, so treat the capability claims as marketing-adjacent. Still worth listening to because Kenneally is technically credible and the field deployment framing is more grounded than most humanoid hype you'll hear this week.",
+      "slides": [
+        {
+          "title": "Robot dogs for real missions",
+          "body": "Ghost Robotics builds legged platforms for defence, security, and public safety. CEO Gavin Kenneally explains where legs actually beat wheels: rubble, stairs, perimeter terrain that stops a wheeled UGV cold."
+        },
+        {
+          "title": "Why legs in these environments",
+          "body": "Wheeled UGVs are cheaper and faster on flat ground. Legs earn their cost when terrain is unpredictable: narrow corridors, debris fields, uneven outdoor perimeters. Ghost's argument is that those environments are exactly where dangerous missions happen."
+        },
+        {
+          "title": "Where Vision 60 gets deployed",
+          "body": "Base perimeter patrol, explosive ordnance disposal support, public safety surveillance. These are persistent, GPS-denied, outdoor tasks. Not a controlled lab. Not a demo stage. Actual operational use with real failure consequences."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "This is a founder interview, not a field study. Deployment numbers, failure rates, and MTBF are not on the table. Claims about robustness should be read as directional, not verified. Ask for the maintenance logs before drawing conclusions."
+        },
+        {
+          "title": "Why it matters right now",
+          "body": "Trinity Robotics is scaling UGV production in Ukraine. Ghost is targeting similar niches from the US side. Legged vs wheeled for contested terrain is a live engineering debate, not a future one. The procurement decisions are happening now."
+        },
+        {
+          "title": "The real question",
+          "body": "At what cost per platform and what MTBF does a legged robot beat a human soldier doing the same patrol? Ghost has deployed units. Someone has that data. It should be in the open literature."
+        }
+      ],
+      "video_script": "Ghost Robotics makes robot dogs for defence and public safety. Not demos, actual deployments. CEO Gavin Kenneally says legs win where wheels fail: rubble, stairs, uneven perimeter terrain. That is a real constraint, not a marketing line. But this is a founder interview, so the failure rates and maintenance costs stay off camera. The honest question is: at what cost and reliability does a legged platform actually beat a human patrol? Ghost has the data. We should be asking for it publicly.",
+      "caption_instagram": "Ghost Robotics builds robot dogs for defence and public safety. Not future plans. Actual deployments.\n\nCEO Gavin Kenneally sat down with Robohub to talk about where legged platforms earn their keep: base perimeter patrol, EOD support, contested terrain that stops a wheeled UGV. The argument for legs is real, the environments are genuinely hostile, and Ghost has put units in the field.\n\nHonest caveat though: this is a founder interview. Deployment scale, failure rates, and maintenance burden do not come up. Treat capability claims as directional until there is peer-reviewed field data behind them.\n\nThe broader context matters. Trinity Robotics is scaling UGV production in Ukraine right now. Legged vs wheeled for contested terrain is a live procurement debate. Ghost is one of the most technically credible players in this space, and Kenneally is worth listening to, just with your critical thinking switched on.\n\nRobot Talk Episode 156, robohub.org\n\n#leggedrobotics #fieldrobotics #defencerobotics #UGV #robotdog #ghostrobotics #fielddeployment",
+      "caption_tiktok": "Robot dogs deployed for real defence missions. Here is what the CEO actually says, and what he leaves out. #ghostrobotics #leggedrobotics #robotdog #defencetech",
+      "post_bluesky": "Ghost Robotics builds dogs for war. Here is what that actually means.\n\nKenneally on real deployments: perimeter patrol, EOD, contested terrain. Legs beat wheels when the ground is actually…\nhttps://robohub.org/robot-talk-episode-156-rugged-robots-for-dangerous-missions-with-gavin-kenneally/",
+      "bluesky_thread": [
+        "The case for legged UGVs in defence is real: rubble, stairs, uneven outdoor terrain. Wheels lose there. But 'we deploy in harsh environments' without published MTBF or maintenance data is still a claim, not evidence. Trinity is scaling wheeled UGVs in Ukraine right now. That comparison will be…",
+        "Honest question for anyone with field experience: at what cost per platform and what reliability threshold does a legged robot actually beat a human patrol on base perimeter duty? Ghost has operational units. That data should be in the open literature. Anyone seen it?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-12T08:23:24.736678+00:00",
+    "media": {
+      "figures": [
+        "media/f416cc55/fig_00.png",
+        "media/f416cc55/fig_01.png"
+      ],
+      "bsky": [
+        "media/f416cc55/bsky_00.png",
+        "media/f416cc55/bsky_01.png",
+        "media/f416cc55/bsky_02.png",
+        "media/f416cc55/bsky_03.png"
+      ],
+      "slides": [
+        "media/f416cc55/slide_00.png",
+        "media/f416cc55/slide_01.png",
+        "media/f416cc55/slide_02.png",
+        "media/f416cc55/slide_03.png",
+        "media/f416cc55/slide_04.png",
+        "media/f416cc55/slide_05.png",
+        "media/f416cc55/slide_06.png",
+        "media/f416cc55/slide_07.png"
+      ]
+    }
   }
 ]
