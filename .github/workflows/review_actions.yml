@@ -54,10 +54,7 @@ jobs:
           ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
           YOUTUBE_API_KEY: "${{ secrets.YOUTUBE_API_KEY }}"
         run: |
-          python src/fetch_papers.py || echo "fetch skipped/failed (non-fatal)"
-          python src/generate.py
-          python src/visuals.py
-          python src/video.py
+          python src/refill.py
       - name: Open new draft issues (regen only)
         if: steps.handle.outputs.regen == 'true'
         env:
@@ -80,10 +77,7 @@ jobs:
           GITHUB_REPOSITORY: "${{ github.repository }}"
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu
-          python src/fetch_papers.py
-          python src/generate.py
-          python src/visuals.py
-          python src/video.py
+          python src/refill.py
           python src/github_review.py create
       - name: Post approved drafts
         env:

@@ -22,7 +22,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
           YOUTUBE_API_KEY: "${{ secrets.YOUTUBE_API_KEY }}"
-        run: python src/fetch_papers.py
+        run: python src/refill.py
       - name: Generate drafts
         env: { ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
         run: python src/generate.py
