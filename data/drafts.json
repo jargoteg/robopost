@@ -9061,5 +9061,82 @@
       ]
     },
     "issue": 108
+  },
+  {
+    "draft_id": "148c62f5",
+    "paper": {
+      "id": "rss-73ab4bd0cf",
+      "title": "Humanoid home robots are on the market – but do we really want them?",
+      "abstract": "Courtesy of 1X. By Eduardo B. Sandoval, UNSW Sydney Last year, Norwegian-US tech company 1X announced a strange new product: “the world’s first consumer-ready humanoid robot designed to transform life at home”. Standing 168 centimetres tall and weighing in at 30 kilograms, the US$20,000 Neo bot promises to automate common household chores such as folding [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/humanoid-home-robots-are-on-the-market-but-do-we-really-want-them/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A $20,000 robot folds laundry. Nobody asked if we should want it.",
+      "commentary": "Eduardo Sandoval at UNSW puts the 1X Neo under a sociological lens rather than a technical one, which is exactly the right move. The machine is 168cm, 30kg, $20k, and targets domestic chores. The honest question the piece raises: who actually benefits, and who gets displaced? The caveat is that Robohub is working from promotional framing and 1X's own claims, so performance data is almost entirely absent. Still, the ethics-first angle is useful when the rest of the field is busy benchmarking fold quality.",
+      "slides": [
+        {
+          "title": "The robot is real. The use case?",
+          "body": "1X's Neo: 168cm, 30kg, $20,000. Marketed as a home assistant that folds laundry and handles chores. It is on sale now. The performance claims come almost entirely from the manufacturer."
+        },
+        {
+          "title": "Who is the customer?",
+          "body": "At $20k, the addressable market is wealthy households. That is a thin slice of the people who might genuinely benefit from domestic automation. The pitch does not match the population."
+        },
+        {
+          "title": "The displacement question",
+          "body": "Domestic workers are one of the largest informal labour categories globally. A robot that does their job for rich households is not a neutral technology. Sandoval flags this directly and it deserves more than a footnote."
+        },
+        {
+          "title": "Autonomy claims vs reality",
+          "body": "The community already knows this pattern: demos lean on teleoperation or narrow task scripting, marketed as general autonomy. No independent performance data on Neo exists yet. Skepticism is the correct prior."
+        },
+        {
+          "title": "The real research gap",
+          "body": "Human-robot interaction in messy, unstructured homes remains unsolved. Cluttered surfaces, unpredictable occupants, varied lighting. Lab fold-quality numbers do not survive a real kitchen on a Tuesday morning."
+        },
+        {
+          "title": "Worth reading because:",
+          "body": "Most robot coverage asks 'can it work?' Sandoval asks 'should we want it?' That is a rarer and more useful question right now, especially as humanoid hardware outpaces social readiness research."
+        }
+      ],
+      "video_script": "A humanoid robot walks into your kitchen. It folds your laundry, wipes the counter, costs twenty thousand dollars. Is that progress? A UNSW researcher says we are asking the wrong question. Not 'can it do the job' but 'who benefits, and who loses?' The robot is real. The autonomy claims are mostly marketing. And the people whose livelihoods look most like this job description were never consulted. So: do you actually want one of these in your home?",
+      "caption_instagram": "A $20,000 robot that folds laundry went on sale this year. The reviews are mostly vibes.\n\n1X's Neo is 168cm, 30kg, and marketed as the first consumer-ready home humanoid. Eduardo Sandoval at UNSW wrote a piece for Robohub asking the question the press releases skip: do we actually want this, and for whom?\n\nAt that price point, the customer is wealthy households. The people most affected by domestic automation are informal workers who were not part of the product conversation. That asymmetry matters.\n\nPerformance data from independent sources: essentially zero. Every fold-quality claim traces back to 1X. The community has seen this pattern before with humanoid demos. Skepticism is warranted until someone runs a proper controlled evaluation in a real home.\n\nFull piece at Robohub, linked in bio. Worth 10 minutes of your time if you work anywhere near HRI or robotics ethics.\n\n#swarmrobotics #humanoidrobots #robotics #HRI #roboticsethics #fieldrobotics #robotresearch #autonomoussystems",
+      "caption_tiktok": "A $20k laundry-folding robot is on sale and nobody asked the right questions yet. #humanoidrobot #robotics #techethics #robotresearch",
+      "post_bluesky": "$20,000 robot. Folds laundry. On sale now. UNSW's Sandoval asks the question most coverage skips: who actually benefits? Spoiler: not the domestic workers whose jobs it targets. Worth the read. https://robohub.org/humanoid-home-robots-are-on-the-market-but-do-we-really-want-them/",
+      "bluesky_thread": [
+        "No independent performance data on 1X Neo exists. Every capability claim runs through their own marketing. The robotics community is primed right now to spot the teleoperation-vs-autonomy gap. This product is a perfect case study in why that distinction matters.",
+        "The deeper issue: humanoid home robots are being designed for wealthy buyers but socially priced against informal labour markets. That is not a neutral engineering choice. If you work in HRI or robot ethics, what framework are you actually using to evaluate deployment readiness?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-12T09:10:36.638820+00:00",
+    "media": {
+      "figures": [
+        "media/148c62f5/fig_00.png"
+      ],
+      "bsky": [
+        "media/148c62f5/bsky_00.png",
+        "media/148c62f5/bsky_01.png",
+        "media/148c62f5/bsky_02.png",
+        "media/148c62f5/bsky_03.png"
+      ],
+      "slides": [
+        "media/148c62f5/slide_00.png",
+        "media/148c62f5/slide_01.png",
+        "media/148c62f5/slide_02.png",
+        "media/148c62f5/slide_03.png",
+        "media/148c62f5/slide_04.png",
+        "media/148c62f5/slide_05.png",
+        "media/148c62f5/slide_06.png",
+        "media/148c62f5/slide_07.png"
+      ]
+    },
+    "issue": 109
   }
 ]
