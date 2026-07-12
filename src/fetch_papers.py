@@ -387,9 +387,24 @@ def main():
         while len(picked) < n and rest:
             picked.append(rest.pop(0))
         picked = picked[:n]
-        for item in news[:max_news]:
+        # news cap is PER DAY across all runs (top-ups run many times a day):
+        # count news already open or posted today before allowing another
+        from datetime import datetime, timezone
+        today = datetime.now(timezone.utc).date().isoformat()
+        open_news = sum(1 for x in hist if x["paper"].get("item_type", "paper") != "paper"
+                        and x["status"] in ("pending_media", "pending_video",
+                                            "pending_review", "in_review", "approved"))
+        posted_today_news = sum(
+            1 for x in load_json("posted.json", [])
+            if str(x.get("posted_at", "")).startswith(today)
+            and x.get("item_type", "paper") != "paper")
+        news_budget = max(0, max_news - open_news - posted_today_news)
+        for item in news[:news_budget]:
             if len(picked) < n or item.get("score", 0) > 8.5:
                 picked.append(item)
+        if news_budget == 0 and news:
+            print(f"News budget exhausted (open={open_news}, "
+                  f"posted today={posted_today_news}); papers only this run.")
         picked = picked[:n + 1]
         if cfg["sources"].get("youtube_enrichment"):
             enrich_youtube(picked)

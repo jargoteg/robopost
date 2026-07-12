@@ -246,6 +246,7 @@ def main():
             "posted_at": datetime.now(timezone.utc).isoformat(),
             "bsky_variant": d.get("bsky_variant", ""),
             "hook_style": d["content"].get("hook_style", ""),
+            "item_type": d["paper"].get("item_type", "paper"),
             "platform_ids": ids, "metrics": {},
         })
         # persist IMMEDIATELY: if anything later crashes, this post is recorded
