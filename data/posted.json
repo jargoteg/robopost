@@ -872,5 +872,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "171ea4ac",
+    "paper_id": "rss-2988b04f67",
+    "title": "A multi-armed robot for assisting with agricultural tasks",
+    "format": "carousel",
+    "hook": "One hand holds the branch. The other does the work.",
+    "posted_at": "2026-07-12T08:24:03.581362+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqgqt6jaqx2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
