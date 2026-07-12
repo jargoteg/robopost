@@ -9116,7 +9116,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-12T09:10:36.638820+00:00",
     "media": {
       "figures": [
@@ -9141,6 +9141,8 @@
     },
     "issue": 109,
     "scheduled_after": "2026-07-12T11:56:03.424499+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   }
 ]

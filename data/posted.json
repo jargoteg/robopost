@@ -904,5 +904,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "148c62f5",
+    "paper_id": "rss-73ab4bd0cf",
+    "title": "Humanoid home robots are on the market – but do we really want them?",
+    "format": "carousel",
+    "hook": "A $20,000 robot folds laundry. Nobody asked if we should want it.",
+    "posted_at": "2026-07-12T12:06:22.156404+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "article",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqh5ap6sah2x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
