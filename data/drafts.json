@@ -8571,7 +8571,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-11T22:27:45.451264+00:00",
     "media": {
       "figures": [
@@ -8670,5 +8670,79 @@
     "issue": 105,
     "bsky_variant": "thread",
     "finalized": true
+  },
+  {
+    "draft_id": "25098fc1",
+    "paper": {
+      "id": "rss-cbe1e5c429",
+      "title": "This DIY Bipedal Robot Used Pneumatic “Air-Muscles” Instead of Motors",
+      "abstract": "In 1987, Richard Greenhill , a British photographer who was fascinated by (but had no actual training in) robotics, decided he wanted to build a life-size humanoid that could do useful things, like carrying luggage. He was working at a startup called Intergalactic Robots, but he couldn’t convince anyone there to build such a machine, so he set about building one himself, in his attic. To help with his project, he organized a weekly get-together of a dozen or so like-minded folks. Every Wednesday night, his wife, Sally, would make a big pot of spaghetti, and the group would tinker with components scavenged from old printers and picked up from junkyards. They called themselves the Shadow Group. They eventually constructed several different robots, but their main project was the two-legged Shadow Walker. In 1987, photographer Richard Greenhill organized a weekly gathering of DIY enthusiasts to work on projects in his attic, including the Shadow Walker. Richard Greenhill and David Buckley Greenhill’s friend David Buckley , a robotics and animatronics expert he’d met at Intergalactic, sketched out a rough design based on medical textbooks of human bone structure and muscle movement. The robot’s skeleton, made of maple, was greatly simplified—only one bone in the lower leg and a single wide toe on each foot. The ankle’s double-axis design allowed for two degrees of movement. The knee had no complicating kneecap. Greenhill didn’t want the robot to use motors, so its movement was con",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/shadow-walker-biped-humanoid-robot",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "1987. No motors. Maple bones. A photographer built a walking humanoid in his attic.",
+      "commentary": "Shadow Walker is a wonderful historical footnote that the community should know. Richard Greenhill, a photographer with zero formal robotics training, used pneumatic air muscles and a maple skeleton to approximate human gait decades before Boston Dynamics made bipedal locomotion a VC pitch. The clever bit: the actuator philosophy is biologically honest. Muscles pull, they don't push, and air muscles respect that constraint in a way motors fundamentally don't. The honest caveat is that this never achieved reliable outdoor locomotion, and the DIY origin story, while charming, masks how hard the control problem really is. Still, the Shadow Group's work fed directly into Shadow Robot Company, which today builds some of the most capable dexterous hands in the field. The origin story matters.",
+      "slides": [
+        {
+          "title": "Attic robot, 1987",
+          "body": "Richard Greenhill, a photographer, organized weekly Wednesday sessions in his attic. A dozen people. Salvaged printer parts. Junkyard components. Spaghetti provided by Sally Greenhill."
+        },
+        {
+          "title": "Why no motors?",
+          "body": "Greenhill rejected electric motors from the start. Air muscles, like biological muscle, only pull. That one constraint shaped every joint design in the Shadow Walker."
+        },
+        {
+          "title": "The skeleton logic",
+          "body": "Maple bones, not steel. Designed from medical textbooks of human anatomy. Simplified: one lower-leg bone, a single wide toe, no kneecap. Minimum viable human structure."
+        },
+        {
+          "title": "The ankle was the clever part",
+          "body": "Double-axis ankle joint gave two degrees of freedom. Most hobby bipeds at the time had none. Getting that ankle geometry right was what separated walking from tipping."
+        },
+        {
+          "title": "What it became",
+          "body": "The Shadow Group eventually became Shadow Robot Company. Their dexterous hand is now a standard research platform worldwide. That attic was the origin point."
+        },
+        {
+          "title": "Why this still matters",
+          "body": "Pneumatic actuators are back in serious field robotics. Compliant, high force-to-weight, safe near humans. Shadow Walker was early evidence that the biologically honest approach is worth the control headache."
+        }
+      ],
+      "video_script": "In 1987, a British photographer with no robotics training started building a walking humanoid in his attic, every Wednesday night, over pasta. No motors. Pneumatic air muscles only, because real muscles pull, they don't push. The skeleton was maple, designed from medical textbooks. Simplified to the minimum: one lower leg bone, one wide toe, no kneecap. It never walked reliably outdoors. But that group became Shadow Robot Company. Their dexterous hand is in labs worldwide right now. So here's the question: how many of today's serious robotics labs actually started in someone's living room?",
+      "caption_instagram": "A photographer with zero robotics training built a walking humanoid in his attic in 1987. No motors. Pneumatic air muscles and a maple skeleton.\n\nThe Shadow Walker was designed from medical anatomy textbooks and built from junkyard parts. The core insight was biologically honest: muscles pull, they don't push. Air muscles respect that. Electric motors don't.\n\nThe group never cracked reliable outdoor locomotion, and the control problem with pneumatics is genuinely hard. But the Shadow Group eventually became Shadow Robot Company, whose dexterous hand is now one of the most-used research platforms in the field.\n\nPneumatic actuators are having a serious comeback in field robotics right now, especially anywhere you need compliance, high force-to-weight, or safety near people. Shadow Walker was early evidence that the biologically-motivated approach has legs. Literally.\n\nFull history via IEEE Spectrum, link in bio.\n\n#swarmrobotics #fieldrobotics #humanoidrobots #softrobotics #pneumaticactuators #roboticshistory #shadowrobot",
+      "caption_tiktok": "No motors. Just air muscles and maple bones. A photographer built this in his attic in 1987 and accidentally started one of the best robotics companies in the world.\n#robotics #humanoidrobot #engineeringhistory #shadowrobot",
+      "post_bluesky": "No motors. A photographer built a walking humanoid in his attic in 1987 using pneumatic air muscles and a maple skeleton. That group became Shadow Robot Company. The attic-to-lab pipeline is real. https://spectrum.ieee.org/shadow-walker-biped-humanoid-robot",
+      "bluesky_thread": [
+        "The core design choice is underrated: air muscles only pull, same as biological muscle. Motors don't have that constraint, so motor-driven joints silently accumulate bad assumptions about how bodies actually move. Shadow Walker baked in the biology from day one.",
+        "They never solved outdoor locomotion, and pneumatic control is genuinely painful compared to modern servo stacks. But Shadow Robot's dexterous hand is in serious labs worldwide right now. Not bad for a Wednesday-night pasta club. Anyone else have a favourite 'accidental origin' story in robotics?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-12T06:09:13.893407+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/25098fc1/bsky_00.png",
+        "media/25098fc1/bsky_01.png",
+        "media/25098fc1/bsky_02.png",
+        "media/25098fc1/bsky_03.png"
+      ],
+      "slides": [
+        "media/25098fc1/slide_00.png",
+        "media/25098fc1/slide_01.png",
+        "media/25098fc1/slide_02.png",
+        "media/25098fc1/slide_03.png",
+        "media/25098fc1/slide_04.png",
+        "media/25098fc1/slide_05.png",
+        "media/25098fc1/slide_06.png",
+        "media/25098fc1/slide_07.png"
+      ]
+    }
   }
 ]

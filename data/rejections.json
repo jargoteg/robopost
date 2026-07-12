@@ -300,5 +300,17 @@
     "title": "Hello Robot Sets the Standard for Practical, Safe Home Robots",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Restoring surgeons’ sense of touch with robotic fingertips",
+    "source": "robohub.org",
+    "item_type": "article",
+    "reason": "no reason given",
+    "date": "2026-07-12"
+  },
+  {
+    "title": "This DIY Bipedal Robot Used Pneumatic “Air-Muscles” Instead of Motors",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
