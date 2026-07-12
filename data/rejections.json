@@ -324,5 +324,12 @@
     "title": "Modeling and Analysis of a Coupled Human–Robot System With Walking Assistance by Exoskeletons",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Coding for underwater robotics",
+    "source": "robohub.org",
+    "item_type": "article",
+    "reason": "not paper",
+    "date": "2026-07-12"
   }
 ]
