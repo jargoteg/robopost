@@ -888,5 +888,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "56b9c32b",
+    "paper_id": "rss-327e582561",
+    "title": "PEPA: A Persistently Autonomous Embodied Agent With Personalities",
+    "format": "carousel",
+    "hook": "There is a reason robots cannot survive without someone writing them a to-do list.",
+    "posted_at": "2026-07-12T10:26:03.424499+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqgxncs6dv2s",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
