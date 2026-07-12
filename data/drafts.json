@@ -8111,7 +8111,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-11T17:36:02.452852+00:00",
     "media": {
       "figures": [
@@ -8137,7 +8137,9 @@
     },
     "issue": 101,
     "scheduled_after": "2026-07-12T00:44:46.420085+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "8b759996",

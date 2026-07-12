@@ -840,5 +840,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "dde028ba",
+    "paper_id": "rss-acb6fbdd5f",
+    "title": "Vine-inspired robotic gripper gently lifts heavy and fragile objects",
+    "format": "carousel",
+    "hook": "Watermelon lifted. Zero damage. No fingers.",
+    "posted_at": "2026-07-12T03:36:36.799133+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqgar6q74u26",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
