@@ -856,5 +856,21 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f96368c6",
+    "paper_id": "rss-b80d11a48f",
+    "title": "Handle with care: Soft robot gripper picks ripe fruit without bruising",
+    "format": "carousel",
+    "hook": "A robot tells ripeness by touch. No cameras, no chemicals.",
+    "posted_at": "2026-07-12T06:06:06.707176+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqgj4i656o27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
