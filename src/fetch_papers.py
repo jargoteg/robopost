@@ -357,6 +357,8 @@ def main():
     if active_windows(cfg):
         print("Conference window active — widening the net.")
         cfg["pipeline"]["drafts_per_day"] = cfg["pipeline"]["drafts_per_day"] + 1
+    report = {"ts": __import__("datetime").datetime.utcnow().isoformat()[:16],
+              "collected": len(papers)}
     from utils import norm_title
     hist = load_json("drafts.json", [])
     known_ids = {str(x["paper"].get("id")) for x in hist}
@@ -367,9 +369,15 @@ def main():
               if p["id"] not in seen
               and str(p["id"]) not in known_ids
               and norm_title(p.get("title")) not in known_titles]
+    report["dedup_dropped"] = before - len(papers)
+    report["after_dedup"] = len(papers)
     if before - len(papers):
         print(f"Dedup: dropped {before - len(papers)} already-drafted candidates "
               f"(id or title match against full history).")
+    if not papers:
+        report["picked"] = []
+        report["note"] = "zero candidates after dedup/filters"
+        save_json("fetch_report.json", report)
     if papers:
         ranked = rank_papers(papers, cfg)
         n = cfg["pipeline"]["drafts_per_day"]
@@ -449,6 +457,11 @@ def main():
                         vetted.append(alt)
                         break
         picked = vetted
+        report["ranked_above_floor"] = len(good)
+        report["picked"] = [{"t": p.get("title", "")[:50],
+                             "type": p.get("item_type"),
+                             "video": bool(p.get("video_url"))} for p in picked]
+        save_json("fetch_report.json", report)
         if cfg["sources"].get("youtube_enrichment"):
             enrich_youtube(picked)
         for p in picked:

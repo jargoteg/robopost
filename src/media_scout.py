@@ -19,10 +19,25 @@ ROBO_WORDS = (
 
 
 def resolve_channel_id(handle: str) -> str | None:
-    """@handle -> UC... channel id, cached (the page embeds it)."""
+    """@handle -> UC... channel id. API forHandle when key present (reliable),
+    page scrape as fallback. Cached; failures logged loudly."""
     cache = load_json("youtube_channels.json", {})
     if handle in cache:
         return cache[handle]
+    key = os.environ.get("YOUTUBE_API_KEY", "")
+    if key:
+        try:
+            r = requests.get("https://www.googleapis.com/youtube/v3/channels",
+                             params={"key": key, "forHandle": handle.lstrip("@"),
+                                     "part": "id"}, timeout=30)
+            items = r.json().get("items", [])
+            if items:
+                cache[handle] = items[0]["id"]
+                save_json("youtube_channels.json", cache)
+                return items[0]["id"]
+            print(f"RESOLVE FAILED (API says no such handle): {handle}")
+        except Exception as e:
+            print(f"API resolve error {handle}: {e}")
     try:
         r = requests.get(f"https://www.youtube.com/{handle}", headers=UA, timeout=30)
         m = re.search(r'"channelId":"(UC[\w-]{22})"', r.text)
@@ -30,6 +45,7 @@ def resolve_channel_id(handle: str) -> str | None:
             cache[handle] = m.group(1)
             save_json("youtube_channels.json", cache)
             return m.group(1)
+        print(f"RESOLVE FAILED (page scrape): {handle}")
     except Exception as e:
         print(f"channel resolve failed {handle}: {e}")
     return None

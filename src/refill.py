@@ -23,10 +23,20 @@ def main(max_rounds=3):
             return
         print(f"Refill round {rnd}: {have}/{target} open drafts, fetching more...")
         before = len(load_json("drafts.json", []))
+        errors = {}
         for script in ("fetch_papers.py", "generate.py", "visuals.py", "video.py"):
-            r = subprocess.run([sys.executable, f"src/{script}"])
+            r = subprocess.run([sys.executable, f"src/{script}"],
+                               capture_output=True, text=True)
+            sys.stdout.write(r.stdout or "")
+            sys.stderr.write(r.stderr or "")
             if r.returncode != 0:
-                print(f"Refill: {script} failed (rc={r.returncode}); continuing.")
+                errors[script] = (r.stderr or "")[-800:]
+                print(f"Refill: {script} FAILED (rc={r.returncode})")
+        if errors:
+            from utils import save_json
+            rep = load_json("fetch_report.json", {})
+            rep["errors"] = errors
+            save_json("fetch_report.json", rep)
         after = len(load_json("drafts.json", []))
         if after == before:
             print("Refill: no new candidates available right now; stopping.")
