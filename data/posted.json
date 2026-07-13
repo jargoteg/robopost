@@ -1043,5 +1043,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "0a0ce468",
+    "paper_id": "doi-10.1109_lra.2026.3703257",
+    "title": "Embroidery Actuator Utilizing Embroidery Patterns to Generate Diverse Fabric Deformations",
+    "format": "carousel",
+    "hook": "Fabric that bends on command. No motors, no air, just thread.",
+    "posted_at": "2026-07-13T21:28:04.634932+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqkn3z3yf22f",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

@@ -10907,7 +10907,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-13T15:24:34.275636+00:00",
     "media": {
       "bsky": [
@@ -10933,6 +10933,8 @@
         "media/0a0ce468/slide_07.png"
       ]
     },
-    "issue": 121
+    "issue": 121,
+    "bsky_variant": "thread",
+    "finalized": true
   }
 ]
