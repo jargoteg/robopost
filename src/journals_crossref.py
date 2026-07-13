@@ -3,7 +3,6 @@
 indexes the same papers with no wall. Polite-pool usage with a mailto."""
 import re
 import requests
-from utils import load_config
 
 MAILTO = "robopost@users.noreply.github.com"
 JOURNALS = {
