@@ -1,14 +1,42 @@
 {
-  "ts": "2026-07-13T09:37",
-  "collected": 234,
+  "ts": "2026-07-13T09:49",
+  "collected": 241,
   "dedup_dropped": 64,
-  "after_dedup": 170,
-  "ranked_above_floor": 2,
+  "after_dedup": 177,
+  "score_hist": {
+    "0": 17,
+    "1": 26,
+    "2": 45,
+    "3": 48,
+    "4": 23,
+    "5": 11,
+    "6": 4,
+    "7": 2,
+    "8": 1
+  },
+  "rank_batches_failed": 0,
+  "ranked_above_floor": 7,
   "split": {
-    "videos": 0,
-    "papers": 0,
-    "news": 2
+    "videos": 1,
+    "papers": 2,
+    "news": 4
   },
   "floor": 6,
-  "picked": []
+  "picked": [
+    {
+      "t": "1 Year, 1,000 Skydio Docks Deployed | Autonomous F",
+      "type": "video",
+      "video": true
+    },
+    {
+      "t": "Towards shared embodied intelligence in humanoid r",
+      "type": "paper",
+      "video": false
+    },
+    {
+      "t": "Learning Locomotion on Discrete Terrain via Minima",
+      "type": "paper",
+      "video": true
+    }
+  ]
 }

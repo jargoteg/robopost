@@ -9385,5 +9385,319 @@
     "queue_notified": true,
     "bsky_variant": "single",
     "finalized": true
+  },
+  {
+    "draft_id": "a5ef2b61",
+    "paper": {
+      "id": "2507.04321",
+      "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
+      "url": "https://arxiv.org/abs/2507.04321",
+      "source": "arxiv",
+      "redo_notes": "populate the items correctly",
+      "abstract": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Bigger swarms should be harder to coordinate. This one gets easier.",
+      "commentary": "SwarmForage pushes to 1000 robots and finds that division of labor emerges without being programmed in. The interesting claim is that scaling itself helps: more agents means the collective self-sorts into roles more reliably, not less. That flips the usual assumption that swarm coordination degrades with scale. Honest caveat: simulated results at this scale rarely survive contact with real hardware, sensor noise, and communication collisions. Until someone runs this on physical robots in an unstructured space, treat the 1000-robot number as a proof of concept, not a deployment spec.",
+      "slides": [
+        {
+          "title": "The standard assumption",
+          "body": "Coordinate 10 robots: manageable. Coordinate 1000: combinatorial nightmare. Most swarm work sidesteps this by capping swarm size well below 100 agents."
+        },
+        {
+          "title": "What SwarmForage claims",
+          "body": "At 1000 robots, foraging roles emerge without explicit assignment. Scouts, transporters, and guards self-sort from local rules only. Division of labor strengthens as N grows, not weakens."
+        },
+        {
+          "title": "Why emergence beats assignment",
+          "body": "Hardcoded role ratios break when robots fail or terrain changes. Emergent roles rebalance automatically. The swarm degrades gracefully rather than catastrophically when individuals drop out."
+        },
+        {
+          "title": "The simulation gap",
+          "body": "1000 robots in simulation share a clean clock and ideal comms. Real hardware adds packet loss, motor variance, and physical collisions. These results need a physical validation step before field claims hold."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Emergent division of labor at this scale is a useful theoretical result. It sets a ceiling to aim for, and the mechanism, local stigmergy driving global role structure, is the right class of solution for inspection or search tasks."
+        }
+      ],
+      "video_script": "Everyone assumes larger swarms are harder to control. SwarmForage says the opposite. Push to a thousand robots and division of labor just appears: scouts, transporters, guards, all self-organized from simple local rules. No central coordinator. No role assignments. The swarm figures it out. The catch is this is still simulation. Real hardware, real noise, real packet loss. That gap is the whole ballgame. But the mechanism is right, and the scale is genuinely interesting. Would emergent roles hold if a third of the swarm failed mid-task?",
+      "caption_instagram": "Bigger swarms should be harder to coordinate. SwarmForage argues the opposite.\n\n1000 robots. No role assignments. Scouts, transporters, and guards emerge from local rules alone. The paper claims division of labor actually gets more reliable as the swarm scales up, not less. That is a strong claim.\n\nThe mechanism is stigmergy: robots respond to traces left by other robots, not to a central plan. It is the right class of solution for real search and inspection tasks where central coordination is a liability.\n\nThe honest read: this is simulation at 1000 robots, which means clean comms and perfect timing. Physical validation is the missing piece. But as a theoretical ceiling, it is worth tracking.\n\nPaper: SwarmForage: Emergent Division of Labor in 1000-Robot Swarms, arXiv 2507.04321\n\n#swarmrobotics #multiagentsystems #emergentbehavior #fieldrobotics #roboticsresearch #autonomoussystems #robotswarm",
+      "caption_tiktok": "1000 robots, zero role assignments, and the swarm just... figures it out. The scaling argument here is the interesting part. #swarmrobotics #robotics #emergentbehavior #multiagent",
+      "post_bluesky": "Bigger swarms should be harder to coordinate. SwarmForage flips that: at 1000 robots, division of labor emerges more reliably as N grows. No role assignment. Local rules only. Simulation caveat is real, but the mechanism is right. https://arxiv.org/abs/2507.04321",
+      "bluesky_thread": [
+        "The core claim: stigmergy-driven role sorting (scouts, transporters, guards) strengthens with scale. That is the opposite of most coordination intuitions. If it holds in hardware, it matters a lot for search and inspection swarms where central comms fail.",
+        "The gap I keep coming back to: 1000 simulated robots share a clean clock and lossless comms. Real deployments do not. Has anyone seen emergent division of labor survive >30% packet loss in a physical swarm? Genuinely asking."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-13T09:50:57.427855+00:00",
+    "media": {
+      "figures": [
+        "media/a5ef2b61/fig_01.png",
+        "media/a5ef2b61/fig_00.png",
+        "media/a5ef2b61/fig_04.png"
+      ],
+      "bsky": [
+        "media/a5ef2b61/bsky_00.png",
+        "media/a5ef2b61/bsky_01.png",
+        "media/a5ef2b61/bsky_02.png",
+        "media/a5ef2b61/bsky_03.png"
+      ],
+      "slides": [
+        "media/a5ef2b61/slide_00.png",
+        "media/a5ef2b61/slide_01.png",
+        "media/a5ef2b61/slide_02.png",
+        "media/a5ef2b61/slide_03.png",
+        "media/a5ef2b61/slide_04.png",
+        "media/a5ef2b61/slide_05.png",
+        "media/a5ef2b61/slide_06.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "81511fa3",
+    "paper": {
+      "id": "yt-8rZJ8RAr31g",
+      "title": "1 Year, 1,000 Skydio Docks Deployed | Autonomous Flight at Scale |  #drone #skydio #robot",
+      "abstract": "A year after the first customer shipment, Skydio Dock has reached a milestone that no other autonomous robot system in America has — over 1,000 units doing real work, every day, across the industries that keep the country running.\n\n🔹 https://www.skydio.com\n🔹 We're hiring: https://www.skydio.com/careers?utm_source=G0E0lyQEda\n🔹 https://www.youtube.com/@Skydio\n🔹 https://www.instagram.com/skydiohq\n🔹 https://www.linkedin.com/company/skydio\n🔹 https://www.x.com/skydiohq",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=8rZJ8RAr31g",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=8rZJ8RAr31g",
+      "video_first": true,
+      "score": 7.2
+    },
+    "content": {
+      "format": "video",
+      "hook": "1,000 drones docked and flying daily. Labs don't scale like this.",
+      "commentary": "Skydio claims 1,000 Dock units deployed across real infrastructure in under a year, making it the largest autonomous robot deployment at scale in the US by their count. That's not a lab benchmark, that's daily operational tempo across energy, telecom, construction, and public safety sites. The honest caveat: '1,000 units' is a marketing milestone, not a peer-reviewed reliability figure. We get no MTBF numbers, no failure mode data, no weather envelope stats. What it does prove is that the dock-and-recharge autonomous inspection loop is commercially viable at volume, which matters more than any paper demo right now.",
+      "slides": [
+        {
+          "title": "1,000 docks. Real work. Daily.",
+          "body": "One year after first customer shipment, Skydio claims over 1,000 Dock units in active field deployment across US critical infrastructure. No other autonomous robot system in America matches that stated scale."
+        },
+        {
+          "title": "What the dock actually solves",
+          "body": "The hard part of drone inspection isn't flight, it's the human in the loop. Dock removes the operator from routine sorties. Power, storage, mission trigger, data uplink. The robot decides when to fly."
+        },
+        {
+          "title": "Industries running these now",
+          "body": "Energy utilities, telecom towers, construction sites, public safety corridors. Environments with variable weather, limited connectivity, and zero tolerance for unplanned downtime. Not a controlled lab."
+        },
+        {
+          "title": "What the video doesn't show",
+          "body": "No MTBF figures. No failure rate data. No wind or rain performance envelope. A fleet deployment video is a sales artifact, not a technical validation. Numbers like these need independent audit to mean anything."
+        },
+        {
+          "title": "Why scale still matters here",
+          "body": "1,000 units accruing daily flight hours generates operational data no research lab can replicate. If Skydio mines that telemetry, the fleet becomes a sensor for improving autonomy. That feedback loop is the real asset."
+        },
+        {
+          "title": "The open question for the field",
+          "body": "Autonomous inspection drones are commercially real. The next bottleneck is data: turning daily flight logs into actionable defect detection. Hardware deployment is ahead of the analytics pipeline."
+        }
+      ],
+      "video_script": "One thousand autonomous drone docks, deployed, flying real missions, every day. Skydio hit that number in under a year. Energy grids, telecom towers, construction sites. Not a pilot program, not a lab demo. The dock handles power, storage, and mission triggers so the operator doesn't have to show up. That's the actual barrier they cleared. We still don't have public MTBF data or failure rates, and we need them. But the deployment scale is real. So here's the question: what does your inspection workflow look like once the drone decides when to fly?",
+      "caption_instagram": "1,000 autonomous drone docks deployed in under a year. That is a scale number worth paying attention to.\n\nSkydio Dock removes the human from routine inspection sorties. Power, storage, mission scheduling, data uplink. The drone decides when to fly. Across energy utilities, telecom, construction, and public safety, that loop is now running daily at over 1,000 sites across the US.\n\nThe honest read: this is a marketing milestone video, not a technical paper. There are no MTBF figures, no failure mode disclosures, no weather envelope data. A deployment count is not a reliability certificate. We need independent audit before treating this as a field validation.\n\nBut the deployment is real. And 1,000 units accumulating daily operational telemetry is a data asset that no university lab can match. The next question is whether that data is being used to actually improve autonomy, or just justify the next sales deck.\n\nFull video linked in bio.\n\n#swarmrobotics #droneinspection #autonomoussystems #fielddrones #infrastructureinspection #roboticsdeployment #uavsystems",
+      "caption_tiktok": "1,000 autonomous drones doing real inspections every day. Cool flex. Now show us the failure rate data. Full video linked. #drone #autonomousrobotics #droneinspection #skydio #fielddrones",
+      "post_bluesky": "1,000 Skydio Docks flying daily across US infrastructure. No other autonomous robot system matches that claimed scale. No MTBF data either. The deployment is real. The validation isn't peer-reviewed. Both things matter. https://www.youtube.com/watch?v=8rZJ8RAr31g",
+      "bluesky_thread": [
+        "The dock-and-recharge loop is the actual unlock. Takes the human out of routine sorties entirely. Power, storage, mission trigger, uplink. That's what 1,000 sites are running. Hardware deployment is clearly ahead of the analytics pipeline for defect detection.",
+        "What I want to see next: published operational telemetry. 1,000 units accumulating daily flight hours is a dataset that could move the whole inspection autonomy field. Is anyone publishing from that fleet data, or does it stay internal forever?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-13T09:51:26.233378+00:00",
+    "media": {
+      "figures": [
+        "media/81511fa3/fig_00.png"
+      ],
+      "bsky": [
+        "media/81511fa3/bsky_00.png",
+        "media/81511fa3/bsky_01.png",
+        "media/81511fa3/bsky_02.png",
+        "media/81511fa3/bsky_03.png"
+      ],
+      "slides": [
+        "media/81511fa3/slide_00.png",
+        "media/81511fa3/slide_01.png",
+        "media/81511fa3/slide_02.png",
+        "media/81511fa3/slide_03.png",
+        "media/81511fa3/slide_04.png",
+        "media/81511fa3/slide_05.png",
+        "media/81511fa3/slide_06.png",
+        "media/81511fa3/slide_07.png"
+      ],
+      "video": "media/81511fa3/video.mp4"
+    }
+  },
+  {
+    "draft_id": "8343e78b",
+    "paper": {
+      "id": "rss-84734beebb",
+      "title": "Towards shared embodied intelligence in humanoid robots through optimization, development and testing of the human-aware ergoCub robot",
+      "abstract": "Nature Machine Intelligence, Published online: 13 July 2026; doi:10.1038/s42256-026-01272-2 Sartore et al. present ergoCub, a humanoid robot that prioritizes human safety at hardware and motion levels. Using a shared embodied intelligence framework, design and control are jointly optimized with human-related metrics such as back stress alongside locomotion objectives, reducing spinal load and improving walking robustness.",
+      "authors": [],
+      "url": "https://www.nature.com/articles/s42256-026-01272-2",
+      "source": "nature.com",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2605.26991"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Safe for humans. That tradeoff usually costs the robot.",
+      "commentary": "ergoCub jointly optimizes hardware design and motion control for human-safety metrics, specifically spinal load on nearby workers, alongside locomotion objectives. The clever bit is treating back stress as a first-class cost function rather than a post-hoc constraint. That said, this is a Nature MI paper on a single platform with no large-scale deployment data, so 'improved walking robustness' needs field mileage before it means anything. The shared embodied intelligence framing is interesting but the real test is whether the spinal-load reduction holds when a real worker does something unpredictable.",
+      "slides": [
+        {
+          "title": "The tradeoff everyone accepts",
+          "body": "Humanoid robots optimized for performance ignore the humans nearby. ergoCub treats human spinal load as a design objective from day one, not a safety check added at the end."
+        },
+        {
+          "title": "What 'shared embodied intelligence' means",
+          "body": "Hardware geometry and motion controller are co-optimized together. Reducing back stress on a nearby person changes the robot's posture policy, which changes its limb proportions. Both layers iterate simultaneously."
+        },
+        {
+          "title": "The specific metric",
+          "body": "Spinal load on a human co-worker is quantified and minimized alongside locomotion objectives. This is measurable. It is not a vague 'ergonomic' claim."
+        },
+        {
+          "title": "What the results show",
+          "body": "Reduced spinal load and improved walking robustness on the ergoCub platform. Single robot, lab conditions. No multi-operator deployment data yet."
+        },
+        {
+          "title": "Why this matters for field robotics",
+          "body": "Human-robot physical collaboration in construction, logistics, or care settings requires robots that are safe by design, not by policy. Baking ergonomics into the cost function is the right engineering direction."
+        },
+        {
+          "title": "Honest caveat",
+          "body": "A single-platform Nature paper is a strong signal, not a deployment story. Real workers behave unpredictably. Spinal-load metrics need validation across varied tasks and body types before this leaves the lab."
+        }
+      ],
+      "video_script": "Everyone talks about making robots more capable. ergoCub asks a different question: what does the robot do to the person standing next to it? Sartore et al. co-optimize hardware design and motion control against human spinal load. Not as an afterthought. As a core cost function. The result is a humanoid that walks more robustly and puts less stress on nearby workers. One platform, lab conditions, a lot of work left to do. But treating human ergonomics as a design variable from the start? That is the right framing. Would you trust a robot optimized this way to work alongside you?",
+      "caption_instagram": "Safe for humans. That tradeoff usually costs the robot.\n\nMost humanoid robot design optimizes for the robot. ergoCub, from Sartore et al., optimizes for the system: robot plus the human next to it. Spinal load on a nearby worker is a first-class cost function, not a compliance checkbox.\n\nThe hardware geometry and the motion controller are co-designed together. Change the ergonomic target, the posture policy shifts, the limb proportions follow. That tight coupling is the genuinely interesting part.\n\nHonest caveat: this is one platform in lab conditions. Real co-workers are unpredictable, come in different body types, and do things no planner anticipated. The metric needs field validation before anyone should call this solved.\n\nBut framing human ergonomics as a design variable from the start is the correct engineering instinct. Paper: 'Towards shared embodied intelligence in humanoid robots through optimization, development and testing of the human-aware ergoCub robot', arXiv:2605.26991\n\n#swarmrobotics #humanoidrobots #roboticsresearch #cobots #robotdesign #locomotion #humanrobotinteraction",
+      "caption_tiktok": "Built to protect the human standing next to it. Spinal load as a design variable, not an afterthought. #robotics #humanoidrobot #cobot #robotdesign #engineering",
+      "post_bluesky": "Safe for humans. That tradeoff usually costs the robot.\n\nergoCub co-optimizes hardware AND motion control against human spinal load as a real cost function. Clever framing. One lab platform so far.\n\nhttps://www.nature.com/articles/s42256-026-01272-2",
+      "bluesky_thread": [
+        "The specific move: spinal load on a nearby worker feeds into the same optimizer that designs limb geometry and posture policy. Not post-hoc. Simultaneous. That coupling is what makes it interesting, not the 'shared intelligence' branding.",
+        "Honest question though: how does this hold when the co-worker does something unplanned? Single-platform lab results with one body type tell you the optimization is feasible. They don't tell you it generalizes. What would you need to see before trusting this in a real workspace?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-13T09:51:54.463192+00:00",
+    "media": {
+      "figures": [
+        "media/8343e78b/fig_00.png",
+        "media/8343e78b/fig_01.png",
+        "media/8343e78b/fig_04.png",
+        "media/8343e78b/fig_02.png"
+      ],
+      "bsky": [
+        "media/8343e78b/bsky_00.png",
+        "media/8343e78b/bsky_01.png",
+        "media/8343e78b/bsky_02.png",
+        "media/8343e78b/bsky_03.png"
+      ],
+      "slides": [
+        "media/8343e78b/slide_00.png",
+        "media/8343e78b/slide_01.png",
+        "media/8343e78b/slide_02.png",
+        "media/8343e78b/slide_03.png",
+        "media/8343e78b/slide_04.png",
+        "media/8343e78b/slide_05.png",
+        "media/8343e78b/slide_06.png",
+        "media/8343e78b/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "96027913",
+    "paper": {
+      "id": "2606.31912",
+      "title": "Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing",
+      "abstract": "Navigating discrete terrain such as stepping stones remains a major challenge for legged robots. Conventional approaches often rely on dense environment reconstruction from cameras or LiDAR, which can be affected by latency, occlusions, and significant computational overhead. We show that proximity sensors integrated into the bottom of a quadruped's feet enable safe, terrain-seeking autonomous locomotion. No cameras, no LiDAR, no other exteroceptive sensors! Targeted, task-specific sensing can be a powerful alternative to increasingly complex perception stacks. \n\n📝 Paper: https://arxiv.org/abs/2606.31912",
+      "authors": [],
+      "url": "https://arxiv.org/abs/2606.31912",
+      "source": "media_scout",
+      "item_type": "paper",
+      "video_url": "https://www.youtube.com/watch?v=K7_acxnVrdI",
+      "video_first": true,
+      "open_version": "https://arxiv.org/abs/2606.31912",
+      "score": 7.5
+    },
+    "content": {
+      "format": "video",
+      "hook": "Dense perception stacks vs. four tiny sensors under the feet.",
+      "commentary": "This paper strips legged locomotion down to the studs: proximity sensors on the foot soles only, no cameras, no LiDAR, no reconstruction pipeline. The robot learns to navigate stepping stones purely from contact-adjacent proximity feedback and a learned policy. What's clever is the task-specific sensing argument: you don't need to reconstruct the world if your sensor is already at the decision point. The honest caveat is that stepping stones are a controlled benchmark, and real discrete terrain (wet rock, rubble, sloped surfaces) introduces slip and geometry that proximity sensing alone may not catch. Still, the compute and latency argument is real: every camera-based pipeline I've seen deployed subsea or underground has eaten itself on occlusion and lag.",
+      "slides": [
+        {
+          "title": "The problem with perception",
+          "body": "Cameras and LiDAR reconstruct the whole scene to answer one question: is there solid ground here? Latency, occlusion, and compute cost stack up fast on real hardware."
+        },
+        {
+          "title": "Four sensors, nothing else",
+          "body": "Proximity sensors embedded in each foot sole. No exteroceptive sensors elsewhere. The policy learns to seek stable footholds using only that local signal."
+        },
+        {
+          "title": "Stepping stones, solved minimally",
+          "body": "The robot crosses discrete terrain gaps autonomously. The sensor is already at the contact point, so perception and action are spatially co-located. No map needed."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Subsea, nuclear, and rubble search robots all struggle with perception dropout. A foot-local sensing strategy degrades gracefully: if one sensor fails, three remain."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Stepping stones are geometrically clean. Wet rock, rubble piles, or angled surfaces add slip and 3D geometry that proximity alone may under-characterize. Field validation still needed."
+        },
+        {
+          "title": "The real argument here",
+          "body": "Task-specific, spatially targeted sensing can outperform general-purpose perception. The community keeps adding sensors. This paper asks whether you should subtract them instead."
+        }
+      ],
+      "video_script": "Everyone building legged robots for the field is adding more sensors. More cameras, more LiDAR, bigger compute. This paper goes the other direction. Four proximity sensors, one under each foot, no cameras, nothing else. The robot crosses stepping stones using only what those foot sensors feel. The sensing is right at the decision point. No map, no reconstruction, no lag. It works. The real question is: how far does this hold up when the terrain stops being clean geometry? Watch the video and tell me what you think.",
+      "caption_instagram": "Dense perception stacks vs. four tiny sensors under the feet.\n\nThis quadruped navigates stepping stones with no cameras and no LiDAR. Just proximity sensors integrated into the foot soles, feeding a learned policy that seeks stable ground. The sensor sits exactly where the decision happens.\n\nThe argument is clean: task-specific, spatially targeted sensing can replace a full perception pipeline for specific problems. Compute drops, latency drops, occlusion stops mattering.\n\nThe caveat I keep thinking about: stepping stones are geometrically kind. Real field terrain, think subsea rubble or nuclear facility floors, adds slope, slip, and irregular geometry. Proximity sensing may under-characterize that. Field validation is the missing chapter.\n\nFull video: https://www.youtube.com/watch?v=K7_acxnVrdI\nPaper: Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing, arXiv 2606.31912\n\n#swarmrobotics #leggedrobots #fieldrobotics #robotics #locomotion #searchandrescue #roboticresearch #arxiv",
+      "caption_tiktok": "No cameras. No LiDAR. Just four sensors on the feet. This quadruped crosses stepping stones on pure foot-local proximity sensing and a learned policy. Less is more. #robotics #leggedrobotics #fieldrobotics #AIrobotics",
+      "post_bluesky": "Dense perception stacks vs. four tiny sensors under the feet. This quadruped navigates stepping stones with zero cameras, zero LiDAR, just proximity sensors in the soles. Task-specific sensing beats general reconstruction here. https://arxiv.org/abs/2606.31912",
+      "bluesky_thread": [
+        "What's clever: the sensor sits at the contact point, so perception and action are spatially co-located. No map, no latency, no occlusion. The policy learns foothold-seeking from that alone. Video: https://www.youtube.com/watch?v=K7_acxnVrdI",
+        "My caveat: stepping stones are geometrically kind. Wet rubble, angled surfaces, or soft ground adds slip and 3D complexity that proximity alone may miss. How far does the 'subtract sensors' argument hold on real field terrain? Anyone tested similar minimal sensing on unstructured outdoor surfaces?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-13T09:52:21.212717+00:00",
+    "media": {
+      "figures": [
+        "media/96027913/pdf/fig_00.png",
+        "media/96027913/fig_00.png",
+        "media/96027913/pdf/fig_02.png",
+        "media/96027913/pdf/fig_04.png"
+      ],
+      "bsky": [
+        "media/96027913/bsky_00.png",
+        "media/96027913/bsky_01.png",
+        "media/96027913/bsky_02.png",
+        "media/96027913/bsky_03.png"
+      ],
+      "slides": [
+        "media/96027913/slide_00.png",
+        "media/96027913/slide_01.png",
+        "media/96027913/slide_02.png",
+        "media/96027913/slide_03.png",
+        "media/96027913/slide_04.png",
+        "media/96027913/slide_05.png",
+        "media/96027913/slide_06.png",
+        "media/96027913/slide_07.png"
+      ],
+      "video": "media/96027913/video.mp4"
+    }
   }
 ]
