@@ -10504,7 +10504,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-13T15:20:12.423359+00:00",
     "media": {
       "bsky": [
@@ -10530,7 +10530,9 @@
         "media/83f3a185/slide_07.png"
       ]
     },
-    "issue": 119
+    "issue": 119,
+    "scheduled_after": "2026-07-13T22:58:04.634932+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "412919d7",
