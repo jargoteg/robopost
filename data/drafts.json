@@ -9832,7 +9832,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-13T12:17:21.094914+00:00",
     "media": {
       "figures": [
@@ -9856,7 +9856,9 @@
       ],
       "video": "media/16eafe73/video.mp4"
     },
-    "issue": 116
+    "issue": 116,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "f1ee6e73",

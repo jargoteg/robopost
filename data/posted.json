@@ -1009,5 +1009,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "16eafe73",
+    "paper_id": "yt-P8U_4v8SUOQ",
+    "title": "Unitree Invites You to Witness the 2026 Humanoid Robot Combat Competition",
+    "format": "video",
+    "hook": "Real combat, real falls. What does a fight prove?",
+    "posted_at": "2026-07-13T12:21:40.064870+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqjokwseo72c",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
