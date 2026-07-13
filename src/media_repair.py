@@ -1,7 +1,6 @@
 """Repair: any open draft whose media files are missing on disk gets its
 cards re-rendered (figures re-fetched if needed). Heals drafts whose media
 was generated in a run that failed to commit it."""
-from pathlib import Path
 from utils import load_json, save_json, load_config, ROOT
 
 OPEN = ("pending_media", "pending_review", "in_review", "approved")
