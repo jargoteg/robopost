@@ -1,42 +1,42 @@
 {
-  "ts": "2026-07-13T09:49",
-  "collected": 241,
-  "dedup_dropped": 64,
-  "after_dedup": 177,
+  "ts": "2026-07-13T12:15",
+  "collected": 267,
+  "dedup_dropped": 71,
+  "after_dedup": 196,
   "score_hist": {
     "0": 17,
-    "1": 26,
-    "2": 45,
+    "1": 38,
+    "2": 51,
     "3": 48,
-    "4": 23,
-    "5": 11,
-    "6": 4,
-    "7": 2,
+    "4": 18,
+    "5": 12,
+    "6": 7,
+    "7": 4,
     "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 7,
+  "ranked_above_floor": 12,
   "split": {
     "videos": 1,
-    "papers": 2,
-    "news": 4
+    "papers": 9,
+    "news": 2
   },
   "floor": 6,
   "picked": [
     {
-      "t": "1 Year, 1,000 Skydio Docks Deployed | Autonomous F",
+      "t": "Unitree Invites You to Witness the 2026 Humanoid R",
       "type": "video",
       "video": true
     },
     {
-      "t": "Towards shared embodied intelligence in humanoid r",
+      "t": "DeepTrack: A Pressure‐Tolerant Electromagnetically",
       "type": "paper",
       "video": false
     },
     {
-      "t": "Learning Locomotion on Discrete Terrain via Minima",
+      "t": "A Vision‐Guided Docking Method for Autonomous Unde",
       "type": "paper",
-      "video": true
+      "video": false
     }
   ]
 }

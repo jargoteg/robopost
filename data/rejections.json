@@ -348,5 +348,20 @@
     "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
     "reason": "figures and link were from a different paper (stale arXiv id)",
     "auto": true
+  },
+  {
+    "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "DeepTrack: A Pressure‐Tolerant Electromagnetically Driven Soft Robotic Fish Platform With Visually Guided Locomotion",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "A Vision‐Guided Docking Method for Autonomous Underwater Vehicle From Ice Hole",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]

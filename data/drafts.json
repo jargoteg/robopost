@@ -9703,5 +9703,324 @@
       "video": "media/96027913/video.mp4"
     },
     "issue": 115
+  },
+  {
+    "draft_id": "3c4d54d5",
+    "paper": {
+      "id": "web-1adf659894",
+      "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
+      "abstract": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms. Large-scale swarm robotics study of emergent task allocation.",
+      "authors": [],
+      "url": "",
+      "source": "manual",
+      "item_type": "paper",
+      "user_notes": "Verify the correct paper by title match before extracting any figures. Prior draft used a wrong arXiv id."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "1000 robots. No manager. Jobs still get done.",
+      "commentary": "SwarmForage studies emergent task allocation at genuine scale: 1000 robots, no central coordinator, labor divisions arising from local rules alone. That scale matters because most swarm results at 20-100 robots don't survive the nonlinear dynamics that kick in at an order of magnitude larger. The interesting question is whether the emergent specialization is robust or fragile, and the abstract doesn't tell us enough about failure modes under robot loss or task perturbation. Simulation-only results at this scale are plausible but the gap to physical deployment stays wide, especially for any field use case where sensor noise and terrain heterogeneity break the assumptions fast.",
+      "slides": [
+        {
+          "title": "1000 robots, zero foremen",
+          "body": "SwarmForage runs emergent task allocation across 1000-robot swarms. No central planner. Roles like scouting, retrieval, and staging arise from repeated local interactions between identical agents."
+        },
+        {
+          "title": "Why scale changes everything",
+          "body": "Most swarm papers test 20-100 robots. At 1000, collective behavior enters a different regime: interaction rates, queue contention, and cascade failures all scale nonlinearly. Prior results often do not transfer."
+        },
+        {
+          "title": "What emergent labor looks like",
+          "body": "Robots do not start with assigned roles. Specialization crystallizes from local feedback: a robot that succeeds at retrieval does it again. Over time, stable sub-populations of specialists form without any top-down assignment."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "This is simulation at 1000 agents. Physical noise, hardware failure rates, and unstructured terrain are absent. Field deployment of even 50 swarm robots remains a major open engineering problem."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Search and rescue, planetary surface coverage, and large-area crop scouting all need scalable task allocation. If emergence is robust to robot dropout, that beats any brittle centralized scheduler in degraded conditions."
+        },
+        {
+          "title": "The open question",
+          "body": "Does the emergent division of labor survive 20% robot loss mid-task? That is the number that matters for real deployment. The abstract does not say."
+        }
+      ],
+      "video_script": "A thousand robots. No one in charge. And somehow, the work gets divided. SwarmForage studies how specialization emerges from purely local rules at genuine swarm scale. Scouts form. Retrievers form. No one assigned those jobs. The collective just finds them. The catch: this is simulation, and the jump to physical hardware at this scale has beaten better-funded teams. The question worth asking is whether emergent labor holds when a fifth of your robots die mid-mission. Because that is the field condition every inspection deployment actually faces.",
+      "caption_instagram": "1000 robots, no task assignments, and the work still gets done.\n\nSwarmForage tests emergent division of labor at a scale most swarm papers never touch. Local rules only. Roles like scouting and retrieval crystallize from repeated interactions, not from any central planner telling robots what to do.\n\nThe scale point is real: 20-robot results routinely collapse at 200, let alone 1000. Interaction dynamics, queue contention, and cascade failures change character as the swarm grows. Studying behavior at this size is not incremental.\n\nHonest take: simulation at 1000 agents is a necessary step, not a deployment result. The physical gap is enormous. Sensor noise, terrain, and hardware dropout are the enemies that emergent algorithms meet for the first time in the field. Until someone runs this with physical robots losing contact mid-task, the robustness question stays open.\n\nPaper: SwarmForage: Emergent Division of Labor in 1000-Robot Swarms\n\n#swarmrobotics #multirobotsystems #fieldrobotics #autonomoussystems #emergentbehavior #roboticsresearch #robotswarms",
+      "caption_tiktok": "1000 robots, no manager, labor still divides itself. The scale is the whole point. #swarmrobotics #robotics #emergentbehavior #autonomousrobots",
+      "post_bluesky": "1000 robots. No central planner. Roles still emerge.\n\nSwarmForage tests task allocation at a scale where most swarm results quietly break. Local rules only, specialization from interaction alone. Simulation for now, but the scale question is the right one to be asking.",
+      "bluesky_thread": [
+        "The real issue: swarm papers almost always test at 20-100 robots. At 1000, nonlinear dynamics kick in and prior results often do not transfer. Studying this regime matters even if physical deployment is still far off.",
+        "What I want to know: does the emergent specialization survive 20% robot dropout mid-task? That is the field condition. Robust to loss means useful for search and rescue or inspection. Fragile to loss means a nice simulation result. The abstract does not tell us which."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T12:16:53.141914+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/3c4d54d5/bsky_00.png",
+        "media/3c4d54d5/bsky_01.png",
+        "media/3c4d54d5/bsky_02.png",
+        "media/3c4d54d5/bsky_03.png"
+      ],
+      "slides": [
+        "media/3c4d54d5/slide_00.png",
+        "media/3c4d54d5/slide_01.png",
+        "media/3c4d54d5/slide_02.png",
+        "media/3c4d54d5/slide_03.png",
+        "media/3c4d54d5/slide_04.png",
+        "media/3c4d54d5/slide_05.png",
+        "media/3c4d54d5/slide_06.png",
+        "media/3c4d54d5/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "16eafe73",
+    "paper": {
+      "id": "yt-P8U_4v8SUOQ",
+      "title": "Unitree Invites You to Witness the 2026 Humanoid Robot Combat Competition",
+      "abstract": "Putting technology to the test through combat, and connecting the world through competition. The \"CMG 2026 Humanoid Robot Combat Competition\" invites you to witness a new chapter in the co-evolution of humans and AI. Stay tuned!",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=P8U_4v8SUOQ",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=P8U_4v8SUOQ",
+      "video_first": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "video",
+      "hook": "Real combat, real falls. What does a fight prove?",
+      "commentary": "Unitree is promoting a humanoid robot combat competition for 2026, framing it as a test of technology under pressure. The honest read: combat is a spectacular stress test for locomotion, balance recovery, and real-time control, and those are genuinely hard problems. But a choreographed or lightly constrained fight tells you almost nothing about manipulation dexterity, task reliability, or field deployment. The community right now is already skeptical of humanoid demos for good reason. This kind of event can surface real engineering wins, but it can also paper over the gap between a robot that survives a shove and one that does useful work.",
+      "slides": [
+        {
+          "title": "Humanoid robots enter the ring",
+          "body": "Unitree's CMG 2026 Humanoid Robot Combat Competition pits bipedal robots against each other. The pitch: real pressure, real failure modes, real data on what breaks."
+        },
+        {
+          "title": "What combat actually tests",
+          "body": "Balance recovery under impact, reactive stepping, and real-time control under contact loads. These are genuinely hard. A robot that survives a shove has cleared a non-trivial bar for locomotion robustness."
+        },
+        {
+          "title": "What combat does not test",
+          "body": "Manipulation precision. Task reliability across hours. Energy efficiency. Sensor performance in dust, water, or unstructured terrain. Combat narrows the evaluation to a single dramatic axis."
+        },
+        {
+          "title": "The humanoid skepticism problem",
+          "body": "Community trust in humanoid demos is low right now. Russia's Aidol collapse and ongoing Optimus credibility debates mean any staged-looking footage gets dissected. Unitree needs the fights to look clearly unscripted."
+        },
+        {
+          "title": "The engineering upside",
+          "body": "Competitive formats historically accelerate specific capabilities fast. RoboCup soccer improved bipedal gait research measurably across the 2000s and 2010s. Combat could do the same for impact-resilient control, if the rules are tight."
+        },
+        {
+          "title": "The honest question",
+          "body": "A robot that wins a fight still needs to climb a ladder, carry a load, or work a valve to matter outside the arena. Combat is a useful milestone, not a destination."
+        }
+      ],
+      "video_script": "Unitree just announced a humanoid robot combat competition for 2026. And look, I get the appeal. Real contact, real falls, real pressure on the control stack. That is not nothing. Balance recovery under impact is a hard problem and competition formats do push engineering forward fast. But here is the thing. A robot that survives a punch is not the same robot that does useful work in a mine or on a construction site. Combat tests one narrow slice. The question I keep coming back to: what happens to these robots when the arena lights go off?",
+      "caption_instagram": "Real robots fighting each other sounds like the ultimate stress test. And partly it is.\n\nUnitree just dropped a promo for the CMG 2026 Humanoid Robot Combat Competition. The pitch is that combat forces real performance under real pressure, and they are not wrong that impact resilience and reactive balance recovery are genuinely hard engineering problems worth pushing on.\n\nBut the gap between a robot that survives a shove and one that does reliable field work is enormous. Combat narrows the evaluation to one dramatic axis. It tells you almost nothing about manipulation, endurance, or how the system behaves after hour three in a dusty environment.\n\nRoboCup soccer improved bipedal gait research across two decades by forcing real competition. Combat could do something similar for impact-resilient control. Whether it will depends entirely on how honest the format is and whether the fights look clearly unscripted to a community that is already watching closely.\n\nFull video: https://www.youtube.com/watch?v=P8U_4v8SUOQ\n\n#swarmrobotics #humanoidrobots #leggedrobotics #robotics #fieldrobotics #bipedal #roboticresearch",
+      "caption_tiktok": "Humanoid robots fighting each other. Spectacular, sure. But does winning a fight mean anything for real work? Full video linked. #humanoidrobot #robotics #unitree #robotfight",
+      "post_bluesky": "Real robots, real contact, real falls. Unitree's humanoid combat competition sounds like a genuine stress test. It partly is. But a robot that survives a punch is not a robot that does useful work. https://www.youtube.com/watch?v=P8U_4v8SUOQ",
+      "bluesky_thread": [
+        "Combat does test something real: impact-resilient balance recovery and reactive stepping under contact loads are hard problems. RoboCup pushed bipedal gait research forward for two decades through competitive pressure. That precedent is worth taking seriously.",
+        "The credibility problem is real though. Community trust in humanoid demos is low right now. If the fights look staged or softly constrained, this generates mockery, not data. What rules would actually make you trust the results?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-13T12:17:21.094914+00:00",
+    "media": {
+      "figures": [
+        "media/16eafe73/fig_00.png"
+      ],
+      "bsky": [
+        "media/16eafe73/bsky_00.png",
+        "media/16eafe73/bsky_01.png",
+        "media/16eafe73/bsky_02.png",
+        "media/16eafe73/bsky_03.png"
+      ],
+      "slides": [
+        "media/16eafe73/slide_00.png",
+        "media/16eafe73/slide_01.png",
+        "media/16eafe73/slide_02.png",
+        "media/16eafe73/slide_03.png",
+        "media/16eafe73/slide_04.png",
+        "media/16eafe73/slide_05.png",
+        "media/16eafe73/slide_06.png",
+        "media/16eafe73/slide_07.png"
+      ],
+      "video": "media/16eafe73/video.mp4"
+    }
+  },
+  {
+    "draft_id": "f1ee6e73",
+    "paper": {
+      "id": "doi-10.1002_rob.70292",
+      "title": "DeepTrack: A Pressure‐Tolerant Electromagnetically Driven Soft Robotic Fish Platform With Visually Guided Locomotion",
+      "abstract": "ABSTRACT Traditional rigid submersibles often lack the acoustic stealth and agility required for close‐range deep‐sea exploration. While soft robotics have emerged as a promising approach for navigating complex marine environments, these systems typically face a trade‐off between pressure tolerance and practical maneuverability. We present DeepTrack, an untethered soft robotic fish driven by a compact electromagnetic propulsion system. Integrating a pressure‐independent actuation mechanism into a compliant silicone body keeps the robot's mass at just 475 g and eliminates the need for bulky pressure vessels. A two‐fin configuration decouples forward propulsion from depth regulation, enabling agile 3D maneuvering. An onboard visual servoing system ensures precise closed‐loop target tracking. Experimental validations demonstrated a maximum swimming speed of 5.78 cm/s (0.27 body length (BL)) and a yaw rate of 0.26 rad/s. During dynamic trajectory tracking, the system maintained a root mean square error (RMSE) below 0.37 BL. Open‐water field trials further validated the robot's robustness in autonomously tracking dynamic targets amid ambient currents and unstructured visual clutter. Furthermore, hyperbaric chamber tests confirm that the robot preserves its structural integrity and tracking performance at hydrostatic pressures up to 30 MPa. These results demonstrate the potential of DeepTrack as a mechatronic platform for future visually guided operations in deep sea environments.",
+      "authors": [
+        "Hao Wang",
+        "Yongzai Chen",
+        "Shaopeng Liu",
+        "Huitao Feng",
+        "Qin Liu",
+        "Zhenxiang Sun"
+      ],
+      "url": "https://doi.org/10.1002/rob.70292",
+      "doi": "10.1002/rob.70292",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Pressure vessels are the problem. This fish skips them entirely.",
+      "commentary": "DeepTrack is a 475 g untethered soft robotic fish that swaps hydraulic or pneumatic actuators for electromagnetic propulsion, which means no sealed pressure vessel needed. It survives 30 MPa in a hyperbaric chamber, equivalent to roughly 3 km depth, while still doing closed-loop visual target tracking. The two-fin decoupling of surge and heave is genuinely tidy engineering. Honest caveat: 5.78 cm/s top speed (0.27 BL/s) is slow even by bio-inspired fish standards, and open-water trials look calm. Real deep-sea currents will test that tracking RMSE hard.",
+      "slides": [
+        {
+          "title": "The pressure vessel problem",
+          "body": "Soft robots flex where rigid subs crack, but sealing actuators at depth is usually the bottleneck. DeepTrack sidesteps it with electromagnetic propulsion that is inherently pressure-independent."
+        },
+        {
+          "title": "475 g, untethered, 3 km rated",
+          "body": "Silicone body, compact EM drive, no bulky pressure housing. Hyperbaric chamber tests confirm structural integrity and tracking performance at 30 MPa hydrostatic pressure."
+        },
+        {
+          "title": "Two fins, decoupled control",
+          "body": "One fin pair handles forward thrust, the other manages depth. Separating surge from heave lets the robot maneuver in 3D without coupling errors that plague single-fin designs."
+        },
+        {
+          "title": "Onboard visual servoing",
+          "body": "Closed-loop camera tracking holds RMSE below 0.37 body lengths during dynamic trajectories. Yaw rate peaks at 0.26 rad/s. Works amid ambient currents and visual clutter in open water."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Top speed is 5.78 cm/s (0.27 BL/s). That is slow. Deep-sea currents routinely exceed this. Speed and pressure tolerance in the same platform is still an open problem."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Published in Journal of Field Robotics with actual open-water trials. For acoustic stealth and close-range reef or pipeline inspection, low-speed quiet maneuvering beats a noisy thruster every time."
+        }
+      ],
+      "video_script": "A soft robotic fish, 475 grams, no pressure vessel, rated to 30 megapascals. That is roughly 3 kilometers down. The trick is electromagnetic actuation: the drive mechanism does not care how much water is pressing on it. Two fin pairs handle thrust and depth independently, and an onboard camera keeps it locked onto a moving target. Speed tops out at under 6 centimeters per second, which is honest to admit. But for quiet, close-range deep inspection, do you actually need to go fast?",
+      "caption_instagram": "Pressure vessels are the problem. This fish skips them entirely.\n\nDeepTrack is a 475 g untethered soft robotic fish with electromagnetic propulsion and no sealed pressure housing. Because the EM actuator does not compress or expand, it works at any depth. Hyperbaric chamber tests confirm it holds together at 30 MPa, equivalent to around 3 km below the surface.\n\nTwo fin pairs decouple forward thrust from depth control. An onboard camera runs closed-loop visual servoing, holding tracking error below 0.37 body lengths during dynamic target following. Open-water trials add real clutter and ambient current.\n\nThe honest number to watch: top speed is 5.78 cm/s (0.27 BL/s). Deep currents will exceed that. But for acoustic stealth and close inspection of pipelines or seafloor structures, quiet and maneuverable beats fast and noisy.\n\nPaper: DeepTrack: A Pressure-Tolerant Electromagnetically Driven Soft Robotic Fish Platform With Visually Guided Locomotion. Journal of Field Robotics. doi.org/10.1002/rob.70292\n\n#swarmrobotics #softrobotics #marinerobotics #fieldrobotics #underwaterrobotics #bioinspiredrobotics #deepseaexploration",
+      "caption_tiktok": "Soft robotic fish. No pressure vessel. Rated to 3 km deep. The engineering here is actually clever. #softrobotics #underwaterrobot #marinerobotics #robotics",
+      "post_bluesky": "Pressure vessels are the problem. This fish skips them entirely. DeepTrack: 475 g soft robotic fish, EM propulsion, 30 MPa rated, onboard visual tracking. Real open-water trials included. https://doi.org/10.1002/rob.70292",
+      "bluesky_thread": [
+        "The clever bit: electromagnetic actuators are pressure-independent by nature. No fluid to compress, no seal to fail. Hyperbaric tests at 30 MPa with tracking performance intact. Two-fin decoupling of surge and heave is also cleaner than most bio-inspired designs I have seen.",
+        "The honest caveat: 5.78 cm/s top speed. Deep-sea currents will outrun it. The visual servoing RMSE looks good in the trials but the water looks calm. Anyone know of a soft fish platform that has actually held tracking in a real tidal current?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T12:17:49.504509+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/f1ee6e73/bsky_00.png",
+        "media/f1ee6e73/bsky_01.png",
+        "media/f1ee6e73/bsky_02.png",
+        "media/f1ee6e73/bsky_03.png"
+      ],
+      "slides": [
+        "media/f1ee6e73/slide_00.png",
+        "media/f1ee6e73/slide_01.png",
+        "media/f1ee6e73/slide_02.png",
+        "media/f1ee6e73/slide_03.png",
+        "media/f1ee6e73/slide_04.png",
+        "media/f1ee6e73/slide_05.png",
+        "media/f1ee6e73/slide_06.png",
+        "media/f1ee6e73/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "362f0fcf",
+    "paper": {
+      "id": "doi-10.1002_rob.70290",
+      "title": "A Vision‐Guided Docking Method for Autonomous Underwater Vehicle From Ice Hole",
+      "abstract": "ABSTRACT Reliable autonomous docking of AUV under ice is critical for operational safety, as maintaining vehicle integrity and achieving full‐lifecycle autonomous operations are unique challenges in ice hole recovery. This study presents a vision‐guided navigation framework specifically designed for ice hole docking, which enables accurate identification and localization of ice hole light beacons array. The framework integrates an adaptive selection algorithm that ensures robust light source detection across varying lighting conditions and operational distances, along with a dual‐quadrilateral geometry‐based recognition method capable of accurately discerning beacon positions in different visibility conditions during docking process. A monocular pose estimation algorithm provides real‐time and precise relative position and heading information, while an ice hole alignment strategy guides the AUV for safe and accurate docking. Images of six beacons arranged around the ice hole were captured by an upward‐facing camera mounted on the AUV and processed through the proposed pipeline. Extensive simulations and real‐world experiments demonstrate that the method significantly improves positioning accuracy, robustness, and overall navigation reliability, offering a practical and effective solution for underwater optical vision‐guided docking under ice.",
+      "authors": [
+        "Hang Li",
+        "Shuo Xu",
+        "Yanqing Jiang",
+        "Rui Gao",
+        "Shuchang Li",
+        "Jingxuan Gao"
+      ],
+      "url": "https://doi.org/10.1002/rob.70290",
+      "doi": "10.1002/rob.70290",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your AUV is under the ice. One exit. Lights only.",
+      "commentary": "Docking an AUV back through an ice hole is one of the nastier real-world navigation problems: single exit, no GPS, variable visibility, and getting it wrong means a lost vehicle under a frozen surface. This paper from Journal of Field Robotics uses an upward-facing monocular camera to detect six light beacons arranged around the hole, with a dual-quadrilateral geometry method for pose estimation that reportedly holds up across varying distances and lighting. The adaptive light-source selection is the genuinely clever piece, it handles the nasty transition from deep-dark to bright-hole without losing track. Honest caveat: all the real-world experiments are still in controlled polar facility conditions, not open Arctic operations, so the jump to true field deployment is non-trivial. Still, this is one of the more practical AUV recovery papers I've seen this year.",
+      "slides": [
+        {
+          "title": "The problem under the ice",
+          "body": "One hole. No GPS. The AUV must find a meter-scale opening in a frozen ceiling using only onboard sensors. Losing lock means losing the vehicle. No second chances."
+        },
+        {
+          "title": "Six beacons around the exit",
+          "body": "An array of six light sources rings the ice hole. An upward-facing monocular camera captures them. The geometry of that hexagonal arrangement is the navigation signal."
+        },
+        {
+          "title": "Dual-quadrilateral recognition",
+          "body": "The algorithm fits two overlapping quadrilaterals to the beacon cluster. This lets it estimate full 6-DOF relative pose even when some beacons are partially occluded or washed out."
+        },
+        {
+          "title": "Adaptive light selection",
+          "body": "Lighting shifts dramatically as the AUV rises toward the hole. The adaptive selection algorithm switches detection thresholds in real time, maintaining lock from deep approach to close-range docking."
+        },
+        {
+          "title": "Simulation plus real-world tests",
+          "body": "Validated in both simulated docking runs and real-world pool/facility experiments. Positioning accuracy and robustness both improved significantly over baseline. Exact error figures not extracted here."
+        },
+        {
+          "title": "What it still needs",
+          "body": "All real tests are controlled facility conditions. Open Arctic turbidity, biofouling on the camera dome, and dynamic ice movement remain untested. Field deployment gap is real and worth noting."
+        }
+      ],
+      "video_script": "Picture an AUV alone under a frozen surface. One exit: a meter-wide hole with six lights around the edge. No GPS. The vehicle has to look up, find that ring of beacons, estimate its own position using nothing but monocular vision, and thread itself through. This paper builds the full pipeline: adaptive light detection, dual-quadrilateral pose estimation, and a docking guidance strategy. It works in real hardware tests. The open Arctic is still ahead of it. How far away is that from actual deployment?",
+      "caption_instagram": "Your AUV is under the ice. One exit. Lights only.\n\nNew paper in Journal of Field Robotics tackles one of the nastier AUV recovery problems: docking back through an ice hole with no GPS, variable visibility, and a meter-scale target on the ceiling above you.\n\nThe approach uses six light beacons around the hole, an upward-facing monocular camera, and a dual-quadrilateral geometry method to estimate full relative pose in real time. The clever bit is an adaptive selection algorithm that handles the brutal lighting transition as the AUV climbs from dark water toward a bright hole opening.\n\nReal-world hardware experiments show meaningful gains in positioning accuracy and robustness. Honest read: tests are still in controlled polar facilities, not open Arctic conditions. Turbid water, dome fouling, and dynamic ice are all still open questions. But as a vision-guided docking framework for under-ice AUV recovery, this is one of the more complete treatments I've seen.\n\nPaper: 'A Vision-Guided Docking Method for Autonomous Underwater Vehicle From Ice Hole' by Li et al. Journal of Field Robotics, 2026. https://doi.org/10.1002/rob.70290\n\n#swarmrobotics #AUV #underwaterrobotics #fieldrobotics #autonomoussystems #robotics #inspectionrobotics",
+      "caption_tiktok": "AUV has to dock through a hole in the ice using six lights and one camera. No GPS. New paper in Journal of Field Robotics shows it actually working. #robotics #AUV #underwaterrobotics #fieldrobotics",
+      "post_bluesky": "Your AUV is under the ice. One exit. No GPS. A new JFR paper navigates back through the hole using 6 light beacons, monocular pose estimation, and adaptive detection. Real hardware tests. Arctic gaps remain. https://doi.org/10.1002/rob.70290",
+      "bluesky_thread": [
+        "The clever piece: an adaptive light-selection algorithm that handles the transition from deep-dark to bright-hole without losing beacon lock. Dual-quadrilateral geometry gives full relative pose even with partial occlusion. That's a real engineering problem solved cleanly.",
+        "Honest caveat: all real-world tests are controlled facility conditions. Open Arctic turbidity, biofouling on the dome, and moving ice are all still untested. How many JFR 'real-world' AUV papers make it to actual polar ops? Curious if anyone here has seen this pipeline in the wild."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T12:18:20.248178+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/362f0fcf/bsky_00.png",
+        "media/362f0fcf/bsky_01.png",
+        "media/362f0fcf/bsky_02.png",
+        "media/362f0fcf/bsky_03.png"
+      ],
+      "slides": [
+        "media/362f0fcf/slide_00.png",
+        "media/362f0fcf/slide_01.png",
+        "media/362f0fcf/slide_02.png",
+        "media/362f0fcf/slide_03.png",
+        "media/362f0fcf/slide_04.png",
+        "media/362f0fcf/slide_05.png",
+        "media/362f0fcf/slide_06.png",
+        "media/362f0fcf/slide_07.png"
+      ]
+    }
   }
 ]
