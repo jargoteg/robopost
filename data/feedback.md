@@ -1,55 +1,38 @@
-# Engagement lessons (auto-updated 2026-07-12)
+# Engagement lessons (auto-updated 2026-07-13)
 
 # Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
 
-**Over-performed:** Humanoid locomotion/speed ("Marathon" post: 3L/1R/2Re), novel sensory modalities ("sonar drone": 3L/1R/1Re), and unusual/quirky applications ("cockroach suit": 1L/1Re, "vine robot": 2L/1Re, "STEMbot": 2L/1Re). Papers with a clear mechanical surprise outperform incremental improvement papers.
+**Over-performed:** Real-world demos with clear stakes — marathon humanoid (4L/1R/2Re), sonar drone (3L/1R/1Re), Boston Dynamics/FIFA (1L/1Re). Novelty + accessible narrative wins. Vine robot and STEMbot (niche but concrete) showed modest positive returns.
 
-**Under-performed:** Mapping/localization (RLPR: 0 engagement), manipulation datasets (DynaMimicGen: 0), and agricultural soft grippers (0). Perception infrastructure papers consistently flatline.
-
----
-
-## 2. Hook Styles That Worked
-
-Conversational bold claims with a physical image ("Faster than a human. The secret is boring physics.") outperformed abstract tension setups. Hooks naming a concrete, surprising *object or action* performed better than hooks framing an unsolved problem.
+**Under-performed:** Pure perception/mapping papers (RLPR, SyNeT, Latent Splatting mostly flat). Agricultural manipulation was near-zero despite strong visuals. Home robot opinion piece got 0 engagement — audiences resist soft editorializing.
 
 ---
 
-## 3. Carousel vs. Video
+## 2. Hook Styles (3a)
 
-All posts are carousels. No video data exists. **Cannot compare.**
-
-### 3a. Hook-Style A/B
-
-| Style | Total Likes | Reposts | Replies | Posts |
-|---|---|---|---|---|
-| bold_claim | 10 | 1 | 5 | 7 |
-| curiosity_gap | 2 | 0 | 4 | 6 |
-| tension | 2 | 0 | 3 | 7 |
-| number_stat | 1 | 0 | 0 | 3 |
-
-**Bold_claim leads on likes and reposts.** Curiosity_gap and tension drive comparable replies but almost no likes. Number_stat underperforms across all metrics despite seeming concrete.
-
-**Recommended weighting: bold_claim 50% / tension 25% / curiosity_gap 20% / number_stat 5%**
-
-### 3b. Bluesky Thread vs. Single
-
-| Format | Avg Likes | Avg Reposts | Avg Replies |
+| Style | Posts | Total Engagement | Avg/Post |
 |---|---|---|---|
-| thread | 1.27 | 0.13 | 0.87 |
-| single | 0.27 | 0.00 | 0.07 |
+| bold_claim | 8 | 14 | 1.75 |
+| tension | 9 | 8 | 0.89 |
+| curiosity_gap | 7 | 6 | 0.86 |
+| number_stat | 3 | 2 | 0.67 |
 
-Threads outperform singles on every metric, roughly 3–5× on likes and ~12× on replies. The reply-thread structure likely creates a second impression surface.
-
-**Recommended split: 70% thread / 30% single**
+**Bold_claim leads clearly.** Recommend weighting: **bold_claim 45% / tension 30% / curiosity_gap 20% / number_stat 5%.**
 
 ---
 
-## 4. Concrete Recommendations
+## 3. Format & Bluesky Split (3b)
 
-1. **Lead with the physical surprise, not the problem.** The two highest-performing hooks ("Faster than a human" / "sonar drone") name a concrete, counterintuitive outcome immediately. Rewrite any hook that opens with "Why does X still fail at Y" — convert it to what the paper *actually achieved* in physical terms.
+Threads (14 posts): avg ~1.5 engagements. Singles (16 posts): avg ~0.4. **Threads consistently outperform singles** — the reply-chain structure likely boosts visibility algorithmically. Recommend **70% thread / 30% single.**
 
-2. **Prioritize quirky embodiment papers for thread slots.** Cockroach suit, STEMbot, vine robot, sonar drone all punched above their weight. When a paper involves an unusual organism, environment, or form factor, assign it a thread + bold_claim. Reserve singles for follow-up or lower-priority content.
+Carousel vs video: only 2 videos, both near-zero. **Data too sparse to conclude** — test 3–4 more videos before deprioritizing.
 
-3. **Data is too sparse for confident conclusions — run a controlled hook test.** With ~30 posts averaging <1 like each, variance dominates. For the next 10 posts, fix *topic tier* (locomotion or unusual embodiment only) and rotate only hook style. That will isolate hook effect from topic effect, which is currently confounded.
+---
+
+## 4. Three Concrete Recommendations
+
+1. **Lead with bold_claim on all high-stakes demos** — especially physical robot capabilities with measurable outcomes (speed, weight, distance).
+2. **Default every new paper to thread format** unless it's a quick news item.
+3. **Reject perception-only mapping papers** unless they have a striking failure-mode visual; they consistently flatline.
