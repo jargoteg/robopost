@@ -393,13 +393,17 @@ def main():
         # papers first; news capped so feeds never crowd out research
         max_news = cfg["pipeline"].get("max_news_per_day", 1)
         research = [p for p in good if p.get("item_type", "paper") == "paper"]
-        news = [p for p in good if p.get("item_type", "paper") != "paper"]
+        videos = [p for p in good
+                  if p.get("item_type") == "video" or (p.get("video_first")
+                  and p.get("item_type", "paper") != "paper")]
+        news = [p for p in good if p not in research and p not in videos]
         # per-source mix: journal papers get RESERVED slots; arXiv is capped
         # so the learning-paper flood can't crowd out field/journal work
         mix = cfg["pipeline"].get("source_mix", {"journal_min": 2, "arxiv_max": 2})
         journal = [p for p in research if p.get("journal")]
         arxiv = [p for p in research if not p.get("journal")]
-        picked = journal[:max(mix.get("journal_min", 2), 0)]
+        picked = videos[:max(mix.get("video_max", 2), 0)]  # footage first
+        picked += journal[:max(mix.get("journal_min", 2), 0)]
         picked += arxiv[:max(mix.get("arxiv_max", 2), 0)]
         # fill any remaining slots by pure score, whatever the source
         rest = [p for p in research if p not in picked]
@@ -458,6 +462,9 @@ def main():
                         break
         picked = vetted
         report["ranked_above_floor"] = len(good)
+        report["split"] = {"videos": len(videos), "papers": len(research),
+                           "news": len(news)}
+        report["floor"] = floor
         report["picked"] = [{"t": p.get("title", "")[:50],
                              "type": p.get("item_type"),
                              "video": bool(p.get("video_url"))} for p in picked]
