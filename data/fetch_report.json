@@ -1,8 +1,14 @@
 {
-  "ts": "2026-07-13T09:30",
+  "ts": "2026-07-13T09:37",
   "collected": 234,
   "dedup_dropped": 64,
   "after_dedup": 170,
-  "ranked_above_floor": 8,
+  "ranked_above_floor": 2,
+  "split": {
+    "videos": 0,
+    "papers": 0,
+    "news": 2
+  },
+  "floor": 6,
   "picked": []
 }
