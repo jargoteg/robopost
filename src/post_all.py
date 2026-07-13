@@ -1,4 +1,5 @@
 """Publish approved drafts to Bluesky, Instagram, and TikTok."""
+import re
 import time
 import requests
 from datetime import datetime, timezone
