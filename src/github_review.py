@@ -173,6 +173,11 @@ def handle_event():
         mark_processed(ev["comment"].get("id"))
         apply_command(d, text, num)
         save_json("drafts.json", drafts)
+        # concurrency can cancel sibling comment-runs; catch their commands now
+        try:
+            sweep()
+        except Exception as e:
+            print(f"post-handle sweep failed (non-fatal): {e}")
 
     elif ev.get("action") == "opened" and "issue" in ev:  # manual item add
         handle_new_issue(ev["issue"])

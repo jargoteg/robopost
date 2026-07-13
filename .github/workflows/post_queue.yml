@@ -23,6 +23,24 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Sweep for missed review commands
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_REPOSITORY: "${{ github.repository }}"
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+        run: python src/github_review.py sweep || echo "sweep failed (non-fatal)"
+      - name: Refill queue if commands emptied it
+        env:
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+          YOUTUBE_API_KEY: "${{ secrets.YOUTUBE_API_KEY }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_REPOSITORY: "${{ github.repository }}"
+        run: python src/refill.py || echo "refill failed (non-fatal)"
+      - name: Open review issues for new drafts
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_REPOSITORY: "${{ github.repository }}"
+        run: python src/github_review.py create || echo "create failed (non-fatal)"
       - name: Post one due draft (respects 90-min spacing)
         id: post
         env:
