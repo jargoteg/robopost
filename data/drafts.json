@@ -10083,30 +10083,14 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "pending_media",
     "created": "2026-07-13T15:15:18.048975+00:00",
     "media": {
-      "figures": [
-        "media/5a23d5dc/fig_00.png",
-        "media/5a23d5dc/fig_02.png",
-        "media/5a23d5dc/fig_04.png",
-        "media/5a23d5dc/fig_03.png"
-      ],
       "bsky": [
         "media/5a23d5dc/bsky_00.png",
         "media/5a23d5dc/bsky_01.png",
         "media/5a23d5dc/bsky_02.png",
         "media/5a23d5dc/bsky_03.png"
-      ],
-      "slides": [
-        "media/5a23d5dc/slide_00.png",
-        "media/5a23d5dc/slide_01.png",
-        "media/5a23d5dc/slide_02.png",
-        "media/5a23d5dc/slide_03.png",
-        "media/5a23d5dc/slide_04.png",
-        "media/5a23d5dc/slide_05.png",
-        "media/5a23d5dc/slide_06.png",
-        "media/5a23d5dc/slide_07.png"
       ]
     },
     "issue": 117
@@ -10167,30 +10151,14 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "pending_media",
     "created": "2026-07-13T15:15:49.484718+00:00",
     "media": {
-      "figures": [
-        "media/a26eadcf/pdf/fig_00.png",
-        "media/a26eadcf/fig_00.png",
-        "media/a26eadcf/pdf/fig_04.png",
-        "media/a26eadcf/pdf/fig_01.png"
-      ],
       "bsky": [
         "media/a26eadcf/bsky_00.png",
         "media/a26eadcf/bsky_01.png",
         "media/a26eadcf/bsky_02.png",
         "media/a26eadcf/bsky_03.png"
-      ],
-      "slides": [
-        "media/a26eadcf/slide_00.png",
-        "media/a26eadcf/slide_01.png",
-        "media/a26eadcf/slide_02.png",
-        "media/a26eadcf/slide_03.png",
-        "media/a26eadcf/slide_04.png",
-        "media/a26eadcf/slide_05.png",
-        "media/a26eadcf/slide_06.png",
-        "media/a26eadcf/slide_07.png"
       ]
     },
     "issue": 118
@@ -10500,30 +10468,14 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "pending_media",
     "created": "2026-07-13T15:20:12.423359+00:00",
     "media": {
-      "figures": [
-        "media/83f3a185/pdf/fig_02.png",
-        "media/83f3a185/pdf/fig_01.png",
-        "media/83f3a185/pdf/fig_05.png",
-        "media/83f3a185/pdf/fig_00.png"
-      ],
       "bsky": [
         "media/83f3a185/bsky_00.png",
         "media/83f3a185/bsky_01.png",
         "media/83f3a185/bsky_02.png",
         "media/83f3a185/bsky_03.png"
-      ],
-      "slides": [
-        "media/83f3a185/slide_00.png",
-        "media/83f3a185/slide_01.png",
-        "media/83f3a185/slide_02.png",
-        "media/83f3a185/slide_03.png",
-        "media/83f3a185/slide_04.png",
-        "media/83f3a185/slide_05.png",
-        "media/83f3a185/slide_06.png",
-        "media/83f3a185/slide_07.png"
       ]
     },
     "issue": 119
@@ -10743,27 +10695,14 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "pending_media",
     "created": "2026-07-13T15:23:36.949732+00:00",
     "media": {
-      "figures": [
-        "media/b652be3b/fig_00.png"
-      ],
       "bsky": [
         "media/b652be3b/bsky_00.png",
         "media/b652be3b/bsky_01.png",
         "media/b652be3b/bsky_02.png",
         "media/b652be3b/bsky_03.png"
-      ],
-      "slides": [
-        "media/b652be3b/slide_00.png",
-        "media/b652be3b/slide_01.png",
-        "media/b652be3b/slide_02.png",
-        "media/b652be3b/slide_03.png",
-        "media/b652be3b/slide_04.png",
-        "media/b652be3b/slide_05.png",
-        "media/b652be3b/slide_06.png",
-        "media/b652be3b/slide_07.png"
       ]
     },
     "issue": 120
@@ -10907,30 +10846,14 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "pending_media",
     "created": "2026-07-13T15:24:34.275636+00:00",
     "media": {
-      "figures": [
-        "media/0a0ce468/pdf/fig_00.png",
-        "media/0a0ce468/pdf/fig_03.png",
-        "media/0a0ce468/pdf/fig_01.png",
-        "media/0a0ce468/pdf/fig_02.png"
-      ],
       "bsky": [
         "media/0a0ce468/bsky_00.png",
         "media/0a0ce468/bsky_01.png",
         "media/0a0ce468/bsky_02.png",
         "media/0a0ce468/bsky_03.png"
-      ],
-      "slides": [
-        "media/0a0ce468/slide_00.png",
-        "media/0a0ce468/slide_01.png",
-        "media/0a0ce468/slide_02.png",
-        "media/0a0ce468/slide_03.png",
-        "media/0a0ce468/slide_04.png",
-        "media/0a0ce468/slide_05.png",
-        "media/0a0ce468/slide_06.png",
-        "media/0a0ce468/slide_07.png"
       ]
     },
     "issue": 121
