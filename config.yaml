@@ -24,12 +24,11 @@ sources:
     - "@ANYbotics"
     - "@unitreerobotics"
     - "@ETHZurich"
+    - "@leggedrobotics"   # ETH RSL
     - "@MITCSAIL"
-    - "@stanfordrobotics"
-    - "@bristolrobotics"
-    - "@DeepRoboticsCoLtd"
+    - "@DEEPRobotics"
     - "@AgilityRobotics"
-    - "@SkydioInc"
+    - "@Skydio"
     - "@NASAJPL"                # journal papers get a ranking boost over arXiv
   journal_names:                       # used to tag + boost; matched loosely in source/url
     - science robotics

@@ -80,13 +80,21 @@ def fetch_rss(cfg, feeds_key="news_feeds", item_type="article") -> list[dict]:
     items = []
     for feed in cfg["sources"].get(feeds_key, []):
         try:
+            import feedparser
             r = requests.get(feed, timeout=30, headers={
-                "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
-            root = ET.fromstring(r.content)
-            for it in root.iter("item"):  # RSS 2.0
-                title = (it.findtext("title") or "").strip()
-                link = (it.findtext("link") or "").strip()
-                desc = re.sub(r"<[^>]+>", " ", it.findtext("description") or "")
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                              "AppleWebKit/537.36 (KHTML, like Gecko) "
+                              "Chrome/126.0 Safari/537.36",
+                "Accept": "application/rss+xml, application/xml, text/xml, */*"})
+            parsed = feedparser.parse(r.content)
+            if parsed.get("bozo") and not parsed.entries:
+                print(f"RSS unusable (likely bot-blocked): {feed[:60]}")
+                continue
+            for it in parsed.entries:
+                title = (it.get("title") or "").strip()
+                link = (it.get("link") or "").strip()
+                raw = it.get("summary", "") or it.get("description", "")
+                desc = re.sub(r"<[^>]+>", " ", raw)
                 desc = re.sub(r"\s+", " ", desc).strip()
                 blob = f"{title} {desc}".lower()
                 if not link or not any(k in blob for k in kw):
@@ -236,13 +244,14 @@ def rank_papers(papers: list[dict], cfg) -> list[dict]:
                 tags += " [LEARNING-HEAVY?]"
             return tags
         listing = "\n".join(
-            f"[{i}]{_tag(p)} {p['title']} — {p['abstract'][:300]}"
+            f"[{i}]{_tag(p)} {p['title']} — {p.get('abstract', '')[:300]}"
             for i, p in enumerate(batch)
         )
         try:
             _rank_batch(batch, listing, feedback, conf, boost)
         except Exception as e:
-            print(f"Ranking batch {lo//B} failed (items skipped): {e}")
+            print(f"RANK BATCH {lo//B} FAILED — {len(batch)} items scored 0: {e}")
+            rank_papers.failed_batches = getattr(rank_papers, "failed_batches", 0) + 1
     return sorted(papers, key=lambda p: p.get("score", 0), reverse=True)
 
 
@@ -357,7 +366,7 @@ def main():
     if active_windows(cfg):
         print("Conference window active — widening the net.")
         cfg["pipeline"]["drafts_per_day"] = cfg["pipeline"]["drafts_per_day"] + 1
-    report = {"ts": __import__("datetime").datetime.utcnow().isoformat()[:16],
+    report = {"ts": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()[:16],
               "collected": len(papers)}
     from utils import norm_title
     hist = load_json("drafts.json", [])
@@ -461,6 +470,12 @@ def main():
                         vetted.append(alt)
                         break
         picked = vetted
+        hist = {}
+        for p in ranked:
+            b = int(p.get("score", 0))
+            hist[b] = hist.get(b, 0) + 1
+        report["score_hist"] = dict(sorted(hist.items()))
+        report["rank_batches_failed"] = getattr(rank_papers, "failed_batches", 0)
         report["ranked_above_floor"] = len(good)
         report["split"] = {"videos": len(videos), "papers": len(research),
                            "news": len(news)}

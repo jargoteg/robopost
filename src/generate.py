@@ -98,7 +98,7 @@ matters; videos get commentary on what the demo does and doesn't prove.
 Title: {paper['title']}
 Source: {paper.get('source', 'arxiv')}
 Authors/Org: {', '.join(paper.get('authors', []))}
-Summary/Abstract: {paper['abstract']}
+Summary/Abstract: {paper.get('abstract', paper.get('title', ''))}
 Link: {paper['url']}
 {"Official code repository (link it in a thread reply — devs love this, and it drives saves/reposts): " + paper['repo_url'] if paper.get('repo_url') else ""}
 {"Open-access version of this paper (link it so followers can read it, since the primary source may be paywalled): " + paper['open_version'] if paper.get('open_version') else ""}
