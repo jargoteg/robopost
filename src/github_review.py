@@ -103,6 +103,14 @@ def create_issues():
     for d in drafts:
         if d["status"] != "pending_review":
             continue
+        if d.get("issue"):
+            # re-rendered draft: issue already exists, refresh it in place
+            d["status"] = "in_review"
+            comment(d["issue"], "🔄 Cards re-rendered (media had failed to "
+                                "upload). The images above should load now — "
+                                "refresh if cached.")
+            set_status_label(d["issue"], "needs-review")
+            continue
         c, p = d["content"], d["paper"]
         slides = "\n".join(
             f"![slide {i}]({base}/{rel})" for i, rel in
