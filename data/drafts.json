@@ -10109,7 +10109,9 @@
         "media/5a23d5dc/slide_07.png"
       ]
     },
-    "issue": 117
+    "issue": 117,
+    "scheduled_after": "2026-07-13T22:58:04.634932+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "a26eadcf",
@@ -10193,7 +10195,9 @@
         "media/a26eadcf/slide_07.png"
       ]
     },
-    "issue": 118
+    "issue": 118,
+    "scheduled_after": "2026-07-13T22:58:04.634932+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "2668997d",
