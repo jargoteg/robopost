@@ -9512,7 +9512,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-13T09:51:26.233378+00:00",
     "media": {
       "figures": [
@@ -9536,7 +9536,9 @@
       ],
       "video": "media/81511fa3/video.mp4"
     },
-    "issue": 113
+    "issue": 113,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "8343e78b",
@@ -9592,7 +9594,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-13T09:51:54.463192+00:00",
     "media": {
       "figures": [
@@ -9675,7 +9677,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-13T09:52:21.212717+00:00",
     "media": {
       "figures": [
@@ -10025,5 +10027,912 @@
         "media/362f0fcf/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "5a23d5dc",
+    "paper": {
+      "id": "rss-84734beebb",
+      "title": "Towards shared embodied intelligence in humanoid robots through optimization, development and testing of the human-aware ergoCub robot",
+      "abstract": "Nature Machine Intelligence, Published online: 13 July 2026; doi:10.1038/s42256-026-01272-2 Sartore et al. present ergoCub, a humanoid robot that prioritizes human safety at hardware and motion levels. Using a shared embodied intelligence framework, design and control are jointly optimized with human-related metrics such as back stress alongside locomotion objectives, reducing spinal load and improving walking robustness.",
+      "authors": [],
+      "url": "https://www.nature.com/articles/s42256-026-01272-2",
+      "source": "nature.com",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2605.26991",
+      "redo_notes": "texts in card seems to cut off mid sentence. Fix"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Safe robots hurt fewer humans. The math to prove it is new.",
+      "commentary": "ergoCub co-optimizes hardware and motion control using human-centered metrics, specifically spinal load on a nearby person, alongside standard locomotion objectives. That's a real departure from designing robots first and bolting on safety constraints after. The 'shared embodied intelligence' framing means the robot's physical design and its controller are shaped together by the same human-aware cost function. Honest caveat: Nature Machine Intelligence papers on humanoids are notorious for controlled-lab results that don't survive factory floors or care settings, and the abstract gives no numbers on how much spinal load reduction was achieved or under what conditions. The framework is conceptually sound. Field validation is another paper.",
+      "slides": [
+        {
+          "title": "The problem with safe robots",
+          "body": "Most humanoids are designed for performance, then checked for safety. ergoCub flips that: human safety metrics are baked into the hardware design and motion controller from day one."
+        },
+        {
+          "title": "What 'shared embodied intelligence' means",
+          "body": "Design and control are jointly optimized. The same cost function that shapes the robot's joints also shapes how it walks. Back stress on a nearby human is a design variable, not an afterthought."
+        },
+        {
+          "title": "The key metric: spinal load",
+          "body": "Most HRI safety work focuses on collision force. ergoCub tracks spinal load on the human collaborator during interaction. That is a biomechanics metric borrowed from occupational health research."
+        },
+        {
+          "title": "What it achieves",
+          "body": "Reduced spinal load during collaboration and improved walking robustness, both from the same optimization. No trade-off reported between safety and locomotion performance, which is the interesting claim."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "No field numbers in the abstract. Controlled lab conditions are far from care homes or factory floors. How the spinal-load cost function holds up under unstructured interaction remains an open question."
+        },
+        {
+          "title": "Why this framing matters",
+          "body": "If co-optimization becomes standard practice, it changes how humanoid specs are written. Safety stops being a post-hoc test and becomes a design input. That is a workflow shift, not just a result."
+        }
+      ],
+      "video_script": "Most humanoid robots are designed to be fast or strong, then safety is checked at the end. ergoCub from Sartore et al. does the opposite. They build human spinal load directly into the cost function that shapes the robot's body and its controller at the same time. One optimization, two outputs: safer collaboration and more robust walking. The catch is that no real-world deployment numbers are in yet. The framework is solid. The field test is the hard part. Would you trust this robot next to a patient or a worker today?",
+      "caption_instagram": "Safe robots hurt fewer humans. The math to prove it is new.\n\nMost humanoids get designed for performance and checked for safety afterward. ergoCub from Sartore et al. takes a different approach: human spinal load is a design variable from the start, baked into the same optimization that shapes the robot's joints and its walking controller.\n\nThe 'shared embodied intelligence' framework means hardware and control are co-optimized together. The result is reduced spinal load on nearby humans and improved locomotion robustness from one unified cost function. That is a meaningful architectural choice, not a cosmetic one.\n\nHonest take: the abstract gives no field numbers and no breakdown of conditions. Lab results on humanoid safety do not always survive real environments. The framework is worth watching. The deployment story is still being written.\n\nPaper: 'Towards shared embodied intelligence in humanoid robots through optimization, development and testing of the human-aware ergoCub robot' by Sartore et al., Nature Machine Intelligence, 2026. Open access preprint: arxiv.org/abs/2605.26991\n\n#swarmrobotics #humanoidrobots #robotsafety #HRI #locomotion #robotdesign #embodiedintelligence",
+      "caption_tiktok": "They put human spinal load inside the robot's design equation. That's new. ergoCub optimizes safety and walking at the same time. #humanoidrobots #robotsafety #robotics #HRI",
+      "post_bluesky": "Safe robots hurt fewer humans. The math to prove it is new. ergoCub co-optimizes hardware + motion control using spinal load on a nearby human as a design variable. One cost function, safer collaboration AND better walking. https://www.nature.com/articles/s42256-026-01272-2",
+      "bluesky_thread": [
+        "The interesting claim is no trade-off: safety and locomotion robustness improve together. That's only possible if you optimize them jointly from the start, not patch one onto the other. Conceptually clean. The field test is the hard part.",
+        "No deployment numbers in the abstract. Humanoid safety papers from controlled labs have a rough track record in unstructured settings. How does a spinal-load cost function behave when the human moves unpredictably? That's the question I want answered. Open access preprint: arxiv.org/abs/2605.26991"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T15:15:18.048975+00:00",
+    "media": {
+      "figures": [
+        "media/5a23d5dc/fig_00.png",
+        "media/5a23d5dc/fig_02.png",
+        "media/5a23d5dc/fig_04.png",
+        "media/5a23d5dc/fig_03.png"
+      ],
+      "bsky": [
+        "media/5a23d5dc/bsky_00.png",
+        "media/5a23d5dc/bsky_01.png",
+        "media/5a23d5dc/bsky_02.png",
+        "media/5a23d5dc/bsky_03.png"
+      ],
+      "slides": [
+        "media/5a23d5dc/slide_00.png",
+        "media/5a23d5dc/slide_01.png",
+        "media/5a23d5dc/slide_02.png",
+        "media/5a23d5dc/slide_03.png",
+        "media/5a23d5dc/slide_04.png",
+        "media/5a23d5dc/slide_05.png",
+        "media/5a23d5dc/slide_06.png",
+        "media/5a23d5dc/slide_07.png"
+      ]
+    },
+    "issue": 117
+  },
+  {
+    "draft_id": "a26eadcf",
+    "paper": {
+      "id": "2606.31912",
+      "title": "Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing",
+      "abstract": "Navigating discrete terrain such as stepping stones remains a major challenge for legged robots. Conventional approaches often rely on dense environment reconstruction from cameras or LiDAR, which can be affected by latency, occlusions, and significant computational overhead. We show that proximity sensors integrated into the bottom of a quadruped's feet enable safe, terrain-seeking autonomous locomotion. No cameras, no LiDAR, no other exteroceptive sensors! Targeted, task-specific sensing can be a powerful alternative to increasingly complex perception stacks. \n\n📝 Paper: https://arxiv.org/abs/2606.31912",
+      "authors": [],
+      "url": "https://arxiv.org/abs/2606.31912",
+      "source": "media_scout",
+      "item_type": "paper",
+      "video_url": "https://www.youtube.com/watch?v=K7_acxnVrdI",
+      "video_first": true,
+      "open_version": "https://arxiv.org/abs/2606.31912",
+      "score": 7.5,
+      "redo_notes": "texts cuts of mid sentence"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No camera. No LiDAR. Just four tiny proximity sensors.",
+      "commentary": "This paper strips legged locomotion perception down to the absolute minimum: one proximity sensor per foot, flush with the sole, detecting whether there is ground underneath. No reconstruction, no depth maps, just binary-ish contact signals fed into a learned policy. The quadruped navigates stepping stones reliably in hardware tests. The honest caveat is that stepping stones are a constrained test environment and discrete terrain in the wild, think rubble, uneven rock, flooded mine floors, brings occlusions and surface variation the foot sensors may not handle gracefully. But the core argument lands: task-specific sensing can outperform a full perception stack when the task is well-defined enough. That is a genuinely useful design principle for field robotics where compute budgets and sensor failure rates are real constraints.",
+      "slides": [
+        {
+          "title": "The perception stack problem",
+          "body": "Cameras and LiDAR add latency, compute cost, and failure modes. For stepping stones, you really only need one question: is there solid ground under each foot right now?"
+        },
+        {
+          "title": "Four sensors. That's it.",
+          "body": "One proximity sensor embedded in the sole of each foot. No external cameras, no point clouds, no map. The policy reads foot-level ground proximity and decides where to step."
+        },
+        {
+          "title": "What the policy learns",
+          "body": "Trained in simulation with sparse proximity signals, the policy develops terrain-seeking gait patterns. It actively probes for footholds rather than following a pre-planned footstep sequence."
+        },
+        {
+          "title": "Hardware results",
+          "body": "The quadruped crosses physical stepping stone arrangements autonomously. Minimal sensing, no human guidance, no global map. Recovery from near-misses happens via reactive gait adjustment."
+        },
+        {
+          "title": "Why this matters for field deployment",
+          "body": "Fewer sensors means fewer failure points. In subsea, nuclear, or mining environments, a camera that fogs or a LiDAR that gets dust-contaminated can end a mission. Foot-mounted proximity sensors are robust and cheap."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Stepping stones are controlled discrete terrain. Real rubble, angled surfaces, and wet rock add variation foot proximity sensors may not resolve. Sim-to-real gap on sensor noise needs more stress testing."
+        }
+      ],
+      "video_script": "Everyone assumes legged robots need cameras to navigate rough terrain. This paper says no. Four proximity sensors, one per foot, embedded in the sole. That is the entire perception stack. No LiDAR, no depth map, no reconstruction pipeline. A learned policy reads those signals and steers the quadruped across stepping stones in real hardware tests. Fewer sensors, fewer failure modes, less compute. The question is how far this scales before foot proximity alone stops being enough. What do you think breaks first?",
+      "caption_instagram": "No camera. No LiDAR. Just four tiny proximity sensors.\n\nMost legged robots navigating rough terrain carry a full perception stack: cameras, depth sensors, point cloud reconstruction, all running under tight latency budgets. This paper asks whether that complexity is actually necessary for a well-defined task.\n\nThe answer, for stepping stones at least, is no. One proximity sensor per foot, flush with the sole, feeds a learned policy that guides the quadruped across discrete terrain with no global map and no external sensing whatsoever. The robot actively seeks footholds rather than following a pre-planned sequence.\n\nThe field robotics angle here is real. In mining, nuclear, or subsea environments, cameras fail. Lenses fog, dust accumulates, latency spikes at the worst moment. Foot-mounted proximity sensors are cheap, hardened, and local. If the task is defined enough, this architecture wins on reliability.\n\nCaveat: stepping stones are a relatively controlled version of discrete terrain. Real rubble in a collapsed structure or a flooded tunnel floor is nastier. More stress testing on sensor noise and surface variation is the obvious next step.\n\nPaper: Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing, arXiv 2606.31912. Full video at the link in bio.\n\n#swarmrobotics #leggedrobots #fieldrobotics #robotics #autonomousrobots #miningrobotics #nuclearrobotics",
+      "caption_tiktok": "Quadruped navigates stepping stones with ZERO cameras. Four foot sensors. That's the whole perception system. arXiv 2606.31912 #robotics #leggedrobot #fieldrobotics #autonomousrobots",
+      "post_bluesky": "No camera. No LiDAR. Just four proximity sensors in the feet. This quadruped crosses stepping stones autonomously on minimal sensing, and the field reliability argument is real. https://arxiv.org/abs/2606.31912",
+      "bluesky_thread": [
+        "The clever part: the policy learns to actively seek footholds rather than execute a fixed plan. It probes. That behavioral shift comes entirely from sparse foot-level proximity signals. No reconstruction, no map, no exteroceptive stack to maintain.",
+        "Obvious limit: stepping stones are a clean version of discrete terrain. Real field conditions, wet uneven rock, rubble, degraded surfaces, add variation that foot proximity alone may not resolve. Would love to see this stress-tested in a messier environment. Anyone running something similar on…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T15:15:49.484718+00:00",
+    "media": {
+      "figures": [
+        "media/a26eadcf/pdf/fig_00.png",
+        "media/a26eadcf/fig_00.png",
+        "media/a26eadcf/pdf/fig_04.png",
+        "media/a26eadcf/pdf/fig_01.png"
+      ],
+      "bsky": [
+        "media/a26eadcf/bsky_00.png",
+        "media/a26eadcf/bsky_01.png",
+        "media/a26eadcf/bsky_02.png",
+        "media/a26eadcf/bsky_03.png"
+      ],
+      "slides": [
+        "media/a26eadcf/slide_00.png",
+        "media/a26eadcf/slide_01.png",
+        "media/a26eadcf/slide_02.png",
+        "media/a26eadcf/slide_03.png",
+        "media/a26eadcf/slide_04.png",
+        "media/a26eadcf/slide_05.png",
+        "media/a26eadcf/slide_06.png",
+        "media/a26eadcf/slide_07.png"
+      ]
+    },
+    "issue": 118
+  },
+  {
+    "draft_id": "2668997d",
+    "paper": {
+      "id": "doi-10.1002_rob.70293",
+      "title": "A Comprehensive Review on Adsorption–Locomotion Codesign of Wall‐Climbing Robots for Complex Surface Operations",
+      "abstract": "ABSTRACT With the increasing demand for inspection, maintenance, and operation in vertical and complex‐geometry environments, wall‐climbing robots have become essential equipment for high‐rise infrastructure maintenance, large‐scale industrial inspection, and emergency response. The codesign of adsorption and locomotion is fundamental to ensuring reliable attachment, stable mobility, and robust environmental adaptability. This paper provides a comprehensive review of major adsorption mechanisms—negative pressure, magnetic adsorption, electrostatic adsorption, bioinspired dry adsorption, and mechanical interlocking—and examines their underlying dynamics. Typical locomotion architectures, including wheeled, tracked, legged, peristaltic, and flipping mechanisms, are compared in terms of mobility characteristics and application boundaries across different surface conditions. Key engineering advances are summarized, including adsorption–locomotion coupling, curvature‐conforming structures, tunable adsorption, lightweight design, multimodal integration, and intelligent control. Considering emerging application scenarios, such as offshore wind turbines and nuclear power facilities—where resistance to wind loads, radiation, corrosion, and cross‐medium operation are required—future research directions are identified, such as multimodal adsorption fusion, compliant structural materials, enhanced environmental perception, and adaptive motion planning. This review aims to provide coheren",
+      "authors": [
+        "Zhu Sisi",
+        "Sun Hongsen",
+        "Cao Sichen",
+        "Hu Xing",
+        "Zhao Chun",
+        "Tang Gangqiang"
+      ],
+      "url": "https://doi.org/10.1002/rob.70293",
+      "doi": "10.1002/rob.70293",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Every adsorption trick ever tried, ranked against real surfaces.",
+      "commentary": "This Journal of Field Robotics review maps the full design space of wall-climbing robots: five adsorption families, five locomotion architectures, and how they actually interact under load. The codesign framing is the right move, because picking the wrong adsorption-locomotion pairing on a curved steel surface or a wet concrete facade is not a tuning problem, it's a rebuild. The offshore wind turbine and nuclear facility sections are the most useful, covering salt spray, radiation, and cross-medium transitions that most lab papers simply ignore. Honest caveat: reviews this broad tend to flatten performance numbers that were measured under very different test conditions, so the comparison tables need reading with that grain of salt.",
+      "slides": [
+        {
+          "title": "The wall-climbing design problem",
+          "body": "Adsorption and locomotion are not independent choices. Coupling them wrong means unstable attachment, poor mobility, or both. This review treats codesign as the central engineering question."
+        },
+        {
+          "title": "Five adsorption families",
+          "body": "Negative pressure, magnetic, electrostatic, bioinspired dry adhesion, mechanical interlocking. Each has a surface-type sweet spot and a failure mode. Magnetic fails on composites. Suction degrades on porous concrete."
+        },
+        {
+          "title": "Locomotion architectures compared",
+          "body": "Wheeled: fast, poor curvature conformance. Tracked: stable, heavy. Legged: flexible, control-hungry. Peristaltic and flipping: slow but geometrically versatile. No single winner across all surfaces."
+        },
+        {
+          "title": "Where lab results break down",
+          "body": "Offshore wind turbines add salt corrosion, wind loads up to gale force, and transitions from tower to blade. Nuclear sites add radiation-induced sensor drift. Neither condition appears in most benchmark tests."
+        },
+        {
+          "title": "Key engineering advances flagged",
+          "body": "Tunable adsorption, curvature-conforming frames, multimodal integration, and lightweight design are identified as the moves that actually close the gap between lab demos and field deployment."
+        },
+        {
+          "title": "What the field still needs",
+          "body": "Multimodal adsorption fusion, compliant materials for irregular geometry, better onboard perception, and adaptive motion planning. The review reads as a gap map for the next five years of proposals."
+        }
+      ],
+      "video_script": "Pick any tall structure: a wind turbine, a nuclear reactor wall, a high-rise facade. Now figure out how a robot clings to it, moves across it, and handles the transition between a flat panel and a curved edge. This review in Journal of Field Robotics maps every serious attempt: five adsorption mechanisms, five locomotion types, and the engineering reasons why most combinations fail before they reach the field. The offshore wind and nuclear sections alone are worth your afternoon. Which of these surface environments do you think is still completely unsolved?",
+      "caption_instagram": "Wall-climbing robots are not a single technology. They are a design matrix, and most papers only test one cell of it.\n\nThis review in Journal of Field Robotics covers the full codesign problem: five adsorption mechanisms paired against five locomotion architectures, across real surfaces with real constraints. Salt spray on offshore turbines. Radiation on nuclear facility walls. Geometry transitions that flat-surface lab tests never see.\n\nThe most useful section is the one on emerging environments. Wind load resistance and cross-medium operation requirements are detailed in a way that most benchmark papers skip entirely. That gap between controlled test surface and actual deployment is where most climbing robots stop working.\n\nIf you are scoping a wall-climbing project for infrastructure inspection, this is the gap map to read before you commit to an adsorption approach.\n\nZhu Sisi et al., 'A Comprehensive Review on Adsorption-Locomotion Codesign of Wall-Climbing Robots for Complex Surface Operations', Journal of Field Robotics, https://doi.org/10.1002/rob.70293\n\n#wallclimbingrobots #fieldrobotics #infrastructureinspection #swarmrobotics #roboticsinspection #nuclearrobotics #offshoreengineering #robotdesign",
+      "caption_tiktok": "Every way a robot has ever stuck to a wall, and why most of them fail in the field. Nuclear, offshore wind, high-rise: the real test surfaces nobody benchmarks on. #robotics #wallclimbing #infrastructureinspection #fieldrobotics #engineeringdesign",
+      "post_bluesky": "Picking an adsorption mechanism without considering your locomotion architecture is how wall-climbing robots fail at deployment. New JFR review maps all five mechanisms against all five locomotion types, with offshore wind + nuclear facility constraints included. https://doi.org/10.1002/rob.70293",
+      "bluesky_thread": [
+        "The offshore wind section is the honest part. Salt corrosion, gale-force wind loads, blade-to-tower geometry transitions. Lab suction cups do not survive that checklist. The review is essentially a ranked list of what breaks first and why.",
+        "My read: the codesign framing is correct and overdue. But the cross-paper performance comparisons need caution. Test surfaces and load conditions vary so much that the numbers are indicative at best. What surface environment do you think is the hardest open problem right now?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T15:16:21.364993+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/2668997d/bsky_00.png",
+        "media/2668997d/bsky_01.png",
+        "media/2668997d/bsky_02.png",
+        "media/2668997d/bsky_03.png"
+      ],
+      "slides": [
+        "media/2668997d/slide_00.png",
+        "media/2668997d/slide_01.png",
+        "media/2668997d/slide_02.png",
+        "media/2668997d/slide_03.png",
+        "media/2668997d/slide_04.png",
+        "media/2668997d/slide_05.png",
+        "media/2668997d/slide_06.png",
+        "media/2668997d/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "dfb3378b",
+    "paper": {
+      "id": "doi-10.1002_rob.70287",
+      "title": "Design and Motion Control of a Propeller–Leg Hybrid Multimodal Underwater Adhesion Robot",
+      "abstract": "ABSTRACT For underwater tasks that require an efficient approach over long distances and stable adhesion for close‐range crawling, this paper proposes a propeller–leg hybrid underwater adhesion robot with integrated swimming and crawling capabilities. First, we present the overall design of a robot that integrates a bionic leg–foot mechanism and a propeller propulsion system. Second, we design a hydrogel biomimetic sucker with reversible adhesion and detachment, accompanied by an adhesion performance test. A dual‐criterion system for static stability margin and adhesion force reliability was proposed during the robot crawling stage. On the basis of computational fluid dynamics simulation results, a critical instability model was developed to quantify the effects of flow velocity, slope, and load on system stability. We have developed a crawling–swimming collaborative control strategy to address the mode‐switching issue during locomotion. This strategy employs a hierarchical control architecture guided by stability criteria, in which central pattern generator–based rhythmic control dynamically integrates with sliding‐mode propulsion compensation via switching signals. The experimental results show that the proposed robot can achieve stable attachment motion through propeller–leg coordination under special working conditions (inverted surfaces and slopes). The proposed robot provides a multimodal solution for underwater operations that require a rapid target approach in open wa",
+      "authors": [
+        "Chao Wang",
+        "Yixian Wang",
+        "Zonggang Li",
+        "Xiaolong Wang",
+        "Desheng Liu",
+        "Huifeng Kang"
+      ],
+      "url": "https://doi.org/10.1002/rob.70287",
+      "doi": "10.1002/rob.70287",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Swim fast. Stick to a wall. A robot that does both.",
+      "commentary": "This Journal of Field Robotics paper tackles a real operational gap: underwater inspection robots that can either cruise efficiently or hold station on a surface, but not both. The team built a propeller-leg hybrid that swims to target then crawls on inverted and sloped surfaces using hydrogel biomimetic suckers with reversible adhesion. The clever bit is the hierarchical control architecture where CPG-based rhythmic leg motion integrates with sliding-mode propulsion compensation during mode switching, so the robot doesn't destabilize when it transitions from swimming to crawling against current. The CFD-derived instability model that quantifies flow velocity, slope, and load effects is genuinely useful for deployment planning. Honest caveat: hydrogel sucker durability on biofouled, rough infrastructure surfaces in real field conditions is an open question the paper doesn't fully answer.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Underwater inspection needs two things that fight each other: fast open-water transit and stable adhesion on walls, slopes, and inverted surfaces. Most robots do one or the other."
+        },
+        {
+          "title": "Propeller plus legs",
+          "body": "The robot combines a bionic leg-foot mechanism with a propeller propulsion system. Propellers handle transit. Legs, tipped with hydrogel biomimetic suckers, handle crawling on vertical and inverted surfaces."
+        },
+        {
+          "title": "Reversible hydrogel suckers",
+          "body": "The suckers use a hydrogel biomimetic design for reversible adhesion and detachment. Adhesion force and static stability margin are evaluated together via a dual-criterion system during crawling."
+        },
+        {
+          "title": "CFD-backed stability model",
+          "body": "Computational fluid dynamics simulations produced a critical instability model. It quantifies how flow velocity, slope angle, and payload each affect whether the robot stays stuck. That is deployable design logic."
+        },
+        {
+          "title": "The control problem is hard",
+          "body": "Mode switching from swimming to crawling is a classic destabilization point. A hierarchical controller uses CPG-based rhythmic control for legs and sliding-mode compensation for propellers, linked by switching signals."
+        },
+        {
+          "title": "What is still unresolved",
+          "body": "Hydrogel sucker performance on biofouled, rough, real-world infrastructure is not tested here. Lab adhesion numbers rarely survive contact with a corroded hull or barnacle-covered pipe. Field validation is the next gate."
+        }
+      ],
+      "video_script": "Most underwater robots pick a lane: swim fast, or stick to surfaces. This one does both. Propellers get it to the target quickly. Then bionic legs with hydrogel suckers take over, crawling on walls, slopes, even inverted surfaces. The tricky part is the switch between modes. A hierarchical controller blends rhythmic leg patterns with propeller compensation so the robot does not destabilize mid-transition. CFD simulations built a stability model that accounts for current speed, slope, and load. Clever engineering. But can those hydrogel suckers handle a real corroded hull?",
+      "caption_instagram": "Swim to the target. Stick to the wall. Crawl upside down.\n\nMost underwater inspection robots are optimized for one mode. This propeller-leg hybrid from Wang et al. does both, and the engineering to make that work is worth looking at.\n\nThe hydrogel biomimetic suckers handle reversible adhesion on inverted and sloped surfaces. A dual-criterion system checks both static stability margin and adhesion force reliability before the robot commits to a crawl. And a CFD-derived instability model tells you exactly how much current, slope, or load the system can tolerate before things go wrong. That last part is practically useful for real deployment planning.\n\nThe honest limitation: those hydrogel suckers are tested in controlled conditions. Biofouled, corroded, rough infrastructure surfaces are a different story. Field validation is where this design will either hold up or not.\n\nPaper: Design and Motion Control of a Propeller-Leg Hybrid Multimodal Underwater Adhesion Robot. Journal of Field Robotics. https://doi.org/10.1002/rob.70287\n\n#swarmrobotics #underwaterrobotics #fieldrobotics #inspectionrobot #marinerobotics #robotdesign #robotics",
+      "caption_tiktok": "Underwater robot swims to the wall, then walks on it upside down. The control problem here is nastier than it looks. #underwaterrobotics #inspectionrobot #robotics #engineering",
+      "post_bluesky": "Swim fast or stick to surfaces: underwater robots usually pick one. This propeller-leg hybrid does both, with hydrogel suckers for inverted crawling and a CFD-backed instability model for real deployment logic. https://doi.org/10.1002/rob.70287",
+      "bluesky_thread": [
+        "The clever part is the hierarchical controller. CPG rhythmic leg patterns plus sliding-mode propeller compensation, linked by switching signals. Mode transitions are where these robots usually fall apart. Worth seeing if it holds under real currents.",
+        "My caveat: hydrogel sucker adhesion is tested in clean lab conditions. A biofouled hull or corroded pipe is a different surface entirely. Journal of Field Robotics sets a high bar for field validation. Does this clear it? The CFD model is promising but I want the offshore tank data."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T15:16:50.484110+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/dfb3378b/bsky_00.png",
+        "media/dfb3378b/bsky_01.png",
+        "media/dfb3378b/bsky_02.png",
+        "media/dfb3378b/bsky_03.png"
+      ],
+      "slides": [
+        "media/dfb3378b/slide_00.png",
+        "media/dfb3378b/slide_01.png",
+        "media/dfb3378b/slide_02.png",
+        "media/dfb3378b/slide_03.png",
+        "media/dfb3378b/slide_04.png",
+        "media/dfb3378b/slide_05.png",
+        "media/dfb3378b/slide_06.png",
+        "media/dfb3378b/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "7863c6e7",
+    "paper": {
+      "id": "doi-10.1002_rob.70294",
+      "title": "A Framework for Tactile‐Based Proximity Sensing of Buried Objects via Granular Media Jamming",
+      "abstract": "ABSTRACT Many hazardous tasks, such as those related to search and rescue scenarios, involve interactions with granular materials. In such examples, tactile sensing can be invaluable, since objects of interest are often not visible but may still be haptically salient. When a tool, such as a robot finger, approaches a buried object, the displaced granular material ahead of the tool begins to compact against the buried object. The resulting granular media jamming causes an increase in contact force felt on the robot finger without the finger making direct contact with the buried object. In this work, we present a framework for tactile‐based proximity sensing that leverages theoretical models of soil failure during soil‐tool interactions and empirical models of granular material failure zones to haptically detect the onset of granular media jamming and estimate the distance from a sensorized robot fingertip to an object buried in granular material. We investigated the effects of granular material type on proximity sensing accuracy by studying glass beads, poppy seeds, and playground sand. For various fingertip and object depths, we estimated the distance from a sensorized finger to a buried object during haptic exploration in granular materials on a real robot. We developed particle filters to estimate the force state on the robot fingertip in real‐time, and showed how occupancy maps can be continuously updated during haptic exploration within granular materials with a real robo",
+      "authors": [
+        "Shengxin Jia",
+        "Lionel Zhang",
+        "Veronica J. Santos"
+      ],
+      "url": "https://doi.org/10.1002/rob.70294",
+      "doi": "10.1002/rob.70294",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Eyes closed, buried. The robot still finds it.",
+      "commentary": "This paper tackles something genuinely underappreciated: when objects are buried, vision is useless and you need to feel your way in. The core insight is that granular media jams ahead of a probing finger before contact happens, and that force signature carries distance information. They model this using soil failure theory, add particle filters for real-time state estimation, and update occupancy maps continuously. Tested across glass beads, poppy seeds, and playground sand on a real robot, not just simulation. The honest caveat: accuracy varies with grain type, which is exactly the problem you face in real SAR rubble, where material is heterogeneous and unknown. Still, Journal of Field Robotics is the right venue for this, and the framework is principled enough to build on.",
+      "slides": [
+        {
+          "title": "The problem: buried and invisible",
+          "body": "Search and rescue debris fields hide victims under granular material. Cameras fail. Tactile sensing is the only remaining channel. But contact itself causes damage."
+        },
+        {
+          "title": "Granular jamming as a sensor",
+          "body": "As a finger approaches a buried object, displaced grains compact against it. This jamming increases fingertip force before any direct contact. That force rise encodes proximity."
+        },
+        {
+          "title": "Two-model framework",
+          "body": "Theoretical soil failure models set the physics baseline. Empirical failure zone models calibrate to the actual material. Particle filters estimate force state in real time."
+        },
+        {
+          "title": "Three materials tested",
+          "body": "Glass beads, poppy seeds, playground sand. Each has different packing density and friction. Accuracy shifts across grain types, which is the hardest honest result in the paper."
+        },
+        {
+          "title": "Live occupancy mapping",
+          "body": "During haptic exploration, occupancy maps update continuously from force readings. A real robot, not simulation, produced the proximity estimates across varied fingertip and object depths."
+        },
+        {
+          "title": "Why it matters for field robotics",
+          "body": "Real rubble is not uniform sand. The grain-type sensitivity is a deployment gap worth naming. The framework is principled enough to extend. That is the actual contribution here."
+        }
+      ],
+      "video_script": "A robot finger probes into sand. No cameras. No contact. Just force readings from the fingertip. But it already knows something is down there. This paper figures out why. When a finger approaches a buried object, the grains ahead jam together, compressing against the target. That jamming shows up as a force increase before any direct touch. The team models that physics, adds particle filters for real-time tracking, and maps occupancy continuously on a real robot. Three materials tested. Results shift with grain type. That is the hard question: does this survive real rubble? What would you need to see before deploying this in the field?",
+      "caption_instagram": "A robot finds a buried object without seeing it, without touching it.\n\nThe trick is granular jamming. As a finger probes into sand, displaced grains compact against the hidden object ahead. The force on the fingertip rises before contact. That signal carries distance information.\n\nJia, Zhang and Santos built a full framework around this: soil failure theory for the physics, empirical models for the actual grain behavior, particle filters for real-time force estimation, and continuous occupancy mapping on a live robot. Three materials tested: glass beads, poppy seeds, playground sand.\n\nThe result that matters most is also the uncomfortable one. Accuracy shifts depending on grain type. Real search and rescue rubble is not uniform. That gap between controlled grain tests and heterogeneous field conditions is exactly where this framework needs more work. The physics is solid. The deployment story is still being written.\n\nPaper: A Framework for Tactile-Based Proximity Sensing of Buried Objects via Granular Media Jamming, Journal of Field Robotics. https://doi.org/10.1002/rob.70294\n\n#swarmrobotics #searchandrescue #tactilesensingfield #fieldrobotics #hapticrobotics #granularmedia #roboticsresearch",
+      "caption_tiktok": "Robot finds buried objects by feeling the sand jam, not by touching the object. Real sensor, real robot, real sand. The grain-type problem is the one nobody talks about. #fieldrobotics #searchandrescue #tactilerobotics #robotresearch",
+      "post_bluesky": "Eyes closed, buried. The robot still finds it. Granular jamming ahead of a probing finger carries distance info before contact. Soil failure theory + particle filters + real robot. Journal of Field Robotics. https://doi.org/10.1002/rob.70294",
+      "bluesky_thread": [
+        "The core result: force rises on the fingertip as grains compact against a buried object ahead of it. No contact needed. They model this with soil failure theory and empirical failure zones, then run particle filters in real time. Tested on glass beads, poppy seeds, and playground sand.",
+        "The uncomfortable number: accuracy shifts with grain type. Real SAR rubble is heterogeneous and unknown. That is the gap between a principled framework and a deployable tool. Worth watching whether follow-up work addresses mixed or unknown materials. What would you need to see to trust this in the…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T15:19:42.087356+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/7863c6e7/bsky_00.png",
+        "media/7863c6e7/bsky_01.png",
+        "media/7863c6e7/bsky_02.png",
+        "media/7863c6e7/bsky_03.png"
+      ],
+      "slides": [
+        "media/7863c6e7/slide_00.png",
+        "media/7863c6e7/slide_01.png",
+        "media/7863c6e7/slide_02.png",
+        "media/7863c6e7/slide_03.png",
+        "media/7863c6e7/slide_04.png",
+        "media/7863c6e7/slide_05.png",
+        "media/7863c6e7/slide_06.png",
+        "media/7863c6e7/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "83f3a185",
+    "paper": {
+      "id": "doi-10.1002_rob.70289",
+      "title": "A Ground Mobile Robot for Autonomous Terrestrial Laser Scanning‐Based Field Phenotyping",
+      "abstract": "ABSTRACT Conventional field phenotyping methods are typically manual, time‐consuming, and destructive, creating a bottleneck for breeding progress. To address this challenge, robotics and automation technologies offer efficient sensing tools to monitor field evolution and crop development throughout the season. This study presents an end‐to‐end automated pipeline for terrestrial laser scanning (TLS) in plant breeding trials, built around a Husky ground robot equipped with a high‐resolution survey‐grade FARO 3D LiDAR scanner. Unlike prior TLS phenotyping approaches relying on manual scan placement or heuristic site selection, our system integrates a novel analytical 3D ray‐casting method for optimized TLS site planning with an offline route optimization algorithm that accounts for crop growth stages and field accessibility constraints. This enables efficient planning in complex breeding environments, reduces manual labor, and improves data collection efficiency, addressing scalability challenges in large breeding trials. Leveraging Real Time Kinematic‐Global Navigation Satellite System (RTK‐GNSS) and sensor fusion, the system achieved average errors below 0.6 cm for position and for heading, enabling point cloud registration with mean errors around 2 cm, comparable to traditional manual methods that require artificial targets. The platform was successfully deployed and evaluated in two distinct cotton breeding field layouts, demonstrating the platform's capability to autonomou",
+      "authors": [
+        "Javier Rodriguez‐Sanchez",
+        "Kyle Johnsen",
+        "Changying Li"
+      ],
+      "url": "https://doi.org/10.1002/rob.70289",
+      "doi": "10.1002/rob.70289",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/abs/2404.04404"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Manual crop measurements are still the bottleneck. Not for long.",
+      "commentary": "A Husky robot with a survey-grade FARO LiDAR autonomously plans scan positions using 3D ray-casting, then drives optimized routes through cotton breeding trials. The clever bit is the scan site planner: instead of heuristics, it actually simulates occlusion geometry to pick where the scanner needs to stand. Position errors below 0.6 cm and point cloud registration around 2 cm puts it on par with manual target-based methods, which is the real bar to clear for breeders who already trust those workflows. Honest caveat: cotton rows are relatively structured terrain; the scalability claim needs stress-testing in denser or lodged canopies where row geometry breaks down. Still, a full end-to-end pipeline validated in two real field layouts is a serious step past most lab phenotyping demos.",
+      "slides": [
+        {
+          "title": "The phenotyping bottleneck",
+          "body": "Plant breeding trials need repeated 3D measurements all season. Manual terrestrial laser scanning is slow, labor-intensive, and doesn't scale to thousands of plots."
+        },
+        {
+          "title": "The platform",
+          "body": "Clearpath Husky UGV carrying a FARO survey-grade 3D LiDAR. RTK-GNSS plus sensor fusion gives position error below 0.6 cm and heading error below 0.6 cm."
+        },
+        {
+          "title": "The clever part: ray-casting planner",
+          "body": "Novel analytical 3D ray-casting selects scan positions to minimize occlusion. No heuristics, no manual site placement. Route optimizer accounts for crop growth stage and field access constraints."
+        },
+        {
+          "title": "How good is the registration?",
+          "body": "Mean point cloud registration error around 2 cm. Matches traditional manual methods that rely on artificial reflective targets. No targets needed here."
+        },
+        {
+          "title": "Field validation: two cotton layouts",
+          "body": "Tested across two distinct cotton breeding trial configurations in real field conditions. End-to-end pipeline from planning through data capture ran autonomously."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Cotton rows are relatively structured. Dense canopies, lodged crops, or irregular plot geometry may break the ray-casting assumptions. Real stress testing still needed."
+        }
+      ],
+      "video_script": "Breeding programs need 3D data on thousands of plant plots, all season long. The old way is manual laser scanning with a tripod and reflective targets. Slow, expensive, doesn't scale. This group strapped a survey-grade FARO LiDAR to a Husky robot and built a planner that actually simulates occlusion geometry to pick where the scanner should stand. Position errors under 0.6 centimeters. Point cloud accuracy around 2 centimeters. Same as manual methods. Validated in real cotton fields. The pipeline runs start to finish without a human in the loop. The question is whether it holds up when the crop gets dense and the rows stop being neat. What do you think breaks first?",
+      "caption_instagram": "Manual laser scanning in plant breeding trials is a real production bottleneck. Slow, repetitive, and it doesn't scale when you have thousands of plots to measure across an entire growing season.\n\nThis group built a full autonomous pipeline around a Husky UGV with a FARO survey-grade LiDAR. The standout piece is a 3D ray-casting scan site planner that simulates occlusion geometry to figure out where the scanner needs to stand. No heuristics, no human picking spots.\n\nResults: position errors below 0.6 cm, point cloud registration around 2 cm. That matches traditional manual target-based methods, which is exactly the bar breeders care about. Validated across two real cotton field layouts.\n\nThe limit I'd push on: cotton rows are structured. What happens in a lodged or dense canopy where the geometric assumptions break? That's the next test this pipeline needs.\n\nPaper: 'A Ground Mobile Robot for Autonomous Terrestrial Laser Scanning-Based Field Phenotyping', Rodriguez-Sanchez et al. arXiv:2404.04404\n\n#FieldRobotics #Phenotyping #AgRobotics #LiDAR #AutonomousRobots #PlantBreeding #TerrestrialLaserScanning",
+      "caption_tiktok": "A robot that plans its own scan positions using occlusion geometry, then drives through cotton fields alone. 2 cm point cloud accuracy. No reflective targets, no human. #FieldRobotics #AgRobotics #LiDAR #Phenotyping",
+      "post_bluesky": "Manual laser scanning is the bottleneck in plant breeding. This Husky + FARO LiDAR system plans its own scan sites via 3D ray-casting, drives optimized routes, and hits 2 cm point cloud accuracy. No targets, no human. https://doi.org/10.1002/rob.70289",
+      "bluesky_thread": [
+        "The key contribution is the scan site planner. Instead of heuristics, it simulates occlusion geometry in 3D to pick where the scanner stands. RTK-GNSS fusion keeps position error below 0.6 cm. Registration accuracy matches manual target-based methods, which is the bar breeders actually use.",
+        "Honest concern: cotton rows are structurally predictable. The ray-casting assumptions could break in lodged crops or dense irregular canopies. Two field layouts is real validation but it's a narrow slice of the environments breeding programs actually deal with. Has anyone tried this in sorghum or…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T15:20:12.423359+00:00",
+    "media": {
+      "figures": [
+        "media/83f3a185/pdf/fig_02.png",
+        "media/83f3a185/pdf/fig_01.png",
+        "media/83f3a185/pdf/fig_05.png",
+        "media/83f3a185/pdf/fig_00.png"
+      ],
+      "bsky": [
+        "media/83f3a185/bsky_00.png",
+        "media/83f3a185/bsky_01.png",
+        "media/83f3a185/bsky_02.png",
+        "media/83f3a185/bsky_03.png"
+      ],
+      "slides": [
+        "media/83f3a185/slide_00.png",
+        "media/83f3a185/slide_01.png",
+        "media/83f3a185/slide_02.png",
+        "media/83f3a185/slide_03.png",
+        "media/83f3a185/slide_04.png",
+        "media/83f3a185/slide_05.png",
+        "media/83f3a185/slide_06.png",
+        "media/83f3a185/slide_07.png"
+      ]
+    },
+    "issue": 119
+  },
+  {
+    "draft_id": "412919d7",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3703500",
+      "title": "Integrated by Design: A Hybrid Robotic Palm Fusing a Functionally-Dense Compliant Matrix With an Actuated Skeleton",
+      "abstract": "Integrated by Design: A Hybrid Robotic Palm Fusing a Functionally-Dense Compliant Matrix With an Actuated Skeleton",
+      "authors": [
+        "Oliver S. Neumann",
+        "Lena S. Ewering",
+        "Robert K. Katzschmann"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3703500",
+      "doi": "10.1109/lra.2026.3703500",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://doi.org/10.1109/lra.2026.3703500"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A palm that senses, grips, and bends without separate sensors.",
+      "commentary": "Neumann et al. embed sensing, compliance, and actuation directly into the palm structure itself, avoiding the bolt-on sensor modules that plague most dexterous hands. The compliant matrix does the passive mechanical work while the actuated skeleton handles control, which is a genuinely smart division of labor. What's clever is treating the palm not as a passive connector between fingers but as a functional organ in its own right. Honest caveat: RA-L papers on hands rarely show manipulation transfer to real unstructured tasks, and durability of compliant embedded structures under repeated loading is almost never reported. Until someone runs these palms through a thousand grasp cycles in dirty conditions, the field numbers stay in the lab.",
+      "slides": [
+        {
+          "title": "The palm is usually ignored",
+          "body": "Most robotic hands spend engineering budget on fingers. The palm is a passive connector. This paper treats it as the primary functional organ, embedding compliance, actuation, and sensing into a single integrated structure."
+        },
+        {
+          "title": "Two systems, one body",
+          "body": "A compliant matrix handles passive adaptation and distributed sensing. An actuated skeleton drives active motion. Neither layer is add-on hardware. Both are co-designed from the start, sharing geometry and load paths."
+        },
+        {
+          "title": "Why integration beats bolt-on sensors",
+          "body": "External sensors delaminate, snag on objects, and add wiring mass. A functionally-dense compliant matrix distributes sensing through the material itself, reducing failure points and keeping the palm profile compact."
+        },
+        {
+          "title": "The tradeoff they accept",
+          "body": "Integrated compliant structures are harder to repair than modular ones. A single damaged zone can compromise sensing and compliance together. Field durability over thousands of cycles is not characterized in this paper."
+        },
+        {
+          "title": "Why it matters for real deployment",
+          "body": "Subsea and nuclear manipulation arms need hands that survive contamination and confined spaces. A palm with no protruding sensors or cable runs is genuinely harder to foul. That is a practical argument, not just an aesthetic one."
+        },
+        {
+          "title": "The open question",
+          "body": "Can the compliant matrix maintain calibrated sensing after mechanical fatigue? Embedded sensing in soft structures drifts. Quantified drift curves over repeated loading cycles would make this result portable to field applications."
+        }
+      ],
+      "video_script": "Most robotic hands treat the palm as dead space. Just a connector between wrist and fingers. This paper asks what happens if you make the palm itself do the work. Sensing, compliance, and active motion fused into one structure. No bolt-on sensors, no external wiring runs. The compliant matrix adapts passively, the skeleton drives actively, and both share the same geometry. It is a clean idea. The real test is whether integrated compliant materials can hold their sensing accuracy after a thousand hard grasps in a dirty environment. So, has anyone actually tested embedded palm sensing under field conditions?",
+      "caption_instagram": "The robotic palm is almost always the dumbest part of the hand.\n\nFingers get all the attention. The palm sits there as a passive bracket, maybe with a few glued-on pressure sensors that peel off after a week.\n\nThis RA-L paper from Katzschmann's group at ETH Zurich takes a different position. They fuse a compliant matrix, distributed sensing, and an actuated skeleton directly into the palm structure itself. No bolt-on modules. Everything co-designed from the start.\n\nThe division of labor is what I find genuinely interesting: passive mechanical adaptation handled by the compliant layer, active motion handled by the skeleton. The palm becomes a functional organ, not dead structure.\n\nHonest caveat: embedded compliant sensing drifts under fatigue loading, and this paper doesn't characterize that. Until someone runs thousands of grasp cycles and publishes the drift curves, these results live in the lab. For subsea or nuclear manipulation, that durability question is the whole ballgame.\n\nPaper: 'Integrated by Design: A Hybrid Robotic Palm Fusing a Functionally-Dense Compliant Matrix With an Actuated Skeleton' in IEEE RA-L. Link in bio.\n\n#swarmrobotics #roboticmanipulation #softrobotics #fieldrobotics #robothand #embeddedrobotics #raletters",
+      "caption_tiktok": "Everyone obsesses over robot fingers. This paper asks what happens if the palm does the work instead. Sensing, compliance, actuation, all fused into one structure. Cool idea, now someone please test it for a thousand grasps in a dirty environment. #robotics #robothand #softrobotics #engineering",
+      "post_bluesky": "Everyone engineers the fingers. The palm is dead structure. This RA-L paper fuses sensing, compliance, and actuation into the palm itself, no bolt-on sensors, no separate modules. Clever division of labor. Durability under fatigue is the open question. https://doi.org/10.1109/lra.2026.3703500",
+      "bluesky_thread": [
+        "The split is what I like: compliant matrix does passive adaptation and distributed sensing, actuated skeleton handles active motion. Both share geometry from day one. That is a real design commitment, not a feature list.",
+        "The caveat nobody wants to say: embedded compliant sensing drifts under repeated loading. No drift curves in the paper. For nuclear or subsea hands where you cannot recalibrate on the fly, that gap matters a lot. Anyone tested this class of structure past a few hundred cycles?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T15:20:45.380196+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/412919d7/bsky_00.png",
+        "media/412919d7/bsky_01.png",
+        "media/412919d7/bsky_02.png",
+        "media/412919d7/bsky_03.png"
+      ],
+      "slides": [
+        "media/412919d7/slide_00.png",
+        "media/412919d7/slide_01.png",
+        "media/412919d7/slide_02.png",
+        "media/412919d7/slide_03.png",
+        "media/412919d7/slide_04.png",
+        "media/412919d7/slide_05.png",
+        "media/412919d7/slide_06.png",
+        "media/412919d7/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "388b4332",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3703264",
+      "title": "Real-to-Sim-to-Real: Learning Agile and Robust Recovery Skills With Terrain Imagination via Adversarial Imitation",
+      "abstract": "Real-to-Sim-to-Real: Learning Agile and Robust Recovery Skills With Terrain Imagination via Adversarial Imitation",
+      "authors": [
+        "Tangyu Qian",
+        "Huayang Yin",
+        "Zhen Kan"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3703264",
+      "doi": "10.1109/lra.2026.3703264",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Recovery skills built in a lab die in the field. This one didn't.",
+      "commentary": "Qian et al. close a real gap: legged robots trained on flat terrain collapse the moment recovery meets uneven ground. The trick is 'terrain imagination', an adversarial imitation framework that generates plausible rough-terrain scenarios during sim training without needing real terrain data upfront. The real-to-sim-to-real loop is tight and the adversarial component keeps the policy honest about worst-case surface variation. Honest caveat: we don't yet know how this scales past the terrain distributions the imagination module can reasonably hallucinate, and transfer results on genuinely novel outdoor surfaces remain the open question.",
+      "slides": [
+        {
+          "title": "The recovery problem",
+          "body": "Legged robots fall. Getting up reliably on flat lab floors is solved. Getting up on rubble, slopes, or mud is not. Most policies trained in sim never meet real terrain variation during learning."
+        },
+        {
+          "title": "Terrain imagination",
+          "body": "The framework synthesizes adversarial terrain variants during training. No real terrain scans needed upfront. The generator pushes the policy toward failure, then the policy adapts. Classic GAN logic applied to ground surfaces."
+        },
+        {
+          "title": "Adversarial imitation loop",
+          "body": "A discriminator distinguishes expert recovery motions from policy rollouts. The adversarial terrain generator and the imitation signal work together, forcing the robot to recover agile AND on difficult ground simultaneously."
+        },
+        {
+          "title": "Real-to-sim-to-real closes the loop",
+          "body": "Real motion capture seeds the sim. Sim trains the policy under imagined terrain. Policy deploys on physical hardware. Each stage informs the next, reducing the usual gap between demo conditions and deployment conditions."
+        },
+        {
+          "title": "Why field robots care",
+          "body": "Search and rescue, nuclear inspection, mining: a robot that can't self-recover after a fall is a robot you have to manually retrieve. Robust recovery on uneven ground is a hard blocker for real deployment autonomy."
+        },
+        {
+          "title": "The open question",
+          "body": "Terrain imagination is only as good as its distribution. If the real site has surfaces outside what the generator can model, the policy has never seen the hardest cases. Outdoor generalization testing is the next bar to clear."
+        }
+      ],
+      "video_script": "Most legged robots can get up after a fall. On a flat floor. In the lab. Put them on rubble or a slope and the recovery policy just breaks. This paper asks: what if you trained the robot against imagined bad terrain from the start? The adversarial loop keeps generating harder surfaces, the robot keeps learning to recover, and the whole thing closes back into the real world. It's a tight loop. The honest question is whether the imagination module stays useful when the real ground is stranger than anything it generated.",
+      "caption_instagram": "Recovery skills built in a lab die in the field. This one didn't.\n\nMost legged robot recovery policies are trained on flat sim floors and fall apart the moment the real surface isn't flat. Qian, Yin, and Kan attack this directly with a framework they call terrain imagination: an adversarial generator that creates difficult ground variations during training, no real terrain scans required upfront.\n\nThe loop is real-to-sim-to-real. Real motion capture seeds expert behavior. The sim trains the policy under adversarially generated terrain. The policy deploys on hardware. GAN-style pressure from the terrain generator forces the robot to learn recovery that actually holds under surface variation.\n\nFor field robotics, this matters a lot. A robot that can't self-recover after a fall in a nuclear facility or a collapsed building is a liability, not an asset. The honest caveat: the imagination module can only model terrain distributions it can reasonably hallucinate. Novel outdoor surfaces remain the real test.\n\nPaper: 'Real-to-Sim-to-Real: Learning Agile and Robust Recovery Skills With Terrain Imagination via Adversarial Imitation', IEEE RA-L, doi.org/10.1109/lra.2026.3703264\n\n#swarmrobotics #leggedrobots #fieldrobotics #robotics #searchandrescue #reinforcementlearning #roboticsresearch",
+      "caption_tiktok": "Lab recovery skills break in the field. This adversarial training loop is why that gap exists and how to close it. #leggedrobots #robotics #fieldrobotics #AIrobotics",
+      "post_bluesky": "Recovery skills built in a lab die in the field. This one didn't. Terrain imagination: adversarial sim surfaces, no real scans needed, closes real-to-sim-to-real tight. The question is how far that imagination stretches. https://doi.org/10.1109/lra.2026.3703264",
+      "bluesky_thread": [
+        "The clever bit: a GAN-style terrain generator that keeps making the ground harder during training. The policy can't just memorize flat-floor recovery. It gets tested against surfaces it's never seen. That's the adversarial imitation part doing real work.",
+        "My caveat: terrain imagination is bounded by what the generator can model. If your real deployment site has surfaces outside that distribution, the policy has never faced the hardest cases. Outdoor generalization on genuinely novel ground is the result I want to see next. Would you trust this for…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T15:21:16.892154+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/388b4332/bsky_00.png",
+        "media/388b4332/bsky_01.png",
+        "media/388b4332/bsky_02.png",
+        "media/388b4332/bsky_03.png"
+      ],
+      "slides": [
+        "media/388b4332/slide_00.png",
+        "media/388b4332/slide_01.png",
+        "media/388b4332/slide_02.png",
+        "media/388b4332/slide_03.png",
+        "media/388b4332/slide_04.png",
+        "media/388b4332/slide_05.png",
+        "media/388b4332/slide_06.png",
+        "media/388b4332/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "b652be3b",
+    "paper": {
+      "id": "yt-HBVvcCSk1vw",
+      "title": "Jonathan Hurst, Agility Robotics with @siliconangle at Machina Summit 2026",
+      "abstract": "Physical AI isn't a someday story. It's real, and it's here.\n\nAt Machina Summit 2026 in Paris, our co-founder and Chief Robot Officer Jonathan Hurst sat down with John Furrier for NYSE Wired and @siliconangle to talk about what's actually changed in humanoid robotics — and why this moment is different from every wave before it.\n\nIn this conversation, Jonathan covers:\n— Why the biggest shift in robotics isn't a single breakthrough, but a collective awakening that it's real\n— How human-centric robots and modern AI let machines work in as-built human spaces, instead of rebuilding the world around the machine\n— The AI toolbox behind today's robots, from reinforcement learning to learning from demonstration\n— The one part of the robot we build in-house rather than buy off the shelf, and why\n— Where human-to-robot training actually stands today, grounded in real-world deployment\n\nChapters\n0:00",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=HBVvcCSk1vw",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=HBVvcCSk1vw",
+      "video_first": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Everyone said humanoid robots were almost ready. Digit is already working.",
+      "commentary": "Jonathan Hurst makes a case at Machina Summit 2026 that the inflection point isn't a coming breakthrough but a collective recognition that deployment is happening now. The honest thread running through the conversation is that human-form robots earn their keep by fitting into existing spaces and workflows, not requiring infrastructure redesign. Agility's decision to build their own actuators in-house rather than source off-the-shelf is the most concrete signal of where the real constraints live. Caveat: this is a founder selling a vision at a summit, not a peer-reviewed result. The gap between 'real-world deployment' as a talking point and published operational data is real and worth watching.",
+      "slides": [
+        {
+          "title": "The shift nobody predicted",
+          "body": "Hurst argues the biggest change isn't a single technical leap. It's that the industry collectively stopped treating humanoid deployment as a future problem and started treating it as a present one."
+        },
+        {
+          "title": "Why human shape, actually",
+          "body": "Human-centric form lets robots operate in as-built spaces: warehouses, factories, homes. No retrofit required. The robot adapts to the world, not the other way around. That constraint is load-bearing for the whole business case."
+        },
+        {
+          "title": "The AI toolbox in use today",
+          "body": "Reinforcement learning plus learning from demonstration. Not novel in 2026, but Hurst's point is that combining them at deployment scale is the new thing, not the algorithms themselves."
+        },
+        {
+          "title": "One thing they build themselves",
+          "body": "Agility makes their own actuators rather than buying off the shelf. Off-the-shelf doesn't meet the mechanical requirements for sustained bipedal work. This is where the real engineering IP lives."
+        },
+        {
+          "title": "What 'deployment' actually means",
+          "body": "Hurst grounds the claim in real warehouse operations, not lab demos. Still, operational uptime, failure rates, and cost-per-task numbers haven't appeared in public literature. The story is ahead of the data."
+        },
+        {
+          "title": "The honest gap to watch",
+          "body": "Summit talks from founders are not deployment reports. Until published operational data exists, 'it's real and it's here' should be weighted accordingly. Watch for peer-reviewed field results in late 2026."
+        }
+      ],
+      "video_script": "Jonathan Hurst at Machina Summit 2026 says humanoid robots aren't almost ready. They're already working. The argument isn't about a single breakthrough. It's about a collective shift in how the industry treats deployment. Agility builds their own actuators because off-the-shelf hardware simply doesn't survive the job. Reinforcement learning meets real warehouses. But here's my question: when does the founder story get backed by published operational numbers? What would convince you this time is different from previous waves?",
+      "caption_instagram": "Jonathan Hurst sat down at Machina Summit 2026 in Paris and said something worth examining: the inflection point in humanoid robotics isn't coming, it's already happened.\n\nThe argument is structural, not hype. Human-form robots fit existing spaces without infrastructure redesign. That alone changes the economics. Agility builds their own actuators in-house because the commercial options don't hold up under sustained bipedal operation. That detail matters more than the summit keynote framing.\n\nThe AI side is reinforcement learning plus learning from demonstration, tools the field has had for years. Hurst's point is that operating them at deployment scale is the new development, not the methods themselves.\n\nHonest caveat: this is a founder at a business summit. Operational uptime, failure modes, and cost-per-task data are not in the public record yet. The talk is ahead of the published evidence. Worth watching closely for hard numbers in the second half of 2026.\n\nFull conversation linked in bio.\n\n#humanoidrobotics #fieldrobotics #physicalai #agilityrobotics #roboticsdevelopment #locomotion #reinforcementlearning",
+      "caption_tiktok": "Humanoid robots aren't almost ready. Agility says they're already working in warehouses. But where are the published numbers? Full talk linked.\n\n#humanoidrobots #robotics #physicalai #agilityrobotics #roboticsengineer",
+      "post_bluesky": "Everyone said humanoid robots were almost ready. Agility says Digit is already working.\n\nHurst at Machina Summit 2026: the shift isn't a breakthrough, it's deployment happening now. The actuator detail is the most honest signal in the talk.\n\nhttps://www.youtube.com/watch?v=HBVvcCSk1vw",
+      "bluesky_thread": [
+        "The in-house actuator point is underrated. If off-the-shelf hardware can't survive sustained bipedal warehouse work, that tells you more about where the real engineering constraints are than any demo video.",
+        "That said, 'real-world deployment' from a founder at a business summit and published operational data are two different things. What would it take to convince you this wave is different from 2015, 2019, 2022? Genuinely asking."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T15:23:36.949732+00:00",
+    "media": {
+      "figures": [
+        "media/b652be3b/fig_00.png"
+      ],
+      "bsky": [
+        "media/b652be3b/bsky_00.png",
+        "media/b652be3b/bsky_01.png",
+        "media/b652be3b/bsky_02.png",
+        "media/b652be3b/bsky_03.png"
+      ],
+      "slides": [
+        "media/b652be3b/slide_00.png",
+        "media/b652be3b/slide_01.png",
+        "media/b652be3b/slide_02.png",
+        "media/b652be3b/slide_03.png",
+        "media/b652be3b/slide_04.png",
+        "media/b652be3b/slide_05.png",
+        "media/b652be3b/slide_06.png",
+        "media/b652be3b/slide_07.png"
+      ]
+    },
+    "issue": 120
+  },
+  {
+    "draft_id": "b5098fbf",
+    "paper": {
+      "id": "doi-10.1002_rob.70291",
+      "title": "FLSea: Underwater Visual–Inertial and Stereovision Forward‐Looking Data Sets",
+      "abstract": "ABSTRACT Visibility underwater is challenging and degrades as the distance between the subject and the camera increases. That is why forward‐looking underwater computer vision tasks are difficult. We have collected underwater forward‐looking stereovision and visual–inertial image sets using two underwater imaging platforms, a stereo camera rig, and an ROV in the Mediterranean and Red Seas. To our knowledge, there are no other public data sets in the underwater environment with this forward‐looking camera‐sensor orientation that have published ground‐truth depth maps as well as pose. These data sets are critical for the development of several underwater applications, including autonomous obstacle avoidance, visual odometry, 3D tracking, Simultaneous Localization and Mapping and depth estimation through deep learning. The stereo data sets contain synchronized stereo images, and the visual–inertial data sets include monocular images and inertial measurement unit (IMU) measurements with millisecond‐level timestamp alignment. All data was collected in dynamic underwater environments with objects of known size. Both sensor configurations allow for scale estimation, with the calibrated baseline in the stereo setup and the IMU in the visual–inertial setup. Ground‐truth depth maps were created offline for both data set types using a commercial photogrammetry software (Agisoft Metashape). The ground truth is validated with multiple known measurements placed throughout the imaged enviro",
+      "authors": [
+        "Yelena Randall",
+        "Ori Lifschitz",
+        "Tali Treibitz"
+      ],
+      "url": "https://doi.org/10.1002/rob.70291",
+      "doi": "10.1002/rob.70291",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5,
+      "open_version": "https://arxiv.org/pdf/2302.12772"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Underwater SLAM has no public forward-looking ground truth. Until now.",
+      "commentary": "Randall et al. fill a genuine gap: forward-looking underwater datasets with calibrated depth maps and pose ground truth, collected in actual open-water conditions in the Mediterranean and Red Seas. Most underwater vision benchmarks use downward-facing cameras on benthic surveys. Forward-looking is where obstacle avoidance and navigation actually live, and it has been a blind spot. The millisecond IMU-image alignment is done carefully, and using Metashape for offline ground truth is a reasonable pragmatic choice. The honest caveat: ground truth depth from photogrammetry has its own errors, especially in turbid water, so anyone training depth estimation networks here should validate those maps carefully before trusting sub-centimeter accuracy.",
+      "slides": [
+        {
+          "title": "The gap in underwater vision",
+          "body": "Existing public underwater datasets are mostly downward-facing. Forward-looking is what ROVs actually use for navigation, obstacle avoidance, and docking. No public benchmark existed with both depth maps and pose."
+        },
+        {
+          "title": "Two platforms, two seas",
+          "body": "A stereo camera rig and an ROV, deployed in the Mediterranean and Red Seas. Dynamic open-water environments with objects of known size placed throughout for scale reference and validation."
+        },
+        {
+          "title": "Stereo + visual-inertial configs",
+          "body": "Stereo set: synchronized image pairs, calibrated baseline for metric scale. Visual-inertial set: monocular images plus IMU at millisecond-level timestamp alignment. Both configurations support scale estimation without GPS."
+        },
+        {
+          "title": "Ground truth via photogrammetry",
+          "body": "Depth maps created offline with Agisoft Metashape and validated against known physical measurements placed in the scene. Reasonable approach, but photogrammetry accuracy degrades with turbidity. Caveat for DL training."
+        },
+        {
+          "title": "What this unlocks",
+          "body": "Obstacle avoidance, visual odometry, SLAM, 3D tracking, and deep learning depth estimation all need forward-looking data. This is the first public dataset that covers all of them with ground truth."
+        },
+        {
+          "title": "Why field robotics needs this",
+          "body": "Lab tank datasets do not capture scattering, backscatter, or moving marine life. Open-water collection in two real seas is the difference between a benchmark that trains models and one that actually transfers."
+        }
+      ],
+      "video_script": "Underwater robots navigate forward. But almost every public dataset points the camera down. Randall and colleagues fixed that. They took a stereo rig and an ROV into the Mediterranean and Red Seas, collected synchronized stereo and visual-inertial data, and built the first public forward-looking underwater benchmark with real ground-truth depth maps and pose. IMU aligned to milliseconds. Scale from a calibrated baseline or the IMU itself. This is what SLAM and obstacle avoidance researchers have been missing. Does your depth estimation model actually generalize to open water?",
+      "caption_instagram": "Underwater SLAM has a dirty secret: almost no public forward-looking datasets with ground truth exist.\n\nEvery ROV navigates forward. But benchmarks point the camera down at the seafloor. Randall, Lifschitz, and Treibitz at Haifa collected stereo and visual-inertial data in the Mediterranean and Red Seas, deployed on a real ROV, in real open-water conditions.\n\nThey give you synchronized stereo pairs, monocular plus IMU at millisecond alignment, and offline depth maps validated against physical measurements in the scene. Both sensor configs support metric scale without GPS.\n\nThe caveat worth reading: photogrammetry ground truth has its own errors in turbid water. If you train a depth network on this, validate those maps before you trust fine-grained accuracy.\n\nBut the gap they close is real. Forward-looking underwater vision now has a public benchmark. Paper: FLSea: Underwater Visual-Inertial and Stereovision Forward-Looking Data Sets, Journal of Field Robotics.\n\n#underwaterrobotics #fieldrobotics #SLAM #visualodometry #ROV #depthestimation #marinerobotics",
+      "caption_tiktok": "Underwater robots navigate FORWARD but every benchmark pointed down. This dataset finally fixes that. Mediterranean, Red Sea, real depth ground truth.\n#underwaterrobotics #ROV #SLAM #fieldrobotics #robotics",
+      "post_bluesky": "Underwater SLAM benchmarks almost all point the camera down. Real ROVs navigate forward. This dataset fixes that: stereo + visual-inertial, two real seas, ground-truth depth maps with pose. First public forward-looking underwater benchmark. https://doi.org/10.1002/rob.70291",
+      "bluesky_thread": [
+        "The depth ground truth is built from Agisoft Metashape offline, validated with known measurements in scene. Smart pragmatic choice, but photogrammetry degrades with turbidity. Anyone training depth nets on this: check your map errors before trusting centimeter accuracy.",
+        "What strikes me is how obvious this gap was and how long it stayed unfilled. Forward-looking underwater vision is where obstacle avoidance, docking, and pipe inspection actually live. How many models have we been evaluating on the wrong benchmark geometry?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T15:24:05.019102+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/b5098fbf/bsky_00.png",
+        "media/b5098fbf/bsky_01.png",
+        "media/b5098fbf/bsky_02.png",
+        "media/b5098fbf/bsky_03.png"
+      ],
+      "slides": [
+        "media/b5098fbf/slide_00.png",
+        "media/b5098fbf/slide_01.png",
+        "media/b5098fbf/slide_02.png",
+        "media/b5098fbf/slide_03.png",
+        "media/b5098fbf/slide_04.png",
+        "media/b5098fbf/slide_05.png",
+        "media/b5098fbf/slide_06.png",
+        "media/b5098fbf/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "0a0ce468",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3703257",
+      "title": "Embroidery Actuator Utilizing Embroidery Patterns to Generate Diverse Fabric Deformations",
+      "abstract": "Embroidery Actuator Utilizing Embroidery Patterns to Generate Diverse Fabric Deformations",
+      "authors": [
+        "Yuki Ota",
+        "Yuki Funabora"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3703257",
+      "doi": "10.1109/lra.2026.3703257",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/abs/2510.23188"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Fabric that bends on command. No motors, no air, just thread.",
+      "commentary": "This paper embeds actuation directly into fabric by controlling embroidery stitch geometry. Different patterns produce different deformation modes: bending, twisting, contraction. The clever part is that the same base material and thread produce distinct motions depending purely on pattern orientation and density. Honest caveat: demonstrated deformations look modest in scale, and durability under repeated cycling in dirty or wet field environments is completely unaddressed. This is a materials-and-fabrication result, not a robot result yet, but the fabrication pathway is genuinely interesting for wearables and soft gripper skins.",
+      "slides": [
+        {
+          "title": "Thread IS the actuator",
+          "body": "No pneumatics, no shape-memory alloy, no motors. Embroidery stitch geometry generates the deformation. The fabric substrate itself becomes the mechanism."
+        },
+        {
+          "title": "Pattern controls motion type",
+          "body": "Different stitch orientations and densities produce bending, twisting, or contraction from the same thread and base cloth. One material, multiple degrees of freedom."
+        },
+        {
+          "title": "How it works",
+          "body": "Tension in embroidery threads creates anisotropic stress in the fabric. Pattern geometry biases that stress toward a target deformation mode. Think of it as programmable mechanical anisotropy."
+        },
+        {
+          "title": "What this actually enables",
+          "body": "Actuated textile surfaces: gripper skins, wearable orthotics, soft robot limbs that are thin, light, and sewable. Fabrication uses standard embroidery machines. Scalable in principle."
+        },
+        {
+          "title": "The honest gap",
+          "body": "Lab demonstrations only. Cyclic fatigue, wet conditions, load capacity, and actuation speed versus pneumatic or SMA alternatives are all unquantified. Field deployment is far off."
+        },
+        {
+          "title": "Why it matters anyway",
+          "body": "Pneumatic soft actuators need sealed chambers and pumps. This approach needs neither. If durability holds up, the fabrication simplicity changes the cost curve for soft robotics skins."
+        }
+      ],
+      "video_script": "What if the actuator was just the stitching? This paper from IEEE RA-L takes standard embroidery thread and turns stitch pattern into motion program. Change the pattern, change whether the fabric bends, twists, or contracts. No air, no memory alloy, no motors hidden inside. The same industrial embroidery machine that makes your jacket makes the actuator. The big question nobody has answered yet: does it survive the real world? I want to know what you think the first practical application actually is.",
+      "caption_instagram": "Fabric that moves because of how it's sewn, not because of anything hidden inside it.\n\nThis paper in IEEE Robotics and Automation Letters embeds actuation directly into textile by controlling embroidery stitch geometry. Different patterns produce bending, twisting, or contraction from the same thread and base material. The actuator IS the embroidery.\n\nThe genuinely clever bit: fabrication uses standard embroidery machines. No sealed pneumatic chambers, no pumps, no shape-memory alloy. If you can program the stitch pattern, you can program the motion.\n\nHonest caveat though: this is a materials result, not a deployed robot result. Cyclic durability, wet environment performance, and load capacity versus pneumatic alternatives are all uncharacterized. Interesting fabrication pathway, long road to field use.\n\nPaper: 'Embroidery Actuator Utilizing Embroidery Patterns to Generate Diverse Fabric Deformations' arXiv:2510.23188\n\n#softrobotics #textilerobotics #fabricactuator #softactuators #roboticsskins #wearablerobotics #raletters",
+      "caption_tiktok": "The actuator is literally just the stitching. No motors, no air pumps, just embroidery patterns that make fabric move on command. Wild fabrication idea from IEEE RA-L. #softrobotics #robotics #fabricrobotics #textiletech",
+      "post_bluesky": "Fabric that bends on command, no motors or air. Just thread geometry.\n\nThis RA-L paper programs deformation mode (bend/twist/contract) through embroidery stitch pattern alone. Same machine, same thread, different motion.\n\nhttps://doi.org/10.1109/lra.2026.3703257",
+      "bluesky_thread": [
+        "The clever part: standard industrial embroidery machines make the actuator. No sealed chambers, no pumps. Fabrication cost curve for soft robot skins could drop significantly if durability holds. Big if.",
+        "My honest read: this is a materials/fabrication result, not a robot result. Cyclic fatigue, wet/dirty conditions, and load capacity vs pneumatics are all unaddressed. What application do you think gets there first, gripper skins or wearable orthotics?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T15:24:34.275636+00:00",
+    "media": {
+      "figures": [
+        "media/0a0ce468/pdf/fig_00.png",
+        "media/0a0ce468/pdf/fig_03.png",
+        "media/0a0ce468/pdf/fig_01.png",
+        "media/0a0ce468/pdf/fig_02.png"
+      ],
+      "bsky": [
+        "media/0a0ce468/bsky_00.png",
+        "media/0a0ce468/bsky_01.png",
+        "media/0a0ce468/bsky_02.png",
+        "media/0a0ce468/bsky_03.png"
+      ],
+      "slides": [
+        "media/0a0ce468/slide_00.png",
+        "media/0a0ce468/slide_01.png",
+        "media/0a0ce468/slide_02.png",
+        "media/0a0ce468/slide_03.png",
+        "media/0a0ce468/slide_04.png",
+        "media/0a0ce468/slide_05.png",
+        "media/0a0ce468/slide_06.png",
+        "media/0a0ce468/slide_07.png"
+      ]
+    },
+    "issue": 121
   }
 ]

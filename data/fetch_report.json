@@ -1,40 +1,39 @@
 {
-  "ts": "2026-07-13T12:15",
-  "collected": 267,
-  "dedup_dropped": 71,
-  "after_dedup": 196,
+  "ts": "2026-07-13T15:22",
+  "collected": 265,
+  "dedup_dropped": 79,
+  "after_dedup": 186,
   "score_hist": {
-    "0": 17,
-    "1": 38,
-    "2": 51,
-    "3": 48,
-    "4": 18,
-    "5": 12,
-    "6": 7,
-    "7": 4,
-    "8": 1
+    "0": 10,
+    "1": 25,
+    "2": 31,
+    "3": 54,
+    "4": 32,
+    "5": 21,
+    "6": 8,
+    "7": 5
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 12,
+  "ranked_above_floor": 13,
   "split": {
     "videos": 1,
-    "papers": 9,
-    "news": 2
+    "papers": 2,
+    "news": 10
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Unitree Invites You to Witness the 2026 Humanoid R",
+      "t": "Jonathan Hurst, Agility Robotics with @siliconangl",
       "type": "video",
       "video": true
     },
     {
-      "t": "DeepTrack: A Pressure‐Tolerant Electromagnetically",
+      "t": "FLSea: Underwater Visual–Inertial and Stereovision",
       "type": "paper",
       "video": false
     },
     {
-      "t": "A Vision‐Guided Docking Method for Autonomous Unde",
+      "t": "Embroidery Actuator Utilizing Embroidery Patterns ",
       "type": "paper",
       "video": false
     }

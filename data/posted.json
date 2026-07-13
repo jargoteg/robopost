@@ -1026,5 +1026,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "81511fa3",
+    "paper_id": "yt-8rZJ8RAr31g",
+    "title": "1 Year, 1,000 Skydio Docks Deployed | Autonomous Flight at Scale |  #drone #skydio #robot",
+    "format": "video",
+    "hook": "1,000 drones docked and flying daily. Labs don't scale like this.",
+    "posted_at": "2026-07-13T15:25:27.937477+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqjytmzkuv2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
