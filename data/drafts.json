@@ -9832,7 +9832,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-13T12:17:21.094914+00:00",
     "media": {
       "figures": [
@@ -9855,7 +9855,8 @@
         "media/16eafe73/slide_07.png"
       ],
       "video": "media/16eafe73/video.mp4"
-    }
+    },
+    "issue": 116
   },
   {
     "draft_id": "f1ee6e73",
