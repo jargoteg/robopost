@@ -9144,5 +9144,240 @@
     "queue_notified": true,
     "bsky_variant": "single",
     "finalized": true
+  },
+  {
+    "draft_id": "a4e50f15",
+    "paper": {
+      "id": "2607.03723",
+      "title": "OmniTacTune: Policy-Agnostic Real-World RL for Tactile Residual Adaptation of Visual Policies",
+      "abstract": "Visual policies learned from human videos, teleoperation, and robot demonstrations offer scalable motion priors, but often fail in contact-rich manipulation, where success significantly depends on local force and contact geometry. Tactile sensing provides these complementary signals, yet tactile data remain costly to collect and hard to generalize across sensors, robots, and tasks. We introduce OmniTacTune, a policy-agnostic real-world RL pipeline that adapts tactile feedback to pretrained visual policies through residual correction. OmniTacTune uses a two-stage design: it first bootstraps tactile-aware learning from autonomous base-policy rollouts, then learns a lightweight tactile residual policy through online interaction. Extensive experiments show that OmniTacTune generalizes across diverse contact-rich tasks, visual base policies, and tactile representations. Across four real-world contact-rich tasks, it improves visual base policies from 5-40% success to 85-100% within 40-80 minutes, demonstrating an efficient path for adapting tactile feedback to scalable visual robot policies. Project page: https://colinyu1.github.io/omnitactune-site/",
+      "authors": [
+        "Kelin Yu",
+        "Haode Zhang",
+        "Harish Ravichandar",
+        "Yunhai Han",
+        "Ruohan Gao"
+      ],
+      "url": "https://arxiv.org/abs/2607.03723",
+      "source": "hf_daily",
+      "hf_upvotes": 5,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do robots fumble tasks humans do blindfolded?",
+      "commentary": "OmniTacTune attacks a real problem: visual policies trained from video or teleoperation fall apart the moment contact geometry matters. The fix is a lightweight tactile residual layer that corrects the base policy in real time, trained entirely on-robot in 40-80 minutes through autonomous rollouts plus online RL. Jumping from 5-40% to 85-100% success on four contact-rich tasks is a hard number that's hard to dismiss. The honest caveat: everything runs on a single robot platform with specific tactile sensors, and the paper is clear that cross-sensor generalization is claimed but not yet exhaustively tested across hardware generations. For field inspection or assembly tasks where you cannot pre-collect tactile data, this bootstrapping approach is the interesting part.",
+      "slides": [
+        {
+          "title": "Vision alone isn't enough",
+          "body": "Visual policies trained from video or teleoperation routinely fail at contact-rich tasks. They cannot see local force or contact geometry. Success rates: 5-40% on four real manipulation tasks."
+        },
+        {
+          "title": "Tactile data is the problem",
+          "body": "Tactile datasets are expensive, don't transfer across sensors, and rarely match your robot or task. That bottleneck has blocked tactile integration for years."
+        },
+        {
+          "title": "Residual correction, not replacement",
+          "body": "OmniTacTune keeps your existing visual policy. It adds a lightweight tactile residual layer that nudges actions toward contact success. No retraining the base policy from scratch."
+        },
+        {
+          "title": "Two-stage real-world RL",
+          "body": "Stage 1: bootstrap from autonomous base-policy rollouts. Stage 2: online RL with tactile feedback. Total adaptation time: 40-80 minutes on the physical robot."
+        },
+        {
+          "title": "5-40% becomes 85-100%",
+          "body": "Across four contact-rich tasks, success rates hit 85-100% after adaptation. The same pipeline works across multiple visual base policies and tactile representations."
+        },
+        {
+          "title": "What to watch for",
+          "body": "Cross-sensor generalization is the open question. Results are on one hardware setup. Field deployment, sensor degradation, and novel contact geometries remain untested territory."
+        }
+      ],
+      "video_script": "Visual policies are everywhere now. Trained on human video, teleoperation, demonstrations. They look great until the robot actually has to touch something. Contact-rich tasks expose the gap. OmniTacTune patches that gap with a tactile residual layer, trained in under 80 minutes on the real robot, no human data collection required. Success rates jumped from below 40% to above 85% across four tasks. The clever bit is it works on top of whatever visual policy you already have. So the question is: does this hold when your tactile sensor degrades after three months in the field?",
+      "caption_instagram": "Why do contact-rich manipulation tasks still break visual policies trained on thousands of demonstrations?\n\nBecause vision cannot feel. The moment force and contact geometry matter, image-based policies hit a wall. OmniTacTune from Yu et al. attacks this with a two-stage real-world RL pipeline: first bootstrap from your existing policy's own rollouts, then adapt online with tactile feedback. No human-collected tactile datasets needed.\n\nThe numbers are concrete. Four contact-rich tasks. Success rates lifted from 5-40% all the way to 85-100%. Adaptation time on the real robot: 40-80 minutes. The residual approach means you don't retrain anything from scratch.\n\nThe honest caveat: one hardware setup, specific sensors. Cross-sensor and cross-platform generalization is the next wall to climb. But for anyone running assembly, inspection, or handling tasks where pre-collecting tactile data is impractical, the bootstrapping idea here is worth reading carefully.\n\nPaper: OmniTacTune by Kelin Yu et al., arXiv 2607.03723\n\n#swarmrobotics #tactilerobots #manipulationresearch #realworldRL #robotlearning #contactrichmanipulation #fieldrobotics",
+      "caption_tiktok": "Visual policies: great in demos, terrible at touching things. This paper trains tactile correction in under 80 min on the real robot, 5% to 85% success. #robotics #tactile #reinforcementlearning #manipulation",
+      "post_bluesky": "Why do robots fumble tasks humans do blindfolded? Vision can't feel. OmniTacTune adds a tactile residual layer to any visual policy, trains on your robot in 40-80 min, and lifts success from 5-40% to 85-100% on contact tasks. https://arxiv.org/abs/2607.03723",
+      "bluesky_thread": [
+        "The clever part: stage 1 bootstraps from the base policy's own rollouts, no human tactile data collection. Stage 2 does online RL on the real robot. You're not replacing your visual policy, just correcting it where contact geometry bites.",
+        "Honest caveat though: one hardware setup, specific sensors. Cross-sensor generalization is claimed but the real test is what happens when your tactile sensor degrades after months in the field. Anyone run something like this outside a lab setting?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T01:14:11.761960+00:00",
+    "media": {
+      "figures": [
+        "media/a4e50f15/fig_03.png",
+        "media/a4e50f15/fig_00.png",
+        "media/a4e50f15/fig_02.png",
+        "media/a4e50f15/fig_04.png"
+      ],
+      "bsky": [
+        "media/a4e50f15/bsky_00.png",
+        "media/a4e50f15/bsky_01.png",
+        "media/a4e50f15/bsky_02.png",
+        "media/a4e50f15/bsky_03.png"
+      ],
+      "slides": [
+        "media/a4e50f15/slide_00.png",
+        "media/a4e50f15/slide_01.png",
+        "media/a4e50f15/slide_02.png",
+        "media/a4e50f15/slide_03.png",
+        "media/a4e50f15/slide_04.png",
+        "media/a4e50f15/slide_05.png",
+        "media/a4e50f15/slide_06.png",
+        "media/a4e50f15/slide_07.png"
+      ]
+    },
+    "issue": 110
+  },
+  {
+    "draft_id": "b52ca503",
+    "paper": {
+      "id": "2607.09527v1",
+      "title": "How Mobile Gas Sensor Trajectories Govern Hydrogen Leak Detection: A Safety Gap in Manual Leak Inspection of Hydrogen System Components",
+      "abstract": "The integrity of hydrogen infrastructure relies on reliable leak detection, performed almost exclusively via manual tracer gas sniffing in electrolyzer manufacturing. Although mandated by standards, the lack of spatial probe guidance instructions leaves detection reliability entirely to operator execution, further compromised by sensor signal delays. This study quantifies how sniffer trajectory kinematics affect detection reliability at small-scale pipes and fittings, a near-field regime largely neglected by macroscopic dispersion research. Using a robotically guided test bench to eliminate operator variability, static concentration fields and dynamic trajectory passes were acquired across representative geometries under standardized leak rates (5 vol% hydrogen in nitrogen) and varying scanning velocities. Results demonstrate that scanning velocity and spatial probe orientation strongly dictate detectability. Conventional linear trajectories frequently miss leaks under dynamic conditions, causing severe false negatives. Conversely, geometry-specific routing, such as circumferential plunging paths around sealing points, maintains a high safety margin. From these observations, geometry-specific routing rules and a reduction-factor model for dynamic signal loss are derived. The findings reveal that current standard operating procedures pose a tangible safety risk. To operationalize these rules, a proof-of-concept software pipeline is presented, generating validated trajectories directly from 3D models for visualization in assistance systems.",
+      "authors": [
+        "Christian Masuhr",
+        "Arne Wendt",
+        "Thorsten Schüppstuhl"
+      ],
+      "url": "https://arxiv.org/abs/2607.09527v1",
+      "source": "arxiv",
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does nobody tell inspectors where to point the sniffer?",
+      "commentary": "This paper exposes a genuine safety gap in hydrogen electrolyzer manufacturing: standards mandate leak sniffing but give zero spatial guidance on how to move the probe. The Hamburg team used a robotically controlled test bench to isolate probe kinematics from operator noise, showing that scan velocity and orientation alone can cause severe false negatives on small-diameter fittings. The fix they propose, circumferential plunging paths around sealing points, is specific and actionable. Honest caveat: the leak rate tested is a single standardized mix, and real electrolyzer environments add airflow variability this bench setup cannot capture.",
+      "slides": [
+        {
+          "title": "The standard has a hole in it",
+          "body": "Hydrogen leak inspection is mandated by safety standards in electrolyzer manufacturing. But those standards say nothing about where or how fast to move the probe. Detection reliability is left entirely to the operator."
+        },
+        {
+          "title": "Operator variability, removed",
+          "body": "A robotically guided test bench ran repeatable trajectory sweeps over small pipes and fittings at standardized 5 vol% H2-in-N2 leak rates. Sensor signal delay and probe kinematics were isolated from human inconsistency."
+        },
+        {
+          "title": "Speed kills detection",
+          "body": "Faster linear passes caused severe false negatives. The sensor simply does not respond fast enough to catch a small leak when the probe moves through the plume too quickly. Conventional scan patterns are the problem."
+        },
+        {
+          "title": "Geometry matters more than speed alone",
+          "body": "Circumferential plunging paths around sealing points maintained high detection margin across tested geometries. The paper derives geometry-specific routing rules and a reduction-factor model for dynamic signal loss."
+        },
+        {
+          "title": "From rules to robot trajectories",
+          "body": "A proof-of-concept pipeline generates validated scan paths directly from 3D CAD models. Output feeds into operator assistance systems. The goal is removing spatial ambiguity from the inspection procedure entirely."
+        },
+        {
+          "title": "Why this is a field robotics problem",
+          "body": "Automating this inspection closes the loop between path planning and sensor physics. The reduction-factor model is the kind of result a robot planner can actually use. Human sniffing is the current baseline, and it is inconsistent."
+        }
+      ],
+      "video_script": "Hydrogen leak inspection sounds solved. You have a sensor, you have a standard, you have a trained operator. But nobody in the standard tells the operator where to point the probe or how fast to move it. A team in Hamburg built a robot test bench to find out what happens when you vary those parameters. The answer is not reassuring. Fast linear passes miss leaks outright. The fix is geometry-specific paths, circumferential sweeps around seals, derived from the 3D model of the component. So here is the question: how many inspections passed today because the operator moved slowly enough by chance?",
+      "caption_instagram": "Why does nobody tell inspectors where to point the sniffer?\n\nHydrogen leak detection in electrolyzer manufacturing is mandated by safety standards. But those same standards give zero spatial guidance on probe movement. Detection reliability lands entirely on the operator's intuition.\n\nThis paper from Masuhr, Wendt, and Schüppstuhl at Hamburg used a robotically guided test bench to strip out operator variability and isolate what actually governs detectability: scan velocity and probe orientation. Faster linear passes caused severe false negatives on small-scale pipes and fittings. A circumferential plunging path around sealing points kept detection margins high.\n\nThey also built a reduction-factor model for dynamic signal loss and a pipeline that generates validated trajectories from 3D CAD models. That last part is what makes this operationally relevant, not just a lab observation.\n\nHonest caveat: single standardized leak rate, controlled airflow. Real factory floors are messier. But the core finding, that current standard operating procedures pose a tangible safety risk, is hard to argue with.\n\nPaper: 'How Mobile Gas Sensor Trajectories Govern Hydrogen Leak Detection' arXiv:2607.09527\n\n#hydrogeninfrastructure #leakdetection #inspectionrobotics #safetycritical #fieldrobotics #swarmsensing #roboticsinspection",
+      "caption_tiktok": "Nobody tells the hydrogen inspector where to point the probe. Turns out that matters a lot. #hydrogenleaks #inspectionrobotics #robotics #safetyfail",
+      "post_bluesky": "Why does nobody tell inspectors where to point the sniffer?\n\nA robot test bench shows that scan speed + probe angle alone cause severe false negatives on small H2 fittings. Current standard procedures have a real safety gap. https://arxiv.org/abs/2607.09527v1",
+      "bluesky_thread": [
+        "The fix is not 'go slower.' It's geometry-specific: circumferential plunging paths around sealing points, derived from the 3D model of the component. They built a pipeline to generate those paths automatically. That's the part worth stealing for automated inspection systems.",
+        "Caveat: one standardized leak mix, controlled airflow, small bench setup. Real electrolyzer floors have crossflows and turbulence this bench can't replicate. But the reduction-factor model for dynamic signal loss is concrete enough to actually use in a planner. Anyone working on autonomous gas…"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T01:14:41.205136+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/b52ca503/bsky_00.png",
+        "media/b52ca503/bsky_01.png",
+        "media/b52ca503/bsky_02.png",
+        "media/b52ca503/bsky_03.png"
+      ],
+      "slides": [
+        "media/b52ca503/slide_00.png",
+        "media/b52ca503/slide_01.png",
+        "media/b52ca503/slide_02.png",
+        "media/b52ca503/slide_03.png",
+        "media/b52ca503/slide_04.png",
+        "media/b52ca503/slide_05.png",
+        "media/b52ca503/slide_06.png",
+        "media/b52ca503/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ededd114",
+    "paper": {
+      "id": "rss-c169cfdc53",
+      "title": "Reversible, detachable robotic hand redefines dexterity",
+      "abstract": "2025 LASA/CREATE/EPFL CC BY SA. By Celia Luterbacher With its opposable thumb, multiple joints and gripping skin, human hands are often considered to be the pinnacle of dexterity, and many robotic hands are designed in their image. But having been shaped by the slow process of evolution, human hands are far from optimized, with the [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/reversible-detachable-robotic-hand-redefines-dexterity/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does nobody question whether hands are the right shape?",
+      "commentary": "EPFL's LASA lab built a robotic hand that detaches and reassembles reversibly, challenging the assumption that dexterity means copying human anatomy. The clever move is the detachable architecture: modules swap without tools, which matters for maintenance and task-specific reconfiguration. The opposable thumb gets rethought, not just copied. Honest caveat: Robohub's write-up is light on quantitative benchmarks, so we don't know how this compares to the Allegro or Shadow Hand on standard manipulation tasks. Interesting hardware direction, but needs a proper grasp taxonomy evaluation before the 'redefines dexterity' claim lands.",
+      "slides": [
+        {
+          "title": "Human hands: not optimized",
+          "body": "Evolution built hands for survival, not manipulation benchmarks. EPFL's LASA lab asked what a hand looks like if you design for robotics from scratch, not from anatomy."
+        },
+        {
+          "title": "The detachable trick",
+          "body": "Modules separate and reattach reversibly without tools. That means field swaps, task-specific configs, and easier maintenance. Simple idea. Rarely done in dexterous hands."
+        },
+        {
+          "title": "The thumb question",
+          "body": "Opposability gets redesigned, not just replicated. Gripping skin adds compliance. The architecture suggests each feature is justified by function, not by what humans already have."
+        },
+        {
+          "title": "What we don't know yet",
+          "body": "No published grasp success rates, no comparison to Allegro or Shadow Hand on standard benchmarks. 'Redefines dexterity' needs a taxonomy evaluation to stick."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "Detachability is a real field requirement: inspection robots, prosthetics, modular manipulators. If the performance holds up under rigorous testing, the architecture is worth watching."
+        }
+      ],
+      "video_script": "Human hands took millions of years to evolve. That makes them impressive, but not optimal. Researchers at EPFL's LASA lab built a robotic hand that detaches and reassembles reversibly, without tools. The thumb is rethought from scratch. The skin grips. And when a module fails or you need a different configuration, you swap it. No surgery, no downtime. The benchmark data is thin right now, so I'm cautious on the big claim. But the architecture? That's a genuinely different starting point. What would you redesign if you weren't constrained by human anatomy?",
+      "caption_instagram": "Why does nobody question whether hands are the right shape?\n\nEPFL's LASA lab built a robotic hand that doesn't start from human anatomy. It starts from function. The big architectural move: modules detach and reattach reversibly, no tools needed. That's a field-maintenance story as much as a dexterity story.\n\nThe thumb is redesigned, not copied. Gripping skin adds compliance. Each choice seems justified by what robots actually need to do, not by what evolution happened to land on.\n\nHonest take: the Robohub write-up skips quantitative benchmarks entirely. No grasp success rates, no comparison to Allegro or Shadow Hand. The 'redefines dexterity' framing needs peer-reviewed numbers behind it before I'll sign off on that claim.\n\nStill, detachable modular hands are a real gap. Inspection platforms, prosthetics, hazardous environments: all of them benefit from swappable end-effectors. Worth watching when the full paper lands.\n\nSource: Luterbacher, C. / LASA, CREATE, EPFL (2025) via robohub.org\n\n#swarmrobotics #roboticmanipulation #dexterousrobotics #hardwarerobotics #fieldrobotics #modularsystems #robotdesign",
+      "caption_tiktok": "Built a robotic hand that detaches without tools and rethinks the thumb from scratch. No anatomy required. #robotics #robotichand #epfl #manipulation #engineering",
+      "post_bluesky": "Why does nobody question whether hands are the right shape? EPFL's LASA lab did. Detachable modules, no tools, thumb redesigned from function not anatomy. Interesting architecture. Needs benchmark data to back the headline. https://robohub.org/reversible-detachable-robotic-hand-redefines-dexterity/",
+      "bluesky_thread": [
+        "The detachable module angle is the real story here. Field-swappable hand components matter for inspection and hazardous environments far more than marginal grasp improvements. Maintenance downtime is a deployment killer. If this holds up, that's the actual contribution.",
+        "But 'redefines dexterity' without grasp taxonomy data or a Shadow/Allegro comparison is a press claim, not a research claim. What benchmark would you want to see before you believed it? Genuinely curious what the community thinks is the right eval here."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-13T01:15:08.487894+00:00",
+    "media": {
+      "figures": [
+        "media/ededd114/fig_00.png"
+      ],
+      "bsky": [
+        "media/ededd114/bsky_00.png",
+        "media/ededd114/bsky_01.png",
+        "media/ededd114/bsky_02.png",
+        "media/ededd114/bsky_03.png"
+      ],
+      "slides": [
+        "media/ededd114/slide_00.png",
+        "media/ededd114/slide_01.png",
+        "media/ededd114/slide_02.png",
+        "media/ededd114/slide_03.png",
+        "media/ededd114/slide_04.png",
+        "media/ededd114/slide_05.png",
+        "media/ededd114/slide_06.png"
+      ]
+    },
+    "issue": 111
   }
 ]

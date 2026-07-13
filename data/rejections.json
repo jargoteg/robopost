@@ -338,5 +338,10 @@
     "item_type": "article",
     "reason": "no war post wanted",
     "date": "2026-07-12"
+  },
+  {
+    "title": "How Mobile Gas Sensor Trajectories Govern Hydrogen Leak Detection: A Safety Gap in Manual Leak Inspection of Hydrogen System Components",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
