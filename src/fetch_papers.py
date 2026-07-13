@@ -229,6 +229,8 @@ def rank_papers(papers: list[dict], cfg) -> list[dict]:
             tags = ""
             if p.get("journal"):
                 tags += " [JOURNAL]"
+            if p.get("video_first") or p.get("video_url"):
+                tags += " [VIDEO]"
             blob = (p.get("title", "") + " " + p.get("abstract", "")).lower()
             if any(t in blob for t in depr):
                 tags += " [LEARNING-HEAVY?]"
@@ -268,6 +270,8 @@ especially deployed outside the lab: field robotics, subsea, mining,
 construction, agriculture, nuclear, search and rescue, infrastructure
 inspection, legged/all-terrain, new mechanisms/hardware, field trials,
 long-duration deployments, real-world failure analyses.
+BOOST (+3): items tagged [VIDEO] — real robot footage exists. The owner's
+top preference is posts built around videos of robots actually working.
 PENALIZE (-2 or more): papers whose contribution is mainly the LEARNING
 METHOD rather than the robot: sim-to-real transfer tricks, sample-efficiency
 improvements, reward shaping, policy architecture tweaks, benchmark chasing,
@@ -341,6 +345,13 @@ def main():
     if cfg["sources"].get("evergreen", {}).get("enabled"):
         papers += suggest_evergreen(cfg, seen)
     papers += fetch_watch_pages(cfg)
+    try:
+        from media_scout import scout
+        vids = scout()
+        papers += vids
+        print(f"Media scout contributed {len(vids)} video-anchored candidates.")
+    except Exception as e:
+        print(f"media scout skipped: {e}")
     from conference_radar import preview_items, active_windows
     papers += preview_items(cfg)
     if active_windows(cfg):
@@ -406,6 +417,38 @@ def main():
             print(f"News budget exhausted (open={open_news}, "
                   f"posted today={posted_today_news}); papers only this run.")
         picked = picked[:n + 1]
+        # media pre-check: an item earns its slot only with a plausible
+        # visual: video, arXiv id (PDF figures), journal (page figures),
+        # known repo, or an og:image on its page. Cheap probes, run BEFORE
+        # generation so auto-reject stops killing whole batches afterwards.
+        def has_visual_path(p):
+            if p.get("video_url") or p.get("video_first"):
+                return True
+            if re.match(r"\d{4}\.\d{4,5}", str(p.get("id", ""))):
+                return True
+            if p.get("journal") or p.get("open_version") or p.get("repo_url"):
+                return True
+            url = p.get("url", "")
+            if url.startswith("http"):
+                try:
+                    r = requests.get(url, timeout=15, headers={
+                        "User-Agent": "Mozilla/5.0 (compatible; RoboPost/1.0)"})
+                    return "og:image" in r.text
+                except Exception:
+                    return False
+            return False
+        vetted, bench = [], [p for p in good if p not in picked]
+        for p in picked:
+            if has_visual_path(p):
+                vetted.append(p)
+            else:
+                print(f"pre-check drop (no visual path): {p.get('title','')[:45]}")
+                while bench:
+                    alt = bench.pop(0)
+                    if has_visual_path(alt):
+                        vetted.append(alt)
+                        break
+        picked = vetted
         if cfg["sources"].get("youtube_enrichment"):
             enrich_youtube(picked)
         for p in picked:

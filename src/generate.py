@@ -60,6 +60,12 @@ search and rescue, infrastructure inspection, legged/all-terrain). When an
 item is in that space, lean into the practical deployment story, the harsh
 real-world conditions, and why lab results don't always survive the field.
 
+If this item has a VIDEO (video_url present), the post is built AROUND the
+footage: the hook describes the most striking thing you can SEE happening
+("watch it recover mid-slip", "the arm threads a bolt underwater"), the
+video link goes in the main post, and the thread explains how it works and
+links the paper. Footage first, mechanism second, paper third.
+
 Voice: a researcher talking to peers over coffee. Opinionated, specific,
 concrete numbers over adjectives. Point out what's genuinely clever, what's
 overhyped, limitations, and why it matters. Never fabricate results not
@@ -125,6 +131,10 @@ Produce JSON:
     result = ensure_complete(result, paper)
     result["slides"] = result.get("slides", [])[: cfg["visuals"]["max_slides"]]
     result["hook_style"] = hook_style
+    # format is decided by CODE, not model whim (119 drafts, zero videos):
+    # any draft with real footage is a video post built around that footage
+    if paper.get("video_url"):
+        result["format"] = "video"
     return {
         "draft_id": uuid.uuid4().hex[:8],
         "paper": paper,

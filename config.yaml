@@ -17,7 +17,20 @@ sources:
     - https://onlinelibrary.wiley.com/feed/15564967/most-cited                    # JFR most-cited (evergreen field work)
     - https://ieeexplore.ieee.org/rss/TOC7083369.XML                              # IEEE Robotics & Automation Letters (RA-L)
     - https://ieeexplore.ieee.org/rss/TOC8860                                     # IEEE Trans. Robotics (T-RO)
-  journal_priority: true               # journal papers get a ranking boost over arXiv
+  journal_priority: true
+  youtube_channels:                    # media-first discovery: recent uploads scanned every run
+    - "@IEEESpectrum"
+    - "@BostonDynamics"
+    - "@ANYbotics"
+    - "@unitreerobotics"
+    - "@ETHZurich"
+    - "@MITCSAIL"
+    - "@stanfordrobotics"
+    - "@bristolrobotics"
+    - "@DeepRoboticsCoLtd"
+    - "@AgilityRobotics"
+    - "@SkydioInc"
+    - "@NASAJPL"                # journal papers get a ranking boost over arXiv
   journal_names:                       # used to tag + boost; matched loosely in source/url
     - science robotics
     - nature

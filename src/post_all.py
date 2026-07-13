@@ -54,6 +54,34 @@ def post_bluesky(draft, cfg):
             print("Bluesky: native video embed")
         except Exception as e:
             print(f"Bluesky video upload failed, using images: {e}")
+    elif draft["content"].get("format") == "video" and draft["paper"].get("video_url"):
+        # YouTube demo: external embed card (thumbnail + tap-to-play).
+        # The video is visually attached to the post, not a bare link.
+        try:
+            vurl = draft["paper"]["video_url"]
+            thumb_blob = None
+            m = re.search(r"(?:v=|youtu\.be/)([\w-]+)", vurl)
+            if m:
+                ti = requests.get(
+                    f"https://i.ytimg.com/vi/{m.group(1)}/maxresdefault.jpg", timeout=30)
+                if not ti.ok:
+                    ti = requests.get(
+                        f"https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg", timeout=30)
+                if ti.ok:
+                    tb = requests.post(f"{base}/com.atproto.repo.uploadBlob",
+                                       headers={**H, "Content-Type": "image/jpeg"},
+                                       data=ti.content, timeout=60)
+                    if tb.ok:
+                        thumb_blob = tb.json()["blob"]
+            external = {"uri": vurl,
+                        "title": f"Demo: {draft['paper']['title'][:120]}",
+                        "description": "Robot demo video"}
+            if thumb_blob:
+                external["thumb"] = thumb_blob
+            embed = {"$type": "app.bsky.embed.external", "external": external}
+            print("Bluesky: external video card embed")
+        except Exception as e:
+            print(f"External video card failed, using images: {e}")
 
     text = draft["content"]["post_bluesky"][:300]
     # idempotency against Bluesky itself: if a recent post has this same text,
@@ -108,11 +136,17 @@ def post_bluesky(draft, cfg):
         replies = replies + ["\n".join(links)]
     print(f"Bluesky variant: {draft['bsky_variant']}")
     parent = root
+    # when the main post's embed is the video, the figure cards ride the
+    # first reply so followers get footage AND figures
+    reply_images_pending = bool(images) and embed.get("$type") != "app.bsky.embed.images"
     for reply_text in replies:
         rec = {"$type": "app.bsky.feed.post", "text": reply_text[:300],
                "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                "reply": {"root": {"uri": root["uri"], "cid": root["cid"]},
                           "parent": {"uri": parent["uri"], "cid": parent["cid"]}}}
+        if reply_images_pending:
+            rec["embed"] = {"$type": "app.bsky.embed.images", "images": images[:4]}
+            reply_images_pending = False
         rr = requests.post(f"{base}/com.atproto.repo.createRecord", headers=H, json={
             "repo": did, "collection": "app.bsky.feed.post", "record": rec}, timeout=30)
         if rr.ok:
