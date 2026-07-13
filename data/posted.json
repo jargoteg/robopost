@@ -975,5 +975,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-12T22:41:11.475493+00:00"
+  },
+  {
+    "draft_id": "a4e50f15",
+    "paper_id": "2607.03723",
+    "title": "OmniTacTune: Policy-Agnostic Real-World RL for Tactile Residual Adaptation of Visual Policies",
+    "format": "carousel",
+    "hook": "Why do robots fumble tasks humans do blindfolded?",
+    "posted_at": "2026-07-13T08:07:43.972271+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqjaeuyvuc2x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

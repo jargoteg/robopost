@@ -9203,7 +9203,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-13T01:14:11.761960+00:00",
     "media": {
       "figures": [
@@ -9229,7 +9229,9 @@
         "media/a4e50f15/slide_07.png"
       ]
     },
-    "issue": 110
+    "issue": 110,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "b52ca503",
