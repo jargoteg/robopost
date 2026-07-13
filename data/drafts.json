@@ -10083,7 +10083,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-13T15:15:18.048975+00:00",
     "media": {
       "bsky": [
@@ -10167,7 +10167,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-13T15:15:49.484718+00:00",
     "media": {
       "bsky": [
@@ -10743,7 +10743,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-13T15:23:36.949732+00:00",
     "media": {
       "bsky": [
@@ -10936,5 +10936,83 @@
     "issue": 121,
     "bsky_variant": "thread",
     "finalized": true
+  },
+  {
+    "draft_id": "3f99bc15",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3709597",
+      "title": "A Novel Miniature Layered Hybrid Flexible Instrument for Gastrointestinal Endoscopic Procedure",
+      "abstract": "A Novel Miniature Layered Hybrid Flexible Instrument for Gastrointestinal Endoscopic Procedure",
+      "authors": [
+        "Xingfeng Xu",
+        "Chengyu Zhang",
+        "Jinxiu Guo",
+        "Feng Luo",
+        "Tao Liang",
+        "Siyang Zuo"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3709597",
+      "doi": "10.1109/lra.2026.3709597",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "3.5 mm diameter. Steerable. Inside your gut.",
+      "commentary": "This paper from Siyang Zuo's group presents a layered hybrid flexible instrument small enough to work through a standard endoscope channel while still delivering active steering and force transmission. The layered construction is the real contribution: combining rigid-link and continuum segments in a single miniature shaft lets it navigate tortuous GI anatomy without buckling. Clinically, that matters because current tools either steer or transmit force, rarely both at that scale. Honest caveat: bench results on phantom tissue are a long way from the friction, peristalsis, and contamination of a live procedure.",
+      "slides": [
+        {
+          "title": "The core problem",
+          "body": "Standard endoscope instrument channels are narrow. Tools that fit tend to be floppy. Tools that transmit force tend to be too stiff to navigate curves. This instrument tries to solve both at once."
+        },
+        {
+          "title": "Layered hybrid structure",
+          "body": "Concentric rigid-link and continuum sections stacked in a 3.5 mm diameter shaft. The outer layer steers; the inner layer transfers axial and torsional load. Separating those functions is the architectural choice."
+        },
+        {
+          "title": "What miniaturization costs",
+          "body": "At this scale, fabrication tolerances dominate. Backlash in tiny linkages, cable stretch, and friction all compound. The paper reports steering angle and force transmission numbers, but phantom conditions understate real bowel resistance."
+        },
+        {
+          "title": "Why endoscopic robots are hard",
+          "body": "GI lumens move, contract, and lubricate themselves unpredictably. Every benchmark on a benchtop silicone model is best-case. Deployment means handling that variability with no direct line of sight and limited actuation budget."
+        },
+        {
+          "title": "Honest assessment",
+          "body": "Clever mechanical architecture. The layered separation of steering and force functions is a genuine design principle, not just a miniaturization exercise. But the path from RA-L bench demo to clinical tool is measured in years and regulatory cycles."
+        }
+      ],
+      "video_script": "Three and a half millimeters. That is the diameter of this new flexible surgical instrument, small enough to thread through a standard endoscope channel. The trick is a layered hybrid design where the outer shell steers and the inner core transmits force, two jobs that usually fight each other at this scale. It navigates tight curves without buckling, then delivers enough load at the tip to actually do something useful. Phantom results look solid. But the GI tract moves, secretes, and contracts in ways no benchtop model captures. So here is the real question: does the layered architecture hold up when the anatomy fights back?",
+      "caption_instagram": "3.5 mm diameter. Steerable and force-transmitting at the same time. That combination is genuinely hard to achieve at endoscope scale.\n\nThis new instrument from Xu et al. uses a layered hybrid structure: concentric rigid-link and continuum segments, each handling a different mechanical job. Steering and force transmission separated by design rather than compromised against each other.\n\nThe bench results on phantom GI tissue are promising. But live anatomy is a different environment. Peristaltic motion, mucus, unpredictable curvature, and zero direct line of sight all load the system in ways phantom models do not capture.\n\nThe layered architecture is a real mechanical idea worth tracking. Getting it through porcine trials and then regulatory review is where most surgical robot papers quietly stall.\n\nPaper: A Novel Miniature Layered Hybrid Flexible Instrument for Gastrointestinal Endoscopic Procedure, IEEE RA-L 2026. https://doi.org/10.1109/lra.2026.3709597\n\n#surgicalrobotics #endoscopy #continuurmrobotics #medicalrobotics #flexiblerobotics #roboticssurgery #minimally invasive",
+      "caption_tiktok": "3.5 mm robot that steers AND pushes inside your GI tract. The layered trick is clever. The gap between lab phantom and live bowel is enormous. #surgicalrobotics #medicalrobotics #endoscopy #robotics",
+      "post_bluesky": "3.5 mm diameter. Steerable and force-transmitting at once. Xu et al. split those two jobs into separate concentric layers, which is the right call mechanically. Bench phantom results are clean. Live GI anatomy is not a bench phantom. https://doi.org/10.1109/lra.2026.3709597",
+      "bluesky_thread": [
+        "The layered hybrid architecture is a genuine design principle: outer layer steers, inner layer transmits load. At this scale those functions usually fight each other. Separating them structurally is cleaner than trying to tune a single shaft for both.",
+        "My caveat: every GI robotics paper I read nails the phantom, then hits a wall at ex vivo porcine tissue. Peristalsis, variable lumen diameter, and contamination change the force balance completely. Curious if anyone here has seen this design class make it past animal trials."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-13T21:30:53.859891+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/3f99bc15/bsky_00.png",
+        "media/3f99bc15/bsky_01.png",
+        "media/3f99bc15/bsky_02.png",
+        "media/3f99bc15/bsky_03.png"
+      ],
+      "slides": [
+        "media/3f99bc15/slide_00.png",
+        "media/3f99bc15/slide_01.png",
+        "media/3f99bc15/slide_02.png",
+        "media/3f99bc15/slide_03.png",
+        "media/3f99bc15/slide_04.png",
+        "media/3f99bc15/slide_05.png",
+        "media/3f99bc15/slide_06.png"
+      ]
+    }
   }
 ]

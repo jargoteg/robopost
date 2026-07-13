@@ -1,41 +1,25 @@
 {
-  "ts": "2026-07-13T15:22",
-  "collected": 265,
-  "dedup_dropped": 79,
-  "after_dedup": 186,
+  "ts": "2026-07-13T21:31",
+  "collected": 266,
+  "dedup_dropped": 82,
+  "after_dedup": 184,
   "score_hist": {
-    "0": 10,
-    "1": 25,
-    "2": 31,
-    "3": 54,
+    "0": 11,
+    "1": 31,
+    "2": 35,
+    "3": 52,
     "4": 32,
-    "5": 21,
-    "6": 8,
+    "5": 16,
+    "6": 2,
     "7": 5
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 13,
+  "ranked_above_floor": 7,
   "split": {
-    "videos": 1,
-    "papers": 2,
-    "news": 10
+    "videos": 0,
+    "papers": 0,
+    "news": 7
   },
   "floor": 6,
-  "picked": [
-    {
-      "t": "Jonathan Hurst, Agility Robotics with @siliconangl",
-      "type": "video",
-      "video": true
-    },
-    {
-      "t": "FLSea: Underwater Visual–Inertial and Stereovision",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "Embroidery Actuator Utilizing Embroidery Patterns ",
-      "type": "paper",
-      "video": false
-    }
-  ]
+  "picked": []
 }
