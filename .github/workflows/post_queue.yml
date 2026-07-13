@@ -37,6 +37,11 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           GITHUB_REPOSITORY: "${{ github.repository }}"
         run: python src/refill.py || echo "refill failed (non-fatal)"
+      - name: Repair missing media (re-render lost cards)
+        env:
+          ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: python src/media_repair.py || echo "repair failed (non-fatal)"
       - name: Commit new media (must exist before issues embed it)
         run: |
           git config user.name robopost-bot
@@ -46,7 +51,7 @@ jobs:
           for i in 1 2 3; do
             if git pull --rebase; then git push && break; fi
             python src/merge_state.py
-            GIT_EDITOR=true git rebase --continue || git rebase --skip || true
+            GIT_EDITOR=true git rebase --continue || { git rebase --abort; git pull --no-rebase --no-edit -X ours; }
           done
           git push || true
       - name: Open review issues for new drafts
@@ -80,7 +85,7 @@ jobs:
           for i in 1 2 3; do
             if git pull --rebase; then git push && break; fi
             python src/merge_state.py
-            GIT_EDITOR=true git rebase --continue || git rebase --skip || true
+            GIT_EDITOR=true git rebase --continue || { git rebase --abort; git pull --no-rebase --no-edit -X ours; }
           done
           git push || true
       - name: Note remaining queue

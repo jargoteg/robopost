@@ -34,6 +34,6 @@ jobs:
           for i in 1 2 3; do
             if git pull --rebase; then git push && exit 0; fi
             python src/merge_state.py
-            GIT_EDITOR=true git rebase --continue || git rebase --skip || true
+            GIT_EDITOR=true git rebase --continue || { git rebase --abort; git pull --no-rebase --no-edit -X ours; }
           done
           git push
