@@ -37,6 +37,11 @@ def generate_draft(paper: dict, cfg) -> dict:
         import re as _re
         from figures import find_open_version, find_github_repo
         aid = paper["id"] if _re.match(r"\d{4}\.\d{4,5}", str(paper.get("id", ""))) else None
+        if aid:
+            from figures import verify_arxiv_id
+            if not verify_arxiv_id(str(aid), paper.get("title", "")):
+                aid = None  # stored id is wrong; resolve by title below
+                paper.pop("open_version", None)
         if not aid and paper.get("item_type") == "paper" and not paper.get("repo_url"):
             info = find_open_version(paper.get("title", ""), paper.get("authors"))
             if info and info.get("arxiv_id"):

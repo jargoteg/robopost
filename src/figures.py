@@ -300,7 +300,10 @@ def get_figures(draft) -> list[str]:
         # Determine an arXiv id early (direct or via open-version match).
         aid = None
         if re.match(r"\d{4}\.\d{4,5}", str(p.get("id", ""))):
-            aid = p["id"]
+            if verify_arxiv_id(str(p["id"]), p.get("title", "")):
+                aid = p["id"]
+            else:
+                p["id_mismatch"] = True  # stored id belongs to another paper
 
         # Paywalled sources (IEEE, closed journals) often yield no figures.
         # Hunt for an open version of the same paper first (also gives arXiv id).
@@ -390,6 +393,35 @@ def _find_doi(title):
     except Exception as e:
         print(f"Crossref DOI lookup failed: {e}")
     return None
+
+
+def verify_arxiv_id(aid: str, title: str) -> bool:
+    """An arXiv id may only be used if arXiv's own metadata title matches the
+    item's title. Prevents pulling figures/links from the WRONG paper when a
+    stored id is stale or fabricated."""
+    import difflib
+    if not aid or not title:
+        return False
+    try:
+        r = requests.get(f"http://export.arxiv.org/api/query?id_list={aid}",
+                         timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+        import xml.etree.ElementTree as ET
+        ns = {"a": "http://www.w3.org/2005/Atom"}
+        e = ET.fromstring(r.text).find("a:entry", ns)
+        at = e.findtext("a:title", "", ns) if e is not None else ""
+        cand = re.sub(r"\s+", " ", at).strip()
+
+        def norm(x):
+            return re.sub(r"[^a-z0-9 ]", "", (x or "").lower()).strip()
+        ratio = difflib.SequenceMatcher(None, norm(title), norm(cand)).ratio()
+        if ratio < 0.75:
+            print(f"ID/TITLE MISMATCH: arXiv:{aid} is '{cand[:50]}' "
+                  f"(match {ratio:.2f} vs our '{title[:50]}') — id rejected.")
+            return False
+        return True
+    except Exception as e:
+        print(f"arXiv id verify inconclusive ({e}); allowing.")
+        return True
 
 
 def find_open_version(title, authors=None):
@@ -736,6 +768,8 @@ def vet_figures(fig_paths, paper_title, max_keep=4):
 robotics paper "{paper_title}". The images are numbered 0..{min(len(abs_paths), 8) - 1}
 in the order given.
 
+ALSO REJECT any image that clearly belongs to a DIFFERENT paper or topic
+than the title above (visible mismatched title text, unrelated domain).
 Judge each ruthlessly. REJECT any image that: has text sliced off at an edge,
 is mostly blank/whitespace, is a fragment of a larger figure, shows a wall of
 paper text, is a logo/badge, or would confuse a viewer scrolling a feed.

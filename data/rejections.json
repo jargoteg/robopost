@@ -343,5 +343,10 @@
     "title": "How Mobile Gas Sensor Trajectories Govern Hydrogen Leak Detection: A Safety Gap in Manual Leak Inspection of Hydrogen System Components",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "SwarmForage: Emergent Division of Labor in 1000-Robot Swarms",
+    "reason": "figures and link were from a different paper (stale arXiv id)",
+    "auto": true
   }
 ]

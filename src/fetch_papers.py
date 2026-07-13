@@ -355,6 +355,13 @@ def main():
         papers += suggest_evergreen(cfg, seen)
     papers += fetch_watch_pages(cfg)
     try:
+        from journals_crossref import crossref_journal_papers
+        cj = crossref_journal_papers()
+        papers += cj
+        print(f"Crossref journals contributed {len(cj)} papers.")
+    except Exception as e:
+        print(f"crossref journals skipped: {e}")
+    try:
         from media_scout import scout
         vids = scout()
         papers += vids
