@@ -1105,5 +1105,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-13T22:49:44.213497+00:00"
+  },
+  {
+    "draft_id": "5a23d5dc",
+    "paper_id": "rss-84734beebb",
+    "title": "Towards shared embodied intelligence in humanoid robots through optimization, development and testing of the human-aware ergoCub robot",
+    "format": "carousel",
+    "hook": "Safe robots hurt fewer humans. The math to prove it is new.",
+    "posted_at": "2026-07-13T23:18:31.922376+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqktbk7etm2y",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

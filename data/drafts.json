@@ -10083,7 +10083,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-13T15:15:18.048975+00:00",
     "media": {
       "bsky": [
@@ -10111,7 +10111,9 @@
     },
     "issue": 117,
     "scheduled_after": "2026-07-13T22:58:04.634932+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "a26eadcf",
@@ -10196,7 +10198,7 @@
       ]
     },
     "issue": 118,
-    "scheduled_after": "2026-07-13T22:58:04.634932+00:00",
+    "scheduled_after": "2026-07-14T00:48:31.922372+00:00",
     "queue_notified": true
   },
   {
@@ -10531,7 +10533,7 @@
       ]
     },
     "issue": 119,
-    "scheduled_after": "2026-07-13T22:58:04.634932+00:00",
+    "scheduled_after": "2026-07-14T00:48:31.922372+00:00",
     "queue_notified": true
   },
   {
