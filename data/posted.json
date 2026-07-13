@@ -992,5 +992,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ededd114",
+    "paper_id": "rss-c169cfdc53",
+    "title": "Reversible, detachable robotic hand redefines dexterity",
+    "format": "carousel",
+    "hook": "Why does nobody question whether hands are the right shape?",
+    "posted_at": "2026-07-13T09:38:33.503902+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "article",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqjfhcrhor2y",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

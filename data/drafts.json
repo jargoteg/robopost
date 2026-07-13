@@ -9358,7 +9358,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-13T01:15:08.487894+00:00",
     "media": {
       "figures": [
@@ -9382,6 +9382,8 @@
     },
     "issue": 111,
     "scheduled_after": "2026-07-13T09:37:43.972271+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   }
 ]
