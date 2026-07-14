@@ -1,38 +1,36 @@
-# Engagement lessons (auto-updated 2026-07-13)
+# Engagement lessons (auto-updated 2026-07-14)
 
-# Content Team: Lessons Learned Brief
+# Lessons Learned Brief
 
 ## 1. Topic Performance
+**Over-performed:** Sensor-minimalist locomotion ("No camera, no LiDAR, just four proximity sensors" — 2L/1R/1Re), drone navigation ("navigates blind using sound" — 3L/1R/1Re), and rover longevity stats performed best. **Common thread:** concrete constraints + unexpected capability.
 
-**Over-performed:** Real-world demos with clear stakes — marathon humanoid (4L/1R/2Re), sonar drone (3L/1R/1Re), Boston Dynamics/FIFA (1L/1Re). Novelty + accessible narrative wins. Vine robot and STEMbot (niche but concrete) showed modest positive returns.
-
-**Under-performed:** Pure perception/mapping papers (RLPR, SyNeT, Latent Splatting mostly flat). Agricultural manipulation was near-zero despite strong visuals. Home robot opinion piece got 0 engagement — audiences resist soft editorializing.
-
----
-
-## 2. Hook Styles (3a)
-
-| Style | Posts | Total Engagement | Avg/Post |
-|---|---|---|---|
-| bold_claim | 8 | 14 | 1.75 |
-| tension | 9 | 8 | 0.89 |
-| curiosity_gap | 7 | 6 | 0.86 |
-| number_stat | 3 | 2 | 0.67 |
-
-**Bold_claim leads clearly.** Recommend weighting: **bold_claim 45% / tension 30% / curiosity_gap 20% / number_stat 5%.**
+**Under-performed:** Abstract manipulation papers (OmniTacTune, detachable hand, PEPA) and anything framed around internal ML architecture. Competitions (RoboCup) also underperformed despite news value.
 
 ---
 
-## 3. Format & Bluesky Split (3b)
+## 2. Hook Styles
+**bold_claim** and **tension** generated the most consistent replies. **curiosity_gap** underperformed relative to its frequency — several posts earned zero engagement. **number_stat** was underused (only 2 posts) but both earned likes.
 
-Threads (14 posts): avg ~1.5 engagements. Singles (16 posts): avg ~0.4. **Threads consistently outperform singles** — the reply-chain structure likely boosts visibility algorithmically. Recommend **70% thread / 30% single.**
+### 3a. Recommended Hook Weighting
+| Hook | Evidence | Recommended Share |
+|---|---|---|
+| bold_claim | Highest avg likes (1.6) | 35% |
+| tension | Reliable replies, decent likes | 30% |
+| number_stat | Small sample, promising | 20% |
+| curiosity_gap | Inconsistent, often zero | 15% |
 
-Carousel vs video: only 2 videos, both near-zero. **Data too sparse to conclude** — test 3–4 more videos before deprioritizing.
+---
+
+## 3. Carousel vs. Video
+Data is too sparse (only 2 videos, both underperformed) to conclude. **Test next:** repost a strong carousel topic as a video to isolate format effect.
+
+### 3b. Thread vs. Single
+Threads averaged **1.4 replies**; singles averaged **0.5 replies**. Singles averaged slightly more likes (0.9 vs 0.8). **Recommended split: 60% thread / 40% single** — threads drive conversation, which matters most for algorithmic reach at this follower scale.
 
 ---
 
 ## 4. Three Concrete Recommendations
-
-1. **Lead with bold_claim on all high-stakes demos** — especially physical robot capabilities with measurable outcomes (speed, weight, distance).
-2. **Default every new paper to thread format** unless it's a quick news item.
-3. **Reject perception-only mapping papers** unless they have a striking failure-mode visual; they consistently flatline.
+1. **Lead with physical constraints, not capabilities** — "no camera/no motors/no fingers" framing outperforms "robot does X well."
+2. **Double number_stat usage** — only 2 posts; both earned engagement. Prioritise papers with measurable field results.
+3. **Retire weak curiosity_gap hooks** — if the question doesn't have an immediately surprising answer visible in slide 2, reframe as bold_claim or tension instead.
