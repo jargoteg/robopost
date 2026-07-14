@@ -1173,5 +1173,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "096f7a50",
+    "paper_id": "rss-29789aee00",
+    "title": "Video Friday: Atlas Versus a Fridge",
+    "format": "carousel",
+    "hook": "Why does whole-body control change what a robot can lift?",
+    "posted_at": "2026-07-14T12:03:41.085089+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "article",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqm5zq6pcy2y",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
