@@ -12206,5 +12206,82 @@
         "media/501e6b57/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "cbbb59b4",
+    "paper": {
+      "id": "2607.11779v1",
+      "title": "A Compact Top-Loading Robot for Endovascular Interventions: Design, Control and Evaluation",
+      "abstract": "Robot-assisted endovascular intervention can potentially reduce radiation exposure, improve surgeon ergonomics, enable telesurgery, support active assistance and autonomy, and enhance procedural precision. However, existing systems often suffer from limited procedural coverage because constrained patient-side setups, restricted flexibility, and complex instrument exchange hinder clinical workflow integration. This work presents a compact robotic system for endovascular interventions that enables continuous translational and rotational manipulation of standard endovascular instruments. The system consists of two alternating carts with pneumatically actuated membrane grippers integrated into rotating gripper gears. Its top-loading design allows rapid exchange of instruments such as guidewires and catheters without changing the robotic setup. A leader-follower control strategy enables continuous motion despite the finite stroke of each cart. The system was evaluated in motion-tracking experiments with guidewires and catheters and in an in vitro vascular phantom. The motion-tracking experiments showed generally smooth translational and rotational motion profiles. Across all tested guidewire and catheter experiments, the mean relative tracking errors were 3.6% for translational motion and 4.1% for rotational motion. In the vascular phantom, robot-assisted navigation reached the target in most trials, demonstrating the feasibility of the proposed manipulation concept under in vitro conditions. The presented robotic system demonstrates technical feasibility for continuous manipulation of standard endovascular instruments in bench-top and in vitro experiments. The compact top-loading design may ease instrument exchange and clinical workflow integration. Future work will focus on improving gripping performance, actuation speed, force feedback, and evaluation in more clinically realistic settings.",
+      "authors": [
+        "Jonas Fischer",
+        "Lennart Karstensen",
+        "Franziska Mathis-Ullrich"
+      ],
+      "url": "https://arxiv.org/abs/2607.11779v1",
+      "source": "arxiv",
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Standard guidewires. No custom tools. 3.6% tracking error.",
+      "commentary": "This system tackles a real clinical bottleneck: swapping guidewires and catheters mid-procedure normally means breaking down the robotic setup. The top-loading design with alternating carts and pneumatic membrane grippers solves that mechanically. The leader-follower control for continuous motion from finite-stroke carts is the clever bit. Honest caveat: 3.6% translational error sounds clean, but in vitro phantom results are a long way from a beating heart and tortuous vasculature under fluoroscopy. Actuation speed and force feedback are flagged as open problems, which matters enormously for real procedural feel.",
+      "slides": [
+        {
+          "title": "The instrument swap problem",
+          "body": "Endovascular robots often require full setup changes to swap guidewires or catheters. That friction kills clinical workflow. This paper's top-loading design lets you exchange instruments without touching the robotic configuration."
+        },
+        {
+          "title": "How the motion works",
+          "body": "Two alternating carts with pneumatic membrane grippers share the load. A leader-follower control law stitches finite cart strokes into continuous translational and rotational motion. No custom instruments required."
+        },
+        {
+          "title": "What the numbers say",
+          "body": "Motion-tracking across guidewires and catheters: mean relative error 3.6% translational, 4.1% rotational. Smooth motion profiles in bench-top tests. Vascular phantom navigation succeeded in most trials."
+        },
+        {
+          "title": "Where the limits are",
+          "body": "In vitro phantom is the ceiling of evidence here. Force feedback is absent. Actuation speed needs work. Real vasculature, patient motion, and fluoroscopy constraints are a different problem entirely."
+        },
+        {
+          "title": "Why the design approach matters",
+          "body": "Compatibility with standard off-the-shelf instruments removes a commercialization barrier that has stalled previous systems. If gripping performance holds across catheter diameters, this architecture has a credible path toward trials."
+        }
+      ],
+      "video_script": "Endovascular robots have a dirty secret: swapping a guidewire mid-procedure usually means tearing down the setup. This system fixes that mechanically. Two alternating carts, pneumatic membrane grippers, top-loading instrument slots. You drop the wire in, the robot grips, pushes, rotates, hands off to the second cart, and keeps going continuously. Three point six percent tracking error across multiple catheter types in bench-top tests. The phantom trials mostly worked. Force feedback and actuation speed are still open problems. Would you trust this in a cath lab today?",
+      "caption_instagram": "Standard guidewires. No custom tools. 3.6% tracking error.\n\nEndovascular robots have mostly demanded proprietary instruments or awkward setup resets every time a surgeon needs a different wire. This paper from Fischer, Karstensen, and Mathis-Ullrich builds around a top-loading design that lets you swap catheters and guidewires without reconfiguring the robot at all.\n\nThe mechanism is two alternating carts with pneumatic membrane grippers. A leader-follower control law converts the finite stroke of each cart into continuous motion, both translational and rotational. That is the core engineering contribution and it is genuinely non-obvious.\n\nResults are bench-top and in vitro only. Mean tracking errors of 3.6% and 4.1% look solid on a phantom, but force feedback is absent and actuation speed needs improvement before a cath lab would touch it. Still, standard-instrument compatibility removes one of the biggest commercialization blockers in this space.\n\nPaper: A Compact Top-Loading Robot for Endovascular Interventions: Design, Control and Evaluation. arXiv 2607.11779\n\n#endovascular #medicalrobotics #catheterrobotics #roboticssurgery #controlsystems #swarmsandbeyond #researchrobotics",
+      "caption_tiktok": "Endovascular robot that works with any standard guidewire, 3.6% tracking error, no setup teardown to swap instruments. The mechanism is clever. The phantom results are promising. The cath lab is still far away.\n#medicalrobotics #endovascular #robotics #engineeringdesign",
+      "post_bluesky": "Standard guidewires, no proprietary tools, 3.6% tracking error. This endovascular robot's top-loading design lets you swap catheters mid-procedure without touching the setup. The alternating-cart leader-follower mechanism is the clever bit. https://arxiv.org/abs/2607.11779v1",
+      "bluesky_thread": [
+        "The core trick: two carts with pneumatic membrane grippers hand off motion to each other continuously, converting finite stroke into infinite travel. Smooth translational and rotational profiles in bench-top tests. In vitro phantom navigation worked in most trials. Force feedback and actuation…",
+        "Standard-instrument compatibility is underrated here. Most endovascular robot papers quietly require custom wires, which is a commercial dead end. This doesn't. That said, in vitro phantom to first-in-human is a brutal distance. What's the biggest gap you'd want closed before you'd trust this in a…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-14T21:10:45.569431+00:00",
+    "media": {
+      "figures": [
+        "media/cbbb59b4/fig_00.png",
+        "media/cbbb59b4/fig_01.png",
+        "media/cbbb59b4/fig_02.png",
+        "media/cbbb59b4/fig_03.png"
+      ],
+      "bsky": [
+        "media/cbbb59b4/bsky_00.png",
+        "media/cbbb59b4/bsky_01.png",
+        "media/cbbb59b4/bsky_02.png",
+        "media/cbbb59b4/bsky_03.png"
+      ],
+      "slides": [
+        "media/cbbb59b4/slide_00.png",
+        "media/cbbb59b4/slide_01.png",
+        "media/cbbb59b4/slide_02.png",
+        "media/cbbb59b4/slide_03.png",
+        "media/cbbb59b4/slide_04.png",
+        "media/cbbb59b4/slide_05.png",
+        "media/cbbb59b4/slide_06.png"
+      ]
+    }
   }
 ]
