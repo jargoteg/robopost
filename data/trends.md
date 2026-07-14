@@ -1,7 +1,7 @@
-# Community trends (updated 2026-07-14T02:29Z)
+# Community trends (updated 2026-07-14T08:04Z)
 
-The robotics community is buzzing across several fronts right now. Humanoid robots are dominating conversation, with heavy skepticism about authenticity of demos, Musk's Optimus claims, and Russia's collapsing AI robot debut generating mockery. The wealth-and-automation discourse is heating up around billionaires citing "AI and robotics" as poverty solutions, drawing strong pushback. Defense robotics is getting attention via Trinity Robotics' Ukrainian UGV production scale-up and its Swedish funding. Engineering curiosity posts about the Oldham coupling and folded structures are pulling surprisingly high engagement, suggesting appetite for elegant mechanical history content. OpenAI's robotics team safety concerns around the Pentagon deal are circulating at mid-tier but serious engagement levels.
+The robotics community is buzzing across several fronts today. Humanoid robots dominate conversation, largely skeptical or satirical, with Russia's collapsing "Aidol" robot drawing mockery and broader doubts about Tesla/Optimus credibility. There's sharp debate around wealth and power, sparked by a billionaire framing AI and robotics as poverty solutions, which is generating significant pushback. Defense robotics is a quieter but real thread, with Trinity Robotics' Ukrainian UGV funding quietly circulating. Engineering appreciation posts around the Oldham coupling and folded structures are earning surprising engagement from the builder crowd. OpenAI's Pentagon robotics deal and undefined guardrails is drawing concern from the AI ethics adjacent audience.
 
-No single paper is breaking through, but the Caltech swarm navigation method got quiet mentions.
+No single paper or event dominates, though the Portugal RoboCup Open and Caltech swarm navigation work are getting light circulation.
 
-Post angle that would land today: lean into the Oldham coupling energy and pair it with a modern robotics application, the community is clearly rewarding "timeless mechanism, current relevance" framing right now.
+Best post angle today: lean into the Russia robot collapse story with a genuine technical breakdown of what went wrong and why rushed humanoid demos keep failing. That blend of humor and substance will land hard right now.
