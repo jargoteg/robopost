@@ -1241,5 +1241,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "9c094784",
+    "paper_id": "2607.11785v1",
+    "title": "MIRA: A Modular Open-Source Micro-UAV for Indoor Research",
+    "format": "carousel",
+    "hook": "Custom micro-UAVs cost weeks of engineering before first flight",
+    "posted_at": "2026-07-14T19:38:24.757815+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqmxgu6cyi27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
