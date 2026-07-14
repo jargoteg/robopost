@@ -11146,7 +11146,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-14T00:15:45.608914+00:00",
     "media": {
       "figures": [
@@ -11168,7 +11168,8 @@
         "media/096f7a50/slide_06.png",
         "media/096f7a50/slide_07.png"
       ]
-    }
+    },
+    "issue": 122
   },
   {
     "draft_id": "a39d4640",
@@ -11223,7 +11224,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-14T00:17:22.892146+00:00",
     "media": {
       "figures": [
@@ -11245,6 +11246,7 @@
         "media/a39d4640/slide_06.png",
         "media/a39d4640/slide_07.png"
       ]
-    }
+    },
+    "issue": 123
   }
 ]
