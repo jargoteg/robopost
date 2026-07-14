@@ -11679,5 +11679,89 @@
       ]
     },
     "issue": 126
+  },
+  {
+    "draft_id": "9c094784",
+    "paper": {
+      "id": "2607.11785v1",
+      "title": "MIRA: A Modular Open-Source Micro-UAV for Indoor Research",
+      "abstract": "Indoor robotics research increasingly relies on micro-UAVs whose airframe, electronics, and control software are fully open to modification. Off-the-shelf platforms rarely expose the low-level access required for such modifications, while building a custom alternative typically requires substantial engineering effort before flight testing can begin, leaving many laboratories to work within constraints that limit the scope of their research. We present MIRA (Modular Indoor Research Architecture), a low-cost, open-source micro-UAV for indoor research built around a replicable 3D-printed PLA airframe and a containerized low-level software package managing the companion-to-autopilot communication bridge via Micro XRCE-DDS. Designed as a white-box architecture, core subsystems are individually replaceable without firmware refactoring, supporting local fabrication and component substitution from existing lab inventory. We characterize MIRA through manual flight in position-control mode within an optical motion-capture volume, where the communication pipeline sustains a median companion-to-autopilot latency of 0.02 ms and power spectral density analysis confirms the structural vibration energy stays concentrated in a narrow 90 to 110 Hz band, isolated from the sub-20 Hz control bandwidth and within the autopilot safety thresholds.",
+      "authors": [
+        "Lucas K. de Oliveira",
+        "Felipe A. G. Tommaselli",
+        "João Aires Marsicano",
+        "Marco S. Tayar",
+        "Pedro A. R. Saraiva",
+        "Ricardo V. Godoy"
+      ],
+      "url": "https://arxiv.org/abs/2607.11785v1",
+      "source": "arxiv",
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Custom micro-UAVs cost weeks of engineering before first flight",
+      "commentary": "MIRA targets a real bottleneck: labs wanting full stack access to a micro-UAV spend more time building than researching. The 3D-printed PLA airframe and containerized ROS2 bridge via Micro XRCE-DDS mean you can swap subsystems without touching firmware. The 0.02 ms median companion-to-autopilot latency is genuinely clean, and isolating structural vibration to 90-110 Hz well above the sub-20 Hz control band is the kind of characterization most homebrew platforms skip entirely. Honest caveat: all testing is indoors in a motion-capture volume, so there is zero data on how the PLA airframe holds up under thermal stress, dust, or repeated crashes in a busy lab. This is a research bootstrapping tool, not a deployment platform.",
+      "slides": [
+        {
+          "title": "The problem with micro-UAV research",
+          "body": "Off-the-shelf platforms hide low-level access. Custom builds take weeks before first flight. Most labs compromise their research scope before data collection even starts."
+        },
+        {
+          "title": "What MIRA actually is",
+          "body": "3D-printed PLA airframe. Containerized ROS2 software stack. Companion-to-autopilot bridge via Micro XRCE-DDS. Each core subsystem swappable without firmware refactoring. Fully open-source."
+        },
+        {
+          "title": "The latency number that matters",
+          "body": "Median companion-to-autopilot latency: 0.02 ms. That is the communication pipeline under real flight conditions in a motion-capture volume, not a bench test."
+        },
+        {
+          "title": "Vibration isolation: why it matters",
+          "body": "Structural vibration energy concentrated at 90-110 Hz. Control bandwidth is sub-20 Hz. No frequency overlap means motor noise does not corrupt the control loop. Most homebuilds never verify this."
+        },
+        {
+          "title": "The real caveat",
+          "body": "All flights: indoor motion-capture volume, position-control mode. PLA thermal limits, crash durability, and dusty-lab behavior are untested. This is a research scaffold, not a field platform."
+        },
+        {
+          "title": "Who should replicate this",
+          "body": "Any lab doing indoor swarm, control, or perception research that keeps ordering Crazyflies and hitting access walls. MIRA is the white-box alternative worth benchmarking against your current stack."
+        }
+      ],
+      "video_script": "Most labs researching micro-UAVs are stuck. Off-the-shelf drones hide the low-level access you need. Building from scratch burns weeks before you ever fly. MIRA is a 3D-printed, fully open micro-UAV designed to close that gap. The whole software stack runs in containers, swappable without touching firmware. They measured 0.02 milliseconds median latency on the companion-to-autopilot link. Vibration energy sits at 90 to 110 hertz, nowhere near the control bandwidth. It is a clean platform characterization. The catch? Every test was indoors under motion capture. So the real question is: what breaks first when someone actually crashes it?",
+      "caption_instagram": "Custom micro-UAVs cost weeks of engineering before first flight. Most labs never get that time back.\n\nMIRA is a 3D-printed, fully open-source micro-UAV built specifically so researchers can stop rebuilding infrastructure and start doing research. The airframe is PLA, the software stack is containerized ROS2 over Micro XRCE-DDS, and every core subsystem swaps out without touching firmware.\n\nThe characterization work here is what separates this from a hobby build. Median companion-to-autopilot latency of 0.02 ms under real flight conditions. Structural vibration locked into 90-110 Hz, well clear of the sub-20 Hz control bandwidth. That is the kind of baseline data you need before you trust a platform for experiments.\n\nHonest limitation: all of this is indoors, in a motion-capture volume, in position-control mode. We have no data on PLA durability under repeated crashes, heat, or a dusty lab bench. It is a research bootstrapping tool and a good one. Just do not confuse it for a field platform yet.\n\nPaper: MIRA: A Modular Open-Source Micro-UAV for Indoor Research, arXiv 2607.11785\n\n#swarmrobotics #microUAV #openrobotics #ROS2 #droneresearch #roboticsresearch #indoorrobotics",
+      "caption_tiktok": "Built a fully open micro-UAV so labs stop wasting weeks before first flight. 0.02ms latency, clean vibration isolation, all open-source. The catch is in the comments.\n#microUAV #openrobotics #dronenerd #robotics",
+      "post_bluesky": "Labs lose weeks building custom micro-UAVs before flying once. MIRA skips that: 3D-printed, full stack open, 0.02ms companion-to-autopilot latency, vibration isolated from control bandwidth. Solid indoor baseline. https://arxiv.org/abs/2607.11785v1",
+      "bluesky_thread": [
+        "The characterization is what earns trust here. Vibration energy at 90-110 Hz, control bandwidth sub-20 Hz, no overlap. Most homebuilds skip this step entirely and wonder why their controllers misbehave. Good baseline discipline.",
+        "Caveat worth stating plainly: every test is indoors in a motion-capture volume under position control. PLA under crash loads, heat, and repeated assembly? No data yet. Who has actually stress-tested a PLA airframe in a busy lab? Curious what failure modes people have hit."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-14T10:25:57.552483+00:00",
+    "media": {
+      "figures": [
+        "media/9c094784/fig_00.png",
+        "media/9c094784/fig_01.png",
+        "media/9c094784/fig_02.png"
+      ],
+      "bsky": [
+        "media/9c094784/bsky_00.png",
+        "media/9c094784/bsky_01.png",
+        "media/9c094784/bsky_02.png",
+        "media/9c094784/bsky_03.png"
+      ],
+      "slides": [
+        "media/9c094784/slide_00.png",
+        "media/9c094784/slide_01.png",
+        "media/9c094784/slide_02.png",
+        "media/9c094784/slide_03.png",
+        "media/9c094784/slide_04.png",
+        "media/9c094784/slide_05.png",
+        "media/9c094784/slide_06.png",
+        "media/9c094784/slide_07.png"
+      ]
+    }
   }
 ]
