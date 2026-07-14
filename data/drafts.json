@@ -11828,7 +11828,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-14T11:11:48.632935+00:00",
     "media": {
       "figures": [
@@ -11854,6 +11854,8 @@
         "media/9580e0a5/slide_07.png"
       ]
     },
-    "issue": 128
+    "issue": 128,
+    "scheduled_after": "2026-07-14T17:26:50.188958+00:00",
+    "queue_notified": true
   }
 ]
