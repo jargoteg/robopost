@@ -11958,5 +11958,253 @@
     "issue": 129,
     "scheduled_after": "2026-07-14T21:08:24.757815+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "be4b3ec1",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3707354",
+      "title": "Quiet Humanoid Walking With NMPC-Informed Reinforcement Learning",
+      "abstract": "Quiet Humanoid Walking With NMPC-Informed Reinforcement Learning",
+      "authors": [
+        "Ming Fang",
+        "Shenao Ma",
+        "Zhipeng Ding",
+        "Fei Chen",
+        "Yiming Chen",
+        "Zihao Ye"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3707354",
+      "doi": "10.1109/lra.2026.3707354",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Quieter humanoid walking via NMPC-seeded RL policy training",
+      "commentary": "This paper trains a humanoid walking controller using Nonlinear Model Predictive Control as a teacher signal inside RL, not as the runtime controller. The idea is to bake physics-aware gait planning into the policy during training so the deployed network produces quieter, smoother footfalls without the online compute cost of NMPC. That is a genuinely practical trade: NMPC is too slow for real-time humanoid control on embedded hardware, but its solutions carry real dynamic insight. The honest caveat is that 'quiet' is an unusual optimization target in RA-L and the abstract doesn't specify decibel reductions or surface conditions tested, so it is hard to know how much of this survives a concrete floor versus a compliance mat in a lab.",
+      "slides": [
+        {
+          "title": "The problem with humanoid steps",
+          "body": "Impact noise in humanoid walking is partly a control artifact. Aggressive foot-strike velocities come from policies that treat quietness as irrelevant. Most RL gaits ignore it entirely."
+        },
+        {
+          "title": "NMPC as teacher, not runtime",
+          "body": "Nonlinear MPC generates physically consistent reference trajectories during training only. The deployed policy is a neural net. No NMPC solver running at runtime means the compute bill stays manageable on real hardware."
+        },
+        {
+          "title": "Why this pairing works",
+          "body": "NMPC solutions encode constraint satisfaction and smooth dynamics naturally. Injecting that as a supervised signal shapes the RL reward landscape toward low-impact footfalls without hand-crafting every cost term."
+        },
+        {
+          "title": "The quietness claim, scrutinized",
+          "body": "Quieter walking likely means lower foot-strike velocity and reduced impulsive ground reaction forces. Whether the gain holds on hard surfaces outside a lab environment is the open question the paper needs to answer explicitly."
+        },
+        {
+          "title": "Where this fits",
+          "body": "Useful for humanoids in shared human spaces where impact noise and vibration matter: hospitals, offices, homes. Also relevant for legged inspection robots where percussive footfalls disturb fragile environments or sensors."
+        },
+        {
+          "title": "Verdict",
+          "body": "Clever architecture choice. NMPC-informed RL is not new as a concept, but applying it specifically to acoustic/impact quality of gait is a focused and practical contribution. Real-world noise data would seal it."
+        }
+      ],
+      "video_script": "Most humanoid walking controllers are trained to not fall over. That is the bar. But if you ever stood next to one walking, the foot impacts are startling. This paper asks a different question: can we train a policy to walk quietly? The trick is using NMPC, a physics-aware planner, as a teacher during training, then throwing it away at deployment. The robot runs a neural net. The NMPC shaped what that net learned. Does quieter gait actually transfer outside the lab onto real floors? That is what I want to see next.",
+      "caption_instagram": "Humanoid robots are loud. Not just mechanically, but because most RL controllers never penalize impact noise at all. They optimize for stability and speed, and foot-strike acoustics are an afterthought.\n\nThis RA-L paper from Fang et al. takes a different angle. They use Nonlinear Model Predictive Control to generate high-quality reference gaits during training, then train an RL policy to match that behavior. At deployment, no NMPC. Just the neural net, carrying the physics-informed gait patterns it learned from the planner.\n\nThe result is claimed quieter walking. The mechanism makes sense: NMPC naturally produces smooth, low-impact trajectories when you set it up right. Baking that into policy training is more principled than adding a hand-tuned noise penalty to your RL reward.\n\nMy honest question: how does this hold up on hard concrete versus a compliant lab floor? Impact noise is a material and surface problem as much as a control problem. The paper is worth reading, but I want the real-world decibel numbers.\n\nPaper: Quiet Humanoid Walking With NMPC-Informed Reinforcement Learning, IEEE RA-L 2026. DOI in bio.\n\n#swarmrobotics #humanoidrobots #reinforcementlearning #leggedrobotics #robotics #mpc #fieldrobotics",
+      "caption_tiktok": "Training humanoid robots to walk quietly using a physics planner as a teacher. The NMPC does the coaching, the neural net does the actual walking. Clever. #robotics #humanoidrobot #reinforcementlearning #learnedcontrol",
+      "post_bluesky": "Humanoid RL gaits are trained to not fall. Nobody optimizes for quiet. This RA-L paper uses NMPC as a training-time teacher to produce low-impact footfalls, then drops the planner at runtime. Clever separation of planning and policy. https://doi.org/10.1109/lra.2026.3707354",
+      "bluesky_thread": [
+        "The core move: NMPC generates physically smooth reference trajectories during RL training. The deployed controller is just a neural net. You get the dynamic quality of MPC without the online compute cost. That is a genuinely useful trade for real hardware.",
+        "What I want to see: noise measurements on hard floors, not just lab mats. Impact acoustics depend heavily on surface compliance. If this only works soft, the claim is much narrower. Anyone seen real-surface data from NMPC-informed gait work?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T20:21:10.099870+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/be4b3ec1/bsky_00.png",
+        "media/be4b3ec1/bsky_01.png",
+        "media/be4b3ec1/bsky_02.png",
+        "media/be4b3ec1/bsky_03.png"
+      ],
+      "slides": [
+        "media/be4b3ec1/slide_00.png",
+        "media/be4b3ec1/slide_01.png",
+        "media/be4b3ec1/slide_02.png",
+        "media/be4b3ec1/slide_03.png",
+        "media/be4b3ec1/slide_04.png",
+        "media/be4b3ec1/slide_05.png",
+        "media/be4b3ec1/slide_06.png",
+        "media/be4b3ec1/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ac347ca8",
+    "paper": {
+      "id": "doi-10.1002_rob.70296",
+      "title": "A Survey of Dynamic Wireless Power Transfer for Persistent UAV Transportation in Low‐Altitude Economy: The Field–Motion Framework",
+      "abstract": "ABSTRACT The endurance limitations of onboard batteries and operational interruptions caused by static charging remain major barriers to scalable unmanned aerial vehicle (UAV) deployment in emerging low‐altitude economy. Dynamic wireless power transfer (DWPT) has recently emerged as a key enabling technology for persistent aerial mobility by allowing energy replenishment during flight without landing. This paper presents a comprehensive survey and introduces a unified field‐motion system framework that links DWPT mechanisms with UAV mobility states and operational requirements. Existing DWPT approaches are systematically classified along two orthogonal dimensions: physical field characteristics (near‐field inductive coupling and far‐field radiative transmission) and motion dynamics (quasi‐static hovering to fully dynamic flight). The survey reveals that near‐field ground‐to‐air configurations achieve high efficiency and robustness through Parity‐Time (PT)‐symmetric compensation and three‐dimensional coil structures, while far‐field air‐to‐air energy transfer enabled by beam‐shaped laser and microwave arrays supports long‐range energy relay under dynamic alignment uncertainty. Building upon these insights, the paper proposes a layered heterogeneous energy architecture integrating high‐efficiency local charging nodes with flexible long‐distance energy relays, forming a multi‐tier aerial energy replenishment network analogous to aerial refuelling systems. By explicitly connectin",
+      "authors": [
+        "Rui Xue",
+        "Guidong Zhang",
+        "Samson S. Yu",
+        "Lihao Wu",
+        "Wenjie Ma",
+        "Yun Zhang"
+      ],
+      "url": "https://doi.org/10.1002/rob.70296",
+      "doi": "10.1002/rob.70296",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Two fields block UAVs from scaling. DWPT targets both at once.",
+      "commentary": "This survey maps every serious attempt to charge UAVs in flight, organized by physical coupling type (near-field inductive vs far-field laser/microwave) and motion state (hover to full cruise). The PT-symmetric compensation work for ground-to-air coils is genuinely clever, and the air-to-air laser relay framing is useful. Honest caveat: this is a survey of lab and simulation results, not field deployments. The gap between 'achieved high efficiency in quasi-static hover' and 'works on a delivery drone in 15 m/s crosswind' is enormous, and the paper doesn't close it. The proposed multi-tier energy architecture is a design vision, not a demonstrated system.",
+      "slides": [
+        {
+          "title": "The core UAV endurance problem",
+          "body": "Battery limits cap flight time. Static charging forces landing. Both kill continuous operations. Dynamic wireless power transfer during flight is the proposed fix. No landing, no interruption."
+        },
+        {
+          "title": "Two axes of the framework",
+          "body": "Physical field type: near-field inductive coupling vs far-field laser or microwave. Motion state: quasi-static hover to fully dynamic cruise. Every existing DWPT approach maps onto this 2D grid."
+        },
+        {
+          "title": "Near-field ground-to-air results",
+          "body": "PT-symmetric compensation maintains high transfer efficiency despite coil misalignment. 3D coil structures help with arbitrary UAV orientation. Strong results in hover, degrading fast as lateral velocity increases."
+        },
+        {
+          "title": "Far-field air-to-air relay",
+          "body": "Beam-shaped lasers and phased microwave arrays can reach longer distances between aerial nodes. Useful for relay chains over remote terrain. Alignment uncertainty under dynamic flight remains the hard unsolved problem."
+        },
+        {
+          "title": "The proposed architecture",
+          "body": "High-efficiency local nodes for hover charging. Long-range relays for cruise segments. Layered like aerial refueling, but wireless and autonomous. Currently a framework, not a fielded system."
+        },
+        {
+          "title": "The real deployment gap",
+          "body": "Survey covers lab and simulation work almost exclusively. Wind, rain, thermal noise, regulatory airspace constraints, and multi-UAV interference are not addressed. Field Robotics published this, so expect follow-up hardware work to be the actual test."
+        }
+      ],
+      "video_script": "UAVs have a simple problem that nobody has cleanly solved yet. The battery dies, or you land to charge and kill the mission. Dynamic wireless power transfer means charging while flying, no contact, no landing. This survey maps every serious approach into one framework, near-field inductive for hovering close to a ground node, far-field laser and microwave for longer air-to-air relay. The PT-symmetric compensation for coil misalignment is the most interesting piece. But here is my honest read: almost all of this is lab and simulation data. Has anyone actually tested this in real wind? That is the paper I want to see next.",
+      "caption_instagram": "Two things kill UAV scalability at the system level. Battery limits cap endurance, and stopping to charge breaks continuity. Dynamic wireless power transfer, charging while the drone is actually flying, is the architecture people are betting on to fix both.\n\nThis survey in Journal of Field Robotics introduces a unified framework organizing every serious DWPT approach by two axes: physical coupling type and motion state. Near-field inductive with PT-symmetric compensation handles hover charging efficiently even when coils aren't perfectly aligned. Far-field laser and microwave arrays handle longer air-to-air relay at the cost of much harder alignment under real flight dynamics.\n\nThe proposed multi-tier architecture is genuinely coherent as a design vision. Local high-efficiency nodes for hover segments, long-range relays for cruise. Think aerial refueling, but wireless and potentially autonomous.\n\nHonest caveat though: this is almost entirely lab and simulation evidence. Wind loading, rain, thermal noise, multi-UAV interference, none of that appears. The framework is solid. The field validation is the open question.\n\nPaper: A Survey of Dynamic Wireless Power Transfer for Persistent UAV Transportation in Low-Altitude Economy: The Field-Motion Framework. Journal of Field Robotics, DOI: 10.1002/rob.70296\n\n#swarmrobotics #UAV #dronetech #wirelesspower #fieldrobotics #aerialrobotics #autonomoussystems",
+      "caption_tiktok": "Charging drones mid-flight without landing. Here is where the actual research stands vs the hype. #UAV #dronetech #fieldrobotics #wirelesspower",
+      "post_bluesky": "Near-field inductive + PT-symmetric coils can charge a UAV mid-hover. Far-field laser arrays extend that to air-to-air relay. New survey in J. Field Robotics maps the whole space. Almost all of it is still lab/sim data. https://doi.org/10.1002/rob.70296",
+      "bluesky_thread": [
+        "The PT-symmetric compensation for coil misalignment is the clever piece here. Maintaining efficiency when the UAV drifts laterally is genuinely hard and this approach handles it better than passive tuning. But 'hover' is doing a lot of work in those efficiency numbers.",
+        "Published in Journal of Field Robotics, which usually demands hardware evidence. This one got through as a survey. Means the field is still pre-deployment. What's the most realistic near-term scenario where you actually fly DWPT outside a lab? Ground node at a fixed inspection waypoint?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T20:21:41.695782+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/ac347ca8/bsky_00.png",
+        "media/ac347ca8/bsky_01.png",
+        "media/ac347ca8/bsky_02.png",
+        "media/ac347ca8/bsky_03.png"
+      ],
+      "slides": [
+        "media/ac347ca8/slide_00.png",
+        "media/ac347ca8/slide_01.png",
+        "media/ac347ca8/slide_02.png",
+        "media/ac347ca8/slide_03.png",
+        "media/ac347ca8/slide_04.png",
+        "media/ac347ca8/slide_05.png",
+        "media/ac347ca8/slide_06.png",
+        "media/ac347ca8/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "501e6b57",
+    "paper": {
+      "id": "doi-10.1002_rob.70295",
+      "title": "Open‐Set Fault Diagnosis for Autonomous Underwater Vehicles Via Prototype Learning and Adaptive Mahalanobis Gating",
+      "abstract": "ABSTRACT Reliable fault diagnosis is essential for the safe operation of autonomous underwater vehicles (AUVs) in uncertain and dynamic environments. However, conventional closed‐set diagnosis methods are unable to handle previously unseen fault conditions, while existing open‐set techniques often struggle with low‐frequency, highly coupled multivariate telemetry. This paper proposes ProtoNet‐MDAG, a prototype‐based open‐set diagnosis framework for AUV fault recognition. Specifically, a dilated multi‐scale encoder is developed to extract discriminative temporal features from low‐frequency sensor streams, and a variance‐penalized prototypical learning strategy is introduced to enforce compact and well‐structured known‐class manifolds in the latent space. Based on this representation, an adaptive Mahalanobis distance gating mechanism is constructed to perform statistically calibrated open‐set rejection. Experimental results on a Haizhe AUV and a BlueROV‐class underwater robotic platform show that the proposed method achieves 97.19% and 89.12% accuracy, respectively. The results demonstrate strong unknown‐state rejection on the Haizhe AUV and competitive known‐class recognition on the BlueROV‐class platform, while also revealing that platform‐dependent distribution shift can weaken unknown‐state rejection in more heterogeneous operating conditions. Robustness tests on the Haizhe dataset further show that the framework remains stable under representative telemetry perturbations. ",
+      "authors": [
+        "Daxiong Ji",
+        "Lie Xu",
+        "Ye Pu",
+        "Marcelo H. Ang",
+        "Yan Zhi Tan"
+      ],
+      "url": "https://doi.org/10.1002/rob.70295",
+      "doi": "10.1002/rob.70295",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your AUV just developed a fault nobody trained it to recognize.",
+      "commentary": "ProtoNet-MDAG tackles a real operational gap: AUVs in the field encounter faults that never appeared in training data, and closed-set classifiers will confidently misclassify them. The clever piece is combining prototype-based learning with adaptive Mahalanobis distance gating, so the model knows what it doesn't know. 97.19% on Haizhe AUV is strong. The honest caveat is that BlueROV performance drops to 89.12% and unknown-state rejection weakens on that platform, which the authors attribute to distribution shift across hardware. That's the field robotics problem in a nutshell: your model trains on one vehicle's telemetry signature and struggles on another's. Journal of Field Robotics publication means it went through deployment-focused review, which adds credibility over a pure ML venue.",
+      "slides": [
+        {
+          "title": "The unseen fault problem",
+          "body": "AUVs fail in ways nobody anticipated. Closed-set classifiers assign every novel fault to the nearest known class. In deep water, that confident wrong answer can sink a vehicle."
+        },
+        {
+          "title": "What ProtoNet-MDAG does",
+          "body": "Learns compact prototype clusters for known fault classes. At inference, adaptive Mahalanobis gating measures statistical distance from every known prototype. Too far from all of them? Flagged as unknown."
+        },
+        {
+          "title": "The encoder doing the hard work",
+          "body": "Low-frequency AUV telemetry is noisy and cross-correlated. A dilated multi-scale temporal encoder pulls discriminative features across timescales. Variance-penalized training forces tighter, less overlapping class manifolds."
+        },
+        {
+          "title": "Numbers on real hardware",
+          "body": "Haizhe AUV: 97.19% accuracy, strong unknown rejection. BlueROV-class platform: 89.12% accuracy, weaker unknown rejection. Both are real vehicles, not simulated sensor streams."
+        },
+        {
+          "title": "The distribution shift wall",
+          "body": "Platform-dependent telemetry signatures are different enough to degrade open-set rejection on the BlueROV. A model trained on one AUV's fault fingerprint does not transfer cleanly to another hull."
+        },
+        {
+          "title": "Why this matters for deployment",
+          "body": "Any subsea inspection or survey AUV operating beyond recovery depth needs onboard fault awareness it can trust. Open-set rejection is the difference between safe abort and unrecognized failure mid-mission."
+        }
+      ],
+      "video_script": "Your AUV is 300 meters down and something is wrong. Not a fault it was trained on. Something new. A closed-set classifier picks the nearest known label and keeps going. That's how you lose a vehicle. This paper builds a fault diagnosis system that knows when it doesn't know. Prototype learning plus Mahalanobis distance gating, tested on real AUV telemetry. 97 percent accuracy on the Haizhe platform. But it drops on the BlueROV, and that gap tells you everything about cross-platform deployment in the real ocean. So here's the question: how do we build fault models that actually generalize across hull designs?",
+      "caption_instagram": "Your AUV just developed a fault nobody trained it to recognize.\n\nMost fault diagnosis systems are closed-set. They see an unknown failure mode and confidently assign it to the nearest known class. In a lab, that's an accuracy hit. At 300m depth on a survey mission, that's a lost vehicle.\n\nProtoNet-MDAG builds a prototype for each known fault class, then uses adaptive Mahalanobis distance gating to reject inputs that are statistically too far from any of them. It learns to say 'I don't know' rather than guess badly. Tested on a real Haizhe AUV and a BlueROV-class platform, not just simulated data.\n\nResults: 97.19% on Haizhe, 89.12% on BlueROV. The drop is real and the authors are honest about it. Platform-dependent telemetry distributions weaken open-set rejection when you cross hardware boundaries. That is the transfer problem that every field deployment faces.\n\nPaper: 'Open-Set Fault Diagnosis for Autonomous Underwater Vehicles Via Prototype Learning and Adaptive Mahalanobis Gating', Journal of Field Robotics. Ji et al. doi.org/10.1002/rob.70295\n\n#SwarmRobotics #AUV #SubseaRobotics #FieldRobotics #FaultDiagnosis #UnderwaterRobotics #RoboticsResearch",
+      "caption_tiktok": "AUV hits a fault it's never seen before. Watch what a well-designed open-set classifier does instead of guessing. 97% accuracy on real hardware. #AUV #FieldRobotics #SubseaRobotics #RoboticsResearch",
+      "post_bluesky": "Your AUV develops an unknown fault at depth. Closed-set classifiers confidently guess wrong. ProtoNet-MDAG uses prototype learning + Mahalanobis gating to reject what it doesn't recognize. 97% on Haizhe AUV, 89% on BlueROV, and the gap explains field deployment in…\nhttps://doi.org/10.1002/rob.70295",
+      "bluesky_thread": [
+        "The clever bit is the variance-penalized training. It forces known-class clusters to stay tight and well-separated in latent space, which makes the Mahalanobis gate actually meaningful. Loose clusters make every threshold a compromise.",
+        "Honest caveat: open-set rejection degrades on the BlueROV due to cross-platform distribution shift. One AUV's telemetry fingerprint is not another's. Until we solve that transfer problem, these models need retraining per hull. How far off is a domain-adaptive version?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T20:23:42.408848+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/501e6b57/bsky_00.png",
+        "media/501e6b57/bsky_01.png",
+        "media/501e6b57/bsky_02.png",
+        "media/501e6b57/bsky_03.png"
+      ],
+      "slides": [
+        "media/501e6b57/slide_00.png",
+        "media/501e6b57/slide_01.png",
+        "media/501e6b57/slide_02.png",
+        "media/501e6b57/slide_03.png",
+        "media/501e6b57/slide_04.png",
+        "media/501e6b57/slide_05.png",
+        "media/501e6b57/slide_06.png",
+        "media/501e6b57/slide_07.png"
+      ]
+    }
   }
 ]

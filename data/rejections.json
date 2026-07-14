@@ -420,5 +420,20 @@
     "title": "M\n                    <sup>3</sup>\n                    RS: Multi‐Robot, Multi‐Objective, and Multi‐Mode Routing and Scheduling",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Quiet Humanoid Walking With NMPC-Informed Reinforcement Learning",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "A Survey of Dynamic Wireless Power Transfer for Persistent UAV Transportation in Low‐Altitude Economy: The Field–Motion Framework",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Open‐Set Fault Diagnosis for Autonomous Underwater Vehicles Via Prototype Learning and Adaptive Mahalanobis Gating",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
