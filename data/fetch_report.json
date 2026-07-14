@@ -1,26 +1,31 @@
 {
-  "ts": "2026-07-13T23:33",
+  "ts": "2026-07-14T00:16",
   "collected": 223,
-  "dedup_dropped": 52,
-  "after_dedup": 171,
+  "dedup_dropped": 54,
+  "after_dedup": 169,
   "score_hist": {
-    "0": 21,
-    "1": 21,
-    "2": 34,
-    "3": 47,
-    "4": 29,
-    "5": 12,
-    "6": 2,
-    "7": 4,
-    "8": 1
+    "0": 17,
+    "1": 19,
+    "2": 33,
+    "3": 52,
+    "4": 33,
+    "5": 7,
+    "6": 7,
+    "7": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 7,
+  "ranked_above_floor": 8,
   "split": {
     "videos": 0,
-    "papers": 0,
+    "papers": 1,
     "news": 7
   },
   "floor": 6,
-  "picked": []
+  "picked": [
+    {
+      "t": "A manifesto for Sustainability Robotics",
+      "type": "paper",
+      "video": false
+    }
+  ]
 }

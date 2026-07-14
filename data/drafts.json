@@ -11022,5 +11022,229 @@
         "media/3f99bc15/slide_06.png"
       ]
     }
+  },
+  {
+    "draft_id": "b63c27d7",
+    "paper": {
+      "id": "rss-7ffaf37eef",
+      "title": "Video Friday: An Earthbound Mars Rover for the Moon",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO IROS 2026 : 27 September–1 October 2026, PITTSBURGH Enjoy today’s videos! NASA is considering a mission concept for an advanced, nuclear-powered rover to be deployed to the Moon’s South Pole as part of the agency’s Moon Base plans. The PROMISE (Polar Rover for Observation, Mapping, and In-Situ Exploration) mission concept relies on the Curiosity Mars rover mission’s testbed rover. Some elements of the Perseverance Mars testbed rover shown in this video could be used as well. As exact duplicates of Curiosity and Perseverance, the testbed rovers are equipped with flight-proven engineering systems capable of carrying technology as well as science instruments that would advance Moon Base efforts. A Mars rover for the Moon? That’s some OPTIMISM right there. [ JPL ] This is the absolute best thing since Festo’s AirPenguin . The project explores soft, lightweight robots that can gently float around people in indoor environments and invite playful, affectionate, and everyday interactions. Unlike conventional drones, our robot is designed to be quiet, soft, touch-safe, and socially approachable.",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-nasa-lunar-rover",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Mars rovers were built for Mars. NASA wants to skip that part.",
+      "commentary": "NASA's PROMISE concept proposes sending a Curiosity or Perseverance testbed rover to the Moon's South Pole, nuclear-powered, to support Moon Base infrastructure. The logic is sound: these testbed rovers are exact engineering duplicates with flight-proven systems, so you're not starting from scratch on qualification. The honest caveat is that lunar permanently shadowed regions are brutal in ways Mars surface ops never were: extreme cold cycling, abrasive regolith, and a very different communications architecture. Reusing a chassis is smart; assuming Mars-proven means Moon-ready is a leap that needs scrutiny.",
+      "slides": [
+        {
+          "title": "A Mars rover for the Moon",
+          "body": "NASA's PROMISE concept repurposes Curiosity and Perseverance testbed rovers for lunar South Pole exploration. These are exact engineering duplicates with flight-proven systems, not mockups."
+        },
+        {
+          "title": "Why testbed rovers?",
+          "body": "Testbed rovers carry full flight-heritage engineering. Skipping a clean-sheet design cuts qualification time and cost. The platform already exists. That matters when Moon Base timelines are tight."
+        },
+        {
+          "title": "Nuclear power is the key detail",
+          "body": "Permanently shadowed craters at the South Pole get no sunlight. Solar panels are useless. PROMISE is nuclear-powered, the same bet NASA made on Curiosity's RTG for Mars nights."
+        },
+        {
+          "title": "Where the analogy breaks down",
+          "body": "Lunar regolith is sharper and more abrasive than Martian soil. Thermal cycling in PSRs can hit minus 250 C. Mars-proven wheel and seal designs face a genuinely different environment here."
+        },
+        {
+          "title": "Still a concept. Worth watching.",
+          "body": "PROMISE is a mission concept, not a funded mission. But reusing flight-heritage hardware for a new planetary body is a real engineering argument, not just a budget shortcut."
+        }
+      ],
+      "video_script": "NASA is thinking about sending a Mars rover to the Moon. Not a copy. The actual testbed rover they use to practice driving Curiosity on Earth. Nuclear powered, headed for the South Pole where there's no sunlight and temperatures hit minus 250 Celsius. The pitch is smart: flight-proven hardware, skip years of qualification. The question is whether Mars-proven really means Moon-ready. Lunar regolith is nastier. The thermal environment is different. So: clever reuse of existing hardware, or wishful thinking dressed up as a mission concept?",
+      "caption_instagram": "NASA wants to send a Mars rover to the Moon. Literally.\n\nThe PROMISE concept would deploy the Curiosity testbed rover, a full engineering duplicate of the Mars mission hardware, to the Moon's South Pole. Nuclear powered. Designed to support Moon Base infrastructure in permanently shadowed craters where solar is useless.\n\nThe pitch is genuinely clever: these testbed rovers are already flight-qualified. You skip years of ground-up development. RTG power worked on Mars nights, so it's a reasonable bet for lunar PSRs too.\n\nBut the caveats are real. Lunar regolith is sharper and more abrasive than anything Curiosity drove through. Thermal cycling in those shadowed craters goes colder than Mars ever does. Mars-proven and Moon-ready are not the same sentence.\n\nStill a concept. But the hardware reuse logic is worth taking seriously.\n\nVia IEEE Spectrum Video Friday. Link in bio.\n\n#spacerobots #lunarexploration #nasarover #fieldrobotics #planetaryrobotics #moonbase #robotics #swarmrobotics",
+      "caption_tiktok": "NASA wants to send the Mars rover testbed to the Moon. Nuclear powered. South Pole. The logic is solid. The caveats are real. #nasa #lunarrobotics #marsrover #robotics #moonbase",
+      "post_bluesky": "Mars rovers were built for Mars. NASA wants to skip that part.\n\nPROMISE: send the Curiosity testbed rover, nuclear-powered, to the Moon's South Pole. Flight-proven hardware, no clean-sheet design. Clever reuse or wishful thinking?\n\nhttps://spectrum.ieee.org/video-friday-nasa-lunar-rover",
+      "bluesky_thread": [
+        "The engineering argument is real: testbed rovers are exact duplicates with full flight heritage. RTG worked for Curiosity's Mars nights. Skipping qualification on a Moon Base timeline makes sense on paper.",
+        "But lunar PSRs hit minus 250 C and the regolith is far more abrasive than anything Curiosity drove on. 'Mars-proven' is not a free pass for the Moon. How much requalification would PROMISE actually need? That number matters a lot here."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T00:14:08.886671+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/b63c27d7/bsky_00.png",
+        "media/b63c27d7/bsky_01.png",
+        "media/b63c27d7/bsky_02.png",
+        "media/b63c27d7/bsky_03.png"
+      ],
+      "slides": [
+        "media/b63c27d7/slide_00.png",
+        "media/b63c27d7/slide_01.png",
+        "media/b63c27d7/slide_02.png",
+        "media/b63c27d7/slide_03.png",
+        "media/b63c27d7/slide_04.png",
+        "media/b63c27d7/slide_05.png",
+        "media/b63c27d7/slide_06.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "096f7a50",
+    "paper": {
+      "id": "rss-29789aee00",
+      "title": "Video Friday: Atlas Versus a Fridge",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. ICRA 2026 : 1–5 June 2026, VIENNA RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO Enjoy today’s videos! Just months after its debut, Atlas is proving why it is the world’s most capable and dynamic humanoid robot, ready for real work. Lifting a mini-fridge is a feat of strength, but the true breakthrough is in the underlying reinforcement learning and controls systems. The robot is learning to navigate real world adaptability: handling heavy objects by bracing and accounting for the mass and inertia; using whole-body control, not just hands to maneuver; and demonstrating superhuman range of motion and balance. This marks a critical shift in robotics where humanoids move beyond the lab and into dynamic industrial settings. Watching Atlas move a fridge may be less impressive than whatever the heck it does at 4:10. [ Boston Dynamics ] SpikerBot is a robot you teach by wiring neurons, not writing code. Drag spiking neurons in the app, connect them to sensors and motors, then press play. It moves, reacts, and changes behavior based on the brain you built. Already funded on Kickstarter with a robot kit starting at US $219. [ Kickstarter ] v",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-humanoid-robot-learning",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 7.0,
+      "video_url": "https://www.youtube.com/watch?v=5NB3eSk5hhc",
+      "video_title": "How Fridge Defends All of Atlas US 5x #ALTM"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does whole-body control change what a robot can lift?",
+      "commentary": "Boston Dynamics dropped Atlas footage of it moving a mini-fridge, and the interesting part is not the lift. It's the whole-body control: the robot braces, shifts weight, and distributes load across its entire frame rather than isolating it to the hands and arms. The reinforcement learning here is handling real inertia, not simulated idealized mass. Honest caveat: controlled warehouse floor is not the field. A fridge on uneven ground, with a power cable snagged on the leg, is a different problem entirely. The 4:10 moment in the BD video is doing more work for their credibility than any press release.",
+      "slides": [
+        {
+          "title": "Atlas moves a fridge",
+          "body": "Not impressive because it's heavy. Impressive because Atlas uses its whole body as a counterweight, not just its arms. That's a fundamentally different control architecture."
+        },
+        {
+          "title": "Whole-body control, explained",
+          "body": "Traditional manipulation isolates the end effector. WBC treats every joint as part of the solution. Torque is shared across hips, torso, and shoulders to manage inertia from a shifting load."
+        },
+        {
+          "title": "RL handling real-world mass",
+          "body": "The policy accounts for object mass and inertia in real time, bracing before the load shifts. Lab sims routinely underestimate this. Getting it right on hardware is the actual result here."
+        },
+        {
+          "title": "What the 4:10 moment tells us",
+          "body": "BD is clearly not showing us their ceiling. Whatever Atlas does at 4:10 suggests dynamic recovery or loco-manipulation that they aren't ready to fully describe yet. That restraint is telling."
+        },
+        {
+          "title": "The honest limit",
+          "body": "Flat warehouse floor, controlled lighting, no cable snag, no wet surface. Field deployment in construction or logistics means all of those conditions at once. We are not there yet."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Each capability demonstration narrows the gap between humanoid PR and humanoid deployment. WBC at this scale, on this hardware, is a real engineering result. The hype framing around it is the problem, not the robot."
+        }
+      ],
+      "video_script": "Atlas just moved a mini-fridge. And nobody's talking about the right part. It's not the weight. It's that Atlas used its entire body to handle it: hips, torso, shoulders, all coordinating to manage shifting inertia. That's whole-body control, and it's genuinely hard to get working on real hardware. The reinforcement learning here is dealing with actual mass, not simulated approximations. Flat warehouse floor, controlled conditions, sure. But this is a measurable step toward loco-manipulation that survives contact with real objects. What would it take to convince you this is ready for a real job site?",
+      "caption_instagram": "Why does moving a fridge matter in robotics research?\n\nIt's not the weight. It's the control architecture. Atlas uses whole-body control here: every joint in the chain shares the load, hips and torso act as counterweights, and the policy accounts for shifting inertia in real time. That's genuinely different from isolating the task to the hands and arms.\n\nThe reinforcement learning component is doing real work. Sim-to-real transfer for manipulation usually falls apart when object mass and contact dynamics differ from training. Getting this onto hardware without collapse is the result worth noting.\n\nHonest take: flat floor, controlled environment, no snags. A fridge on a muddy construction site with a power cable underfoot is a different problem. We're not at deployment yet. But this narrows the gap.\n\nAlso, whatever happens at 4:10 in the Boston Dynamics video, BD is clearly not showing their ceiling. Watch that moment and tell me what you think they're holding back.\n\nVia IEEE Spectrum Video Friday.\n\n#swarmrobotics #humanoidrobotics #wholebody control #reinforcementlearning #locomotion #fieldrobotics #roboticsresearch",
+      "caption_tiktok": "Atlas moves a fridge and the interesting part isn't the lift. Whole-body control is the story. #robotics #humanoidrobot #bostondynamics #engineeringexplained",
+      "post_bluesky": "Why does whole-body control change what a robot can lift?\n\nAtlas braces with hips and torso, not just hands. The RL policy handles real inertia, not simulated mass. That's the actual result here, not the fridge.\n\nhttps://spectrum.ieee.org/video-friday-humanoid-robot-learning",
+      "bluesky_thread": [
+        "Honest caveat: this is a flat warehouse floor with controlled conditions. A fridge on an uneven surface with a cable snagged on the leg is a completely different problem. We're not at job-site deployment. But WBC at this scale on real hardware is a concrete step, not a PR stunt.",
+        "Also, whatever Atlas does at 4:10 in the BD video, they're clearly not showing their ceiling. That restraint tells you more about where they actually are than any press release. What do you think they're holding back?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-14T00:15:45.608914+00:00",
+    "media": {
+      "figures": [
+        "media/096f7a50/fig_00.png"
+      ],
+      "bsky": [
+        "media/096f7a50/bsky_00.png",
+        "media/096f7a50/bsky_01.png",
+        "media/096f7a50/bsky_02.png",
+        "media/096f7a50/bsky_03.png"
+      ],
+      "slides": [
+        "media/096f7a50/slide_00.png",
+        "media/096f7a50/slide_01.png",
+        "media/096f7a50/slide_02.png",
+        "media/096f7a50/slide_03.png",
+        "media/096f7a50/slide_04.png",
+        "media/096f7a50/slide_05.png",
+        "media/096f7a50/slide_06.png",
+        "media/096f7a50/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "a39d4640",
+    "paper": {
+      "id": "rss-f745e572b7",
+      "title": "A manifesto for Sustainability Robotics",
+      "abstract": "Nature Machine Intelligence, Published online: 13 July 2026; doi:10.1038/s42256-026-01260-6 Song et al. propose Sustainability Robotics as a new discipline to overcome fragmentation and enhance societal and environmental impact. They define three guiding principles, alongside two dimensions spanning sustainable design and robotics for sustainability.",
+      "authors": [],
+      "url": "https://www.nature.com/articles/s42256-026-01260-6",
+      "source": "nature.com",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Robotics needs a new discipline. Song et al. are making the case.",
+      "commentary": "Song et al. argue that robotics is too fragmented to address sustainability seriously, and they propose a named discipline to fix that. The three principles and two-axis framework are conceptually tidy. The honest caveat: manifestos in Nature MI don't build robots. The real test is whether this framing changes grant structures, hiring, or design choices in the field. Worth reading as a provocation, not a result.",
+      "slides": [
+        {
+          "title": "The problem: fragmentation",
+          "body": "Sustainability work in robotics is scattered across subfields with no shared vocabulary, no common metrics, and no coordinating framework. Impact stays low because efforts don't compound."
+        },
+        {
+          "title": "The proposal: a new discipline",
+          "body": "Song et al. name it Sustainability Robotics. Naming a discipline is a political act as much as a scientific one. It signals what counts as valid research and who gets funded."
+        },
+        {
+          "title": "Three principles, two dimensions",
+          "body": "Two axes: sustainable design of robots (material, energy, lifecycle) and robotics for sustainability (environmental monitoring, precision agriculture, infrastructure inspection). Three guiding principles tie them together."
+        },
+        {
+          "title": "Where field robotics fits",
+          "body": "Inspection and field robots are front-row stakeholders here. A robot that corrodes in a subsea pipeline or burns out after one mine deployment is not a sustainable solution, regardless of what it monitors."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Manifestos set agendas. They don't validate claims. The gap between a Nature MI framework and a robot that actually reduces its own environmental footprint in a real deployment remains wide."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "If this framing sticks, it reshapes how reviewers score papers, how funders write calls, and how engineers justify design choices. Soft infrastructure, but it's how fields move."
+        }
+      ],
+      "video_script": "Robotics has a sustainability problem, and it's not the one you think. It's fragmentation. Dozens of subfields all working on sustainability-adjacent topics with no shared language and no compounding progress. Song et al. just published a manifesto in Nature Machine Intelligence proposing a fix: a named discipline called Sustainability Robotics, built around two axes and three core principles. Naming things matters. It shapes funding, hiring, and what gets published. But the gap between a framework and a field robot that actually survives real conditions is still very wide. So, what would it take for your work to qualify?",
+      "caption_instagram": "Robotics needs a new discipline. Song et al. are making the case.\n\nPublished this week in Nature Machine Intelligence, the paper proposes Sustainability Robotics as a named field to pull together fragmented work across subfields. Two axes: designing robots sustainably, and using robots to support sustainability goals. Three guiding principles to connect them.\n\nFor those of us in field and inspection robotics, this framing is directly relevant. A subsea inspection robot that corrodes after three dives, or a mining drone that burns through batteries and gets landfilled, is not a sustainability win regardless of what it's measuring.\n\nMy honest take: manifestos don't build robots. The real test is whether this label changes grant criteria, review standards, and design incentives in practice. But if it does, that's how fields actually shift. Worth reading as a provocation.\n\nPaper: 'A manifesto for Sustainability Robotics', Song et al., Nature Machine Intelligence (2026). doi:10.1038/s42256-026-01260-6\n\n#SwarmRobotics #FieldRobotics #SustainabilityRobotics #RoboticsResearch #InspectionRobotics #RobotDesign #NatureMI",
+      "caption_tiktok": "Robotics is too fragmented to fix sustainability. A new paper in Nature MI wants to name and frame a whole discipline to change that. Is naming enough?\n\n#Robotics #SustainabilityRobotics #FieldRobotics #RoboticsResearch",
+      "post_bluesky": "Robotics is too fragmented to tackle sustainability seriously. Song et al. propose fixing that by naming a discipline: Sustainability Robotics, two axes, three principles. Naming is political. If it reshapes funding and review criteria, it matters. https://www.nature.com/articles/s42256-026-01260-6",
+      "bluesky_thread": [
+        "The two-axis split is useful: sustainable design OF robots (materials, lifecycle, energy) vs. robots FOR sustainability (monitoring, inspection, agriculture). Field and inspection robots sit on both axes simultaneously, which is exactly where the interesting design tensions live.",
+        "Honest caveat: a Nature MI manifesto doesn't close the gap between a framework and a robot that survives a real deployment environment. Does anyone know of a project actually using lifecycle metrics as a primary design constraint, not a post-hoc justification?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-14T00:17:22.892146+00:00",
+    "media": {
+      "figures": [
+        "media/a39d4640/fig_00.png"
+      ],
+      "bsky": [
+        "media/a39d4640/bsky_00.png",
+        "media/a39d4640/bsky_01.png",
+        "media/a39d4640/bsky_02.png",
+        "media/a39d4640/bsky_03.png"
+      ],
+      "slides": [
+        "media/a39d4640/slide_00.png",
+        "media/a39d4640/slide_01.png",
+        "media/a39d4640/slide_02.png",
+        "media/a39d4640/slide_03.png",
+        "media/a39d4640/slide_04.png",
+        "media/a39d4640/slide_05.png",
+        "media/a39d4640/slide_06.png",
+        "media/a39d4640/slide_07.png"
+      ]
+    }
   }
 ]
