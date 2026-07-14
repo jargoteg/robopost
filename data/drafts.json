@@ -11836,7 +11836,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-14T11:11:48.632935+00:00",
     "media": {
       "figures": [
@@ -11864,7 +11864,9 @@
     },
     "issue": 128,
     "scheduled_after": "2026-07-14T21:08:24.757815+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "ce46e43d",
@@ -11956,7 +11958,7 @@
       ]
     },
     "issue": 129,
-    "scheduled_after": "2026-07-14T21:08:24.757815+00:00",
+    "scheduled_after": "2026-07-14T22:42:28.907145+00:00",
     "queue_notified": true
   },
   {
@@ -12258,7 +12260,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-14T21:10:45.569431+00:00",
     "media": {
       "figures": [
@@ -12282,6 +12284,7 @@
         "media/cbbb59b4/slide_05.png",
         "media/cbbb59b4/slide_06.png"
       ]
-    }
+    },
+    "issue": 130
   }
 ]

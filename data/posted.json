@@ -1258,5 +1258,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "9580e0a5",
+    "paper_id": "2607.11633v1",
+    "title": "Breaking the 15% Barrier: A Real-World Data-Driven System for Proactive Social Robot Triggered by User Nonverbal Cues",
+    "format": "carousel",
+    "hook": "Why does your service robot keep ignoring customers waving at it?",
+    "posted_at": "2026-07-14T21:12:28.907150+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqn4ov6s472y",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
