@@ -11764,5 +11764,90 @@
       ]
     },
     "issue": 127
+  },
+  {
+    "draft_id": "9580e0a5",
+    "paper": {
+      "id": "2607.11633v1",
+      "title": "Breaking the 15% Barrier: A Real-World Data-Driven System for Proactive Social Robot Triggered by User Nonverbal Cues",
+      "abstract": "Service robots in retail stores increasingly rely on cascaded speech pipelines (STT-LLM-TTS), yet many customer-robot interactions are initiated or guided by nonverbal behaviors such as approaching, waving, pointing, or showing items. This paper studies such cues in a real-world store deployment with a teleoperated humanoid robot and shows that a non-negligible portion of robot turns are triggered by nonverbal behaviors rather than spoken input, revealing a limitation of audio-only dialogue systems. In a 6-day in-the-wild deployment, 15.3\\% of robot utterances were initiated by users' nonverbal behaviors rather than spoken input. Based on an analysis of observed customer behaviors, we define a set of frequent, service-relevant nonverbal cues and develop a real-time multi-person, multi-label recognizer that runs online from video. We then propose a dialogue framework that conditions LLM-based utterance generation on recognized nonverbal cue tokens, and optionally leverages a vision-language model when items are shown, enabling proactive robot responses without hand-crafted rules. We evaluate the approach offline on nonverbal-triggered turns and demonstrate an online prototype that reacts to users' nonverbal cues in real time.",
+      "authors": [
+        "Yuga Yano",
+        "Yuki Okafuji",
+        "Ryo Miyoshi",
+        "Sanae Yamashita",
+        "Yoshiki Ohira"
+      ],
+      "url": "https://arxiv.org/abs/2607.11633v1",
+      "source": "arxiv",
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does your service robot keep ignoring customers waving at it?",
+      "commentary": "This team ran a 6-day real deployment in an actual retail store with a teleoperated humanoid, not a lab mock-up. The core finding is specific and useful: 15.3% of robot turns were triggered by nonverbal input, meaning audio-only STT-LLM-TTS pipelines are structurally blind to a meaningful chunk of real customer behavior. The fix is clever without being overcomplicated: recognized nonverbal cue tokens get injected directly into the LLM prompt, and a VLM kicks in when someone holds up a product. Honest caveat: the online prototype is evaluated informally, no head-to-head numbers against a baseline, so the actual performance gain over a vanilla pipeline is still an open question.",
+      "slides": [
+        {
+          "title": "The 15% problem",
+          "body": "In a 6-day live store deployment, 15.3% of robot utterances were triggered by nonverbal behavior: a wave, a point, an item held up. Audio-only pipelines miss all of it."
+        },
+        {
+          "title": "What the robot sees",
+          "body": "Real-time multi-person, multi-label recognizer runs online from video. Detects approaching, waving, pointing, item-showing. No hand-crafted rules, runs alongside the STT pipeline."
+        },
+        {
+          "title": "How it triggers a response",
+          "body": "Recognized cues become tokens appended to the LLM prompt. If a customer holds up a product, a vision-language model describes it first. The LLM then generates a contextually appropriate reply."
+        },
+        {
+          "title": "Why retail is the right testbed",
+          "body": "Store environments are noisy, unpredictable, and full of people who won't cooperate with a robot. This is closer to real deployment conditions than most HRI studies."
+        },
+        {
+          "title": "The honest gap",
+          "body": "Offline evaluation covers nonverbal-triggered turns only. No live A/B comparison against an audio-only baseline. We don't yet know how much the proactive response actually improves customer outcomes."
+        },
+        {
+          "title": "Why it matters",
+          "body": "Service robot deployments keep hitting a ceiling. If 1 in 7 meaningful interactions requires nonverbal grounding to even start, that's a structural fix, not a tuning problem."
+        }
+      ],
+      "video_script": "Your service robot has a speech pipeline. Customer walks up, waves, holds out a product. Robot says nothing, because nobody spoke. This team measured that gap in a real store over six days and found 15 percent of all robot turns start with a nonverbal cue. Their fix: a live video recognizer feeds cue tokens straight into the LLM prompt. Wave detected, the robot responds proactively. Item shown, a vision model describes it first. Simple architecture, real deployment. The question is: how much does this actually move the needle for customers who never read the robot manual?",
+      "caption_instagram": "Why does your service robot keep ignoring customers waving at it?\n\nThis team spent 6 days running a humanoid robot in a real retail store. Not a lab. An actual store with actual customers who wave, point, and shove products toward the robot without saying a word.\n\nThe finding: 15.3% of robot turns were triggered by nonverbal behavior. Audio-only STT-LLM-TTS pipelines are structurally blind to all of it. The fix is cleaner than you might expect. A real-time multi-label video recognizer detects the cues, converts them to tokens, and injects them into the LLM prompt. When someone holds up an item, a vision-language model describes it first.\n\nHonest caveat: the online prototype lacks a head-to-head baseline comparison, so the actual customer experience improvement is still an open question. But the 15% number alone justifies taking this seriously.\n\nPaper: \"Breaking the 15% Barrier: A Real-World Data-Driven System for Proactive Social Robot Triggered by User Nonverbal Cues\" arXiv:2607.11633\n\n#swarmrobotics #HRI #servicerobotics #humanrobotinteraction #LLMrobotics #fieldrobotics #robotdeployment",
+      "caption_tiktok": "1 in 7 customer interactions starts with a wave or a pointed finger, not a word. Your robot's speech pipeline misses every single one. Here's the fix. 🤖\n#robotics #HRI #servicerobot #LLM #AIresearch",
+      "post_bluesky": "Why does your service robot ignore customers waving at it? Because it only listens. A 6-day live store deployment found 15.3% of interactions started nonverbally. This paper fixes that with cue tokens fed straight into the LLM. https://arxiv.org/abs/2607.11633v1",
+      "bluesky_thread": [
+        "The architecture is actually lean: real-time multi-label video recognizer, cue tokens appended to the LLM prompt, VLM for item recognition. No hand-crafted rules. Runs online. The store environment is genuinely hard, not a controlled lab setup.",
+        "Caveat worth flagging: offline eval only covers nonverbal-triggered turns, no live A/B against a baseline audio-only system. We don't have numbers on whether customers actually notice the difference. Anyone seen a deployment study that closes that loop?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-14T11:11:48.632935+00:00",
+    "media": {
+      "figures": [
+        "media/9580e0a5/fig_00.png",
+        "media/9580e0a5/fig_01.png",
+        "media/9580e0a5/fig_03.png",
+        "media/9580e0a5/fig_04.png"
+      ],
+      "bsky": [
+        "media/9580e0a5/bsky_00.png",
+        "media/9580e0a5/bsky_01.png",
+        "media/9580e0a5/bsky_02.png",
+        "media/9580e0a5/bsky_03.png"
+      ],
+      "slides": [
+        "media/9580e0a5/slide_00.png",
+        "media/9580e0a5/slide_01.png",
+        "media/9580e0a5/slide_02.png",
+        "media/9580e0a5/slide_03.png",
+        "media/9580e0a5/slide_04.png",
+        "media/9580e0a5/slide_05.png",
+        "media/9580e0a5/slide_06.png",
+        "media/9580e0a5/slide_07.png"
+      ]
+    },
+    "issue": 128
   }
 ]
