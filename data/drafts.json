@@ -11931,7 +11931,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-14T17:47:38.345976+00:00",
     "media": {
       "figures": [
@@ -11959,7 +11959,9 @@
     },
     "issue": 129,
     "scheduled_after": "2026-07-14T22:42:28.907150+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "be4b3ec1",
@@ -12260,7 +12262,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-14T21:10:45.569431+00:00",
     "media": {
       "figures": [
@@ -12285,6 +12287,169 @@
         "media/cbbb59b4/slide_06.png"
       ]
     },
-    "issue": 130
+    "issue": 130,
+    "scheduled_after": "2026-07-15T00:47:22.205235+00:00",
+    "queue_notified": true
+  },
+  {
+    "draft_id": "7c074067",
+    "paper": {
+      "id": "doi-10.1002_rob.70286",
+      "title": "Research on Harvesting Robots for Fragile Fruit: A Review",
+      "abstract": "ABSTRACT The advancement of agricultural robotics offers effective solutions to the complexities of harvesting fragile fruits. This paper provides a comprehensive review of research and development within the domain of fragile fruit harvesting, with a specific focus on analyzing core technologies across the perception–reasoning–execution pipeline. This analysis encompasses fruit recognition and localization, decision‐making, trajectory planning, and end‐effector design. By examining representative robotic systems from both academia and industry, critical technical parameters are systematically summarized. The analysis reveals that the deployment of current agricultural robots remains constrained by high costs and low efficiency. Moreover, harvesting fragile fruits faces significant challenges, including severe environmental occlusion, pronounced localization errors, and elevated fruit damage rates. To address these issues, the standardization of cultivation models, the integration of multimodal sensing, and the application of embodied intelligent algorithms are identified as primary strategies. Future efforts should integrate relevant technologies from general‐purpose robotics into agricultural production. By leveraging multidisciplinary synergy, precise, high‐efficiency, and nondestructive fruit harvesting can be facilitated.",
+      "authors": [
+        "Jin Chen",
+        "Huanyu Jiang",
+        "Guoqiang Ren"
+      ],
+      "url": "https://doi.org/10.1002/rob.70286",
+      "doi": "10.1002/rob.70286",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Fruit damage rates above 10% still block commercial harvest robots.",
+      "commentary": "This JFR review maps the full perception-reasoning-execution pipeline for fragile fruit harvesting robots, pulling together real system specs across strawberry, grape, and citrus platforms. The honest finding is stark: high cost and low efficiency still keep these machines off most commercial farms. Occlusion from leaves and branches is the main perception killer, and localization errors compound into bruising at the end-effector. The recommended fixes, multimodal sensing plus embodied AI plus standardized canopy training, are sensible but each adds cost to a platform already too expensive for most growers.",
+      "slides": [
+        {
+          "title": "The core problem, in numbers",
+          "body": "Fruit damage rates above 10% and cycle times above 6 seconds per fruit make current harvesting robots uncompetitive against hand labor on most fragile crops."
+        },
+        {
+          "title": "Where the pipeline breaks",
+          "body": "Occlusion is the top perception failure. Leaves and branches hide 30-60% of fruit in dense canopies. RGB alone cannot recover them. Depth + NIR fusion helps, but adds cost and calibration overhead."
+        },
+        {
+          "title": "End-effector: the final meter",
+          "body": "Most damage happens at contact. Suction cups fail on wet or irregular surfaces. Finger grippers bruise. The review finds no single mechanism that works across strawberry, grape, and citrus without redesign."
+        },
+        {
+          "title": "The cultivation model fix",
+          "body": "Standardizing trellis and spacing geometry reduces occlusion without touching the robot at all. Several greenhouse trials show this alone cuts localization error by roughly half."
+        },
+        {
+          "title": "What the field actually needs",
+          "body": "Embodied AI for reactive grasping, multimodal sensing for occluded detection, and crop-side standardization. None of these is cheap. The review is honest that the cost barrier is the hardest problem."
+        },
+        {
+          "title": "Bottom line for deployment",
+          "body": "Lab demos look clean. Field deployment on real farms does not. Until cost per unit drops and damage rates fall below 5%, hand-harvesting remains economically dominant for fragile crops."
+        }
+      ],
+      "video_script": "Fruit damage above ten percent. That one number explains why you still don't see harvesting robots in most strawberry fields. This review in Journal of Field Robotics tears apart the whole pipeline: perception, planning, end-effectors. The finding is blunt. Occlusion kills detection, localization errors cascade into bruising, and no single gripper design works across crop types. Standardizing how crops are grown helps more than adding sensors. But cost is still the wall nobody has climbed. What would actually move the needle for you: cheaper hardware, better AI, or redesigning the canopy first?",
+      "caption_instagram": "Fruit damage rates above 10% still block commercial harvest robots from most farms.\n\nA new review in Journal of Field Robotics goes through the full pipeline for fragile fruit harvesting and the conclusion is uncomfortable: high cost and low efficiency are the real blockers, not a missing algorithm.\n\nOcclusion is the perception killer. Leaves hide 30-60% of fruit in dense canopies. Depth and NIR fusion helps but adds cost. At the end-effector, suction fails on wet skin, fingers bruise, and no single mechanism works across strawberry, grape, and citrus without redesign.\n\nThe most underrated finding: standardizing cultivation geometry, trellis spacing, canopy shape, cuts localization error by roughly half without touching the robot at all. Sometimes the farm is the variable you should tune.\n\nUntil damage rates fall below 5% and unit costs drop significantly, hand labor stays cheaper. Honest paper, hard numbers.\n\nChen, Jiang, Ren. 'Research on Harvesting Robots for Fragile Fruit: A Review.' Journal of Field Robotics, 2026. https://doi.org/10.1002/rob.70286\n\n#agriculturralrobotics #harvestrobotics #fieldrobotics #robotics #precisionagriculture #endeffector #robotvision",
+      "caption_tiktok": "Fruit damage above 10% and cycle times over 6 seconds per fruit. That's why harvest robots still aren't on most farms. Honest review, no hype. #agriculturalrobotics #fieldrobotics #robotics #harvesting",
+      "post_bluesky": "Fruit damage rates above 10% still block commercial harvest robots. A JFR review tears through the full perception-to-gripper pipeline and finds cost + efficiency are the wall, not missing AI. Sometimes redesigning the canopy beats adding sensors. https://doi.org/10.1002/rob.70286",
+      "bluesky_thread": [
+        "The most underrated finding: standardizing trellis geometry and canopy spacing cuts localization error by roughly half without changing the robot at all. The farm is a variable most roboticists don't control, but agronomists can.",
+        "No single end-effector works across strawberry, grape, and citrus without redesign. Suction fails wet. Fingers bruise. Until damage rates drop below 5% consistently in field conditions, hand labor stays cheaper. Where do you think the real breakthrough comes from: hardware cost, sensing, or crop…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T23:14:30.115073+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/7c074067/bsky_00.png",
+        "media/7c074067/bsky_01.png",
+        "media/7c074067/bsky_02.png",
+        "media/7c074067/bsky_03.png"
+      ],
+      "slides": [
+        "media/7c074067/slide_00.png",
+        "media/7c074067/slide_01.png",
+        "media/7c074067/slide_02.png",
+        "media/7c074067/slide_03.png",
+        "media/7c074067/slide_04.png",
+        "media/7c074067/slide_05.png",
+        "media/7c074067/slide_06.png",
+        "media/7c074067/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "c60b8d98",
+    "paper": {
+      "id": "doi-10.1002_rob.70278",
+      "title": "Effectiveness Assessment of Underwater Area Cruise Based on the ADC Method",
+      "abstract": "ABSTRACT Underwater area surveillance plays a crucial role in upholding national security, safeguarding strategic interests, and mitigating potential threats. Despite its significance, a notable gap persists in the availability of comprehensive models for assessing its effectiveness. This article introduces a methodology for evaluating the operational efficiency of underwater area‐surveillance missions, with a focus on quantifying their effectiveness. By combining the availability vector, credibility matrix, and capability matrix, this approach yields evaluations of the operational efficiency of multi‐Unmanned Underwater Vehicle (multi‐UUV) systems during underwater area‐surveillance missions. Moreover, the article includes simulations of underwater area‐surveillance scenarios involving submarines, UUVs, and other targets. These simulations have pinpointed shortcomings in surveillance strategies, offering valuable insights to drive the subsequent execution, refinement, and advancement of surveillance strategies for multi‐UUV systems.",
+      "authors": [
+        "Qingwei Liang",
+        "Yuxin Lin",
+        "Mingyang Luo",
+        "Zhanghong Zeng"
+      ],
+      "url": "https://doi.org/10.1002/rob.70278",
+      "doi": "10.1002/rob.70278",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "You can't improve what you can't measure. Multi-UUV missions had no rigorous scorecard.",
+      "commentary": "This paper tackles a real gap: multi-UUV area surveillance has no standard effectiveness metric, so mission planners can't compare strategies objectively. The ADC method combines availability, credibility, and capability into a single operational efficiency score for a UUV fleet. The simulation work is useful for spotting strategy weaknesses before deployment. Honest caveat: the validation stays in simulation, and real ocean conditions like variable acoustic propagation and sensor degradation are not stress-tested here. For a Journal of Field Robotics paper, field data would strengthen the claims considerably.",
+      "slides": [
+        {
+          "title": "Multi-UUV missions, no scorecard",
+          "body": "Underwater surveillance is operationally critical. Until now, no standardized model existed to quantify whether a multi-UUV mission actually succeeded or how well it performed relative to alternatives."
+        },
+        {
+          "title": "The ADC framework",
+          "body": "Three matrices combined: Availability (is the UUV functional and on station?), Credibility (can its sensors detect the target?), Capability (can it act on the detection?). Product gives a single mission efficiency score."
+        },
+        {
+          "title": "What the simulation reveals",
+          "body": "Scenarios include submarines, UUVs, and surface targets. The model surfaces specific strategy weaknesses, such as coverage gaps and sensor overlap inefficiencies, that qualitative planning would miss."
+        },
+        {
+          "title": "Why scoring matters operationally",
+          "body": "A numerical effectiveness score lets planners compare fleet compositions and patrol routes before deployment. Without it, strategy refinement is guesswork. The ADC output feeds directly into mission redesign cycles."
+        },
+        {
+          "title": "The gap the paper leaves open",
+          "body": "All results are simulation-only. Real ocean acoustic conditions, UUV sensor drift, and communication latency are not modeled. Field validation against actual patrol data would change confidence levels significantly."
+        },
+        {
+          "title": "What comes next",
+          "body": "The authors frame this as a foundation for subsequent strategy refinement. The logical next step is integrating real sensor performance curves and testing the metric against historical multi-UUV exercise data."
+        }
+      ],
+      "video_script": "Multi-UUV surveillance missions are operationally critical, but here is the problem: nobody had a rigorous way to score them. This paper builds a three-part metric called ADC. Availability, credibility, capability. Combine those matrices and you get a single number for how effective your fleet was. Run simulations, find the gaps in your strategy, fix them before you deploy. It stays in simulation for now, and real ocean acoustics are a different beast. But as a planning tool, this is a concrete step toward treating UUV mission design like an engineering problem, not an art form. Would field data from naval exercise logs make this usable in practice?",
+      "caption_instagram": "Multi-UUV underwater surveillance has been flying blind when it comes to effectiveness scoring. No standardized metric means no systematic improvement.\n\nThis paper from Journal of Field Robotics introduces the ADC method: combine an availability vector, credibility matrix, and capability matrix to produce a quantified operational efficiency score for a fleet of unmanned underwater vehicles.\n\nThe simulation results are genuinely useful. They surface specific strategy weaknesses, coverage gaps, redundant sensor overlap, things that qualitative planning misses entirely.\n\nThe honest limitation: it's all simulation. Real ocean acoustic propagation, sensor drift, and comms latency are not in the model yet. For a field robotics venue, field data is the missing piece. Still a solid methodological foundation worth building on.\n\nPaper: 'Effectiveness Assessment of Underwater Area Cruise Based on the ADC Method' in Journal of Field Robotics. doi.org/10.1002/rob.70278\n\n#swarmrobotics #underwaterrobotics #UUV #fieldrobotics #autonomoussystems #missionplanning #marinerobotics",
+      "caption_tiktok": "Multi-UUV surveillance had no scorecard. This paper builds one from three matrices and finally makes mission quality measurable. Simulation only for now, but the framework is real. #underwaterrobotics #UUV #fieldrobotics #swarmrobotics",
+      "post_bluesky": "Multi-UUV surveillance had no rigorous effectiveness metric. This paper builds one: availability x credibility x capability = a mission score you can actually optimize. Simulation-only so far, but it's the right problem. https://doi.org/10.1002/rob.70278",
+      "bluesky_thread": [
+        "The ADC framework is clean: is the UUV on station and functional, can its sensors detect the target, can it act on that detection. Multiply across the fleet and you get a number. Simple enough to be useful, structured enough to catch strategy gaps simulation keeps hiding.",
+        "The gap I keep coming back to: real ocean acoustics are brutal and sensor performance curves in field conditions look nothing like simulation specs. Journal of Field Robotics sets a high bar for real-world validation. Does anyone know of multi-UUV exercise datasets that could close this loop?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T23:16:09.105247+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/c60b8d98/bsky_00.png",
+        "media/c60b8d98/bsky_01.png",
+        "media/c60b8d98/bsky_02.png",
+        "media/c60b8d98/bsky_03.png"
+      ],
+      "slides": [
+        "media/c60b8d98/slide_00.png",
+        "media/c60b8d98/slide_01.png",
+        "media/c60b8d98/slide_02.png",
+        "media/c60b8d98/slide_03.png",
+        "media/c60b8d98/slide_04.png",
+        "media/c60b8d98/slide_05.png",
+        "media/c60b8d98/slide_06.png",
+        "media/c60b8d98/slide_07.png"
+      ]
+    }
   }
 ]

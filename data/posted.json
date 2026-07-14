@@ -1365,5 +1365,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-14T22:53:34.598406+00:00"
+  },
+  {
+    "draft_id": "ce46e43d",
+    "paper_id": "2010.11251",
+    "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
+    "format": "carousel",
+    "hook": "A neural net trained in sim walks through mud, snow, and gushing water with zero fine-tuning.",
+    "posted_at": "2026-07-14T23:17:22.205241+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqndoewrqf2x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
