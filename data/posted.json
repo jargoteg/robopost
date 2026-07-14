@@ -1190,5 +1190,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f2095897",
+    "paper_id": "2607.11855v1",
+    "title": "Robust bipedal locomotion on flowable slopes via foot-driven terrain manipulation",
+    "format": "carousel",
+    "hook": "There is a reason bipedal robots keep failing on sand and gravel",
+    "posted_at": "2026-07-14T14:20:41.210044+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqmfopfexv2x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
