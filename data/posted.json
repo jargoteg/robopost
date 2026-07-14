@@ -1122,5 +1122,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "a26eadcf",
+    "paper_id": "2606.31912",
+    "title": "Learning Locomotion on Discrete Terrain via Minimal Proximity Sensing",
+    "format": "carousel",
+    "hook": "No camera. No LiDAR. Just four tiny proximity sensors.",
+    "posted_at": "2026-07-14T01:10:30.567637+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqkzjqxjoj2c",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

@@ -10171,7 +10171,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-13T15:15:49.484718+00:00",
     "media": {
       "bsky": [
@@ -10199,7 +10199,9 @@
     },
     "issue": 118,
     "scheduled_after": "2026-07-14T00:48:31.922376+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "2668997d",
@@ -10533,7 +10535,7 @@
       ]
     },
     "issue": 119,
-    "scheduled_after": "2026-07-14T00:48:31.922376+00:00",
+    "scheduled_after": "2026-07-14T02:40:30.567632+00:00",
     "queue_notified": true
   },
   {
@@ -11248,5 +11250,167 @@
       ]
     },
     "issue": 123
+  },
+  {
+    "draft_id": "e26c3f5c",
+    "paper": {
+      "id": "2607.10925v1",
+      "title": "Mapping Pamir: Multi-Session Visual-Inertial SLAM and 3D Reconstruction of an Underwater Shipwreck",
+      "abstract": "This paper presents a framework for multi-session mapping of underwater environments utilizing an affordable action camera. The Visual-Inertial data are augmented by water depth recordings from a dive computer. SVIn2, an open-source VI-SLAM framework, is utilized to generate a trajectory and a sparse reconstruction for each session. Utilizing the keyframes extracted from SVIn2 and the estimated camera poses, a Structure-from-Motion (SfM) framework, COLMAP, is employed for global optimization and to produce a dense reconstruction of the target environment. The presence of calibration targets at fixed locations, when available, is used to estimate the coordinate transformation between different data collection sessions, thus transforming the different sessions into the same coordinate frame. The proposed pipeline is employed for the mapping of a shipwreck off the coast of Barbados. For the first time, both the exterior and the accessible interior parts of the wreck were mapped in two sessions, while a third session employed two cameras with different fields of view.",
+      "authors": [
+        "Michalis Chatzispyrou",
+        "Luke Horgan",
+        "Hyunkil Hwang",
+        "Harish Sathishchandra",
+        "Chinmay Burgul",
+        "Monika Roznere"
+      ],
+      "url": "https://arxiv.org/abs/2607.10925v1",
+      "source": "arxiv",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "3 dive sessions. 1 shipwreck. Full interior mapped.",
+      "commentary": "The team mapped the Pamir shipwreck off Barbados using a consumer action camera, SVIn2 for VI-SLAM, and COLMAP for dense reconstruction across multiple sessions. The clever bit is using fixed calibration targets to stitch sessions into a common coordinate frame, which sidesteps the GPS-less underwater alignment problem. This is a real field deployment with actual constraints: murky water, no external positioning, cheap hardware. The honest caveat is that this is a controlled wreck with diver access, not a dynamic inspection environment. Scalability to zero-visibility or current-swept sites remains unproven.",
+      "slides": [
+        {
+          "title": "A shipwreck, mapped in 3 sessions",
+          "body": "Off Barbados, a consumer action camera and dive computer built the first full map of the Pamir wreck: exterior and accessible interior. No expensive sonar array. No GPS."
+        },
+        {
+          "title": "The hardware is deliberately cheap",
+          "body": "Visual-inertial data from an action camera. Depth from a standard dive computer. Most underwater mapping relies on DVL or acoustic positioning. This pipeline skips both."
+        },
+        {
+          "title": "SVIn2 handles each session alone",
+          "body": "SVIn2, an open-source VI-SLAM framework, generates a sparse trajectory per session. COLMAP then runs global optimization for a dense 3D reconstruction across all sessions."
+        },
+        {
+          "title": "Calibration targets stitch sessions together",
+          "body": "Fixed targets at known locations estimate the rigid transform between sessions. Without them, multi-session alignment underwater is essentially unsolved. This is the load-bearing assumption."
+        },
+        {
+          "title": "Session 3 used two cameras",
+          "body": "Different fields of view, same pipeline. Testing multi-camera fusion shows the framework generalizes beyond a single sensor, which matters for real inspection deployments."
+        },
+        {
+          "title": "What's missing before field deployment",
+          "body": "Controlled wreck with diver access is a best-case scenario. Low visibility, strong currents, and zero fixed reference points would break the calibration-target alignment step entirely."
+        }
+      ],
+      "video_script": "A consumer action camera, a dive computer, and three dive sessions. That's what it took to produce the first complete 3D map of the Pamir shipwreck off Barbados, exterior and interior both. The trick is multi-session SLAM: each dive generates its own sparse trajectory via SVIn2, then COLMAP fuses everything into one dense reconstruction. Fixed calibration targets on the wreck stitch the sessions into a single coordinate frame. No sonar, no acoustic positioning, no expensive ROV. The real question is: how far does this hold up when the water goes dark and the targets disappear?",
+      "caption_instagram": "A consumer action camera just mapped an entire shipwreck in 3D. Interior and exterior.\n\nThe Pamir wreck off Barbados is now the most completely mapped wreck of its kind, built with hardware any serious diver could carry. The pipeline chains SVIn2 visual-inertial SLAM per session into COLMAP for global dense reconstruction. Fixed calibration targets on the hull handle the hard part: aligning multiple sessions without GPS or acoustics.\n\nThe genuinely clever move is treating this as a multi-session problem from the start. One dive never covers a full wreck. Designing the pipeline around that constraint, rather than assuming a single continuous trajectory, is what makes this actually deployable.\n\nBig caveat: the fixed calibration targets are doing serious work here. Take those away, in zero-visibility or high-current conditions, and the inter-session alignment problem comes back hard. This is proof-of-concept for accessible hardware, not a drop-in solution for industrial subsea inspection.\n\nPaper: Mapping Pamir: Multi-Session Visual-Inertial SLAM and 3D Reconstruction of an Underwater Shipwreck. arXiv 2607.10925.\n\n#swarmrobotics #underwaterrobotics #SLAM #subsearobotics #robotics #fieldrobotics #3Dreconstruction #underwatermapping",
+      "caption_tiktok": "They mapped a shipwreck interior and exterior with a GoPro-class camera and dive computer. Multi-session SLAM, no acoustic positioning, real deployment off Barbados. arXiv 2607.10925\n#underwaterrobotics #SLAM #robotics #fieldrobotics #subsea",
+      "post_bluesky": "Consumer action cam + dive computer = full 3D map of a shipwreck, interior and exterior, across 3 sessions. The multi-session alignment trick is the real contribution. https://arxiv.org/abs/2607.10925v1",
+      "bluesky_thread": [
+        "SVIn2 runs VI-SLAM per session, COLMAP fuses into one dense model. Fixed calibration targets on the hull stitch sessions into a shared frame. No DVL, no acoustics. That's genuinely lean for underwater mapping.",
+        "The load-bearing assumption is that calibration targets are present and visible. Works beautifully on a diver-accessible wreck in Barbados. Probably falls apart in turbid water with no fixed references. How far do you think sparse visual SLAM scales before you need acoustics back?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T01:03:56.483647+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/e26c3f5c/bsky_00.png",
+        "media/e26c3f5c/bsky_01.png",
+        "media/e26c3f5c/bsky_02.png",
+        "media/e26c3f5c/bsky_03.png"
+      ],
+      "slides": [
+        "media/e26c3f5c/slide_00.png",
+        "media/e26c3f5c/slide_01.png",
+        "media/e26c3f5c/slide_02.png",
+        "media/e26c3f5c/slide_03.png",
+        "media/e26c3f5c/slide_04.png",
+        "media/e26c3f5c/slide_05.png",
+        "media/e26c3f5c/slide_06.png",
+        "media/e26c3f5c/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "30ee5843",
+    "paper": {
+      "id": "doi-10.1002_rob.70288",
+      "title": "M\n                    <sup>3</sup>\n                    RS: Multi‐Robot, Multi‐Objective, and Multi‐Mode Routing and Scheduling",
+      "abstract": "ABSTRACT Task execution quality significantly impacts multi‐robot missions, yet existing task allocation frameworks rarely consider quality of service as a decision variable, despite its importance in applications like robotic disinfection and cleaning. We introduce the multi‐robot, multi‐objective, and multi‐mode routing and scheduling (M 3 RS) problem, designed for time‐constrained missions. In M 3 RS, each task offers multiple execution modes with varying resource needs, durations, and quality levels, allowing trade‐offs across mission objectives. M 3 RS is modeled as a mixed‐integer linear programming (MIP) problem that optimizes task sequencing and execution modes for each agent. We apply M 3 RS to multi‐robot disinfection in healthcare and public spaces, optimizing disinfection quality and task completion rates. Through synthetic case studies, M 3 RS demonstrates 3%–46% performance improvements over the standard task allocation method across various metrics. Further, to improve compute time, we propose a clustering‐based column generation algorithm that achieves solutions comparable to or better than the baseline MIP solver while reducing computation time by 60%. We also conduct case studies with simulated and real robots. Experimental videos are available on the project page ( https://sites.google.com/view/g-robot/m3rs/ ).",
+      "authors": [
+        "Ishaan Mehta",
+        "Junseo Kim",
+        "Sharareh Taghipour",
+        "Sajad Saeedi"
+      ],
+      "url": "https://doi.org/10.1002/rob.70288",
+      "doi": "10.1002/rob.70288",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://doi.org/10.1002/rob.70288"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Robots that clean faster by choosing HOW to clean, not just where",
+      "commentary": "M3RS treats task execution mode as a first-class decision variable, not just routing order. That's the real contribution: a robot can pick 'fast but shallow' vs 'slow but thorough' disinfection per zone, and the optimizer trades those off across the whole fleet. The 3-46% improvement range is wide and honestly reflects how much the gain depends on scenario parameters, not a single tight result. The clustering-based column generation is the practical win: 60% compute reduction means this could actually run at mission-planning speed, not just in simulation. Real robot case studies are included, but deployment in live clinical settings with dynamic obstacles and staff movement would be the real test.",
+      "slides": [
+        {
+          "title": "The gap in multi-robot planning",
+          "body": "Most task allocation frameworks assign who does what and in what order. Quality of execution is fixed. In disinfection, cleaning speed and dose delivered are fundamentally coupled, and ignoring that costs coverage."
+        },
+        {
+          "title": "What M3RS adds",
+          "body": "Each task has multiple execution modes: different durations, resource costs, and quality outputs. The optimizer jointly selects mode, sequence, and agent assignment. Tradeoffs across objectives are explicit, not hidden."
+        },
+        {
+          "title": "The performance numbers",
+          "body": "3-46% improvement over standard task allocation across metrics including completion rate and disinfection quality. Range is wide because gains are scenario-dependent. Best results occur under tight time budgets with heterogeneous task demands."
+        },
+        {
+          "title": "Making it fast enough to use",
+          "body": "Mixed-integer programming is exact but slow. A clustering-based column generation algorithm cuts compute time by 60% while matching or beating the baseline MIP solver on solution quality. Critical for real mission planning cycles."
+        },
+        {
+          "title": "Real robots, real spaces",
+          "body": "Case studies include simulated and physical robot trials in healthcare and public space scenarios. Framework is general: disinfection is the testbed, but routing with quality-mode tradeoffs applies to inspection, cleaning, and coverage tasks broadly."
+        },
+        {
+          "title": "What still needs testing",
+          "body": "Live clinical environments with moving people, dynamic replanning when a robot fails mid-mission, and heterogeneous fleets with different hardware capabilities are not validated here. Simulation-to-field gap remains open."
+        }
+      ],
+      "video_script": "Multi-robot task allocation usually answers two questions: who goes where, and in what order. M3RS adds a third: how thoroughly does each robot do each job. In a hospital disinfection scenario, that matters a lot. A robot can sprint through a low-risk corridor or linger in a high-traffic zone. M3RS picks the right tradeoff across the whole fleet simultaneously. The result is 3 to 46 percent better performance depending on the mission, with a solver that runs 60 percent faster than standard MIP. The real question is whether this holds when the hospital is full of people. What's the hardest real-world constraint this kind of planner would actually break on?",
+      "caption_instagram": "Most multi-robot planners tell each robot where to go and in what order. M3RS asks a harder question: how should each robot do each job?\n\nIn hospital disinfection, a robot can move fast with low UV dose or slow with full coverage. That tradeoff affects every downstream task in the schedule. M3RS models execution mode as a decision variable alongside routing and timing, and optimizes all three together across the fleet.\n\nResults: 3-46% performance improvement over standard allocation depending on scenario. A clustering-based column generation algorithm cuts solve time by 60%, which is what makes real-time mission planning plausible.\n\nCaveat worth stating: the real-robot case studies are promising, but live clinical deployment with staff movement, door states, and mid-mission robot failures is a different problem. That gap is still open.\n\nPaper: 'M3RS: Multi-Robot, Multi-Objective, and Multi-Mode Routing and Scheduling', Journal of Field Robotics. Link in bio.\n\n#swarmrobotics #multirobotsystems #taskallocation #roboticsdisinfection #fieldrobotics #missionplanning #robotscheduling",
+      "caption_tiktok": "Robot cleaning fleets that decide HOW to clean, not just where. 60% faster to solve than standard methods. The planning problem nobody was asking but everyone needed. #robotics #swarmrobotics #taskallocation #fieldrobotics",
+      "post_bluesky": "Most robot planners fix execution quality and optimize routes. M3RS optimizes both at once: each task has modes with different speed/quality tradeoffs, and the solver picks across the whole fleet. 3-46% gains, 60% faster compute. https://doi.org/10.1002/rob.70288",
+      "bluesky_thread": [
+        "The clever bit: modeling execution mode as a decision variable inside the MIP, not a preprocessing step. That lets quality tradeoffs propagate through the full schedule. The clustering-based column generation is what makes it tractable. Without that, this stays a conference toy.",
+        "Honest caveat: 3-46% is a real result but a wide range. Gains are highest under tight time budgets. The real-robot trials are in controlled spaces. Anyone tried this class of mode-aware planning in environments where tasks themselves change mid-mission? That seems like the wall it would hit first."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-14T01:09:02.967203+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/30ee5843/bsky_00.png",
+        "media/30ee5843/bsky_01.png",
+        "media/30ee5843/bsky_02.png",
+        "media/30ee5843/bsky_03.png"
+      ],
+      "slides": [
+        "media/30ee5843/slide_00.png",
+        "media/30ee5843/slide_01.png",
+        "media/30ee5843/slide_02.png",
+        "media/30ee5843/slide_03.png",
+        "media/30ee5843/slide_04.png",
+        "media/30ee5843/slide_05.png",
+        "media/30ee5843/slide_06.png",
+        "media/30ee5843/slide_07.png"
+      ]
+    }
   }
 ]
