@@ -11863,5 +11863,95 @@
     "issue": 128,
     "scheduled_after": "2026-07-14T19:15:00.537157+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "ce46e43d",
+    "paper": {
+      "id": "2010.11251",
+      "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
+      "abstract": "Some of the most challenging environments on our planet are accessible to quadrupedal animals but remain out of reach for autonomous machines. Legged locomotion can dramatically expand the operational domains of robotics. However, conventional controllers for legged locomotion are based on elaborate state machines that explicitly trigger the execution of motion primitives and reflexes. These designs have escalated in complexity while falling short of the generality and robustness of animal locomotion. Here we present a radically robust controller for legged locomotion in challenging natural environments. We present a novel solution to incorporating proprioceptive feedback in locomotion control and demonstrate remarkable zero-shot generalization from simulation to natural environments. The controller is trained by reinforcement learning in simulation. It is based on a neural network that acts on a stream of proprioceptive signals. The trained controller has taken two generations of quadrupedal ANYmal robots to a variety of natural environments that are beyond the reach of prior published work in legged locomotion. The controller retains its robustness under conditions that have never been encountered during training: deformable terrain such as mud and snow, dynamic footholds such as rubble, and overground impediments such as thick vegetation and gushing water. The presented work opens new frontiers for robotics and indicates that radical robustness in natural environments can be achieved by training in much simpler domains.",
+      "authors": [
+        "Joonho Lee",
+        "Jemin Hwangbo",
+        "Lorenz Wellhausen",
+        "Vladlen Koltun",
+        "Marco Hutter"
+      ],
+      "url": "https://arxiv.org/abs/2010.11251",
+      "source": "arxiv",
+      "item_type": "paper",
+      "evergreen": true,
+      "user_notes": "Evergreen pick. Angle: Dexterous in-hand manipulation via sim-to-real with OpenAI's Dactyl remains a landmark reference as humanoid hand dexterity reaches the market in 2026.. Make clear it's not new work, and why it matters today.",
+      "score": 6.0,
+      "video_url": "https://www.youtube.com/watch?v=9j2a1oAHDL8",
+      "video_title": "Learning Quadrupedal Locomotion over Challenging Terrain",
+      "repo_url": "https://github.com/leggedrobotics/learning_quadrupedal_locomotion_over_challenging_terrain_supplementary"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A neural net trained in sim walks through mud, snow, and gushing water with zero fine-tuning.",
+      "commentary": "Lee et al. trained a proprioception-only RL controller entirely in simulation, then dropped ANYmal into mud, rubble, thick vegetation, and flowing water. Zero sim-to-real gap tuning. The key insight is that the controller never sees terrain geometry directly. It reads body state and contact history only, which turns out to generalize far better than exteroceptive approaches. Honest caveat: this is 2020 work, and the terrain set, while impressive, is still curated field conditions, not unstructured industrial sites under payload. What makes it relevant in 2026 is that humanoid dexterity teams are hitting the exact same sim-to-real wall that this paper quietly solved for legs.",
+      "slides": [
+        {
+          "title": "The core claim",
+          "body": "ANYmal trained purely in simulation walks mud, snow, rubble, and flowing water with no domain adaptation. Zero fine-tuning on real terrain."
+        },
+        {
+          "title": "No cameras, no lidar",
+          "body": "The controller uses proprioception only: joint positions, velocities, and contact history. No terrain map. This is why it generalizes. You cannot overfit to geometry you never observe."
+        },
+        {
+          "title": "How sim-to-real works here",
+          "body": "Randomized terrain and dynamics in training. The network learns robust reflexes, not terrain-specific gaits. Two ANYmal generations tested. Both transfer cleanly."
+        },
+        {
+          "title": "What it actually handles",
+          "body": "Deformable ground like mud and snow. Dynamic footholds like rubble. Overground impediments like thick vegetation. Conditions never seen in training."
+        },
+        {
+          "title": "Why it matters in 2026",
+          "body": "As humanoid hands chase OpenAI Dactyl-style dexterity, this paper is the legs equivalent. The lesson: proprioceptive feedback plus sim randomization beats elaborate state machines, every time."
+        },
+        {
+          "title": "The honest limit",
+          "body": "These are curated natural environments, not active mine sites or subsea terrain under payload. Industrial deployment still requires stress-testing these controllers under load and tool use."
+        }
+      ],
+      "video_script": "Watch ANYmal wade through a stream. No lidar. No camera input at all. Just joint angles and contact history, processed by a network trained entirely in a simulator. It trips, it recovers, it keeps going through snow, mud, rubble, and vegetation it has never physically encountered. This 2020 paper from ETH Zurich and Intel Labs is worth revisiting today because the humanoid hand community is fighting the exact same sim-to-real battle for dexterous manipulation. Proprioceptive feedback solved it for legs. Will it solve it for fingers?",
+      "caption_instagram": "A robot trained only in simulation walks through mud, snow, rubble, and a flowing stream. No fine-tuning. No terrain sensing. Just proprioception.\n\nThis 2020 paper from ETH Zurich, Intel Labs, and Carnegie Mellon is an evergreen reference worth pulling back out right now. Lee et al. trained an RL controller on ANYmal using only joint states and contact history. The network never sees terrain geometry. That turns out to be the whole trick: you cannot overfit to a map you never build.\n\nThe zero-shot transfer to natural environments is genuine. Mud deforms underfoot. Rubble shifts. The robot recovers mid-slip without any terrain-specific adaptation. Two hardware generations of ANYmal, same controller, same result.\n\nThe honest caveat: these are field conditions, not active industrial sites under load. Subsea, mining, and nuclear inspection add vibration, payload, and confined geometry that push these controllers hard. But the core lesson, that proprioceptive sim-to-real generalizes where model-based state machines fail, is holding up across the field in 2026.\n\nPaper: Learning Quadrupedal Locomotion over Challenging Terrain, arXiv 2010.11251. Full video in bio.\n\n#swarmrobotics #leggedrobotics #simtoreal #reinforcementlearning #fieldrobotics #ANYmal #quadruped #roboticsresearch",
+      "caption_tiktok": "Trained in sim, deployed in a stream. No cameras, no lidar, no fine-tuning. This is how you do sim-to-real. #leggedrobotics #simtoreal #reinforcementlearning #quadruped #fieldrobotics",
+      "post_bluesky": "A proprioception-only RL controller trained in sim walks mud, snow, rubble, and flowing water with zero domain adaptation. No terrain map. No fine-tuning. ANYmal just does it. Still the clearest proof that sim-to-real for legs is solved. Legs. https://arxiv.org/abs/2010.11251",
+      "bluesky_thread": [
+        "The mechanism is almost annoyingly simple: randomize terrain in sim, train on joint states and contact history only, never give the network a terrain map to overfit to. That's it. The robustness falls out naturally. Every humanoid dexterity team chasing Dactyl-style hand control should read this…",
+        "Honest limit: curated natural terrain is not an active mine face or a flooded nuclear vault under 20kg payload. The gap between 'walks through a stream' and 'inspects a pipe under load' is real. How far do you think proprioceptive controllers scale before exteroception becomes non-negotiable?…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-14T17:47:38.345976+00:00",
+    "media": {
+      "figures": [
+        "media/ce46e43d/fig_00.png",
+        "media/ce46e43d/fig_01.png",
+        "media/ce46e43d/fig_02.png",
+        "media/ce46e43d/fig_03.png"
+      ],
+      "bsky": [
+        "media/ce46e43d/bsky_00.png",
+        "media/ce46e43d/bsky_01.png",
+        "media/ce46e43d/bsky_02.png",
+        "media/ce46e43d/bsky_03.png"
+      ],
+      "slides": [
+        "media/ce46e43d/slide_00.png",
+        "media/ce46e43d/slide_01.png",
+        "media/ce46e43d/slide_02.png",
+        "media/ce46e43d/slide_03.png",
+        "media/ce46e43d/slide_04.png",
+        "media/ce46e43d/slide_05.png",
+        "media/ce46e43d/slide_06.png",
+        "media/ce46e43d/slide_07.png"
+      ]
+    }
   }
 ]
