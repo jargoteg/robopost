@@ -11150,7 +11150,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-14T00:15:45.608914+00:00",
     "media": {
       "figures": [
@@ -11173,7 +11173,9 @@
         "media/096f7a50/slide_07.png"
       ]
     },
-    "issue": 122
+    "issue": 122,
+    "scheduled_after": "2026-07-14T11:27:04.756502+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "a39d4640",
@@ -11475,7 +11477,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-14T03:43:58.669524+00:00",
     "media": {
       "figures": [
@@ -11500,7 +11502,9 @@
         "media/f2095897/slide_07.png"
       ]
     },
-    "issue": 124
+    "issue": 124,
+    "scheduled_after": "2026-07-14T11:27:04.756502+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "367084e7",
@@ -11562,7 +11566,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-14T03:44:27.949751+00:00",
     "media": {
       "figures": [
@@ -11588,6 +11592,92 @@
         "media/367084e7/slide_07.png"
       ]
     },
-    "issue": 125
+    "issue": 125,
+    "scheduled_after": "2026-07-14T11:27:04.756502+00:00",
+    "queue_notified": true
+  },
+  {
+    "draft_id": "4273431a",
+    "paper": {
+      "id": "2607.11627v1",
+      "title": "IBPA: Real-time Free-form Manifold Mesh Reconstruction via Incremental Ball Pivoting with Integrated Hole Detection",
+      "abstract": "Both Remotely Operated underwater Vehicles (ROVs) and Autonomous Underwater Vehicles (AUVs) are frequently deployed to acquire geometric bathymetric data. However, it is often discovered post-survey that the acquired data coverage is incomplete. Given the high operational cost associated with underwater deployments, it is essential to incrementally visualize surface coverage in real-time to support informed decision-making by both the operators of ROVs and the AUVs during data collection. In addition, traditional incremental surface reconstruction methods, such as Digital Terrain Models (DTMs), are inherently limited in expressiveness: they represent surfaces as height fields, allows only one elevation value per $(x, y)$ coordinate and thus cannot capture overhangs or vertical structures. To overcome these limitations, we adapt the original Ball Pivoting Algorithm (BPA) into an incremental, real-time, and free-form surface reconstruction method, referred to as Incremental BPA (IBPA). Our method incrementally constructs an orientable, manifold mesh from streaming point cloud data without imposing assumptions regarding point cloud overlap or spatial distribution. Furthermore, we introduce a hole detection mechanism that identifies and highlights incomplete mesh regions. Compared to existing approaches, our method supports more complex surface topologies without prior structural assumptions. The source code of our reference implementation is available: https://github.com/Mauhing/Incremental-BPA",
+      "authors": [
+        "Mauhing Yip",
+        "Mohit Singh",
+        "Kostas Alexis",
+        "Christian Schellewald",
+        "Annette Stahl"
+      ],
+      "url": "https://arxiv.org/abs/2607.11627v1",
+      "source": "arxiv",
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "ROV resurveys cost thousands per hour. IBPA flags coverage gaps live.",
+      "commentary": "IBPA adapts the Ball Pivoting Algorithm to run incrementally on streaming point clouds, producing a manifold mesh in real time rather than post-survey. The key addition is hole detection: the system flags incomplete mesh regions while the vehicle is still in the water, so operators can redirect before surfacing. The practical win over DTMs is real, since DTMs literally cannot represent overhangs or vertical structures that are common in subsea environments like pipelines, hull undersides, and reef topography. Honest caveat: the paper does not report compute benchmarks against competing real-time methods, so 'real-time' needs scrutiny on actual ROV hardware under comms latency.",
+      "slides": [
+        {
+          "title": "The Problem: Gaps Found Too Late",
+          "body": "ROV and AUV surveys often reveal incomplete coverage only after the vehicle surfaces. Redeployment costs are high. Any gap caught live saves a full mission."
+        },
+        {
+          "title": "Why DTMs Fail Here",
+          "body": "Digital Terrain Models store one elevation per (x,y) cell. Overhangs, vertical pipe faces, and hull undersides are invisible to them. Subsea geometry breaks this assumption constantly."
+        },
+        {
+          "title": "What IBPA Does",
+          "body": "Incremental Ball Pivoting Algorithm builds an orientable manifold mesh from streaming point cloud data. No prior assumptions on overlap or spatial distribution. Topology is unconstrained."
+        },
+        {
+          "title": "The Hole Detection Layer",
+          "body": "Incomplete mesh regions are identified and highlighted in real time. Operators or autonomous planners see exactly where coverage is missing while the vehicle is still on station."
+        },
+        {
+          "title": "What Needs Scrutiny",
+          "body": "No head-to-head compute timing against competing real-time methods is reported. Performance on actual ROV hardware under bandwidth constraints is the open question before field deployment."
+        },
+        {
+          "title": "Open Source",
+          "body": "Reference implementation is public on GitHub. That matters: subsea teams can benchmark it against their own point cloud pipelines without waiting for a commercial release."
+        }
+      ],
+      "video_script": "Every hour an ROV stays underwater costs serious money. So when a survey comes back with gaps, sending the vehicle back down is brutal. IBPA is a real-time mesh reconstruction method that watches for those gaps while the vehicle is still down there. It uses a modified Ball Pivoting Algorithm to build a full manifold mesh from streaming point clouds, no height-field shortcuts, so overhangs and vertical structures actually show up. The hole detection layer flags incomplete regions live. Code is open source. My question: has anyone run this on actual embedded ROV compute, or is it still workstation-only?",
+      "caption_instagram": "ROV resurvey costs thousands per hour. Catching a coverage gap after surfacing is an expensive mistake.\n\nIBPA, Incremental Ball Pivoting Algorithm, reconstructs a manifold mesh from live streaming point cloud data and flags holes in real time. The operator sees what's missing while the vehicle is still on station.\n\nThe important part: it's not limited to height-field DTMs. It handles overhangs, vertical pipe faces, hull geometry, reef structures. The kind of topology that breaks Digital Terrain Models completely.\n\nHonest caveat: the paper doesn't benchmark compute against competing real-time methods, so performance on actual embedded ROV hardware is still an open question. But the code is public, so that's testable. Worth watching for subsea inspection and AUV autonomy pipelines.\n\nPaper: 'IBPA: Real-time Free-form Manifold Mesh Reconstruction via Incremental Ball Pivoting with Integrated Hole Detection' arXiv:2607.11627\n\n#SwarmRobotics #UnderwaterRobotics #ROV #AUV #SubseaInspection #PointCloud #RoboticInspection #FieldRobotics",
+      "caption_tiktok": "ROV survey has gaps. Catch them live or pay for a full redeployment. IBPA does real-time mesh reconstruction with built-in hole detection. Open source. #ROV #UnderwaterRobotics #FieldRobotics #Inspection",
+      "post_bluesky": "ROV resurveys cost thousands per hour. IBPA reconstructs a manifold mesh from streaming point clouds live and flags coverage gaps before you surface. Overhangs, verticals, complex topology included. https://arxiv.org/abs/2607.11627v1",
+      "bluesky_thread": [
+        "The core move: ditching DTMs entirely. Height fields can't represent overhangs or vertical structures, which are everywhere in subsea inspection. BPA adapted to incremental streaming gives you actual topology. Hole detection tells the operator or planner where to steer next.",
+        "What I'd want to see before trusting this in a real pipeline: compute timing on embedded ROV hardware, not a workstation. And behavior under sparse or noisy sonar returns, not just clean lab point clouds. Code is open so someone can run that test. Anyone done it yet?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-14T09:59:52.651305+00:00",
+    "media": {
+      "figures": [
+        "media/4273431a/fig_04.png",
+        "media/4273431a/fig_02.png",
+        "media/4273431a/fig_03.png"
+      ],
+      "bsky": [
+        "media/4273431a/bsky_00.png",
+        "media/4273431a/bsky_01.png",
+        "media/4273431a/bsky_02.png",
+        "media/4273431a/bsky_03.png"
+      ],
+      "slides": [
+        "media/4273431a/slide_00.png",
+        "media/4273431a/slide_01.png",
+        "media/4273431a/slide_02.png",
+        "media/4273431a/slide_03.png",
+        "media/4273431a/slide_04.png",
+        "media/4273431a/slide_05.png",
+        "media/4273431a/slide_06.png",
+        "media/4273431a/slide_07.png"
+      ]
+    },
+    "issue": 126
   }
 ]

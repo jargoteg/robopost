@@ -1,36 +1,25 @@
 {
-  "ts": "2026-07-14T03:42",
-  "collected": 219,
-  "dedup_dropped": 52,
-  "after_dedup": 167,
+  "ts": "2026-07-14T10:00",
+  "collected": 222,
+  "dedup_dropped": 58,
+  "after_dedup": 164,
   "score_hist": {
-    "0": 15,
-    "1": 25,
-    "2": 33,
-    "3": 44,
-    "4": 29,
-    "5": 15,
-    "6": 5,
+    "0": 18,
+    "1": 20,
+    "2": 42,
+    "3": 35,
+    "4": 30,
+    "5": 14,
+    "6": 4,
     "7": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 6,
+  "ranked_above_floor": 5,
   "split": {
     "videos": 0,
-    "papers": 2,
-    "news": 4
+    "papers": 0,
+    "news": 5
   },
   "floor": 6,
-  "picked": [
-    {
-      "t": "Robust bipedal locomotion on flowable slopes via f",
-      "type": null,
-      "video": false
-    },
-    {
-      "t": "Towards Human-level Dexterous Teleoperation",
-      "type": null,
-      "video": false
-    }
-  ]
+  "picked": []
 }
