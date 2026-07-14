@@ -11228,7 +11228,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-14T00:17:22.892146+00:00",
     "media": {
       "figures": [
@@ -11251,7 +11251,9 @@
         "media/a39d4640/slide_07.png"
       ]
     },
-    "issue": 123
+    "issue": 123,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "e26c3f5c",
