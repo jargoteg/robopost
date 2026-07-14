@@ -1224,5 +1224,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "4273431a",
+    "paper_id": "2607.11627v1",
+    "title": "IBPA: Real-time Free-form Manifold Mesh Reconstruction via Incremental Ball Pivoting with Integrated Hole Detection",
+    "format": "carousel",
+    "hook": "ROV resurveys cost thousands per hour. IBPA flags coverage gaps live.",
+    "posted_at": "2026-07-14T17:45:00.537163+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqmr3z5w7s2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
