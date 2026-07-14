@@ -1139,5 +1139,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "83f3a185",
+    "paper_id": "doi-10.1002_rob.70289",
+    "title": "A Ground Mobile Robot for Autonomous Terrestrial Laser Scanning‐Based Field Phenotyping",
+    "format": "carousel",
+    "hook": "Manual crop measurements are still the bottleneck. Not for long.",
+    "posted_at": "2026-07-14T03:45:42.167851+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqlc7bpmdm2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

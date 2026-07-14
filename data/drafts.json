@@ -10508,7 +10508,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-13T15:20:12.423359+00:00",
     "media": {
       "bsky": [
@@ -10536,7 +10536,9 @@
     },
     "issue": 119,
     "scheduled_after": "2026-07-14T02:40:30.567637+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "412919d7",
@@ -11471,7 +11473,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-14T03:43:58.669524+00:00",
     "media": {
       "figures": [
@@ -11495,7 +11497,8 @@
         "media/f2095897/slide_06.png",
         "media/f2095897/slide_07.png"
       ]
-    }
+    },
+    "issue": 124
   },
   {
     "draft_id": "367084e7",
@@ -11557,7 +11560,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-14T03:44:27.949751+00:00",
     "media": {
       "figures": [
@@ -11582,6 +11585,7 @@
         "media/367084e7/slide_06.png",
         "media/367084e7/slide_07.png"
       ]
-    }
+    },
+    "issue": 125
   }
 ]
