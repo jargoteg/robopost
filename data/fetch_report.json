@@ -1,23 +1,23 @@
 {
-  "ts": "2026-07-14T23:16",
+  "ts": "2026-07-14T23:18",
   "collected": 221,
   "dedup_dropped": 62,
   "after_dedup": 159,
   "score_hist": {
-    "0": 13,
-    "1": 25,
-    "2": 27,
-    "3": 39,
-    "4": 36,
+    "0": 15,
+    "1": 20,
+    "2": 23,
+    "3": 41,
+    "4": 40,
     "5": 15,
-    "6": 4
+    "6": 5
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 4,
+  "ranked_above_floor": 5,
   "split": {
     "videos": 0,
     "papers": 0,
-    "news": 4
+    "news": 5
   },
   "floor": 6,
   "picked": []
