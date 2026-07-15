@@ -13622,7 +13622,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-15T11:02:46.022239+00:00",
     "media": {
       "figures": [
@@ -13644,6 +13644,7 @@
         "media/b3bff7c8/slide_06.png",
         "media/b3bff7c8/slide_07.png"
       ]
-    }
+    },
+    "issue": 136
   }
 ]
