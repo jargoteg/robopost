@@ -13733,6 +13733,8 @@
       ],
       "video": "media/60a0d0cd/video.mp4"
     },
-    "issue": 137
+    "issue": 137,
+    "scheduled_after": "2026-07-15T17:37:01.359648+00:00",
+    "queue_notified": true
   }
 ]
