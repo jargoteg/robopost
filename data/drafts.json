@@ -12843,5 +12843,397 @@
         "media/084937a3/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "9a437321",
+    "paper": {
+      "id": "2607.12965v1",
+      "title": "MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality",
+      "abstract": "Reliable autonomous navigation in unstructured off-road environments remains a critical unsolved challenge due to extreme terrain diversity, drastic illumination variations and acute sensor degradation. Recent developments have approached the problem as a traversability costmap estimation or visual navigation task. However, many exhibit heavy reliance on RGB modality, leading to poor performance in varied illumination such as glares, shadows or low ambient light. Achieving robust generalization in such conditions requires integrating modalities that provide supplementary scene information. Such multi-modal methods suffer from a rigid dependency on the presence of near-perfect sensor inputs, leaving them unable to robustly handle sensor degradation or individual modality failure. To address these limitations, we introduce MAMMOTH (MAsking Multi-Modal inputs for Off-road Traversability Heuristic-informed navigation), a unified end-to-end navigation policy for robust off-road visual-goal-conditioned navigation and undirected exploration. Specifically, MAMMOTH efficiently fuses multi-modal observations (RGB, Thermal, 3D Pointcloud and Ego Velocity) and is trained with a modality dropout scheme, enabling it to generalize to missing modalities at inference time. Furthermore, we employ a diffusion policy to learn the joint conditional probability distribution of physically-grounded trajectories and a intrinsic traversability heuristic. MAMMOTH utilizes this heuristic to prefer safer, smoother trajectories. We validate MAMMOTH through extensive real-world robot experiments in distinct off-road environments, including night-time operation. Our results demonstrate superior performance, with significant improvements in collision avoidance, terrain-aware planning and generalization to missing modalities. The code and dataset used for this work will be made publicly available.",
+      "authors": [
+        "Ahaan Kotian",
+        "Shivani Subramanyan",
+        "Suresh Sundaram"
+      ],
+      "url": "https://arxiv.org/abs/2607.12965v1",
+      "source": "arxiv",
+      "score": 5.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your off-road robot goes blind at night. MAMMOTH keeps driving.",
+      "commentary": "MAMMOTH trains a diffusion policy over RGB, thermal, 3D pointcloud, and ego velocity, then randomly drops modalities during training so the model learns to cope with sensor failure at inference time. The traversability heuristic baked into the diffusion process is the genuinely clever bit: it doesn't just plan a path, it biases the trajectory distribution toward smoother, safer terrain without a separate costmap module. Real-world night tests are a meaningful bar that most off-road papers avoid. The honest caveat: modality dropout during training is not a new idea, and the paper will need to quantify exactly how much each dropped modality degrades performance before the robustness claims fully land.",
+      "slides": [
+        {
+          "title": "The problem: sensors lie",
+          "body": "RGB fails in glare, shadows, and darkness. Most off-road systems lean heavily on RGB anyway. One bad sensor reading cascades into a bad trajectory. This is the gap MAMMOTH targets."
+        },
+        {
+          "title": "Four inputs, none guaranteed",
+          "body": "RGB, thermal, 3D pointcloud, ego velocity. During training, modalities are randomly masked. At inference the model has seen every combination of missing inputs and learned to cope."
+        },
+        {
+          "title": "Diffusion policy, not a costmap",
+          "body": "MAMMOTH learns the joint distribution over trajectories and a traversability heuristic. The diffusion sampler preferentially draws smoother, safer paths without a separate costmap pipeline."
+        },
+        {
+          "title": "Tested in the dark",
+          "body": "Real-robot experiments include night-time off-road operation. Not a sim result. Distinct terrain types across multiple environments. Collision avoidance and terrain-aware planning are the reported metrics."
+        },
+        {
+          "title": "What to watch",
+          "body": "Modality dropout training exists in prior work. The paper needs per-modality ablation numbers to prove each sensor's removal costs what you'd expect. That table will make or break the robustness claim."
+        },
+        {
+          "title": "Why it matters for field robots",
+          "body": "Subsea, mining, search and rescue: sensor degradation is the norm, not the exception. A policy that degrades gracefully across sensor loss is more deployable than one that assumes clean inputs."
+        }
+      ],
+      "video_script": "Most off-road navigation papers test in daylight with every sensor working. MAMMOTH does something different: it trains with sensors randomly switched off, so the robot learns to cope before it ever hits the field. Four modalities, RGB, thermal, pointcloud, velocity. Any combination can go missing. The diffusion policy doesn't just pick a path, it samples toward smoother, safer terrain. And they actually ran this at night. Real robot, real darkness. The question I have: show me the ablation table. Which missing sensor hurts most?",
+      "caption_instagram": "Your off-road robot goes blind at night. MAMMOTH keeps driving.\n\nMost multi-modal navigation systems assume all sensors are working. That assumption fails constantly in the field: glare kills RGB, dust clogs lidar, thermal drifts in temperature extremes.\n\nMAMMOTH trains with random modality dropout across RGB, thermal, 3D pointcloud, and ego velocity. By inference time it has seen every failure combination. The diffusion policy learns to bias trajectory samples toward traversable, smooth terrain without a separate costmap module.\n\nThey validated this at night, on real hardware, in multiple distinct off-road environments. That's a harder bar than most papers set. The open question: the per-modality ablation numbers will determine whether the robustness claims are tight or loose. Code and dataset are being released, so we'll be able to check.\n\nPaper: MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality, arXiv 2607.12965\n\n#swarmrobotics #fieldrobotics #offroad #autonomousnavigation #diffusionpolicy #sensorrobustness #roboticsresearch",
+      "caption_tiktok": "Off-road robot, sensors failing, still navigating at night. The trick is training it to cope with missing inputs before deployment. #fieldrobotics #offroad #autonomousnavigation #robotics",
+      "post_bluesky": "Your off-road robot goes blind at night. MAMMOTH keeps driving. Random modality dropout at training time so sensor failure at deployment is expected, not catastrophic. Real night-time tests. https://arxiv.org/abs/2607.12965v1",
+      "bluesky_thread": [
+        "The genuinely clever part: the diffusion policy learns a traversability heuristic jointly with trajectories. No separate costmap. It preferentially samples smoother paths during inference. That's a cleaner architecture than most costmap-then-plan pipelines.",
+        "Honest caveat: modality dropout training isn't new. The paper needs a tight per-modality ablation table to prove each sensor's removal costs exactly what you'd expect. Without those numbers the robustness claim is qualitative. Code is dropping, so we can run it ourselves. Anyone else planning to…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T08:30:43.447284+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/9a437321/bsky_00.png",
+        "media/9a437321/bsky_01.png",
+        "media/9a437321/bsky_02.png",
+        "media/9a437321/bsky_03.png"
+      ],
+      "slides": [
+        "media/9a437321/slide_00.png",
+        "media/9a437321/slide_01.png",
+        "media/9a437321/slide_02.png",
+        "media/9a437321/slide_03.png",
+        "media/9a437321/slide_04.png",
+        "media/9a437321/slide_05.png",
+        "media/9a437321/slide_06.png",
+        "media/9a437321/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "f1c75450",
+    "paper": {
+      "id": "2607.12275v1",
+      "title": "Flatness-Preserving Residual Learning for Real-Time Tight Quadrotor Formation Flight",
+      "abstract": "Quadrotors flying in tight formations are severely affected by turbulent aerodynamic interactions, such as downwash, that can cause catastrophic collisions if left unmodeled. To compensate for these effects, we propose a physics-informed residual dynamics learning framework that captures complex aerodynamic interactions while ensuring the joint multi-quadrotor system remains differentially flat. We leverage this preserved flatness to design a computationally efficient feedback linearization controller that is easily tunable with linear control techniques and cancels aerodynamic disturbances via feedforward compensation. Hardware experiments demonstrate our framework reduces average tracking errors by 31% compared to nominal baselines. Crucially, our lightweight approach matches the tracking performance of state-of-the-art nonlinear model predictive control (NMPC) while requiring an order of magnitude less computation. We are the first to show that stable, tight formation flight can be achieved with under 30 seconds of training data and a 5ms loop rate, unlocking high-fidelity aerodynamic compensation for compute-constrained flight stacks.",
+      "authors": [
+        "Pei-An Hsieh",
+        "Fengjun Yang",
+        "Nikolai Matni",
+        "M. Ani Hsieh"
+      ],
+      "url": "https://arxiv.org/abs/2607.12275v1",
+      "source": "arxiv",
+      "score": 5.5,
+      "video_url": "https://www.youtube.com/watch?v=uF26IkRFQMk",
+      "video_title": "Flatness-Preserving Residual Learning for Real-Time Tight Quadrotor Formation Flight"
+    },
+    "content": {
+      "format": "video",
+      "hook": "30 seconds of training data. NMPC-level accuracy. 5ms loop.",
+      "commentary": "Tight quadrotor formations are genuinely hard because downwash from one drone kicks the neighbors around in ways that are nasty to model from first principles. This paper learns a residual correction on top of a nominal flat model, keeping differential flatness intact so feedback linearization still works. The payoff is real: 31% tracking error reduction, matching NMPC at one tenth the compute, on actual hardware. The honest caveat is that 30-second training data claim needs scrutiny under formation geometry changes. Does the learned residual generalize when you rotate the formation or add a fifth drone? The paper doesn't say.",
+      "slides": [
+        {
+          "title": "The problem: drones fighting each other",
+          "body": "In tight formation, downwash from one quadrotor destabilizes its neighbors. Standard controllers ignore this. The result is drift, oscillation, and collision risk at close spacing."
+        },
+        {
+          "title": "Key idea: residual learning, flatness kept",
+          "body": "A small neural network learns the aerodynamic disturbance as a residual on the flat dynamics. Crucially, differential flatness is preserved, so feedback linearization stays valid and the controller stays simple."
+        },
+        {
+          "title": "Why flatness matters here",
+          "body": "Flatness lets you map trajectory references directly to motor commands with no iterative solve. Lose flatness and you lose that shortcut. Keeping it means the learned correction costs almost nothing computationally."
+        },
+        {
+          "title": "The numbers that matter",
+          "body": "31% reduction in average tracking error versus nominal baseline. Matches NMPC accuracy. Runs at 5ms loop rate. Trained on under 30 seconds of flight data. Tested on real hardware, not simulation."
+        },
+        {
+          "title": "Compute cost vs. NMPC",
+          "body": "NMPC solves an optimization problem every cycle. This framework skips that entirely. Order-of-magnitude less computation opens it to microcontrollers and edge flight stacks with no GPU onboard."
+        },
+        {
+          "title": "What's still open",
+          "body": "Generalization to new formation geometries or drone counts isn't shown. Real inspection or SAR scenarios need formations that reconfigure. That's the next test this result has to survive."
+        }
+      ],
+      "video_script": "Quadrotors flying tight need to fight each other's downwash every single second. This team's answer: learn the aerodynamic disturbance as a residual correction, but keep the math flat so a simple linear controller can cancel it in real time. Thirty seconds of training data. Five millisecond loop. Tracking accuracy that matches full nonlinear MPC at one tenth the compute. Watch the hardware runs. The formations hold. The question I'd ask the authors: does this survive a formation geometry swap mid-flight?",
+      "caption_instagram": "30 seconds of training data is all it takes to teach a quadrotor swarm to stop fighting each other's turbulence.\n\nTight formations are brutal. The downwash from one drone hammers its neighbors and standard controllers just ignore it. This paper learns the aerodynamic residual on top of a flat dynamical model, and here's the clever part: it keeps differential flatness intact. That means feedback linearization still works, no expensive optimization solve every cycle.\n\nThe hardware results: 31% tracking error reduction versus the nominal baseline, NMPC-level accuracy, and a 5ms control loop. On real quadrotors, not simulation. The compute cost is an order of magnitude below NMPC, which matters enormously if you want this on a real flight stack without a dedicated GPU.\n\nMy honest caveat: the 30-second training claim is impressive but I want to see it hold when the formation geometry changes or a fifth drone joins. Residual models can be brittle outside the training distribution. That's the field test this result still needs.\n\nFull video linked in bio. Paper: 'Flatness-Preserving Residual Learning for Real-Time Tight Quadrotor Formation Flight', arXiv 2607.12275.\n\n#swarmrobotics #quadrotor #aerodynamics #controltheory #fieldrobotics #robotics #UAV",
+      "caption_tiktok": "30 seconds of data. Drones stop crashing into each other's turbulence. The math is actually clever. Full video in bio. #swarmrobotics #drones #robotics #controltheory",
+      "post_bluesky": "30 sec of training data. 5ms loop. Matches NMPC at 1/10th the compute.\n\nTight quadrotor formations = downwash chaos. This framework learns the residual aerodynamics while keeping differential flatness intact. Hardware shows 31% tracking error drop. arxiv.org/abs/2607.12275v1",
+      "bluesky_thread": [
+        "The clever bit: preserving flatness means feedback linearization still works. No iterative solve per cycle. The learned correction is a feedforward term, not a replanning problem. That's why the 5ms loop is believable.",
+        "What I want to see next: formation geometry changes mid-flight. The 30-sec training claim is impressive but residual models can be brittle when the relative positions shift. Anyone know if they tested reconfiguration? Asking because SAR and inspection both need it."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-15T08:31:13.111050+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/f1c75450/bsky_00.png",
+        "media/f1c75450/bsky_01.png",
+        "media/f1c75450/bsky_02.png",
+        "media/f1c75450/bsky_03.png"
+      ],
+      "slides": [
+        "media/f1c75450/slide_00.png",
+        "media/f1c75450/slide_01.png",
+        "media/f1c75450/slide_02.png",
+        "media/f1c75450/slide_03.png",
+        "media/f1c75450/slide_04.png",
+        "media/f1c75450/slide_05.png",
+        "media/f1c75450/slide_06.png",
+        "media/f1c75450/slide_07.png"
+      ],
+      "video": "media/f1c75450/video.mp4"
+    },
+    "issue": 132
+  },
+  {
+    "draft_id": "6302de96",
+    "paper": {
+      "id": "2607.12861v1",
+      "title": "Unveiling Complex Collective Behaviors from Simple Rewards",
+      "abstract": "Multi-agent Reinforcement Learning (MARL) holds great potential for robot swarms, but the black-box nature of neural policies complicates strategic analysis, limiting multi-robot applications. Furthermore, complex swarm behaviors can surprisingly emerge from simple rewards without explicit aggregation incentives. Unveiling the mechanisms behind this emergence is critical, but the disconnection between simple rewards and collective behaviors exacerbates interpretability challenges. This paper aims to reveal the hidden mechanisms in this process. We propose a two-stage EEC (\\LinkIII) explanatory framework. This includes a novel analytical tool called the Agent Response Map (ARM), which reveals agents' decision-making patterns across space and identifies regions of aggregation and avoidance. ARM reveals that the robots implicitly learn the geometric fields of the environment and utilize these structures as desired targets for coordinated movement. We validate this finding across two distinct tasks: a cooperative multi-robot shape assembly and a competitive predator-prey pursuit-evasion. 1) In the cooperative task, ARM identifies the unoccupied target interior as the desired destination for robot navigation. As the center becomes occupied, this target region automatically shifts toward the boundary, demonstrating the robots' capacity to autonomously explore unoccupied areas. 2) In the competitive task, ARM surprisingly identifies the boundary of the predators' Voronoi diagram as the convergence destination for prey agents. Together, these two tasks demonstrate the capability of ARM to discover the hidden geometric structures underlying MARL policies in robot swarms.",
+      "authors": [
+        "Yize Mi",
+        "Jianan Li",
+        "Liang Li",
+        "Shiyu Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2607.12861v1",
+      "source": "arxiv",
+      "score": 5.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Simple rewards produce complex swarms. Nobody could explain why. Until now.",
+      "commentary": "Mi et al. tackle one of MARL's most uncomfortable facts: robot swarms develop sophisticated collective behavior from rewards that contain zero explicit instructions to cooperate. Their Agent Response Map visualizes where individual agents want to move across every spatial position, revealing that policies implicitly encode geometric structures like Voronoi boundaries and shape interiors. The Voronoi prey-convergence result is genuinely surprising and not obvious from reward design alone. Honest caveat: both tasks are simulated, and whether these geometric attractors survive real sensor noise and actuation delay in a physical swarm remains completely untested.",
+      "slides": [
+        {
+          "title": "Simple reward, complex swarm",
+          "body": "MARL swarms develop coordinated geometry-following behavior from rewards that never mention coordination. The mechanism was unknown. This paper builds a tool to find it."
+        },
+        {
+          "title": "Agent Response Map explained",
+          "body": "ARM asks: at every point in space, what action does this agent's policy produce? Plotting that across the environment reveals hidden attractors: regions robots implicitly treat as targets."
+        },
+        {
+          "title": "Cooperative task: shape assembly",
+          "body": "ARM shows robots target the unoccupied interior of the goal shape. Once the center fills, the target region automatically shifts to the boundary. No explicit rule encodes this. It emerges."
+        },
+        {
+          "title": "Competitive task: predator-prey",
+          "body": "Prey agents converge to the boundary of the predators' Voronoi diagram, not just any escape route. The policy learned optimal geometric evasion from a reward that only penalized capture."
+        },
+        {
+          "title": "Why interpretability here matters",
+          "body": "Black-box swarm policies block deployment in safety-critical settings. ARM gives operators a spatial readout of policy intent without retraining or modifying the original policy."
+        },
+        {
+          "title": "The open question",
+          "body": "Both validations are simulation-only. Real swarms add sensor noise, comm latency, and mechanical variance. Whether ARM-identified attractors persist in hardware is untested and critical."
+        }
+      ],
+      "video_script": "Swarm robots trained on simple rewards spontaneously develop complex collective strategies. Nobody programmed them to do it. A new tool called the Agent Response Map visualizes exactly why. It maps every agent's preferred action across space, exposing hidden geometric attractors. In one experiment, prey learned to flee to the boundary of the predators' Voronoi diagram. Nobody told them that. The reward just said don't get caught. The geometry emerged on its own. So here's what I want to know: would these attractors survive real hardware?",
+      "caption_instagram": "Swarm robots trained on simple rewards spontaneously learn to track Voronoi boundaries and geometric shape interiors. Nobody programmed that. The reward just said 'assemble' or 'don't get caught.'\n\nThis paper introduces the Agent Response Map, a tool that plots each agent's preferred action at every spatial location. The result is a field map of the policy's hidden logic. In the predator-prey task, prey converge to the Voronoi boundary of the predators. In shape assembly, the target region shifts from interior to boundary as cells fill.\n\nThe clever part: ARM requires no modification to the trained policy. It's a post-hoc analysis tool, which means it could apply to existing MARL deployments.\n\nThe honest caveat: fully simulation-based. Whether these geometric attractors hold under real sensor noise and communication dropout in a physical swarm is still open. That gap matters a lot if you want to deploy this.\n\nPaper: 'Unveiling Complex Collective Behaviors from Simple Rewards' arXiv:2607.12861\n\n#swarmrobotics #multiagentRL #MARL #roboticsresearch #collectiveintelligence #interpretableAI #robotswarms",
+      "caption_tiktok": "Swarm robots learned Voronoi geometry from a reward that never mentioned it. New tool finally shows you why. #swarmrobotics #MARL #robotics #interpretableAI",
+      "post_bluesky": "Simple reward, no cooperation instruction. Yet swarms learn Voronoi geometry and shape-boundary targeting on their own. New Agent Response Map finally shows the hidden mechanism. Simulation only so far, but the analysis approach is the useful part. https://arxiv.org/abs/2607.12861v1",
+      "bluesky_thread": [
+        "The Voronoi prey result is the most surprising finding. Prey converge to predator Voronoi boundaries, which is provably near-optimal evasion geometry. The reward just said 'avoid capture.' The policy figured out the math independently. That's either impressive emergence or alarming opacity…",
+        "Both tasks are simulated. The real test is whether ARM-identified attractors survive physical hardware: sensor dropout, actuation lag, comm latency. Has anyone seen MARL interpretability tools validated on actual robot swarms? Because I haven't, and that's the gap that matters most right now."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T08:33:06.629257+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/6302de96/bsky_00.png",
+        "media/6302de96/bsky_01.png",
+        "media/6302de96/bsky_02.png",
+        "media/6302de96/bsky_03.png"
+      ],
+      "slides": [
+        "media/6302de96/slide_00.png",
+        "media/6302de96/slide_01.png",
+        "media/6302de96/slide_02.png",
+        "media/6302de96/slide_03.png",
+        "media/6302de96/slide_04.png",
+        "media/6302de96/slide_05.png",
+        "media/6302de96/slide_06.png",
+        "media/6302de96/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "cf59d681",
+    "paper": {
+      "id": "2607.12544v1",
+      "title": "Edge-Aware Thermal Infrared UAV Swarm Tracking",
+      "abstract": "Thermal infrared (TIR) imaging is essential for UAV swarm operations in visually degraded environments. However, tracking tiny UAVs remains challenging due to limited appearance cues, frequent occlusions, and rapid maneuvers. Despite significant progress driven by benchmarks such as the Anti-UAV challenge, existing methods primarily prioritize accuracy while overlooking the computational constraints of real-time edge deployment. The standard Kalman Filter (KF) offers the efficiency required for edge devices, yet its constant-velocity assumption often breaks down under highly dynamic UAV motion and thermal sensor jitter. More sophisticated nonlinear estimators can improve robustness but often introduce additional computational costs. To address this gap, we propose an edge-aware online tracking pipeline centered on the Adaptive Kinematic Kalman Filter (AKKF), which augments the linear KF with state-dependent kinematic modeling while preserving real-time efficiency. Combined with transient false-positive suppression and kinematics-driven predictive coasting, the presented pipeline improves trajectory continuity under challenging TIR conditions. Experiments on the Beyond Strong Baseline (BSB) benchmark provide a starting point for edge-aware UAV tracking by jointly evaluating tracking performance and computational efficiency, offering insights toward future real-time deployment.",
+      "authors": [
+        "Yu-Hsi Chen"
+      ],
+      "url": "https://arxiv.org/abs/2607.12544v1",
+      "source": "arxiv",
+      "score": 5.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Kalman filters fail on fast UAVs. Here's the fix that runs on edge hardware.",
+      "commentary": "Standard Kalman filters assume constant velocity. Against a rapidly maneuvering UAV in thermal IR, that assumption breaks fast, producing track fragmentation and false positives. This paper introduces AKKF, which swaps in state-dependent kinematic modeling while keeping the computational budget low enough for edge deployment. The transient false-positive suppression and predictive coasting are practical additions. Honest caveat: the BSB benchmark is a starting point, not a field trial, and we don't know how AKKF holds up against coordinated swarm occlusions at scale.",
+      "slides": [
+        {
+          "title": "Kalman filter vs fast UAVs",
+          "body": "Constant-velocity assumption breaks under rapid maneuvers and thermal sensor jitter. Track continuity degrades exactly when it matters most: visually degraded, high-dynamic conditions."
+        },
+        {
+          "title": "The core fix: AKKF",
+          "body": "Adaptive Kinematic Kalman Filter adds state-dependent motion modeling to a standard KF. Improves robustness to nonlinear UAV motion without the compute cost of full nonlinear estimators like EKF or UKF."
+        },
+        {
+          "title": "Two supporting mechanisms",
+          "body": "Transient false-positive suppression kills spurious detections before they corrupt tracks. Kinematics-driven predictive coasting maintains trajectory continuity through occlusion frames."
+        },
+        {
+          "title": "Edge deployment is the constraint",
+          "body": "Existing TIR tracking methods optimize accuracy. This pipeline co-optimizes accuracy and compute. BSB benchmark jointly scores both, which is the right framing for real deployment."
+        },
+        {
+          "title": "What it does not show yet",
+          "body": "Benchmark results only. No field hardware numbers, no swarm-scale occlusion stress test, no latency figures on a specific edge chip. Gap between BSB scores and operational deployment remains open."
+        },
+        {
+          "title": "Why it matters for real operations",
+          "body": "Counter-UAV and swarm coordination both need real-time TIR tracking on hardware that fits a small platform. Getting the motion model right at low compute cost is the unsolved bottleneck."
+        }
+      ],
+      "video_script": "Tracking tiny UAVs in thermal IR is harder than it looks. The targets are small, they maneuver fast, and your sensor jitters. Standard Kalman filters assume constant velocity, and that assumption collapses under real swarm dynamics. This paper proposes the Adaptive Kinematic Kalman Filter: same efficiency, smarter motion model. Add false-positive suppression and predictive coasting, and track continuity improves even through occlusions. The benchmark jointly scores accuracy and compute, which is rare and necessary. So here's the question: what edge hardware would you actually trust this on?",
+      "caption_instagram": "Kalman filters are cheap. They're also wrong when your target is pulling rapid maneuvers in a thermal image.\n\nStandard KF assumes constant velocity. Against a fast UAV in degraded visual conditions, that breaks track continuity at the worst possible moments. Most recent work has chased accuracy on benchmarks like Anti-UAV while ignoring the compute budget an edge device actually has.\n\nThis paper proposes AKKF: Adaptive Kinematic Kalman Filter. It adds state-dependent kinematic modeling to a linear KF backbone, keeping compute low while handling nonlinear motion better. Paired with transient false-positive suppression and kinematics-driven predictive coasting, the pipeline holds tracks through occlusions and sensor jitter.\n\nHonest read: the BSB benchmark results are a useful starting point, but there are no field hardware numbers here yet. The gap between benchmark accuracy and operational deployment on a real edge chip is still open. Worth watching when field data follows.\n\nPaper: Edge-Aware Thermal Infrared UAV Swarm Tracking, arXiv 2607.12544\n\n#SwarmRobotics #UAVTracking #ThermalImaging #EdgeAI #CounterUAV #RoboticsResearch #ComputerVision",
+      "caption_tiktok": "Kalman filter meets fast UAVs in thermal IR, and it fails. Here's the fix that actually runs on edge hardware. #UAV #SwarmRobotics #ThermalImaging #EdgeAI #Robotics",
+      "post_bluesky": "Kalman filters are fast. They're also wrong when a UAV is maneuvering hard in thermal IR. AKKF fixes the motion model without blowing the compute budget. Practical direction. https://arxiv.org/abs/2607.12544v1",
+      "bluesky_thread": [
+        "The clever bit: state-dependent kinematic modeling inside a KF backbone. Not full EKF/UKF cost, but better than constant-velocity. Transient false-positive suppression and predictive coasting handle the occlusion problem. Small changes, real impact on track continuity.",
+        "Caveat worth flagging: BSB benchmark only, no latency numbers on named edge hardware, no swarm-scale occlusion test. Benchmark accuracy and actual deployment are different problems. Curious what platform people think this needs to prove itself on."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T08:33:33.906153+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/cf59d681/bsky_00.png",
+        "media/cf59d681/bsky_01.png",
+        "media/cf59d681/bsky_02.png",
+        "media/cf59d681/bsky_03.png"
+      ],
+      "slides": [
+        "media/cf59d681/slide_00.png",
+        "media/cf59d681/slide_01.png",
+        "media/cf59d681/slide_02.png",
+        "media/cf59d681/slide_03.png",
+        "media/cf59d681/slide_04.png",
+        "media/cf59d681/slide_05.png",
+        "media/cf59d681/slide_06.png",
+        "media/cf59d681/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "3fccc78c",
+    "paper": {
+      "id": "2607.12702v1",
+      "title": "Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning",
+      "abstract": "Recent advances in humanoid robotics have highlighted the importance of deployable loco-manipulation skills. Dribbling a soccer ball while evading active opponents requires simultaneous balance, precise ball control, and awareness of a dynamic adversary under onboard sensing and real-time constraints. Existing approaches typically separate perception and motion, which can be effective in controlled settings but may fail under occlusions, fast ball movements, and complex opponent interactions, since perception is not directly optimized for control. We propose an integrated approach in which a temporal depth encoder is embedded into a reinforcement learning policy through a task-specific projection layer. We apply this framework to a simulated Booster T1 humanoid robot and show that it is possible to learn vision-based, opponent-aware dribbling directly from depth observations, without explicit state estimation or privileged scene information. The learned policy achieves 100% success in nominal target-driven dribbling and 96% success with a single static obstacle, while reaching 46% success against an actively moving ball-attacker opponent. These results demonstrate that the proposed framework supports robust vision-based dribbling in nominal and moderately dynamic settings, and provides a strong foundation for handling more challenging moving-adversary scenarios.",
+      "authors": [
+        "Flavio Maiorana",
+        "Valerio Spagnoli",
+        "Eugenio Bugli",
+        "Flavio Volpi",
+        "Daniele Affinita",
+        "Vincenzo Suriani"
+      ],
+      "url": "https://arxiv.org/abs/2607.12702v1",
+      "source": "arxiv",
+      "score": 5.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "100% dribbling success. 46% against a moving opponent.",
+      "commentary": "This paper embeds a temporal depth encoder directly into an RL policy via a task-specific projection layer, so perception is optimized for control rather than treated as a separate module. Trained in simulation on a Booster T1 humanoid, it achieves 100% success on target-driven dribbling and 96% with a static obstacle. The honest number is the 46% against an active ball-attacker, which the authors handle with appropriate honesty rather than burying it. The key architectural bet is that joint perception-control training outperforms modular pipelines under occlusion and fast ball movement. Sim-to-real transfer is the elephant in the room: none of this has touched a real pitch yet.",
+      "slides": [
+        {
+          "title": "The problem with modular pipelines",
+          "body": "Separate perception and control works in clean settings. Under occlusions, fast ball movement, and active opponents, perception errors compound into control failures because perception was never optimized for the downstream task."
+        },
+        {
+          "title": "The fix: embed depth into the policy",
+          "body": "A temporal depth encoder feeds directly into the RL policy through a task-specific projection layer. No explicit state estimation. No privileged scene info at test time. The policy learns what to see by learning what to do."
+        },
+        {
+          "title": "The good numbers",
+          "body": "100% success on target-driven dribbling. 96% with a single static obstacle. Tested in simulation on a Booster T1 humanoid under onboard sensing and real-time constraints."
+        },
+        {
+          "title": "The honest number",
+          "body": "46% success against an actively moving ball-attacker opponent. The authors call it a foundation, not a solution. That honesty matters more than the headline stats."
+        },
+        {
+          "title": "What is still missing",
+          "body": "Everything here is simulation. Sim-to-real transfer for dynamic dribbling on real turf, with real IMU noise and real opponent contact, is an open problem. The architecture is sound; the real test hasn't happened yet."
+        },
+        {
+          "title": "Why the approach is worth watching",
+          "body": "Joint perception-control training is the right direction for any loco-manipulation task where the environment is partially observable. Soccer is a clean, measurable testbed with clear success criteria."
+        }
+      ],
+      "video_script": "A humanoid robot dribbling a soccer ball sounds like a demo trick. But this paper is asking a harder question: can a robot evade an opponent that is actively trying to steal the ball, using only depth images, no privileged state info? The answer right now is 46 percent success. The honest part is that number is the point. They embedded a temporal depth encoder directly into the RL policy so perception and control train together. It works well in clean conditions. Moving opponents break it half the time. What would it take to close that gap on real turf?",
+      "caption_instagram": "100% dribbling success drops to 46% the moment the opponent starts moving. That gap is the most interesting result in this paper.\n\nThis team trained a humanoid robot to dribble a soccer ball using only depth observations, no explicit state estimation, no privileged scene information at test time. The core idea: embed a temporal depth encoder directly into the RL policy through a task-specific projection layer, so perception is optimized for control from the start.\n\nThe clean numbers are impressive. 100% on target-driven dribbling, 96% with a static obstacle. But the 46% against an active ball-attacker is where the real research problem lives, and they say so clearly rather than hiding it.\n\nSim-to-real is still the open question. None of this has touched a real pitch. For anyone working on loco-manipulation in dynamic environments, the joint perception-control training framing is worth reading carefully.\n\nPaper: Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning, arXiv 2607.12702\n\n#swarmrobotics #humanoidrobotics #reinforcementlearning #roboticresearch #locomotion #depthperception #robotsoccer",
+      "caption_tiktok": "100% success in dribbling. 46% against a moving opponent. That honest gap is the whole research problem. #humanoidrobot #robotics #reinforcementlearning #robotsoccer",
+      "post_bluesky": "100% dribbling success. 46% against a moving opponent. That gap is the paper. Depth encoder baked into the RL policy, no privileged state info. Clean conditions work. Active opponents don't. Yet. https://arxiv.org/abs/2607.12702v1",
+      "bluesky_thread": [
+        "The architectural bet: train perception and control jointly so the encoder learns to see what the policy needs, not what a separate detector thinks is useful. Under occlusion and fast ball movement, modular pipelines fail because errors compound. This sidesteps that.",
+        "Sim only, Booster T1, no real-turf results yet. The 46% against active opponents is honest and useful as a baseline. What's your intuition on where sim-to-real breaks first here: IMU noise, floor contact, or opponent physical interaction?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T08:35:15.453421+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/3fccc78c/bsky_00.png",
+        "media/3fccc78c/bsky_01.png",
+        "media/3fccc78c/bsky_02.png",
+        "media/3fccc78c/bsky_03.png"
+      ],
+      "slides": [
+        "media/3fccc78c/slide_00.png",
+        "media/3fccc78c/slide_01.png",
+        "media/3fccc78c/slide_02.png",
+        "media/3fccc78c/slide_03.png",
+        "media/3fccc78c/slide_04.png",
+        "media/3fccc78c/slide_05.png",
+        "media/3fccc78c/slide_06.png",
+        "media/3fccc78c/slide_07.png"
+      ]
+    }
   }
 ]

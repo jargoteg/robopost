@@ -1,0 +1,17 @@
+file 'frame_00.png'
+duration 4.04
+file 'frame_01.png'
+duration 4.04
+file 'frame_02.png'
+duration 4.04
+file 'frame_03.png'
+duration 4.04
+file 'frame_04.png'
+duration 4.04
+file 'frame_05.png'
+duration 4.04
+file 'frame_06.png'
+duration 4.04
+file 'frame_07.png'
+duration 4.04
+file 'frame_07.png'

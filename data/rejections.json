@@ -465,5 +465,25 @@
     "title": "Infra-Swarm: Robust Vision-Based Multi-Robot Swarming via Near-Infrared Spectral Vision",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Unveiling Complex Collective Behaviors from Simple Rewards",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Edge-Aware Thermal Infrared UAV Swarm Tracking",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
