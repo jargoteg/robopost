@@ -1416,5 +1416,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f1c75450",
+    "paper_id": "2607.12275v1",
+    "title": "Flatness-Preserving Residual Learning for Real-Time Tight Quadrotor Formation Flight",
+    "format": "video",
+    "hook": "30 seconds of training data. NMPC-level accuracy. 5ms loop.",
+    "posted_at": "2026-07-15T10:47:34.061210+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqokaiu5bh2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

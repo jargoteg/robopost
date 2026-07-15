@@ -12979,7 +12979,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-15T08:31:13.111050+00:00",
     "media": {
       "figures": [],
@@ -13001,7 +13001,9 @@
       ],
       "video": "media/f1c75450/video.mp4"
     },
-    "issue": 132
+    "issue": 132,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "6302de96",
@@ -13324,7 +13326,9 @@
         "media/90820163/slide_07.png"
       ]
     },
-    "issue": 133
+    "issue": 133,
+    "scheduled_after": "2026-07-15T12:17:34.061204+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "f56a3064",
