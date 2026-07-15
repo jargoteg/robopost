@@ -14168,5 +14168,325 @@
     "issue": 143,
     "scheduled_after": "2026-07-15T23:41:11.812319+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "e7405be7",
+    "paper": {
+      "id": "web-50e9c95ef6",
+      "title": "Tornyol — Mosquito Killing Micro-Drone",
+      "abstract": "Tornyol is a micro-drone concept designed specifically to hunt and kill mosquitoes. The project involves a small autonomous aerial robot capable of detecting and eliminating mosquitoes as a pest control solution. The drone is intended to address mosquito-borne disease transmission by targeting individual insects in flight or at rest. The concept represents an application of micro-robotics and autonomous systems to public health and pest management challenges.",
+      "authors": [
+        "Tornyol"
+      ],
+      "url": "https://tornyol.com/",
+      "source": "Tornyol official website",
+      "item_type": "article",
+      "journal": false
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A drone that hunts mosquitoes one by one.",
+      "commentary": "Tornyol is a micro-drone concept targeting individual mosquitoes, either in flight or at rest, as a precision pest control tool for disease prevention. The public health angle is real: mosquito-borne diseases kill over a million people a year, and chemical spraying has serious ecological costs. What's clever here is the framing of autonomous targeting at insect scale. The honest caveat is that this is still a concept, and the detection-to-kill latency, false-positive rate on non-target insects, and energy budget at micro-drone scale are the hard problems that will decide whether this ever leaves the lab.",
+      "slides": [
+        {
+          "title": "A drone that hunts mosquitoes",
+          "body": "Tornyol is a micro-drone designed to detect and eliminate individual mosquitoes. Target: the world's deadliest animal. Method: autonomous aerial interception."
+        },
+        {
+          "title": "Why not just spray?",
+          "body": "Chemical insecticides kill indiscriminately. Precision targeting means lower ecological impact and no pesticide resistance buildup. One insect at a time is the point."
+        },
+        {
+          "title": "The sensing problem",
+          "body": "Detecting a mosquito in free flight means distinguishing it from other insects at micro-scale, in variable lighting, outdoors. This is the hardest part. The concept does not yet publish detection accuracy numbers."
+        },
+        {
+          "title": "The energy budget problem",
+          "body": "Micro-drones carry tiny batteries. Pursuing and eliminating one mosquito costs real flight energy. Operational endurance per target kill is an unsolved constraint at this scale."
+        },
+        {
+          "title": "Concept vs. deployed system",
+          "body": "No field trial data is public. No false-positive rate on beneficial insects is stated. The gap between a working concept demo and reliable outdoor deployment is wide."
+        },
+        {
+          "title": "Worth watching, not believing yet",
+          "body": "The problem framing is legitimate. Precision bio-pest control at insect scale is a real research direction. But the hard numbers, detection rate, endurance, cost per kill, are what will matter."
+        }
+      ],
+      "video_script": "A drone small enough to chase a mosquito. That's the pitch from Tornyol. The idea is precision pest control: find one mosquito, eliminate it, move on. No broad chemical spray, no ecological collateral damage. The public health motivation is solid, mosquitoes kill more humans than any other animal. But the engineering gaps are steep. Micro-drone endurance, real-time insect detection, avoiding false positives on bees and moths. So here's the question: is precision mosquito hunting a real near-term robotics application, or is it still a decade away from field deployment?",
+      "caption_instagram": "A drone that hunts mosquitoes one by one.\n\nTornyol is a micro-drone concept built for one job: find and eliminate individual mosquitoes. The motivation is serious. Mosquito-borne diseases kill over a million people annually, and broad chemical spraying has well-documented ecological costs. Precision targeting, one insect at a time, is a genuinely different approach.\n\nBut this is still a concept. The detection problem alone is brutal: distinguishing a mosquito from a bee or moth in outdoor lighting, at flight speed, with a micro-scale sensor suite. No published detection accuracy. No false-positive rate. No endurance figures per target kill.\n\nThe problem framing is legitimate and the research direction is real. What I want to see next is field data, specifically detection precision, operational range, and what happens to beneficial insects nearby.\n\nMore at tornyol.com\n\n#microrobotics #swarmrobotics #autonomoussystems #pestcontrol #publichealth #fieldrobotics #precisionagriculture",
+      "caption_tiktok": "A drone that finds and kills individual mosquitoes. Concept is real. The hard engineering questions have no public answers yet. #microrobotics #dronetechnology #pestcontrol #robotics",
+      "post_bluesky": "A drone that hunts mosquitoes one by one.\n\nTornyol is a micro-drone concept targeting individual insects for pest control. The problem framing is solid. The detection accuracy, endurance, and false-positive rate on beneficial insects are still open questions.\n\nhttps://tornyol.com/",
+      "bluesky_thread": [
+        "The hardest part isn't the kill mechanism. It's distinguishing a mosquito from a bee at flight speed, outdoors, on a micro-drone power budget. That's a sensor and compute problem no one has publicly cracked at this scale yet.",
+        "I want to believe in precision bio-pest control as a real alternative to chemical spraying. But 'concept' without field detection accuracy numbers is a long way from deployment. What's the closest real deployed system anyone knows of doing insect-scale autonomous targeting?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:13:55.589017+00:00",
+    "media": {
+      "figures": [
+        "media/e7405be7/fig_00.png"
+      ],
+      "bsky": [
+        "media/e7405be7/bsky_00.png",
+        "media/e7405be7/bsky_01.png",
+        "media/e7405be7/bsky_02.png",
+        "media/e7405be7/bsky_03.png"
+      ],
+      "slides": [
+        "media/e7405be7/slide_00.png",
+        "media/e7405be7/slide_01.png",
+        "media/e7405be7/slide_02.png",
+        "media/e7405be7/slide_03.png",
+        "media/e7405be7/slide_04.png",
+        "media/e7405be7/slide_05.png",
+        "media/e7405be7/slide_06.png",
+        "media/e7405be7/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "fc02d633",
+    "paper": {
+      "id": "doi-10.1002_rob.70277",
+      "title": "Underwater Grippers for Dexterous Manipulation: A Review on Design and Enabling Technologies",
+      "abstract": "ABSTRACT With the advancement of deep‐sea resource exploration and scientific research, underwater operations are evolving from rough manipulation to precise and intelligent tasks, imposing higher demands on the dexterity and environmental adaptability of underwater grippers. However, existing reviews often focus on superficial classifications based on actuation modes or application scenarios, there by lacking in‐depth analysis grounded in robotic grasping theory and system‐level integration. This paper presents a comprehensive review of underwater dexterous grippers, proposing a novel classification framework based on the integration of force/form closure theory and energy input methods. Under this framework, we systematically analyze the structural designs and mechanisms of grippers ranging from Fully Passive to Fully Active configurations. Furthermore, the review delves into kinematic and dynamic modeling methodologies for rigid, continuum, and rigid‐continuum coupled structures, alongside the challenges and solutions for underwater tactile and deformation perception systems. We also examine control strategies, progressing from low‐level open‐loop control to model‐based intelligent approaches, including the dynamic coupling within vehicle‐manipulator‐gripper systems (UVMS). To address the lack of standardized benchmarking, this study establishes a unified evaluation system incorporating quantitative metrics (e.g., Load‐to‐Weight Ratio, Normalized Durability Index) and benc",
+      "authors": [
+        "Canjun Yang",
+        "Zilin Xing",
+        "Mingwei Lin",
+        "Ri Lin",
+        "Suohang Zhang",
+        "Xin Wu"
+      ],
+      "url": "https://doi.org/10.1002/rob.70277",
+      "doi": "10.1002/rob.70277",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Subsea grippers still can't match a diver's hand. Here's why.",
+      "commentary": "This Journal of Field Robotics review covers underwater dexterous grippers from passive compliant jaws to fully active multifinger systems, organized around force/form closure theory rather than the usual actuation-type taxonomy. That framing is genuinely more useful for system designers. The standout contribution is a unified evaluation framework with quantitative metrics like Load-to-Weight Ratio and a Normalized Durability Index, which the field has badly needed. Honest caveat: the review covers modeling and control comprehensively but the durability index is proposed, not validated across hardware yet. The UVMS coupling problem, where the arm disturbs the vehicle which disturbs the arm, remains the hardest open problem and the paper flags it clearly without overselling solutions.",
+      "slides": [
+        {
+          "title": "The Core Problem",
+          "body": "Subsea ops are shifting from grab-and-lift to precise, intelligent manipulation. Existing grippers were not designed for that. Pressure, biofouling, zero visibility, and current all degrade performance that looks fine in a tank."
+        },
+        {
+          "title": "A Better Classification",
+          "body": "Previous reviews sorted grippers by actuator type: hydraulic, pneumatic, tendon. This review uses force/form closure theory instead, spanning Fully Passive to Fully Active. More useful for design tradeoffs."
+        },
+        {
+          "title": "The UVMS Coupling Problem",
+          "body": "Vehicle-manipulator-gripper systems share dynamics. Arm motion disturbs thruster control; thruster correction disturbs the arm. At the gripper tip, small errors compound. No clean solution exists yet."
+        },
+        {
+          "title": "Underwater Sensing Gap",
+          "body": "Tactile and deformation sensors fail faster subsea than any mechanical component. Pressure housings add bulk, corrosion attacks contacts, and calibration drifts. The review calls this the binding constraint on dexterity."
+        },
+        {
+          "title": "New Evaluation Metrics",
+          "body": "Load-to-Weight Ratio and a Normalized Durability Index are proposed as standard benchmarks. Field robotics has no agreed test protocol for underwater grippers. This is a first attempt to fix that."
+        },
+        {
+          "title": "What Still Needs Work",
+          "body": "The durability index is proposed, not yet validated across real hardware. Control strategies above open-loop are mostly lab-demonstrated. Deep-sea deployment data at pressure is sparse across the entire literature."
+        }
+      ],
+      "video_script": "Underwater manipulation is one of robotics' hardest unsolved problems. Not because of the mechanics. Because of everything else. Pressure degrades your sensors. Current moves your vehicle. Your arm motion fights your thrusters. A new review in Journal of Field Robotics maps all of it: gripper designs from passive to fully active, a new classification framework based on grasping theory, and the first attempt at standardized metrics including a durability index. The honest finding: control above open-loop is mostly still in the lab. So what does a subsea gripper actually need to cross that line?",
+      "caption_instagram": "Subsea grippers still can't match a diver's hand. This review explains exactly why.\n\nA new paper in Journal of Field Robotics covers the full stack of underwater dexterous manipulation: structural design, kinematic modeling, tactile sensing, and control. The classification framework alone is worth reading. Instead of sorting by actuator type, they use force and form closure theory, which is how a designer actually thinks about the problem.\n\nThe standout contribution is a proposed evaluation system with quantitative metrics including Load-to-Weight Ratio and a Normalized Durability Index. The field has no standard benchmark right now. Every lab reports different things. This is a real attempt to fix that.\n\nHonest read: the durability index is proposed, not validated. And the section on UVMS coupling, where arm motion disturbs the vehicle which disturbs the arm, describes the hardest open problem clearly but doesn't solve it. Nobody has. That's not a criticism of the review. It's the state of the field.\n\nCanjun Yang et al., 'Underwater Grippers for Dexterous Manipulation: A Review on Design and Enabling Technologies,' Journal of Field Robotics, doi.org/10.1002/rob.70277\n\n#swarmrobotics #fieldrobotics #underwaterrobotics #marinerobotics #subsearobotics #roboticsgrasping #auv",
+      "caption_tiktok": "Subsea grippers fail not because of the mechanics but because of sensors, pressure, and physics stacking against you. New review breaks down exactly where the field is stuck. #underwaterrobotics #fieldrobotics #robotics #subsea",
+      "post_bluesky": "Subsea grippers still can't match a diver's hand. A new JFR review explains why: sensing degrades, UVMS coupling compounds errors, and no standard benchmark exists to compare designs. First attempt at fixing that last part. https://doi.org/10.1002/rob.70277",
+      "bluesky_thread": [
+        "The classification by force/form closure theory rather than actuator type is the right move. 'We use hydraulics' tells you almost nothing about grasping capability. The new framework actually maps to design decisions.",
+        "The UVMS coupling section is the most honest part: arm disturbs vehicle, vehicle correction disturbs arm, gripper tip error compounds. They flag it as an open problem. No lab has a clean answer. Worth asking: is this a controls problem or a platform architecture problem?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:14:25.411119+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/fc02d633/bsky_00.png",
+        "media/fc02d633/bsky_01.png",
+        "media/fc02d633/bsky_02.png",
+        "media/fc02d633/bsky_03.png"
+      ],
+      "slides": [
+        "media/fc02d633/slide_00.png",
+        "media/fc02d633/slide_01.png",
+        "media/fc02d633/slide_02.png",
+        "media/fc02d633/slide_03.png",
+        "media/fc02d633/slide_04.png",
+        "media/fc02d633/slide_05.png",
+        "media/fc02d633/slide_06.png",
+        "media/fc02d633/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "c807ac71",
+    "paper": {
+      "id": "doi-10.1002_rob.70279",
+      "title": "Online Localization With Current Disturbances for Autonomous Underwater Vehicles Without Global References",
+      "abstract": "ABSTRACT Robust localization of autonomous underwater vehicles is conventionally performed using dead‐reckoning, but its accumulated error can be excessive for long‐term or pioneering exploration when the Doppler Velocity Log cannot maintain bottom‐lock and when positioning references such as Ultra‐Short‐Base‐Line systems are unavailable. In this letter, we present an online localization that identifies current disturbances and corrects underwater position in real time without global references. An online Pruned Exact Linear Time method for optimal detection of statistical anomalies, such as current disturbances, is further expanded for real‐time dataset update and integrated with Kalman filter state estimation via recursive iteration. We demonstrate high accuracy in random‐current simulation and validate localization performance through implementation using 3‐h field data at two offshore sites. Furthermore, the comparative analysis indicates that, unlike other methods, online localization can effectively estimate underwater position in the presence of varying or stronger currents without dynamic model constraints.",
+      "authors": [
+        "Cody A. Marquardt",
+        "HeonYong Kang"
+      ],
+      "url": "https://doi.org/10.1002/rob.70279",
+      "doi": "10.1002/rob.70279",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "3 hours underwater, no GPS, no USBL. Position still holds.",
+      "commentary": "Marquardt and Kang tackle a genuinely nasty problem: AUV dead-reckoning drift when DVL loses bottom-lock and you have no acoustic positioning infrastructure. Their fix is clever: they run an online PELT algorithm to detect when a current disturbance hits, then feed that detection directly into a Kalman filter to correct state estimates in real time. Validated on 3-hour field deployments at two offshore sites, not a tank. The honest caveat is that current disturbances have to be statistically separable from vehicle dynamics, which gets harder in highly turbulent or rapidly varying flow regimes. Still, a localization method that degrades gracefully without USBL is exactly what long-range pioneering surveys need.",
+      "slides": [
+        {
+          "title": "Dead reckoning breaks here",
+          "body": "DVL loses bottom-lock in deep water or over rough terrain. Without USBL transponders pre-deployed, position error accumulates unbounded over hours. Long-range AUV surveys have no good fallback."
+        },
+        {
+          "title": "The culprit: ocean currents",
+          "body": "Current disturbances push the vehicle off track between DVL fixes. Standard dead-reckoning ignores them. The error is not random drift; it is systematic bias that compounds every minute."
+        },
+        {
+          "title": "Detect, then correct",
+          "body": "Online PELT algorithm runs continuously, flagging statistical anomalies in sensor data that correspond to current events. Each detected disturbance triggers a Kalman filter correction via recursive iteration."
+        },
+        {
+          "title": "No global reference needed",
+          "body": "No GPS. No USBL. No pre-surveyed transponder network. The method corrects position using only onboard sensing and the disturbance detection signal. Infrastructure-free deployment."
+        },
+        {
+          "title": "Field validated: 3 hours, 2 sites",
+          "body": "Tested on real offshore field data, not simulation only. Two sites tested. Performance held against varying and stronger currents where dynamic-model-constrained methods degraded."
+        },
+        {
+          "title": "Why this matters for AUV ops",
+          "body": "Pioneering surveys, under-ice missions, post-disaster seabed inspection: none can pre-deploy USBL. A method that works without infrastructure opens those environments to longer autonomous runs."
+        }
+      ],
+      "video_script": "An AUV three hours into an offshore survey. No GPS, no acoustic beacons, DVL struggling to hold bottom-lock. This is where most localization methods fall apart. Marquardt and Kang's approach watches for the statistical fingerprint of a current disturbance hitting the vehicle, detects it in real time using an online PELT algorithm, and immediately pushes a correction through a Kalman filter. No pre-deployed infrastructure. Validated at two real offshore sites. The question for AUV operators: how many of your survey failures trace back to exactly this scenario?",
+      "caption_instagram": "3 hours underwater. No GPS. No acoustic positioning network. Position still holds.\n\nMost AUV localization assumes you have either DVL bottom-lock or USBL transponders pre-deployed. Long-range pioneering surveys have neither. Dead-reckoning drift in strong currents just accumulates until the mission is compromised.\n\nMarquardt and Kang built an online method that detects current disturbances as statistical anomalies using an adapted PELT algorithm, then corrects the Kalman filter state estimate in real time. The detection and correction happen recursively, continuously, with no global reference required.\n\nValidated on 3-hour field deployments at two offshore sites. Outperforms dynamic-model-constrained methods specifically when currents are strong or variable, which is exactly when you need it most.\n\nPaper: 'Online Localization With Current Disturbances for Autonomous Underwater Vehicles Without Global References' in Journal of Field Robotics. Link in bio.\n\n#AUV #UnderwaterRobotics #FieldRobotics #SubseaInspection #MarineRobotics #AutonomousSystems #Localization",
+      "caption_tiktok": "AUV localization with no GPS, no USBL, no bottom-lock. 3-hour field test. It works. #AUV #UnderwaterRobotics #FieldRobotics #SubseaInspection",
+      "post_bluesky": "3 hours underwater, no GPS, no USBL, DVL unreliable. Position still holds. Marquardt & Kang detect current disturbances as statistical anomalies and correct the KF in real time, zero infrastructure. Validated offshore. https://doi.org/10.1002/rob.70279",
+      "bluesky_thread": [
+        "The core move: online PELT flags when a current event hits the vehicle. That signal feeds directly into Kalman filter correction via recursive iteration. No pre-surveyed transponders, no dynamic model constraints. Works harder as currents get stronger, which is the opposite of most methods.",
+        "Caveat worth naming: PELT needs the current disturbance to be statistically distinguishable from vehicle dynamics. Highly turbulent or rapidly oscillating flow could blur that boundary. Anyone running AUV surveys in tidal channels or near-seafloor boundary layers, how often does that bite you?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:14:54.358919+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/c807ac71/bsky_00.png",
+        "media/c807ac71/bsky_01.png",
+        "media/c807ac71/bsky_02.png",
+        "media/c807ac71/bsky_03.png"
+      ],
+      "slides": [
+        "media/c807ac71/slide_00.png",
+        "media/c807ac71/slide_01.png",
+        "media/c807ac71/slide_02.png",
+        "media/c807ac71/slide_03.png",
+        "media/c807ac71/slide_04.png",
+        "media/c807ac71/slide_05.png",
+        "media/c807ac71/slide_06.png",
+        "media/c807ac71/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "f02af462",
+    "paper": {
+      "id": "doi-10.1002_rob.70306",
+      "title": "Research on Offshore Wind Turbine Blade Repair Based on Particle Swarm Optimization‐Backpropagation Neural Network and Improved Active Disturbance Rejection Control",
+      "abstract": "ABSTRACT Offshore wind turbine blade repair requires stable material removal and precise force regulation under curved‐surface contact and environmental disturbance. To address these challenges, this paper proposes an integrated constant‐force grinding method that combines a passive compliant end‐effector, a particle swarm optimization‐backpropagation neural network (PSO‐BP), and an improved active disturbance rejection control (ADRC) strategy. First, a passive compliant end‐effector with variable stiffness is designed to improve contact adaptability and reduce grinding impact on curved blade surfaces. Second, a PSO‐BP model is established to predict the material removal rate (MRR) and surface roughness (Ra) under different grinding conditions, thereby providing data‐driven support for process‐state evaluation and parameter scheduling. Third, based on a controller‐oriented force‐dynamics model, an improved ADRC framework integrating a tracking differentiator, nonlinear extended state observer, nonlinear state error feedback, and PSO‐BP‐assisted gain scheduling is developed for constant‐force grinding. A Lyapunov‐based analysis shows that the closed‐loop system is uniformly ultimately bounded under bounded disturbances and bounded scheduling error. Simulation and experimental results demonstrate that, compared with PID and standard ADRC, the proposed method achieves higher force‐tracking accuracy, stronger disturbance rejection, and better grinding quality. Under equivalent in",
+      "authors": [
+        "Yuhang Xue",
+        "Xinrong Liu",
+        "Tianhao Wang"
+      ],
+      "url": "https://doi.org/10.1002/rob.70306",
+      "doi": "10.1002/rob.70306",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Wind turbine blade repair bots now hold force error under 1N on curved surfaces.",
+      "commentary": "Offshore wind blade maintenance is genuinely brutal work: curved composite surfaces, sea spray, and vibration that ruins any naive force controller. This paper stacks a passive compliant end-effector with variable stiffness, a PSO-tuned neural net for predicting material removal rate and surface roughness, and an improved ADRC that rejects disturbances without knowing the exact disturbance model. The Lyapunov stability proof is a nice touch for a field robotics journal. Honest caveat: all experiments appear to be on bench-scale curved surfaces, not an actual turbine at height in wind, so the gap between lab and 80-meter nacelle deployment remains unpriced.",
+      "slides": [
+        {
+          "title": "The problem with blade grinding",
+          "body": "Offshore turbine blades are curved, composite, and always moving. Too much force: surface damage. Too little: incomplete repair. Standard PID falls apart under wave-induced disturbance."
+        },
+        {
+          "title": "Three-layer control stack",
+          "body": "Layer 1: passive compliant end-effector absorbs impact. Layer 2: PSO-BP neural net predicts material removal rate and surface roughness in real time. Layer 3: improved ADRC rejects remaining disturbances."
+        },
+        {
+          "title": "What PSO-BP actually does here",
+          "body": "Particle swarm optimization tunes the backpropagation net's weights offline. The trained model then schedules ADRC gains live based on predicted grinding state. Data-driven gain scheduling, not just black-box control."
+        },
+        {
+          "title": "Force tracking numbers",
+          "body": "Proposed method outperforms both PID and standard ADRC on force error and disturbance rejection. Closed-loop stability proven via Lyapunov analysis under bounded disturbance and bounded scheduling error."
+        },
+        {
+          "title": "The gap that matters",
+          "body": "Tests use bench-scale curved surfaces, not a real blade at 80 meters in sea wind. Vibration coupling, salt corrosion of the compliant mechanism, and access constraints are all unaddressed."
+        },
+        {
+          "title": "Why it still moves the field",
+          "body": "Constant-force grinding with real-time Ra prediction is exactly what offshore wind O&M needs. If this stack survives a rope-access or drone-mounted field trial, the economics of blade repair change substantially."
+        }
+      ],
+      "video_script": "Offshore wind blades crack. Repairing them means grinding composite surfaces at height, in wind, with a robot that has to hold force steady within about one newton. This paper builds a three-layer solution: a passive compliant tool that absorbs shocks, a neural net that predicts how much material you're removing in real time, and a disturbance-rejection controller that keeps force on target when the platform moves. The stability math checks out. The bench results are solid. The open question is whether any of this survives a real turbine. What would you want to see in a field trial?",
+      "caption_instagram": "Offshore wind blade repair robots need to grind composite surfaces on a curve, at height, with the whole structure swaying. Hold too hard and you damage the blade. Hold too soft and the repair fails.\n\nThis paper from Journal of Field Robotics combines three ideas that individually aren't new but together make a coherent system: a variable-stiffness passive end-effector for absorbing contact shocks, a PSO-tuned neural net for predicting material removal rate and surface roughness live, and an improved active disturbance rejection controller that uses those predictions for gain scheduling.\n\nThe Lyapunov proof of bounded stability is legitimate and the bench results beat PID and standard ADRC on force error. That's the good news.\n\nThe honest caveat: all experiments are on curved test surfaces in a lab. An 80-meter blade in offshore wind conditions involves vibration modes, salt ingress into compliant mechanisms, and access constraints that bench tests simply don't price in. Worth watching if a field trial ever gets published.\n\nPaper: 'Research on Offshore Wind Turbine Blade Repair Based on Particle Swarm Optimization-Backpropagation Neural Network and Improved Active Disturbance Rejection Control', Journal of Field Robotics, Xue et al. 2026. https://doi.org/10.1002/rob.70306\n\n#swarmrobotics #fieldrobotics #offshorewind #robotics #forcecontrol #windenergytech #inspectionrobotics",
+      "caption_tiktok": "Robot grinds wind turbine blades and holds force steady within 1N on a curved surface. The bench results are real. The 80-meter offshore field trial is not.\n#fieldrobotics #windturbine #robotics #forcecontrol",
+      "post_bluesky": "Offshore wind blade repair: a robot that holds grinding force steady on curved composite surfaces, tuned by a neural net predicting surface roughness in real time. Bench results beat PID and ADRC. The 80m field trial is the missing chapter. https://doi.org/10.1002/rob.70306",
+      "bluesky_thread": [
+        "The clever bit is the gain scheduling: PSO-BP predicts material removal rate and surface roughness live, then feeds those predictions directly into the ADRC gains. Not a black box, not a lookup table. Closed-loop stability proven via Lyapunov under bounded disturbance. That's a real contribution.",
+        "The gap I'd push back on: every experiment is bench-scale. Salt water, 80m height, vibration from rotor imbalance, rope-access or drone mounting constraints, none of that is in the test conditions. Who's running an actual offshore field trial on blade grinding? That paper would be huge."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:15:25.604765+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/f02af462/bsky_00.png",
+        "media/f02af462/bsky_01.png",
+        "media/f02af462/bsky_02.png",
+        "media/f02af462/bsky_03.png"
+      ],
+      "slides": [
+        "media/f02af462/slide_00.png",
+        "media/f02af462/slide_01.png",
+        "media/f02af462/slide_02.png",
+        "media/f02af462/slide_03.png",
+        "media/f02af462/slide_04.png",
+        "media/f02af462/slide_05.png",
+        "media/f02af462/slide_06.png",
+        "media/f02af462/slide_07.png"
+      ]
+    }
   }
 ]

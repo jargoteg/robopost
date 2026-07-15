@@ -1,34 +1,40 @@
 {
-  "ts": "2026-07-15T18:20",
+  "ts": "2026-07-15T22:12",
   "collected": 227,
-  "dedup_dropped": 70,
-  "after_dedup": 157,
+  "dedup_dropped": 63,
+  "after_dedup": 164,
   "score_hist": {
-    "0": 23,
-    "1": 15,
-    "2": 31,
-    "3": 43,
-    "4": 24,
-    "5": 15,
-    "6": 5,
-    "7": 1
+    "0": 24,
+    "1": 19,
+    "2": 39,
+    "3": 38,
+    "4": 22,
+    "5": 13,
+    "6": 4,
+    "7": 4,
+    "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 6,
+  "ranked_above_floor": 9,
   "split": {
     "videos": 0,
-    "papers": 2,
-    "news": 4
+    "papers": 6,
+    "news": 3
   },
   "floor": 6,
   "picked": [
     {
-      "t": "An Active Global Localization Framework of Planeta",
+      "t": "Underwater Grippers for Dexterous Manipulation: A ",
       "type": "paper",
       "video": false
     },
     {
-      "t": "Allocentric teleoperation for variable perspective",
+      "t": "Online Localization With Current Disturbances for ",
+      "type": "paper",
+      "video": false
+    },
+    {
+      "t": "Research on Offshore Wind Turbine Blade Repair Bas",
       "type": "paper",
       "video": false
     }
