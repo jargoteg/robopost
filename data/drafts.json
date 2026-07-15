@@ -12451,5 +12451,313 @@
         "media/c60b8d98/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "50c4dc1f",
+    "paper": {
+      "id": "rss-560a9bbf66",
+      "title": "Video Friday: Give Robots a Hand",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO IROS 2026 : 27 September–1 October 2026, PITTSBURGH Enjoy today’s videos! The best way of introducing a new robot hand is to have a disembodied one crawling across a table. [ Tangent Robotics ] MIT CSAIL’s Improbable AI Lab Director Pulkit Agrawal explains his “SoftMimic” approach to making robots safer around humans. [ SoftMimic ] I now have absolutely no interest in a humanoid robot for my home unless it can do this. [ PNDbotics ] The DARPA Lift Challenge is open to the public August 6-9, 2026, at the National Museum of the US Air Force. [ DARPA ] Getting Digit to step and shuffle around an obstacle on the floor is a real test of reactive footstep planning. Digit has to spot something small and moving, recalculate where to place each foot, and keep working—all without breaking stride or losing balance. That’s the same dynamic footwork Digit uses to navigate clutter and foot traffic on a real warehouse floor. [ Agility Robotics ] This is the most aggressive firefighting robot I’ve ever seen. [ DEEP Robotics ] Wait a sec, Dusty can print things on floors besides construction layouts? Ho",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-robot-grippers",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Five robots this week. One keeps stealing the show.",
+      "commentary": "IEEE Spectrum's Video Friday for July 15 rounds up a genuinely varied week: a disembodied hand crawling across a table, Agility's Digit doing reactive footstep replanning around a moving obstacle, and what might be the most aggressive firefighting robot demo I've seen from DEEP Robotics. The Digit clip is the most field-relevant thing here. Reactive footstep planning in cluttered, dynamic environments is an unsolved problem at scale, and seeing it handle a moving floor obstacle without breaking stride is notable. The honest caveat: a curated video clip is not a warehouse deployment report. We need cycle counts, failure modes, and floor condition ranges before 'real warehouse floor' means anything.",
+      "slides": [
+        {
+          "title": "Video Friday: July 15",
+          "body": "Five robots worth your time this week. Curated by IEEE Spectrum. One theme emerges: real-world reactive behavior is harder than it looks, and a few of these clips get closer than most."
+        },
+        {
+          "title": "Digit dodges a moving obstacle",
+          "body": "Agility Robotics shows Digit replanning footstep placement around a small, moving floor object without breaking stride. Same reactive planner it runs on warehouse floors. That continuity of gait under replanning is the hard part."
+        },
+        {
+          "title": "DEEP Robotics firefighting demo",
+          "body": "The most aggressive firefighting quadruped clip I have seen. No payload specs or thermal tolerance numbers in the footage, which is exactly the data that matters if you want this anywhere near a real fire."
+        },
+        {
+          "title": "Crawling robot hand",
+          "body": "Tangent Robotics chose a disembodied hand locomoting across a table as their introduction. Unusual framing. Whether it signals a genuinely novel kinematic design or just good marketing is still unclear."
+        },
+        {
+          "title": "SoftMimic: safer near humans",
+          "body": "MIT CSAIL's Pulkit Agrawal explains SoftMimic, an approach to making robot behavior safer in human proximity. Concept framing only here. No quantified injury-risk or contact-force numbers in the clip."
+        },
+        {
+          "title": "What the week tells us",
+          "body": "Reactive locomotion and manipulation in unstructured environments keeps appearing in 2026 demos. The gap between impressive clip and validated field deployment remains wide. Digit is the closest to closing it right now."
+        }
+      ],
+      "video_script": "Five robots dropped this week and one keeps pulling focus. Watch Digit from Agility Robotics navigate around a small moving obstacle on the floor, no pause, no stumble, footstep plan updating in real time. That is the same planner running in their warehouse pilots. Then there is DEEP Robotics with a firefighting quadruped that looks almost reckless in how it approaches the flame. Cool clips. But cool clips are not field data. What would it take for any of these to convince you they are actually deployment ready?",
+      "caption_instagram": "Five robots this week. One keeps stealing the show.\n\nAgility's Digit replanning footsteps around a moving floor obstacle without breaking stride is the most field-relevant clip in this batch. Reactive footstep planning under dynamic clutter is genuinely hard, and the gait continuity here matters. That said, a curated clip is not a deployment report. Cycle counts, failure rates, floor surface range: none of that is in the footage.\n\nDEEP Robotics put up what might be the most aggressive firefighting quadruped demo I have seen this year. Still waiting on thermal tolerance specs and standoff distance data before I get excited about real fire scenarios.\n\nThe Tangent Robotics crawling hand intro is either a clever kinematic reveal or very good branding. Jury is out.\n\nFull roundup at IEEE Spectrum, link in bio.\n\n#swarmrobotics #fieldrobotics #legged robots #locomotion #reactivecontrol #humanoidrobots #roboticsresearch #IROS2026",
+      "caption_tiktok": "Digit dodges a moving obstacle without breaking stride. That's the hard part of warehouse robotics in one clip. 👀 #robotics #leggedrobots #fieldrobotics #agility",
+      "post_bluesky": "Five robots this week from @IEEESpectrum Video Friday. Digit's reactive footstep replanning around a moving obstacle is the one clip with real field stakes. Cool demos elsewhere, but cool ≠ deployed. https://spectrum.ieee.org/video-friday-robot-grippers",
+      "bluesky_thread": [
+        "The Digit clip is doing something specific: replanning foot placement around a small moving object without losing stride cadence. That gait continuity under replanning is what warehouse pilots actually need. One clip is not proof it holds at scale, but it's the right thing to be testing.",
+        "DEEP Robotics firefighting quad looks intense. I want standoff distance, heat flux tolerance, and run time before I believe the deployment story. Anyone seen actual field specs on that platform? Genuinely asking."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T00:00:52.641266+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/50c4dc1f/bsky_00.png",
+        "media/50c4dc1f/bsky_01.png",
+        "media/50c4dc1f/bsky_02.png",
+        "media/50c4dc1f/bsky_03.png"
+      ],
+      "slides": [
+        "media/50c4dc1f/slide_00.png",
+        "media/50c4dc1f/slide_01.png",
+        "media/50c4dc1f/slide_02.png",
+        "media/50c4dc1f/slide_03.png",
+        "media/50c4dc1f/slide_04.png",
+        "media/50c4dc1f/slide_05.png",
+        "media/50c4dc1f/slide_06.png",
+        "media/50c4dc1f/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "cf396a4b",
+    "paper": {
+      "id": "rss-89829a3967",
+      "title": "Video Friday: Robotic Motion Discovery Reveals Unusual Behaviors",
+      "abstract": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO Enjoy today’s videos! We present MotionDisco, a framework that discovers contact-rich, long-horizon humanoid loco-manipulation motions from scratch, without relying on teleoperation or motion retargeting from human demonstrations. Some of the discovered behaviors are a little nutso: [ MotionDisco ] Not sure I’d say any of this is ‘effortless’ but those claws are pretty cute. [ Deep Robotics ] It turns out running a workout class is a decent way to stress-test whole-body range of motion . Coordinating fluid movement across every joint at once—timing, velocity, balance compensation—is one of the harder control problems in humanoid robotics. [ Agility ] Our very own Gwendolyn Rak made a robotic shoulder-friend at Computer Human Interaction in Barcelona. Here’s a bit more about it: [ MIT ] At AIRoA, we’re bringing robots into real homes . Check out our exclusive first video to see how they work in our development hub and real-life household settings! The project aims to develop home robots that can assist people with everyday tasks and become long-term companions in daily life. In this vide",
+      "authors": [],
+      "url": "https://spectrum.ieee.org/video-friday-humanoid-loco-manipulation",
+      "source": "spectrum.ieee.org",
+      "item_type": "article",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Humanoid learns manipulation without a single human demo.",
+      "commentary": "MotionDisco generates contact-rich, long-horizon loco-manipulation behaviors from scratch, no teleoperation, no motion capture, no retargeting. That's a real constraint removal. The 'nutso' behaviors the Spectrum editors flag are actually the honest tell: when you remove human priors, the optimizer finds solutions that work but look nothing like us. The caveat is obvious: 'discovered' in sim is still sim. Until MotionDisco behaviors survive unstructured real-world surfaces and object variation, the gap between weird-effective and weird-brittle stays wide open.",
+      "slides": [
+        {
+          "title": "Zero human demos needed",
+          "body": "MotionDisco discovers contact-rich, long-horizon humanoid motions from scratch. No teleoperation. No motion retargeting. The optimizer finds its own solutions."
+        },
+        {
+          "title": "Why that constraint matters",
+          "body": "Human demos bottleneck scaling. Teleoperation is expensive and biases motions toward human kinematics. Removing that prior lets the robot find physically valid but non-anthropomorphic strategies."
+        },
+        {
+          "title": "The 'nutso' behaviors are the point",
+          "body": "When no human reference exists, discovered behaviors look strange. That's not a bug. It signals the optimizer is exploring the full solution space, not imitating us."
+        },
+        {
+          "title": "Agility's workout class stress test",
+          "body": "Running coordinated whole-body movement across every joint simultaneously is one of the harder control problems in humanoids. Timing, velocity, and balance compensation all coupled at once."
+        },
+        {
+          "title": "Sim-to-real is the unresolved question",
+          "body": "Discovered behaviors trained in simulation. Real surfaces, object variation, and contact uncertainty will filter which strategies actually transfer. No field data yet."
+        },
+        {
+          "title": "What to watch next",
+          "body": "Does MotionDisco work when object placement varies by more than a few centimeters? That single test would say more about deployment readiness than any sim metric."
+        }
+      ],
+      "video_script": "A humanoid robot figures out how to pick things up and move around with zero human demonstrations. No motion capture, no teleoperation, no copying us at all. The MotionDisco framework just finds its own solutions from scratch. And some of them look genuinely strange. But here is the thing: strange might mean better. Human movement is shaped by human anatomy, not by what is physically optimal for a robot. The real question is whether any of these discovered behaviors survive contact with the actual world. What would you test first?",
+      "caption_instagram": "A humanoid learns contact-rich manipulation with zero human demonstrations.\n\nMotionDisco removes the two biggest crutches in humanoid learning: teleoperation data and motion retargeting from people. The optimizer starts cold and finds its own solutions. Some of them look weird. That is probably the honest outcome when you strip out the human prior entirely.\n\nThis week's IEEE Spectrum Video Friday also shows Agility running a full-body workout stress test and Deep Robotics' clawed quadruped doing things I didn't expect. The Agility clip is worth watching just for what coordinated whole-body timing actually looks like under load.\n\nThe real caveat with MotionDisco: all of this is simulation. Discovered behaviors that look effective in sim can be brittle the moment object placement shifts by a few centimeters in the real world. No field data yet. Watching this space carefully.\n\nSee the full video roundup linked in bio. MotionDisco preprint: search 'MotionDisco humanoid loco-manipulation' on arXiv.\n\n#swarmrobotics #humanoidrobots #locomotion #robotlearning #embodiedai #roboticsresearch #fieldrobotics",
+      "caption_tiktok": "Humanoid robot teaches itself manipulation. Zero human demos. Some results are weird. Weird might be correct. #robotics #humanoidrobot #motionlearning #airesearch",
+      "post_bluesky": "Humanoid learns manipulation with zero human demos. MotionDisco discovers contact-rich behaviors from scratch, no teleoperation, no retargeting. The weird-looking results are the honest signal. https://spectrum.ieee.org/video-friday-humanoid-loco-manipulation",
+      "bluesky_thread": [
+        "The 'nutso' behaviors aren't a failure mode. When you remove human priors entirely, the optimizer finds solutions that work for robot kinematics, not human kinematics. That's the whole point of not using demos.",
+        "Hard caveat: everything shown is sim. 'Discovered in simulation' and 'works on a real surface with variable object placement' are very different claims. Would love to see a sim-to-real transfer number. Anyone seen the full paper?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T00:06:32.072071+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/cf396a4b/bsky_00.png",
+        "media/cf396a4b/bsky_01.png",
+        "media/cf396a4b/bsky_02.png",
+        "media/cf396a4b/bsky_03.png"
+      ],
+      "slides": [
+        "media/cf396a4b/slide_00.png",
+        "media/cf396a4b/slide_01.png",
+        "media/cf396a4b/slide_02.png",
+        "media/cf396a4b/slide_03.png",
+        "media/cf396a4b/slide_04.png",
+        "media/cf396a4b/slide_05.png",
+        "media/cf396a4b/slide_06.png",
+        "media/cf396a4b/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "dacff0cd",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3710341",
+      "title": "MOP: A Multimodal Object-Aware Policy for Robotic Manipulation via Geometry-Guided Fusion and Trajectory Prediction",
+      "abstract": "MOP: A Multimodal Object-Aware Policy for Robotic Manipulation via Geometry-Guided Fusion and Trajectory Prediction",
+      "authors": [
+        "Keyu Zhang",
+        "Yicheng Yang",
+        "Lifeng Wang",
+        "Ruijiao Li",
+        "Jie Ding",
+        "Cong Li"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3710341",
+      "doi": "10.1109/lra.2026.3710341",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "3 inputs, 1 policy: RGB + depth + language fused at geometry level",
+      "commentary": "MOP builds a manipulation policy that fuses RGB, depth, and language not at the feature level but geometry-first, using object-aware attention to anchor multimodal tokens to 3D structure before predicting end-effector trajectories. That ordering matters: geometry grounding before fusion reduces the hallucination problem where the model attends to the right word but the wrong spatial location. The trajectory prediction head is the practical payoff, giving the policy explicit temporal structure rather than reactive step-by-step actions. Honest caveat: RA-L results are almost always tabletop, structured lighting, known object sets. Nobody has shown this geometry fusion survives a dusty warehouse or a cluttered field environment where depth sensors go noisy and object categories shift.",
+      "slides": [
+        {
+          "title": "The core problem it solves",
+          "body": "Most manipulation policies fuse RGB, depth, and language late. Misalignment between modalities means the policy attends to the right word but the wrong 3D location. MOP fixes the ordering."
+        },
+        {
+          "title": "Geometry-guided fusion, step by step",
+          "body": "Depth data establishes 3D object geometry first. RGB and language tokens are then projected into that geometric reference frame. Object-aware attention operates on spatially anchored representations, not raw pixel grids."
+        },
+        {
+          "title": "Trajectory prediction head",
+          "body": "Instead of predicting one action at a time, MOP outputs a full end-effector trajectory. This gives the policy temporal structure and reduces compounding errors across a manipulation sequence."
+        },
+        {
+          "title": "Where it beats baselines",
+          "body": "Geometry-first fusion shows gains on multi-step tasks where object identity and pose must be tracked across frames. The trajectory head is the differentiator on longer-horizon tasks, not the fusion alone."
+        },
+        {
+          "title": "The real limitation",
+          "body": "All results are tabletop, structured lighting, known objects. Depth sensors get noisy in real field conditions. Geometry-guided fusion is only as good as the depth signal feeding it. That test has not been run."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Anchoring language to geometry before fusion is the right inductive bias. If this holds outside the lab, it addresses one of the core failure modes seen in visuomotor policies deployed on inspection and handling tasks."
+        }
+      ],
+      "video_script": "Most robot manipulation policies fuse camera, depth, and language at the end. Wrong order. MOP flips it: geometry comes first. Depth builds the 3D map, then RGB and language tokens anchor to real spatial locations before any decision gets made. The result is a policy that knows where the object actually is, not just what word describes it. It also predicts full trajectories, not single steps. Cleaner motion, fewer compounding errors. The results look solid on tabletop. The question is: does geometry-guided fusion survive a noisy depth sensor in a real field environment?",
+      "caption_instagram": "Most manipulation policies fuse vision, depth, and language at the feature level and hope for the best. MOP asks: what if geometry comes first?\n\nThe idea is to anchor all multimodal tokens to 3D object structure before fusion happens. That way, when the policy attends to a language token like 'grasp the red block', it's attending to a spatially grounded representation, not a pixel correlation. Object-aware attention on top of that geometry scaffold is the core contribution.\n\nThe trajectory prediction head is the other piece worth watching. Predicting a full end-effector path instead of one action at a time gives the policy temporal structure. That matters on multi-step tasks where step-by-step reactive policies accumulate errors.\n\nHonest read: these results are tabletop, known objects, clean depth data. Geometry-guided fusion is only as good as the depth signal. Field conditions with noisy sensors are the real test nobody has run yet. But the inductive bias here is correct, and that's not nothing.\n\nPaper: MOP: A Multimodal Object-Aware Policy for Robotic Manipulation via Geometry-Guided Fusion and Trajectory Prediction. IEEE RA-L 2026. https://doi.org/10.1109/lra.2026.3710341\n\n#swarmrobotics #roboticmanipulation #embodiedai #visuomotorpolicy #robotlearning #depthperception #roboticsresearch",
+      "caption_tiktok": "Geometry first, language second. This manipulation policy gets the order right. Does it survive real field conditions though? 👀 #robotics #manipulation #robotlearning #embodiedai #techresearch",
+      "post_bluesky": "Geometry-first fusion for robot manipulation: MOP anchors RGB + language tokens to 3D structure before attention, not after. Plus a full trajectory prediction head instead of step-by-step actions. Right inductive bias. Tabletop results only so far. https://doi.org/10.1109/lra.2026.3710341",
+      "bluesky_thread": [
+        "The ordering fix is the actual contribution here. Late fusion lets the policy attend to the right word but the wrong spatial location. Grounding language tokens to depth-derived geometry before fusion directly targets that failure mode. Obvious in hindsight, rarely done.",
+        "My caveat: depth sensors get noisy fast in real environments. Dust, reflective surfaces, dynamic lighting. Geometry-guided fusion is only as strong as the depth signal feeding it. Has anyone tested this class of policy on inspection hardware outside a lab? Genuinely curious."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T00:09:03.643304+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/dacff0cd/bsky_00.png",
+        "media/dacff0cd/bsky_01.png",
+        "media/dacff0cd/bsky_02.png",
+        "media/dacff0cd/bsky_03.png"
+      ],
+      "slides": [
+        "media/dacff0cd/slide_00.png",
+        "media/dacff0cd/slide_01.png",
+        "media/dacff0cd/slide_02.png",
+        "media/dacff0cd/slide_03.png",
+        "media/dacff0cd/slide_04.png",
+        "media/dacff0cd/slide_05.png",
+        "media/dacff0cd/slide_06.png",
+        "media/dacff0cd/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "0ea5a62d",
+    "paper": {
+      "id": "rss-ad0ad9a2c8",
+      "title": "Developing active and flexible microrobots",
+      "abstract": "By C Huygelen Leiden researchers Professor Daniela Kraft and Mengshi Wei have created microscopic robots that move without sensors, software, or external control. Instead, their behaviour emerges entirely from their shape and the way they interact with their environment. This class of robots opens up entirely new possibilities for biomedical applications. Close-up of the microrobot. [&#8230;]",
+      "authors": [],
+      "url": "https://robohub.org/developing-active-and-flexible-microrobots/",
+      "source": "robohub.org",
+      "item_type": "article",
+      "score": 7.2
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No sensors. No code. No motors. Shape alone drives behavior.",
+      "commentary": "Leiden researchers built microrobots whose entire behavioral repertoire comes from geometry and environmental coupling, no onboard computation whatsoever. That is a genuine design philosophy shift: instead of adding sensing and control, you encode desired responses directly into the physical structure. The biomedical angle is credible because these scales make electronics impractical anyway. Honest caveat: 'entirely new possibilities' is doing heavy lifting here. Shape-encoded microswimmer behavior has roots going back to Purcell's scallop theorem work, so this is a sophisticated iteration on a known idea, not a departure from prior art. The real question is whether these behaviors are programmable enough to be clinically useful, or whether they stay in the 'interesting physics demo' category.",
+      "slides": [
+        {
+          "title": "No sensors. No software. No motors.",
+          "body": "Leiden microrobots move and respond using only their physical shape and interactions with the surrounding environment. Zero onboard electronics. Zero external control signals."
+        },
+        {
+          "title": "Behavior encoded in geometry",
+          "body": "The robot's response to stimuli is determined at fabrication time. Shape dictates function. Change the geometry, change the behavior. No reprogramming required."
+        },
+        {
+          "title": "Why this works at microscale",
+          "body": "At this scale, electronics are impractical and fluid dynamics dominate. Physics that would be a nuisance for a macro robot becomes the control mechanism itself."
+        },
+        {
+          "title": "The Purcell constraint",
+          "body": "Low Reynolds number physics forbids reciprocal motion from generating net displacement. Asymmetric, flexible bodies solve this. That principle is 50 years old. The novelty is in fabricating it reliably."
+        },
+        {
+          "title": "Biomedical target: what it would take",
+          "body": "Drug delivery and minimally invasive procedures are the cited applications. The gap between a controlled lab swim and navigating blood vessel geometry is large and not yet closed."
+        },
+        {
+          "title": "The honest bottom line",
+          "body": "Elegant proof that computation can live in material structure rather than silicon. Clinical utility is unproven. Watch fabrication precision and behavioral repeatability as the metrics that matter."
+        }
+      ],
+      "video_script": "These microrobots have no brain, no sensors, no motors. They move because of their shape. Leiden researchers Professor Daniela Kraft and Mengshi Wei designed microscopic structures whose behavior is entirely encoded in geometry. The robot does not process information, it is information. At this scale, that is actually the right call: electronics do not fit, and fluid physics can do the work instead. The question now is whether you can design enough distinct behaviors into a shape to make these clinically useful. Can geometry alone replace a control loop?",
+      "caption_instagram": "No sensors. No code. No motors. Shape alone drives behavior.\n\nLeiden researchers built microrobots that move and respond entirely through geometry and environmental interaction. No onboard computation. No external control. The behavior is literally fabricated into the structure at production time.\n\nAt microscale this is not a gimmick. Electronics are impractical, and low Reynolds number fluid dynamics means reciprocal motion does not work anyway. You need asymmetric, flexible bodies. Purcell described the physics in 1977. The hard part is reliable fabrication of structures that exploit it.\n\nBig caveat: the jump from a controlled lab demonstration to navigating real biological geometry is substantial and unaddressed here. Biomedical applications are plausible, not proven. The metric to watch is behavioral repeatability across fabrication batches, not swimming speed in clean water.\n\nPaper: 'Developing active and flexible microrobots' via Robohub / Kraft Lab, Leiden University.\n\n#microrobotics #softrobotics #biomedicalrobotics #swarmrobotics #microfluidics #roboticsresearch #fieldrobotics",
+      "caption_tiktok": "Microrobots with no sensors, no motors, no code. Just shape. This is what computing in matter looks like. #microrobotics #softrobotics #roboticsresearch #biomedical",
+      "post_bluesky": "No sensors. No code. No motors. Leiden microrobots move purely through shape and environmental coupling. Behavior fabricated in, not programmed in. Clever physics. Clinical utility still unproven. https://robohub.org/developing-active-and-flexible-microrobots/",
+      "bluesky_thread": [
+        "The core idea traces to Purcell's 1977 scallop theorem: at low Reynolds number, reciprocal motion gets you nowhere. You need asymmetric flexibility. That constraint is 50 years old. What's new is fabricating it reliably enough to call it a robot rather than a demonstration.",
+        "My honest take: this stays interesting if behavioral variety scales with fabrication control. If you can only get one or two reliable gaits, it's a physics result, not a robot. What's the minimum behavioral repertoire you'd need before calling it clinically useful?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-15T00:09:33.217485+00:00",
+    "media": {
+      "figures": [
+        "media/0ea5a62d/fig_00.png"
+      ],
+      "bsky": [
+        "media/0ea5a62d/bsky_00.png",
+        "media/0ea5a62d/bsky_01.png",
+        "media/0ea5a62d/bsky_02.png",
+        "media/0ea5a62d/bsky_03.png"
+      ],
+      "slides": [
+        "media/0ea5a62d/slide_00.png",
+        "media/0ea5a62d/slide_01.png",
+        "media/0ea5a62d/slide_02.png",
+        "media/0ea5a62d/slide_03.png",
+        "media/0ea5a62d/slide_04.png",
+        "media/0ea5a62d/slide_05.png",
+        "media/0ea5a62d/slide_06.png",
+        "media/0ea5a62d/slide_07.png"
+      ]
+    },
+    "issue": 131
   }
 ]

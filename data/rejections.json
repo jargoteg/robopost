@@ -445,5 +445,20 @@
     "title": "Effectiveness Assessment of Underwater Area Cruise Based on the ADC Method",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Video Friday: Give Robots a Hand",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Video Friday: Robotic Motion Discovery Reveals Unusual Behaviors",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "MOP: A Multimodal Object-Aware Policy for Robotic Manipulation via Geometry-Guided Fusion and Trajectory Prediction",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
