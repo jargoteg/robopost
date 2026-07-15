@@ -1382,5 +1382,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "cbbb59b4",
+    "paper_id": "2607.11779v1",
+    "title": "A Compact Top-Loading Robot for Endovascular Interventions: Design, Control and Evaluation",
+    "format": "carousel",
+    "hook": "Standard guidewires. No custom tools. 3.6% tracking error.",
+    "posted_at": "2026-07-15T01:02:29.146651+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqnjkd5ssu2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
