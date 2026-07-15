@@ -13622,7 +13622,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T11:02:46.022239+00:00",
     "media": {
       "figures": [
@@ -13645,6 +13645,8 @@
         "media/b3bff7c8/slide_07.png"
       ]
     },
-    "issue": 136
+    "issue": 136,
+    "scheduled_after": "2026-07-15T12:17:34.061210+00:00",
+    "queue_notified": true
   }
 ]
