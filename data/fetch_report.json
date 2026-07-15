@@ -1,16 +1,16 @@
 {
-  "ts": "2026-07-15T09:01",
-  "collected": 223,
-  "dedup_dropped": 65,
-  "after_dedup": 158,
+  "ts": "2026-07-15T10:26",
+  "collected": 221,
+  "dedup_dropped": 66,
+  "after_dedup": 155,
   "score_hist": {
-    "0": 25,
-    "1": 17,
-    "2": 47,
-    "3": 27,
-    "4": 25,
-    "5": 15,
-    "6": 2
+    "0": 24,
+    "1": 19,
+    "2": 48,
+    "3": 34,
+    "4": 18,
+    "5": 11,
+    "7": 1
   },
   "rank_batches_failed": 0,
   "ranked_above_floor": 9,

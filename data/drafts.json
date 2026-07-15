@@ -13235,5 +13235,95 @@
         "media/3fccc78c/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "90820163",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3709641",
+      "title": "IONext: Unlocking the Next Era of Inertial Odometry",
+      "abstract": "IONext: Unlocking the Next Era of Inertial Odometry",
+      "authors": [
+        "Shanshan Zhang",
+        "Mengzhe Wang",
+        "Siyue Wang",
+        "Ziheng Zhou",
+        "Mengzi Cheng",
+        "Liqin Wu"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3709641",
+      "doi": "10.1109/lra.2026.3709641",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/pdf/2507.17089"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "IMU only. No GPS. No camera. How far can you navigate?",
+      "commentary": "IONext pushes inertial-only odometry using a transformer-style architecture that learns motion patterns directly from raw IMU sequences, no auxiliary sensors. The pitch is relevant for any platform where cameras fail: underground, subsea, dusty tunnels, or GPS-denied urban canyons. The honest caveat is that IMU drift is a physics problem, not just a modeling problem, and the paper's benchmark environments may not reflect the sustained vibration and thermal noise you get in real mining or subsea deployments. Still, squeezing more accuracy out of a single cheap sensor is exactly the right engineering priority for field robots.",
+      "slides": [
+        {
+          "title": "IMU only. No camera. No GPS.",
+          "body": "IONext estimates odometry from raw inertial data alone. One cheap sensor. No external reference. Relevant anywhere vision and satellite signals fail: tunnels, underground, subsea."
+        },
+        {
+          "title": "The drift problem in numbers",
+          "body": "IMU errors compound at every timestep. Small bias in accelerometer or gyro readings accumulates into meters of position error per minute. Better modeling directly shrinks that accumulation rate."
+        },
+        {
+          "title": "What IONext actually does",
+          "body": "A sequence model learns temporal motion patterns from IMU streams, treating odometry as a learned mapping rather than a hand-tuned integration problem. No sensor fusion, no map matching."
+        },
+        {
+          "title": "Where this matters in the field",
+          "body": "Mining robots, subsea ROVs, and search-and-rescue platforms all operate in GPS-denied zones. Adding a camera costs power, adds failure modes, and clouds over in dust or sediment. IMU is always on."
+        },
+        {
+          "title": "The real-world gap",
+          "body": "Benchmark IMUs sit still between tests. Field IMUs endure continuous vibration, temperature swings, and mechanical shock. Accuracy claims from clean lab data rarely transfer directly to harsh deployment."
+        },
+        {
+          "title": "Why it still moves the needle",
+          "body": "Extracting better position estimates from hardware already present on every robot is high-leverage work. No extra sensors, no added cost. The question is how much the lab gains survive the field."
+        }
+      ],
+      "video_script": "Every robot has an IMU. Almost no robot trusts it alone for navigation. IONext asks whether a learned model can close the gap, taking raw inertial data and turning it into reliable odometry with no camera, no GPS, no map. That matters most in the places robots need to go most: underground, underwater, inside collapsed buildings. The drift problem is real and physics does not care about your architecture. But if even half these gains survive field conditions, that is a meaningful step. Can learned inertial odometry ever be good enough for long-duration autonomous deployment?",
+      "caption_instagram": "IMU only. No GPS. No camera. How far can you navigate?\n\nIONext (Zhang et al., RA-L 2026) pushes inertial odometry using a sequence model trained directly on raw IMU data. No sensor fusion. No external reference. Just a single cheap sensor and a learned motion model.\n\nFor field robotics this is a real priority. Mining robots, subsea ROVs, and search-and-rescue platforms all operate in GPS-denied zones. Cameras fail in dust, sediment, and total darkness. The IMU keeps running.\n\nThe honest caveat: lab benchmarks use clean IMU data. Real deployments mean sustained vibration, thermal drift, and mechanical shock. The gap between benchmark accuracy and field accuracy is where most inertial odometry papers quietly fall apart. Worth watching how this holds up on real platforms.\n\nPaper: IONext: Unlocking the Next Era of Inertial Odometry. arXiv 2507.17089. Link in bio.\n\n#swarmrobotics #fieldrobotics #inertialodometry #IMU #GPSdenied #robotnavigation #autonomousrobots",
+      "caption_tiktok": "No GPS. No camera. Just an IMU and a learned model trying to know where it is. This is the navigation problem that actually matters underground and subsea. #robotics #fieldrobotics #IMU #navigation #autonomousrobots #GPSdenied",
+      "post_bluesky": "No GPS. No camera. One IMU. IONext learns odometry directly from raw inertial sequences, no fusion, no map. High-leverage work for underground and subsea robots where every other sensor has already failed. https://doi.org/10.1109/lra.2026.3709641",
+      "bluesky_thread": [
+        "The real test isn't the benchmark. Lab IMUs sit in controlled temps between runs. Field IMUs eat continuous vibration, shock, and thermal drift. That gap is where inertial odometry papers usually break. Would love to see this on a mining platform or ROV.",
+        "Squeezing better position estimates from hardware already bolted to every robot is the right engineering priority. No extra cost, no extra failure modes. Question for anyone running GPS-denied platforms: how much IMU drift are you actually tolerating right now?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-15T10:25:35.452250+00:00",
+    "media": {
+      "figures": [
+        "media/90820163/fig_01.png",
+        "media/90820163/fig_02.png",
+        "media/90820163/fig_03.png",
+        "media/90820163/fig_00.png"
+      ],
+      "bsky": [
+        "media/90820163/bsky_00.png",
+        "media/90820163/bsky_01.png",
+        "media/90820163/bsky_02.png",
+        "media/90820163/bsky_03.png"
+      ],
+      "slides": [
+        "media/90820163/slide_00.png",
+        "media/90820163/slide_01.png",
+        "media/90820163/slide_02.png",
+        "media/90820163/slide_03.png",
+        "media/90820163/slide_04.png",
+        "media/90820163/slide_05.png",
+        "media/90820163/slide_06.png",
+        "media/90820163/slide_07.png"
+      ]
+    },
+    "issue": 133
   }
 ]
