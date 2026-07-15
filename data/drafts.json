@@ -13567,5 +13567,83 @@
         "media/5ded6afe/slide_07.png"
       ]
     }
+  },
+  {
+    "draft_id": "b3bff7c8",
+    "paper": {
+      "id": "yt-nK85DqmxrGw",
+      "title": "Industrial Humanoid Policy: Six recommendations for a healthy humanoid regulatory environment",
+      "abstract": "Scaling a powerful technological tool requires a deep understanding of its potential economic and societal ripple effects. Inside an individual company driving this sort of change, you don’t want to face arbitrary regulations that stifle creativity, but you must also take your immense responsibility for the people that the new tech could impact seriously. \n\nHumanoids are going to be an incredible part of building America’s future, and have the potential to improve the nature of labor for millions. I have decades of experience leading companies that pioneer massive technological innovations for our economy, and have seen firsthand what it takes to maintain both the dynamism necessary for a successful organization and the prudence required to operate in a way that benefits everyone. \n\nHere are six pillars that I believe will create a healthy regulatory environment for the humanoid market a",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=nK85DqmxrGw",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=nK85DqmxrGw",
+      "video_first": true,
+      "score": 5.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "6 regulatory pillars for humanoids. Zero mention of worker displacement.",
+      "commentary": "This is a policy wishlist from an industry insider, not a research paper. The six pillars framework is coherent in structure but leans heavily toward protecting company dynamism over protecting workers. The 'improve the nature of labor' framing is doing a lot of work without any supporting data. No mention of liability, no mention of workforce transition costs, no mention of what happens when these things fail on a shop floor. Worth reading if you want to understand the lobbying position, not if you want balanced policy analysis.",
+      "slides": [
+        {
+          "title": "Humanoid regulation: who is writing it?",
+          "body": "This piece comes from inside industry. Six pillars for a 'healthy' regulatory environment. Healthy for whom is the question worth asking before slide 2."
+        },
+        {
+          "title": "The core argument",
+          "body": "Avoid arbitrary regulation that stifles creativity. Take responsibility for societal impact. These two goals are framed as compatible. The hard cases are where they are not."
+        },
+        {
+          "title": "What the pillars likely cover",
+          "body": "Standards harmonization, liability clarity, R&D incentives, workforce training. All reasonable. None of them guarantee a worker displaced by a humanoid gets a path back in."
+        },
+        {
+          "title": "The missing variable",
+          "body": "No quantified displacement estimate. No proposed safety-incident reporting framework. Policies built without numbers tend to be revised after the first serious accident."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Industry-authored frameworks often become the first draft regulators read. Understanding the starting position tells you where the negotiation begins. Read it critically, not dismissively."
+        },
+        {
+          "title": "The honest take",
+          "body": "This is a credible voice making a reasonable opening argument for light-touch regulation. It is not a neutral analysis. Treat it as a data point, not a conclusion."
+        }
+      ],
+      "video_script": "Someone inside the humanoid industry just published six recommendations for how governments should regulate humanoid robots. The framing is careful: protect innovation, take responsibility for impact. But read it closely and you notice what is missing. No displacement numbers. No incident reporting requirements. No liability floor. Industry frameworks like this often become the first draft regulators see. That is why researchers need to engage with them, not ignore them. So here is my question: should robotics researchers be writing counter-proposals, or are we too late to the policy table?",
+      "caption_instagram": "Industry just handed regulators a six-pillar framework for humanoid policy. We should read it carefully.\n\nThe argument is coherent: avoid arbitrary rules, protect dynamism, take responsibility for societal impact. Hard to disagree with the headlines.\n\nBut there are no displacement estimates. No safety-incident reporting mandates. No liability thresholds. Policies written without those numbers get rewritten after the first serious failure, usually in a panic.\n\nThis is not the final word. It is probably the opening bid. Robotics researchers who care about how this technology gets deployed in real workplaces need to be in this conversation now, not after the framework is set.\n\nVideo linked in bio. Title: Industrial Humanoid Policy: Six recommendations for a healthy humanoid regulatory environment.\n\n#swarmrobotics #humanoidrobots #roboticspolicy #robotics #labortech #fieldrobotics #regulatoryaffairs",
+      "caption_tiktok": "Industry wrote the first draft of humanoid robot policy. Here is what they left out. #humanoidrobots #roboticspolicy #robotics #techpolicy",
+      "post_bluesky": "Six regulatory pillars for humanoids from someone inside the industry. Coherent framing. Zero displacement estimates, no liability floor, no incident reporting. This is the opening bid. Researchers should read it that way. https://www.youtube.com/watch?v=nK85DqmxrGw",
+      "bluesky_thread": [
+        "The 'improve the nature of labor for millions' line is doing heavy lifting. That may be true. But a policy framework that does not quantify the downside risk is not a safety net, it is a hope.",
+        "Industry frameworks like this tend to become the first document regulators read. If the robotics research community wants different language in the final rules, we need counter-proposals, not just critique. Who is actually writing those?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T11:02:46.022239+00:00",
+    "media": {
+      "figures": [
+        "media/b3bff7c8/fig_00.png"
+      ],
+      "bsky": [
+        "media/b3bff7c8/bsky_00.png",
+        "media/b3bff7c8/bsky_01.png",
+        "media/b3bff7c8/bsky_02.png",
+        "media/b3bff7c8/bsky_03.png"
+      ],
+      "slides": [
+        "media/b3bff7c8/slide_00.png",
+        "media/b3bff7c8/slide_01.png",
+        "media/b3bff7c8/slide_02.png",
+        "media/b3bff7c8/slide_03.png",
+        "media/b3bff7c8/slide_04.png",
+        "media/b3bff7c8/slide_05.png",
+        "media/b3bff7c8/slide_06.png",
+        "media/b3bff7c8/slide_07.png"
+      ]
+    }
   }
 ]
