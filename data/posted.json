@@ -1467,5 +1467,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "b3bff7c8",
+    "paper_id": "yt-nK85DqmxrGw",
+    "title": "Industrial Humanoid Policy: Six recommendations for a healthy humanoid regulatory environment",
+    "format": "carousel",
+    "hook": "6 regulatory pillars for humanoids. Zero mention of worker displacement.",
+    "posted_at": "2026-07-15T16:07:01.359648+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqp43rrole2b",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
