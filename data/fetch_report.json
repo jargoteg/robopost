@@ -1,36 +1,24 @@
 {
-  "ts": "2026-07-15T00:08",
+  "ts": "2026-07-15T00:11",
   "collected": 221,
-  "dedup_dropped": 63,
-  "after_dedup": 158,
+  "dedup_dropped": 65,
+  "after_dedup": 156,
   "score_hist": {
-    "0": 16,
-    "1": 20,
-    "2": 35,
-    "3": 38,
-    "4": 24,
-    "5": 17,
-    "6": 7,
-    "7": 1
+    "0": 12,
+    "1": 25,
+    "2": 28,
+    "3": 42,
+    "4": 25,
+    "5": 18,
+    "6": 6
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 8,
+  "ranked_above_floor": 6,
   "split": {
     "videos": 0,
-    "papers": 1,
-    "news": 7
+    "papers": 0,
+    "news": 6
   },
   "floor": 6,
-  "picked": [
-    {
-      "t": "MOP: A Multimodal Object-Aware Policy for Robotic ",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "Developing active and flexible microrobots",
-      "type": "article",
-      "video": false
-    }
-  ]
+  "picked": []
 }
