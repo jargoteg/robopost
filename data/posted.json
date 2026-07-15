@@ -1501,5 +1501,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "0cd4f814",
+    "paper_id": "doi-10.1126_scirobotics.adz7397",
+    "title": "Agile perceptive multiskill locomotion for quadrupedal robots in the wild",
+    "format": "carousel",
+    "hook": "6 m/s. One onboard policy. No motion capture.",
+    "posted_at": "2026-07-15T22:11:11.812325+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqpqgxxdnh2e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

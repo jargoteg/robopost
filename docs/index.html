@@ -42,54 +42,42 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-15 22:09 UTC <span class="chip ok">+0 today</span></p></header>
+<p>@jahirargote · generated 2026-07-15 22:11 UTC <span class="chip ok">+0 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">5</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">61</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">3</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">62</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/143" target="_blank">issue #143</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 23:41 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/143" target="_blank">issue #143</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Egocentric teleoperation: you see what one robot sees. This paper fuses every robot&#x27;s feed into a single top-down view. One operator, whole fleet, 84% faster on parallel tasks. Precision takes a hit. Worth that trade?
 https://doi.org/10.1126/scirobotics.adz7130</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/3e189785/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/3e189785/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/3e189785/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/3e189785/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The honest caveat: real-world study was n=6 with two robots. The sim results (n=15) are the main evidence base. Fine manipulation still favors egocentric, which matters a lot for anything beyond locomotion and sweep tasks.</div><div class="reply">For inspection or search and rescue, where you need situational awareness across a spread-out fleet more than fingertip precision, this architecture makes real sense. Curious if anyone has tried allocentric framing in actual field deployments.</div>
 </article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/142" target="_blank">issue #142</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 23:41 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/142" target="_blank">issue #142</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Rovers fail localization on poor textures, then waste compute trying anyway. This JFR paper flips it: detect matchable terrain first, trigger localization only then. Smarter constraint, not smarter matcher. https://doi.org/10.1002/rob.70298</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/fc665095/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/fc665095/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/fc665095/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/fc665095/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The key move is separating the question &#x27;can we localize here?&#x27; from &#x27;should we try?&#x27; Most systems conflate them. Running a matchability classifier upstream is cheap. Running full DOM registration on bad terrain is expensive and still fails.</div><div class="reply">Caveat worth sitting with: the interest region detector needs training data tied to the target surface. First sol on a novel site, before you have any orbital texture priors, that classifier is flying blind. How robust is the fallback? Would love to see ablations on that.</div>
 </article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/141" target="_blank">issue #141</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 23:41 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/141" target="_blank">issue #141</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Big hexapods hit a wall: full dynamics too slow, elastic deformation breaks your model. New JFR paper uses a Spring-Muscle abstraction to make real-time force control feasible on rough terrain transitions. Clever biomechanics shortcut. Prototype only so far. https://doi.org/10.1002/rob.70304</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d0221993/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d0221993/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d0221993/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d0221993/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The core idea borrows from the Elastic Pendulum Hypothesis: model each leg as a spring-muscle unit instead of a full rigid chain. Cuts compute cost, keeps the physics honest enough for compliant foot-ground control. Two force distribution constraints handle the six-leg balancing act.</div><div class="reply">My caveat: &#x27;border terrain&#x27; transitions are exactly where field robots fail in practice, and this hasn&#x27;t been tested outside a principle prototype. No mud, no payload, no hydraulic backlash. How many of you have seen a simplified dynamics model survive first contact with a real site?</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/140" target="_blank">issue #140</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">A rebar tying robot that cuts operational moves by 61% and cycle time by 38%. Not magic, just stop letting three motion axes take turns. Pipeline coupling does the work. https://doi.org/10.1002/rob.70301</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/23601333/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/23601333/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/23601333/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/23601333/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The core idea: horizontal, rotational, and descending modules normally run sequentially. This paper layers them by characteristic height so axis B pre-positions while axis A is still finishing. Continuous coupling instead of stop-start. Validated against GNN baseline on 8-node tasks.</div><div class="reply">The caveat I keep coming back to: every result here is on a controlled rebar layout. Real sites have bent bars, inconsistent spacing, vibration from adjacent machinery. The efficiency gap between controlled and uncontrolled probably eats some of that 136.5% gain. Who has seen field deployment data…</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/139" target="_blank">issue #139</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">6 m/s on a drop-down maneuver. One onboard policy covering stairs, gaps, hurdles, branches. APT-RL generates motion priors from cheap 2D trajectory optimization, then a transformer picks skills in real time. Full video worth watching. https://doi.org/10.1126/scirobotics.adz7397</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/0cd4f814/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/0cd4f814/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/0cd4f814/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/0cd4f814/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The clever bit: they use simplified dynamics to generate massive 2D motion datasets cheaply. Robot arrives at real-world RL with strong priors, not random noise. That&#x27;s why skill quality is high before a single outdoor step is taken.</div><div class="reply">Honest question for the crowd: the simplified dynamics shortcut is clearly effective here, but the test terrains presumably stayed close to what the optimizer could approximate. How far outside that distribution does this policy hold up? Anyone seen ablations on that?</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~6170m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~470m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~1430m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>22:20 UTC (~10m)</td><td>▫️ cancelled <span class='mono'>2026-07-15 22:09</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>22:30 UTC (~20m)</td><td>▫️ pending <span class='mono'>2026-07-15 22:09</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~110m)</td><td>✅ success <span class='mono'>2026-07-15 19:11</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~6168m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~468m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~1428m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>22:20 UTC (~8m)</td><td>▫️ pending <span class='mono'>2026-07-15 22:11</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>22:30 UTC (~18m)</td><td>▫️ cancelled <span class='mono'>2026-07-15 22:11</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~108m)</td><td>✅ success <span class='mono'>2026-07-15 19:11</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-15 17:51</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-15 22:11</td>
+<td>Agile perceptive multiskill locomotion for quadruped</td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-15 17:51</td>
 <td>Atlas&#x27; Journey to FIFA World Cup 2026™ | Boston Dyna</td><td class="mono">thread</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-15 16:07</td>
 <td>Industrial Humanoid Policy: Six recommendations for </td><td class="mono">single</td>
@@ -117,17 +105,15 @@ https://doi.org/10.1126/scirobotics.adz7130</p>
 <td>Robust bipedal locomotion on flowable slopes via foo</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-14 12:03</td>
 <td>Video Friday: Atlas Versus a Fridge</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 1, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-14 09:57</td>
-<td>A manifesto for Sustainability Robotics</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 1, &quot;replies&quot;: 1}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
-<div class="panel"><ul><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Vision-Based Dribbling for Humanoid Soccer via Privilege</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Edge-Aware Thermal Infrared UAV Swarm Tracking</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Unveiling Complex Collective Behaviors from Simple Rewar</b> · auto: no usable figures found (all sources + vetting)</li><li><b>MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mo</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
+<div class="panel"><ul><li><b>Research on Task Sequence Planning and Trajectory Optimi</b> · no reason given</li><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Vision-Based Dribbling for Humanoid Soccer via Privilege</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Edge-Aware Thermal Infrared UAV Swarm Tracking</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Unveiling Complex Collective Behaviors from Simple Rewar</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14"],datasets:[{data:[909, 912, 912, 912, 912, 912],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-15", "07-15", "07-15", "07-15", "07-15", "07-15", "07-15"],datasets:[
- {label:"likes",data:[1, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-15", "07-15", "07-15", "07-15", "07-15", "07-15", "07-15", "07-15"],datasets:[
+ {label:"likes",data:[2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>

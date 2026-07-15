@@ -495,5 +495,12 @@
     "title": "Autonomous Tracking and Terminal Guidance of Moving Targets for Fixed-Wing UAVs",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Research on Task Sequence Planning and Trajectory Optimization for the End‐Effector of a Rebar Tying Robot",
+    "source": "Journal of Field Robotics",
+    "item_type": "paper",
+    "reason": "no reason given",
+    "date": "2026-07-15"
   }
 ]
