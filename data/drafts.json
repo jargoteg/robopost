@@ -12737,7 +12737,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-15T00:09:33.217485+00:00",
     "media": {
       "figures": [
@@ -12760,7 +12760,9 @@
         "media/0ea5a62d/slide_07.png"
       ]
     },
-    "issue": 131
+    "issue": 131,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "084937a3",

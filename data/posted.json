@@ -1399,5 +1399,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "0ea5a62d",
+    "paper_id": "rss-ad0ad9a2c8",
+    "title": "Developing active and flexible microrobots",
+    "format": "carousel",
+    "hook": "No sensors. No code. No motors. Shape alone drives behavior.",
+    "posted_at": "2026-07-15T07:25:58.980425+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "article",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqo6y3pdvi2t",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
