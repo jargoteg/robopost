@@ -12761,5 +12761,85 @@
       ]
     },
     "issue": 131
+  },
+  {
+    "draft_id": "084937a3",
+    "paper": {
+      "id": "2607.12489v1",
+      "title": "Infra-Swarm: Robust Vision-Based Multi-Robot Swarming via Near-Infrared Spectral Vision",
+      "abstract": "Distributed swarms typically rely on either active wireless communication or passive vision, and they are frequently hindered by bandwidth constraints or environmental sensitivity. This paper proposes Infra-Swarm, a robust vision-based swarm. Each robot is equipped with a near-infrared light source and four ordinary gray-scale cameras. The Infra-Swarm system directly measures the centimeter-level 3D position of neighbors based on the position (bearing) and intensity (strength) of optical flares in the captured images. By utilizing 940 nm narrow-band filters to physically reject 99.2% of ambient light interference, the perception front-end achieves hardware-level robustness against illumination variations. Furthermore, its minimal computational overhead provides a resilient foundation for the massive scalability of robotic collectives on resource-constrained hardware.",
+      "authors": [
+        "Haoyu Chen",
+        "Qijin Li",
+        "Wanyu Xiang",
+        "Xiuxiu Lin",
+        "Zian Ning",
+        "Shiyu Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2607.12489v1",
+      "source": "arxiv",
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why do swarm robots go blind the moment lighting changes?",
+      "commentary": "Infra-Swarm sidesteps the wireless bandwidth bottleneck and the ambient-light fragility of standard vision by baking robustness into the optics: a 940 nm narrowband filter physically rejects 99.2% of ambient light before any compute touches it. Each robot recovers centimeter-level 3D neighbor positions from bearing and intensity of IR flares across four grayscale cameras, no RGB, no dedicated ranging hardware. The minimal compute load is the real pitch for scalability on cheap nodes. Honest caveat: all the claims live at the perception layer, and we have no field numbers yet on actual swarm behavior quality, scalability limits, or what happens when robots crowd close enough for flare overlap.",
+      "slides": [
+        {
+          "title": "Swarm vision breaks in the field",
+          "body": "Standard vision swarms fail under changing light. Wireless comms hit bandwidth walls at scale. Both are known, unsolved pain points in real deployment."
+        },
+        {
+          "title": "The fix is in the filter",
+          "body": "A 940 nm narrowband filter rejects 99.2% of ambient light at the hardware level. No software compensation needed. The signal is clean before any algorithm runs."
+        },
+        {
+          "title": "Four cameras, one IR source",
+          "body": "Each robot carries four grayscale cameras and one near-IR emitter. Neighbor position computed from flare bearing (direction) and intensity (distance). Centimeter-level 3D localization claimed."
+        },
+        {
+          "title": "No RGB, no LiDAR, no comms",
+          "body": "Grayscale sensors and narrow-band filters only. Minimal compute overhead is the stated path to massive scalability on resource-constrained hardware."
+        },
+        {
+          "title": "What we still do not know",
+          "body": "Perception results are promising. No field numbers yet on swarm behavior quality, how flares interact when robots are densely packed, or real-world scalability ceiling."
+        },
+        {
+          "title": "Why it matters for field deployment",
+          "body": "Inspection and SAR swarms face exactly this problem: dust, variable lighting, no reliable comms. Hardware-level robustness beats software patches every time outdoors."
+        }
+      ],
+      "video_script": "Swarm robots have a lighting problem. Most vision-based systems degrade the moment conditions change, dust, shade, direct sun. Infra-Swarm uses a 940 nanometer narrowband filter to physically block 99.2% of ambient light interference before any compute runs. Each robot sees its neighbors as infrared flares, recovering centimeter-level 3D positions from bearing and intensity alone. Four grayscale cameras, one IR emitter, no wireless comms needed. The compute cost stays low enough to scale. The question is: does that hold when fifty robots are packed tight in a real tunnel?",
+      "caption_instagram": "Why do swarm robots go blind the moment lighting changes?\n\nMost vision-based swarms solve this in software. Infra-Swarm solves it in the optics. A 940 nm narrowband filter physically rejects 99.2% of ambient light before any algorithm sees the image. Clean signal from the start.\n\nEach robot runs four grayscale cameras and one near-IR emitter. Neighbor positions come from flare bearing and intensity, giving centimeter-level 3D localization with minimal compute. No RGB sensors, no wireless comms, no dedicated ranging hardware.\n\nThe honest caveat: these are perception-layer results. We have no numbers yet on actual swarm behavior in dense packing or real field conditions. But building robustness into hardware rather than patching it in software is exactly the right instinct for inspection and SAR deployments.\n\nPaper: Infra-Swarm: Robust Vision-Based Multi-Robot Swarming via Near-Infrared Spectral Vision, arXiv 2607.12489\n\n#swarmrobotics #fieldrobotics #inspectionrobots #multirobot #roboticsresearch #autonomoussystems #swarmintelligence",
+      "caption_tiktok": "Swarm robots go blind in bad lighting. This team fixed it with a filter, not software. 99.2% of ambient light rejected at the hardware level. arXiv 2607.12489\n#swarmrobotics #robotics #fieldrobotics #autonomousrobots #roboticsresearch",
+      "post_bluesky": "Why do swarm robots go blind when lighting changes? Infra-Swarm answers with hardware: a 940 nm filter rejects 99.2% of ambient light before compute touches it. Centimeter-level 3D neighbor localization, no comms, no RGB. Perception-layer results only so far, but…\nhttps://arxiv.org/abs/2607.12489v1",
+      "bluesky_thread": [
+        "The clever bit: bearing gives direction to neighbors, IR intensity gives distance. Four grayscale cameras per robot. No dedicated ranging sensor. Compute stays lean enough to claim massive scalability. That last claim needs a stress test with dense packing before I believe it.",
+        "For SAR or tunnel inspection swarms, hardware-level illumination robustness beats any software patch. The gap here is field validation. Anyone seen swarm perception papers that actually test in uncontrolled lighting at scale? Curious what numbers people consider convincing."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T03:26:18.658385+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/084937a3/bsky_00.png",
+        "media/084937a3/bsky_01.png",
+        "media/084937a3/bsky_02.png",
+        "media/084937a3/bsky_03.png"
+      ],
+      "slides": [
+        "media/084937a3/slide_00.png",
+        "media/084937a3/slide_01.png",
+        "media/084937a3/slide_02.png",
+        "media/084937a3/slide_03.png",
+        "media/084937a3/slide_04.png",
+        "media/084937a3/slide_05.png",
+        "media/084937a3/slide_06.png",
+        "media/084937a3/slide_07.png"
+      ]
+    }
   }
 ]
