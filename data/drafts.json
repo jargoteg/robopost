@@ -14223,7 +14223,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T22:13:55.589017+00:00",
     "media": {
       "figures": [
@@ -14246,7 +14246,9 @@
         "media/e7405be7/slide_07.png"
       ]
     },
-    "issue": 148
+    "issue": 148,
+    "scheduled_after": "2026-07-15T23:41:11.812325+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "fc02d633",
