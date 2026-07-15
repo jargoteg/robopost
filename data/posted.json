@@ -1484,5 +1484,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "60a0d0cd",
+    "paper_id": "yt-cCNkgD3qXvg",
+    "title": "Atlas' Journey to FIFA World Cup 2026™ | Boston Dynamics",
+    "format": "video",
+    "hook": "Stadium crowd, halftime lights, no safety net.",
+    "posted_at": "2026-07-15T17:51:18.223273+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqpbw7uewm2v",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
