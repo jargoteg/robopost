@@ -344,6 +344,23 @@ def get_figures(draft) -> list[str]:
         elif aid:
             print(f"No GitHub repo for arXiv:{aid}.")
 
+        # Crossref items carry a DOI: Unpaywall by DOI is the strongest
+        # open-figure path for paywalled journal papers
+        if not figs and p.get("doi"):
+            try:
+                r = requests.get(f"https://api.unpaywall.org/v2/{p['doi']}",
+                                 params={"email": "robopost@users.noreply.github.com"},
+                                 timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+                loc = (r.json() or {}).get("best_oa_location") or {}
+                pdf = loc.get("url_for_pdf") or loc.get("url")
+                if pdf:
+                    print(f"Unpaywall (by item DOI): {pdf[:60]}")
+                    figs = figures_from_pdf_url(pdf, out_dir)
+                    if figs:
+                        p["open_version"] = pdf
+            except Exception as e:
+                print(f"Unpaywall by DOI failed: {e}")
+
         # RSS/journal items carry no arXiv id: resolve one by title so the
         # paper's own figures are reachable too
         if not aid and p.get("item_type") == "paper":

@@ -242,7 +242,10 @@ def main():
         # AUTO-REJECT: no usable figure found anywhere (repo, PDF, open
         # version, YouTube, og:image) or vision vetting rejected them all.
         # A figureless post underperforms; don't waste a review slot on it.
-        if not d["media"].get("figures") and not d["paper"].get("video_url"):
+        if (not d["media"].get("figures") and not d["paper"].get("video_url")
+                and not d["paper"].get("journal")):
+            # journal papers are exempt: peer-reviewed content beats the
+            # no-figure rule; they run with a typographic card instead
             d["status"] = "rejected"
             reason = "auto: no usable figures found (all sources + vetting)"
             rej = load_json("rejections.json", [])

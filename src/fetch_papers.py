@@ -406,6 +406,16 @@ def main():
         n = max(0, min(n, deficit))
         print(f"Open drafts: {open_now}; picking up to {n} new items.")
         good = [p for p in ranked if p.get("score", 0) >= floor]
+        if len(good) < n * 2:
+            # scoring runs harsh some days; keep the best of the pool anyway
+            fallback = [p for p in ranked if p.get("score", 0) >= 4][:n * 3]
+            merged = list(good)
+            for p in fallback:
+                if p not in merged:
+                    merged.append(p)
+            good = merged
+            print(f"Adaptive floor: {len(good)} candidates (absolute floor "
+                  f"passed only {len([p for p in ranked if p.get('score',0)>=floor])}).")
         # papers first; news capped so feeds never crowd out research
         max_news = cfg["pipeline"].get("max_news_per_day", 1)
         research = [p for p in good if p.get("item_type", "paper") == "paper"]
