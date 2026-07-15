@@ -1450,5 +1450,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f56a3064",
+    "paper_id": "web-55e9646812",
+    "title": "The Standards Behind the Spectacle: How IEEE SA Helps to Enable the World's Game",
+    "format": "carousel",
+    "hook": "50 times per second. That's how fast player tracking samples body position data at a major football tournament.",
+    "posted_at": "2026-07-15T14:26:29.350921+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqowhyowbh2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

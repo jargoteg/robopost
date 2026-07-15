@@ -13386,7 +13386,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-15T10:41:17.748228+00:00",
     "media": {
       "figures": [
@@ -13413,7 +13413,9 @@
     },
     "issue": 135,
     "scheduled_after": "2026-07-15T14:19:09.815642+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "9f4eee8f",
@@ -13648,7 +13650,87 @@
       ]
     },
     "issue": 136,
-    "scheduled_after": "2026-07-15T14:19:09.815642+00:00",
+    "scheduled_after": "2026-07-15T15:56:29.350914+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "60a0d0cd",
+    "paper": {
+      "id": "yt-cCNkgD3qXvg",
+      "title": "Atlas' Journey to FIFA World Cup 2026™ | Boston Dynamics",
+      "abstract": "Following Atlas' first-of-its-kind live performance at the FIFA World Cup 2026™, we caught up with Seth Davis, senior program manager, to learn how this demonstration came together and what it takes to succeed in the field (and on the pitch).\n\nSee Atlas' halftime performance: https://www.youtube.com/watch?v=ezPLXk78Cfk\nRead the full interview: https://bostondynamics.com/blog/deploying-robots-into-and-onto-the-field/",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=cCNkgD3qXvg",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=cCNkgD3qXvg",
+      "video_first": true,
+      "score": 9.2
+    },
+    "content": {
+      "format": "video",
+      "hook": "Stadium crowd, halftime lights, no safety net.",
+      "commentary": "Boston Dynamics put Atlas on a FIFA World Cup 2026 pitch in front of a live crowd, which is a different problem than any lab demo. Seth Davis talks through what actually broke in prep, what 'field deployment' means when the field is MetLife Stadium turf, and why timing and surface variation matter more than peak motion quality. The honest bit: this is still a scripted performance, not reactive autonomy. But logistics, surface sensing under real conditions, and crowd-scale robustness are underappreciated hard problems that rarely get discussed openly. That transparency from a BD program manager is worth more than the backflip.",
+      "slides": [
+        {
+          "title": "Atlas at World Cup 2026",
+          "body": "Atlas performed live at FIFA World Cup 2026 halftime. Not a controlled lab floor. Stadium turf, real crowd, broadcast clock. Senior PM Seth Davis explains what getting there actually required."
+        },
+        {
+          "title": "The surface problem",
+          "body": "Stadium turf is not a flat rigid plane. Compliance, seam variation, and lighting change the sensing picture. Lab-tuned gait parameters don't transfer directly. Recalibration on-site is mandatory, not optional."
+        },
+        {
+          "title": "Timing is the hard constraint",
+          "body": "Halftime is roughly 15 minutes. Setup, execution, and egress must fit a broadcast window with zero tolerance for overrun. That scheduling pressure shapes every engineering tradeoff in the deployment."
+        },
+        {
+          "title": "Scripted vs. reactive",
+          "body": "This is a choreographed routine, not open-world autonomy. Atlas is not improvising. The value here is field logistics, surface robustness, and failure-mode management under live conditions, not general-purpose agility."
+        },
+        {
+          "title": "What this actually proves",
+          "body": "You can operate a bipedal humanoid reliably enough for a high-stakes public event. That is a non-trivial ops milestone. It does not prove Atlas can work in unstructured environments without pre-planning."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Boston Dynamics controls the narrative here. No failure footage, no quantitative reliability data. The interview is candid by industry standards but it is still marketing. Read the blog post critically."
+        }
+      ],
+      "video_script": "Atlas just performed at the FIFA World Cup. Live crowd, stadium turf, broadcast clock ticking. Boston Dynamics PM Seth Davis breaks down what that actually took, and it's less about the backflips and more about surface calibration, logistics, and not breaking the halftime window. Scripted routine, yes. But reliable field deployment of a full-size humanoid under real-world ops pressure is harder than it looks in the highlight reel. What would it take for you to call this genuinely autonomous?",
+      "caption_instagram": "Stadium lights, live crowd, no second take.\n\nAtlas performed at FIFA World Cup 2026 halftime this year. Boston Dynamics PM Seth Davis just walked through what deploying a full-size humanoid to a real event actually requires.\n\nThe honest answer: surface sensing on real turf, on-site recalibration, fitting a 15-minute broadcast window, and managing failure modes with no safety margin. That logistics layer is the part nobody talks about.\n\nThis is a choreographed routine, not reactive autonomy. But getting a bipedal robot through a live high-stakes public event without incident is a real ops milestone, even if it doesn't prove general-purpose capability.\n\nFull behind-the-scenes video linked in bio. Blog interview at bostondynamics.com worth reading critically.\n\n#swarmrobotics #fieldrobotics #humanoidrobots #bostondynamics #roboticsengineering #leggedrobotics #robotdeployment",
+      "caption_tiktok": "Atlas performed at the World Cup. Here's what actually had to go right behind the scenes. #bostondynamics #atlas #robotics #humanoidrobot",
+      "post_bluesky": "Stadium turf, live crowd, broadcast clock. Atlas performed at FIFA World Cup 2026 halftime. The hard part wasn't the backflip. It was surface recalibration, ops timing, and zero margin for failure. Scripted, yes. But that deployment story is real. https://www.youtube.com/watch?v=cCNkgD3qXvg",
+      "bluesky_thread": [
+        "Seth Davis is unusually candid for a BD post. On-site recalibration, turf compliance issues, the 15-min halftime window as a hard constraint. That logistics layer never makes the highlight reel but it's where deployments actually fail.",
+        "Caveat worth stating: this is choreography, not autonomy. No failure footage, no reliability numbers. The interview is marketing, just more honest than most. What would a genuine field deployment benchmark for humanoids even look like? Curious what people think."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-15T14:24:41.497281+00:00",
+    "media": {
+      "figures": [
+        "media/60a0d0cd/fig_00.png"
+      ],
+      "bsky": [
+        "media/60a0d0cd/bsky_00.png",
+        "media/60a0d0cd/bsky_01.png",
+        "media/60a0d0cd/bsky_02.png",
+        "media/60a0d0cd/bsky_03.png"
+      ],
+      "slides": [
+        "media/60a0d0cd/slide_00.png",
+        "media/60a0d0cd/slide_01.png",
+        "media/60a0d0cd/slide_02.png",
+        "media/60a0d0cd/slide_03.png",
+        "media/60a0d0cd/slide_04.png",
+        "media/60a0d0cd/slide_05.png",
+        "media/60a0d0cd/slide_06.png",
+        "media/60a0d0cd/slide_07.png"
+      ],
+      "video": "media/60a0d0cd/video.mp4"
+    },
+    "issue": 137
   }
 ]
