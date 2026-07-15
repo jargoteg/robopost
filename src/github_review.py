@@ -458,7 +458,39 @@ def sweep():
             acted += 1
             break
     save_json("drafts.json", drafts)
-    print(f"Sweep done, {acted} missed command(s) processed.")
+    # also: manual-add issues whose 'opened' event was lost (no draft label,
+    # created by a human, never acknowledged)
+    st = load_json("state.json", {})
+    done_issues = set(st.get("processed_issues", []))
+    all_open = gh("GET", "/issues?state=open&per_page=50")
+    if isinstance(all_open, list):
+        for issue in all_open:
+            if "pull_request" in issue:
+                continue
+            if any(lb["name"] == "draft" for lb in issue.get("labels", [])):
+                continue
+            if "[bot]" in issue["user"]["login"]:
+                continue
+            if issue["number"] in done_issues:
+                continue
+            body = (issue.get("body") or "") + " " + (issue.get("title") or "")
+            if "http" not in body:
+                continue
+            print(f"Sweep: processing missed manual add #{issue['number']}")
+            before = len(load_json("draft_queue.json", []))
+            try:
+                handle_new_issue(issue)
+                after = len(load_json("draft_queue.json", []))
+                if after > before:
+                    done_issues.add(issue["number"])
+                    acted += 1
+                else:
+                    print(f"  #{issue['number']} did not resolve; will retry next sweep.")
+            except Exception as e:
+                print(f"manual add #{issue['number']} failed (will retry): {e}")
+    st["processed_issues"] = sorted(done_issues)[-300:]
+    save_json("state.json", st)
+    print(f"Sweep done, {acted} missed item(s) processed.")
 
 
 def backfill_labels():
