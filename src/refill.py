@@ -18,9 +18,13 @@ def main(max_rounds=3):
     target = max(1, cfg["pipeline"].get("review_buffer", 6) - 2)
     for rnd in range(1, max_rounds + 1):
         have = open_count()
-        if have >= target:
+        queued = len(load_json("draft_queue.json", []))
+        if have >= target and not queued:
             print(f"Refill: {have} open drafts (>= {target}); done.")
             return
+        if queued:
+            print(f"Refill: {queued} queued item(s) (manual adds/redos) — "
+                  f"generating regardless of buffer.")
         print(f"Refill round {rnd}: {have}/{target} open drafts, fetching more...")
         before = len(load_json("drafts.json", []))
         errors = {}
