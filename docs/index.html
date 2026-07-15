@@ -42,42 +42,35 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-15 10:44 UTC <span class="chip ok">+0 today</span></p></header>
+<p>@jahirargote · generated 2026-07-15 10:49 UTC <span class="chip ok">+0 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">3</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">56</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">2</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">57</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/135" target="_blank">issue #135</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 12:17 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/135" target="_blank">issue #135</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">50x/sec body tracking across 22 players, multiple vendors, live broadcast, global scale. The IEEE…
 https://standards.ieee.org/beyond-standards/the-standards-behind-the-spectacle-how-ieee-sa-helps-to-enable-the-worlds-game/?utm_medium=social&amp;utm_source=instagram&amp;utm_campaign=sa-worldstage-2026</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f56a3064/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f56a3064/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f56a3064/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f56a3064/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The honest caveat: this is a marketing blog, not a technical paper. Implementation details are thin. But the standards it names are real. If you deploy multi-vendor sensor networks under time pressure, this stack is worth knowing cold.</div><div class="reply">The body data angle is the one I keep thinking about. IEEE P3141 handles interoperability for player performance and injury data. But who owns that data and what they can do with it is an open question the standard does not answer. Anyone working on the consent and governance side of this?</div>
 </article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/133" target="_blank">issue #133</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 12:17 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/133" target="_blank">issue #133</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">No GPS. No camera. One IMU. IONext learns odometry directly from raw inertial sequences, no fusion, no map. High-leverage work for underground and subsea robots where every other sensor has already failed. https://doi.org/10.1109/lra.2026.3709641</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/90820163/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/90820163/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/90820163/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/90820163/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The real test isn&#x27;t the benchmark. Lab IMUs sit in controlled temps between runs. Field IMUs eat continuous vibration, shock, and thermal drift. That gap is where inertial odometry papers usually break. Would love to see this on a mining platform or ROV.</div><div class="reply">Squeezing better position estimates from hardware already bolted to every robot is the right engineering priority. No extra cost, no extra failure modes. Question for anyone running GPS-denied platforms: how much IMU drift are you actually tolerating right now?</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">video</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/132" target="_blank">issue #132</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">30 sec of training data. 5ms loop. Matches NMPC at 1/10th the compute.
-
-Tight quadrotor formations = downwash chaos. This framework learns the residual aerodynamics while keeping differential flatness intact. Hardware shows 31% tracking error drop. arxiv.org/abs/2607.12275v1</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f1c75450/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f1c75450/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f1c75450/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/f1c75450/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The clever bit: preserving flatness means feedback linearization still works. No iterative solve per cycle. The learned correction is a feedforward term, not a replanning problem. That&#x27;s why the 5ms loop is believable.</div><div class="reply">What I want to see next: formation geometry changes mid-flight. The 30-sec training claim is impressive but residual models can be brittle when the relative positions shift. Anyone know if they tested reconfiguration? Asking because SAR and inspection both need it.</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~6855m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1155m)</td><td>✅ success <span class='mono'>2026-07-15 08:47</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~675m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>11:00 UTC (~15m)</td><td>▫️ pending <span class='mono'>2026-07-15 10:40</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>11:00 UTC (~15m)</td><td>▫️ cancelled <span class='mono'>2026-07-15 10:40</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>12:00 UTC (~75m)</td><td>✅ success <span class='mono'>2026-07-15 08:10</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~6850m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1150m)</td><td>✅ success <span class='mono'>2026-07-15 08:47</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~670m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>11:00 UTC (~10m)</td><td>▫️ cancelled <span class='mono'>2026-07-15 10:47</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>11:00 UTC (~10m)</td><td>⏳ in_progress <span class='mono'>2026-07-15 10:47</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>12:00 UTC (~70m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-15 07:25</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-15 10:47</td>
+<td>Flatness-Preserving Residual Learning for Real-Time </td><td class="mono">thread</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-15 07:25</td>
 <td>Developing active and flexible microrobots</td><td class="mono">single</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-15 01:02</td>
 <td>A Compact Top-Loading Robot for Endovascular Interve</td><td class="mono">thread</td>
@@ -105,17 +98,15 @@ Tight quadrotor formations = downwash chaos. This framework learns the residual 
 <td>Towards shared embodied intelligence in humanoid rob</td><td class="mono">single</td>
 <td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-13 21:28</td>
 <td>Embroidery Actuator Utilizing Embroidery Patterns to</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-13 15:25</td>
-<td>1 Year, 1,000 Skydio Docks Deployed | Autonomous Fli</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Vision-Based Dribbling for Humanoid Soccer via Privilege</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Edge-Aware Thermal Infrared UAV Swarm Tracking</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Unveiling Complex Collective Behaviors from Simple Rewar</b> · auto: no usable figures found (all sources + vetting)</li><li><b>MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mo</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14"],datasets:[{data:[909, 912, 912, 912, 912, 912],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-13", "07-13", "07-13", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-15", "07-15"],datasets:[
- {label:"likes",data:[0, 0, 1, 2, 2, 1, 2, 1, 1, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-13", "07-13", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-14", "07-15", "07-15", "07-15"],datasets:[
+ {label:"likes",data:[0, 1, 2, 2, 1, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
