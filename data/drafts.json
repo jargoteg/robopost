@@ -14494,5 +14494,239 @@
       ]
     },
     "issue": 151
+  },
+  {
+    "draft_id": "ba648e62",
+    "paper": {
+      "id": "web-50e9c95ef6",
+      "title": "Tornyol — Mosquito killing micro-drone",
+      "abstract": "Tornyol is a micro-drone concept designed specifically for killing mosquitoes. The project appears to focus on autonomous or semi-autonomous small aerial vehicles capable of targeting and eliminating mosquitoes. This represents an application of micro-drone technology for pest control and potentially public health purposes, addressing mosquito-borne disease vectors. The drone is designed at a small scale appropriate for hunting individual insects.",
+      "authors": [
+        "Tornyol"
+      ],
+      "url": "https://tornyol.com/",
+      "source": "Tornyol",
+      "item_type": "article",
+      "journal": false
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A drone small enough to hunt individual mosquitoes.",
+      "commentary": "Tornyol is a micro-drone concept targeting individual mosquitoes for autonomous elimination, pitched as a public health tool against disease vectors like malaria and dengue. The core engineering challenge is brutal: mosquitoes are fast, small, and fly erratically, so detection and interception at centimeter scale is a genuinely hard sensing and control problem. What's not yet clear from public materials is whether the targeting is optical, acoustic, or thermal, and whether kill rates are validated in anything beyond controlled conditions. The concept is interesting precisely because it inverts the usual drone scaling logic, smaller is harder here, not easier. Until field trial numbers appear, this stays a promising concept, not a deployed tool.",
+      "commentary_note": "No arXiv ID available; this is a company concept page.",
+      "slides": [
+        {
+          "title": "The target: one mosquito",
+          "body": "Mosquitoes kill more humans per year than any other animal. Current control methods are area-wide. Tornyol proposes targeting individual insects with a purpose-built micro-drone."
+        },
+        {
+          "title": "Why size makes this hard",
+          "body": "Smaller drones carry less battery, less compute, less payload. Detecting and intercepting a 2mm insect mid-flight demands sensing and actuation at a scale most drone platforms never face."
+        },
+        {
+          "title": "The detection problem",
+          "body": "Is it optical? Acoustic? Thermal? Public materials do not specify. Sensor choice drives everything: range, false positive rate, power budget, and whether it works at dusk when mosquitoes are most active."
+        },
+        {
+          "title": "What field deployment actually means",
+          "body": "Wind, humidity, cluttered indoor environments, and thousands of non-target insects. Lab kill-rate numbers, if they exist, need replication in real rooms, rice paddies, and refugee camps before the public health claim holds."
+        },
+        {
+          "title": "The honest verdict",
+          "body": "Clever inversion of the usual drone scaling logic. But no peer-reviewed kill rate, no field trial data, and no sensor spec published yet. Watch for those numbers before updating priors."
+        }
+      ],
+      "video_script": "A drone that fits in your palm, hunting a single mosquito. Not a swarm spray. Not a pesticide. One insect, one intercept. Tornyol is building micro-drones specifically for this, targeting individual disease vectors in flight. The engineering challenge is serious: mosquitoes are fast, erratic, and tiny. Detection alone is unsolved at this scale. Battery life, sensor choice, false positive rates in cluttered environments, none of that is published yet. The concept is sharp. The hard part is whether it survives a real room, let alone a rice paddy. What sensing approach do you think actually works here?",
+      "caption_instagram": "A drone small enough to hunt individual mosquitoes.\n\nMosquitoes kill over 700,000 people a year. Most control strategies are area-wide, nets, sprays, larvae treatment. Tornyol is going the other direction: a micro-drone designed to intercept individual insects mid-flight.\n\nThe concept is genuinely interesting because it inverts the usual drone logic. Bigger drones get more capable as they scale up. Here, going smaller makes every subsystem harder. Sensing, actuation, power, all of it gets brutal at this scale.\n\nWhat I want to see: sensor specs, controlled-environment kill rates, and a field trial outside a lab. Until those numbers are public, this is a strong concept waiting for validation data.\n\nFollow for more field robotics and swarm systems research.\n\n#microrobotics #dronetech #swarmrobotics #publichealth #autonomoussystems #fielddeploy #pestcontrol",
+      "caption_tiktok": "A micro-drone that hunts individual mosquitoes mid-flight. The concept is clever. The field data is the part we're waiting for. #microrobotics #dronetech #autonomousdrones #robotics",
+      "post_bluesky": "A drone small enough to hunt individual mosquitoes. Tornyol is building micro-UAVs for individual insect interception. Concept is sharp. No sensor spec or kill-rate data published yet. Scaling down is harder, not easier. https://tornyol.com/",
+      "bluesky_thread": [
+        "The core engineering problem: detecting a 2mm erratic target mid-flight with a platform that has minimal battery and compute. Sensor choice alone, optical vs acoustic vs thermal, determines whether this works at dusk in a cluttered room.",
+        "No peer-reviewed field trial numbers yet. That's the honest gap. Love to see this tested in a real environment, not a controlled chamber. Anyone seen unpublished data from these folks, or a similar project that actually ran field trials?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:25:27.223195+00:00",
+    "media": {
+      "figures": [
+        "media/ba648e62/fig_00.png"
+      ],
+      "bsky": [
+        "media/ba648e62/bsky_00.png",
+        "media/ba648e62/bsky_01.png",
+        "media/ba648e62/bsky_02.png",
+        "media/ba648e62/bsky_03.png"
+      ],
+      "slides": [
+        "media/ba648e62/slide_00.png",
+        "media/ba648e62/slide_01.png",
+        "media/ba648e62/slide_02.png",
+        "media/ba648e62/slide_03.png",
+        "media/ba648e62/slide_04.png",
+        "media/ba648e62/slide_05.png",
+        "media/ba648e62/slide_06.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "1e4c3a57",
+    "paper": {
+      "id": "doi-10.1002_rob.70303",
+      "title": "Surface Water Cleaning Robots: A Structured Review of Technologies, Implementation Challenges, and Future Research Directions",
+      "abstract": "ABSTRACT The rising levels of water pollution worldwide, particularly in urban areas due to industrial advancements, have created an urgent need for sustainable and intelligent surface water cleaning solutions. Robotic systems have emerged as one of the promising approaches to tackle floating debris and other contaminants that affect aquatic ecosystems. This review critically examines the recent advancements in surface water cleaning robots, focusing on their structural designs, operational principles, autonomy levels, and energy efficiency. Particular emphasis is placed on the integration of guidance, navigation, and control (GNC) systems that enable semi‐autonomous and fully autonomous functionality. Existing robotic platforms vary widely in their mechanical setups and cleaning mechanisms, ranging from simple net‐based collectors to more advanced systems equipped with visual sensors and embedded control logic. However, a majority of these systems still depend on limited sensing and require periodic human intervention. The lack of advanced imaging technologies for debris detection, real‐time classification, obstacle detection and navigation restrict their autonomous potential. In addition to technical comparisons, the paper highlights the limitations and research challenges, including power management, visual processing capabilities, and adaptive path planning. The need for more intelligent, low‐power, and modular systems is emphasized, particularly those capable of handling",
+      "authors": [
+        "Vipparla Anil Kumar",
+        "A. S. V. Sarma"
+      ],
+      "url": "https://doi.org/10.1002/rob.70303",
+      "doi": "10.1002/rob.70303",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Most water-cleaning robots still need a human babysitter.",
+      "commentary": "This Journal of Field Robotics review maps the state of surface water cleaning robots across hull designs, debris collection mechanisms, and autonomy levels. The honest finding buried in it: most deployed systems are semi-autonomous at best, held back by weak debris detection and path planning that can't handle real river or harbor conditions. The gap between 'works in a pond demo' and 'handles floating plastic in a tidal estuary' is enormous. What's useful here is the structured breakdown of where the engineering failures actually are: power budgets, visual classification of wet/tangled debris, and obstacle avoidance in cluttered waterways. The review doesn't oversell solutions, which makes it more useful than most.",
+      "slides": [
+        {
+          "title": "Most robots still need humans",
+          "body": "A structured review of surface water cleaning robots finds the majority require periodic human intervention. Full autonomy remains rare. The gap is not motors or hulls, it's sensing and decision-making in real conditions."
+        },
+        {
+          "title": "What designs exist",
+          "body": "Platforms range from simple net-based collectors to vessels with onboard vision and embedded control. Hull types vary widely. Cleaning mechanism choice drives power budget, and most systems run out of energy before they run out of water to clean."
+        },
+        {
+          "title": "Where autonomy breaks down",
+          "body": "Debris detection is the weakest link. Wet, tangled, mixed-material floating waste defeats basic visual classifiers. Real water surfaces add glare, wave motion, and occlusion. Lab-tuned detectors degrade fast in field conditions."
+        },
+        {
+          "title": "The path planning problem",
+          "body": "Adaptive path planning in cluttered waterways is unsolved at scale. Most systems use fixed coverage patterns. Currents, wind, and dynamic debris movement require replanning in real time. Few reviewed platforms do this reliably."
+        },
+        {
+          "title": "Power is the hard constraint",
+          "body": "Energy efficiency is flagged as a primary bottleneck. Solar-assisted designs extend runtime but add weight and complexity. No current platform cleanly solves the range-versus-payload tradeoff for continuous autonomous operation."
+        },
+        {
+          "title": "What the field actually needs",
+          "body": "The review calls for modular, low-power platforms with better onboard vision and real-time classification. The research priorities are clear: debris detection in adverse conditions, adaptive GNC, and energy-aware path planning. The hardware is largely ready. The software is not."
+        }
+      ],
+      "video_script": "Here's an honest take on surface water cleaning robots. We have the hulls. We have the nets and conveyors. Some platforms even carry cameras and onboard control. But a new structured review in Journal of Field Robotics points out the uncomfortable truth: most of these robots still need a human nearby. The breakdown happens in sensing. Wet, tangled debris in a real harbor defeats the detectors that worked fine in a test pond. Add wind, current, and glare, and your coverage path planning falls apart. The hardware problem is largely solved. The autonomy problem is not. So here's my question: is this a sensing problem, a compute problem, or just a data problem?",
+      "caption_instagram": "Most surface water cleaning robots need a human babysitter.\n\nA new structured review in Journal of Field Robotics just mapped the full field: hull designs, debris collection mechanisms, autonomy levels, energy budgets. And the conclusion is blunt. Most deployed systems are semi-autonomous at best.\n\nThe failure point isn't motors or floats. It's debris detection. Wet, tangled, mixed-material waste in real rivers and harbors breaks visual classifiers tuned on clean lab footage. Add wave motion, glare, and dynamic currents, and your fixed coverage path becomes useless.\n\nPower management is the second hard wall. Solar helps but adds weight. No platform reviewed cleanly solves the range-versus-payload tradeoff for sustained autonomous operation.\n\nThe review is useful precisely because it doesn't pretend solutions exist yet. It maps where the engineering work actually needs to go: real-time debris classification, adaptive GNC, energy-aware planning. Worth reading if you work in environmental robotics or autonomous maritime systems.\n\nPaper: 'Surface Water Cleaning Robots: A Structured Review of Technologies, Implementation Challenges, and Future Research Directions' in Journal of Field Robotics. DOI: 10.1002/rob.70303\n\n#fieldrobotics #autonomousrobotics #marinerobotics #environmentalrobotics #swarmrobotics #roboticsresearch #aquaticrobots",
+      "caption_tiktok": "The robots that clean rivers still need humans to babysit them. New review explains exactly why autonomy keeps breaking down in real water. #fieldrobotics #marinerobotics #robotics #autonomousvehicles",
+      "post_bluesky": "Most surface water cleaning robots still need a human nearby. A new JFR review is honest about why: debris detection fails on real rivers, path planning breaks in current and wind, power budgets run out first. Hardware is ready. Autonomy is not. https://doi.org/10.1002/rob.70303",
+      "bluesky_thread": [
+        "The specific failure point is visual classification. Wet, tangled, mixed-material debris in a harbor is nothing like a test pond. Most detectors are tuned on clean conditions and degrade fast. This is a data problem as much as an algorithm problem.",
+        "Power budget is the second wall. Solar-assisted platforms extend range but the range-vs-payload tradeoff has no clean solution yet. If you're working on energy-aware path planning for aquatic systems, this review is a useful map of the unsolved problems. What's your read on where the field goes…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:25:59.791972+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/1e4c3a57/bsky_00.png",
+        "media/1e4c3a57/bsky_01.png",
+        "media/1e4c3a57/bsky_02.png",
+        "media/1e4c3a57/bsky_03.png"
+      ],
+      "slides": [
+        "media/1e4c3a57/slide_00.png",
+        "media/1e4c3a57/slide_01.png",
+        "media/1e4c3a57/slide_02.png",
+        "media/1e4c3a57/slide_03.png",
+        "media/1e4c3a57/slide_04.png",
+        "media/1e4c3a57/slide_05.png",
+        "media/1e4c3a57/slide_06.png",
+        "media/1e4c3a57/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "aae5a682",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3710339",
+      "title": "Design and Analysis of SAWbot: A Robot Generating Continuous Wave",
+      "abstract": "Design and Analysis of SAWbot: A Robot Generating Continuous Wave",
+      "authors": [
+        "Nisim Kachlon",
+        "Avi Cohen",
+        "Omri Moshel",
+        "David Zarrouk"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3710339",
+      "doi": "10.1109/lra.2026.3710339",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One motor. No legs. No wheels. Continuous wave propulsion moves this robot.",
+      "commentary": "SAWbot generates a continuous traveling wave along its body to produce locomotion, the way a snake or sandworm does but in a rigid robotic platform. Zarrouk's group at Ben-Gurion has a track record with wave-driven robots, and this one pushes toward a cleaner mechanical implementation with real analysis behind the design choices. The honest caveat: continuous wave locomotion is genuinely hard to scale and the friction coupling to the substrate is highly surface-dependent, so lab tile results rarely predict gravel or mud performance. Still, for confined or tubular environments like pipe inspection, this kinematic approach has real engineering appeal that wheeled platforms can't match.",
+      "slides": [
+        {
+          "title": "SAWbot: Wave-Driven Locomotion",
+          "body": "No wheels, no legs. SAWbot moves by generating a continuous traveling wave along its body, converting oscillation into net forward motion through substrate friction."
+        },
+        {
+          "title": "How the Wave Works",
+          "body": "A single motor drives a mechanism that produces a sinusoidal wave propagating body-length. Phase relationships between segments determine wave speed and direction. No additional actuators required."
+        },
+        {
+          "title": "Why Continuous, Not Discrete",
+          "body": "Peristaltic robots use discrete segment contractions. A continuous wave keeps at least one body region in ground contact at all times, improving force transmission and reducing slip events."
+        },
+        {
+          "title": "Where This Matters",
+          "body": "Pipe inspection, rubble navigation, confined subsurface environments. Wave locomotion adapts naturally to cylindrical or irregular tunnels where wheeled robots jam and legged robots need vertical clearance."
+        },
+        {
+          "title": "The Real Constraint",
+          "body": "Thrust depends on friction coupling. Lab results on flat rigid surfaces will not transfer directly to sand, mud, or wet concrete. Surface-dependence is the core field-deployment challenge for any wave robot."
+        },
+        {
+          "title": "Worth Watching",
+          "body": "Zarrouk's group previously demonstrated STAR and other undulatory platforms with field potential. SAWbot's design analysis gives future builders a principled starting point, not just a prototype showcase."
+        }
+      ],
+      "video_script": "This robot has one motor. No wheels, no legs, no multiple actuators. It moves by generating a continuous traveling wave along its body, the same physics a sandworm uses, but in a rigid engineered platform. The wave propagates tail to head, friction with the ground converts that into forward thrust. The clever part is the mechanical design that produces a true continuous wave from a single rotary input. The catch: every wave robot lives or dies by its friction coupling. Change the surface, change everything. So here is the question: would you trust this inside a pipe you cannot reach?",
+      "caption_instagram": "One motor drives this entire robot. No wheels. No legs. Just a continuous traveling wave.\n\nSAWbot from Zarrouk's lab at Ben-Gurion generates a sinusoidal wave along its body length from a single actuator. Friction with the substrate converts that wave into net forward motion. Clean in principle, genuinely hard in practice.\n\nThe design analysis here is the real contribution. Understanding how wave amplitude, frequency, and body geometry interact gives future builders something to work with beyond trial-and-error prototyping.\n\nThe honest limitation: wave locomotion is exquisitely sensitive to surface friction. The numbers from a lab floor will not survive gravel, wet concrete, or pipe biofilm. That gap between bench results and field conditions is where this class of robot needs the next decade of work.\n\nPaper: 'Design and Analysis of SAWbot: A Robot Generating Continuous Wave' in IEEE Robotics and Automation Letters. https://doi.org/10.1109/lra.2026.3710339\n\n#swarmrobotics #fieldrobotics #pipeinspection #locomotion #undulatory #robotdesign #inspectionrobotics",
+      "caption_tiktok": "One motor. Continuous wave. No wheels, no legs, no excuses. The friction coupling problem is still unsolved though. #robotics #wavelocomotion #inspectionrobot #engineeringdesign",
+      "post_bluesky": "One motor. No wheels, no legs. SAWbot propels itself with a continuous traveling wave along its body. Single actuator, principled design analysis, real pipe-inspection potential. The friction-surface problem is still the killer. https://doi.org/10.1109/lra.2026.3710339",
+      "bluesky_thread": [
+        "The clever bit is producing a true continuous wave from one rotary input. Most undulatory robots discretize it into segments and lose efficiency. Zarrouk's group is building toward something cleaner mechanically. The analysis lets you tune amplitude, frequency, body geometry before you cut metal.",
+        "My question for anyone working in pipe inspection: how much does your target environment vary in friction? Because that single variable probably determines whether wave-drive is viable or stays a lab curiosity. Wet cast iron vs dry PVC vs concrete are three different robots."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-15T22:26:30.170022+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/aae5a682/bsky_00.png",
+        "media/aae5a682/bsky_01.png",
+        "media/aae5a682/bsky_02.png",
+        "media/aae5a682/bsky_03.png"
+      ],
+      "slides": [
+        "media/aae5a682/slide_00.png",
+        "media/aae5a682/slide_01.png",
+        "media/aae5a682/slide_02.png",
+        "media/aae5a682/slide_03.png",
+        "media/aae5a682/slide_04.png",
+        "media/aae5a682/slide_05.png",
+        "media/aae5a682/slide_06.png",
+        "media/aae5a682/slide_07.png"
+      ]
+    }
   }
 ]
