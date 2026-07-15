@@ -13,6 +13,7 @@ JOURNALS = {
     "1556-4967": ("Journal of Field Robotics", False),
     "2377-3766": ("IEEE Robotics and Automation Letters", False),
     "1941-0468": ("IEEE Transactions on Robotics", False),
+    "1552-3098": ("IEEE Transactions on Robotics", False),
 }
 ROBO = ("robot", "manipulat", "locomotion", "gripper", "drone", "uav",
         "autonomous vehicle", "quadruped", "humanoid", "swarm", "soft actuat",
