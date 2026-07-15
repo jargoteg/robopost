@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "web-50e9c95ef6",
+    "title": "Tornyol — Mosquito Killing Micro-Drone",
+    "abstract": "Tornyol is a micro-drone concept designed specifically to hunt and kill mosquitoes. The project involves a small autonomous aerial robot capable of detecting and eliminating mosquitoes as a pest control solution. The drone is intended to address mosquito-borne disease transmission by targeting individual insects in flight or at rest. The concept represents an application of micro-robotics and autonomous systems to public health and pest management challenges.",
+    "authors": [
+      "Tornyol"
+    ],
+    "url": "https://tornyol.com/",
+    "source": "Tornyol official website",
+    "item_type": "article",
+    "journal": false
+  }
+]
