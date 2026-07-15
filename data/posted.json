@@ -1433,5 +1433,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "90820163",
+    "paper_id": "doi-10.1109_lra.2026.3709641",
+    "title": "IONext: Unlocking the Next Era of Inertial Odometry",
+    "format": "carousel",
+    "hook": "IMU only. No GPS. No camera. How far can you navigate?",
+    "posted_at": "2026-07-15T12:49:09.815647+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqoqzy7bfu2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
