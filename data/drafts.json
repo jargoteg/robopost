@@ -12979,7 +12979,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T08:31:13.111050+00:00",
     "media": {
       "figures": [],
@@ -13298,7 +13298,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T10:25:35.452250+00:00",
     "media": {
       "figures": [
