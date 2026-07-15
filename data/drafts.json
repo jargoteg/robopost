@@ -13325,5 +13325,241 @@
       ]
     },
     "issue": 133
+  },
+  {
+    "draft_id": "f56a3064",
+    "paper": {
+      "id": "web-55e9646812",
+      "title": "The Standards Behind the Spectacle: How IEEE SA Helps to Enable the World's Game",
+      "abstract": "The IEEE Standards Association (IEEE SA) published a blog post detailing how its standards underpin the technologies used in major international football tournaments. IEEE connectivity standards such as IEEE 802.11 (Wi-Fi) and IEEE 802.3 (Ethernet) support the massive data flows across stadiums and broadcast systems, while cybersecurity standards like IEEE 1686 and IEEE 802E help protect ticketing, payment, and broadcast infrastructure. Standards including IEEE 1451, IEEE 2700, IEEE P3715, and IEEE P3716 enable interoperable sensor communication and match data sharing for AI-assisted officiating and real-time analytics. Player tracking systems capture body position data 50 times per second, and standards like IEEE P3141 support body data interoperability for performance and injury analysis. Sustainability is also addressed through smart energy and grid integration standards such as IEEE 2030.5 and IEEE 1547.9. The post highlights how these frameworks collectively build trust and enable seamless, secure, and ethically responsible global-scale sporting events.",
+      "authors": [
+        "IEEE Standards Association (IEEE SA)"
+      ],
+      "url": "https://standards.ieee.org/beyond-standards/the-standards-behind-the-spectacle-how-ieee-sa-helps-to-enable-the-worlds-game/?utm_medium=social&utm_source=instagram&utm_campaign=sa-worldstage-2026",
+      "source": "IEEE Standards Association Beyond Standards Blog",
+      "item_type": "paper",
+      "journal": true
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "50 times per second. That's how fast player tracking samples body position data at a major football tournament.",
+      "commentary": "This IEEE SA blog piece is essentially a standards audit of a global sporting event, and it's more interesting than it sounds. The sensor interoperability stack alone, IEEE 1451, IEEE 2700, IEEE P3715, IEEE P3716, is exactly the kind of unglamorous plumbing that makes AI-assisted officiating possible. Fifty body position samples per second across 22 players requires serious data pipeline discipline. Honest caveat: this is a marketing blog post, not a technical paper, so the claims are broad and the implementation details are thin. Still, the standards stack it names is real and worth knowing if you deploy sensor networks in complex, multi-stakeholder environments.",
+      "slides": [
+        {
+          "title": "50x per second, 22 players",
+          "body": "Player tracking systems sample full body position data 50 times per second per player. That data feeds AI officiating tools and real-time broadcast analytics. Interoperability across vendors requires agreed standards."
+        },
+        {
+          "title": "The sensor standards you never see",
+          "body": "IEEE 1451 and IEEE 2700 define how sensors report data. IEEE P3715 and P3716 handle match data sharing. Without these, each camera or IMU vendor speaks a different language and the pipeline breaks."
+        },
+        {
+          "title": "Connectivity at stadium scale",
+          "body": "IEEE 802.11 (Wi-Fi) and IEEE 802.3 (Ethernet) carry the data flows across venues and broadcast chains. Simple standards, but coordinating them across dozens of countries and operators is the actual engineering problem."
+        },
+        {
+          "title": "Cybersecurity is not an afterthought",
+          "body": "IEEE 1686 and IEEE 802E cover ticketing, payment, and broadcast security. A compromised broadcast feed or ticketing system at this scale is a real threat, not a theoretical one."
+        },
+        {
+          "title": "Body data and ethics",
+          "body": "IEEE P3141 targets body data interoperability for performance and injury analysis. Who owns that data, and how it is shared, is an open question the standard does not fully resolve."
+        },
+        {
+          "title": "Why field roboticists should care",
+          "body": "Multi-sensor, multi-vendor, high-throughput environments under adversarial conditions: this is the same problem as industrial inspection or search and rescue. Sports just debugged it publicly at global scale."
+        }
+      ],
+      "video_script": "Nobody thinks about standards at a football tournament. They think about goals and VAR calls. But behind every offside decision from a camera system sampling 50 times per second, there is a stack of IEEE standards making the data interoperable across vendors and countries. IEEE 1451, 2700, P3715, P3716. The same problems field roboticists fight every day, multi-vendor sensors, hostile networks, real-time data pipelines. Sports just solved them publicly. Which of these standards do you actually use in your deployments?",
+      "caption_instagram": "50 body position samples per second, per player, across 22 players, fed into AI officiating systems in real time.\n\nThat requires a sensor and data pipeline that works across vendors, countries, and broadcast chains simultaneously. The IEEE SA blog breaks down exactly which standards make that possible.\n\nIEEE 1451 and 2700 for sensor interoperability. IEEE P3715 and P3716 for match data sharing. IEEE 802.11 and 802.3 for the connectivity backbone. IEEE 1686 and 802E for cybersecurity across ticketing and broadcast. IEEE P3141 for body data.\n\nThis is the same multi-vendor, high-throughput, adversarial-environment problem that field robotics fights constantly. Sports infrastructure just ran the experiment at global scale with a very public failure mode.\n\nWorth reading if you deploy sensor networks anywhere that involves more than one vendor and a real deadline.\n\nSource: 'The Standards Behind the Spectacle' via IEEE SA Beyond Standards Blog.\n\n#swarmrobotics #fieldrobotics #IEEEstandards #sensornetworks #robotics #interoperability #edgecomputing",
+      "caption_tiktok": "50 body position samples per second per player. The sensor standards making that work are the same ones field robotics depends on. #robotics #IEEEstandards #sensortech #engineering",
+      "post_bluesky": "50x/sec body tracking across 22 players, multiple vendors, live broadcast, global scale. The IEEE…\nhttps://standards.ieee.org/beyond-standards/the-standards-behind-the-spectacle-how-ieee-sa-helps-to-enable-the-worlds-game/?utm_medium=social&utm_source=instagram&utm_campaign=sa-worldstage-2026",
+      "bluesky_thread": [
+        "The honest caveat: this is a marketing blog, not a technical paper. Implementation details are thin. But the standards it names are real. If you deploy multi-vendor sensor networks under time pressure, this stack is worth knowing cold.",
+        "The body data angle is the one I keep thinking about. IEEE P3141 handles interoperability for player performance and injury data. But who owns that data and what they can do with it is an open question the standard does not answer. Anyone working on the consent and governance side of this?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-15T10:41:17.748228+00:00",
+    "media": {
+      "figures": [
+        "media/f56a3064/fig_02.png",
+        "media/f56a3064/fig_00.png",
+        "media/f56a3064/fig_01.png"
+      ],
+      "bsky": [
+        "media/f56a3064/bsky_00.png",
+        "media/f56a3064/bsky_01.png",
+        "media/f56a3064/bsky_02.png",
+        "media/f56a3064/bsky_03.png"
+      ],
+      "slides": [
+        "media/f56a3064/slide_00.png",
+        "media/f56a3064/slide_01.png",
+        "media/f56a3064/slide_02.png",
+        "media/f56a3064/slide_03.png",
+        "media/f56a3064/slide_04.png",
+        "media/f56a3064/slide_05.png",
+        "media/f56a3064/slide_06.png",
+        "media/f56a3064/slide_07.png"
+      ]
+    },
+    "issue": 135
+  },
+  {
+    "draft_id": "9f4eee8f",
+    "paper": {
+      "id": "2607.12593v1",
+      "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
+      "abstract": "The evolution of energy-efficient ultra-low-power (ULP) parallel processors and the diffusion of convolutional neural networks (CNNs) are fueling the advent of autonomous driving nano-sized unmanned aerial vehicles (UAVs). These sub-10 cm robotic platforms are envisioned as next-generation ubiquitous smart-sensors and unobtrusive robotic-helpers. However, the limited computational/memory resources available aboard nano-UAVs introduce the challenge of minimizing and optimizing vision-based CNNs -- which to date require error-prone, labor-intensive iterative development flows. This work explores methodologies and software tools to streamline and automate all the deployment of vision-based CNN navigation on a ULP multicore system-on-chip acting as a mission computer on a Crazyflie 2.1 nano-UAV. We focus on the deployment of PULP-Dronet, a state-of-the-art CNN for autonomous navigation of nano-UAVs, from the initial training to the final closed-loop evaluation. Compared to the original hand-crafted CNN, our results show a 2x reduction of memory footprint and a speedup of 1.6x in inference time while guaranteeing the same prediction accuracy and significantly improving the behavior in the field, achieving: i) obstacle avoidance with a peak braking-speed of 1.65 m/s and improving the speed/braking-space ratio of the baseline, ii) free flight in a familiar environment up to 1.96 m/s (0.5 m/s for the baseline), and iii) lane following on a path featuring a 90 deg turn -- all while using for computation less than 1.6% of the drone's power budget. To foster new applications and future research, we open-source all the software design in a ready-to-run project compatible with the Crazyflie 2.1",
+      "authors": [
+        "Vlad Niculescu",
+        "Lorenzo Lamberti",
+        "Francesco Conti",
+        "Luca Benini",
+        "Daniele Palossi"
+      ],
+      "url": "https://arxiv.org/abs/2607.12593v1",
+      "source": "arxiv",
+      "score": 5.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Full autonomy using less than 1.6% of the drone's power budget.",
+      "commentary": "This paper automates the painful hand-tuning loop for deploying vision-based CNNs on the Crazyflie 2.1, a 27-gram nano-drone with brutal compute constraints. The automated pipeline squeezes PULP-Dronet to half the memory footprint and runs 1.6x faster without touching accuracy, then validates it in closed-loop flight. The real number that matters: free flight speed jumps from 0.5 m/s to 1.96 m/s. Honest caveat: 'familiar environment' is doing a lot of work in that sentence, and a 90-degree hallway turn is not exactly a cluttered field deployment. Still, the toolchain contribution is the actual point here, and open-sourcing it for Crazyflie is genuinely useful for the swarm community.",
+      "slides": [
+        {
+          "title": "27 grams, full autonomy",
+          "body": "Crazyflie 2.1 nano-drone: sub-10 cm, under 30 g. Vision-based CNN navigation running on a ULP multicore SoC. The constraint is not software. It is milliwatts."
+        },
+        {
+          "title": "The problem: hand-tuning CNNs",
+          "body": "Deploying a CNN on a nano-drone today means iterative, error-prone manual compression. Each cycle costs weeks. This paper automates the entire flow from training to closed-loop flight evaluation."
+        },
+        {
+          "title": "What the pipeline actually does",
+          "body": "Automated quantization and memory optimization of PULP-Dronet. Result: 2x memory reduction, 1.6x inference speedup, same prediction accuracy. No manual tuning required."
+        },
+        {
+          "title": "Field numbers that matter",
+          "body": "Free flight speed: 0.5 m/s baseline vs. 1.96 m/s optimized. Obstacle braking peak: 1.65 m/s. Lane following through a 90-degree turn. All on less than 1.6% of total power budget."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "'Familiar environment' and a single 90-degree turn are controlled conditions. Real-world clutter, dynamic obstacles, and lighting variation remain untested. Generalization is the open question."
+        },
+        {
+          "title": "Why it matters for swarm work",
+          "body": "Open-sourced, ready-to-run on Crazyflie 2.1. If you deploy nano-drone swarms, this toolchain removes the biggest deployment bottleneck. The platform, not the algorithm, has always been the wall."
+        }
+      ],
+      "video_script": "Twenty-seven grams. No external compute. Full vision-based autonomy. This paper automates the entire CNN deployment pipeline for nano-drones and the numbers are concrete: memory cut in half, inference 1.6 times faster, free flight speed nearly quadrupled from 0.5 to 1.96 meters per second. All while the navigation stack uses less than 1.6 percent of the drone's total power. The toolchain is open-sourced for Crazyflie. The real question: how far does this hold up outside a familiar corridor?",
+      "caption_instagram": "Full autonomy on a 27-gram drone using less than 1.6% of its power budget.\n\nThe Crazyflie 2.1 is one of the most constrained autonomous platforms in research. No external compute, brutal memory limits, milliwatt power budgets. Deploying a vision CNN on it has always meant painful, manual compression cycles.\n\nThis paper automates that entire flow. The optimized PULP-Dronet runs at half the memory footprint, 1.6x faster inference, same accuracy. Free flight speed goes from 0.5 m/s to 1.96 m/s. Obstacle braking peaks at 1.65 m/s. It completes lane following through a 90-degree turn.\n\nCaveat: these results are in a familiar, structured environment. Dynamic clutter and lighting variation are the next wall. But the toolchain is open-sourced and ready to run, which is the real contribution for anyone doing nano-drone swarm work.\n\nPaper: 'Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs' | arXiv:2607.12593\n\n#swarmrobotics #nanodrones #edgeAI #autonomousdrones #embeddedML #robotics #UAV",
+      "caption_tiktok": "27 grams. Less than 1.6% power used for navigation. Full vision autonomy on a nano-drone, automated deployment pipeline, nearly 4x speed improvement. arXiv:2607.12593 #nanodrones #swarmrobotics #edgeAI #robotics",
+      "post_bluesky": "Full autonomy on a 27g drone using <1.6% of its power budget. Automated CNN deployment cuts memory 2x, boosts inference 1.6x, and jumps free-flight speed from 0.5 to 1.96 m/s. Open-sourced for Crazyflie. https://arxiv.org/abs/2607.12593v1",
+      "bluesky_thread": [
+        "The toolchain is the real contribution here, not the model. Automating quantization and memory layout for ULP SoCs removes the part of nano-drone deployment that actually kills research velocity. 'Familiar environment' caveat stands, but for swarm prototyping this removes a real wall.",
+        "Curious whether anyone has stress-tested PULP-Dronet variants in multi-drone scenarios where airflow interference degrades vision. The power budget math gets tighter fast. What is the actual failure mode at scale, lighting variation or compute starvation?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T10:43:09.223795+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/9f4eee8f/bsky_00.png",
+        "media/9f4eee8f/bsky_01.png",
+        "media/9f4eee8f/bsky_02.png",
+        "media/9f4eee8f/bsky_03.png"
+      ],
+      "slides": [
+        "media/9f4eee8f/slide_00.png",
+        "media/9f4eee8f/slide_01.png",
+        "media/9f4eee8f/slide_02.png",
+        "media/9f4eee8f/slide_03.png",
+        "media/9f4eee8f/slide_04.png",
+        "media/9f4eee8f/slide_05.png",
+        "media/9f4eee8f/slide_06.png",
+        "media/9f4eee8f/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "5ded6afe",
+    "paper": {
+      "id": "2607.12801v1",
+      "title": "Autonomous Tracking and Terminal Guidance of Moving Targets for Fixed-Wing UAVs",
+      "abstract": "This study introduces a unified control framework for fixed-wing unmanned aerial vehicles (UAVs) fitted with a pan-tilt (PT) camera, intended to perform an end-to-end mission spanning from initial target detection to accurate terminal engagement. The proposed system employs a three-phase strategy: a vision-based target acquisition phase, an NMPC-based tracking phase, and a terminal guidance phase. During tracking, the framework uses an Unscented Kalman Filter (UKF) to fuse YOLO-based visual detections with inertial measurements, enabling robust target state estimation under unknown dynamics. To ensure reliable visual contact, we introduce a constraint-aware Nonlinear Model Predictive Control (NMPC) strategy that incorporates Control Barrier Functions (CBFs) to explicitly prevent UAV self-occlusion -- a common limitation in fixed-wing tracking. Upon satisfying terminal engagement conditions, the system seamlessly transitions control to a quaternion-based Biased Proportional Navigation Guidance (BPNG) law, enforcing precise impact angle constraints. High-fidelity simulations demonstrate that the framework achieves stable, robust tracking and accurate terminal interception while strictly respecting the vehicle's dynamic limits and camera field-of-view constraints.",
+      "authors": [
+        "Wei-Hao Liou",
+        "Teng-Hu Cheng"
+      ],
+      "url": "https://arxiv.org/abs/2607.12801v1",
+      "source": "arxiv",
+      "score": 4.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Fixed-wing UAVs can't just hover and stare. So how do you track a moving target?",
+      "commentary": "Fixed-wing tracking is genuinely hard because you can't stop, and your camera gimbal has limits that create self-occlusion dead zones. The clever bit here is using Control Barrier Functions inside the NMPC to treat those dead zones as hard constraints, not soft penalties. The UKF fusing YOLO detections with IMU data for state estimation under unknown target dynamics is solid, if not novel. The transition to Biased Proportional Navigation for terminal guidance is clean engineering. Honest caveat: everything is simulation only, and YOLO detection rates in real outdoor clutter against a moving ground target are a very different problem than the sim suggests.",
+      "slides": [
+        {
+          "title": "The fixed-wing tracking problem",
+          "body": "A fixed-wing UAV can't hover. Minimum airspeed plus limited gimbal range means the target regularly falls out of frame. Self-occlusion by the airframe is a known failure mode with no standard fix."
+        },
+        {
+          "title": "Three-phase mission architecture",
+          "body": "Phase 1: YOLO-based visual acquisition. Phase 2: NMPC tracking with active field-of-view enforcement. Phase 3: Biased Proportional Navigation for terminal intercept with impact angle constraint."
+        },
+        {
+          "title": "CBFs keep the target in frame",
+          "body": "Control Barrier Functions define the camera field-of-view as a formal constraint inside the NMPC. The optimizer cannot generate trajectories that cause self-occlusion. Hard constraint, not a tuning parameter."
+        },
+        {
+          "title": "UKF fuses vision and inertia",
+          "body": "Unscented Kalman Filter combines pan-tilt camera detections with IMU measurements to estimate target state. Works under unknown target dynamics, which matters when the target is maneuvering unpredictably."
+        },
+        {
+          "title": "What the sim shows",
+          "body": "High-fidelity simulation confirms stable tracking and accurate interception while respecting airspeed, bank angle, and gimbal limits. No real-flight data yet."
+        },
+        {
+          "title": "The gap that remains",
+          "body": "YOLO in clean sim is not YOLO over farmland, rooftops, or into sun glare. Real-world false positives and detection dropout will stress the UKF in ways the sim doesn't capture. That's the next honest test."
+        }
+      ],
+      "video_script": "Fixed-wing drones have one big problem for tracking: they can't stop moving. Point the camera too far and the airframe blocks the view. This paper solves it by baking field-of-view limits directly into the flight controller as hard math constraints, not tuning knobs. A Kalman filter fuses the visual detections with inertial data to track a maneuvering target. Then when conditions are right, the system hands off to proportional navigation for a precise intercept. All in simulation, so far. The real question: does YOLO hold up when the background stops being clean? What do you think breaks first in a field test?",
+      "caption_instagram": "Fixed-wing UAVs can't hover and stare. So how do you keep a moving target in frame?\n\nThis paper from Liou and Cheng builds a three-phase control system around that exact constraint. The tracking phase uses Control Barrier Functions inside a nonlinear MPC to make self-occlusion mathematically impossible, not just unlikely. The UKF underneath fuses YOLO detections with IMU data to estimate target state even when dynamics are unknown.\n\nWhen interception conditions are met, control passes to a Biased Proportional Navigation law with a specific impact angle constraint. Clean handoff between two very different control regimes.\n\nHonest read: the sim results look solid, but outdoor YOLO detection against a real maneuvering target in variable lighting is where this framework will actually be tested. That paper hasn't been written yet.\n\nPaper: 'Autonomous Tracking and Terminal Guidance of Moving Targets for Fixed-Wing UAVs' arXiv:2607.12801\n\n#swarmrobotics #UAV #fixedwingdrones #roboticsresearch #controltheory #autonomoussystems #dronetech",
+      "caption_tiktok": "Fixed-wing drone can't hover, target is moving, airframe blocks the camera. Here's how they solved it with hard math constraints, not hope. #UAV #droneengineering #robotics #controlsystems",
+      "post_bluesky": "Fixed-wing UAVs can't hover. So keeping a moving target in frame is a geometry problem with no easy answer. This paper bakes camera FOV limits into the MPC as hard constraints via CBFs. Clever. Sim only so far. https://arxiv.org/abs/2607.12801v1",
+      "bluesky_thread": [
+        "The CBF-inside-NMPC approach is the interesting bit. Self-occlusion by the airframe isn't usually treated as a formal constraint, it's usually handled by gimbal range limits and hope. Making it a barrier function the optimizer can't cross is cleaner engineering.",
+        "Caveat worth stating: all results are simulation. YOLO detection in clean rendered scenes is very forgiving. Real outdoor clutter, sun angle changes, and a target that knows it's being followed will stress that UKF hard. Who's tested visual tracking pipelines in actual fixed-wing field conditions?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "rejected",
+    "created": "2026-07-15T10:43:39.049776+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/5ded6afe/bsky_00.png",
+        "media/5ded6afe/bsky_01.png",
+        "media/5ded6afe/bsky_02.png",
+        "media/5ded6afe/bsky_03.png"
+      ],
+      "slides": [
+        "media/5ded6afe/slide_00.png",
+        "media/5ded6afe/slide_01.png",
+        "media/5ded6afe/slide_02.png",
+        "media/5ded6afe/slide_03.png",
+        "media/5ded6afe/slide_04.png",
+        "media/5ded6afe/slide_05.png",
+        "media/5ded6afe/slide_06.png",
+        "media/5ded6afe/slide_07.png"
+      ]
+    }
   }
 ]

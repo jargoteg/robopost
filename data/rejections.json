@@ -485,5 +485,15 @@
     "title": "Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning",
     "reason": "auto: no usable figures found (all sources + vetting)",
     "auto": true
+  },
+  {
+    "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
+  },
+  {
+    "title": "Autonomous Tracking and Terminal Guidance of Moving Targets for Fixed-Wing UAVs",
+    "reason": "auto: no usable figures found (all sources + vetting)",
+    "auto": true
   }
 ]
