@@ -54,8 +54,10 @@ def litreview_pass():
         if maybe_build(load_config()):
             import subprocess
             subprocess.run([sys.executable, "src/github_review.py", "create"])
-    except Exception as e:
-        print(f"litreview pass skipped: {e}")
+    except Exception:
+        import traceback
+        print("litreview pass FAILED:")
+        traceback.print_exc()
 
 
 if __name__ == "__main__":

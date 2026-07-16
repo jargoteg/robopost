@@ -33,13 +33,20 @@ def arxiv_search(query: str, n: int = 8) -> list[dict]:
 
 
 def gather_pool(theme: dict) -> list[dict]:
+    import time
     pool, seen = [], set()
     queries = [theme.get("seed", "")] + theme.get("keywords", [])
     for q in [q for q in queries if q]:
-        for p in arxiv_search(q, 8):
+        got = arxiv_search(q, 8)
+        if not got:  # arXiv rate limit: wait and retry once
+            time.sleep(4)
+            got = arxiv_search(q, 8)
+        print(f"  litreview query '{q[:40]}': {len(got)} results")
+        for p in got:
             if p["id"] not in seen:
                 seen.add(p["id"])
                 pool.append(p)
+        time.sleep(3)  # arXiv API etiquette
     return pool
 
 
@@ -165,4 +172,24 @@ def maybe_build(cfg) -> bool:
 
 
 if __name__ == "__main__":
-    maybe_build(load_config())
+    # standalone run (workflow_dispatch): force-build the next pending theme
+    cfg = load_config()
+    themes = load_json("litreview_themes.json", [])
+    pending = [t for t in themes if not t.get("done")]
+    if not pending:
+        print("No pending litreview themes.")
+    else:
+        d = build_review(pending[0], cfg)
+        if d:
+            from datetime import datetime, timezone
+            d["created"] = datetime.now(timezone.utc).isoformat()
+            drafts = load_json("drafts.json", [])
+            drafts.append(d)
+            save_json("drafts.json", drafts)
+            pending[0]["done"] = True
+            save_json("litreview_themes.json", themes)
+            from visuals import build_carousel
+            d["media"]["slides"] = build_carousel(d, cfg)
+            save_json("drafts.json", drafts)
+            print(f"Review draft {d['draft_id']} built: "
+                  f"{len(d['media']['figures'])} papers with figures")
