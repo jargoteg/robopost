@@ -1,32 +1,25 @@
 {
-  "ts": "2026-07-16T11:09",
-  "collected": 235,
-  "dedup_dropped": 64,
+  "ts": "2026-07-16T11:14",
+  "collected": 236,
+  "dedup_dropped": 65,
   "after_dedup": 171,
   "score_hist": {
-    "0": 24,
-    "1": 19,
-    "2": 36,
-    "3": 36,
-    "4": 26,
-    "5": 20,
-    "6": 6,
-    "7": 3,
-    "8": 1
+    "0": 26,
+    "1": 17,
+    "2": 32,
+    "3": 42,
+    "4": 23,
+    "5": 16,
+    "6": 14,
+    "7": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 10,
+  "ranked_above_floor": 15,
   "split": {
     "videos": 0,
-    "papers": 1,
-    "news": 9
+    "papers": 0,
+    "news": 15
   },
   "floor": 6,
-  "picked": [
-    {
-      "t": "Design and Control of the \"QuadBoat\": A Quadruped ",
-      "type": null,
-      "video": false
-    }
-  ]
+  "picked": []
 }
