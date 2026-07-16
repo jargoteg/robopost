@@ -1769,5 +1769,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "c404fa1a",
+    "paper_id": "2607.13622v1",
+    "title": "Design, Modeling and Experimental Validation of a Miniature Hybrid Underwater Glider With Large-Range Foldable Deflectable Wings",
+    "format": "carousel",
+    "hook": "Why can't most underwater gliders fit through a door?",
+    "posted_at": "2026-07-16T21:10:36.301295+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqs5jjyft22e",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
