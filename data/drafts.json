@@ -14731,7 +14731,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-15T22:26:30.170022+00:00",
     "media": {
       "figures": [],
@@ -14754,7 +14754,9 @@
     },
     "issue": 154,
     "scheduled_after": "2026-07-16T16:48:52.387181+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "45901c9d",
@@ -14913,7 +14915,7 @@
       ]
     },
     "issue": 156,
-    "scheduled_after": "2026-07-16T16:48:52.387181+00:00",
+    "scheduled_after": "2026-07-16T18:29:06.911318+00:00",
     "queue_notified": true
   },
   {
@@ -14998,7 +15000,7 @@
       ]
     },
     "issue": 157,
-    "scheduled_after": "2026-07-16T16:48:52.387181+00:00",
+    "scheduled_after": "2026-07-16T18:29:06.911318+00:00",
     "queue_notified": true
   },
   {
@@ -15086,7 +15088,7 @@
       ]
     },
     "issue": 159,
-    "scheduled_after": "2026-07-16T16:48:52.387181+00:00",
+    "scheduled_after": "2026-07-16T18:29:06.911318+00:00",
     "queue_notified": true
   },
   {
@@ -15171,7 +15173,7 @@
       ]
     },
     "issue": 160,
-    "scheduled_after": "2026-07-16T16:48:52.387181+00:00",
+    "scheduled_after": "2026-07-16T18:29:06.911318+00:00",
     "queue_notified": true
   },
   {
@@ -15453,7 +15455,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-16T16:57:43.410348+00:00",
     "media": {
       "figures": [
@@ -15477,6 +15479,7 @@
         "media/4ac8f502/slide_06.png",
         "media/4ac8f502/slide_07.png"
       ]
-    }
+    },
+    "issue": 164
   }
 ]

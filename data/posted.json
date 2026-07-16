@@ -1735,5 +1735,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "aae5a682",
+    "paper_id": "doi-10.1109_lra.2026.3710339",
+    "title": "Design and Analysis of SAWbot: A Robot Generating Continuous Wave",
+    "format": "carousel",
+    "hook": "One motor. No legs. No wheels. Continuous wave propulsion moves this robot.",
+    "posted_at": "2026-07-16T16:59:06.911323+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqrphteedu2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
