@@ -14893,7 +14893,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-16T07:44:32.374407+00:00",
     "media": {
       "figures": [],
@@ -14916,7 +14916,9 @@
     },
     "issue": 156,
     "scheduled_after": "2026-07-16T18:29:06.911323+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "c404fa1a",
@@ -15000,7 +15002,7 @@
       ]
     },
     "issue": 157,
-    "scheduled_after": "2026-07-16T18:29:06.911323+00:00",
+    "scheduled_after": "2026-07-16T21:08:14.055898+00:00",
     "queue_notified": true
   },
   {
@@ -15088,7 +15090,7 @@
       ]
     },
     "issue": 159,
-    "scheduled_after": "2026-07-16T18:29:06.911323+00:00",
+    "scheduled_after": "2026-07-16T21:08:14.055898+00:00",
     "queue_notified": true
   },
   {
@@ -15173,7 +15175,7 @@
       ]
     },
     "issue": 160,
-    "scheduled_after": "2026-07-16T18:29:06.911323+00:00",
+    "scheduled_after": "2026-07-16T21:08:14.055898+00:00",
     "queue_notified": true
   },
   {

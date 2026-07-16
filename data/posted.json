@@ -1752,5 +1752,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "929601d7",
+    "paper_id": "doi-10.1002_rob.70305",
+    "title": "Safety in Robotic Haircutting",
+    "format": "carousel",
+    "hook": "Why can't robots cut hair safely yet?",
+    "posted_at": "2026-07-16T19:38:14.055903+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqryeewkix2h",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
