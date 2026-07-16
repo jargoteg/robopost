@@ -15058,7 +15058,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-16T11:10:12.829065+00:00",
     "media": {
       "figures": [
@@ -15081,7 +15081,9 @@
         "media/a8997f7e/slide_07.png"
       ]
     },
-    "issue": 159
+    "issue": 159,
+    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "90510145",
@@ -15165,5 +15167,54 @@
       ]
     },
     "issue": 160
+  },
+  {
+    "draft_id": "b3993d70",
+    "status": "in_review",
+    "paper": {
+      "id": "review-0d41a4db",
+      "title": "Rolling, Morphing, Hybrid: The Many Shapes of Robot Locomotion",
+      "abstract": "The field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be decoupled by design.",
+      "authors": [],
+      "url": "https://arxiv.org/abs/1708.08150",
+      "source": "litreview",
+      "item_type": "litreview",
+      "review_papers": [
+        "1708.08150",
+        "2203.02118",
+        "2210.15126",
+        "1909.07193",
+        "2405.01792",
+        "2510.09980"
+      ]
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.",
+      "post_bluesky": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.",
+      "bluesky_thread": [
+        "Spherical tensegrity robots showed that a rolling shell can be steered on steep inclines by coordinating cable tensions, not by adding legs. This was an early proof that geometry itself could be a locomotion strategy, not just a support structure. arxiv.org/abs/1708.08150",
+        "OmniWheg made wheel-to-leg transformation cheap and omnidirectional. The separable omni-wheel plus 4-bar linkage is the kind of minimalist mechanism insight that unlocks a whole design family, and it shows up in later work directly. arxiv.org/abs/2203.02118",
+        "SWheg pushed minimalist actuator realization further, asking how few motors you actually need for a transformable wheel-leg robot. The modular family approach here is practical: swap modules, get a different gait, same controller skeleton. arxiv.org/abs/2210.15126",
+        "Rolling in the Deep brought online trajectory optimization to wheeled-legged hybrids, letting ANYmal-style platforms decide in real time when to roll and when to step. This is the control-theory anchor the hardware papers needed. arxiv.org/abs/1909.07193",
+        "Learning Robust Autonomous Navigation for Wheeled-Legged Robots scaled hybrid locomotion to full urban navigation stacks, connecting low-level gait switching to high-level path planning. Sim2real transfer is the hard part they quantify. arxiv.org/abs/2405.01792",
+        "ATRos frames the open problem cleanly: energy efficiency across wheeled and legged modes simultaneously. It is not enough to switch modes; you need a policy that knows when switching is worth the cost, and that metric has been underspecified until now. arxiv.org/abs/2510.09980",
+        "The field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be deco"
+      ],
+      "caption_instagram": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.\n\nSpherical tensegrity robots showed that a rolling shell can be steered on steep inclines by coordinating cable tensions, not by adding legs. This was an early proof that geometry itself could be a locomotion strategy, not just a support structure. arxiv.org/abs/1708.08150\nOmniWheg made wheel-to-leg transformation cheap and omnidirectional. The separable omni-wheel plus 4-bar linkage is the kind of minimalist mechanism insight that unlocks a whole design family, and it shows up in later work directly. arxiv.org/abs/2203.02118\nSWheg pushed minimalist actuator realization further, asking how few motors you actually need for a transformable wheel-leg robot. The modular family approach here is practical: swap modules, get a different gait, same controller skeleton. arxiv.org/abs/2210.15126\nRolling in the Deep brought online trajectory optimization to wheeled-legged hybrids, letting ANYmal-style platforms decide in real time when to roll and when to step. This is the control-theory anchor the hardware papers needed. arxiv.org/abs/1909.07193\nLearning Robust Autonomous Navigation for Wheeled-Legged Robots scaled hybrid locomotion to full urban navigation stacks, connecting low-level gait switching to high-level path planning. Sim2real transfer is the hard part they quantify. arxiv.org/abs/2405.01792\nATRos frames the open problem cleanly: energy efficiency across wheeled and legged modes simultaneously. It is not enough to switch modes; you need a policy that knows when switching is worth the cost, and that metric has been underspecified until now. arxiv.org/abs/2510.09980\nThe field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be deco",
+      "hook_style": "litreview"
+    },
+    "media": {
+      "figures": [
+        "media/b3993d70/1708_08150/fig_01.png",
+        "media/b3993d70/2203_02118/fig_00.png",
+        "media/b3993d70/2210_15126/fig_00.png",
+        "media/b3993d70/1909_07193/fig_00.png",
+        "media/b3993d70/2405_01792/fig_00.png",
+        "media/b3993d70/2510_09980/fig_01.png"
+      ]
+    },
+    "created": "2026-07-16T12:10:34.862224+00:00",
+    "issue": 161
   }
 ]

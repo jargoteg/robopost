@@ -10,6 +10,7 @@
       "transformable wheel robot",
       "multi-robot wheeled locomotion"
     ],
-    "bonus": "multi-robot or swarm variants score extra points"
+    "bonus": "multi-robot or swarm variants score extra points",
+    "done": true
   }
 ]
