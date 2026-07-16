@@ -1701,5 +1701,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "fc02d633",
+    "paper_id": "doi-10.1002_rob.70277",
+    "title": "Underwater Grippers for Dexterous Manipulation: A Review on Design and Enabling Technologies",
+    "format": "carousel",
+    "hook": "Subsea grippers still can't match a diver's hand. Here's why.",
+    "posted_at": "2026-07-16T12:54:08.598440+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqrbrsgngv2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

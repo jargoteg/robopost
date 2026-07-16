@@ -14319,7 +14319,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-15T22:14:25.411119+00:00",
     "media": {
       "figures": [],
@@ -14340,7 +14340,9 @@
         "media/fc02d633/slide_07.png"
       ]
     },
-    "issue": 149
+    "issue": 149,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "c807ac71",
@@ -14665,7 +14667,7 @@
       ]
     },
     "issue": 153,
-    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
+    "scheduled_after": "2026-07-16T14:24:08.598434+00:00",
     "queue_notified": true
   },
   {
@@ -14749,7 +14751,7 @@
       ]
     },
     "issue": 154,
-    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
+    "scheduled_after": "2026-07-16T14:24:08.598434+00:00",
     "queue_notified": true
   },
   {
@@ -14909,7 +14911,7 @@
       ]
     },
     "issue": 156,
-    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
+    "scheduled_after": "2026-07-16T14:24:08.598434+00:00",
     "queue_notified": true
   },
   {
@@ -14994,7 +14996,7 @@
       ]
     },
     "issue": 157,
-    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
+    "scheduled_after": "2026-07-16T14:24:08.598434+00:00",
     "queue_notified": true
   },
   {
@@ -15082,7 +15084,7 @@
       ]
     },
     "issue": 159,
-    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
+    "scheduled_after": "2026-07-16T14:24:08.598434+00:00",
     "queue_notified": true
   },
   {
@@ -15140,7 +15142,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-16T11:10:44.055492+00:00",
     "media": {
       "figures": [
@@ -15166,7 +15168,9 @@
         "media/90510145/slide_07.png"
       ]
     },
-    "issue": 160
+    "issue": 160,
+    "scheduled_after": "2026-07-16T14:24:08.598434+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "b3993d70",
