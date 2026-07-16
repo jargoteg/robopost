@@ -1718,5 +1718,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "1e4c3a57",
+    "paper_id": "doi-10.1002_rob.70303",
+    "title": "Surface Water Cleaning Robots: A Structured Review of Technologies, Implementation Challenges, and Future Research Directions",
+    "format": "carousel",
+    "hook": "Most water-cleaning robots still need a human babysitter.",
+    "posted_at": "2026-07-16T15:18:52.387181+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqrjumaxnc26",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
