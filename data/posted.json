@@ -1684,5 +1684,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f02af462",
+    "paper_id": "doi-10.1002_rob.70306",
+    "title": "Research on Offshore Wind Turbine Blade Repair Based on Particle Swarm Optimization‐Backpropagation Neural Network and Improved Active Disturbance Rejection Control",
+    "format": "carousel",
+    "hook": "Wind turbine blade repair bots now hold force error under 1N on curved surfaces.",
+    "posted_at": "2026-07-16T11:06:45.626396+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqr3rs7kra2j",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
