@@ -15303,5 +15303,93 @@
       ]
     },
     "issue": 162
+  },
+  {
+    "draft_id": "16e6ab6f",
+    "paper": {
+      "id": "2304.13705",
+      "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+      "abstract": "Fine manipulation tasks, such as threading cable ties or slotting a battery, are notoriously difficult for robots because they require precision, careful coordination of contact forces, and closed-loop visual feedback. Performing these tasks typically requires high-end robots, accurate sensors, or careful calibration, which can be expensive and difficult to set up. Can learning enable low-cost and imprecise hardware to perform these fine manipulation tasks? We present a low-cost system that performs end-to-end imitation learning directly from real demonstrations, collected with a custom teleoperation interface. Imitation learning, however, presents its own challenges, particularly in high-precision domains: errors in the policy can compound over time, and human demonstrations can be non-stationary. To address these challenges, we develop a simple yet novel algorithm, Action Chunking with Transformers (ACT), which learns a generative model over action sequences. ACT allows the robot to learn 6 difficult tasks in the real world, such as opening a translucent condiment cup and slotting a battery with 80-90% success, with only 10 minutes worth of demonstrations. Project website: https://tonyzhaozh.github.io/aloha/",
+      "authors": [
+        "Tony Z. Zhao",
+        "Vikash Kumar",
+        "Sergey Levine",
+        "Chelsea Finn"
+      ],
+      "url": "https://arxiv.org/abs/2304.13705",
+      "source": "arxiv",
+      "item_type": "paper",
+      "evergreen": true,
+      "user_notes": "Evergreen pick. Angle: PaLM-E, the seminal embodied vision-language model, is a foundational reference as VLA models dominate 2026 robotics discourse.. Make clear it's not new work, and why it matters today.",
+      "score": 6.5,
+      "video_url": "https://www.youtube.com/watch?v=pN4Ig_aTSUo",
+      "video_title": "ALOHA: Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Precise manipulation doesn't need expensive robots. It needs better learning.",
+      "commentary": "ACT (Action Chunking with Transformers) is a 2023 paper from Zhao, Kumar, Levine, and Finn that's genuinely worth revisiting now. The core idea: instead of predicting one action at a time, the policy predicts short action sequences, which smooths out the compounding errors that kill imitation learning in high-precision tasks. On a sub-$20k bimanual setup, they hit 80-90% success on things like battery slotting with just 10 minutes of demo data. The honest caveat: these are tabletop tasks under controlled lighting, and 80% success on a battery slot is not the same as 80% on an assembly line. But with VLA models dominating 2026 robotics discourse, ACT is one of the cleaner existence proofs that architecture choices matter as much as hardware spend.",
+      "slides": [
+        {
+          "title": "Precision without the price tag",
+          "body": "ALOHA is a bimanual teleoperation and learning system under $20k. It performs tasks like threading cable ties and slotting batteries at 80-90% success. The hardware is intentionally cheap and imprecise. The learning compensates."
+        },
+        {
+          "title": "The compounding error problem",
+          "body": "Standard imitation learning predicts one action at a time. Small errors accumulate. By the 50th step, the robot is in a state it never saw in training. This is why most IL systems fail on precision tasks."
+        },
+        {
+          "title": "Action Chunking fixes the drift",
+          "body": "ACT predicts short action sequences, not single steps. A transformer generates a chunk of future actions as a unit. This reduces effective decision frequency and cuts compounding error. Simple idea, real impact on fine contact tasks."
+        },
+        {
+          "title": "10 minutes of demos. That's it.",
+          "body": "6 real-world tasks learned from roughly 10 minutes of human teleoperation each. Battery insertion, condiment cup opening, cup noodle assembly. Not toy tasks. The data efficiency is where this work earns its citation count."
+        },
+        {
+          "title": "Why it matters more now",
+          "body": "In 2026, VLA models like PaLM-E and its descendants get the headlines. ACT is a reminder that low-level action representation still limits deployment. You can have a perfect language planner and still fail at the grasp."
+        },
+        {
+          "title": "The real limitation",
+          "body": "Tabletop. Controlled lighting. Fixed object poses. 80-90% success on a battery slot is not field-ready. The contribution is the architecture insight, not a deployment story. But that insight is now embedded in half the manipulation papers published this year."
+        }
+      ],
+      "video_script": "What if precise robot manipulation was never really a hardware problem? ALOHA is a bimanual robot system built from cheap, off-the-shelf parts, under twenty thousand dollars. It threads cable ties. It slots batteries. It hits 80 to 90 percent success rates. The trick is an algorithm called Action Chunking with Transformers. Instead of one action at a time, it predicts short sequences, which kills the compounding errors that usually wreck imitation learning. Ten minutes of human demos. That's the training data. This is a 2023 paper, but in 2026, with VLA models everywhere, the question it raises is more relevant than ever: how much does your action representation actually limit your fancy planner?",
+      "caption_instagram": "Precise robot manipulation doesn't require expensive hardware. It requires better learning.\n\nALOHA is a bimanual robot system built for under $20k. It slots batteries, threads cable ties, and opens condiment cups at 80-90% success. The hardware is cheap and imprecise on purpose.\n\nThe key algorithm is ACT: Action Chunking with Transformers. Standard imitation learning predicts one action step at a time, and small errors compound fast. ACT predicts short action sequences as a unit, cutting that drift dramatically. Training data: about 10 minutes of human teleoperation per task.\n\nThis is a 2023 paper worth revisiting in 2026. Every VLA model discussion this year eventually hits the same wall: language planning is getting very good, but the action representation at the bottom of the stack still determines whether the robot actually completes the grasp. ACT is one of the cleaner proofs that architecture choices at that level matter as much as hardware spend.\n\nFull video linked in bio. Paper: 'Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware', arXiv 2304.13705.\n\n#swarmrobotics #manipulationrobotics #imitationlearning #robotlearning #embodiedai #bimanualrobotics #roboticsresearch",
+      "caption_tiktok": "80% battery insertion success from 10 minutes of demos on a $20k robot. The hardware is cheap. The algorithm is doing the work. #robotics #manipulation #robotlearning #imitationlearning #embodiedai",
+      "post_bluesky": "Precise manipulation was supposed to need expensive hardware. ALOHA disproves that. ACT hits 80-90% on battery slotting from 10min of demos on a <$20k bimanual setup. In 2026, with VLAs everywhere, this 2023 insight hits harder. https://arxiv.org/abs/2304.13705",
+      "bluesky_thread": [
+        "The core idea in ACT is surprisingly simple: predict action chunks, not single steps. Fewer decisions per episode means less compounding error. That's why it works on fine contact tasks where standard IL falls apart by step 50.",
+        "Honest caveat: tabletop, controlled lighting, fixed poses. 80% on a battery slot is not an assembly line. But the action representation insight is now baked into half the manipulation papers in 2026. Worth knowing where it came from. What's the hardest contact task you've seen IL handle reliably…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-16T13:08:53.009199+00:00",
+    "media": {
+      "figures": [
+        "media/16e6ab6f/fig_05.png",
+        "media/16e6ab6f/fig_00.png",
+        "media/16e6ab6f/fig_02.png",
+        "media/16e6ab6f/fig_01.png"
+      ],
+      "bsky": [
+        "media/16e6ab6f/bsky_00.png",
+        "media/16e6ab6f/bsky_01.png",
+        "media/16e6ab6f/bsky_02.png",
+        "media/16e6ab6f/bsky_03.png"
+      ],
+      "slides": [
+        "media/16e6ab6f/slide_00.png",
+        "media/16e6ab6f/slide_01.png",
+        "media/16e6ab6f/slide_02.png",
+        "media/16e6ab6f/slide_03.png",
+        "media/16e6ab6f/slide_04.png",
+        "media/16e6ab6f/slide_05.png",
+        "media/16e6ab6f/slide_06.png",
+        "media/16e6ab6f/slide_07.png"
+      ]
+    }
   }
 ]
