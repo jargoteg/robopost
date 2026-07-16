@@ -1885,5 +1885,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-16T22:53:14.481235+00:00"
+  },
+  {
+    "draft_id": "a8997f7e",
+    "paper_id": "web-521a431587",
+    "title": "32-Legged Spherical Robot Moves Like an Amoeba",
+    "format": "carousel",
+    "hook": "Wheels fail on rubble. 32 legs don't.",
+    "posted_at": "2026-07-16T23:05:02.705310+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqsdw6diy42v",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
