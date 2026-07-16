@@ -1599,5 +1599,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-15T22:53:56.744514+00:00"
+  },
+  {
+    "draft_id": "d0221993",
+    "paper_id": "doi-10.1002_rob.70304",
+    "title": "Control Method for Heavy‐Duty Hexapod Robot Walking on Border Terrains Based on a Simplified Model",
+    "format": "carousel",
+    "hook": "Why can't big hexapods run real-time dynamics control?",
+    "posted_at": "2026-07-16T01:10:41.283800+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqq2hvlhbr2j",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
