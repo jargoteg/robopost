@@ -1,40 +1,30 @@
 {
-  "ts": "2026-07-16T07:43",
+  "ts": "2026-07-16T11:09",
   "collected": 235,
-  "dedup_dropped": 61,
-  "after_dedup": 174,
+  "dedup_dropped": 64,
+  "after_dedup": 171,
   "score_hist": {
-    "0": 26,
-    "1": 12,
-    "2": 43,
-    "3": 32,
-    "4": 30,
-    "5": 17,
-    "6": 7,
-    "7": 6,
+    "0": 24,
+    "1": 19,
+    "2": 36,
+    "3": 36,
+    "4": 26,
+    "5": 20,
+    "6": 6,
+    "7": 3,
     "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 14,
+  "ranked_above_floor": 10,
   "split": {
-    "videos": 1,
-    "papers": 4,
+    "videos": 0,
+    "papers": 1,
     "news": 9
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Secret Four-Legged Military Robot Spotted? 🤖🚀 Real",
-      "type": "video",
-      "video": true
-    },
-    {
-      "t": "Safety in Robotic Haircutting",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "Design, Modeling and Experimental Validation of a ",
+      "t": "Design and Control of the \"QuadBoat\": A Quadruped ",
       "type": null,
       "video": false
     }

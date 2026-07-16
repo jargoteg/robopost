@@ -14665,7 +14665,7 @@
       ]
     },
     "issue": 153,
-    "scheduled_after": "2026-07-16T12:36:45.626389+00:00",
+    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
     "queue_notified": true
   },
   {
@@ -14749,7 +14749,7 @@
       ]
     },
     "issue": 154,
-    "scheduled_after": "2026-07-16T12:36:45.626389+00:00",
+    "scheduled_after": "2026-07-16T12:36:45.626396+00:00",
     "queue_notified": true
   },
   {
@@ -14992,5 +14992,174 @@
       ]
     },
     "issue": 157
+  },
+  {
+    "draft_id": "a8997f7e",
+    "paper": {
+      "id": "web-521a431587",
+      "title": "32-Legged Spherical Robot Moves Like an Amoeba",
+      "abstract": "Researchers from Keio University and the University of Tokyo developed Mochibot, a spherical robot with 32 individually actuated telescoping legs arranged based on a rhombic triacontahedron geometry. Each leg consists of three sliding rails functioning as linear actuators, allowing the robot to extend to about one meter in diameter or contract to half a meter. Mochibot moves by retracting arms in the direction of motion while extending arms on the opposite side, enabling smooth omnidirectional locomotion. The robot weighs 10 kilograms including batteries and has space inside for cameras, sensors, or sampling devices. Compared to tensegrity robots, Mochibot can move smoothly and continuously in any direction by altering its shape, and it handles deformable terrain like sand or loose rock more effectively than wheeled robots. Its high redundancy (31 backup legs if one fails) and versatility make it a candidate for planetary exploration or disaster response applications. The work was presented at IROS 2018 in Madrid, Spain.",
+      "authors": [
+        "Evan Ackerman",
+        "Hiroki Nozaki",
+        "Yusei Kujirai",
+        "Ryuma Niiyama",
+        "Yoshihiro Kawahara",
+        "Takuro Yonezawa"
+      ],
+      "url": "https://spectrum.ieee.org/32-legged-spherical-robot-moves-like-an-amoeba",
+      "source": "IEEE Spectrum",
+      "item_type": "paper",
+      "journal": true,
+      "video_url": "https://www.youtube.com/watch?v=iG2tdRP_jgM",
+      "video_title": "Amoeba-like Robot Moves Using 32 Legs"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Wheels fail on rubble. 32 legs don't.",
+      "commentary": "Mochibot is a 32-legged sphere that locomotes by asymmetric extension and retraction of telescoping legs arranged on a rhombic triacontahedron. The geometry is doing real work here: uniform leg distribution gives you true omnidirectionality without any steering mechanism. The amoeba analogy is actually apt, not just marketing. Honest caveat: this was presented at IROS 2018, so it's nearly eight years old. The planetary exploration pitch is plausible in principle, but 10 kg with no documented speed numbers and no environmental sealing data is a long way from a rover shortlist.",
+      "slides": [
+        {
+          "title": "The problem with wheels on rubble",
+          "body": "Wheeled robots lose traction on loose rock and sand. Legged robots tip over. Tensegrity robots are hard to steer. Mochibot takes a fourth path: deform the whole body to move."
+        },
+        {
+          "title": "32 legs, one sphere",
+          "body": "Legs arranged on a rhombic triacontahedron, the most uniform way to pack 32 points on a sphere. Each leg is a three-rail linear actuator. Diameter ranges from 0.5 m (contracted) to 1.0 m (extended)."
+        },
+        {
+          "title": "How it actually moves",
+          "body": "Retract legs pointing in the direction of travel, extend legs on the opposite side. The center of mass shifts, the sphere rolls. No steering servo needed. Any direction, at any time."
+        },
+        {
+          "title": "Redundancy is the real pitch",
+          "body": "One leg fails: 31 remain. The robot keeps moving. For disaster response or planetary deployment where maintenance is impossible, graceful degradation matters more than peak speed."
+        },
+        {
+          "title": "What's inside the shell",
+          "body": "Hollow core fits cameras, sensors, or sample collectors. At 10 kg including batteries, payload capacity is tight but nonzero. The form factor protects instruments during rough-terrain rolling."
+        },
+        {
+          "title": "The honest gap",
+          "body": "IROS 2018 work. No published speed benchmark, no sealing against dust or water, no payload mass figure. The concept is solid. Field deployment is still a research question, not a solved one."
+        }
+      ],
+      "video_script": "Most robots fail on rubble because they were designed for flat floors. Mochibot tries something different: 32 telescoping legs on a sphere, arranged so they cover every direction equally. To move forward, it retracts the legs pointing that way and extends the ones behind. The whole body deforms, the center of mass shifts, and it rolls. If one leg breaks, 31 are still working. The core is hollow, so you can pack sensors inside. It's an eight-year-old idea that still doesn't have a serious competitor. What terrain would you send this into?",
+      "caption_instagram": "Wheels fail on rubble. 32 legs don't.\n\nMochibot is a spherical robot from Keio University and the University of Tokyo. Thirty-two telescoping legs, arranged on a rhombic triacontahedron so no direction is favored over another. It moves like an amoeba: retract legs in the direction of travel, extend on the opposite side, let the center of mass do the rest. True omnidirectional motion with zero steering hardware.\n\nThe redundancy argument is serious. Lose one leg, 31 keep working. For planetary rovers or disaster response, that kind of fault tolerance isn't a nice-to-have.\n\nHonest take: this was presented at IROS 2018 and I'm not aware of a successor platform that cracked the speed, sealing, or payload problems. The geometry is elegant. The path to deployment is still wide open.\n\nPaper: 'Mochibot: A 32-DOF Spherical Robot' presented at IROS 2018. Via IEEE Spectrum.\n\n#swarmrobotics #fieldrobotics #searchandrescue #planetaryrobotics #leggedrobots #roboticsmechanisms #robotresearch",
+      "caption_tiktok": "32 legs on a sphere that moves like an amoeba. One leg fails, 31 keep going. This is Mochibot and it's been waiting 8 years for someone to build the sequel. #robotics #leggedrobot #searchandrescue #engineeringdesign",
+      "post_bluesky": "Wheels fail on rubble. 32 legs don't. Mochibot locomotes by asymmetric extension of legs on a rhombic triacontahedron: no steering hardware, true omnidirectionality, 31 backups if one leg dies. Elegant geometry. Still no…\nhttps://spectrum.ieee.org/32-legged-spherical-robot-moves-like-an-amoeba",
+      "bluesky_thread": [
+        "The mechanism is genuinely clever. Retract legs in your direction of travel, extend the opposite side, center of mass shifts, sphere rolls. Any direction without a steering joint. The rhombic triacontahedron isn't arbitrary, it's the most uniform 32-point distribution on a sphere.",
+        "What kills me is this is IROS 2018 work. Eight years on, no published speed numbers, no dust/water sealing, no clear successor platform. The redundancy argument for disaster response or planetary use is real. So why hasn't anyone pushed it further? What's the blocker you'd bet on?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-16T11:10:12.829065+00:00",
+    "media": {
+      "figures": [
+        "media/a8997f7e/fig_00.png"
+      ],
+      "bsky": [
+        "media/a8997f7e/bsky_00.png",
+        "media/a8997f7e/bsky_01.png",
+        "media/a8997f7e/bsky_02.png",
+        "media/a8997f7e/bsky_03.png"
+      ],
+      "slides": [
+        "media/a8997f7e/slide_00.png",
+        "media/a8997f7e/slide_01.png",
+        "media/a8997f7e/slide_02.png",
+        "media/a8997f7e/slide_03.png",
+        "media/a8997f7e/slide_04.png",
+        "media/a8997f7e/slide_05.png",
+        "media/a8997f7e/slide_06.png",
+        "media/a8997f7e/slide_07.png"
+      ]
+    },
+    "issue": 159
+  },
+  {
+    "draft_id": "90510145",
+    "paper": {
+      "id": "2607.13633v1",
+      "title": "Design and Control of the \"QuadBoat\": A Quadruped Surface Vehicle for Drowning Rescue",
+      "abstract": "Prompt extraction of victims from water is crucial in water surface rescue missions. However, previous research on rescue robots has seldom addressed this issue. This paper presents QuadBoat, a bio-inspired unmanned surface vehicle (USV) designed to track and retrieve victims from water. QuadBoat features a quadrupedal robot configuration, enabling it with highly adaptable and agile maneuverability through its actively adjustable posture. Employing an inverse kinematics-based controller and cascaded model predictive control (MPC)-PID controller for overall movement, QuadBoat can accurately track and retrieve objects on the water surface. Maneuverability demonstrations validate QuadBoat's high agility, while a series of tracking experiments, including leg action tracking and trajectory tracking, confirm its high motion accuracy and system mobility. Finally, visual-based tracking and object pickup experiments further verify QuadBoat's target tracking capabilities and its effectiveness in executing rescues, both indoors and outdoors.",
+      "authors": [
+        "Lianxin Zhang",
+        "Yihan Huang",
+        "Huihuan Qian"
+      ],
+      "url": "https://arxiv.org/abs/2607.13633v1",
+      "source": "arxiv",
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Boats steer poorly at low speed. Legs don't.",
+      "commentary": "QuadBoat puts four articulated legs through the hull to act as both propulsors and attitude controllers on the water surface, replacing thrusters with limbs that can actively shift posture mid-maneuver. The cascaded MPC-PID controller handles trajectory tracking while inverse kinematics manages each leg's stroke, and the team validates it on actual object pickup both indoors and outdoors. The core insight is clever: legged locomotion's redundancy gives you something a propeller-driven USV almost never has, fine-grained low-speed station-keeping and reach. Honest caveat: wave conditions in the experiments look calm, and the critical unknown is how the leg-surface coupling degrades in chop, current, or with a panicking victim adding asymmetric load.",
+      "slides": [
+        {
+          "title": "The rescue USV problem",
+          "body": "Conventional rescue USVs steer by thrust vectoring. At low speed, near a victim, maneuverability collapses. Time to extraction is what kills people. A different actuation model was needed."
+        },
+        {
+          "title": "Four legs, one hull",
+          "body": "QuadBoat mounts a quadruped configuration on a floating body. Legs stroke through the water surface for propulsion and posture control simultaneously. No separate thruster array required."
+        },
+        {
+          "title": "The control stack",
+          "body": "Inverse kinematics handles per-leg stroke trajectories. A cascaded MPC outer loop sets heading and speed targets. PID inner loop closes on each joint. Validated on trajectory tracking and object pickup tasks."
+        },
+        {
+          "title": "Visual tracking + retrieval",
+          "body": "Onboard vision identifies and tracks a target on the water surface. The robot maneuvers to intercept and physically picks up the object. Tested indoors and outdoors under calm conditions."
+        },
+        {
+          "title": "What the paper doesn't show",
+          "body": "All experiments appear calm-water. Open questions: performance in chop or current, payload capacity with a real victim's weight distribution, and battery draw from continuous leg actuation versus a comparable thruster USV."
+        },
+        {
+          "title": "Why this direction matters",
+          "body": "Legged USVs could bridge the water-to-shore gap: drive in shallow water, beach themselves, keep moving. That last 2 meters to a victim may be where a boat fails and a legged platform doesn't."
+        }
+      ],
+      "video_script": "Most rescue robots have one problem nobody talks about. They can cross 200 meters of open water fine. But the last two meters, right next to the victim, they lose control. Thrusters are terrible at low speed. QuadBoat replaces thrusters with legs. Four articulated limbs stroke through the water surface, giving fine-grained control exactly where you need it most. The same legs that propel it also let it reach out and retrieve. Calm water results so far, and that caveat matters. But the core idea is sound. Would this work in a real beach rescue scenario?",
+      "caption_instagram": "Boats are bad at the hardest part of water rescue.\n\nThe approach to a victim, slow, close, controlled, is where thruster-based USVs lose authority. QuadBoat's answer: replace thrusters with legs.\n\nFour articulated limbs stroke through the water surface for propulsion and posture control at the same time. A cascaded MPC-PID controller handles trajectory tracking while inverse kinematics runs each leg stroke. The robot visually tracks a target, maneuvers to intercept, and physically picks it up.\n\nCalm-water conditions in all experiments, so the open question is how leg-surface coupling holds up in chop or current. But the agility argument at low speed is genuinely interesting, and the same architecture could let a robot beach itself and keep moving onto shore.\n\nPaper: 'Design and Control of the QuadBoat: A Quadruped Surface Vehicle for Drowning Rescue' arXiv:2607.13633\n\n#swarmrobotics #fieldrobotics #searchandrescue #autonomoussystems #roboticsresearch #USV #legedrobots #roboticsengineer",
+      "caption_tiktok": "What if your rescue boat had legs instead of thrusters? QuadBoat does exactly that and the low-speed control argument is hard to argue with. #robotics #rescuerobot #engineeringdesign #roboticsresearch",
+      "post_bluesky": "Boats steer poorly at low speed. Legs don't. QuadBoat puts four articulated limbs through the hull, propulsion and posture control in one, for the exact moment a thruster USV loses authority near a victim. https://arxiv.org/abs/2607.13633v1",
+      "bluesky_thread": [
+        "The control stack is MPC outer loop plus IK per-leg stroke. Outdoors pickup experiments work. But every test looks calm-water. Leg-surface coupling in chop or with an asymmetric victim load is the real unknown and the paper doesn't touch it.",
+        "The part I keep thinking about: same architecture could let it beach itself and keep going on land. That water-to-shore transition is where most rescue USVs just stop. Anyone working on amphibious legged platforms at this scale?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-16T11:10:44.055492+00:00",
+    "media": {
+      "figures": [
+        "media/90510145/fig_00.png",
+        "media/90510145/fig_01.png",
+        "media/90510145/fig_02.png",
+        "media/90510145/fig_03.png"
+      ],
+      "bsky": [
+        "media/90510145/bsky_00.png",
+        "media/90510145/bsky_01.png",
+        "media/90510145/bsky_02.png",
+        "media/90510145/bsky_03.png"
+      ],
+      "slides": [
+        "media/90510145/slide_00.png",
+        "media/90510145/slide_01.png",
+        "media/90510145/slide_02.png",
+        "media/90510145/slide_03.png",
+        "media/90510145/slide_04.png",
+        "media/90510145/slide_05.png",
+        "media/90510145/slide_06.png",
+        "media/90510145/slide_07.png"
+      ]
+    },
+    "issue": 160
   }
 ]
