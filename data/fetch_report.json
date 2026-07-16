@@ -1,35 +1,41 @@
 {
-  "ts": "2026-07-15T22:24",
-  "collected": 227,
-  "dedup_dropped": 66,
-  "after_dedup": 161,
+  "ts": "2026-07-16T07:43",
+  "collected": 235,
+  "dedup_dropped": 61,
+  "after_dedup": 174,
   "score_hist": {
-    "0": 22,
-    "1": 20,
-    "2": 39,
-    "3": 37,
-    "4": 21,
-    "5": 15,
-    "6": 6,
-    "7": 1
+    "0": 26,
+    "1": 12,
+    "2": 43,
+    "3": 32,
+    "4": 30,
+    "5": 17,
+    "6": 7,
+    "7": 6,
+    "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 7,
+  "ranked_above_floor": 14,
   "split": {
-    "videos": 0,
-    "papers": 2,
-    "news": 5
+    "videos": 1,
+    "papers": 4,
+    "news": 9
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Surface Water Cleaning Robots: A Structured Review",
+      "t": "Secret Four-Legged Military Robot Spotted? 🤖🚀 Real",
+      "type": "video",
+      "video": true
+    },
+    {
+      "t": "Safety in Robotic Haircutting",
       "type": "paper",
       "video": false
     },
     {
-      "t": "Design and Analysis of SAWbot: A Robot Generating ",
-      "type": "paper",
+      "t": "Design, Modeling and Experimental Validation of a ",
+      "type": null,
       "video": false
     }
   ]

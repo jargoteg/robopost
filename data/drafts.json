@@ -14482,7 +14482,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T22:15:25.604765+00:00",
     "media": {
       "figures": [],
@@ -14745,5 +14745,243 @@
     "issue": 154,
     "scheduled_after": "2026-07-16T09:10:59.416407+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "45901c9d",
+    "paper": {
+      "id": "yt-aDUKhHKkgA0",
+      "title": "Secret Four-Legged Military Robot Spotted? 🤖🚀 Real or AI? #Shorts #FutureTech #mystery",
+      "abstract": "A mysterious hydraulic quadruped robot has been spotted during what looks like a secret field test. Could this be an advanced ...",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=aDUKhHKkgA0",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=aDUKhHKkgA0",
+      "video_first": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does every 'secret military robot' video look the same?",
+      "commentary": "This short clips a hydraulic quadruped in what looks like outdoor terrain, framed as a mystery military reveal. There is nothing here that isn't already public: Boston Dynamics, ANYmal, and China's Unitree have all published field demos with better documentation. The 'secret' framing is engagement bait, not reporting. Real quadruped field deployment stories exist and are genuinely interesting, but this video adds zero technical signal. Worth noting only because it reflects how defense robotics curiosity is outpacing actual public information right now.",
+      "commentary_note": "No paper, no org, no verifiable specs. Treating as media commentary piece.",
+      "slides": [
+        {
+          "title": "The 'secret robot' genre",
+          "body": "Hydraulic quadrupeds in field settings look dramatic. But Boston Dynamics, ANYmal, and Unitree have all published outdoor footage with actual specs. Mystery framing adds hype, not information."
+        },
+        {
+          "title": "What real field robots look like",
+          "body": "Actual deployed quadrupeds carry sensor payloads, operate in GPS-denied environments, and fail in boring ways: slipping on mud, losing comms, draining batteries in cold weather."
+        },
+        {
+          "title": "Hydraulic vs electric: the real debate",
+          "body": "Hydraulic systems offer higher force density but leak, require pumps, and are loud. Electric systems dominate recent deployments for exactly those reasons. Spot runs electric. So does ANYmal."
+        },
+        {
+          "title": "Defense interest is real",
+          "body": "Trinity Robotics' UGV funding in Ukraine this year shows genuine military investment in ground robots. But that work is wheeled, not legged, and the use case is logistics and surveillance, not sci-fi combat."
+        },
+        {
+          "title": "What to actually watch for",
+          "body": "Verified field trials with payload specs, terrain conditions, and failure rates. If a robot video has no org, no paper, and no data, it is not a reveal. It is a clip."
+        }
+      ],
+      "video_script": "A hydraulic quadruped in a field gets labeled a secret military robot. But here is the thing: we have seen this exact body plan from Boston Dynamics, ANYmal, and Unitree, all with published specs and actual deployment data. Real field quadrupeds fail on mud, lose comms, and drain fast in cold. The interesting story is not the mystery. It is whether any legged robot has actually earned a permanent role in a real operational environment. Has yours?",
+      "caption_instagram": "Why does every 'secret military robot' video look the same?\n\nA hydraulic quadruped shows up in a field, someone calls it classified, and the views roll in. The problem: there is nothing here that Boston Dynamics, ANYmal, or Unitree have not already published with actual specs attached.\n\nReal quadruped field deployment is genuinely hard. Mud, cold, GPS-denied environments, payload limits, battery drain. The robots that survive those conditions are documented, tested, and boring to look at compared to a mystery clip.\n\nDefense investment in ground robots is real in 2026, but the credible work is in wheeled UGVs for logistics and surveillance, not untraceable legged prototypes. If there are no specs, no org, and no data, it is not a reveal.\n\nFull clip linked in bio. What would it take to convince you a field robot demo is actually real?\n\n#swarmrobotics #quadrupedrobotics #fieldrobotics #defenserobotics #leggedrobots #robotics2026 #mobilerobots",
+      "caption_tiktok": "Every 'secret military robot' clip is the same video. Here is what real field quadrupeds actually deal with. #robotics #quadruped #fieldrobotics #defenserobotics",
+      "post_bluesky": "Why does every 'secret military robot' video look the same? Hydraulic quad, field setting, zero specs. ANYmal and Spot have published better footage with actual data. Real field robotics is documented and unglamorous. https://www.youtube.com/watch?v=aDUKhHKkgA0",
+      "bluesky_thread": [
+        "The defense quadruped space that IS real in 2026: wheeled UGVs for logistics, GPS-denied navigation, payload carry. Legged robots are still fighting mud and battery life before they fight anything else.",
+        "Genuine question for anyone in field deployment: has a legged platform actually held up across a full operational cycle in a non-lab environment? Because the published evidence is still pretty thin outside controlled demos."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-16T07:44:03.967352+00:00",
+    "media": {
+      "figures": [
+        "media/45901c9d/fig_00.png"
+      ],
+      "bsky": [
+        "media/45901c9d/bsky_00.png",
+        "media/45901c9d/bsky_01.png",
+        "media/45901c9d/bsky_02.png",
+        "media/45901c9d/bsky_03.png"
+      ],
+      "slides": [
+        "media/45901c9d/slide_00.png",
+        "media/45901c9d/slide_01.png",
+        "media/45901c9d/slide_02.png",
+        "media/45901c9d/slide_03.png",
+        "media/45901c9d/slide_04.png",
+        "media/45901c9d/slide_05.png",
+        "media/45901c9d/slide_06.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "929601d7",
+    "paper": {
+      "id": "doi-10.1002_rob.70305",
+      "title": "Safety in Robotic Haircutting",
+      "abstract": "ABSTRACT Robotic haircutting is an emerging application of service robotics in which safety is paramount. Unlike conventional collaborative or domestic tasks, haircutting requires prolonged operation near the human head, one of the most vulnerable body regions, and often involves sharp or heated tools. These characteristics make safety central to both functional reliability and user acceptance. This paper reviews the safety landscape of haircutting robots by examining risks across the full task workflow and synthesizing lessons from related domains, including collaborative robotics, healthcare robotics, and autonomous systems. It proposes a three‐layer framework to organize existing approaches and illustrate how safety can be embedded from hardware design to control logic. In addition, a series of proof‐of‐concept demonstrations illustrates the practical implementation of the proposed three‐layer safety framework in representative haircutting scenarios. The paper further highlights opportunities and unresolved challenges in ensuring safe human‐robot interaction in haircutting contexts, providing guidance for future research and deployment.",
+      "authors": [
+        "Zhendai Huang",
+        "Aleksi Vilkki",
+        "Shuai Li",
+        "Juha Röning"
+      ],
+      "url": "https://doi.org/10.1002/rob.70305",
+      "doi": "10.1002/rob.70305",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "open_version": "https://www.authorea.com/doi/pdf/10.22541/au.175917093.39470494/v1"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't robots cut hair safely yet?",
+      "commentary": "This Journal of Field Robotics paper reviews safety frameworks for robotic haircutting, a genuinely tricky HRI problem: sustained proximity to the human head, sharp tools, and a user who moves unpredictably. The three-layer framework (hardware, control, interaction) is a sensible organizing structure and the proof-of-concept demos give it some grounding. Honest caveat: this is a review and framework paper, not an ablation study, so the safety claims lack quantified failure-mode data. Publishing in JFR is an interesting venue choice for what is essentially a service robotics safety survey, but the domain-transfer lessons from collaborative and healthcare robotics are useful for anyone building contact-rich HRI systems.",
+      "slides": [
+        {
+          "title": "Robots near your head",
+          "body": "Haircutting robots work centimeters from one of the most vulnerable body regions, for minutes at a time, with scissors or heat. That sustained proximity changes every assumption in standard cobot safety design."
+        },
+        {
+          "title": "Three-layer safety model",
+          "body": "Layer 1: hardware design (blade geometry, force limits). Layer 2: control logic (collision detection, trajectory constraints). Layer 3: human-robot interaction (intent inference, user feedback). Each layer must hold independently."
+        },
+        {
+          "title": "Where it borrows from",
+          "body": "The framework draws on collaborative robotics (ISO/TS 15066 force limits), healthcare robotics (fail-safe redundancy), and autonomous systems (runtime monitoring). Synthesis across domains is the paper's core contribution."
+        },
+        {
+          "title": "Proof-of-concept demos",
+          "body": "Authors implement representative haircutting scenarios to show the three layers in practice. No quantified error rates or injury-risk metrics reported. Demos illustrate feasibility, not performance bounds."
+        },
+        {
+          "title": "The unresolved hard parts",
+          "body": "Head motion prediction under real anxiety, wet or oily hair changing tool dynamics, and user acceptance across cultures. The paper names these gaps. None are solved."
+        },
+        {
+          "title": "Why this matters now",
+          "body": "Service robots entering personal-care settings is the next regulatory frontier. A structured safety vocabulary for haircutting gives designers and regulators a shared starting point before products ship."
+        }
+      ],
+      "video_script": "Robots that cut hair have to stay within centimeters of your head for several minutes, with a sharp blade, while you move. Standard cobot safety rules were not built for that. This paper from the Journal of Field Robotics proposes a three-layer framework: safe hardware design, robust control logic, and real-time human interaction monitoring. The proof-of-concept demos show it working. But there are no injury-risk numbers, no head-motion datasets, no user acceptance trials. The framework exists. The hard validation work does not yet. Would you let a robot near your head today?",
+      "caption_instagram": "Why is robotic haircutting so hard to make safe?\n\nIt's not the scissors. It's the sustained proximity. A haircutting robot operates centimeters from your head, for minutes, with a tool that can cut skin. Standard collaborative robot safety specs were not designed for that scenario.\n\nThis new paper in the Journal of Field Robotics proposes a three-layer safety framework: hardware design, control logic, and human-robot interaction. They back it with proof-of-concept demos across representative haircutting tasks.\n\nHonest take: this is a review and framework paper. No quantified failure rates, no injury-probability data. The demos show feasibility. The hard empirical validation is still ahead. But having a structured safety vocabulary before products ship is genuinely useful, especially as personal-care robots start approaching regulatory attention.\n\nPaper: 'Safety in Robotic Haircutting', Huang et al., Journal of Field Robotics, https://doi.org/10.1002/rob.70305\n\n#swarmrobotics #servicerobotics #humanrobotinteraction #cobots #robotsafety #fieldrobotics #HRI",
+      "caption_tiktok": "A robot needs to hold scissors near your face for several minutes without hurting you. Here's why that is harder than it sounds. #robotics #servicerobot #robotsafety #HRI",
+      "post_bluesky": "Why can't robots cut hair safely yet? Sustained proximity to the human head, sharp tools, unpredictable user movement. A new JFR paper proposes a 3-layer safety framework to structure the problem. Useful vocabulary. The hard empirical validation is still ahead. https://doi.org/10.1002/rob.70305",
+      "bluesky_thread": [
+        "The three layers: safe hardware design, control-level collision response, and interaction-level intent inference. Each must hold independently. Drawing on ISO/TS 15066 cobot force limits and healthcare fail-safe design is smart cross-domain borrowing.",
+        "Big open gaps the paper names but doesn't solve: real head-motion prediction under user anxiety, tool dynamics changing with wet hair, cross-cultural acceptance. Framework papers are only useful if someone runs the validation experiments next. Who's doing that work?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-16T07:44:32.374407+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/929601d7/bsky_00.png",
+        "media/929601d7/bsky_01.png",
+        "media/929601d7/bsky_02.png",
+        "media/929601d7/bsky_03.png"
+      ],
+      "slides": [
+        "media/929601d7/slide_00.png",
+        "media/929601d7/slide_01.png",
+        "media/929601d7/slide_02.png",
+        "media/929601d7/slide_03.png",
+        "media/929601d7/slide_04.png",
+        "media/929601d7/slide_05.png",
+        "media/929601d7/slide_06.png",
+        "media/929601d7/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "c404fa1a",
+    "paper": {
+      "id": "2607.13622v1",
+      "title": "Design, Modeling and Experimental Validation of a Miniature Hybrid Underwater Glider With Large-Range Foldable Deflectable Wings",
+      "abstract": "Miniature hybrid underwater gliders have attracted increasing attention for long-endurance ocean observation and confined-space inspection. Large-range wing reconfiguration offers a promising yet largely unexplored approach for simultaneously enhancing maneuverability and shape adaptability in constrained underwater environments. However, such morphing introduces substantial challenges in mechanical integration, dynamic modeling, and hydrodynamic characterization. This paper presents FoDeGlider, a miniature hybrid underwater glider equipped with two independently actuated wings capable of large-range folding and deflection. To capture configuration-dependent variations in mass distribution, center-of-geometry location, and hydrodynamic loading, a multibody dynamics model is developed by treating wing configuration as a structural variable. A composite rigid body algorithm (CRBA)-based projection formulates the composite inertia, wrench transformations, and component-level hydrodynamics into a unified Fossen-form dynamic model applicable to arbitrary wing configurations. A sequential parameter-identification framework is further proposed to estimate fuselage and wing hydrodynamic coefficients, resulting in an open benchmark dataset for model identification and validation. Extensive experiments are conducted, the results of which demonstrate accurate dynamic modeling and parameter identification across diverse morphing configurations. Gate traversal experiments further validate FoDeGlider's ability to actively reconfigure its morphology during locomotion, enabling enhanced navigation in confined underwater environments.",
+      "authors": [
+        "Yongjian Zhu",
+        "Yusen Tao",
+        "Feitian Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2607.13622v1",
+      "source": "arxiv",
+      "score": 7.2
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't most underwater gliders fit through a door?",
+      "commentary": "FoDeGlider is a miniature hybrid glider with independently actuated wings that fold and deflect across a large range, letting it actively reshape itself mid-mission to squeeze through confined spaces. The clever part is the dynamics model: rather than fixing wing geometry and calling it done, they treat wing configuration as a live structural variable, recomputing inertia, center-of-geometry, and hydrodynamic loads at every pose using a CRBA-based projection into Fossen form. The gate traversal experiments are the real proof of concept, showing morphology changes happening during locomotion, not just at rest. Honest caveat: 'miniature' and 'long-endurance' are in tension, and the paper does not report endurance numbers in the abstract, so the inspection use case is promising but not yet quantified. The open benchmark dataset for hydrodynamic parameter identification is genuinely useful for anyone building similar platforms.",
+      "slides": [
+        {
+          "title": "The problem with gliders",
+          "body": "Standard underwater gliders trade maneuverability for endurance. Fixed wings mean fixed footprint. Confined spaces like pipes, flooded tunnels, or reef gaps are simply unreachable."
+        },
+        {
+          "title": "FoDeGlider: wings that move",
+          "body": "Two independently actuated wings fold and deflect across a large range. The robot actively reconfigures its morphology during locomotion, not just before entering a tight space."
+        },
+        {
+          "title": "The modeling problem",
+          "body": "Morphing wings shift mass distribution, center-of-geometry, and hydrodynamic loading simultaneously. Most models ignore this. FoDeGlider treats wing pose as a live structural variable throughout."
+        },
+        {
+          "title": "How they solved it",
+          "body": "A CRBA-based projection unifies composite inertia, wrench transforms, and component hydrodynamics into one Fossen-form model valid at any wing configuration. Sequential parameter ID estimates fuselage and wing coefficients separately."
+        },
+        {
+          "title": "Gate traversal: the real test",
+          "body": "Experiments show FoDeGlider folding wings mid-swim to pass through a gate, then re-extending. Active morphing during locomotion, not a static reconfiguration trick."
+        },
+        {
+          "title": "What is missing",
+          "body": "No endurance figures reported yet. The long-endurance claim needs field validation. The open hydrodynamic benchmark dataset is a genuine contribution for the wider community."
+        }
+      ],
+      "video_script": "Most underwater gliders are designed for open ocean. They're efficient but rigid, and that fixed shape is a real problem the moment you need to inspect something confined. FoDeGlider takes a different approach: wings that fold and deflect independently, mid-mission. The clever bit is the dynamics model. Wing configuration is treated as a live variable, so inertia, hydrodynamic loads, and center of geometry all update in real time. They validated it with gate traversal, the robot reshaping itself while swimming. What environment would you actually deploy this in first?",
+      "caption_instagram": "Why can't most underwater gliders fit through a door?\n\nBecause their wings are fixed. Great for open ocean efficiency, useless when the inspection target is a flooded pipe or a confined reef passage.\n\nFoDeGlider solves this with two independently actuated wings that fold and deflect across a large range, actively reconfiguring during locomotion. The dynamics model is the hard part: rather than assuming fixed geometry, they treat wing pose as a structural variable, updating inertia, center-of-geometry, and hydrodynamic loading continuously. CRBA-based projection wraps it all into a single Fossen-form model that works at any configuration.\n\nThe gate traversal experiments are the proof point. The robot folds mid-swim, passes through a tight gate, and re-extends. Active morphing during locomotion, not just before entering.\n\nCaveat: endurance numbers aren't reported yet, so the long-endurance inspection case is still a promise. But the open benchmark dataset for hydrodynamic parameter ID is a real contribution the community can use right now.\n\nPaper: 'Design, Modeling and Experimental Validation of a Miniature Hybrid Underwater Glider With Large-Range Foldable Deflectable Wings' arXiv:2607.13622\n\n#underwaterrobotics #marinerobotics #swarmrobotics #fieldrobotics #underwaterglider #morphingrobot #inspectionrobotics",
+      "caption_tiktok": "An underwater glider that reshapes itself mid-swim to fit through tight spaces. The dynamics model alone is worth reading. arXiv:2607.13622\n#underwaterrobotics #robotics #marinerobotics #inspectionrobot",
+      "post_bluesky": "Why can't most underwater gliders fit through a door? Fixed wings. FoDeGlider folds and deflects its wings mid-swim, with a model that recomputes inertia and hydrodynamics at every pose. Gate traversal experiments back it up. https://arxiv.org/abs/2607.13622v1",
+      "bluesky_thread": [
+        "The dynamics modeling is the hard part here. Most morphing robot papers snapshot a few configurations and call it done. Treating wing pose as a continuous structural variable in a Fossen-form model is a cleaner approach, and the open parameter-ID dataset means others can actually build on it.",
+        "Caveat: no endurance numbers in the abstract. 'Long-endurance' and 'miniature morphing' are genuinely in tension, and the confined-space inspection pitch needs field data to land. What application would you want to see this tested in first?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-16T07:45:00.541577+00:00",
+    "media": {
+      "figures": [
+        "media/c404fa1a/fig_00.png",
+        "media/c404fa1a/fig_01.png",
+        "media/c404fa1a/fig_02.png",
+        "media/c404fa1a/fig_04.png"
+      ],
+      "bsky": [
+        "media/c404fa1a/bsky_00.png",
+        "media/c404fa1a/bsky_01.png",
+        "media/c404fa1a/bsky_02.png",
+        "media/c404fa1a/bsky_03.png"
+      ],
+      "slides": [
+        "media/c404fa1a/slide_00.png",
+        "media/c404fa1a/slide_01.png",
+        "media/c404fa1a/slide_02.png",
+        "media/c404fa1a/slide_03.png",
+        "media/c404fa1a/slide_04.png",
+        "media/c404fa1a/slide_05.png",
+        "media/c404fa1a/slide_06.png",
+        "media/c404fa1a/slide_07.png"
+      ]
+    }
   }
 ]
