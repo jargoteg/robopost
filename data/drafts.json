@@ -15220,5 +15220,87 @@
     },
     "created": "2026-07-16T12:10:34.862224+00:00",
     "issue": 161
+  },
+  {
+    "draft_id": "999ccc91",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3711507",
+      "title": "Congestion-Aware Efficient Multi-Robot Task Planning via Invocation-Pruning Task Evaluation",
+      "abstract": "Congestion-Aware Efficient Multi-Robot Task Planning via Invocation-Pruning Task Evaluation",
+      "authors": [
+        "Haoyu Tian",
+        "Zisen Nie",
+        "Guanghui Sun",
+        "Ligang Wu",
+        "Weiran Yao"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3711507",
+      "doi": "10.1109/lra.2026.3711507",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Most planners ignore traffic jams. This one prunes them before they form.",
+      "commentary": "The paper tackles a real bottleneck in multi-robot task allocation: congestion at shared waypoints inflates makespan even when task assignment looks optimal on paper. The core idea is an invocation-pruning evaluation step that skips task candidates whose execution paths are likely to cause congestion, cutting down the search space before committing. The approach is smart because it addresses the gap between planning quality and execution quality without requiring full trajectory simulation. Honest caveat: warehouse-style or structured environments are the implied context, and how well the congestion model transfers to unstructured field deployments, say underground mining or disaster response corridors, is not demonstrated.",
+      "slides": [
+        {
+          "title": "The Problem With Most Planners",
+          "body": "Multi-robot task allocation typically optimizes assignment cost. It ignores whether robots will physically block each other en route. That gap between plan quality and execution quality is where makespan blows up."
+        },
+        {
+          "title": "What Congestion Actually Costs",
+          "body": "When multiple robots converge on shared waypoints, idle wait time accumulates. In dense fleets, a single bottleneck node can cascade into system-wide slowdowns that no reassignment step can fix after the fact."
+        },
+        {
+          "title": "Invocation-Pruning: The Core Idea",
+          "body": "Before evaluating a task candidate, the planner checks whether executing it is likely to generate congestion. Candidates that fail the check are pruned. This reduces wasted search effort and steers allocation away from collision-prone assignments."
+        },
+        {
+          "title": "Congestion-Aware Evaluation",
+          "body": "The method models path overlap between robots to estimate congestion probability at planning time, not execution time. That shift from reactive to anticipatory is where the efficiency gain comes from."
+        },
+        {
+          "title": "Where This Breaks Down",
+          "body": "Structured environments with predictable topology suit this model well. Unstructured or dynamic settings, construction sites, disaster corridors, underground mining, add path uncertainty that the congestion estimate may not capture reliably."
+        },
+        {
+          "title": "Why It Still Matters",
+          "body": "Warehouses, manufacturing lines, and structured inspection grids are huge real deployments. A planner that prunes congestion at task evaluation time, not collision time, is practically useful where fleet density is high and paths are known."
+        }
+      ],
+      "video_script": "Most multi-robot planners treat traffic like it doesn't exist. They assign tasks, robots move, and then they jam up at shared waypoints. This paper prunes that problem before it starts. The key step is called invocation-pruning task evaluation. Before a task candidate even gets scored, the planner checks whether executing it is likely to create congestion. If yes, it gets dropped. You skip the bad assignments entirely rather than recovering from them. The gains show up in makespan, less waiting, faster fleet throughput. The open question for me is how this holds in unstructured environments where path uncertainty is high. Does congestion estimation still hold when the map is rough or dynamic?",
+      "caption_instagram": "Most multi-robot planners solve the assignment problem. They don't solve the traffic problem.\n\nThis paper from IEEE RA-L adds a congestion-awareness layer to task planning that prunes candidates before they even get evaluated, if executing them is likely to cause robots to block each other at shared waypoints. The insight is simple but meaningful: congestion is predictable at planning time if you model path overlap, so address it then, not during execution.\n\nThe approach is called Invocation-Pruning Task Evaluation. It narrows the search space by rejecting high-congestion candidates early, which also speeds up the planner itself. Both efficiency and solution quality improve together.\n\nHonest take: this shines in structured environments where paths are well-defined and the congestion model is accurate. The jump to unstructured field deployments, think underground inspection or disaster response, would need more validation. But for dense warehouse or manufacturing fleets, this is exactly the kind of practical planning work that earns its place.\n\nPaper: Congestion-Aware Efficient Multi-Robot Task Planning via Invocation-Pruning Task Evaluation. Tian et al., IEEE Robotics and Automation Letters. https://doi.org/10.1109/lra.2026.3711507\n\n#swarmrobotics #multirobotsystems #taskplanning #roboticsresearch #warehouseautomation #robotfleets #roboticsengineering",
+      "caption_tiktok": "Multi-robot planners that ignore traffic jams are planning to fail. This one prunes congestion before it starts. #multirobot #robotics #swarmrobotics #taskplanning",
+      "post_bluesky": "Most multi-robot planners ignore traffic until robots are already blocking each other. This RA-L paper prunes congestion-prone task candidates before evaluation, faster planning and better makespan together. Structured environments only for now, but the…\nhttps://doi.org/10.1109/lra.2026.3711507",
+      "bluesky_thread": [
+        "The key move is shifting congestion awareness from execution time to planning time. Model path overlap between robots, flag candidates likely to cause jams, prune them before scoring. Smaller search space, better assignments. Obvious in hindsight, rarely done.",
+        "My caveat: the congestion model assumes you know the paths reasonably well. In unstructured field settings, that assumption is fragile. Does anyone know of congestion-aware planners tested in underground or disaster environments where the map itself is uncertain?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "pending_review",
+    "created": "2026-07-16T12:57:05.199991+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/999ccc91/bsky_00.png",
+        "media/999ccc91/bsky_01.png",
+        "media/999ccc91/bsky_02.png",
+        "media/999ccc91/bsky_03.png"
+      ],
+      "slides": [
+        "media/999ccc91/slide_00.png",
+        "media/999ccc91/slide_01.png",
+        "media/999ccc91/slide_02.png",
+        "media/999ccc91/slide_03.png",
+        "media/999ccc91/slide_04.png",
+        "media/999ccc91/slide_05.png",
+        "media/999ccc91/slide_06.png",
+        "media/999ccc91/slide_07.png"
+      ]
+    }
   }
 ]
