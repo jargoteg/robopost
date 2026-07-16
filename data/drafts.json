@@ -15394,5 +15394,89 @@
       ]
     },
     "issue": 163
+  },
+  {
+    "draft_id": "4ac8f502",
+    "paper": {
+      "id": "2607.14021v1",
+      "title": "Industrial Dexterity Benchmark: A Hardware-Software Benchmarking Platform for Industrial Dexterous Manipulation",
+      "abstract": "Dexterous manipulation remains a critical bottleneck in industrial automation; tasks such as cable routing, connector insertion, and precision assembly still rely heavily on manual labor despite decades of robotics research. This work presents a progression from classical, modular robotics pipelines toward an end-to-end multimodal imitation-learning framework for industrial dexterous manipulation. As a part of this work, we introduce three key contributions: a set of Industrial Dexterity Benchmark (IDB) boards aimed to mimic datacenter cable management, automotive cable harnesses, and gearbox assembly tasks; a scalable imitation learning framework (DAG-ROS); and a multimodal diffusion-based policy framework (AG-iDP3) that creates models fusing RGB images, point clouds, joint positions, and wrist-frame wrench data. Focusing on the datacenter cable manipulation board, we evaluate the performance of a task involving cleaning a single cable over variations of an end-to-end AI policy using 48 trials per configuration. The best performing configuration, a multimodal expansion Diffusion Policy (DP), includes a multi-view RGB image source passed through an R3M encoder and reaches a 78% grasp and insert combined task success rate. This performance marks a significant improvement over the 36% observed from the single-camera RGB DP baseline. Each of the tested configurations requires only approximately 100 teleoperated demonstrations per task phase. These results indicate that the correct learned policy can outperform classical vision and control robotic methods in robustness, generalization, and deployment efficiency, justifying a shift toward scalable robotic automation for high up-time industrial environments.",
+      "authors": [
+        "Honglu He",
+        "Jacob Laufer",
+        "Zhiwu Zheng",
+        "David Elkan-gonzalez",
+        "Raman Goyal",
+        "Xinyi Li"
+      ],
+      "url": "https://arxiv.org/abs/2607.14021v1",
+      "source": "arxiv",
+      "score": 6.2
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "There is a reason robots still can't plug in a cable",
+      "commentary": "This paper tackles one of the most stubbornly manual tasks in industry: cable routing and connector insertion. The core contribution is a multimodal diffusion policy fusing RGB, point clouds, joint positions, and wrist-force data, trained on roughly 100 teleoperated demos per task phase. Going from 36% to 78% success by adding multi-view RGB through an R3M encoder is a real result, not a rounding error. Honest caveat: 48 trials on one benchmark board in controlled lab conditions is a thin deployment story, and datacenter cable management has very low tolerance for the failures that fill the other 22%. The benchmark boards themselves are the genuinely useful contribution here, because shared eval infrastructure is what this subfield has been missing.",
+      "slides": [
+        {
+          "title": "The problem nobody solved",
+          "body": "Cable routing, connector insertion, gearbox assembly. Decades of robotics research. Still done by hand. The bottleneck is dexterous manipulation in unstructured, contact-rich settings."
+        },
+        {
+          "title": "Three concrete contributions",
+          "body": "IDB benchmark boards (datacenter cables, automotive harnesses, gearbox assembly). DAG-ROS imitation learning pipeline. AG-iDP3: a multimodal diffusion policy fusing RGB, point clouds, joint positions, and wrist wrench data."
+        },
+        {
+          "title": "The number that matters",
+          "body": "Single-camera RGB diffusion policy: 36% success on grasp-and-insert. Add multi-view RGB through an R3M encoder: 78%. That 42-point jump comes from richer visual context, not more data. Still 100 demos per task phase."
+        },
+        {
+          "title": "Why the benchmark boards matter most",
+          "body": "Shared hardware evaluation platforms are rare in dexterous manipulation research. Without them, results don't compare across labs. IDB boards could do for industrial manipulation what RoboCup fields did for locomotion benchmarking."
+        },
+        {
+          "title": "What the paper doesn't settle",
+          "body": "48 trials, one board, lab conditions. Datacenter uptime requirements mean even a 22% failure rate is a real cost. Field generalization across cable geometries, lighting, and connector tolerances is untested."
+        },
+        {
+          "title": "Why it still moves the field",
+          "body": "100 demos per phase is genuinely low. Classical vision-plus-control pipelines lose here on robustness. If the benchmark catches on, this could anchor reproducible progress on the hardest manipulation tasks in industry."
+        }
+      ],
+      "video_script": "Robots have been trying to plug in cables for decades. This paper finally makes a real dent. The team built physical benchmark boards mimicking datacenter cable management and automotive harnesses, then trained a diffusion policy on just 100 teleoperated demos. Single camera got them 36% success on grasp and insert. Add multi-view RGB through an R3M encoder and wrist force sensing, you get 78%. The honest question is whether that holds outside the lab. What would it take for you to trust this on a real factory floor?",
+      "caption_instagram": "There is a reason robots still can't plug in a cable.\n\nCable routing and connector insertion have resisted automation for decades. Not because nobody tried, but because the task demands contact-rich dexterity that classical pipelines handle poorly. This paper attacks it directly.\n\nThe team introduces IDB benchmark boards mimicking datacenter cables, automotive harnesses, and gearbox assembly, plus a multimodal diffusion policy fusing RGB images, point clouds, joint positions, and wrist-force data. Trained on roughly 100 teleoperated demos per phase. Best config hits 78% grasp-and-insert success vs 36% for a single-camera baseline. That gap comes from multi-view RGB through an R3M encoder, not from throwing more data at it.\n\nThe honest caveat: 48 trials on one lab board is not a deployment story. Datacenter environments don't tolerate 22% failure rates. But the benchmark boards themselves may be the most durable contribution here. Shared hardware eval infrastructure is what this field has needed.\n\nPaper: Industrial Dexterity Benchmark arXiv 2607.14021\n\n#swarmrobotics #industrialautomation #dexterousmanipulation #roboticsbenchmark #imitationlearning #diffusionpolicy #fieldrobotics",
+      "caption_tiktok": "Robots still can't reliably plug in a cable. Here's the team making the most progress yet, 78% success with 100 demos. Paper in bio. #robotics #industrialrobotics #dexterousmanipulation #manipulation",
+      "post_bluesky": "There is a reason robots still can't plug in a cable. This paper gets closer: multimodal diffusion policy, 100 demos, 78% grasp-and-insert vs 36% baseline. The benchmark boards are the real gift. https://arxiv.org/abs/2607.14021v1",
+      "bluesky_thread": [
+        "The 42-point jump from 36 to 78% comes from adding multi-view RGB through an R3M encoder plus wrist-force data, not more demonstrations. 100 demos per task phase is genuinely lean. The method is credible. The benchmark boards mimicking datacenter cables and automotive harnesses could be the…",
+        "Honest concern: 48 trials on one lab board is thin validation for a domain where 22% failure has real cost. Datacenter uptime doesn't forgive cable misroutes. Would you deploy this at 78%? What success threshold makes industrial dexterous manipulation actually viable?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-16T16:57:43.410348+00:00",
+    "media": {
+      "figures": [
+        "media/4ac8f502/fig_05.png",
+        "media/4ac8f502/fig_04.png",
+        "media/4ac8f502/fig_00.png"
+      ],
+      "bsky": [
+        "media/4ac8f502/bsky_00.png",
+        "media/4ac8f502/bsky_01.png",
+        "media/4ac8f502/bsky_02.png",
+        "media/4ac8f502/bsky_03.png"
+      ],
+      "slides": [
+        "media/4ac8f502/slide_00.png",
+        "media/4ac8f502/slide_01.png",
+        "media/4ac8f502/slide_02.png",
+        "media/4ac8f502/slide_03.png",
+        "media/4ac8f502/slide_04.png",
+        "media/4ac8f502/slide_05.png",
+        "media/4ac8f502/slide_06.png",
+        "media/4ac8f502/slide_07.png"
+      ]
+    }
   }
 ]

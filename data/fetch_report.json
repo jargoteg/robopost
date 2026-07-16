@@ -1,26 +1,31 @@
 {
-  "ts": "2026-07-16T15:24",
-  "collected": 233,
-  "dedup_dropped": 66,
+  "ts": "2026-07-16T16:55",
+  "collected": 232,
+  "dedup_dropped": 65,
   "after_dedup": 167,
   "score_hist": {
-    "0": 21,
-    "1": 16,
-    "2": 33,
-    "3": 33,
-    "4": 28,
-    "5": 19,
-    "6": 14,
-    "7": 2,
-    "8": 1
+    "0": 19,
+    "1": 20,
+    "2": 41,
+    "3": 34,
+    "4": 22,
+    "5": 15,
+    "6": 13,
+    "7": 3
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 17,
+  "ranked_above_floor": 16,
   "split": {
     "videos": 0,
-    "papers": 0,
-    "news": 17
+    "papers": 1,
+    "news": 15
   },
   "floor": 6,
-  "picked": []
+  "picked": [
+    {
+      "t": "Industrial Dexterity Benchmark: A Hardware-Softwar",
+      "type": null,
+      "video": false
+    }
+  ]
 }
