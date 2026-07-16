@@ -1633,5 +1633,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "3e189785",
+    "paper_id": "doi-10.1126_scirobotics.adz7130",
+    "title": "Allocentric teleoperation for variable perspective multirobot coordination",
+    "format": "carousel",
+    "hook": "Egocentric teleoperation is the default. It's also the bottleneck.",
+    "posted_at": "2026-07-16T06:01:21.218674+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqqkpo4vz523",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
