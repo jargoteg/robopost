@@ -14229,7 +14229,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-15T22:13:55.589017+00:00",
     "media": {
       "figures": [
@@ -14254,7 +14254,9 @@
     },
     "issue": 148,
     "scheduled_after": "2026-07-16T07:31:21.218674+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "fc02d633",
@@ -14397,7 +14399,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T22:14:54.358919+00:00",
     "media": {
       "figures": [],
@@ -14418,7 +14420,9 @@
         "media/c807ac71/slide_07.png"
       ]
     },
-    "issue": 150
+    "issue": 150,
+    "scheduled_after": "2026-07-16T09:10:59.416407+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "f02af462",
@@ -14552,7 +14556,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-15T22:25:27.223195+00:00",
     "media": {
       "figures": [
@@ -14633,7 +14637,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T22:25:59.791972+00:00",
     "media": {
       "figures": [],
@@ -14654,7 +14658,9 @@
         "media/1e4c3a57/slide_07.png"
       ]
     },
-    "issue": 153
+    "issue": 153,
+    "scheduled_after": "2026-07-16T09:10:59.416407+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "aae5a682",
@@ -14715,7 +14721,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-15T22:26:30.170022+00:00",
     "media": {
       "figures": [],
@@ -14736,6 +14742,8 @@
         "media/aae5a682/slide_07.png"
       ]
     },
-    "issue": 154
+    "issue": 154,
+    "scheduled_after": "2026-07-16T09:10:59.416407+00:00",
+    "queue_notified": true
   }
 ]

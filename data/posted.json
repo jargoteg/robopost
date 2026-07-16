@@ -1650,5 +1650,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "e7405be7",
+    "paper_id": "web-50e9c95ef6",
+    "title": "Tornyol — Mosquito Killing Micro-Drone",
+    "format": "carousel",
+    "hook": "A drone that hunts mosquitoes one by one.",
+    "posted_at": "2026-07-16T07:40:59.416410+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "article",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqqqbtqp632x",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
