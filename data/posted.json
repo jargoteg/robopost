@@ -1667,5 +1667,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "c807ac71",
+    "paper_id": "doi-10.1002_rob.70279",
+    "title": "Online Localization With Current Disturbances for Autonomous Underwater Vehicles Without Global References",
+    "format": "carousel",
+    "hook": "3 hours underwater, no GPS, no USBL. Position still holds.",
+    "posted_at": "2026-07-16T09:34:02.171365+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqqwlx6dn326",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
