@@ -124,6 +124,9 @@ trends:
 pipeline:
   drafts_per_day: 2
   review_buffer: 6           # target number of open drafts awaiting review
+  litreview:                 # themed multi-paper deep-dive posts (EXTRA slots)
+    enabled: true
+    every_days: 3            # at most one review draft every N days
   source_mix:                # per-batch mix: journals reserved, arXiv capped
     journal_min: 2           # journal papers guaranteed slots (if available)
     arxiv_max: 2             # arXiv papers max per batch (rest fills by score)

@@ -121,7 +121,10 @@ def post_bluesky(draft, cfg):
     # A/B experiment: alternate single post vs thread; metrics compare them
     posted_count = len(load_json("posted.json", []))
     draft["bsky_variant"] = "thread" if posted_count % 2 == 0 else "single"
-    replies = draft["content"].get("bluesky_thread", [])[:2] \
+    max_replies = 5 if draft["paper"].get("item_type") == "litreview" else 2
+    if draft["paper"].get("item_type") == "litreview":
+        draft["bsky_variant"] = "thread"  # reviews are always threads
+    replies = draft["content"].get("bluesky_thread", [])[:max_replies] \
         if draft["bsky_variant"] == "thread" else []
     # hard guarantee: demo video + code repo are always linked. If the writer
     # didn't weave them in, append a links reply.

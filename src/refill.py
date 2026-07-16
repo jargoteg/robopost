@@ -48,5 +48,16 @@ def main(max_rounds=3):
     print(f"Refill: stopped after {max_rounds} rounds with {open_count()} open.")
 
 
+def litreview_pass():
+    try:
+        from litreview import maybe_build
+        if maybe_build(load_config()):
+            import subprocess
+            subprocess.run([sys.executable, "src/github_review.py", "create"])
+    except Exception as e:
+        print(f"litreview pass skipped: {e}")
+
+
 if __name__ == "__main__":
     main()
+    litreview_pass()
