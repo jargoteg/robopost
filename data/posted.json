@@ -1616,5 +1616,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "fc665095",
+    "paper_id": "doi-10.1002_rob.70298",
+    "title": "An Active Global Localization Framework of Planetary Rover Guided by the Interest Region Perception",
+    "format": "carousel",
+    "hook": "Rovers waste time scanning textures that will never match an orbit image.",
+    "posted_at": "2026-07-16T03:20:26.144984+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqqbpwgbgg2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
