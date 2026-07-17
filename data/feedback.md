@@ -1,30 +1,32 @@
-# Engagement lessons (auto-updated 2026-07-16)
+# Engagement lessons (auto-updated 2026-07-17)
 
 # Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Medical robotics (endovascular, 4 likes), locomotion papers (proximity sensors, bipedal, quadrupedal consistently 2+ likes), and service/interaction robots. Papers with a **clear contrast** (old method vs. new result) drove more replies.
-
-**Under-performed:** Underwater/subsea topics (grippers, gliders, AUVs), wind energy, planetary rovers, and policy/manifesto pieces — nearly all scored 0 across metrics. Niche hardware reviews without visual drama also flatlined.
+**Over-performed:** Medical robotics (endovascular, 4 likes), novel locomotion mechanics (SAWbot, underwater glider, hexapod), and dexterity/manipulation challenges. Tangible "why can't X do Y" framings outperform abstract systems papers.
+**Under-performed:** Policy/regulatory content (humanoid policy: 0), pure navigation/localization papers (IMU, planetary rover), and anything without strong visuals (14 rejections for missing figures — a pipeline bottleneck).
 
 ## 2. Hook Styles That Worked
-`curiosity_gap` generated the most **replies** (conversation-starting). `tension` was most consistent for **likes**. `bold_claim` was volatile: big win with endovascular (4 likes), zero on several others.
+Curiosity gap led on reply generation (consistent 1-reply posts). Bold claim produced the single highest-like post (endovascular, 4 likes) but also the most zeros.
 
 ## 3. Carousel vs. Video
-Carousels dominate the feed. The two video posts scored 0 likes combined. **Avoid video format until Instagram/TikTok channels are active.**
+Carousels dominate the published slate. Both videos scored 0 likes, 1 reply each. **Data too sparse to conclude** — but video is not outperforming carousel yet.
 
-### 3a. Hook Weighting Recommendation
-| Hook | Avg. likes | Avg. replies | Recommended weight |
-|---|---|---|---|
-| bold_claim | 0.7 | 0.6 | 25% |
-| curiosity_gap | 1.1 | 0.9 | **35%** |
-| tension | 0.9 | 0.5 | **30%** |
-| number_stat | 0.5 | 0.3 | 10% |
+### 3a. Hook-Style Weighting
+| Hook | Avg Likes | Avg Replies |
+|---|---|---|
+| curiosity_gap | 1.4 | 0.9 |
+| bold_claim | 0.8 | 0.7 |
+| number_stat | 0.8 | 0.3 |
+| tension | 0.2 | 0.7 |
+
+**Recommended weighting: curiosity_gap 45%, bold_claim 30%, number_stat 15%, tension 10%**
 
 ### 3b. Thread vs. Single
-Threads average **1.4 total engagements** vs. singles at **0.9**. Recommend **60/40 thread/single split.**
+Threads average ~1.0 replies vs. singles ~0.5. Likes are comparable. Threads drive conversation.
+**Recommended split: 60% thread, 40% single**
 
-## 4. Three Concrete Recommendations
-1. **Prioritize locomotion, manipulation, and medical robotics** — drop standalone underwater/policy reviews until we have stronger baseline data.
-2. **Lead with curiosity_gap or tension hooks** on every thread; reserve bold_claim for papers with quantified, counterintuitive results.
-3. **Test one cross-post to Instagram** with the next high-performing carousel to diagnose whether the engagement ceiling is platform or content.
+## 4. Concrete Recommendations
+1. **Gate on visuals first** — reject papers pre-hook-writing if figures are unavailable; it's the top rejection cause.
+2. **Lead with human stakes** — posts framing a human frustration ("why can't robots X") outperform pure spec flexing.
+3. **Retire tension hook as default** — 0.2 avg likes; only deploy it when the contrast is genuinely dramatic (e.g., QuadBoat, amoeba robot).
