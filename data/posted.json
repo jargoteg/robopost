@@ -1936,5 +1936,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "b3993d70",
+    "paper_id": "review-0d41a4db",
+    "title": "Rolling, Morphing, Hybrid: The Many Shapes of Robot Locomotion",
+    "format": "carousel",
+    "hook": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.",
+    "posted_at": "2026-07-17T10:53:57.010598+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "litreview",
+    "item_type": "litreview",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqtljrycyw23",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

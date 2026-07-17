@@ -15186,7 +15186,7 @@
   },
   {
     "draft_id": "b3993d70",
-    "status": "approved",
+    "status": "posted",
     "paper": {
       "id": "review-0d41a4db",
       "title": "Rolling, Morphing, Hybrid: The Many Shapes of Robot Locomotion",
@@ -15248,7 +15248,9 @@
     "post_failures": 1,
     "failures_notified": 1,
     "scheduled_after": "2026-07-17T10:18:22.594875+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "999ccc91",
@@ -15508,7 +15510,7 @@
       ]
     },
     "issue": 164,
-    "scheduled_after": "2026-07-17T10:18:22.594875+00:00",
+    "scheduled_after": "2026-07-17T12:23:57.010593+00:00",
     "queue_notified": true
   },
   {
