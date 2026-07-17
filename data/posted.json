@@ -1902,5 +1902,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "90510145",
+    "paper_id": "2607.13633v1",
+    "title": "Design and Control of the \"QuadBoat\": A Quadruped Surface Vehicle for Drowning Rescue",
+    "format": "carousel",
+    "hook": "Boats steer poorly at low speed. Legs don't.",
+    "posted_at": "2026-07-17T03:45:02.555185+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqstkt6pba2y",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
