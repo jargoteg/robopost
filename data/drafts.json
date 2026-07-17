@@ -15232,6 +15232,15 @@
         "media/b3993d70/1909_07193/fig_00.png",
         "media/b3993d70/2405_01792/fig_00.png",
         "media/b3993d70/2510_09980/fig_01.png"
+      ],
+      "bsky": [
+        "media/b3993d70/bsky_00.png",
+        "media/b3993d70/bsky_01.png"
+      ],
+      "slides": [
+        "media/b3993d70/slide_00.png",
+        "media/b3993d70/slide_01.png",
+        "media/b3993d70/slide_02.png"
       ]
     },
     "created": "2026-07-16T12:10:34.862224+00:00",
@@ -15471,7 +15480,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-16T16:57:43.410348+00:00",
     "media": {
       "figures": [
@@ -15649,5 +15658,159 @@
       ]
     },
     "issue": 166
+  },
+  {
+    "draft_id": "f697c771",
+    "paper": {
+      "id": "rss-247bdbcc12",
+      "title": "Real-Time Dynamic Safe Trajectory Planning for Orchard Picking Manipulator: MPC-Based Contact Force Suppression",
+      "abstract": "In unstructured orchard environments, contact between fruit harvesting manipulators and obstacles such as branches frequently leads to harvesting failures and equipment damage. This paper presents a dynamic trajectory planning method for contact-obstructed conditions to improve harvesting success rates and operational safety. First, real-time contact point and force estimation are achieved by combining joint torque sensor data with friction cone constraints and quadratic optimization. Second, the concept of a virtual contact body is introduced, and a force–displacement model is established using recursive least squares (RLS) to predict contact force evolution. Third, an MPC-based dynamic trajectory planner incorporating contact force constraints is developed, enabling real-time adjustment of manipulator configuration to suppress contact forces while maintaining end-effector positioning accuracy. Experimental results from a simulated harvesting scenario demonstrate that, compared with motion without dynamic planning, the proposed method significantly reduces external contact forces, achieves positioning accuracy within 1 mm, and maintains joint torques within rated limits. These results confirm that the proposed method effectively mitigates joint overload risks and substantially enhances motion safety and harvesting reliability in complex agricultural environments.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11593107",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Your orchard robot snaps a branch. MPC saw it coming.",
+      "commentary": "Fruit-harvesting arms fail constantly in real orchards because branches are unpredictable and joint overload trips the whole system. This paper combines real-time torque sensing, friction cone estimation, and a recursive least squares force-displacement model to predict contact force evolution before it becomes damage. The MPC planner then reshapes the trajectory on the fly, keeping end-effector error under 1 mm while suppressing contact forces. Clever part: the 'virtual contact body' abstraction lets the planner treat an uncertain branch interaction as a structured constraint. Honest caveat: everything is tested in a simulated harvesting scenario, not in an actual orchard with wind, fruit weight variation, or leaf occlusion, so field transfer is still the open question.",
+      "slides": [
+        {
+          "title": "The orchard robot problem",
+          "body": "Branches shift, occlude, and push back unpredictably. Contact with a manipulator arm typically means harvesting failure, joint overload, or bent hardware. No static trajectory survives a real canopy."
+        },
+        {
+          "title": "Step 1: Estimate contact in real time",
+          "body": "Joint torque sensors plus friction cone constraints feed a quadratic program. Output: contact point location and force magnitude, updated continuously. No external force/torque sensor needed on the end-effector."
+        },
+        {
+          "title": "Step 2: Predict how force will grow",
+          "body": "A 'virtual contact body' models the branch as a stiffness element. Recursive least squares fits a force-displacement curve on the fly, so the planner knows where the force is heading, not just where it is now."
+        },
+        {
+          "title": "Step 3: MPC reshapes the path",
+          "body": "Model predictive control recomputes joint configurations each cycle. Constraint: keep contact force below threshold. Result: under 1 mm end-effector positioning error, joint torques stay within rated limits throughout."
+        },
+        {
+          "title": "What the numbers show",
+          "body": "Versus unplanned motion: significantly reduced peak contact forces, no joint overload events, 1 mm positioning accuracy maintained. All results from a simulated harvesting scenario, not a field trial."
+        },
+        {
+          "title": "The gap that remains",
+          "body": "Simulated canopy vs. real orchard. Wind loading, fruit mass variation, leaf occlusion, and mud on joints are absent here. RLS convergence under rapid branch deformation is untested. Field validation is the next hard problem."
+        }
+      ],
+      "video_script": "Orchard robots fail for a simple reason. Branches push back, the arm overloads, and the harvest stops. This paper attacks that with three layers: real-time force estimation from joint torques, a recursive model predicting how that force grows, and an MPC planner that reshapes the trajectory before damage happens. End-effector error stays under one millimeter. Joint torques stay in bounds. The catch? It's all simulated so far. The question is whether RLS converges fast enough when a branch snaps back unexpectedly in a real canopy. What's your bet?",
+      "caption_instagram": "Your fruit-picking robot just contacted a branch. What happens next decides the harvest.\n\nMost manipulator trajectories are planned once and executed open-loop. In an orchard that's a recipe for joint overload and snapped equipment. This paper builds a three-stage live response: estimate contact force from joint torques alone, predict its growth using recursive least squares on a virtual branch stiffness model, then let MPC reshape the arm's path in real time.\n\nThe result in simulation: under 1 mm end-effector error, no joint overload events, contact forces suppressed versus baseline unplanned motion. The virtual contact body idea is genuinely clean, it turns a messy physical interaction into a structured constraint the planner can reason about.\n\nThe honest read: simulated canopy only. No wind, no fruit weight variation, no mud, no sensor noise from real field conditions. Field transfer is where these methods live or die, and that test hasn't happened yet.\n\nPaper: 'Real-Time Dynamic Safe Trajectory Planning for Orchard Picking Manipulator: MPC-Based Contact Force Suppression' via IEEE.\n\n#AgricultureRobotics #ManipulatorControl #MPC #HarvestRobotics #TrajectoryPlanning #FieldRobotics #SwarmRobotics",
+      "caption_tiktok": "Orchard robot hits a branch. MPC fixes the trajectory before the joint overloads. 1mm accuracy, no damage. Still simulation though. #AgricultureRobotics #Robotics #MPC #HarvestBot",
+      "post_bluesky": "Your orchard robot snaps a branch. MPC saw it coming.\n\nReal-time torque sensing + recursive least squares branch stiffness model + MPC replanning = contact forces suppressed, 1mm accuracy held, no joint overload. Clever abstraction. Still…\nhttp://ieeexplore.ieee.org/document/11593107",
+      "bluesky_thread": [
+        "The 'virtual contact body' is the part worth stealing. Instead of reacting to force as raw data, they model the branch as a stiffness element and fit it live with RLS. MPC then treats it as a constraint, not a disturbance. That's a cleaner problem formulation than most reactive planners use.",
+        "Caveat that matters: every result comes from a simulated harvesting scenario. Real canopies have wind load, variable fruit mass, and branches that snap rather than deform smoothly. Does RLS converge fast enough when contact dynamics change abruptly? That's the field validation nobody has run yet…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-17T08:51:21.596812+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/f697c771/bsky_00.png",
+        "media/f697c771/bsky_01.png",
+        "media/f697c771/bsky_02.png",
+        "media/f697c771/bsky_03.png"
+      ],
+      "slides": [
+        "media/f697c771/slide_00.png",
+        "media/f697c771/slide_01.png",
+        "media/f697c771/slide_02.png",
+        "media/f697c771/slide_03.png",
+        "media/f697c771/slide_04.png",
+        "media/f697c771/slide_05.png",
+        "media/f697c771/slide_06.png",
+        "media/f697c771/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ff8a8632",
+    "paper": {
+      "id": "rss-59433dc8cf",
+      "title": "CHAI – Compliant Human-centered Adaptive Interaction through Diffusion-based Language Trajectory Transformer",
+      "abstract": "We present CHAI (Compliant Human-centered Adaptive Interaction), a novel language-driven framework for real-time modulation of a robot’s kinematics and mechanical compliance in real-world environments. By interpreting natural language instructions and visual context through pre-trained vision-language encoders, CHAI combines a transformer-based geometry encoder with a conditional diffusion model to iteratively refine a nominal kinematic trajectory and its associated compliance profile. CHAI introduces on-the-fly language-driven impedance (compliance) modulation along both translational and rotational directions—including motion-aligned and radial axes—executed through a passivity-aware and therefore stable Cartesian impedance controller. This capability is key for supporting compliant interaction, improving adaptability and reducing hazardous contact in physical interaction tasks. Comprehensive experiments demonstrate significant gains in scalability, adaptability, trajectory accuracy, and interactive behaviour over prior methods. Ablation studies further validate the contributions of stiffness control and multi-modal conditioning.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11578273",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0,
+      "video_url": "https://www.youtube.com/watch?v=UjUEs6mIIn0",
+      "video_title": "CHAI – Compliant Human-centered Adaptive Interaction through Diffusion-based Language Traj. Transf."
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Stiff robots break things. Compliant ones drift. CHAI escapes that tradeoff.",
+      "commentary": "CHAI uses a diffusion model to jointly refine a kinematic trajectory and its compliance profile from natural language and visual context, in real time. The passivity-aware Cartesian impedance controller is the load-bearing detail: passivity guarantees stability even as stiffness modulates on the fly, which is non-trivial. The ablations actually validate the stiffness control contribution separately, which is rare and appreciated. Honest caveat: all results are lab bench tasks, and language-driven compliance modulation on contact-rich field tasks like insertion under vibration or debris is a very different beast.",
+      "slides": [
+        {
+          "title": "The old tradeoff",
+          "body": "Stiff robots are accurate but dangerous near humans. Compliant robots are safe but drift. Most systems pick one. CHAI claims to modulate both, in real time, from language."
+        },
+        {
+          "title": "How CHAI works",
+          "body": "Vision-language encoders read the scene and instruction. A transformer encodes geometry. A conditional diffusion model iteratively refines both the trajectory and the compliance profile together, not sequentially."
+        },
+        {
+          "title": "The key ingredient: passivity",
+          "body": "Compliance modulation can destabilize a controller if energy isn't tracked. CHAI uses a passivity-aware Cartesian impedance controller, bounding injected energy so stiffness changes don't cause runaway oscillations."
+        },
+        {
+          "title": "What it modulates",
+          "body": "Stiffness is adjusted along translational and rotational axes independently, including motion-aligned and radial directions. That granularity matters for tasks like peg insertion or surface wiping."
+        },
+        {
+          "title": "What the ablations show",
+          "body": "Stiffness control and multi-modal conditioning each contribute independently. Removing either degrades trajectory accuracy and interaction behavior. The paper separates their effects, which most compliance papers skip."
+        },
+        {
+          "title": "The real question",
+          "body": "Lab bench results are clean. Does language-driven compliance survive contact-rich field conditions: vibration, dirt, unexpected geometry? That gap is where this framework needs its next test."
+        }
+      ],
+      "video_script": "Most compliant robots solve safety by giving up precision. CHAI tries to escape that by modulating stiffness in real time, from language. You tell it to be gentle, it adjusts compliance along specific axes while a diffusion model keeps the trajectory on target. The passivity constraint is what makes it stable, not just soft. The ablations are honest: stiffness control earns its place. But every result here is a clean lab task. Would this hold up in a contact-rich environment with vibration and unexpected geometry? That's the question I want answered next.",
+      "caption_instagram": "Stiff robots break things. Compliant robots drift off target. Most frameworks pick a side.\n\nCHAI tries to modulate both at once, from natural language, in real time. You describe the task, vision-language encoders read the scene, and a diffusion model jointly refines the trajectory and the compliance profile together.\n\nThe detail that makes it credible: a passivity-aware Cartesian impedance controller bounds the energy injected during stiffness changes. That's what keeps the system stable when compliance shifts mid-motion. The ablations confirm stiffness control and multi-modal conditioning each pull their weight independently.\n\nHonest limit: every experiment is a controlled lab task. Language-driven compliance on a real contact-rich job, think insertion under vibration or unstructured geometry, is a different problem. Full video in bio.\n\n#swarmrobotics #robotics #humanrobotinteraction #impedancecontrol #diffusionmodels #manipulationrobotics #robotresearch",
+      "caption_tiktok": "Robot compliance modulated by language in real time, with math that proves it stays stable. The gap between this and field deployment is the interesting part. #robotics #manipulation #impedancecontrol #robotresearch",
+      "post_bluesky": "Stiff robots break things. Compliant ones drift. CHAI modulates both from natural language in real time, using a diffusion model and passivity-aware impedance control. Ablations are honest. Lab results are clean. Field deployment is the open question. http://ieeexplore.ieee.org/document/11578273",
+      "bluesky_thread": [
+        "The load-bearing detail is passivity. Changing stiffness mid-motion can inject energy and destabilize a controller. The passivity constraint bounds that. Most compliance papers hand-wave this. CHAI doesn't, and the ablations show stiffness control earns its place independently.",
+        "Every result is a clean bench task though. Language-driven compliance on contact-rich field work, vibration, debris, unexpected geometry, is a very different regime. Anyone seen diffusion-based compliance tested outside structured lab settings? Genuinely curious what held up."
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-17T08:51:50.252879+00:00",
+    "media": {
+      "figures": [
+        "media/ff8a8632/fig_00.png"
+      ],
+      "bsky": [
+        "media/ff8a8632/bsky_00.png",
+        "media/ff8a8632/bsky_01.png",
+        "media/ff8a8632/bsky_02.png",
+        "media/ff8a8632/bsky_03.png"
+      ],
+      "slides": [
+        "media/ff8a8632/slide_00.png",
+        "media/ff8a8632/slide_01.png",
+        "media/ff8a8632/slide_02.png",
+        "media/ff8a8632/slide_03.png",
+        "media/ff8a8632/slide_04.png",
+        "media/ff8a8632/slide_05.png",
+        "media/ff8a8632/slide_06.png",
+        "media/ff8a8632/slide_07.png"
+      ]
+    }
   }
 ]
