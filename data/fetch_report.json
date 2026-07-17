@@ -1,30 +1,36 @@
 {
-  "ts": "2026-07-16T16:55",
-  "collected": 232,
-  "dedup_dropped": 65,
-  "after_dedup": 167,
+  "ts": "2026-07-17T08:46",
+  "collected": 262,
+  "dedup_dropped": 67,
+  "after_dedup": 195,
   "score_hist": {
-    "0": 19,
-    "1": 20,
-    "2": 41,
-    "3": 34,
-    "4": 22,
-    "5": 15,
-    "6": 13,
-    "7": 3
+    "0": 12,
+    "1": 33,
+    "2": 27,
+    "3": 36,
+    "4": 45,
+    "5": 25,
+    "6": 10,
+    "7": 6,
+    "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 16,
+  "ranked_above_floor": 17,
   "split": {
     "videos": 0,
-    "papers": 1,
-    "news": 15
+    "papers": 11,
+    "news": 6
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Industrial Dexterity Benchmark: A Hardware-Softwar",
-      "type": null,
+      "t": "Erratum for the Research Article “Observing a robo",
+      "type": "paper",
+      "video": false
+    },
+    {
+      "t": "High-DoF Dexterous Soft Hand With an Enhanced Thum",
+      "type": "paper",
       "video": false
     }
   ]

@@ -1919,5 +1919,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "999ccc91",
+    "paper_id": "doi-10.1109_lra.2026.3711507",
+    "title": "Congestion-Aware Efficient Multi-Robot Task Planning via Invocation-Pruning Task Evaluation",
+    "format": "carousel",
+    "hook": "Most planners ignore traffic jams. This one prunes them before they form.",
+    "posted_at": "2026-07-17T08:48:22.594875+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqtejbb3wo2r",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

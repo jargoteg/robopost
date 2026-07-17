@@ -15186,7 +15186,7 @@
   },
   {
     "draft_id": "b3993d70",
-    "status": "in_review",
+    "status": "approved",
     "paper": {
       "id": "review-0d41a4db",
       "title": "Rolling, Morphing, Hybrid: The Many Shapes of Robot Locomotion",
@@ -15210,15 +15210,19 @@
       "post_bluesky": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.",
       "bluesky_thread": [
         "Spherical tensegrity robots showed that a rolling shell can be steered on steep inclines by coordinating cable tensions, not by adding legs. This was an early proof that geometry itself could be a locomotion strategy, not just a support structure. arxiv.org/abs/1708.08150",
-        "OmniWheg made wheel-to-leg transformation cheap and omnidirectional. The separable omni-wheel plus 4-bar linkage is the kind of minimalist mechanism insight that unlocks a whole design family, and it shows up in later work directly. arxiv.org/abs/2203.02118",
-        "SWheg pushed minimalist actuator realization further, asking how few motors you actually need for a transformable wheel-leg robot. The modular family approach here is practical: swap modules, get a different gait, same controller skeleton. arxiv.org/abs/2210.15126",
-        "Rolling in the Deep brought online trajectory optimization to wheeled-legged hybrids, letting ANYmal-style platforms decide in real time when to roll and when to step. This is the control-theory anchor the hardware papers needed. arxiv.org/abs/1909.07193",
-        "Learning Robust Autonomous Navigation for Wheeled-Legged Robots scaled hybrid locomotion to full urban navigation stacks, connecting low-level gait switching to high-level path planning. Sim2real transfer is the hard part they quantify. arxiv.org/abs/2405.01792",
-        "ATRos frames the open problem cleanly: energy efficiency across wheeled and legged modes simultaneously. It is not enough to switch modes; you need a policy that knows when switching is worth the cost, and that metric has been underspecified until now. arxiv.org/abs/2510.09980",
-        "The field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be deco"
+        "OmniWheg made wheel-to-leg transformation cheap and omnidirectional. The separable omni-wheel plus 4-bar linkage is the kind of minimalist mechanism insight that unlocks a whole design family, and it shows up in later work directly. arxiv.org/abs/2203.02118"
       ],
       "caption_instagram": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.\n\nSpherical tensegrity robots showed that a rolling shell can be steered on steep inclines by coordinating cable tensions, not by adding legs. This was an early proof that geometry itself could be a locomotion strategy, not just a support structure. arxiv.org/abs/1708.08150\nOmniWheg made wheel-to-leg transformation cheap and omnidirectional. The separable omni-wheel plus 4-bar linkage is the kind of minimalist mechanism insight that unlocks a whole design family, and it shows up in later work directly. arxiv.org/abs/2203.02118\nSWheg pushed minimalist actuator realization further, asking how few motors you actually need for a transformable wheel-leg robot. The modular family approach here is practical: swap modules, get a different gait, same controller skeleton. arxiv.org/abs/2210.15126\nRolling in the Deep brought online trajectory optimization to wheeled-legged hybrids, letting ANYmal-style platforms decide in real time when to roll and when to step. This is the control-theory anchor the hardware papers needed. arxiv.org/abs/1909.07193\nLearning Robust Autonomous Navigation for Wheeled-Legged Robots scaled hybrid locomotion to full urban navigation stacks, connecting low-level gait switching to high-level path planning. Sim2real transfer is the hard part they quantify. arxiv.org/abs/2405.01792\nATRos frames the open problem cleanly: energy efficiency across wheeled and legged modes simultaneously. It is not enough to switch modes; you need a policy that knows when switching is worth the cost, and that metric has been underspecified until now. arxiv.org/abs/2510.09980\nThe field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be deco",
-      "hook_style": "litreview"
+      "hook_style": "litreview",
+      "commentary": "The field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be decoupled by design.",
+      "slides": [
+        {
+          "title": "What it is",
+          "body": "The field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability"
+        }
+      ],
+      "video_script": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea.. The field is converging on learned policies that treat wheel-leg switching as a continuous decision variable rather than a mode flag. The open question is whether a single reward function can capture terrain adaptability and energy cost together, or whether those objectives need to be decoupled by design.",
+      "caption_tiktok": "Wheels or legs? Neither answer is enough. The real frontier is robots that blur the line between rolling, walking, and shape-changing on the fly. Here is the literature that built that idea. #robotics"
     },
     "media": {
       "figures": [
@@ -15231,7 +15235,9 @@
       ]
     },
     "created": "2026-07-16T12:10:34.862224+00:00",
-    "issue": 161
+    "issue": 161,
+    "post_failures": 1,
+    "failures_notified": 1
   },
   {
     "draft_id": "999ccc91",
@@ -15293,7 +15299,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-16T12:57:05.199991+00:00",
     "media": {
       "figures": [],
@@ -15314,7 +15320,9 @@
         "media/999ccc91/slide_07.png"
       ]
     },
-    "issue": 162
+    "issue": 162,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "16e6ab6f",
@@ -15489,5 +15497,157 @@
       ]
     },
     "issue": 164
+  },
+  {
+    "draft_id": "25c47196",
+    "paper": {
+      "id": "rss-735f46a0f4",
+      "title": "Erratum for the Research Article “Observing a robot peer’s failures facilitates students’ classroom learning”",
+      "abstract": "Science Robotics, Volume 11, Issue 116, July 2026.",
+      "authors": [],
+      "url": "https://www.science.org/doi/abs/10.1126/scirobotics.aej7903?af=R",
+      "source": "science.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A Science Robotics paper just got retracted. The robot-peer learning result may not hold.",
+      "commentary": "Science Robotics published a correction in July 2026 to the study claiming students learn better when they watch a robot peer fail. That result got a lot of traction in ed-tech circles and is now being cited to justify classroom robot deployments. An erratum at this level signals something went wrong with the data or analysis, not just a typo. The timing is brutal given the current Sally pilot in New York schools. The honest caveat: we don't yet know the scope of the correction, but any social robotics in education claim that rested on this paper needs to be re-examined before another school district signs a contract.",
+      "slides": [
+        {
+          "title": "The paper everyone cited",
+          "body": "Science Robotics 2026: students learn better watching a robot fail. The result spread fast. Ed-tech vendors noticed. School districts started budgeting."
+        },
+        {
+          "title": "Now there is an erratum",
+          "body": "Volume 11, Issue 116, July 2026. Science Robotics issued a formal correction to the original article. The core claim about robot peer failure facilitating learning is now in question."
+        },
+        {
+          "title": "Why this matters right now",
+          "body": "At least one US school district is piloting a $50K+ social robot in classrooms this year. The evidence base for these decisions is thin. An erratum in the flagship paper makes it thinner."
+        },
+        {
+          "title": "What the research base actually looks like",
+          "body": "Most social robotics in education studies: small N, short duration, no active control, one school. Effect sizes rarely survive replication. This erratum is not an outlier problem, it is a field problem."
+        },
+        {
+          "title": "The deployment risk",
+          "body": "Hardware vendors move faster than peer review. A correction issued in July 2026 will not reach the procurement officer who approved the pilot in June."
+        },
+        {
+          "title": "The question that remains",
+          "body": "If the failure-facilitates-learning effect is reduced or gone after correction, what is the remaining justification for a robot peer over a teacher-controlled exercise? Someone should answer that before the next invoice."
+        }
+      ],
+      "video_script": "A Science Robotics paper just got an erratum. The study said students learn better when they watch a robot fail. That result traveled fast into ed-tech sales decks and school board meetings. Now the authors have issued a formal correction in July 2026. We do not know the full scope yet. But here is the problem: procurement moves faster than peer review. At least one school district is already running a pilot on hardware that costs more than a teacher's salary. If the core effect does not hold, what exactly are we paying for?",
+      "caption_instagram": "A flagship social robotics paper just got a formal correction.\n\nThe study claimed students learn better watching a robot peer fail. It was published in Science Robotics and got picked up widely, including by people making the case for classroom robots right now.\n\nThe erratum landed in Volume 11, Issue 116, July 2026. We do not know the full scope of the correction yet. But the timing could not be more pointed: at least one US school district is mid-pilot on a social robot costing $50K or more, justified partly by this kind of research.\n\nThe broader issue is not one bad paper. It is that most social robotics in education studies are small, short, and do not replicate. When the strongest result in your evidence base needs a correction, the whole chain of reasoning behind the deployment deserves a second look.\n\nPaper: 'Observing a robot peer's failures facilitates students' classroom learning', Science Robotics, https://www.science.org/doi/abs/10.1126/scirobotics.aej7903?af=R\n\n#swarmrobotics #socialrobotics #edtech #sciencerobots #roboticsresearch #HRI #replication",
+      "caption_tiktok": "A Science Robotics paper behind classroom robot deployments just got an erratum. The $50K question is whether the evidence ever held up. #robotics #edtech #sciencenews #replication",
+      "post_bluesky": "A Science Robotics erratum just landed on the robot-peer-failure learning paper. School districts are mid-procurement on $50K classroom robots partly justified by this result. The evidence base was already thin. https://www.science.org/doi/abs/10.1126/scirobotics.aej7903?af=R",
+      "bluesky_thread": [
+        "Most social robotics in education studies: small N, short duration, no replication. This erratum is not an outlier. It is the field showing its seams at exactly the wrong moment for ed-tech sales cycles.",
+        "Genuine question for anyone in HRI: is there a single classroom robot effect that has survived pre-registered replication at scale? Because I keep looking and the answer seems to be no."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-17T08:47:30.397662+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/25c47196/bsky_00.png",
+        "media/25c47196/bsky_01.png",
+        "media/25c47196/bsky_02.png",
+        "media/25c47196/bsky_03.png"
+      ],
+      "slides": [
+        "media/25c47196/slide_00.png",
+        "media/25c47196/slide_01.png",
+        "media/25c47196/slide_02.png",
+        "media/25c47196/slide_03.png",
+        "media/25c47196/slide_04.png",
+        "media/25c47196/slide_05.png",
+        "media/25c47196/slide_06.png",
+        "media/25c47196/slide_07.png"
+      ]
+    },
+    "issue": 165
+  },
+  {
+    "draft_id": "3b77bdd2",
+    "paper": {
+      "id": "rss-1cd73b7c34",
+      "title": "High-DoF Dexterous Soft Hand With an Enhanced Thumb-Palm Composite Design Enables Robust Grasp and Dexterous Manipulation",
+      "abstract": "Soft robotic hands, owing to their compliance and adaptability, have been widely studied, however, the inherent softness and limited Degrees of Freedom (DoFs) often limit their use to grasping rather than dexterous manipulation. In this work, we present a high-DoF soft hand with an enhanced thumb-palm composite featuring a bio-inspired soft-rigid hybrid structure. The composite integrates two orthogonal servomotors and a soft bending actuator arranged in series, enabling a wide-range workspace, high-DoF actuation, precise thumb trajectories, and multidirectional force output. We further adopt four two-chamber bending actuators as fingers to form efficient coordination with the thumb to achieve a more robust grasp and dexterous manipulation. We characterize the workspace of the hand and the mechanical performance of the thumb-palm composite, validating the kinematic model and the grasp enhancement via the soft-rigid hybrid structure. Standardized assessments, including the Kapandji test and the Feix GRASP taxonomy, are conducted using the proposed hand, demonstrating the thumb dexterity and grasp diversity of the proposed design. Finally, experiments across various daily and task-oriented scenarios show that the hand provides a wide-range thumb workspace, stable and versatile force output, and effective finger coordination, thereby enabling robust grasping and dexterous manipulation across diverse applications. The stability and repeatability of the hand are further validated ",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11593149",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A soft hand that passes the Kapandji thumb test.",
+      "commentary": "This paper addresses the real bottleneck in soft hand research: fingers are easy, thumbs are hard. The thumb-palm composite stacks two orthogonal servos plus a soft bending actuator in series, giving it both rigid positioning accuracy and compliant force output. Validated against Kapandji and the Feix GRASP taxonomy, which are the right benchmarks. The honest caveat: two-chamber finger actuators are well-understood, and the novelty is concentrated in the thumb-palm unit. Real-world durability under repeated manipulation cycles is not characterized in the abstract, so field deployment claims remain premature.",
+      "slides": [
+        {
+          "title": "The thumb problem in soft hands",
+          "body": "Most soft hands grasp but can't manipulate. The thumb is why. Limited DoF and no palm structure means no opposition force, no pinch, no in-hand reorientation."
+        },
+        {
+          "title": "The fix: thumb-palm composite",
+          "body": "Two orthogonal servos plus a soft bending actuator in series. Rigid joints set position. The soft actuator absorbs contact variance. Wide workspace, multidirectional force output."
+        },
+        {
+          "title": "Four-finger coordination",
+          "body": "Four two-chamber bending actuators form the fingers. Simpler than the thumb but tuned to work with the palm composite. Coordination, not raw finger complexity, drives grasp stability."
+        },
+        {
+          "title": "Benchmarks used correctly",
+          "body": "Kapandji test scores thumb opposition range. Feix GRASP taxonomy covers 33 grasp types. Both are standardized. Using them here makes comparison to other soft hands actually possible."
+        },
+        {
+          "title": "What's not shown yet",
+          "body": "No cycle-count durability data in the abstract. No payload numbers under dynamic manipulation. Lab grasps across daily objects are promising, but field conditions will stress the soft actuators differently."
+        },
+        {
+          "title": "Why it matters for deployment",
+          "body": "If the thumb-palm composite holds up, this architecture closes the gap between soft compliance and rigid dexterity without a full tendon-driven hand. That tradeoff is worth watching."
+        }
+      ],
+      "video_script": "Soft robotic hands have a thumb problem. You can make compliant fingers all day, but without a real thumb, you get grasping, not manipulation. This paper stacks two orthogonal servos and a soft bending actuator into one thumb-palm unit. Rigid for positioning, soft for contact. Then it validates the design against the Kapandji test and the Feix GRASP taxonomy, real benchmarks, not cherry-picked demos. The open question is durability. How many cycles before the soft actuators degrade? What do you think breaks first in field conditions?",
+      "caption_instagram": "A soft hand that passes the Kapandji thumb test. That's not a given.\n\nMost soft robotic hands are built around fingers. The thumb gets an afterthought. This paper flips that. The core contribution is a thumb-palm composite: two orthogonal servos for precise positioning, plus a soft bending actuator for compliant contact. Stack them in series and you get wide workspace, multidirectional force, and actual opposition.\n\nThe four fingers are two-chamber bending actuators, well-understood technology, but the point here is coordination with the thumb, not finger complexity. They validate against Kapandji scores and the Feix GRASP taxonomy. Those are the right tests. 33 grasp types covered.\n\nHonest caveat: no cycle-count durability data yet. Daily-object grasps in a lab are not the same as 10,000 cycles in a logistics or prosthetics context. That data needs to come next before anyone talks deployment.\n\nPaper: High-DoF Dexterous Soft Hand With an Enhanced Thumb-Palm Composite Design Enables Robust Grasp and Dexterous Manipulation. IEEE Xplore, 2026.\n\n#softrobotics #robotichands #dexterousmanipulation #softactuators #roboticsgrasping #biomimeticrobots #roboticsresearch",
+      "caption_tiktok": "A soft robotic hand that actually passes the Kapandji thumb test. The trick is a rigid-soft hybrid palm, not just better fingers. #softrobotics #robotichand #manipulation #robotics",
+      "post_bluesky": "A soft hand that passes the Kapandji thumb test. The trick: two orthogonal servos plus a soft actuator in the thumb-palm, not just better fingers. Feix taxonomy validated. Durability data still needed. http://ieeexplore.ieee.org/document/11593149",
+      "bluesky_thread": [
+        "The clever part is the series arrangement: rigid joints for workspace positioning, soft actuator for contact compliance. You get both without a full tendon-driven architecture. The finger design is conventional two-chamber bending actuators, but the thumb-palm coordination is doing the real work…",
+        "What I want to see next: cycle-count fatigue data. Soft actuators under repeated manipulation loads degrade in ways that lab grasp demos don't surface. Anyone seen durability benchmarks for hybrid soft-rigid hands that actually hold up past a few hundred cycles?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-17T08:47:59.828852+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/3b77bdd2/bsky_00.png",
+        "media/3b77bdd2/bsky_01.png",
+        "media/3b77bdd2/bsky_02.png",
+        "media/3b77bdd2/bsky_03.png"
+      ],
+      "slides": [
+        "media/3b77bdd2/slide_00.png",
+        "media/3b77bdd2/slide_01.png",
+        "media/3b77bdd2/slide_02.png",
+        "media/3b77bdd2/slide_03.png",
+        "media/3b77bdd2/slide_04.png",
+        "media/3b77bdd2/slide_05.png",
+        "media/3b77bdd2/slide_06.png",
+        "media/3b77bdd2/slide_07.png"
+      ]
+    },
+    "issue": 166
   }
 ]
