@@ -15484,7 +15484,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-16T16:57:43.410348+00:00",
     "media": {
       "figures": [
@@ -15511,7 +15511,9 @@
     },
     "issue": 164,
     "scheduled_after": "2026-07-17T12:23:57.010598+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "25c47196",

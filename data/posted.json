@@ -1953,5 +1953,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "4ac8f502",
+    "paper_id": "2607.14021v1",
+    "title": "Industrial Dexterity Benchmark: A Hardware-Software Benchmarking Platform for Industrial Dexterous Manipulation",
+    "format": "carousel",
+    "hook": "There is a reason robots still can't plug in a cable",
+    "posted_at": "2026-07-17T14:09:10.376923+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqtwgvfbzu2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
