@@ -15246,7 +15246,9 @@
     "created": "2026-07-16T12:10:34.862224+00:00",
     "issue": 161,
     "post_failures": 1,
-    "failures_notified": 1
+    "failures_notified": 1,
+    "scheduled_after": "2026-07-17T10:18:22.594875+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "999ccc91",
@@ -15505,7 +15507,9 @@
         "media/4ac8f502/slide_07.png"
       ]
     },
-    "issue": 164
+    "issue": 164,
+    "scheduled_after": "2026-07-17T10:18:22.594875+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "25c47196",
@@ -15712,7 +15716,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-17T08:51:21.596812+00:00",
     "media": {
       "figures": [],
@@ -15732,7 +15736,8 @@
         "media/f697c771/slide_06.png",
         "media/f697c771/slide_07.png"
       ]
-    }
+    },
+    "issue": 167
   },
   {
     "draft_id": "ff8a8632",
@@ -15789,7 +15794,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-17T08:51:50.252879+00:00",
     "media": {
       "figures": [
@@ -15811,6 +15816,7 @@
         "media/ff8a8632/slide_06.png",
         "media/ff8a8632/slide_07.png"
       ]
-    }
+    },
+    "issue": 168
   }
 ]
