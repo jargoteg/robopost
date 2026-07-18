@@ -15828,5 +15828,156 @@
     "issue": 168,
     "scheduled_after": "2026-07-18T19:15:14.418409+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "bfdd4045",
+    "paper": {
+      "id": "yt-T1edFaw-wnA",
+      "title": "Wheel-Legged Robots Play Football and Balance a Ball | Robotics Test",
+      "abstract": "These wheel-legged robots turn a football field into a live balance and mobility test. The video shows several compact robots ...",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=T1edFaw-wnA",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=T1edFaw-wnA",
+      "video_first": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Wheel-legged robots playing football reveals what balance controllers can't fake.",
+      "commentary": "The video shows compact wheel-legged robots navigating a grass field while balancing a ball, combining dynamic locomotion with object control under real terrain disturbance. What makes this interesting is that grass and uneven ground expose failure modes that flat-floor demos hide entirely. The balance task is a classic control benchmark but doing it on legs-plus-wheels means the base itself is never stable, so the controller is solving two coupled problems simultaneously. Honest caveat: a demo video without paper metrics tells us the hardware survives the test but nothing about how often it fails or what the recovery rate looks like. Still, the outdoor setting is a step beyond the usual lab tile.",
+      "slides": [
+        {
+          "title": "Two problems, one robot",
+          "body": "Wheel-legged platforms must stabilize their own base AND track an external object. On flat floors, base motion is predictable. On grass, every wheel contact is a disturbance the controller never fully anticipated."
+        },
+        {
+          "title": "Why grass changes everything",
+          "body": "Turf introduces variable compliance, slope micro-variations, and slip. Controllers tuned indoors often over-correct or oscillate outdoors. This test is a natural perturbation benchmark no lab can fully replicate."
+        },
+        {
+          "title": "The coupled control problem",
+          "body": "Balancing a ball on a moving, legged-wheeled base means the ball state and robot posture are tightly coupled. A lean to correct posture shifts the ball. Most lab demos decouple these. Field conditions don't."
+        },
+        {
+          "title": "What the demo proves (and doesn't)",
+          "body": "Hardware survives outdoor terrain. Ball control persists through minor ground disturbances. What's missing: failure rate, recovery statistics, and how controller performance degrades with terrain roughness."
+        },
+        {
+          "title": "Why wheel-legged matters for field robotics",
+          "body": "Wheels give speed and efficiency on flat surfaces. Legs handle steps and slopes. The hybrid is attractive for inspection and logistics. Ball-balancing stress-tests the whole kinematic chain in one compact task."
+        }
+      ],
+      "video_script": "Watch this. Wheel-legged robots on a real grass field, balancing a ball while the ground works against them the whole time. This isn't a polished flat-floor demo. Grass means variable contact, micro-slopes, and slip. The controller is handling robot posture and ball position simultaneously, two coupled problems, outdoors. That's a meaningful stress test. The hardware clearly handles it. What we don't know yet is how often it fails when conditions get worse. That's the question every field robotics team asks. How do your controllers hold up when the ground stops cooperating?",
+      "caption_instagram": "Wheel-legged robots balancing a ball on a football field. Sounds like a party trick. It's actually a serious coupled-control stress test.\n\nMost balance demos happen on flat lab floors for a reason. Grass introduces variable compliance, micro-slopes, and unpredictable slip at every wheel contact. The robot's base is never truly stable, which means the controller is solving posture stabilization and ball tracking at the same time, outdoors.\n\nThe footage is genuinely impressive as a hardware demo. But the honest read is that we're seeing a best-case run. Failure rates, recovery statistics, and performance degradation across terrain roughness are the numbers that matter for real deployment, and they're not in a demo video.\n\nWheel-legged hybrids are one of the more practical form factors for field inspection and logistics. Fast on flat ground, capable on steps and slopes. This kind of outdoor test is exactly the right place to start breaking assumptions.\n\nFull video linked in bio.\n\n#swarmrobotics #fieldrobotics #wheellegged #locomotion #robotcontrol #mobilemanipulation #roboticsresearch",
+      "caption_tiktok": "Wheel-legged robots playing football on real grass. The ground is the whole point. Watch the controller hold it together. #robotics #legedrobots #controlsystems #fieldrobotics",
+      "post_bluesky": "Wheel-legged robots balancing a ball on real grass is a more serious test than it looks. Two coupled problems, outdoor terrain, no lab floor. Full footage: https://www.youtube.com/watch?v=T1edFaw-wnA",
+      "bluesky_thread": [
+        "The interesting part is the coupling. Correcting robot posture shifts the ball. Tracking the ball perturbs posture. Indoors these get decoupled by assumption. Grass takes that assumption away. That's why outdoor demos actually tell you something.",
+        "What the video can't tell you: failure rate, how often the ball drops, how performance scales with terrain roughness. A demo is existence proof, not a reliability number. What would you need to see before trusting this outdoors on a real task?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-18T17:47:53.457044+00:00",
+    "media": {
+      "figures": [
+        "media/bfdd4045/fig_00.png"
+      ],
+      "bsky": [
+        "media/bfdd4045/bsky_00.png",
+        "media/bfdd4045/bsky_01.png",
+        "media/bfdd4045/bsky_02.png",
+        "media/bfdd4045/bsky_03.png"
+      ],
+      "slides": [
+        "media/bfdd4045/slide_00.png",
+        "media/bfdd4045/slide_01.png",
+        "media/bfdd4045/slide_02.png",
+        "media/bfdd4045/slide_03.png",
+        "media/bfdd4045/slide_04.png",
+        "media/bfdd4045/slide_05.png",
+        "media/bfdd4045/slide_06.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "33db0dd1",
+    "paper": {
+      "id": "yt-JlO2GU-Bdfc",
+      "title": "The First Brain Computer Interfaces",
+      "abstract": "What is it actually like to use experimental brain-computer interfaces? These devices allow people to control robotic arms and communicate, but they require lots of recalibration, training, and effort to use. Is it worth it? \n\nhttps://spectrum.ieee.org/bci-user-experience\n\n#bci #futuretech #technews #biotech #neurotech",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=JlO2GU-Bdfc",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=JlO2GU-Bdfc",
+      "video_first": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "BCIs work. Using them daily is a different story.",
+      "commentary": "This IEEE Spectrum piece asks the question bench researchers rarely answer honestly: what is the actual user experience of BCIs once you leave the lab? The answer is recalibration sessions, fatigue, and training loads that eat into the productivity the device is supposed to provide. The gap between 'we achieved cursor control' and 'this person can reliably use a robotic arm at home' is enormous. One honest caveat: the piece is qualitative, so hard numbers on recalibration frequency or error rates are thin. But the framing is exactly what the field needs more of.",
+      "slides": [
+        {
+          "title": "BCIs work. Daily use is hard.",
+          "body": "Devices that let paralyzed patients control robotic arms or type via neural signals exist today. The clinical demos are real. The daily grind of actually using them is rarely discussed."
+        },
+        {
+          "title": "Recalibration is the hidden cost",
+          "body": "Signal drift means neural decoders must be retrained repeatedly. What works on Monday may fail by Thursday. Users spend real time just keeping the system operational, not using it."
+        },
+        {
+          "title": "Training load falls on the user",
+          "body": "Patients must learn to modulate their own neural activity. This is cognitively exhausting. Lab sessions rarely capture the cumulative fatigue of weeks of daily use in a home setting."
+        },
+        {
+          "title": "Lab metrics miss the point",
+          "body": "Accuracy rates measured in controlled 20-minute sessions do not predict usability across a full day. The field optimizes for benchmark performance. Users need reliability across contexts."
+        },
+        {
+          "title": "Is it worth it for users today?",
+          "body": "For some patients, yes, the communication and control gains are life-changing despite the friction. For others the overhead outweighs the benefit. That answer varies per person, and researchers rarely report it."
+        },
+        {
+          "title": "The real research gap",
+          "body": "Longitudinal user experience data from at-home BCI use is scarce. Without it, we cannot engineer toward actual usability. Deployment studies, not just decoding accuracy, are what moves this forward."
+        }
+      ],
+      "video_script": "Brain computer interfaces can let paralyzed patients control a robotic arm or type without moving a muscle. That part is real. What the demos don't show is the recalibration session before the demo, or the training fatigue after. IEEE Spectrum went and asked actual users what daily life with a BCI looks like. The gap between lab benchmark and lived experience is significant. So here's the question: are we building BCIs for users, or for papers?",
+      "caption_instagram": "BCIs work. Using them every day is a completely different problem.\n\nIEEE Spectrum talked to real BCI users and the honest answer is: these devices demand a lot. Recalibration, training sessions, cognitive fatigue. The decoder that worked yesterday may need retuning today because neural signals drift.\n\nThe field is very good at reporting peak accuracy in controlled lab sessions. It is much less good at reporting what happens over weeks of home use, where reliability and user burden actually determine whether someone keeps using the device.\n\nFor some patients the gains in communication and control are absolutely worth the overhead. For others they are not. That answer varies per person and we almost never see it reported.\n\nThe research gap is not decoding performance. It is longitudinal, in-home usability data. Full video linked in bio.\n\n#BCI #braincomputerinterface #neuroprosthetics #rehabilitationrobotics #neurotechnology #roboticarm #translationalresearch",
+      "caption_tiktok": "BCIs can let you control a robot arm with your brain. The part they skip in demos: the daily recalibration, training fatigue, and signal drift. Real user experience is messy. #BCI #neurotech #robotics #braincomputerinterface",
+      "post_bluesky": "BCIs work in the lab. Daily home use is recalibration sessions, training fatigue, and signal drift. IEEE Spectrum asked actual users and the answer is complicated. https://www.youtube.com/watch?v=JlO2GU-Bdfc",
+      "bluesky_thread": [
+        "The field optimizes for decoding accuracy in 20-minute sessions. Users need reliability across a full day, at home, without a technician present. Those are completely different engineering targets and we rarely report on the second one.",
+        "Longitudinal in-home usability data is genuinely scarce in BCI research. Until we collect it systematically, we're flying blind on what actually makes a device useful versus abandoned. Anyone know of groups doing rigorous at-home deployment studies right now?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-18T17:48:19.341201+00:00",
+    "media": {
+      "figures": [
+        "media/33db0dd1/fig_00.png"
+      ],
+      "bsky": [
+        "media/33db0dd1/bsky_00.png",
+        "media/33db0dd1/bsky_01.png",
+        "media/33db0dd1/bsky_02.png",
+        "media/33db0dd1/bsky_03.png"
+      ],
+      "slides": [
+        "media/33db0dd1/slide_00.png",
+        "media/33db0dd1/slide_01.png",
+        "media/33db0dd1/slide_02.png",
+        "media/33db0dd1/slide_03.png",
+        "media/33db0dd1/slide_04.png",
+        "media/33db0dd1/slide_05.png",
+        "media/33db0dd1/slide_06.png",
+        "media/33db0dd1/slide_07.png"
+      ]
+    }
   }
 ]

@@ -1,36 +1,37 @@
 {
-  "ts": "2026-07-17T08:50",
-  "collected": 262,
-  "dedup_dropped": 70,
-  "after_dedup": 192,
+  "ts": "2026-07-18T17:46",
+  "collected": 257,
+  "dedup_dropped": 66,
+  "after_dedup": 191,
   "score_hist": {
-    "0": 16,
-    "1": 29,
-    "2": 31,
-    "3": 36,
-    "4": 38,
-    "5": 25,
-    "6": 14,
-    "7": 3
+    "0": 13,
+    "1": 27,
+    "2": 33,
+    "3": 44,
+    "4": 29,
+    "5": 27,
+    "6": 13,
+    "7": 4,
+    "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 17,
+  "ranked_above_floor": 18,
   "split": {
-    "videos": 0,
-    "papers": 10,
+    "videos": 2,
+    "papers": 9,
     "news": 7
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Real-Time Dynamic Safe Trajectory Planning for Orc",
-      "type": "paper",
-      "video": false
+      "t": "Wheel-Legged Robots Play Football and Balance a Ba",
+      "type": "video",
+      "video": true
     },
     {
-      "t": "CHAI – Compliant Human-centered Adaptive Interacti",
-      "type": "paper",
-      "video": false
+      "t": "The First Brain Computer Interfaces",
+      "type": "video",
+      "video": true
     }
   ]
 }
