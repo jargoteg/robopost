@@ -15668,7 +15668,7 @@
       ]
     },
     "issue": 166,
-    "scheduled_after": "2026-07-18T19:15:14.418409+00:00",
+    "scheduled_after": "2026-07-18T19:15:14.418415+00:00",
     "queue_notified": true
   },
   {
@@ -15826,7 +15826,7 @@
       ]
     },
     "issue": 168,
-    "scheduled_after": "2026-07-18T19:15:14.418409+00:00",
+    "scheduled_after": "2026-07-18T19:15:14.418415+00:00",
     "queue_notified": true
   },
   {
@@ -15879,7 +15879,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-18T17:47:53.457044+00:00",
     "media": {
       "figures": [
@@ -15900,7 +15900,8 @@
         "media/bfdd4045/slide_05.png",
         "media/bfdd4045/slide_06.png"
       ]
-    }
+    },
+    "issue": 169
   },
   {
     "draft_id": "33db0dd1",
@@ -15956,7 +15957,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-18T17:48:19.341201+00:00",
     "media": {
       "figures": [
@@ -15978,6 +15979,7 @@
         "media/33db0dd1/slide_06.png",
         "media/33db0dd1/slide_07.png"
       ]
-    }
+    },
+    "issue": 170
   }
 ]
