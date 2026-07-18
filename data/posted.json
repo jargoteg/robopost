@@ -2032,5 +2032,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "3b77bdd2",
+    "paper_id": "rss-1cd73b7c34",
+    "title": "High-DoF Dexterous Soft Hand With an Enhanced Thumb-Palm Composite Design Enables Robust Grasp and Dexterous Manipulation",
+    "format": "carousel",
+    "hook": "A soft hand that passes the Kapandji thumb test.",
+    "posted_at": "2026-07-18T19:50:38.578012+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqwzyftq432o",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
