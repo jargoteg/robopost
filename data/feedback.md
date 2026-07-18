@@ -1,32 +1,32 @@
-# Engagement lessons (auto-updated 2026-07-17)
+# Engagement lessons (auto-updated 2026-07-18)
 
 # Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Medical robotics (endovascular, 4 likes), novel locomotion mechanics (SAWbot, underwater glider, hexapod), and dexterity/manipulation challenges. Tangible "why can't X do Y" framings outperform abstract systems papers.
-**Under-performed:** Policy/regulatory content (humanoid policy: 0), pure navigation/localization papers (IMU, planetary rover), and anything without strong visuals (14 rejections for missing figures — a pipeline bottleneck).
+**Over-performed:** Medical/surgical robotics (endovascular, 4L 2R), underwater systems (glider, localization), novel locomotion (SAWbot, amoeba bot), and multi-robot planning. Relatable "why can't robots do X yet" framings (haircutting, cable plugging) consistently drew replies.
+
+**Under-performed:** Planetary rovers, policy/regulatory content (humanoid policy: 0 engagement), pure sensor/odometry papers, and anything framed around engineering tooling (MIRA UAV).
+
+**Note:** 17/30 posts scored 0 likes. Data volume is low — treat all findings as directional hypotheses.
 
 ## 2. Hook Styles That Worked
-Curiosity gap led on reply generation (consistent 1-reply posts). Bold claim produced the single highest-like post (endovascular, 4 likes) but also the most zeros.
+Hooks naming a concrete limitation or absurd constraint outperformed abstract capability claims. "Why can't big hexapods..." beat "A drone that hunts mosquitoes."
 
-## 3. Carousel vs. Video
-Carousels dominate the published slate. Both videos scored 0 likes, 1 reply each. **Data too sparse to conclude** — but video is not outperforming carousel yet.
-
-### 3a. Hook-Style Weighting
+## 3a. Hook Style A/B
 | Hook | Avg Likes | Avg Replies |
 |---|---|---|
-| curiosity_gap | 1.4 | 0.9 |
-| bold_claim | 0.8 | 0.7 |
-| number_stat | 0.8 | 0.3 |
-| tension | 0.2 | 0.7 |
+| bold_claim | 0.6 | 0.7 |
+| curiosity_gap | 1.2 | 0.7 |
+| tension | 0.3 | 0.6 |
+| number_stat | 1.0 | 0.3 |
 
-**Recommended weighting: curiosity_gap 45%, bold_claim 30%, number_stat 15%, tension 10%**
+**Recommended weighting:** curiosity_gap 40%, number_stat 30%, bold_claim 20%, tension 10%
 
-### 3b. Thread vs. Single
-Threads average ~1.0 replies vs. singles ~0.5. Likes are comparable. Threads drive conversation.
-**Recommended split: 60% thread, 40% single**
+## 3b. Bluesky Thread vs Single
+Threads average slightly more replies (0.9 vs 0.5); singles slightly more likes (0.7 vs 0.6). Threads generate conversation; singles get passive approval.
+**Recommended split:** 60% thread, 40% single
 
-## 4. Concrete Recommendations
-1. **Gate on visuals first** — reject papers pre-hook-writing if figures are unavailable; it's the top rejection cause.
-2. **Lead with human stakes** — posts framing a human frustration ("why can't robots X") outperform pure spec flexing.
-3. **Retire tension hook as default** — 0.2 avg likes; only deploy it when the contrast is genuinely dramatic (e.g., QuadBoat, amoeba robot).
+## 4. Three Concrete Recommendations
+1. **Lead with human failure, not robot success** — "Why can't robots X yet" outperforms "Robot now does X"
+2. **Deprioritize policy/regulatory content** until audience grows; zero engagement twice
+3. **Test explicit calls-to-action in thread reply 1** — replies exist but reposts are near-zero across all formats
