@@ -2049,5 +2049,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ff8a8632",
+    "paper_id": "rss-59433dc8cf",
+    "title": "CHAI – Compliant Human-centered Adaptive Interaction through Diffusion-based Language Trajectory Transformer",
+    "format": "carousel",
+    "hook": "Stiff robots break things. Compliant ones drift. CHAI escapes that tradeoff.",
+    "posted_at": "2026-07-18T21:27:05.145082+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqx7etnkbe2p",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
