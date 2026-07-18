@@ -2015,5 +2015,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-17T22:42:51.002505+00:00"
+  },
+  {
+    "draft_id": "16e6ab6f",
+    "paper_id": "2304.13705",
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "format": "carousel",
+    "hook": "Precise manipulation doesn't need expensive robots. It needs better learning.",
+    "posted_at": "2026-07-18T17:45:14.418415+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqwsy5khni2a",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
