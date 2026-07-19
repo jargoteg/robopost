@@ -16123,7 +16123,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-19T02:13:30.219546+00:00",
     "media": {
       "figures": [],
@@ -16143,7 +16143,8 @@
         "media/13251ce8/slide_06.png",
         "media/13251ce8/slide_07.png"
       ]
-    }
+    },
+    "issue": 172
   },
   {
     "draft_id": "d71a3bff",
@@ -16198,7 +16199,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-19T02:13:56.665632+00:00",
     "media": {
       "figures": [],
@@ -16218,6 +16219,7 @@
         "media/d71a3bff/slide_06.png",
         "media/d71a3bff/slide_07.png"
       ]
-    }
+    },
+    "issue": 173
   }
 ]
