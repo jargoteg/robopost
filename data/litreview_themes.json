@@ -11,6 +11,57 @@
       "multi-robot wheeled locomotion"
     ],
     "bonus": "multi-robot or swarm variants score extra points",
-    "done": true
+    "done": true,
+    "extra_papers": [
+      {
+        "id": "2411.04264",
+        "title": "MonoRollBot: 3-DOF Spherical Robot with Underactuated Single Compliant Actuator Design",
+        "abstract": "Underactuated spherical rolling robot with a single compliant actuator; inspection and exploration applications.",
+        "year": "2024"
+      },
+      {
+        "id": "2606.22169",
+        "title": "Full Nonlinear Nonholonomic Dynamics and Motion Analysis of a 3-DoF Underactuated Spherical Rolling Robot",
+        "abstract": "Full nonlinear constrained dynamic model of a spherical rolling robot driven by one motor, lead-screw transmission, spring-coupled internal mass.",
+        "year": "2026"
+      },
+      {
+        "id": "2506.04942",
+        "title": "A Pillbug-Inspired Morphing Mechanism Covered with Sliding Shells",
+        "abstract": "Morphing shell structure inspired by pillbugs; loop-coupled slider-crank mechanism for shape change.",
+        "year": "2025"
+      },
+      {
+        "id": "2508.19380",
+        "title": "FlipWalker: Jacob's Ladder toy-inspired robot for locomotion across diverse, complex terrain",
+        "abstract": "Underactuated flipping locomotion for terrain where wheels struggle.",
+        "year": "2025"
+      },
+      {
+        "id": "2604.21541",
+        "title": "X2-N: A Transformable Wheel-legged Humanoid Robot with Dual-mode Locomotion and Manipulation",
+        "abstract": "Transformable wheel-legged humanoid; dual-mode locomotion over continuous and discrete terrain.",
+        "year": "2026"
+      },
+      {
+        "id": "2606.21387",
+        "title": "Long-Distance Real-World Navigation of the Legged-Wheeled Robot Go2-W Using Deep Reinforcement Learning",
+        "abstract": "Field deployment of a legged-wheeled robot navigating long real-world distances.",
+        "year": "2026"
+      },
+      {
+        "id": "2606.30243",
+        "title": "KYON: Semi-Modular Wheel-Legged Quadruped With Agile Bimanual Capability",
+        "abstract": "Hybrid wheel-legged quadruped with bimanual upper body for loco-manipulation.",
+        "year": "2026"
+      },
+      {
+        "id": "2605.20932",
+        "title": "WiXus: A Wheeled-Legged Robot with Wire-Driven Environmental Utilizing to Integrate Mobility and Manipulation",
+        "abstract": "Wheeled-legged robot with wire-driven environmental interaction.",
+        "year": "2026"
+      }
+    ],
+    "seed_note": "Anchor article is IEEE Spectrum coverage of a 32-legged spherical robot; the paper itself may not be on arXiv. Frame the review around the shape-changing/rolling/wheel-legged locomotion spectrum."
   }
 ]

@@ -35,6 +35,10 @@ def arxiv_search(query: str, n: int = 8) -> list[dict]:
 def gather_pool(theme: dict) -> list[dict]:
     import time
     pool, seen = [], set()
+    for p in theme.get("extra_papers", []):
+        if p.get("id") and p["id"] not in seen:
+            seen.add(p["id"])
+            pool.append(p)
     queries = [theme.get("seed", "")] + theme.get("keywords", [])
     for q in [q for q in queries if q]:
         got = arxiv_search(q, 8)
