@@ -2089,5 +2089,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-18T22:42:51.015144+00:00"
+  },
+  {
+    "draft_id": "bfdd4045",
+    "paper_id": "yt-T1edFaw-wnA",
+    "title": "Wheel-Legged Robots Play Football and Balance a Ball | Robotics Test",
+    "format": "carousel",
+    "hook": "Wheel-legged robots playing football reveals what balance controllers can't fake.",
+    "posted_at": "2026-07-19T02:04:46.578266+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqxovfuvqd2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

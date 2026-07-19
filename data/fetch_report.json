@@ -1,37 +1,26 @@
 {
-  "ts": "2026-07-18T17:46",
-  "collected": 257,
-  "dedup_dropped": 66,
-  "after_dedup": 191,
+  "ts": "2026-07-19T02:04",
+  "collected": 192,
+  "dedup_dropped": 61,
+  "after_dedup": 131,
   "score_hist": {
-    "0": 13,
-    "1": 27,
-    "2": 33,
-    "3": 44,
-    "4": 29,
-    "5": 27,
-    "6": 13,
-    "7": 4,
+    "0": 18,
+    "1": 12,
+    "2": 20,
+    "3": 28,
+    "4": 23,
+    "5": 21,
+    "6": 6,
+    "7": 2,
     "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 18,
+  "ranked_above_floor": 9,
   "split": {
-    "videos": 2,
-    "papers": 9,
-    "news": 7
+    "videos": 0,
+    "papers": 0,
+    "news": 9
   },
   "floor": 6,
-  "picked": [
-    {
-      "t": "Wheel-Legged Robots Play Football and Balance a Ba",
-      "type": "video",
-      "video": true
-    },
-    {
-      "t": "The First Brain Computer Interfaces",
-      "type": "video",
-      "video": true
-    }
-  ]
+  "picked": []
 }

@@ -15883,7 +15883,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-18T17:47:53.457044+00:00",
     "media": {
       "figures": [
@@ -15905,7 +15905,9 @@
         "media/bfdd4045/slide_06.png"
       ]
     },
-    "issue": 169
+    "issue": 169,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "33db0dd1",
@@ -15961,7 +15963,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-18T17:48:19.341201+00:00",
     "media": {
       "figures": [
@@ -15984,6 +15986,88 @@
         "media/33db0dd1/slide_07.png"
       ]
     },
-    "issue": 170
+    "issue": 170,
+    "scheduled_after": "2026-07-19T03:34:46.578261+00:00",
+    "queue_notified": true
+  },
+  {
+    "draft_id": "dbccdaa7",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3711853",
+      "title": "Backlash-Like Hysteresis Estimation in Antagonistic Tendon–Sheath Mechanisms Using Proximal-Force Plateau Signatures",
+      "abstract": "Backlash-Like Hysteresis Estimation in Antagonistic Tendon–Sheath Mechanisms Using Proximal-Force Plateau Signatures",
+      "authors": [
+        "Junho Hong",
+        "Daehie Hong"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3711853",
+      "doi": "10.1109/lra.2026.3711853",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Tendons lie. Here's how to catch them.",
+      "commentary": "Tendon-sheath drives are everywhere in surgical and inspection robots because they're compact and backdrivable, but the hysteresis they introduce makes precise distal control a nightmare. Hong and Hong identify a proximal-force plateau signature during direction reversal that encodes the backlash-like hysteresis magnitude without needing distal sensors you can't fit anyway. That's the genuinely clever bit: the information was always there at the motor end, people just weren't reading it right. The caveat is that this is bench-validated on antagonistic configurations, and real sheaths routed through flexible endoscopes or inspection crawlers will have geometry-dependent friction that may shift the plateau shape in ways the model hasn't seen.",
+      "slides": [
+        {
+          "title": "Tendons don't transmit cleanly",
+          "body": "Sheath friction causes backlash-like hysteresis: pull a tendon one way, reverse it, and the distal tip lags. In surgical or inspection tools you can't put a sensor at the tip to measure how much."
+        },
+        {
+          "title": "The plateau is the signal",
+          "body": "At direction reversal, proximal force flatlines briefly before the distal load feels anything. The width and shape of that plateau correlates with hysteresis magnitude. No distal sensor needed."
+        },
+        {
+          "title": "Antagonistic pair, one measurement",
+          "body": "With two opposing tendons, the method cross-references both proximal signals to isolate hysteresis from external load changes. Removes a key confound that single-tendon estimates can't escape."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Cable-driven inspection arms, surgical robots, and endoscopic tools all route tendons through curved sheaths. Better hysteresis estimates mean tighter position control without adding sensors where there's no space."
+        },
+        {
+          "title": "Honest limitation",
+          "body": "Bench tests use fixed, known sheath geometries. Real deployments bend and twist dynamically. Plateau shape almost certainly shifts with routing curvature. Field validation is the missing chapter."
+        },
+        {
+          "title": "Read it",
+          "body": "Hong & Hong, IEEE RA-L 2026. Proximal-force plateau signatures for backlash-like hysteresis estimation in antagonistic tendon-sheath mechanisms. doi.org/10.1109/lra.2026.3711853"
+        }
+      ],
+      "video_script": "Tendon-sheath drives are compact and elegant until you reverse direction and the tip doesn't follow. That lag is hysteresis, and measuring it normally means a sensor you physically cannot fit. Hong and Hong found the answer was already sitting at the motor end. When you reverse a tendon, proximal force flatlines for a moment before anything moves distally. That plateau width is your hysteresis estimate. No extra hardware, just smarter reading of what the proximal sensor already gives you. So here's my question: has anyone actually tested this through a dynamically curving sheath in a real inspection crawl?",
+      "caption_instagram": "Tendons lie, and for years we've been trying to catch them with sensors we can't physically fit at the tip.\n\nHong and Hong just found the answer was sitting at the motor end the whole time. When you reverse an antagonistic tendon pair, the proximal force signal flatlines briefly before the distal load feels anything. That plateau encodes the backlash-like hysteresis magnitude. Read it correctly and you get an estimate without any distal sensing.\n\nThe clever part is the antagonistic framing: using both tendons together lets you separate hysteresis from real external load changes, which single-tendon methods can't do cleanly.\n\nBig caveat though: bench validation with fixed sheath geometry is not the same as a cable-driven inspection arm threading through a reactor or an endoscope flexing in three planes. Plateau shape will shift with routing curvature. That field chapter needs writing.\n\nPaper: Backlash-Like Hysteresis Estimation in Antagonistic Tendon-Sheath Mechanisms Using Proximal-Force Plateau Signatures, IEEE RA-L 2026. https://doi.org/10.1109/lra.2026.3711853\n\n#swarmrobotics #inspectionrobotics #tendondriven #surgicalrobotics #cabledriven #roboticsresearch #controlsystems",
+      "caption_tiktok": "Your robot's tendon is lying to you at every direction reversal. Turns out the fix was in the proximal force signal the whole time. #robotics #inspectionrobots #surgicalrobotics #controlengineering",
+      "post_bluesky": "Tendons lie. At every direction reversal, hysteresis hides the true tip position, and you can't fit a sensor there. Hong & Hong show the proximal force plateau already carries the answer. https://doi.org/10.1109/lra.2026.3711853",
+      "bluesky_thread": [
+        "The core idea: reverse an antagonistic tendon pair and proximal force flatlines before the distal load moves. That plateau width maps to hysteresis magnitude. No distal sensor, no added hardware. Just reading what's already there more carefully.",
+        "My question for anyone running cable-driven inspection arms or endoscopic tools: does the plateau shape stay consistent when sheath routing geometry changes mid-deployment? Bench results are clean. Real sheaths flex. Has anyone pushed this into a dynamic routing scenario?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "in_review",
+    "created": "2026-07-19T02:00:23.444566+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/dbccdaa7/bsky_00.png",
+        "media/dbccdaa7/bsky_01.png",
+        "media/dbccdaa7/bsky_02.png",
+        "media/dbccdaa7/bsky_03.png"
+      ],
+      "slides": [
+        "media/dbccdaa7/slide_00.png",
+        "media/dbccdaa7/slide_01.png",
+        "media/dbccdaa7/slide_02.png",
+        "media/dbccdaa7/slide_03.png",
+        "media/dbccdaa7/slide_04.png",
+        "media/dbccdaa7/slide_05.png",
+        "media/dbccdaa7/slide_06.png",
+        "media/dbccdaa7/slide_07.png"
+      ]
+    },
+    "issue": 171
   }
 ]
