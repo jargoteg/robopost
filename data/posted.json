@@ -2197,5 +2197,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-19T22:44:22.140317+00:00"
+  },
+  {
+    "draft_id": "dbccdaa7",
+    "paper_id": "doi-10.1109_lra.2026.3711853",
+    "title": "Backlash-Like Hysteresis Estimation in Antagonistic Tendon–Sheath Mechanisms Using Proximal-Force Plateau Signatures",
+    "format": "carousel",
+    "hook": "Tendons lie. Here's how to catch them.",
+    "posted_at": "2026-07-19T23:15:57.320224+00:00",
+    "bsky_variant": "single",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqzvwgvsxt2m",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
