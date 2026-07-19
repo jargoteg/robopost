@@ -1,17 +1,1 @@
-[
-  {
-    "id": "2605.13006",
-    "title": "Occlusion-Based Object Transportation Around Obstacles With a Swarm of Miniature Robots",
-    "abstract": "Extends the classic Chen et al. occlusion-based transport strategy: simple 8 cm robots push a 5 kg object toward a goal they cannot always see. The new trick is that any robot losing sight of the goal can convert itself into a stationary sub-goal (turning goal-colored), spontaneously forming a chain of beacons around obstacles. Fully decentralized, communication-free, vision-only. With 15+ robots: 100 percent completion around a corner; 94 percent with two corners; concave H-shaped objects remain hard (46 percent). Simulation study (Atta), open-source code.",
-    "authors": [
-      "Breno Cunha Queiroz",
-      "Daniel MacRae"
-    ],
-    "url": "https://arxiv.org/abs/2605.13006",
-    "source": "manual",
-    "item_type": "paper",
-    "journal": false,
-    "repo_url": "https://github.com/brenocq/object-transportation",
-    "user_notes": "Verified by full-text read. HONEST FRAMING REQUIRED: this is simulation-only, say so plainly. The story is the mechanism: robots that lose sight of the goal BECOME the goal, chaining sub-goal beacons around obstacles with zero communication. Concrete numbers to use: 8 cm robots, 5 kg object, 100 percent completion around a corner with 15+ robots, concave H-shape drops to 46 percent. Thread question that will drive replies: the authors' own teleoperated benchmark still beats it on efficiency, and sim-to-hardware for vision-only occlusion sensing is the open gap. Link the repo (has the simulator + figures)."
-  }
-]
+[]

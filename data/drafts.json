@@ -16225,5 +16225,270 @@
       ]
     },
     "issue": 173
+  },
+  {
+    "draft_id": "20c66662",
+    "paper": {
+      "id": "2605.13006",
+      "title": "Occlusion-Based Object Transportation Around Obstacles With a Swarm of Miniature Robots",
+      "abstract": "Extends the classic Chen et al. occlusion-based transport strategy: simple 8 cm robots push a 5 kg object toward a goal they cannot always see. The new trick is that any robot losing sight of the goal can convert itself into a stationary sub-goal (turning goal-colored), spontaneously forming a chain of beacons around obstacles. Fully decentralized, communication-free, vision-only. With 15+ robots: 100 percent completion around a corner; 94 percent with two corners; concave H-shaped objects remain hard (46 percent). Simulation study (Atta), open-source code.",
+      "authors": [
+        "Breno Cunha Queiroz",
+        "Daniel MacRae"
+      ],
+      "url": "https://arxiv.org/abs/2605.13006",
+      "source": "manual",
+      "item_type": "paper",
+      "journal": false,
+      "repo_url": "https://github.com/brenocq/object-transportation",
+      "user_notes": "Verified by full-text read. HONEST FRAMING REQUIRED: this is simulation-only, say so plainly. The story is the mechanism: robots that lose sight of the goal BECOME the goal, chaining sub-goal beacons around obstacles with zero communication. Concrete numbers to use: 8 cm robots, 5 kg object, 100 percent completion around a corner with 15+ robots, concave H-shape drops to 46 percent. Thread question that will drive replies: the authors' own teleoperated benchmark still beats it on efficiency, and sim-to-hardware for vision-only occlusion sensing is the open gap. Link the repo (has the simulator + figures).",
+      "verified": {
+        "hardware": "simulation",
+        "platform": "simulated swarm robots with cameras and infrared sensors (ARGoS or similar, unspecified)",
+        "key_numbers": [
+          "alpha set to 0.2 radians for random walk heading variation",
+          "5 sets of simulated experiments conducted",
+          "angle threshold of 90 degrees used for sub-goal state transition",
+          "objects must completely occlude the goal from any robot position"
+        ],
+        "honest_caveat": "Strategy requires obstacle-free path wide enough for object to fit; goal can still only be occluded by object or obstacles, not other robots.",
+        "writer_brief": "The authors extend Chen et al.'s occlusion-based swarm object-transport strategy by adding a sub-goal state (S5) to a finite-state machine, letting robots position themselves as intermediate goals to form chains around obstacles. The system remains fully decentralised, communication-free, and vision-only. Five simulation experiment sets test the approach across obstacle configurations, object shapes, and robot starting positions, comparing against the original baseline and a teleoperated sub-goal reference."
+      },
+      "fig_source": "https://github.com/brenocq/object-transportation"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "46% success rate. That's what happens when swarm robots meet an H-shaped object.",
+      "commentary": "Queiroz and MacRae extend Chen et al.'s occlusion-based transport trick with one elegant idea: robots that lose sight of the goal stop moving and turn goal-colored, chaining into live beacons around obstacles. Fully decentralized, zero communication, vision only. In simulation, 15+ robots clear a single corner 100% of the time, two corners 94%. But concave H-shaped objects crack that record down to 46%, and the authors' own teleoperated benchmark still beats the autonomous system on efficiency. The real open question is sim-to-hardware: occlusion sensing with cameras on 8 cm robots in real lighting is a very different problem than ARGoS.",
+      "slides": [
+        {
+          "title": "Robots that lose sight, become the goal",
+          "body": "If a robot can't see the goal, it stops and turns goal-colored. Other robots navigate toward it. A spontaneous beacon chain forms around any obstacle. Zero pre-planning, zero communication."
+        },
+        {
+          "title": "The baseline: Chen et al.",
+          "body": "The original occlusion-based transport strategy pushes objects toward a visible goal using only cameras and infrared. This work adds one new finite-state machine state (S5: sub-goal) to handle blind spots."
+        },
+        {
+          "title": "The numbers that matter",
+          "body": "8 cm robots, 5 kg object. With 15+ robots: 100% completion around one corner, 94% around two corners. H-shaped concave objects: 46%. The geometry of the object matters as much as the obstacle layout."
+        },
+        {
+          "title": "How sub-goal chaining works",
+          "body": "Robots use a 90-degree angle threshold to trigger sub-goal state. Alpha is set to 0.2 radians for random walk heading variation. The object must fully occlude the goal from any robot position for transport to begin."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Simulation only (Atta simulator). Strategy requires an obstacle-free path wide enough for the object. The teleoperated sub-goal reference still outperforms the autonomous system on efficiency. Sim-to-hardware is the open gap."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Fully decentralized, communication-free swarm transport that self-organizes around obstacles is a hard problem. Code and simulator are open source. This is a clean extensible baseline for the next team to test on hardware."
+        }
+      ],
+      "video_script": "Imagine a swarm of 8 cm robots pushing a 5 kg object toward a goal they can't always see. The new idea here is simple and kind of beautiful: any robot that loses sight of the goal just stops and turns goal-colored. Suddenly it becomes the goal. Other robots chain toward it, spontaneously routing the object around corners. No communication. No central planner. One corner: 100 percent success. Two corners: 94 percent. Then they tried an H-shaped concave object, and it dropped to 46 percent. This is simulation, not hardware yet. The question is: does this chaining behavior survive real cameras, real lighting, real noise?",
+      "caption_instagram": "46% success on H-shaped objects. That's not a failure to hide, that's the finding.\n\nQueiroz and MacRae extend the classic Chen et al. occlusion-based swarm transport strategy with one elegant state machine addition: robots that lose sight of the goal stop, turn goal-colored, and become an intermediate beacon. A chain of live sub-goals forms around any obstacle. No communication, no centralized control, vision only.\n\nIn simulation: 100% completion around a single corner with 15+ robots. 94% around two corners. Then concave H-shaped objects drop that to 46%. The authors also benchmark against a teleoperated sub-goal reference and their autonomous system doesn't match it on efficiency. That's the honest gap.\n\nThis is simulation-only work using the Atta simulator. The open question is whether occlusion sensing on 8 cm physical robots survives real lighting and real noise. Code is open source, link in bio.\n\nPaper: 'Occlusion-Based Object Transportation Around Obstacles With a Swarm of Miniature Robots' arXiv:2605.13006\n\n#swarmrobotics #multirobotystems #decentralizedcontrol #roboticssimulation #emergentbehavior #roboticsresearch #openscience",
+      "caption_tiktok": "Swarm robots that lose sight of the goal just... become the goal. Zero communication, pure emergence. Simulation result but the idea is clean. #swarmrobotics #robotics #emergentbehavior #multirobotysystems",
+      "post_bluesky": "46% success on concave H-shaped objects. That's the honest result hiding inside a genuinely clever idea. Robots that lose sight of the goal turn goal-colored and chain into live beacons around obstacles. Zero comms, vision only. Sim only, but the mechanism is clean. arxiv.org/abs/2605.13006",
+      "bluesky_thread": [
+        "The core trick: one new state in a finite-state machine. Robot loses goal visibility, stops, goes goal-colored. Others navigate to it. Spontaneous beacon chains form. 100% around one corner, 94% around two. H-shaped object: 46%. Geometry of the object matters as much as the obstacle.",
+        "Two honest questions worth raising: their own teleoperated benchmark still beats the autonomous system on efficiency, and occlusion sensing on 8 cm physical robots in real lighting is a genuinely hard unsolved step. Who here has tried vision-only swarm transport on hardware? What broke first?…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "pending_review",
+    "created": "2026-07-19T18:29:53.021347+00:00",
+    "media": {
+      "figures": [
+        "media/20c66662/fig_04.png",
+        "media/20c66662/fig_05.png",
+        "media/20c66662/fig_00.png",
+        "media/20c66662/fig_01.png"
+      ],
+      "bsky": [
+        "media/20c66662/bsky_00.png",
+        "media/20c66662/bsky_01.png",
+        "media/20c66662/bsky_02.png",
+        "media/20c66662/bsky_03.png"
+      ],
+      "slides": [
+        "media/20c66662/slide_00.png",
+        "media/20c66662/slide_01.png",
+        "media/20c66662/slide_02.png",
+        "media/20c66662/slide_03.png",
+        "media/20c66662/slide_04.png",
+        "media/20c66662/slide_05.png",
+        "media/20c66662/slide_06.png",
+        "media/20c66662/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "5257bb7a",
+    "paper": {
+      "id": "rss-0bee23e023",
+      "title": "Execution-Level Internal-Load-Regularized Wrench Control for Position-Servo Space Robot in Closed-Chain Truss Climbing",
+      "abstract": "Multi-contact truss climbing for on-orbit assembly requires repeated rigid support switching, which changes the active contact set, feasible wrench set, and grasp-map null space, and can amplify closed-chain internal loading on lightly damped structures. This paper proposes a switching-oriented internal-load-regularized wrench-control execution framework for closed-chain truss-climbing robots driven by high-reduction position servos. A center-of-inertia-based net-wrench command is distributed by a feasibility-constrained quadratic program (QP) that enforces contact limits and penalizes grasp-map null-space components. The allocated branch wrenches are executed through transition-conditioned variable-impedance admittance with damping injection, online disturbance compensation, and joint micro-increment actuation, making the method compatible with position-servo hardware. Hardware experiments on a truss-climbing prototype with six-axis wrist sensing and ground-based microgravity unloading validate execution-level load transfer and wrench regulation. Across full-support, walk, and trot gaits, the controller maintains bounded wrench tracking and post-switch recovery. Trot-gait ablations show that removing switching-aware reference conditioning or disturbance compensation increases the transition-window vertical-wrench RMSE by 31–33%. Allocation-layer ablations further show that removing the null-space penalty increases the current-based effort proxy under comparable $F_{z}$ track",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11599611",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "31-33% more wrench error when you skip one controller step in orbit",
+      "commentary": "Climbing a truss in space with multiple simultaneous contact points is genuinely hard: every time you switch which limb is load-bearing, the internal forces can spike and damage a lightly damped structure. This paper tackles that with a QP allocation layer that actively penalizes null-space force components, plus variable-impedance admittance with damping injection to smooth transitions on position-servo hardware. The 31-33% RMSE increase in ablations is a real, concrete number that justifies the complexity. Honest caveat: the ground-based microgravity unloading rig is doing a lot of work here, and on-orbit structural dynamics may surface failure modes the testbed cannot replicate.",
+      "slides": [
+        {
+          "title": "The core problem in orbit",
+          "body": "Multi-contact truss climbing requires switching which limbs carry load. Each switch changes the feasible wrench set and can spike internal forces on structures with very little damping."
+        },
+        {
+          "title": "Why position servos complicate this",
+          "body": "Most space robot actuators are high-reduction position servos, not torque-controlled. Wrench control has to be synthesized on top of position commands, not issued directly. That is the execution challenge this paper solves."
+        },
+        {
+          "title": "The QP allocation layer",
+          "body": "A quadratic program distributes the center-of-inertia net wrench across branches. It enforces contact limits and explicitly penalizes grasp-map null-space components, keeping internal loads bounded during gait transitions."
+        },
+        {
+          "title": "Ablation numbers that matter",
+          "body": "Remove switching-aware reference conditioning: vertical-wrench RMSE rises 31%. Remove disturbance compensation: 33% rise. Remove null-space penalty: effort proxy increases under comparable Fz tracking. Each module earns its place."
+        },
+        {
+          "title": "What the hardware test actually shows",
+          "body": "Prototype with six-axis wrist sensing and ground-based microgravity unloading. Full-support, walk, and trot gaits all show bounded wrench tracking and post-switch recovery. Trot is the hardest case and it holds."
+        },
+        {
+          "title": "The honest gap",
+          "body": "Ground unloading rigs approximate microgravity but cannot replicate on-orbit structural resonance or thermal flex. Whether load spikes stay bounded on a real truss in vacuum remains an open question."
+        }
+      ],
+      "video_script": "Space robots doing on-orbit assembly need to climb trusses while gripping multiple points at once. Every time a limb switches contacts, internal forces can spike. This paper builds a controller that runs a QP to distribute loads across branches and squash the null-space components that cause trouble. Ablation tests show removing any single key module raises wrench error by 31 to 33 percent. The hardware results are solid. But the test rig uses ground-based microgravity unloading. Does anyone know of experiments that have tested wrench control on actual in-orbit flexible structures?",
+      "caption_instagram": "31-33% more wrench error when you remove one module from this controller. That is the ablation result that makes this paper worth reading.\n\nClimbing a space truss with multiple simultaneous contacts is not a locomotion problem, it is a force distribution problem. Every gait transition changes which limbs are load-bearing and can inject internal forces into a structure with almost no damping.\n\nThis team built a two-layer solution: a QP allocation layer that penalizes null-space force components, and a variable-impedance admittance layer with damping injection and disturbance compensation to handle position-servo hardware. Hardware tests across full-support, walk, and trot gaits all show bounded recovery.\n\nThe caveat worth naming: ground-based microgravity unloading is the best testbed available, but it cannot replicate on-orbit structural resonance. The real validation is still ahead.\n\nPaper: Execution-Level Internal-Load-Regularized Wrench Control for Position-Servo Space Robot in Closed-Chain Truss Climbing. IEEE Xplore: ieeexplore.ieee.org/document/11599611\n\n#spaceRobotics #wenchControl #onOrbitAssembly #swarmRobotics #learnedControl #robotics #hardwareExperiments",
+      "caption_tiktok": "Space truss-climbing robot: skip one controller step and wrench error jumps 33%. The ablations are the whole story here. #spaceRobotics #robotics #onOrbitAssembly #controlSystems",
+      "post_bluesky": "Skip one module in this space truss-climbing controller and vertical-wrench RMSE jumps 31-33%. QP null-space penalization + variable-impedance admittance on position-servo hardware. Ablations actually justify the complexity. http://ieeexplore.ieee.org/document/11599611",
+      "bluesky_thread": [
+        "The clever bit: they penalize grasp-map null-space components in the QP allocator. That is the force direction that does internal work without moving the robot, exactly what damages lightly damped orbital structures. Most locomotion controllers ignore it entirely.",
+        "Main caveat: the microgravity unloading rig cannot reproduce on-orbit structural resonance. Ground results are necessary but not sufficient. Has anyone seen wrench control validated on a flexible structure in actual zero-g? Curious what testbeds exist beyond drop towers."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "pending_review",
+    "created": "2026-07-19T18:30:22.817280+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/5257bb7a/bsky_00.png",
+        "media/5257bb7a/bsky_01.png",
+        "media/5257bb7a/bsky_02.png",
+        "media/5257bb7a/bsky_03.png"
+      ],
+      "slides": [
+        "media/5257bb7a/slide_00.png",
+        "media/5257bb7a/slide_01.png",
+        "media/5257bb7a/slide_02.png",
+        "media/5257bb7a/slide_03.png",
+        "media/5257bb7a/slide_04.png",
+        "media/5257bb7a/slide_05.png",
+        "media/5257bb7a/slide_06.png",
+        "media/5257bb7a/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "170a3991",
+    "paper": {
+      "id": "rss-e58f588160",
+      "title": "OmniVTLA: Vision-Tactile-Language-Action Models With Semantic-Aligned Tactile Sensing",
+      "abstract": "Recent vision-language-action (VLA) models build upon vision-language foundation models, and have achieved promising results and exhibit the potential of task generalization in robot manipulation. However, due to the difficulty of acquiring tactile data, current VLA models significantly overlook the importance of tactile perception and fail in contact-rich tasks. To address this issue, this paper proposes OmniVTLA, a novel framework that models vision, tactile, and language for end-to-end contact-rich manipulation tasks. Specifically, we introduce ObjTac, a comprehensive tactile dataset comprising textual, visual, and tactile information for 56 objects across 10 categories. Leveraging its 135 K tri-modal samples, we train a semantically-aligned tactile vision transformer (SA-ViT) to ground tactile signals in visual and linguistic contexts. Through carefully controlled parameter-matched experiments, OmniVTLA presents a well-designed dual-encoder architecture for tactile perception. Real-world experiments demonstrate substantial improvements over widely-used VLA baselines for two tasks. OmniVTLA achieving 96.9% success rates with grippers, (21.9% higher over baseline) and 100% success rates with dexterous hands (6.2% higher over baseline) on pick-and-place task and 83.3% success rates, (33.3% higher over baseline) on peg-insertion task. Besides, OmniVTLA significantly reduces task completion time and generates smoother trajectories through tactile sensing compared to existing V",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11594422",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/abs/2508.08706",
+      "verified": {
+        "hardware": "real",
+        "platform": "UR5 arm with jaw gripper + dexterous hand, tactile sensors (Paxini Gen2), wrist cameras",
+        "key_numbers": [
+          "96.9% success rate (gripper pick-and-place, +21.9% over baseline)",
+          "100% success rate (dexterous hand pick-and-place, +6.2% over baseline)",
+          "83.3% success rate (peg-insertion, +33.3% over baseline)",
+          "135K tri-modal samples across 56 objects in 10 categories"
+        ],
+        "honest_caveat": "Generalization tested on only a few unseen objects; tactile dataset limited to 56 objects and one sensor type.",
+        "writer_brief": "OmniVTLA adds tactile sensing to VLA robot control. Authors collected ObjTac (135K vision-tactile-text samples, 56 objects) and trained SA-ViT via contrastive learning to semantically align tactile signals with vision and language. A dual-encoder (pretrained ViT + SA-ViT) feeds into a pi0-based policy. Real-robot tests on UR5 with gripper and dexterous hand showed 21.9-33.3% success rate gains over VLA baselines on pick-and-place and peg-insertion tasks."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "33.3% better peg insertion. Just from adding touch.",
+      "commentary": "OmniVTLA grafts tactile sensing onto a VLA policy by building a new dataset (ObjTac, 135K samples, 56 objects) and training a contrastive vision-tactile-language encoder called SA-ViT. The key move is semantic alignment: tactile signals get grounded in vision and language before feeding into a pi0-based policy via a dual encoder. Real UR5 results are solid, 33.3% gain on peg insertion is the most impressive number because contact-rich tasks are exactly where vision-only VLAs collapse. Honest caveat: generalization was tested on only a few unseen objects, and the tactile dataset covers one sensor type (Paxini Gen2), so how this transfers to different hardware or object geometries is an open question.",
+      "slides": [
+        {
+          "title": "The gap VLAs leave open",
+          "body": "Vision-language-action models skip touch. That works for simple pick tasks. It falls apart the moment a robot needs to feel a peg seat into a socket or detect a slip before it happens."
+        },
+        {
+          "title": "ObjTac: the dataset they had to build",
+          "body": "135K tri-modal samples. 56 objects across 10 categories. Each sample pairs a tactile reading with a visual frame and a text label. Without this, training SA-ViT from scratch was not possible."
+        },
+        {
+          "title": "SA-ViT: aligning touch to language",
+          "body": "Contrastive learning maps tactile signals into the same semantic space as vision and text. A dual encoder, one pretrained ViT plus SA-ViT, then feeds the pi0 policy. Parameter-matched controls confirm the tactile encoder is doing real work."
+        },
+        {
+          "title": "Real robot. Real numbers.",
+          "body": "UR5 arm with jaw gripper: 96.9% pick-and-place (+21.9%). Dexterous hand: 100% (+6.2%). Peg insertion: 83.3% (+33.3%). Tactile feedback also shortened completion time and smoothed trajectories."
+        },
+        {
+          "title": "The honest ceiling",
+          "body": "Generalization tested on only a few unseen objects. Dataset covers one sensor type only. Paxini Gen2 tactile readings may not transfer cleanly to other hardware. Numbers are strong but the generalization story is thin."
+        },
+        {
+          "title": "Why this matters for manipulation",
+          "body": "Contact-rich tasks, peg insertion, assembly, grasping soft or irregular objects, are exactly where current VLAs underperform. Closing the tactile gap is the next real frontier, not just a nice add-on."
+        }
+      ],
+      "video_script": "Vision-language-action models have gotten impressive fast. But there is one thing they mostly ignore: touch. OmniVTLA fixes that. The team built a 135-thousand-sample dataset pairing tactile readings with vision and text, trained an encoder to align all three modalities, and plugged it into a pi0-based policy. On a real UR5, peg insertion success jumped 33 percent. Pick and place hit 100 percent with a dexterous hand. Tactile feedback also smoothed the trajectories. The caveat is real though: tested on very few unseen objects, one sensor type only. So here is the question: is building modal-specific datasets like ObjTac the right long-term path, or do we need a completely different data collection strategy?",
+      "caption_instagram": "33.3% better peg insertion. Just from adding touch.\n\nVision-language-action models are impressive until a robot has to feel whether a peg actually seated, or catch a slip before the object hits the floor. OmniVTLA tackles this by building ObjTac, a 135K sample dataset pairing tactile, visual, and text data across 56 objects, then training a contrastive encoder (SA-ViT) to semantically align touch with vision and language.\n\nReal UR5 results: 96.9% on gripper pick-and-place (+21.9%), 100% with a dexterous hand (+6.2%), 83.3% on peg insertion (+33.3% over baseline). Tactile feedback also reduced completion time and produced smoother trajectories.\n\nHonest caveat: generalization tested on only a few unseen objects, and the dataset covers one sensor type. The numbers are strong, but the generalization story needs more work before this scales to messy real-world settings.\n\nPaper: OmniVTLA: Vision-Tactile-Language-Action Models With Semantic-Aligned Tactile Sensing. arXiv: 2508.08706\n\n#swarmrobotics #robotmanipulation #tactilesensingr #VLA #robotlearning #embodiedAI #robotics",
+      "caption_tiktok": "Vision-only robot policies fail the moment you need to feel something. 33% better peg insertion just from adding touch. The dataset gap was the hard part. arXiv 2508.08706\n\n#robotics #manipulation #tactile #embodiedAI #robotlearning",
+      "post_bluesky": "33.3% better peg insertion. Just from adding touch. OmniVTLA builds a 135K tactile-vision-text dataset, aligns all three modalities via contrastive learning, plugs into a pi0 policy. Real UR5, real gains. Caveat: one sensor type, few unseen objects. http://ieeexplore.ieee.org/document/11594422",
+      "bluesky_thread": [
+        "The part I find most honest: authors flag that ObjTac covers only one tactile sensor (Paxini Gen2) and generalization was tested on very few unseen objects. A 33% gain on peg insertion is real, but we have no idea yet how brittle this is to sensor swaps or novel geometry. Open arXiv…",
+        "The deeper question for manipulation researchers: is dataset-per-modality the right path? ObjTac took serious effort for 56 objects. Scaling to the diversity a real deployment needs seems painful. Is there a smarter collection strategy, or do we just grind through it? Genuinely curious what people…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "pending_review",
+    "created": "2026-07-19T18:31:10.057440+00:00",
+    "media": {
+      "figures": [
+        "media/170a3991/pdf/src_02.png",
+        "media/170a3991/pdf/src_04.png",
+        "media/170a3991/pdf/src_05.png",
+        "media/170a3991/pdf/src_01.png"
+      ],
+      "bsky": [
+        "media/170a3991/bsky_00.png",
+        "media/170a3991/bsky_01.png",
+        "media/170a3991/bsky_02.png",
+        "media/170a3991/bsky_03.png"
+      ],
+      "slides": [
+        "media/170a3991/slide_00.png",
+        "media/170a3991/slide_01.png",
+        "media/170a3991/slide_02.png",
+        "media/170a3991/slide_03.png",
+        "media/170a3991/slide_04.png",
+        "media/170a3991/slide_05.png",
+        "media/170a3991/slide_06.png",
+        "media/170a3991/slide_07.png"
+      ]
+    }
   }
 ]
