@@ -381,6 +381,28 @@ def get_figures(draft) -> list[str]:
         elif not figs and p.get("open_version", "").endswith(".pdf"):
             figs = figures_from_pdf_url(p["open_version"], out_dir)
 
+        # Smart resolver: Claude + web search, once, when heuristics came
+        # up short on figures or media links
+        if (not figs or not p.get("video_url")) and p.get("item_type") in ("paper", "litreview", None):
+            sr = smart_resolve(p.get("title", ""), p.get("authors"))
+            if sr.get("video_url") and not p.get("video_url"):
+                p["video_url"] = sr["video_url"]
+                print(f"smart_resolve: video {sr['video_url'][:50]}")
+            if sr.get("repo") and not p.get("repo_url"):
+                p["repo_url"] = f"https://github.com/{sr['repo']}"
+                mined = mine_github_repo(sr["repo"], out_dir)
+                if not figs and mined["figures"]:
+                    figs = mined["figures"]
+                    p["fig_source"] = mined["repo_url"]
+            if not figs and sr.get("arxiv_id") and verify_arxiv_id(sr["arxiv_id"], p.get("title", "")):
+                figs = arxiv_figures({"id": sr["arxiv_id"]}, out_dir)
+                if figs:
+                    p["open_version"] = f"https://arxiv.org/abs/{sr['arxiv_id']}"
+            if not figs and sr.get("pdf_url"):
+                figs = figures_from_pdf_url(sr["pdf_url"], out_dir)
+                if figs:
+                    p["open_version"] = sr["pdf_url"]
+
         # Last resort: a matching YouTube video's thumbnail
         if not figs:
             from fetch_papers import enrich_youtube
@@ -439,6 +461,25 @@ def verify_arxiv_id(aid: str, title: str) -> bool:
     except Exception as e:
         print(f"arXiv id verify inconclusive ({e}); allowing.")
         return True
+
+
+def smart_resolve(title: str, authors=None) -> dict:
+    """Claude + web search finds what heuristics missed: the paper's open
+    PDF, official repo, project page, and demo video. Last-resort tier."""
+    try:
+        from utils import claude_web_json
+        a = ", ".join((authors or [])[:3])
+        return claude_web_json(f"""Find official resources for the robotics
+paper "{title}"{f' by {a}' if a else ''}.
+Search for: an open-access PDF (arXiv, author page, institutional repo),
+the official code repository (GitHub), the project page, and an official
+demo video (YouTube). Only include links you actually verified exist and
+belong to THIS exact paper. Return JSON with any of these keys (omit
+unknown): {{"arxiv_id": "NNNN.NNNNN", "pdf_url": "...",
+"repo": "owner/name", "project_page": "...", "video_url": "..."}}""") or {}
+    except Exception as e:
+        print(f"smart_resolve failed (non-fatal): {e}")
+        return {}
 
 
 def find_open_version(title, authors=None):

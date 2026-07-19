@@ -138,3 +138,22 @@ def norm_title(t: str) -> str:
     """Normalize a title for cross-source dedup: same paper/article often
     arrives with different ids (arXiv vs RSS vs manual web adds)."""
     return "".join(c for c in (t or "").lower() if c.isalnum())[:80]
+
+
+def claude_web_json(prompt: str, max_tokens: int = 1500):
+    """Claude call WITH server-side web search enabled; returns parsed JSON.
+    Used for smart resolution tasks where scraping heuristics fail."""
+    import anthropic
+    client = anthropic.Anthropic()
+    cfg = load_config()
+    msg = client.messages.create(
+        model=cfg["pipeline"]["model"], max_tokens=max_tokens,
+        tools=[{"type": "web_search_20250305", "name": "web_search",
+                "max_uses": 4}],
+        messages=[{"role": "user", "content": prompt +
+                   "\n\nRespond ONLY with valid JSON. No prose, no fences."}])
+    text = "".join(b.text for b in msg.content if b.type == "text")
+    import re as _re
+    import json as _json
+    m = _re.search(r"[\[{].*[\]}]", text, flags=_re.S)
+    return _json.loads(m.group(0) if m else text)
