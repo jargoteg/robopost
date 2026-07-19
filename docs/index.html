@@ -42,9 +42,9 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-19 22:44 UTC <span class="chip ok">+1 today</span></p></header>
+<p>@jahirargote · generated 2026-07-19 23:32 UTC <span class="chip ok">+1 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">5</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">2</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">85</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">5</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">1</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">86</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
   <header><span class="chip in_review">in review</span>
@@ -83,27 +83,22 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
   <div class="reply">The core trick: one new state in a finite-state machine. Robot loses goal visibility, stops, goes goal-colored. Others navigate to it. Spontaneous beacon chains form. 100% around one corner, 94% around two. H-shaped object: 46%. Geometry of the object matters as much as the obstacle.</div><div class="reply">Two honest questions worth raising: their own teleoperated benchmark still beats the autonomous system on efficiency, and occlusion sensing on 8 cm physical robots in real lighting is a genuinely hard unsolved step. Who here has tried vision-only swarm transport on hardware? What broke first?…</div>
 </article><article class="post">
   <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 22:30 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/173" target="_blank">issue #173</a></header>
+  <span class="chip">carousel</span><span class="chip warn">posts after 00:45 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/173" target="_blank">issue #173</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Why does a breast ultrasound robot lose the tumor when you lie on your side? Posture shift deforms tissue enough to break the scan path. This paper fits patient-specific elastic models from RGB-D cameras alone and cuts localization error by 62%…
 http://ieeexplore.ieee.org/document/11599450</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The clever part: no MRI or CT needed to seed the mechanical model. Multi-view RGB-D builds the 3D baseline, Bayesian Optimization fits elastic params against real point clouds, then FEM predicts gravity-driven deformation. Spring registration corrects the residuals live.</div><div class="reply">The real question is patient-to-patient stiffness variation. Phantoms are convenient but suspiciously uniform. How long does the Bayesian Opt fitting actually take in a clinical workflow? If it adds 10 minutes per patient, adoption gets much harder. Anyone seen this tested on ex vivo tissue?</div>
-</article><article class="post">
-  <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 22:30 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/171" target="_blank">issue #171</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">Tendons lie. At every direction reversal, hysteresis hides the true tip position, and you can&#x27;t fit a sensor there. Hong &amp; Hong show the proximal force plateau already carries the answer. https://doi.org/10.1109/lra.2026.3711853</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/dbccdaa7/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/dbccdaa7/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/dbccdaa7/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/dbccdaa7/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The core idea: reverse an antagonistic tendon pair and proximal force flatlines before the distal load moves. That plateau width maps to hysteresis magnitude. No distal sensor, no added hardware. Just reading what&#x27;s already there more carefully.</div><div class="reply">My question for anyone running cable-driven inspection arms or endoscopic tools: does the plateau shape stay consistent when sheath routing geometry changes mid-deployment? Bench results are clean. Real sheaths flex. Has anyone pushed this into a dynamic routing scenario?</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~375m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~435m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~1395m)</td><td>⏳ in_progress <span class='mono'>2026-07-19 22:43</span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>23:00 UTC (~15m)</td><td>✅ success <span class='mono'>2026-07-19 22:06</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>23:00 UTC (~15m)</td><td>✅ success <span class='mono'>2026-07-19 22:03</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~75m)</td><td>✅ success <span class='mono'>2026-07-19 19:06</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~327m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~387m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~1347m)</td><td>✅ success <span class='mono'>2026-07-19 22:44</span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>23:40 UTC (~7m)</td><td>✅ success <span class='mono'>2026-07-19 23:16</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>00:00 UTC (~27m)</td><td>⏳ in_progress <span class='mono'>2026-07-19 23:31</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~27m)</td><td>✅ success <span class='mono'>2026-07-19 19:06</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-19 21:00</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-19 23:15</td>
+<td>Backlash-Like Hysteresis Estimation in Antagonistic </td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-19 21:00</td>
 <td>Real-Time Dynamic Safe Trajectory Planning for Orcha</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-19 18:26</td>
 <td>Real-Time Multi-Drone Replanning for Disruption Mana</td><td class="mono">single</td>
@@ -131,17 +126,15 @@ http://ieeexplore.ieee.org/document/11599450</p>
 <td>Design, Modeling and Experimental Validation of a Mi</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-16 19:38</td>
 <td>Safety in Robotic Haircutting</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-16 16:59</td>
-<td>Design and Analysis of SAWbot: A Robot Generating Co</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>Erratum for the Research Article “Observing a robot peer</b> · no reason given</li><li><b>Secret Four-Legged Military Robot Spotted? 🤖🚀 Real or AI</b> · ban military</li><li><b>Tornyol — Mosquito killing micro-drone</b> · no reason given</li><li><b>Research on Task Sequence Planning and Trajectory Optimi</b> · no reason given</li><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14", "07-15", "07-16", "07-17", "07-18", "07-19"],datasets:[{data:[909, 912, 912, 912, 912, 912, 912, 914, 915, 915, 916],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-16", "07-16", "07-16", "07-16", "07-17", "07-17", "07-17", "07-17", "07-18", "07-18", "07-18", "07-19", "07-19", "07-19", "07-19"],datasets:[
- {label:"likes",data:[2, 2, 2, 1, 0, 2, 1, 1, 0, 0, 1, 3, 0, 0, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-16", "07-16", "07-16", "07-17", "07-17", "07-17", "07-17", "07-18", "07-18", "07-18", "07-19", "07-19", "07-19", "07-19", "07-19"],datasets:[
+ {label:"likes",data:[2, 2, 1, 0, 2, 1, 1, 0, 0, 1, 3, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
