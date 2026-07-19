@@ -1,32 +1,27 @@
-# Engagement lessons (auto-updated 2026-07-18)
+# Engagement lessons (auto-updated 2026-07-19)
 
-# Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Medical/surgical robotics (endovascular, 4L 2R), underwater systems (glider, localization), novel locomotion (SAWbot, amoeba bot), and multi-robot planning. Relatable "why can't robots do X yet" framings (haircutting, cable plugging) consistently drew replies.
-
-**Under-performed:** Planetary rovers, policy/regulatory content (humanoid policy: 0 engagement), pure sensor/odometry papers, and anything framed around engineering tooling (MIRA UAV).
-
-**Note:** 17/30 posts scored 0 likes. Data volume is low — treat all findings as directional hypotheses.
+**Over-performed:** Novel locomotion mechanics (SAWbot wave propulsion, 32-leg amoeba, wheel-legged football) and relatable engineering failures ("why can't robots cut hair/plug in a cable") drove the highest engagement. Underwater/marine content with strong narrative tension also performed well (AUV localization repost). **Under-performed:** Dense control theory (NMPC quadrotor, orchard MPC), policy/standards content (humanoid regulation, IEEE SA), and most manipulation papers scored near zero.
 
 ## 2. Hook Styles That Worked
-Hooks naming a concrete limitation or absurd constraint outperformed abstract capability claims. "Why can't big hexapods..." beat "A drone that hunts mosquitoes."
+Data is sparse (30 posts, most 0–1 likes), but **bold_claim** and **curiosity_gap** hooks produced the highest individual spikes. `number_stat` was inconsistent — effective when the stat was surprising, flat otherwise.
 
-## 3a. Hook Style A/B
-| Hook | Avg Likes | Avg Replies |
+## 3a. Hook-Style Weighting
+| Hook | Avg. Total Engagements | Recommended Weight |
 |---|---|---|
-| bold_claim | 0.6 | 0.7 |
-| curiosity_gap | 1.2 | 0.7 |
-| tension | 0.3 | 0.6 |
-| number_stat | 1.0 | 0.3 |
+| bold_claim | ~0.8 | 30% |
+| curiosity_gap | ~1.0 | 35% |
+| number_stat | ~0.5 | 20% |
+| tension | ~0.6 | 15% |
 
-**Recommended weighting:** curiosity_gap 40%, number_stat 30%, bold_claim 20%, tension 10%
+**Curiosity_gap edges ahead**; prioritize it but don't drop bold_claim.
 
-## 3b. Bluesky Thread vs Single
-Threads average slightly more replies (0.9 vs 0.5); singles slightly more likes (0.7 vs 0.6). Threads generate conversation; singles get passive approval.
-**Recommended split:** 60% thread, 40% single
+## 3b. Bluesky Thread vs. Single
+Threads average more **replies** (most had 1); singles lead slightly on **likes**. Threads generate conversation; singles get passive approval. Recommend **60% thread / 40% single**.
 
 ## 4. Three Concrete Recommendations
-1. **Lead with human failure, not robot success** — "Why can't robots X yet" outperforms "Robot now does X"
-2. **Deprioritize policy/regulatory content** until audience grows; zero engagement twice
-3. **Test explicit calls-to-action in thread reply 1** — replies exist but reposts are near-zero across all formats
+1. **Lead with relatable failure** — "why can't robots X yet" framing consistently outperforms achievement framing.
+2. **Avoid pure policy/standards papers** — zero engagement across all three attempts.
+3. **Data is too sparse to conclude on video vs. carousel** — deliberately A/B test same topic across both formats next sprint.
