@@ -2140,5 +2140,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "f697c771",
+    "paper_id": "rss-247bdbcc12",
+    "title": "Real-Time Dynamic Safe Trajectory Planning for Orchard Picking Manipulator: MPC-Based Contact Force Suppression",
+    "format": "carousel",
+    "hook": "Your orchard robot snaps a branch. MPC saw it coming.",
+    "posted_at": "2026-07-19T21:00:03.137765+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqzodgkaex2n",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
