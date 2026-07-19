@@ -25,4 +25,4 @@ jobs:
           curl -s -o /dev/null -X POST \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
-            "$URL" -d '{"content":"eyes"}'
+            "$URL" -d '{"content":"eyes"}' || true
