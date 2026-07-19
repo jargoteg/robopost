@@ -115,10 +115,11 @@ def create_issues():
         v = d["paper"].get("verified") or {}
         vline = ""
         if v:
-            icon = {"real": "🤖 real hardware", "sim": "⚠️ SIMULATION ONLY",
-                    "mixed": "🤖 hardware + sim"}.get(v.get("hardware"), "")
+            icon = {"real": "🤖 real hardware", "simulation": "⚠️ SIMULATION ONLY",
+                    "both": "🤖 hardware + sim"}.get(v.get("hardware"), "")
             if icon:
-                vline = f"**Verified from full text:** {icon}. {v.get('summary', '')}\n\n"
+                vline = (f"**Verified from full text:** {icon}"
+                         f"{' — ' + v['platform'] if v.get('platform') else ''}\n\n")
         slides = "\n".join(
             f"![slide {i}]({base}/{rel})" for i, rel in
             enumerate(d.get("media", {}).get("slides", []))
