@@ -2123,5 +2123,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "13251ce8",
+    "paper_id": "rss-56d33d59d7",
+    "title": "Real-Time Multi-Drone Replanning for Disruption Management in Urban Aerial Logistics Networks",
+    "format": "carousel",
+    "hook": "Why does one grounded drone cascade into chaos for the whole fleet?",
+    "posted_at": "2026-07-19T18:26:56.758514+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqzfrnzkyg2h",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

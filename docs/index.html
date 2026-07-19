@@ -42,9 +42,9 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-19 17:52 UTC <span class="chip ok">+0 today</span></p></header>
+<p>@jahirargote · generated 2026-07-19 18:27 UTC <span class="chip ok">+0 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">5</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">83</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">4</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">84</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
   <header><span class="chip in_review">in review</span>
@@ -54,13 +54,6 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 http://ieeexplore.ieee.org/document/11599450</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/d71a3bff/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The clever part: no MRI or CT needed to seed the mechanical model. Multi-view RGB-D builds the 3D baseline, Bayesian Optimization fits elastic params against real point clouds, then FEM predicts gravity-driven deformation. Spring registration corrects the residuals live.</div><div class="reply">The real question is patient-to-patient stiffness variation. Phantoms are convenient but suspiciously uniform. How long does the Bayesian Opt fitting actually take in a clinical workflow? If it adds 10 minutes per patient, adoption gets much harder. Anyone seen this tested on ex vivo tissue?</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/172" target="_blank">issue #172</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">Why does one grounded drone cascade into chaos for the whole fleet? New IEEE paper: conflict-free replanning for 100 drones across 5 disruptions in 0.3s, 43% less total delay, no predefined traffic zones. http://ieeexplore.ieee.org/document/11599588</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/13251ce8/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/13251ce8/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/13251ce8/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/13251ce8/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The two-level design is the clever part: upper level searches priority orderings anytime, lower level uses spatiotemporal occupancy to route around conflicts. Scales across map sizes without needing pre-carved corridors. That flexibility is what prior work usually sacrifices for speed.</div><div class="reply">My one push: the disruption model is clean and discrete. Real urban ops add wind, dynamic no-fly zones, ATC holds. Does the 0.3s solve time hold when the uncertainty is messier? That&#x27;s the paper I want to see next. Anyone working on stochastic disruption models for UAV fleets?</div>
 </article><article class="post">
   <header><span class="chip in_review">in review</span>
   <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/171" target="_blank">issue #171</a></header>
@@ -86,13 +79,15 @@ http://ieeexplore.ieee.org/document/11593107</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/25c47196/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/25c47196/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/25c47196/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/25c47196/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">Most social robotics in education studies: small N, short duration, no replication. This erratum is not an outlier. It is the field showing its seams at exactly the wrong moment for ed-tech sales cycles.</div><div class="reply">Genuine question for anyone in HRI: is there a single classroom robot effect that has survived pre-registered replication at scale? Because I keep looking and the answer seems to be no.</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~667m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~727m)</td><td>✅ success <span class='mono'>2026-07-19 08:21</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~247m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>18:00 UTC (~7m)</td><td>✅ success <span class='mono'>2026-07-19 17:29</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>18:00 UTC (~7m)</td><td>⏳ in_progress <span class='mono'>2026-07-19 17:51</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>18:00 UTC (~7m)</td><td>✅ success <span class='mono'>2026-07-19 13:17</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~632m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~692m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~212m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>18:40 UTC (~12m)</td><td>✅ success <span class='mono'>2026-07-19 17:53</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>18:30 UTC (~2m)</td><td>⏳ in_progress <span class='mono'>2026-07-19 18:26</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>00:00 UTC (~332m)</td><td>✅ success <span class='mono'>2026-07-19 13:17</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-19 04:02</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-19 18:26</td>
+<td>Real-Time Multi-Drone Replanning for Disruption Mana</td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-19 04:02</td>
 <td>The First Brain Computer Interfaces</td><td class="mono">thread</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-19 02:04</td>
 <td>Wheel-Legged Robots Play Football and Balance a Ball</td><td class="mono">single</td>
@@ -120,17 +115,15 @@ http://ieeexplore.ieee.org/document/11593107</p>
 <td>Design and Analysis of SAWbot: A Robot Generating Co</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-16 15:18</td>
 <td>Surface Water Cleaning Robots: A Structured Review o</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-16 12:54</td>
-<td>Underwater Grippers for Dexterous Manipulation: A Re</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>Secret Four-Legged Military Robot Spotted? 🤖🚀 Real or AI</b> · ban military</li><li><b>Tornyol — Mosquito killing micro-drone</b> · no reason given</li><li><b>Research on Task Sequence Planning and Trajectory Optimi</b> · no reason given</li><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Vision-Based Dribbling for Humanoid Soccer via Privilege</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14", "07-15", "07-16", "07-17", "07-18"],datasets:[{data:[909, 912, 912, 912, 912, 912, 912, 914, 915, 915],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-16", "07-16", "07-16", "07-16", "07-16", "07-16", "07-17", "07-17", "07-17", "07-17", "07-18", "07-18", "07-18", "07-19", "07-19"],datasets:[
- {label:"likes",data:[0, 0, 2, 2, 2, 1, 0, 2, 1, 1, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-16", "07-16", "07-16", "07-16", "07-16", "07-17", "07-17", "07-17", "07-17", "07-18", "07-18", "07-18", "07-19", "07-19", "07-19"],datasets:[
+ {label:"likes",data:[0, 2, 2, 2, 1, 0, 2, 1, 1, 0, 0, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
