@@ -15570,7 +15570,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "rejected",
     "created": "2026-07-17T08:47:30.397662+00:00",
     "media": {
       "figures": [],
@@ -15726,7 +15726,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-17T08:51:21.596812+00:00",
     "media": {
       "figures": [],
@@ -15747,7 +15747,9 @@
         "media/f697c771/slide_07.png"
       ]
     },
-    "issue": 167
+    "issue": 167,
+    "scheduled_after": "2026-07-19T19:56:56.758514+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "ff8a8632",
@@ -16049,7 +16051,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-19T02:00:23.444566+00:00",
     "media": {
       "figures": [],
@@ -16070,7 +16072,9 @@
         "media/dbccdaa7/slide_07.png"
       ]
     },
-    "issue": 171
+    "issue": 171,
+    "scheduled_after": "2026-07-19T19:56:56.758514+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "13251ce8",
@@ -16203,7 +16207,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-19T02:13:56.665632+00:00",
     "media": {
       "figures": [],
@@ -16224,7 +16228,9 @@
         "media/d71a3bff/slide_07.png"
       ]
     },
-    "issue": 173
+    "issue": 173,
+    "scheduled_after": "2026-07-19T19:56:56.758514+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "20c66662",
@@ -16493,5 +16499,198 @@
       ]
     },
     "issue": 176
+  },
+  {
+    "draft_id": "819e120e",
+    "paper": {
+      "id": "rss-41d9b3c064",
+      "title": "Prompting Robot Teams With Natural Language",
+      "abstract": "This paper presents a framework to prompt multi-robot teams with high-level tasks using natural language expressions. Our objective is to use the reasoning capabilities of language models in understanding and decomposing multi-robot collaboration and decision-making tasks, but in settings where such models cannot be called at deployment time. However, it is hard to specify the behavior of an individual robot from a team instruction, and have it continuously adapt to actions from other robots. This necessitates a framework with the representational capacity required by the logic and semantics of a task, and yet supports decentralized, real-time operation. We solve this dilemma by recognizing that a task can be represented as a deterministic finite automaton, and that recurrent neural networks (RNNs) can encode numerous automata. This allows us to distill the logic and sequential decompositions of sub-tasks obtained from a language model into an RNN, and align its internal states with the semantics of a given task. This leads to a tiny model that encapsulates the reasoning of the language model and can be implemented onboard. To interpret the internal state of the RNN for a decentralized execution, we train a graph neural network control policy conditioned on the hidden states of the RNN and the language embeddings. We present evaluations on simulated and real-world multi-robot tasks that require sequential and collaborative behavior by the team, demonstrating scalable, robust,",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11601083",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0,
+      "open_version": "https://arxiv.org/abs/2509.24575",
+      "verified": {
+        "hardware": "both",
+        "platform": "RoboMasters robots; simulated multi-robot environments",
+        "key_numbers": [
+          "100% accuracy on training and test RNN rollouts across 7 tasks",
+          "N robots in a team (decentralized, each carries own RNN copy)",
+          "Dataset D collected over L sequences of length K per task",
+          "3 offline phases: dataset generation, supervised RNN training, RL policy training"
+        ],
+        "honest_caveat": "Aggregation operation for atomic propositions from neighbors is manually designed; automatic extraction from language is left as future work.",
+        "writer_brief": "The authors built a framework where an LMM decomposes multi-robot natural-language tasks into automata offline. These automata are distilled into a small RNN via supervised learning, and a GNN policy is trained with multi-agent RL conditioned on the RNN's hidden state. At deployment, each robot runs the RNN and GNN onboard with no LLM connection, enabling decentralized, real-time task execution. Validated on simulation and real RoboMasters robots across sequential and collaborative tasks."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "No LLM at runtime. Each robot carries the reasoning onboard.",
+      "commentary": "The core idea here is genuinely clever: use an LLM offline to decompose a natural-language task into a finite automaton, then distill that automaton into a small RNN via supervised learning. At deployment, each robot runs only the RNN and a GNN policy, no cloud, no LLM call. They hit 100% accuracy on RNN rollouts across 7 tasks, which is the right metric to report for automaton fidelity. The honest caveat: aggregation of neighbor observations into atomic propositions is hand-designed, and the authors flag automatic extraction from language as unfinished future work. That gap matters for anyone hoping to deploy this on truly novel tasks without manual engineering.",
+      "slides": [
+        {
+          "title": "The problem with LLMs at runtime",
+          "body": "Multi-robot systems need real-time, decentralized decisions. Calling an LLM mid-mission adds latency, requires connectivity, and doesn't scale. These authors sidestep that entirely."
+        },
+        {
+          "title": "The pipeline: 3 offline phases",
+          "body": "Phase 1: LMM decomposes the natural-language task into a finite automaton. Phase 2: supervised learning distills the automaton into a small RNN. Phase 3: RL trains a GNN policy conditioned on the RNN's hidden state."
+        },
+        {
+          "title": "100% on 7 tasks",
+          "body": "RNN rollout accuracy hit 100% on both training and test sequences across all 7 evaluated tasks. Each robot carries its own RNN copy. Validated in simulation and on real RoboMasters hardware."
+        },
+        {
+          "title": "Why RNNs map to automata",
+          "body": "A deterministic finite automaton is just a state machine. RNNs can encode many such machines in their hidden states. The supervised training phase aligns RNN hidden states to automaton states explicitly."
+        },
+        {
+          "title": "The gap they admit",
+          "body": "Aggregating neighbor observations into atomic propositions is manually designed per task. Automatic extraction from language descriptions is left as future work. This limits how plug-and-play the framework really is today."
+        },
+        {
+          "title": "What this is good for",
+          "body": "Tasks known ahead of time, offline planning feasible, connectivity unreliable at runtime. Think warehouse coordination or field deployments where cloud calls are a liability, not sequential open-world tasks."
+        }
+      ],
+      "video_script": "What if you could tell a robot team what to do in plain English, but then cut the internet and they'd still execute perfectly? This paper does that. An LLM decomposes the task offline into a state machine. That state machine gets distilled into a tiny RNN. Each robot carries one. No LLM needed at runtime. They tested it on real RoboMasters robots across 7 tasks and hit 100% rollout accuracy. The catch: some parts still need manual engineering. So how far are we from truly zero-setup deployment?",
+      "caption_instagram": "No LLM at runtime. Each robot carries the reasoning onboard.\n\nHere is the problem this paper solves: multi-robot teams need decentralized, real-time decisions. Calling a language model mid-mission requires connectivity, adds latency, and breaks in the field. So these authors moved all the LLM work offline.\n\nThe pipeline has 3 phases. First, an LMM reads your natural-language task and produces a finite automaton encoding the task logic. Second, supervised learning distills that automaton into a small RNN, aligning hidden states to automaton states explicitly. Third, RL trains a GNN control policy conditioned on the RNN's hidden state. At deployment, each robot runs only the RNN and GNN onboard. 100% rollout accuracy across 7 tasks, tested in simulation and on real RoboMasters robots.\n\nThe honest limit: aggregating neighbor observations into atomic propositions is still manually designed per task. The authors admit automatic extraction from language is future work. That gap matters if you want truly zero-setup deployment on novel tasks.\n\nPaper: 'Prompting Robot Teams With Natural Language', arXiv 2509.24575\n\n#swarmrobotics #multiagent #robotics #languagemodels #decentralized #graphneuralnetworks #fieldrobotics",
+      "caption_tiktok": "Robots that follow plain English instructions, no internet required at runtime. The LLM does its job offline, then stays home. 100% task accuracy onboard. #swarmrobotics #multiagent #robotics #llm #decentralized",
+      "post_bluesky": "No LLM at runtime. Each robot carries the reasoning onboard. LMM decomposes the task offline, an RNN encodes the logic, a GNN executes it. 100% accuracy across 7 tasks, real RoboMasters hardware. http://ieeexplore.ieee.org/document/11601083",
+      "bluesky_thread": [
+        "The clever bit: finite automata and RNNs are structurally compatible. Supervised training aligns hidden states to automaton states explicitly. So you get LLM-level task decomposition in a model small enough to run onboard each robot. Open-access version: https://arxiv.org/abs/2509.24575",
+        "The honest caveat: aggregating neighbor observations into atomic propositions is still hand-engineered per task. Authors flag this themselves. Until that's automated from language, you need a human in the loop for each new task type. How big a blocker is that for your use case?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-19T18:36:04.702111+00:00",
+    "media": {
+      "figures": [
+        "media/819e120e/pdf/src_04.png",
+        "media/819e120e/pdf/src_06.png",
+        "media/819e120e/pdf/src_00.png",
+        "media/819e120e/pdf/src_03.png"
+      ],
+      "bsky": [
+        "media/819e120e/bsky_00.png",
+        "media/819e120e/bsky_01.png",
+        "media/819e120e/bsky_02.png",
+        "media/819e120e/bsky_03.png"
+      ],
+      "slides": [
+        "media/819e120e/slide_00.png",
+        "media/819e120e/slide_01.png",
+        "media/819e120e/slide_02.png",
+        "media/819e120e/slide_03.png",
+        "media/819e120e/slide_04.png",
+        "media/819e120e/slide_05.png",
+        "media/819e120e/slide_06.png",
+        "media/819e120e/slide_07.png"
+      ]
+    },
+    "issue": 177
+  },
+  {
+    "draft_id": "6c5263a9",
+    "paper": {
+      "id": "2607.15129v1",
+      "title": "Catch, Throw, Repeat: Planning for Human-Robot Partner Juggling",
+      "abstract": "Dynamic object exchange between humans and robots remains a challenging problem due to uncertainty in perception, timing, and contact-rich interaction. Human-robot juggling represents a particularly demanding instance of this problem, requiring precise real-time coordination, predictive motion planning with feedback control, and robustness to variability in human motion. Enabling such skills is of interest for advancing physical human-robot interaction and shared autonomy. We present a real-time planning and control architecture for human-robot partner juggling that enables a robot to reliably catch and throw balls in synchronized multi-ball patterns with a human partner. The system integrates predictive ball tracking, adaptive online trajectory optimization using a multiple-shooting formulation, and a state-machine-based coordination logic to enable synchronized multi-ball human-robot partner juggling. In a user study with 8 participants of varying juggling skill from beginner to expert, we demonstrate that our system can achieve three-ball cascades shared between the robot and the human. All participants exceeded previously reported best-case results within a 10-minute test session, with one participant extending the previous record for shared three-ball cascade juggling fivefold to 20 consecutive robot catches, and another participant achieving a 100% success rate with 40 consecutive catches in a single-ball catch-and-return setting. Video documentation can be found at https://kai-ploeger.com/partner-juggling",
+      "authors": [
+        "Jonathan Rainer Lippert",
+        "Kai Ploeger",
+        "Abir Chowdhury",
+        "Hermann Müller",
+        "Jan Peters",
+        "Alap Kshirsagar"
+      ],
+      "url": "https://arxiv.org/abs/2607.15129v1",
+      "source": "arxiv",
+      "score": 6.5,
+      "verified": {
+        "hardware": "both",
+        "platform": "Barrett WAM 4-DoF arm + MuJoCo simulation; OptiTrack 8-camera mocap at 125Hz",
+        "key_numbers": [
+          "3-ball cascade success rate: 75.1% (range 63.3–80.3%) across 8 participants",
+          "Max streak 3-ball: 20 consecutive robot catches (5× previous record of 4)",
+          "1-ball success rate: 87.2% (72.5–100%), max streak 40 consecutive catches at 100%",
+          "Extended validation: 70 consecutive single-ball cycles, 28 consecutive 3-ball cycles"
+        ],
+        "honest_caveat": "4-DoF arm lacks end-effector orientation control, causing failures in rear workspace (x<0.3m).",
+        "writer_brief": "A real-time catch-and-throw planning system was built on a 4-DoF Barrett WAM robot using OptiTrack ball tracking, Kalman filtering, online trajectory optimization via multiple shooting, and a state-machine coordination logic. Eight participants of varying skill juggled one, two, and three balls in shared cascades with the robot. All participants surpassed the previous best of 4 robot catches in 3-ball mode; one reached 20 consecutive catches, another achieved 100% success over 40 single-ball cycles."
+      }
+    },
+    "content": {
+      "format": "video",
+      "hook": "A robot just set a 5x world record in juggling with a human",
+      "commentary": "This is a real Barrett WAM arm catching and throwing balls with human partners in real time. The system chains Kalman-filtered ball tracking, online trajectory optimization via multiple shooting, and a state machine to coordinate timing with a live human juggler. The result: 75.1% average success on 3-ball cascades across 8 participants, and one person hit 20 consecutive robot catches, five times the previous record of 4. Honest caveat from the authors themselves: the 4-DoF arm has no end-effector orientation control, so the rear workspace below x=0.3m causes systematic failures. That constraint matters a lot if you want to generalize this to less structured settings.",
+      "slides": [
+        {
+          "title": "Robot juggles with real humans",
+          "body": "Barrett WAM 4-DoF arm. OptiTrack 8-camera mocap at 125Hz. Real balls, real people, real time. Not simulation."
+        },
+        {
+          "title": "Previous record: 4 catches",
+          "body": "Every one of 8 participants beat that record within 10 minutes. One reached 20 consecutive robot catches in a shared 3-ball cascade."
+        },
+        {
+          "title": "The numbers",
+          "body": "3-ball cascade: 75.1% success (range 63.3-80.3%). 1-ball: 87.2% success. One participant: 40 consecutive catches at 100%. 70 single-ball cycles without a drop."
+        },
+        {
+          "title": "How it plans in real time",
+          "body": "Kalman filter tracks ball flight. Multiple-shooting trajectory optimizer runs online. State machine coordinates catch-and-throw timing with the human partner's rhythm."
+        },
+        {
+          "title": "The real limitation",
+          "body": "4-DoF means no wrist orientation control. Throws into the rear workspace (x<0.3m) fail systematically. The authors say it plainly. That's the next wall to climb."
+        },
+        {
+          "title": "Why this matters beyond juggling",
+          "body": "Shared autonomy for dynamic object handoff: assembly lines, surgical assist, rehabilitation. Juggling is the stress test. If timing breaks here, it breaks everywhere."
+        }
+      ],
+      "video_script": "Watch this robot catch a ball mid-arc, then throw it back to a human juggler, then do it again, 20 times in a row. That's a real Barrett WAM arm, real balls, real people. The previous record for a robot in a shared three-ball cascade was 4 consecutive catches. This system hit 20. It uses Kalman filtering, online trajectory optimization, and a state machine to match a human's rhythm in real time. The honest catch: no wrist control, so the back of the workspace is a dead zone. What would you actually use a system like this for?",
+      "caption_instagram": "A robot just juggled with 8 different humans and broke the shared juggling world record by a factor of five.\n\nThe Barrett WAM arm catches and throws real balls in synchronized cascades with live human partners. No simulation. OptiTrack cameras feed ball position at 125Hz, a Kalman filter handles the flight prediction, and an online optimizer plans each catch and throw in real time.\n\n75.1% success rate on 3-ball cascades. One participant hit 20 consecutive robot catches, up from a previous best of 4. Another achieved 40 consecutive single-ball catches at 100%.\n\nThe authors are upfront about the constraint: 4 degrees of freedom means no end-effector orientation control. The rear workspace fails systematically. That honesty is rare and worth noting.\n\nPaper: 'Catch, Throw, Repeat: Planning for Human-Robot Partner Juggling' arXiv:2607.15129\nVideo: https://kai-ploeger.com/partner-juggling\n\n#swarmrobotics #humanrobotinteraction #roboticmanipulation #trajectoroptimization #sharedautonomy #robotresearch #realtimerobotics",
+      "caption_tiktok": "Robot breaks 5-year juggling record by 5x. Real arm, real balls, real human partners. 20 consecutive catches. The caveat is actually interesting though. #robotics #humanrobotinteraction #manipulation #robotresearch",
+      "post_bluesky": "A 4-DoF robot arm just hit 20 consecutive catches in a shared 3-ball juggling cascade with a human. Previous record: 4. All 8 participants beat it within 10 min. Real hardware, real balls. https://arxiv.org/abs/2607.15129v1",
+      "bluesky_thread": [
+        "The system chains Kalman ball tracking + online multiple-shooting trajectory optimization + a state machine for timing. 75.1% on 3-ball cascades, 87.2% on single-ball. One person hit 100% over 40 throws. The numbers are solid.",
+        "The caveat the authors actually admit: no wrist orientation control on a 4-DoF arm, so throws into the rear workspace fail systematically. That's the kind of honest limitation section you rarely see. What's the real application you'd want this for, handoffs in assembly or surgical assist?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-07-19T18:36:41.187958+00:00",
+    "media": {
+      "figures": [
+        "media/6c5263a9/src_01.png",
+        "media/6c5263a9/src_02.png",
+        "media/6c5263a9/src_03.png",
+        "media/6c5263a9/src_00.png"
+      ],
+      "bsky": [
+        "media/6c5263a9/bsky_00.png",
+        "media/6c5263a9/bsky_01.png",
+        "media/6c5263a9/bsky_02.png",
+        "media/6c5263a9/bsky_03.png"
+      ],
+      "slides": [
+        "media/6c5263a9/slide_00.png",
+        "media/6c5263a9/slide_01.png",
+        "media/6c5263a9/slide_02.png",
+        "media/6c5263a9/slide_03.png",
+        "media/6c5263a9/slide_04.png",
+        "media/6c5263a9/slide_05.png",
+        "media/6c5263a9/slide_06.png",
+        "media/6c5263a9/slide_07.png"
+      ],
+      "video": "media/6c5263a9/video.mp4"
+    },
+    "issue": 178
   }
 ]

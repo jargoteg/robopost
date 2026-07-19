@@ -1,35 +1,35 @@
 {
-  "ts": "2026-07-19T18:28",
+  "ts": "2026-07-19T18:34",
   "collected": 256,
-  "dedup_dropped": 71,
-  "after_dedup": 185,
+  "dedup_dropped": 73,
+  "after_dedup": 183,
   "score_hist": {
-    "0": 8,
-    "1": 33,
-    "2": 29,
-    "3": 45,
-    "4": 32,
-    "5": 26,
-    "6": 11,
+    "0": 14,
+    "1": 27,
+    "2": 40,
+    "3": 38,
+    "4": 33,
+    "5": 23,
+    "6": 7,
     "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 12,
+  "ranked_above_floor": 8,
   "split": {
     "videos": 0,
-    "papers": 4,
-    "news": 8
+    "papers": 2,
+    "news": 6
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Execution-Level Internal-Load-Regularized Wrench C",
+      "t": "Prompting Robot Teams With Natural Language",
       "type": "paper",
       "video": false
     },
     {
-      "t": "OmniVTLA: Vision-Tactile-Language-Action Models Wi",
-      "type": "paper",
+      "t": "Catch, Throw, Repeat: Planning for Human-Robot Par",
+      "type": null,
       "video": false
     }
   ]
