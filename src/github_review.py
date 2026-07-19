@@ -112,6 +112,13 @@ def create_issues():
             set_status_label(d["issue"], "needs-review")
             continue
         c, p = d["content"], d["paper"]
+        v = d["paper"].get("verified") or {}
+        vline = ""
+        if v:
+            icon = {"real": "🤖 real hardware", "sim": "⚠️ SIMULATION ONLY",
+                    "mixed": "🤖 hardware + sim"}.get(v.get("hardware"), "")
+            if icon:
+                vline = f"**Verified from full text:** {icon}. {v.get('summary', '')}\n\n"
         slides = "\n".join(
             f"![slide {i}]({base}/{rel})" for i, rel in
             enumerate(d.get("media", {}).get("slides", []))
@@ -119,7 +126,7 @@ def create_issues():
         video = d.get("media", {}).get("video")
         video_md = (f"\n🎬 [Watch the generated video]"
                     f"(https://github.com/{repo}/blob/main/{video})\n" if video else "")
-        body = f"""**[{c.get('format','carousel').upper()}]** {p['title']}
+        body = vline + f"""**[{c.get('format','carousel').upper()}]** {p['title']}
 {p['url']}
 
 ### 🪝 Hook
