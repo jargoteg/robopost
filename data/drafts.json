@@ -15963,7 +15963,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-18T17:48:19.341201+00:00",
     "media": {
       "figures": [
@@ -15988,7 +15988,9 @@
     },
     "issue": 170,
     "scheduled_after": "2026-07-19T03:34:46.578266+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "dbccdaa7",

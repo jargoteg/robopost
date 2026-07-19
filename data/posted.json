@@ -2106,5 +2106,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "33db0dd1",
+    "paper_id": "yt-JlO2GU-Bdfc",
+    "title": "The First Brain Computer Interfaces",
+    "format": "carousel",
+    "hook": "BCIs work. Using them daily is a different story.",
+    "posted_at": "2026-07-19T04:02:52.332187+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mqxvil5poa2o",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
