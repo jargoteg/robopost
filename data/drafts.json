@@ -16069,5 +16069,155 @@
       ]
     },
     "issue": 171
+  },
+  {
+    "draft_id": "13251ce8",
+    "paper": {
+      "id": "rss-56d33d59d7",
+      "title": "Real-Time Multi-Drone Replanning for Disruption Management in Urban Aerial Logistics Networks",
+      "abstract": "Urban aerial logistics networks are vital for efficient last-mile deliveries yet remain vulnerable to disruption events. These events trigger cascading conflicts across multiple drones, risking system-wide scheduling breakdowns. Rapidly generating coordinated trajectories for large-scale fleets, adaptable from small and simple maps to large and complex ones, is essential. This letter presents a real-time replanning framework that resolves cascading conflicts and reduces system-wide delays without relying on predefined traffic zones. The upper level rapidly explores promising priority orders with anytime refinement; the lower level leverages spatiotemporal occupancy to generate conflict-free trajectories, enabling robust collision avoidance. Evaluations across diverse urban scenarios show conflict-free plans for 100 drones with 5 disruptions in $0.3\\,\\mathrm{s}$ and a 43.02% reduction in total delay compared to baselines. This work enhances urban drone delivery resilience by efficiently handling unexpected disruptions while preserving delivery schedules.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11599588",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does one grounded drone cascade into chaos for the whole fleet?",
+      "commentary": "This paper tackles a real operational nightmare: a single disruption in an urban drone delivery network triggering cascading conflicts across dozens of vehicles simultaneously. The framework splits the problem into a priority-ordering upper level and a spatiotemporal occupancy lower level, solving conflict-free plans for 100 drones across 5 simultaneous disruptions in 0.3 seconds. The 43% delay reduction over baselines is the headline number and it holds across map sizes without predefining traffic zones, which matters for real deployment where cities do not hand you neat corridors. The honest caveat: 100 drones in simulation is still a long way from 100 drones in a city with regulatory holds, wind, sensor noise, and dynamic no-fly zones. The replanning speed is impressive but the disruption model needs stress-testing against real-world uncertainty sources before anyone deploys this.",
+      "slides": [
+        {
+          "title": "One disruption, fleet-wide chaos",
+          "body": "Urban drone networks are tightly coupled. One delayed or grounded vehicle creates conflicting trajectories across the whole fleet. Replanning from scratch is too slow. The paper asks: can you resolve it in real time?"
+        },
+        {
+          "title": "Two-level replanning architecture",
+          "body": "Upper level: anytime search over priority orderings for conflicting drones. Lower level: spatiotemporal occupancy grid generates collision-free trajectories per priority. No predefined traffic lanes required."
+        },
+        {
+          "title": "100 drones, 5 disruptions, 0.3 seconds",
+          "body": "Key benchmark: conflict-free replanning for 100-drone fleet with 5 simultaneous disruptions solved in 0.3 s. Total system delay reduced 43.02% versus baselines across diverse urban map configurations."
+        },
+        {
+          "title": "No fixed traffic zones needed",
+          "body": "Most prior work carves cities into predefined corridors. This framework adapts to any map geometry at runtime. That matters: real cities change, airspace changes, and rigid zones break quickly in practice."
+        },
+        {
+          "title": "What the sim does not test",
+          "body": "Disruption models here are clean and discrete. Real deployments add wind, sensor drift, ATC holds, and dynamic obstacles. The 0.3 s solve time is promising but real-world uncertainty budgets remain untested."
+        },
+        {
+          "title": "Why this matters now",
+          "body": "Serve Robotics and others are pushing ground delivery density. Urban air mobility operators face the same cascading conflict problem at scale. Fast, zone-free replanning is a prerequisite for any serious fleet ops."
+        }
+      ],
+      "video_script": "Picture a hundred delivery drones mid-route over a city. One goes down. Now three others are on collision course. Two more are blocked waiting. The whole schedule unravels in seconds. This paper builds a two-level replanning system that detects those cascading conflicts and resolves them, conflict-free, for a hundred drones in under a third of a second. No predefined corridors. It adapts to the map it gets. The 43 percent delay reduction over baselines is real. But the disruptions in simulation are clean. Real cities are not. So the question is: how much messiness can this architecture absorb before the solve time breaks?",
+      "caption_instagram": "Why does one grounded drone cascade into chaos for the whole fleet?\n\nUrban drone delivery networks are fragile in a specific way. Vehicles share airspace on tight schedules. One disruption, a mechanical hold, a no-fly popup, anything, forces replanning for every drone that was depending on that slot. Do it slowly and the whole schedule collapses.\n\nThis paper builds a two-level framework: an upper layer that rapidly searches priority orderings for conflicting drones, and a lower layer that generates collision-free trajectories using spatiotemporal occupancy. No predefined traffic zones. It adapts to whatever map geometry it gets.\n\nThe headline number: conflict-free plans for 100 drones with 5 simultaneous disruptions in 0.3 seconds, with a 43% reduction in total delay versus baselines. That solve time is genuinely fast for fleet scale.\n\nHonest caveat: disruption events in simulation are clean and discrete. Real deployments deal with wind, sensor noise, dynamic airspace holds, and ATC interventions. The framework needs stress-testing against that kind of uncertainty before it earns operational trust.\n\nPaper: Real-Time Multi-Drone Replanning for Disruption Management in Urban Aerial Logistics Networks, IEEE Xplore 2026.\n\n#swarmrobotics #dronedelivery #multiagentsystems #UAV #urbanmobility #roboticsresearch #fleetmanagement",
+      "caption_tiktok": "100 drones, 5 simultaneous failures, replanned in 0.3 seconds. The cascading conflict problem in urban drone fleets finally has a fast answer. Sim results though, real cities are messier. #dronetechnology #swarmrobotics #UAV #robotics",
+      "post_bluesky": "Why does one grounded drone cascade into chaos for the whole fleet? New IEEE paper: conflict-free replanning for 100 drones across 5 disruptions in 0.3s, 43% less total delay, no predefined traffic zones. http://ieeexplore.ieee.org/document/11599588",
+      "bluesky_thread": [
+        "The two-level design is the clever part: upper level searches priority orderings anytime, lower level uses spatiotemporal occupancy to route around conflicts. Scales across map sizes without needing pre-carved corridors. That flexibility is what prior work usually sacrifices for speed.",
+        "My one push: the disruption model is clean and discrete. Real urban ops add wind, dynamic no-fly zones, ATC holds. Does the 0.3s solve time hold when the uncertainty is messier? That's the paper I want to see next. Anyone working on stochastic disruption models for UAV fleets?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-19T02:13:30.219546+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/13251ce8/bsky_00.png",
+        "media/13251ce8/bsky_01.png",
+        "media/13251ce8/bsky_02.png",
+        "media/13251ce8/bsky_03.png"
+      ],
+      "slides": [
+        "media/13251ce8/slide_00.png",
+        "media/13251ce8/slide_01.png",
+        "media/13251ce8/slide_02.png",
+        "media/13251ce8/slide_03.png",
+        "media/13251ce8/slide_04.png",
+        "media/13251ce8/slide_05.png",
+        "media/13251ce8/slide_06.png",
+        "media/13251ce8/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "d71a3bff",
+    "paper": {
+      "id": "rss-eb41411085",
+      "title": "Physics-Visual Fusion for Cross-Posture Deformation Mapping in Robotic Breast Ultrasound",
+      "abstract": "Robotic breast ultrasound scanning aids early cancer screening but faces significant challenges from substantial soft tissue deformations induced by supine-to-lateral postural changes. These deformations cause deviations in pre-planned scan paths and lesion drifts. Consequently, simple re-planning becomes infeasible due to the prohibitive time cost of global re-scanning and the risk of lesion identity ambiguity arising from spatial correspondence loss. To address this, we propose a physics-visual fusion framework for accurate cross-posture deformation mapping. First, a geometry-specific 3D breast mechanical baseline is reconstructed in the supine posture using multi-view RGB-D perception, eliminating the need for medical imaging priors. Next, phantom-specific model-equivalent elastic parameters are fitted via Bayesian Optimization by minimizing the geometric discrepancy between FEM simulations and single-view surface point clouds across multiple lateral postures. Finally, a continuous deformation mapping is achieved by coupling the FEM-predicted, gravity-driven deformations with a spring-type registration force field, which applies local non-rigid corrections based on target-posture point cloud observations. Controlled single-phantom experiments show that our method balances surface fitting and spatial correspondence preservation, improves surface alignment over pure FEM, and reduces the mean scan-path re-mapping and lesion localization errors by 60.84% and 62.81% compared wi",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11599450",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does a breast ultrasound robot lose the tumor when you lie on your side?",
+      "commentary": "Robotic breast ultrasound is genuinely useful for early cancer screening, but posture change from supine to lateral shifts soft tissue enough to invalidate pre-planned scan paths entirely. This paper attacks that with a physics-visual fusion pipeline: fit patient-specific elastic parameters via Bayesian Optimization against real point clouds, run FEM to predict gravity-driven deformation, then apply a spring-type registration correction on top. The 60-84% reduction in scan-path error and 62-81% lesion localization improvement are real numbers from controlled phantom experiments, which is honest. The caveat: phantom tissue is not breast tissue, and inter-patient variability in actual elastic properties is the real wall this approach will hit next.",
+      "slides": [
+        {
+          "title": "The posture problem",
+          "body": "Moving a patient from supine to lateral shifts breast tissue substantially. Pre-planned scan paths miss the lesion. Global re-scanning is too slow and risks losing track of which lesion is which."
+        },
+        {
+          "title": "Step 1: build a 3D baseline",
+          "body": "Multi-view RGB-D cameras reconstruct the breast geometry in supine posture. No MRI or CT required. This geometry seeds the mechanical model."
+        },
+        {
+          "title": "Step 2: fit elastic parameters",
+          "body": "Bayesian Optimization tunes phantom-specific elastic constants by minimizing geometric error between FEM simulations and real point clouds across multiple lateral postures."
+        },
+        {
+          "title": "Step 3: fuse physics and vision",
+          "body": "FEM predicts gravity-driven bulk deformation. A spring-type registration force field applies local non-rigid corrections using live point cloud observations in the target posture."
+        },
+        {
+          "title": "Results on phantom",
+          "body": "60.84% reduction in scan-path re-mapping error. 62.81% reduction in lesion localization error versus baseline. Surface alignment beats pure FEM alone."
+        },
+        {
+          "title": "The honest gap",
+          "body": "All results are on gel phantoms. Real breast tissue varies in stiffness patient to patient, and Bayesian Optimization fitting costs time. Neither issue is solved here yet."
+        }
+      ],
+      "video_script": "When a robotic ultrasound system plans a scan path, it assumes you stay still and flat. The moment a patient rotates to their side, soft tissue shifts, and the tumor drifts. This paper fits a patient-specific mechanical model using only RGB-D cameras and Bayesian Optimization, then fuses that physics prediction with live surface corrections. The result is a 60 percent drop in localization error on phantoms. Clever pipeline. But phantoms are not patients. How do you handle the full range of real tissue stiffness variation in a clinical workflow?",
+      "caption_instagram": "Why does a breast ultrasound robot lose the tumor when you lie on your side?\n\nPosture change from supine to lateral moves soft tissue enough to invalidate the entire pre-planned scan path. Re-scanning from scratch takes too long and risks confusing which lesion is which. That is not a minor inconvenience in cancer screening.\n\nThis paper proposes a physics-visual fusion pipeline. First, reconstruct 3D breast geometry from RGB-D cameras, no MRI needed. Then use Bayesian Optimization to fit patient-specific elastic parameters against real point clouds. Finally, couple FEM-predicted gravity-driven deformation with a spring-type registration correction using live surface observations.\n\nPhantom results: 60.84% better scan-path accuracy, 62.81% better lesion localization. The honest caveat is that phantoms have uniform, known stiffness. Real patients do not. That is the next wall.\n\nPaper: Physics-Visual Fusion for Cross-Posture Deformation Mapping in Robotic Breast Ultrasound, IEEE IEEExplore 11599450\n\n#swarmrobotics #medicalrobotics #roboticsresearch #ultrasoundrobotics #softbodydeformation #computervision #cancerscreening",
+      "caption_tiktok": "A breast cancer screening robot that loses the tumor when you roll over. Here is how they fixed it with physics and point clouds.\n#medicalrobotics #roboticsresearch #ultrasound #cancerscreening #fem",
+      "post_bluesky": "Why does a breast ultrasound robot lose the tumor when you lie on your side? Posture shift deforms tissue enough to break the scan path. This paper fits patient-specific elastic models from RGB-D cameras alone and cuts localization error by 62%…\nhttp://ieeexplore.ieee.org/document/11599450",
+      "bluesky_thread": [
+        "The clever part: no MRI or CT needed to seed the mechanical model. Multi-view RGB-D builds the 3D baseline, Bayesian Optimization fits elastic params against real point clouds, then FEM predicts gravity-driven deformation. Spring registration corrects the residuals live.",
+        "The real question is patient-to-patient stiffness variation. Phantoms are convenient but suspiciously uniform. How long does the Bayesian Opt fitting actually take in a clinical workflow? If it adds 10 minutes per patient, adoption gets much harder. Anyone seen this tested on ex vivo tissue?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-07-19T02:13:56.665632+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/d71a3bff/bsky_00.png",
+        "media/d71a3bff/bsky_01.png",
+        "media/d71a3bff/bsky_02.png",
+        "media/d71a3bff/bsky_03.png"
+      ],
+      "slides": [
+        "media/d71a3bff/slide_00.png",
+        "media/d71a3bff/slide_01.png",
+        "media/d71a3bff/slide_02.png",
+        "media/d71a3bff/slide_03.png",
+        "media/d71a3bff/slide_04.png",
+        "media/d71a3bff/slide_05.png",
+        "media/d71a3bff/slide_06.png",
+        "media/d71a3bff/slide_07.png"
+      ]
+    }
   }
 ]

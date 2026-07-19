@@ -1,26 +1,37 @@
 {
-  "ts": "2026-07-19T02:04",
-  "collected": 192,
-  "dedup_dropped": 61,
-  "after_dedup": 131,
+  "ts": "2026-07-19T02:12",
+  "collected": 216,
+  "dedup_dropped": 69,
+  "after_dedup": 147,
   "score_hist": {
-    "0": 18,
-    "1": 12,
+    "0": 17,
+    "1": 13,
     "2": 20,
-    "3": 28,
-    "4": 23,
-    "5": 21,
-    "6": 6,
-    "7": 2,
+    "3": 32,
+    "4": 29,
+    "5": 24,
+    "6": 8,
+    "7": 3,
     "8": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 9,
+  "ranked_above_floor": 12,
   "split": {
     "videos": 0,
-    "papers": 0,
+    "papers": 3,
     "news": 9
   },
   "floor": 6,
-  "picked": []
+  "picked": [
+    {
+      "t": "Real-Time Multi-Drone Replanning for Disruption Ma",
+      "type": "paper",
+      "video": false
+    },
+    {
+      "t": "Physics-Visual Fusion for Cross-Posture Deformatio",
+      "type": "paper",
+      "video": false
+    }
+  ]
 }
