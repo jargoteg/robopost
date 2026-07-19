@@ -47,6 +47,29 @@ def gather_pool(theme: dict) -> list[dict]:
                 seen.add(p["id"])
                 pool.append(p)
         time.sleep(3)  # arXiv API etiquette
+    # enrich with Semantic Scholar recommendations from the anchor paper
+    anchor = next((p for p in pool if theme.get("seed", "").lower()[:40]
+                   in p["title"].lower()), pool[0] if pool else None)
+    if anchor:
+        try:
+            r = requests.get(
+                "https://api.semanticscholar.org/recommendations/v1/papers/"
+                f"forpaper/arXiv:{anchor['id']}",
+                params={"limit": 10, "fields": "title,abstract,externalIds,year"},
+                timeout=30, headers={"User-Agent": "RoboPost/1.0"})
+            recs = r.json().get("recommendedPapers", [])
+            added = 0
+            for w in recs:
+                aid = (w.get("externalIds") or {}).get("ArXiv")
+                if aid and aid not in seen:
+                    seen.add(aid)
+                    pool.append({"id": aid, "title": w.get("title", ""),
+                                 "abstract": (w.get("abstract") or "")[:800],
+                                 "year": str(w.get("year", ""))})
+                    added += 1
+            print(f"  S2 recommendations: +{added} related papers")
+        except Exception as e:
+            print(f"  S2 recommendations failed: {e}")
     return pool
 
 

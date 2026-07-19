@@ -65,6 +65,79 @@ def trim_white_margins(png_bytes):
     return buf.getvalue()
 
 
+def arxiv_source_figures(aid: str, out_dir: Path, max_figs: int = 8) -> list[str]:
+    """ORIGINAL author figure files from the arXiv source tarball: full
+    resolution, no rasterization artifacts, no cropping risk. The strongest
+    figure source for any arXiv paper."""
+    import tarfile
+    import gzip
+    import io
+    from PIL import Image
+    try:
+        r = requests.get(f"https://arxiv.org/e-print/{aid}", timeout=90,
+                         headers={"User-Agent": "RoboPost/1.0"})
+        r.raise_for_status()
+        blob = r.content
+        candidates = []  # (name, bytes)
+        try:
+            with tarfile.open(fileobj=io.BytesIO(blob), mode="r:*") as tf:
+                for m in tf.getmembers():
+                    low = m.name.lower()
+                    if m.isfile() and low.endswith((".png", ".jpg", ".jpeg", ".pdf")):
+                        f = tf.extractfile(m)
+                        if f:
+                            candidates.append((m.name, f.read()))
+        except tarfile.TarError:
+            # single-file gzip (rare): no figures inside
+            try:
+                gzip.decompress(blob)
+            except Exception:
+                pass
+            return []
+        # keep real figures: sizeable rasters, or single-figure PDFs
+        picked = []
+        for name, data in sorted(candidates, key=lambda c: c[0]):
+            if len(picked) >= max_figs:
+                break
+            low = name.lower()
+            base = low.rsplit("/", 1)[-1]
+            if any(k in base for k in ("logo", "orcid", "icon", "arxiv")):
+                continue
+            try:
+                if low.endswith(".pdf"):
+                    if len(data) < 8000 or len(data) > 8_000_000:
+                        continue
+                    import fitz
+                    doc = fitz.open(stream=data, filetype="pdf")
+                    if doc.page_count != 1:
+                        doc.close()
+                        continue  # multi-page = the paper itself, not a figure
+                    pix = doc[0].get_pixmap(dpi=220)
+                    png = trim_white_margins(pix.tobytes("png"))
+                    doc.close()
+                    im = Image.open(io.BytesIO(png))
+                    if im.width < 380 or im.height < 240:
+                        continue
+                    p = out_dir / f"src_{len(picked):02d}.png"
+                    p.write_bytes(png)
+                else:
+                    if len(data) < 25000:
+                        continue  # icons/thumbnails
+                    im = Image.open(io.BytesIO(data))
+                    if im.width < 380 or im.height < 240:
+                        continue
+                    p = out_dir / f"src_{len(picked):02d}.png"
+                    im.convert("RGB").save(p)
+                picked.append(str(p.relative_to(MEDIA.parent)))
+            except Exception:
+                continue
+        print(f"arXiv source tarball {aid}: {len(picked)} original figures")
+        return picked
+    except Exception as e:
+        print(f"source tarball failed {aid}: {e}")
+        return []
+
+
 def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
     """Extract figures from an arXiv PDF. Anchors on the figure CAPTION text
     ('Figure N', 'Fig. N') so it captures VECTOR diagrams too (architecture /
@@ -73,6 +146,9 @@ def arxiv_figures(paper: dict, out_dir: Path, max_figs: int = 6) -> list[str]:
     each caption plus the caption itself. Aspect ratio is always preserved."""
     import fitz
     pid = paper["id"]
+    src = arxiv_source_figures(pid, out_dir, max_figs=max_figs + 2)
+    if len(src) >= 2:
+        return src  # originals beat any page rasterization
     url = f"https://arxiv.org/pdf/{pid}"
     r = requests.get(url, timeout=60, headers={"User-Agent": "RoboPost/1.0"})
     r.raise_for_status()
