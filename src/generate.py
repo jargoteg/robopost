@@ -26,6 +26,55 @@ def pick_hook_style() -> str:
     return list(HOOK_STYLES)[n % len(HOOK_STYLES)]
 
 
+
+
+def verify_paper_facts(paper: dict) -> dict | None:
+    """Full-text verification before writing: fetch the paper's PDF, extract
+    text, and have Claude answer the questions that abstracts hide. The
+    sim-vs-hardware question especially — abstracts routinely obscure it."""
+    import requests
+    import re as _re
+    from utils import claude_json
+    pdf_url = None
+    if _re.match(r"\d{4}\.\d{4,5}", str(paper.get("id", ""))):
+        pdf_url = f"https://arxiv.org/pdf/{paper['id']}"
+    elif paper.get("open_version", "").startswith("http"):
+        pdf_url = paper["open_version"]
+        if "arxiv.org/abs/" in pdf_url:
+            pdf_url = pdf_url.replace("/abs/", "/pdf/")
+    if not pdf_url:
+        return None
+    try:
+        r = requests.get(pdf_url, timeout=60, headers={"User-Agent": "RoboPost/1.0"})
+        r.raise_for_status()
+        if b"%PDF" not in r.content[:1024]:
+            return None
+        import fitz
+        doc = fitz.open(stream=r.content, filetype="pdf")
+        text = "\n".join(p.get_text() for p in doc[:15])[:22000]
+        doc.close()
+        if len(text) < 1500:
+            return None
+        v = claude_json(f"""Read this robotics paper text and answer strictly
+from what it says. Paper title: {paper.get('title', '')}
+
+{text}
+
+Return JSON:
+{{"hardware": "real" | "simulation" | "both" | "unclear",
+ "platform": "<the actual robot/simulator used, <60 chars>",
+ "key_numbers": ["<up to 4 concrete results with units>"],
+ "honest_caveat": "<the main limitation the authors admit, <120 chars>",
+ "writer_brief": "<80 words max: what actually happened in this work, concrete, no hype>"}}""")
+        if isinstance(v, dict) and v.get("hardware"):
+            print(f"Verified {paper.get('id')}: hardware={v['hardware']} "
+                  f"platform={v.get('platform', '')[:30]}")
+            return v
+    except Exception as e:
+        print(f"verification skipped for {paper.get('id')}: {e}")
+    return None
+
+
 def generate_draft(paper: dict, cfg) -> dict:
     feedback = get_feedback_notes()
     hook_style = pick_hook_style()
@@ -53,12 +102,26 @@ def generate_draft(paper: dict, cfg) -> dict:
                 paper["repo_url"] = f"https://github.com/{repo}"
     except Exception as e:
         print(f"pre-generation repo lookup skipped: {e}")
+    facts = paper.get("verified") or verify_paper_facts(paper)
+    if facts:
+        paper["verified"] = facts
+    facts_block = ""
+    if facts:
+        facts_block = f"""
+VERIFIED FACTS FROM THE FULL PAPER TEXT (trust these over the abstract):
+- Hardware reality: {facts.get('hardware')} ({facts.get('platform', '')})
+- Key numbers: {'; '.join(facts.get('key_numbers', [])[:4])}
+- Authors' own caveat: {facts.get('honest_caveat', '')}
+- What actually happened: {facts.get('writer_brief', '')}
+If hardware is 'simulation', SAY SO PLAINLY in the post. Never imply real
+robots when the work is simulated. Use the verified numbers, not guesses."""
     result = claude_json(
         f"""Today's date: {__import__('datetime').date.today().strftime('%B %d, %Y')}.
 Use it: "this year" means {__import__('datetime').date.today().year}, recent
 events are relative to today, never assume an older year.
 
 You write content for a social media account: {cfg['account']['niche']}.
+{facts_block}
 This account has a special interest in FIELD and INSPECTION robotics: real
 robots doing real work (subsea, mining, construction, agriculture, nuclear,
 search and rescue, infrastructure inspection, legged/all-terrain). When an
