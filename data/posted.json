@@ -2214,5 +2214,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "d71a3bff",
+    "paper_id": "rss-eb41411085",
+    "title": "Physics-Visual Fusion for Cross-Posture Deformation Mapping in Robotic Breast Ultrasound",
+    "format": "carousel",
+    "hook": "Why does a breast ultrasound robot lose the tumor when you lie on your side?",
+    "posted_at": "2026-07-20T03:47:03.407435+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mr2f374jm52n",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
