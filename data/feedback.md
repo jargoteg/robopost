@@ -1,27 +1,29 @@
-# Engagement lessons (auto-updated 2026-07-19)
+# Engagement lessons (auto-updated 2026-07-20)
 
-# Content Team: Lessons Learned Brief
+# Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Novel locomotion mechanics (SAWbot wave propulsion, 32-leg amoeba, wheel-legged football) and relatable engineering failures ("why can't robots cut hair/plug in a cable") drove the highest engagement. Underwater/marine content with strong narrative tension also performed well (AUV localization repost). **Under-performed:** Dense control theory (NMPC quadrotor, orchard MPC), policy/standards content (humanoid regulation, IEEE SA), and most manipulation papers scored near zero.
+**Over-performed:** Visually striking or counterintuitive mechanics (SAWbot wave propulsion: 3 engagement points; wheel-legged football: 3 likes; underwater glider size question: 3 pts; congestion-aware planning: 3 pts). Oddity + clear visual payoff wins.
+**Under-performed:** Policy/regulatory content (humanoid policy: 0), abstract sensing papers (tendon hysteresis, planetary rover: 0), and anything without strong figures (entire rejection queue).
 
 ## 2. Hook Styles That Worked
-Data is sparse (30 posts, most 0–1 likes), but **bold_claim** and **curiosity_gap** hooks produced the highest individual spikes. `number_stat` was inconsistent — effective when the stat was surprising, flat otherwise.
+Best individual posts used **curiosity_gap** ("Why can't robots cut hair safely?", underwater glider) and **bold_claim** (SAWbot, wheel-legged football). **number_stat** is inconsistent — performs when the number is genuinely surprising, flat otherwise.
 
-## 3a. Hook-Style Weighting
-| Hook | Avg. Total Engagements | Recommended Weight |
+## 3. Carousel vs. Video
+Data too sparse (one video, 1 reply, 0 likes) to conclude anything. **Do not deprioritize video yet — test more.**
+
+## 3a. Hook Style Weighting
+| Hook | Avg. likes | Rec. weight |
 |---|---|---|
-| bold_claim | ~0.8 | 30% |
-| curiosity_gap | ~1.0 | 35% |
-| number_stat | ~0.5 | 20% |
-| tension | ~0.6 | 15% |
-
-**Curiosity_gap edges ahead**; prioritize it but don't drop bold_claim.
+| curiosity_gap | ~1.2 | **35%** |
+| bold_claim | ~0.8 | **30%** |
+| tension | ~0.4 | **20%** |
+| number_stat | ~0.8 | **15%** |
 
 ## 3b. Bluesky Thread vs. Single
-Threads average more **replies** (most had 1); singles lead slightly on **likes**. Threads generate conversation; singles get passive approval. Recommend **60% thread / 40% single**.
+Threads average slightly higher **replies** (0.75 vs 0.25); singles slightly higher **likes**. Difference is marginal. Recommend **50/50 split** and track for 20 more posts before shifting.
 
 ## 4. Three Concrete Recommendations
-1. **Lead with relatable failure** — "why can't robots X yet" framing consistently outperforms achievement framing.
-2. **Avoid pure policy/standards papers** — zero engagement across all three attempts.
-3. **Data is too sparse to conclude on video vs. carousel** — deliberately A/B test same topic across both formats next sprint.
+1. **Lead with the mechanism, not the metric** — "One motor moves this robot in waves" outperforms "force error under 1N"
+2. **Hard-gate figure quality** — the rejection queue confirms no figures = no post, enforce this upstream
+3. **Test curiosity_gap on a thread** — that combination hasn't been paired yet; highest-upside experiment available
