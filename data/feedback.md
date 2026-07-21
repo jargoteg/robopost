@@ -1,29 +1,35 @@
-# Engagement lessons (auto-updated 2026-07-20)
+# Engagement lessons (auto-updated 2026-07-21)
 
-# Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Visually striking or counterintuitive mechanics (SAWbot wave propulsion: 3 engagement points; wheel-legged football: 3 likes; underwater glider size question: 3 pts; congestion-aware planning: 3 pts). Oddity + clear visual payoff wins.
-**Under-performed:** Policy/regulatory content (humanoid policy: 0), abstract sensing papers (tendon hysteresis, planetary rover: 0), and anything without strong figures (entire rejection queue).
+**Over-performed:** Tangible, visual robot capabilities — football-playing wheel-legs (3 likes), wave-propulsion SAWbot (2 likes), hair-cutting safety (2 likes), underwater glider size (2 likes), congestion-aware planning (2 likes + 1 repost). Quirky/unexpected applications and locomotion novelty consistently outperform.
+
+**Under-performed:** Niche industrial/subsea applications (wind turbine repair, water-cleaning robots, soft hands) and policy/standards papers. Abstract technical framing without a clear "wow" object generates near-zero engagement.
+
+---
 
 ## 2. Hook Styles That Worked
-Best individual posts used **curiosity_gap** ("Why can't robots cut hair safely?", underwater glider) and **bold_claim** (SAWbot, wheel-legged football). **number_stat** is inconsistent — performs when the number is genuinely surprising, flat otherwise.
+**curiosity_gap** and **number_stat** hooks drove the most consistent likes. **bold_claim** was hit-or-miss — it worked for SAWbot and BCIs but flatlined on underwater and policy topics. **tension** generated replies but rarely likes or reposts.
 
-## 3. Carousel vs. Video
-Data too sparse (one video, 1 reply, 0 likes) to conclude anything. **Do not deprioritize video yet — test more.**
+---
 
-## 3a. Hook Style Weighting
+## 3a. Hook-Style A/B Recommendation
 | Hook | Avg. likes | Rec. weight |
 |---|---|---|
-| curiosity_gap | ~1.2 | **35%** |
-| bold_claim | ~0.8 | **30%** |
-| tension | ~0.4 | **20%** |
-| number_stat | ~0.8 | **15%** |
+| curiosity_gap | ~1.5 | **35%** |
+| number_stat | ~1.3 | **30%** |
+| bold_claim | ~0.7 | **20%** |
+| tension | ~0.5 | **15%** |
+
+---
 
 ## 3b. Bluesky Thread vs. Single
-Threads average slightly higher **replies** (0.75 vs 0.25); singles slightly higher **likes**. Difference is marginal. Recommend **50/50 split** and track for 20 more posts before shifting.
+Threads average more replies (≈0.9 vs 0.3) but not more likes. Singles edge slightly on likes. **Data is too sparse for confidence** — recommend a deliberate 50/50 split for 4 more weeks before adjusting.
+
+---
 
 ## 4. Three Concrete Recommendations
-1. **Lead with the mechanism, not the metric** — "One motor moves this robot in waves" outperforms "force error under 1N"
-2. **Hard-gate figure quality** — the rejection queue confirms no figures = no post, enforce this upstream
-3. **Test curiosity_gap on a thread** — that combination hasn't been paired yet; highest-upside experiment available
+1. **Lead with visible, tangible robot actions** — if a paper has no striking figure or demo video, skip it (consistent with rejection pattern).
+2. **Prioritize curiosity_gap hooks on locomotion and manipulation topics** — that pairing has the strongest signal in this dataset.
+3. **Test one non-robotics-specialist hook per week** — frame papers for a general curious audience ("Why can't robots cut hair?") rather than field insiders; those hooks are outperforming technical framing.
