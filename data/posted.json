@@ -2262,5 +2262,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "819e120e",
+    "paper_id": "rss-41d9b3c064",
+    "title": "Prompting Robot Teams With Natural Language",
+    "format": "carousel",
+    "hook": "No LLM at runtime. Each robot carries the reasoning onboard.",
+    "posted_at": "2026-07-22T14:31:02.823699+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mrajyl52lb24",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
