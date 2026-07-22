@@ -42,9 +42,9 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-22 13:53 UTC <span class="chip ok">+0 today</span></p></header>
+<p>@jahirargote · generated 2026-07-22 14:38 UTC <span class="chip ok">+0 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">6</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">1</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">88</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">6</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">89</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
   <header><span class="chip in_review">in review</span>
@@ -75,13 +75,6 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6c5263a9/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6c5263a9/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6c5263a9/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/6c5263a9/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The system chains Kalman ball tracking + online multiple-shooting trajectory optimization + a state machine for timing. 75.1% on 3-ball cascades, 87.2% on single-ball. One person hit 100% over 40 throws. The numbers are solid.</div><div class="reply">The caveat the authors actually admit: no wrist orientation control on a 4-DoF arm, so throws into the rear workspace fail systematically. That&#x27;s the kind of honest limitation section you rarely see. What&#x27;s the real application you&#x27;d want this for, handoffs in assembly or surgical assist?</div>
 </article><article class="post">
-  <header><span class="chip approved">approved</span>
-  <span class="chip">carousel</span><span class="chip warn">posts after 12:22 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/177" target="_blank">issue #177</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">No LLM at runtime. Each robot carries the reasoning onboard. LMM decomposes the task offline, an RNN encodes the logic, a GNN executes it. 100% accuracy across 7 tasks, real RoboMasters hardware. http://ieeexplore.ieee.org/document/11601083</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/819e120e/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/819e120e/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/819e120e/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/819e120e/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The clever bit: finite automata and RNNs are structurally compatible. Supervised training aligns hidden states to automaton states explicitly. So you get LLM-level task decomposition in a model small enough to run onboard each robot. Open-access version: https://arxiv.org/abs/2509.24575</div><div class="reply">The honest caveat: aggregating neighbor observations into atomic propositions is still hand-engineered per task. Authors flag this themselves. Until that&#x27;s automated from language, you need a human in the loop for each new task type. How big a blocker is that for your use case?</div>
-</article><article class="post">
   <header><span class="chip in_review">in review</span>
   <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/176" target="_blank">issue #176</a></header>
   <div class="handle">@jahirargote</div>
@@ -96,13 +89,15 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/20c66662/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/20c66662/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/20c66662/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/20c66662/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The core trick: one new state in a finite-state machine. Robot loses goal visibility, stops, goes goal-colored. Others navigate to it. Spontaneous beacon chains form. 100% around one corner, 94% around two. H-shaped object: 46%. Geometry of the object matters as much as the obstacle.</div><div class="reply">Two honest questions worth raising: their own teleoperated benchmark still beats the autonomous system on efficiency, and occlusion sensing on 8 cm physical robots in real lighting is a genuinely hard unsolved step. Who here has tried vision-only swarm transport on hardware? What broke first?…</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~6666m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~966m)</td><td>✅ success <span class='mono'>2026-07-22 08:31</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~486m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>14:00 UTC (~6m)</td><td>✅ success <span class='mono'>2026-07-22 12:14</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>14:00 UTC (~6m)</td><td>✅ success <span class='mono'>2026-07-22 12:13</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>18:00 UTC (~246m)</td><td>⏳ in_progress <span class='mono'>2026-07-22 13:52</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~6621m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~921m)</td><td>✅ success <span class='mono'>2026-07-22 08:31</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~441m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>14:40 UTC (~1m)</td><td>✅ success <span class='mono'>2026-07-22 14:31</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>15:00 UTC (~21m)</td><td>⏳ in_progress <span class='mono'>2026-07-22 14:35</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>18:00 UTC (~201m)</td><td>✅ success <span class='mono'>2026-07-22 13:53</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-22 10:52</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-22 14:31</td>
+<td>Prompting Robot Teams With Natural Language</td><td class="mono">thread</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-22 10:52</td>
 <td>Execution-Level Internal-Load-Regularized Wrench Con</td><td class="mono">single</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-20 03:47</td>
 <td>Physics-Visual Fusion for Cross-Posture Deformation </td><td class="mono">thread</td>
@@ -130,17 +125,15 @@ footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 <td>Congestion-Aware Efficient Multi-Robot Task Planning</td><td class="mono">single</td>
 <td class="mono">{&quot;likes&quot;: 2, &quot;reposts&quot;: 1, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-17 03:45</td>
 <td>Design and Control of the &quot;QuadBoat&quot;: A Quadruped Su</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-16 23:05</td>
-<td>32-Legged Spherical Robot Moves Like an Amoeba</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>Erratum for the Research Article “Observing a robot peer</b> · no reason given</li><li><b>Secret Four-Legged Military Robot Spotted? 🤖🚀 Real or AI</b> · ban military</li><li><b>Tornyol — Mosquito killing micro-drone</b> · no reason given</li><li><b>Research on Task Sequence Planning and Trajectory Optimi</b> · no reason given</li><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14", "07-15", "07-16", "07-17", "07-18", "07-19", "07-20", "07-21"],datasets:[{data:[909, 912, 912, 912, 912, 912, 912, 914, 915, 915, 916, 916, 916],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-16", "07-17", "07-17", "07-17", "07-17", "07-18", "07-18", "07-18", "07-19", "07-19", "07-19", "07-19", "07-19", "07-20", "07-22"],datasets:[
- {label:"likes",data:[1, 0, 2, 1, 1, 0, 0, 1, 3, 0, 0, 1, 0, 1, 0],backgroundColor:"#FF8A2B"},
- {label:"reposts",data:[0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
+new Chart(echart,{type:"bar",data:{labels:["07-17", "07-17", "07-17", "07-17", "07-18", "07-18", "07-18", "07-19", "07-19", "07-19", "07-19", "07-19", "07-20", "07-22", "07-22"],datasets:[
+ {label:"likes",data:[0, 2, 1, 1, 0, 0, 1, 3, 0, 0, 1, 0, 1, 0, 0],backgroundColor:"#FF8A2B"},
+ {label:"reposts",data:[0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
