@@ -2279,5 +2279,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "20c66662",
+    "paper_id": "2605.13006",
+    "title": "Occlusion-Based Object Transportation Around Obstacles With a Swarm of Miniature Robots",
+    "format": "carousel",
+    "hook": "46% success rate. That's what happens when swarm robots meet an H-shaped object.",
+    "posted_at": "2026-07-22T20:32:28.057074+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mrb66tyhsp2y",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
