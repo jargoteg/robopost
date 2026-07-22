@@ -2245,5 +2245,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-21T22:48:50.279968+00:00"
+  },
+  {
+    "draft_id": "5257bb7a",
+    "paper_id": "rss-0bee23e023",
+    "title": "Execution-Level Internal-Load-Regularized Wrench Control for Position-Servo Space Robot in Closed-Chain Truss Climbing",
+    "format": "carousel",
+    "hook": "31-33% more wrench error when you skip one controller step in orbit",
+    "posted_at": "2026-07-22T10:52:12.021657+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mra5rbqtui24",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
