@@ -16678,7 +16678,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-19T18:36:41.187958+00:00",
     "media": {
       "figures": [
@@ -16707,7 +16707,9 @@
     },
     "issue": 178,
     "scheduled_after": "2026-07-22T22:02:28.057074+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "88e5970b",

@@ -2296,5 +2296,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "6c5263a9",
+    "paper_id": "2607.15129v1",
+    "title": "Catch, Throw, Repeat: Planning for Human-Robot Partner Juggling",
+    "format": "video",
+    "hook": "A robot just set a 5x world record in juggling with a human",
+    "posted_at": "2026-07-22T22:12:28.560691+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mrbdrofeut2p",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
