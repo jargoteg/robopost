@@ -1,35 +1,41 @@
 {
-  "ts": "2026-07-19T18:34",
-  "collected": 256,
-  "dedup_dropped": 73,
-  "after_dedup": 183,
+  "ts": "2026-07-22T10:55",
+  "collected": 234,
+  "dedup_dropped": 58,
+  "after_dedup": 176,
   "score_hist": {
-    "0": 14,
-    "1": 27,
-    "2": 40,
-    "3": 38,
-    "4": 33,
-    "5": 23,
-    "6": 7,
-    "8": 1
+    "0": 9,
+    "1": 31,
+    "2": 43,
+    "3": 30,
+    "4": 31,
+    "5": 22,
+    "6": 5,
+    "7": 3,
+    "8": 2
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 8,
+  "ranked_above_floor": 10,
   "split": {
-    "videos": 0,
-    "papers": 2,
-    "news": 6
+    "videos": 1,
+    "papers": 5,
+    "news": 4
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Prompting Robot Teams With Natural Language",
+      "t": "Real-Time Omni-Modal Interaction Driven Whole-Body",
+      "type": "video",
+      "video": true
+    },
+    {
+      "t": "Multi‐Wheel Cooperative Simultaneous Climbing Cont",
       "type": "paper",
       "video": false
     },
     {
-      "t": "Catch, Throw, Repeat: Planning for Human-Robot Par",
-      "type": null,
+      "t": "Develop of a Lightweight Underwater Robotic Arm fo",
+      "type": "paper",
       "video": false
     }
   ]

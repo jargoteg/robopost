@@ -16702,5 +16702,248 @@
       "video": "media/6c5263a9/video.mp4"
     },
     "issue": 178
+  },
+  {
+    "draft_id": "88e5970b",
+    "paper": {
+      "id": "yt-IiNbFPOUrz8",
+      "title": "Real-Time Omni-Modal Interaction Driven Whole-Body Mobile Manipulation",
+      "abstract": "Unitree UnifoLM-OminiA-0.3 — a single model handling diverse home-care and wellness tasks, with omni-modal interactive understanding, fully autonomous, stable and disturbance-resistant execution.",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=IiNbFPOUrz8",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=IiNbFPOUrz8",
+      "video_first": true,
+      "score": 7.2
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One model, every task. But does the home actually cooperate?",
+      "commentary": "Unitree's UnifoLM-OminiA-0.3 demo shows a single model driving whole-body mobile manipulation across home-care tasks: fetching, handing off, responding to voice and gesture in real time. The omni-modal framing is the genuine contribution here, collapsing what usually requires separate vision, language, and motion stacks into one. Disturbance resistance in the clip looks solid, not staged-fragile. The honest caveat: this is a controlled apartment set, not a cluttered real home with kids, pets, and unpredictable floor plans. Generalization to novel objects and real disorder is the unanswered question every humanoid paper carries right now.",
+      "slides": [
+        {
+          "title": "One model, all the inputs",
+          "body": "UnifoLM-OminiA-0.3 handles vision, language, gesture, and whole-body motion in a single unified model. No separate perception and planning stacks stitched together at runtime."
+        },
+        {
+          "title": "What the demo shows",
+          "body": "Home-care and wellness tasks: object retrieval, handoff, real-time voice interaction. The robot recovers from pushes without breaking task flow. Impressive for a full-body platform at this price tier."
+        },
+        {
+          "title": "Why whole-body matters",
+          "body": "Mobile manipulation usually treats the base and arm as separate controllers. Whole-body coordination lets the robot use momentum, reach, and balance together. Harder to tune, much more capable in tight spaces."
+        },
+        {
+          "title": "The gap the video hides",
+          "body": "Clean furniture, consistent lighting, familiar objects. Real homes have all three wrong simultaneously. Cluttered counters and novel items are where single-model generalization gets stress-tested."
+        },
+        {
+          "title": "Context: humanoid hype vs. hardware",
+          "body": "With Aidol collapsing on stage and most humanoid demos still remotely assisted, a fully autonomous disturbance-resistant run matters. The bar for credibility is higher than it was 18 months ago."
+        },
+        {
+          "title": "What to watch for next",
+          "body": "Failure rate on novel objects, latency under real-world network conditions, and whether the omni-modal model holds up outside the training distribution. Those numbers will tell the real story."
+        }
+      ],
+      "video_script": "Watch it get shoved mid-task and just keep going. Unitree's new UnifoLM model is one unified stack handling vision, language, gesture, and whole-body motion together. No separate modules fighting each other. The disturbance recovery you see in this clip is the part that matters most. But this is a clean apartment with familiar objects. The real test is a messy kitchen at 7am with a toddler underfoot. Would this model survive your home?",
+      "caption_instagram": "One model running vision, language, gesture, and whole-body mobile manipulation together. No separate perception stack. No separate motion planner. Just one system doing all of it in real time.\n\nThe disturbance resistance in this clip is what caught my attention. Most manipulation demos fall apart the moment you add unexpected contact. This one keeps the task alive through pushes.\n\nHonest caveat: controlled apartment, known objects, consistent lighting. That setup is doing a lot of work. Generalization to genuinely cluttered real homes is the question no demo can answer.\n\nWith humanoid credibility taking hits from staged or teleoperated demos this year, a fully autonomous run with real disturbance is worth watching carefully. The bar matters now.\n\nFull demo: https://www.youtube.com/watch?v=IiNbFPOUrz8\nPaper: Real-Time Omni-Modal Interaction Driven Whole-Body Mobile Manipulation\n\n#swarmrobotics #mobilerobotics #humanoidrobots #wholebody #robotmanipulation #embodiedai #robotics",
+      "caption_tiktok": "One model. Every input. Real pushes, no collapse. But wait until you see the kitchen it hasn't tried yet. Full demo linked. #robotics #humanoid #manipulation #embodiedai",
+      "post_bluesky": "Most manipulation systems chain 3+ separate models together. Unitree's UnifoLM-OminiA-0.3 does vision, language, gesture, and whole-body motion in one. Watch it recover from disturbances without dropping the task. https://www.youtube.com/watch?v=IiNbFPOUrz8",
+      "bluesky_thread": [
+        "The disturbance recovery is the credible part. A lot of humanoid demos right now are either teleoperated or collapse on contact. Staying on task through a push, autonomously, is a real bar to clear.",
+        "What I want to know: how does it handle a novel object it hasn't seen, in bad lighting, on a cluttered surface? Clean apartment demos are necessary but not sufficient. Anyone seen out-of-distribution tests from this platform?"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-22T10:56:05.950230+00:00",
+    "media": {
+      "figures": [
+        "media/88e5970b/fig_00.png"
+      ],
+      "bsky": [
+        "media/88e5970b/bsky_00.png",
+        "media/88e5970b/bsky_01.png",
+        "media/88e5970b/bsky_02.png",
+        "media/88e5970b/bsky_03.png"
+      ],
+      "slides": [
+        "media/88e5970b/slide_00.png",
+        "media/88e5970b/slide_01.png",
+        "media/88e5970b/slide_02.png",
+        "media/88e5970b/slide_03.png",
+        "media/88e5970b/slide_04.png",
+        "media/88e5970b/slide_05.png",
+        "media/88e5970b/slide_06.png",
+        "media/88e5970b/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "73f86948",
+    "paper": {
+      "id": "doi-10.1002_rob.70308",
+      "title": "Multi‐Wheel Cooperative Simultaneous Climbing Control for Bridge Pier Defects DetectionCircular Frame Robot System",
+      "abstract": "ABSTRACT To address the limitations of traditional unmanned aerial vehicles (UAVs) and wall‐climbing robots in bridge‐pier defect detection, this research proposes a circular‐climbing robot specifically designed for bridge piers. First, based on the geometric characteristics of bridge piers and their construction environment, a circular robot frame is designed, and its mechanical behavior is analyzed to determine the conditions for stable climbing. Second, based on attitude information collected by multiple gyroscopes, an attitude estimation method for the circular robot and a multi‐wheel cooperative motion control algorithm are developed. On this basis, a multi‐motor master–slave fuzzy proportional integral derivative (PID) controller is implemented on a field programmable gate array (FPGA) platform to perform fuzzy inference on the attitude information, generate real‐time control parameters, and adaptively adjust the speeds of the crawling mechanisms, thereby achieving coordinated motion control of the multi‐wheel system. Finally, experiments are conducted to verify the system's reliability in terms of climbing stability and motion control accuracy. A comparative analysis further shows that the proposed robot exhibits a more stable mechanical structure and greater adaptability than existing wall‐climbing robots, and offers advantages in contact pressure adjustment, load capacity, and scalability, enabling it to carry various bridge pier inspection devices for different appl",
+      "authors": [
+        "Hui‐Feng Wang",
+        "Hao Du",
+        "Yue‐Yuan Guan",
+        "Ya‐Xiong Tong",
+        "He Huang",
+        "Rong Gao"
+      ],
+      "url": "https://doi.org/10.1002/rob.70308",
+      "doi": "10.1002/rob.70308",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "UAVs can't touch the pier. Climbers fall off. This robot hugs it.",
+      "commentary": "Bridge pier inspection is genuinely nasty: curved wet concrete, wind loading, no flat surface for suction cups. This team wraps a circular frame around the pier instead of clinging to one side, which is a mechanically honest solution to the geometry problem. The FPGA-based fuzzy PID with multi-gyroscope attitude fusion is solid engineering for real-time coordinated wheel speed correction on a curved surface. Honest caveat: field validation on real bridges with surface contamination, algae, and irregular section changes is not in this paper. Lab climbing stability numbers don't tell you what happens at a construction joint or a corroded patch.",
+      "slides": [
+        {
+          "title": "The inspection gap no one solved",
+          "body": "UAVs can't press sensors against a pier. Suction climbers need flat surfaces. Bridge piers are round, wet, and exposed. Most existing robots simply avoid the geometry problem."
+        },
+        {
+          "title": "Wrap it, don't cling to it",
+          "body": "A circular frame encircles the pier cross-section. Contact force is distributed around the circumference. Stable climbing doesn't depend on a single adhesion zone holding under load."
+        },
+        {
+          "title": "Multi-wheel coordination is the hard part",
+          "body": "Wheels at different frame positions travel at different effective radii. Multiple gyroscopes feed attitude estimates into a master-slave fuzzy PID running on FPGA for real-time speed correction across all drive motors."
+        },
+        {
+          "title": "Why FPGA, not a standard MCU",
+          "body": "Fuzzy inference on live attitude data from several gyros simultaneously needs parallel computation. FPGA executes control loops concurrently rather than sequentially, cutting latency for coordinated motor correction."
+        },
+        {
+          "title": "What the paper shows and what it doesn't",
+          "body": "Lab experiments confirm climbing stability and motion control accuracy. Real bridge surfaces add algae, construction joints, and section taper. Those conditions are the next test this design actually needs to pass."
+        },
+        {
+          "title": "Why this matters for inspection practice",
+          "body": "The modular frame can mount crack cameras, ultrasonic sensors, or LiDAR. One platform, multiple payloads, on the one bridge element hardest to inspect consistently. Journal of Field Robotics, 2026."
+        }
+      ],
+      "video_script": "Bridge pier inspection has a geometry problem nobody wanted to admit. UAVs can't press sensors against concrete. Suction climbers need flat surfaces. Piers are round. So this team stopped fighting the shape and built a robot that wraps around it. A circular frame, multiple driven wheels distributed around the circumference, and an FPGA running fuzzy PID on live gyroscope data to keep every wheel coordinated as the robot climbs. The mechanical logic is clean. The real question is what happens when it hits a corroded joint on an actual bridge. Would you trust this for routine inspection?",
+      "caption_instagram": "Bridge piers are one of the harder inspection targets in infrastructure work. Round, wet, often partially submerged, and the surface isn't flat enough for standard suction climbers.\n\nThis paper from Journal of Field Robotics proposes a circular-frame robot that encircles the pier instead of clinging to one face. Contact force distributes around the whole circumference. The geometry works with the pier shape rather than against it.\n\nThe control side is where it gets interesting: multiple gyroscopes feed attitude data into a fuzzy PID running on FPGA, coordinating all the drive wheels in real time as the robot climbs a curved surface. Master-slave architecture keeps speeds matched across the frame.\n\nHonest take: lab results show stable climbing and accurate motion control, but real piers have algae, construction joints, taper changes, and corrosion. That's the validation this design still needs before you'd put it on a routine inspection schedule.\n\nPaper: Multi-Wheel Cooperative Simultaneous Climbing Control for Bridge Pier Defects Detection Circular Frame Robot System, Journal of Field Robotics, https://doi.org/10.1002/rob.70308\n\n#bridgeinspection #climbingrobots #infrastructurerobotics #fieldrobotics #swarminspection #fpgacontrol #robotics",
+      "caption_tiktok": "Built a robot that hugs a bridge pier and climbs it. The circular frame is the whole trick. #robotics #bridgeinspection #climbingrobots #engineeringdesign",
+      "post_bluesky": "UAVs can't press sensors to a pier. Suction climbers need flat surfaces. Piers are round. So this team built a frame that encircles the pier instead. Multi-gyro fuzzy PID on FPGA keeps the wheels coordinated. Clever geometry fix. https://doi.org/10.1002/rob.70308",
+      "bluesky_thread": [
+        "The mechanical insight is real: distribute contact force around the circumference and you stop fighting the curved geometry. FPGA runs fuzzy inference on multiple gyro streams simultaneously, which is the right call for coordinated multi-wheel control with low latency.",
+        "But lab climbing stability on clean concrete is one thing. Algae, construction joints, irregular taper on a real bridge is another. Journal of Field Robotics is the right venue for this, which means the field validation results are what the community actually needs to see next. Anyone done…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-22T10:56:37.459517+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/73f86948/bsky_00.png",
+        "media/73f86948/bsky_01.png",
+        "media/73f86948/bsky_02.png",
+        "media/73f86948/bsky_03.png"
+      ],
+      "slides": [
+        "media/73f86948/slide_00.png",
+        "media/73f86948/slide_01.png",
+        "media/73f86948/slide_02.png",
+        "media/73f86948/slide_03.png",
+        "media/73f86948/slide_04.png",
+        "media/73f86948/slide_05.png",
+        "media/73f86948/slide_06.png",
+        "media/73f86948/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "ffc3de99",
+    "paper": {
+      "id": "doi-10.1002_rob.70266",
+      "title": "Develop of a Lightweight Underwater Robotic Arm for Automatic Sampling of Seafloor Hydrothermal Fluid",
+      "abstract": "ABSTRACT Traditional sampling methodologies that depend on the manual operation of large submersibles are characterized by significant time consumption and labor intensity. The incorporation of autonomous underwater robotic arms within unmanned underwater vehicles (UUVs) presents a promising opportunity to markedly improve sampling efficiency. This paper delineates the design of a lightweight underwater robotic arm specifically engineered for the sampling of hydrothermal fluids at the seafloor. We establish a comprehensive modeling framework that integrates kinematic, rigid‐body, and hydrodynamic parameters. To address environmental uncertainties and unmodeled dynamics, we employ a long short‐term memory (LSTM)–augmented model in conjunction with a momentum‐based observer for end‐effector force estimation, obviating the need for external force/torque sensors. Furthermore, we propose a multi‐sensor fusion control strategy that synergizes visual perception with temperature tracking and force feedback, thereby facilitating autonomous and precise sampling of hydrothermal vents. The proposed methodology has undergone experimental validation, yielding promising outcomes.",
+      "authors": [
+        "Shijun Wu",
+        "Weiqi Wang",
+        "Wenbo Zhang",
+        "Qingchao Xia",
+        "Canjun Yang"
+      ],
+      "url": "https://doi.org/10.1002/rob.70266",
+      "doi": "10.1002/rob.70266",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 7.5
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Force sensors fail at depth. This arm skips them entirely.",
+      "commentary": "Wu et al. built a lightweight UUV-mounted arm for autonomous hydrothermal vent fluid sampling, a task that normally requires a crewed submersible and hours of manual work. The clever bit is sensorless force estimation: an LSTM-augmented dynamics model plus a momentum-based observer reconstructs end-effector forces without a dedicated F/T sensor, which routinely floods or drifts at high pressure. They fuse that with vision and temperature tracking to close the loop autonomously. Honest caveat: 'promising outcomes' in the abstract is doing a lot of work, and Journal of Field Robotics should have demanded specific depth ratings, sampling success rates, and comparison to manual baselines before accepting that phrase. Still, the architecture for handling unmodeled hydrodynamic disturbances is genuinely worth studying.",
+      "slides": [
+        {
+          "title": "The problem with vent sampling",
+          "body": "Hydrothermal vent fluid sampling requires precise positioning near 400C plumes at 2000m+ depth. Current method: a pilot, a large crewed submersible, hours of manual work. Failure rate goes unmentioned in most papers."
+        },
+        {
+          "title": "No force sensor. On purpose.",
+          "body": "F/T sensors at depth fail. Instead, an LSTM model learns arm dynamics from training data. A momentum-based observer fills the gap in real time. Force is estimated, not measured. That is the core bet."
+        },
+        {
+          "title": "Three sensors, one control loop",
+          "body": "Vision locates the vent nozzle. A temperature probe confirms proximity to the fluid source. The LSTM force estimate prevents overloading the sampler. All three feed a single fusion controller. No external force hardware."
+        },
+        {
+          "title": "Why LSTM for dynamics?",
+          "body": "Hydrodynamic drag on an arm changes with vehicle motion, current, and arm pose. Analytical models miss this. An LSTM captures the residual error between the rigid-body model and observed behavior, then corrects the controller."
+        },
+        {
+          "title": "What the paper leaves open",
+          "body": "No depth rating stated. No sampling success rate reported. 'Promising outcomes' is the full quantitative summary. For a Journal of Field Robotics paper, that is a real gap. Real field validation numbers are needed."
+        },
+        {
+          "title": "Why it matters anyway",
+          "body": "Sensorless force estimation removes the weakest hardware link in deep-sea manipulation. If the LSTM generalizes across vent sites, this architecture could apply to pipeline inspection and nuclear waste retrieval too."
+        }
+      ],
+      "video_script": "Everyone assumes deep-sea robots need force sensors to handle delicate sampling tasks. This arm disagrees. Built for hydrothermal vent fluid collection at the seafloor, it estimates forces using an LSTM-trained dynamics model and a momentum observer, no sensor required. It fuses that with vision and temperature feedback to grab fluid samples autonomously. The approach removes the component most likely to flood or drift under pressure. The paper is light on hard field numbers, but the control architecture is worth your attention. Would you trust learned force estimation over hardware sensors at two thousand meters?",
+      "caption_instagram": "Force sensors are one of the first things to fail at depth. So these researchers removed them from the equation entirely.\n\nThis paper from Journal of Field Robotics details a lightweight robotic arm for UUVs, designed to autonomously sample hydrothermal vent fluids at the seafloor. The key move: replace a dedicated force/torque sensor with an LSTM-augmented dynamics model plus a momentum-based observer. The arm infers contact forces from what it knows about its own motion, not from a sensor that can flood at pressure.\n\nThe control loop fuses three things: computer vision to locate the vent nozzle, temperature tracking to confirm proximity to the fluid, and that estimated force feedback to avoid overloading the sampler. No crewed submersible. No manual pilot.\n\nHonest take: the abstract says 'promising outcomes' where I wanted success rates and a depth spec. For a field robotics journal, that vagueness stings. But the sensorless force estimation architecture is genuinely clever and the approach ports directly to pipeline inspection and nuclear retrieval work.\n\nPaper: 'Develop of a Lightweight Underwater Robotic Arm for Automatic Sampling of Seafloor Hydrothermal Fluid' in Journal of Field Robotics. DOI: 10.1002/rob.70266\n\n#swarmrobotics #underwaterrobotics #fieldrobotics #roboticarm #subsearobotics #machinelearning #deepseaexploration",
+      "caption_tiktok": "They built a deep-sea robot arm that estimates force without sensors. At hydrothermal vents. Using LSTM. The hardware reason is obvious once you think about it.\n#underwaterrobotics #robotics #deepseascience #fieldrobotics #robotarm",
+      "post_bluesky": "Force sensors are the weak link in deep-sea manipulation. They flood. They drift. This UUV arm estimates contact force from an LSTM dynamics model instead, no hardware required, and autonomously samples hydrothermal vents. Clever architecture. Thin field numbers. https://doi.org/10.1002/rob.70266",
+      "bluesky_thread": [
+        "The LSTM here isn't doing task planning. It's correcting the gap between the rigid-body dynamics model and real behavior under variable hydrodynamic drag. Then a momentum observer handles the rest. Elegant separation of concerns. That combo is worth borrowing for other subsea manipulation work.",
+        "My one complaint: Journal of Field Robotics and the results section says 'promising outcomes.' No depth rating. No sampling success percentage. No baseline comparison to manual ops. If you're reading this and know what the actual field numbers were, I'd genuinely like to know. What's your…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-07-22T10:57:11.574325+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/ffc3de99/bsky_00.png",
+        "media/ffc3de99/bsky_01.png",
+        "media/ffc3de99/bsky_02.png",
+        "media/ffc3de99/bsky_03.png"
+      ],
+      "slides": [
+        "media/ffc3de99/slide_00.png",
+        "media/ffc3de99/slide_01.png",
+        "media/ffc3de99/slide_02.png",
+        "media/ffc3de99/slide_03.png",
+        "media/ffc3de99/slide_04.png",
+        "media/ffc3de99/slide_05.png",
+        "media/ffc3de99/slide_06.png",
+        "media/ffc3de99/slide_07.png"
+      ]
+    }
   }
 ]
