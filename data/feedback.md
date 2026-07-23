@@ -1,31 +1,45 @@
-# Engagement lessons (auto-updated 2026-07-22)
+# Engagement lessons (auto-updated 2026-07-23)
 
-# Lessons Learned Brief
+# Lessons Learned Brief — Content Team
 
-## 1. Topics: Over vs Under-Performers
-**Over:** Relatable/visual mechanics win — football robots (3 likes), SAWbot (2), haircutting (2), underwater glider (2), congestion planner (2L/1R). Locomotion novelty and consumer-adjacent topics consistently outperform.
-**Under:** Niche industrial/subsea topics (blade repair, water cleaning, tendon hysteresis) scored zero across the board. Abstract control papers without vivid physical demonstrations consistently flatline.
+## 1. Topic Performance
+**Over-performed:** Visually dramatic or counterintuitive mechanics (wheel-legged football: 3 likes; SAWbot wave propulsion: 2+1; haircutting safety: 2; underwater glider size: 2+1; multi-robot task planning: 2+1 repost). Topics where the "why can't this exist yet" angle is immediately legible to a general audience.
 
-## 2. Hook Styles That Worked
-`number_stat` and `curiosity_gap` led on likes. `bold_claim` was highest volume but inconsistent — football robot spiked, mosquito drone scored zero.
+**Under-performed:** Niche control theory (wrench control, tendon hysteresis, rover localization), anything requiring domain context to feel interesting. Bold claims on underwater/marine topics rarely converted despite good hooks.
+
+---
+
+## 2. Hook Styles (3a)
+| Hook | Avg Likes | Avg Reposts | Avg Replies |
+|---|---|---|---|
+| curiosity_gap | 1.1 | 0.1 | 0.6 |
+| bold_claim | 0.6 | 0.1 | 0.5 |
+| number_stat | 1.0 | 0.7 | 0.3 |
+| tension | 0.4 | 0.0 | 0.7 |
+
+**Recommended weighting:** curiosity_gap 40%, number_stat 30%, bold_claim 20%, tension 10%. Tension drives replies but rarely likes or reposts — useful for conversation seeding, weak for reach.
+
+---
 
 ## 3. Carousel vs Video
-One video posted (juggling); 0 likes, 0 reposts, 1 reply. Insufficient data to conclude format advantage. **Test next: replicate a high-performing carousel topic as a video.**
+One video posted; zero likes. Too sparse to conclude. **Test 3 more videos before drawing conclusions.**
 
-## 3a. Hook Style Weighting
-| Hook | Avg Likes | Avg Reposts |
-|---|---|---|
-| number_stat | 1.0 | 0.67 |
-| curiosity_gap | 1.17 | 0.0 |
-| bold_claim | 0.64 | 0.09 |
-| tension | 0.33 | 0.0 |
+---
 
-**Recommended weighting:** curiosity_gap 35% · number_stat 30% · bold_claim 25% · tension 10%. Drop tension until evidence improves.
+## 3b. Thread vs Single
+| Format | Avg Likes | Avg Reposts | Avg Replies |
+|---|---|---|---|
+| single | 0.8 | 0.07 | 0.2 |
+| thread | 0.6 | 0.2 | 0.9 |
 
-## 3b. Bluesky Thread vs Single
-Threads average slightly more replies (0.9 vs 0.4) but fewer likes. Singles get marginally more likes. **Recommended split: 60% single / 40% thread.**
+Singles earn more likes; threads earn replies and occasional reposts. **Recommended split: 60% single, 40% thread.** Use threads for papers with multi-step methodology worth unpacking.
+
+---
 
 ## 4. Three Concrete Recommendations
-1. **Lead with numbers when available** — quantified claims (46%, 31-33%, 6 m/s) are your most reliable hook anchors.
-2. **Prioritize visually dramatic locomotion and consumer-adjacent robotics** — avoid pure control/estimation papers without striking figures.
-3. **Run a deliberate video experiment**: take a top-performing topic type (locomotion novelty) and produce one video carousel hybrid to isolate format effect.
+
+1. **Lead with the anomaly number in the hook.** The two highest-reach posts both had a specific, surprising metric front-loaded ("6 m/s," "no GPS/USBL," "congestion pruned before it forms"). Abstract tension statements underperform — convert them to stat or curiosity_gap framing.
+
+2. **Filter topics by visual legibility before writing.** The rejection log is dominated by "no usable figures." Prioritize papers with robot footage, clear diagrams, or before/after comparisons. If a paper can't generate 5 visually distinct carousel slides, skip it.
+
+3. **Run a dedicated curiosity_gap + single + visually dramatic topic cluster for the next 5 posts** to establish a baseline for what performs on Bluesky specifically, before expanding to Instagram/TikTok. Current data is too thin to optimize cross-platform; nail one channel first.
