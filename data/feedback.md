@@ -1,46 +1,28 @@
-# Engagement lessons (auto-updated 2026-07-24)
+# Engagement lessons (auto-updated 2026-07-25)
 
 # Content Team — Lessons Learned Brief
 
----
-
 ## 1. Topic Performance
+**Over-performed:** Visually striking or counter-intuitive robots (wheel-legged football: 3L, SAWbot: 2L, haircutting safety: 2L, underwater glider: 2L). Multi-robot coordination and planning also pulled above average (congestion-aware planner: 2L+1R). **Under-performed:** Niche sensor fusion papers (breast ultrasound deformation, wrench control, tendon hysteresis) and military/underwater survey papers. Reviews performed inconsistently. Rejection queue confirms figures availability is the primary bottleneck — fix sourcing before topic selection.
 
-**Over-performed:** Visually striking or physically intuitive robots (wheel-legged football, SAWbot wave propulsion, 32-legged amoeba, haircutting safety, mini underwater glider). Papers with a clear "one weird mechanic" hook outperform niche control theory papers.
-
-**Under-performed:** Highly specialized topics with narrow audiences (tendon hysteresis, orbital wrench control, planetary rovers, mosquito drone). Abstract manipulation benchmarks also underperformed.
-
----
-
-## 2. Hook Styles That Worked
-
-`curiosity_gap` and `bold_claim` both produced the highest individual like counts (2–3 likes). `number_stat` delivered one standout repost (congestion planner). `tension` was consistently flat.
-
----
+## 2. Hook Styles
+**number_stat** and **curiosity_gap** led on combined likes+reposts. **bold_claim** was volume-heavy but inconsistent (range: 0–3 likes). **tension** rarely broke above 1 like.
 
 ## 3. Carousel vs Video
+One video posted, zero likes. Insufficient data; avoid video format until Bluesky audience is larger.
 
-Only one video posted; it earned 0 likes. **Insufficient data to conclude.** Test more videos before drawing conclusions.
+### 3a. Hook Weighting Recommendation
+| Hook | Avg Likes | Recommend Weight |
+|---|---|---|
+| curiosity_gap | ~1.3 | **35%** |
+| number_stat | ~1.0 | **30%** |
+| bold_claim | ~0.7 | **25%** |
+| tension | ~0.3 | **10%** |
 
-### 3a. Hook-Style Weighting
-| Hook | Avg Likes | Avg Reposts | Verdict |
-|---|---|---|---|
-| curiosity_gap | ~1.2 | ~0.2 | Best overall |
-| bold_claim | ~0.7 | ~0.1 | Solid, high variance |
-| number_stat | ~1.0 | ~0.7 | Best for reposts |
-| tension | ~0.3 | ~0 | Weakest |
+### 3b. Thread vs Single
+Threads average slightly more replies; singles slightly more likes. Difference is negligible at this sample size. Maintain **50/50** split and revisit at n=50.
 
-**Recommended weighting:** curiosity_gap 40% · number_stat 30% · bold_claim 25% · tension 5%
-
-### 3b. Bluesky Thread vs Single
-Threads average slightly more replies (1.0 vs 0.4) but singles edge on likes. Difference is marginal. **Recommend 50/50 split** and track for 20 more posts before changing.
-
----
-
-## 4. Three Concrete Recommendations
-
-1. **Lead with physical intuition.** "One motor, continuous wave" outperforms "controller reduces error by X%." Prioritise papers with a single memorable mechanical novelty over incremental control results.
-
-2. **Drop tension hooks.** Zero reposts across 7 uses. Replace with curiosity_gap or a concrete number_stat opener instead.
-
-3. **Figures are the gate.** 17+ papers were auto-rejected for missing figures. Implement a figure-quality check *before* paper selection, not after, to stop wasting the pipeline.
+## 4. Concrete Recommendations
+1. **Lead with the robot, not the problem** — posts featuring a physical robot doing something surprising outperform abstract system papers consistently.
+2. **Prioritize curiosity_gap and number_stat hooks** — retire tension as a default until it shows a signal.
+3. **Gatekeep on figures first** — before writing any post, confirm 3+ usable visuals exist; rejection waste is currently higher than posting rate.
