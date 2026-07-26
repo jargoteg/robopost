@@ -2370,5 +2370,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "88e5970b",
+    "paper_id": "yt-IiNbFPOUrz8",
+    "title": "Real-Time Omni-Modal Interaction Driven Whole-Body Mobile Manipulation",
+    "format": "carousel",
+    "hook": "One model, every task. But does the home actually cooperate?",
+    "posted_at": "2026-07-26T09:20:23.862260+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mrk2isf5ha27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
