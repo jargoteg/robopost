@@ -16482,7 +16482,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-19T18:31:10.057440+00:00",
     "media": {
       "figures": [
@@ -16765,7 +16765,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-22T10:56:05.950230+00:00",
     "media": {
       "figures": [
@@ -16851,7 +16851,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-22T10:56:37.459517+00:00",
     "media": {
       "figures": [],
@@ -16934,7 +16934,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-22T10:57:11.574325+00:00",
     "media": {
       "figures": [],
@@ -17182,5 +17182,301 @@
       ]
     },
     "issue": 185
+  },
+  {
+    "draft_id": "aafc1dd6",
+    "paper": {
+      "id": "doi-10.1126_scirobotics.aed6267",
+      "title": "Performant robotic manipulation with real-world reinforcement learning",
+      "abstract": "Real-world robotic manipulation in homes and factories demands reliability, efficiency, and robustness that approach or surpass skilled human operators. We present a real-world reinforcement learning (RL) framework, RL-100, for achieving complete task success under a predefined evaluation protocol built on diffusion visuomotor policies. RL-100 unifies imitation and RL under a single clipped proximal policy optimization surrogate objective applied in the denoising process, yielding conservative, stable improvements across offline and online stages. To meet deployment latency, a lightweight consistency distillation compresses multistep diffusion into a one-step controller for high-frequency control. The framework is task, embodiment, and representation agnostic and supports both single-action and action-chunking control. We evaluated RL-100 on eight diverse real-robot tasks, from pushing and bowling to pouring, cloth folding, unscrewing, multistage juicing, and long-horizon box folding. Under our predefined protocol, RL-100 achieved 100% success in the evaluated trials (1000 of 1000 episodes), including up to 250 of 250 consecutive trials on one task. It matched or surpassed expert teleoperators in time to completion. Without retraining, a single policy attained ∼90% zero-shot success under environmental and dynamics shifts, adapted in a few-shot regime to substantial task variations (86.7%), and remained robust to human perturbations (about 96%). Our juicing robot served custo",
+      "authors": [
+        "Kun Lei",
+        "Huanyu Li",
+        "Dongjie Yu",
+        "Zhenyu Wei",
+        "Lingxiao Guo",
+        "Zhennan Jiang"
+      ],
+      "url": "https://doi.org/10.1126/scirobotics.aed6267",
+      "doi": "10.1126/scirobotics.aed6267",
+      "source": "Science Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 9.0,
+      "video_url": "https://www.youtube.com/watch?v=ZoT9-KK_Zu4",
+      "video_title": "Ep#58: RL-100: Performant Robotic Manipulation with Real-World Reinforcement Learning",
+      "open_version": "https://arxiv.org/abs/2510.14830",
+      "repo_url": "https://github.com/lucidrains/RL-100",
+      "verified": {
+        "hardware": "both",
+        "platform": "UR5, Franka+LeapHand, xArm-Franka; simulation also used for ablations",
+        "key_numbers": [
+          "1000/1000 episodes success across 8 tasks",
+          "250/250 consecutive trials on one task",
+          "~90% zero-shot success under environmental/dynamics shifts",
+          "7 hours continuous mall deployment without failure"
+        ],
+        "honest_caveat": "Online RL stage is resource-intensive requiring parameter tuning, resets, and approvals on real hardware.",
+        "writer_brief": "RL-100 fine-tunes diffusion visuomotor policies via a three-stage pipeline: IL pretraining, iterative offline RL, then brief online RL using a clipped PPO objective applied within the denoising process. A consistency distillation step compresses multi-step diffusion to one-step for real-time control. Evaluated on 8 real-robot tasks across multiple embodiments, achieving 100% success on 1000 trials and surviving 7-hour unattended mall deployment serving customers."
+      },
+      "fig_source": "https://github.com/lucidrains/RL-100"
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "1000 for 1000. Every trial. Real robots. Real tasks.",
+      "commentary": "RL-100 fine-tunes diffusion visuomotor policies through three stages: imitation learning pretraining, iterative offline RL, then brief online RL using clipped PPO applied inside the denoising process. Consistency distillation compresses multi-step diffusion to one-step inference for real-time control. The headline numbers are genuinely hard to dismiss: 1000/1000 episodes across eight tasks, 250 consecutive trials on one task, and seven hours of unattended mall deployment serving actual customers. The ~90% zero-shot robustness under dynamics shifts is the result I'd want to stress-test most. The authors are upfront that the online RL stage is resource-heavy, requiring resets, parameter tuning, and real-hardware approvals, which puts the ceiling on how broadly this transfers outside well-resourced labs right now.",
+      "slides": [
+        {
+          "title": "1000 of 1000 episodes",
+          "body": "Eight real-robot tasks. Pushing, pouring, cloth folding, unscrewing, multi-stage juicing, long-horizon box folding. 100% success under a predefined evaluation protocol across all of them."
+        },
+        {
+          "title": "How it works: three stages",
+          "body": "Stage 1: imitation learning pretraining on demonstrations. Stage 2: iterative offline RL. Stage 3: brief online RL with clipped PPO applied inside the diffusion denoising process. Then consistency distillation compresses to one-step control."
+        },
+        {
+          "title": "Why diffusion + PPO is tricky",
+          "body": "Diffusion policies denoise over many steps. Applying PPO inside that process without destabilizing training is the core technical contribution. Clipping keeps updates conservative and stable across both offline and online stages."
+        },
+        {
+          "title": "Zero-shot robustness numbers",
+          "body": "Without retraining: ~90% success under environmental and dynamics shifts. 86.7% on substantial task variations in few-shot regime. ~96% under human perturbations. Tested across UR5, Franka+LeapHand, and xArm-Franka."
+        },
+        {
+          "title": "7 hours in a mall, unattended",
+          "body": "The juicing robot served real customers continuously for 7 hours with zero failures. Not a lab demo. Multiple embodiments validated. Policy is task, embodiment, and representation agnostic."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Online RL stage requires hardware resets, careful parameter tuning, and institutional approvals on real robots. Resource-intensive by the authors' own admission. Not plug-and-play for most labs yet."
+        }
+      ],
+      "video_script": "A robot serves juice in a shopping mall for seven hours straight, no human intervention, no failures. That is not a cherry-picked lab run. That is RL-100, a framework that fine-tunes diffusion visuomotor policies through imitation learning, offline RL, then online PPO applied inside the denoising process itself. Consistency distillation squeezes multi-step diffusion into one-step real-time control. One thousand trials, one thousand successes, across eight different tasks and three robot arms. The caveat: online RL still needs resets and hardware approvals, so this is not a small-lab paper yet. My question to you: is 100% success on a fixed protocol actually the right benchmark, or are we optimizing for the wrong thing?",
+      "caption_instagram": "1000 trials. 1000 successes. Then 7 hours serving juice in a mall.\n\nRL-100 (Science Robotics, 2026) takes diffusion visuomotor policies and fine-tunes them through three stages: imitation learning pretraining, iterative offline RL, and then online RL using clipped PPO applied inside the diffusion denoising process. Consistency distillation then compresses everything to one-step inference for real-time control.\n\nThe numbers: 1000/1000 episodes across 8 tasks including cloth folding, unscrewing, and long-horizon box folding. ~90% zero-shot robustness under dynamics shifts. Tested on UR5, Franka+LeapHand, and xArm-Franka. The mall deployment is not a highlight reel clip, it is the evaluation.\n\nHonest caveat from the authors themselves: the online RL stage is resource-intensive, requires hardware resets and parameter tuning, and needs institutional approvals for real-robot runs. This is a well-resourced lab result for now. But the pipeline is task and embodiment agnostic, which matters.\n\narXiv: 2510.14830 | Lei et al.\n\n#swarmorobotics #roboticmanipulation #reinforcementlearning #diffusionpolicy #realworldrl #robotlearning #sciencerobotics",
+      "caption_tiktok": "1000 robot trials, 1000 successes, then 7 hours serving customers in a mall. Real robots, real tasks, no failures. #robotics #reinforcementlearning #diffusionpolicy #robotmanipulation",
+      "post_bluesky": "1000 for 1000. Every trial. Real robots.\n\nRL-100 applies PPO inside diffusion denoising, compresses to one-step control, then runs 7 hrs unattended in a mall. ~90% zero-shot under dynamics shifts. Three arms, eight tasks.\n\nhttps://doi.org/10.1126/scirobotics.aed6267",
+      "bluesky_thread": [
+        "The clever part is WHERE the RL happens: inside the denoising process of the diffusion policy, not wrapped around it. Clipped PPO keeps it stable across offline then online stages. Consistency distillation gets you to one-step inference without retraining from scratch. Genuinely non-obvious…",
+        "Authors are upfront: online RL needs resets, tuning, and real-hardware approvals. That is a real cost most labs cannot absorb easily. So the question is whether the offline RL stages alone get you most of the gains. Code here: https://github.com/lucidrains/RL-100 and video breakdown…"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-26T07:39:28.615449+00:00",
+    "media": {
+      "figures": [
+        "media/aafc1dd6/pdf/fig_00.png",
+        "media/aafc1dd6/fig_00.png",
+        "media/aafc1dd6/pdf/fig_01.png",
+        "media/aafc1dd6/pdf/fig_03.png"
+      ],
+      "bsky": [
+        "media/aafc1dd6/bsky_00.png",
+        "media/aafc1dd6/bsky_01.png",
+        "media/aafc1dd6/bsky_02.png",
+        "media/aafc1dd6/bsky_03.png"
+      ],
+      "slides": [
+        "media/aafc1dd6/slide_00.png",
+        "media/aafc1dd6/slide_01.png",
+        "media/aafc1dd6/slide_02.png",
+        "media/aafc1dd6/slide_03.png",
+        "media/aafc1dd6/slide_04.png",
+        "media/aafc1dd6/slide_05.png",
+        "media/aafc1dd6/slide_06.png",
+        "media/aafc1dd6/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "285d4048",
+    "paper": {
+      "id": "rss-f708491f08",
+      "title": "Learning Humanoid Navigation From Human Data",
+      "abstract": "We present EgoNav, a system that enables a humanoid robot to perform zero-shot, goal-free traversal across evaluated unseen environments by learning entirely from 5 hours of human walking data, with no robot data or finetuning. A diffusion model predicts distributions of plausible future trajectories conditioned on past trajectory, a 360° visual memory fusing color, depth, and semantics, and video features from a frozen DINOv3 backbone that capture appearance cues invisible to depth sensors. A hybrid sampling scheme achieves real-time inference in 10 denoising steps, and a receding-horizon controller selects paths from the predicted distribution. We validate EgoNav through offline evaluations, real-world comparisons to VFH+ and MPPI, and failure-mode analysis during zero-shot deployment on a Unitree G1 humanoid across unseen indoor and outdoor environments. Behaviors such as waiting for doors to open, navigating around crowds, and avoiding glass walls emerge naturally from the learned prior. We will release the dataset and trained models.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11595528",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.5,
+      "video_url": "https://www.youtube.com/watch?v=QwJcF08hfs8",
+      "video_title": "Reinforcement Learning behind Humanoid Robot Explained",
+      "open_version": "https://arxiv.org/abs/2604.00416",
+      "verified": {
+        "hardware": "real",
+        "platform": "Unitree G1 humanoid robot",
+        "key_numbers": [
+          "5 hours of human walking data",
+          "300 minutes / 25 km total dataset",
+          "10 denoising steps for real-time inference",
+          "VM construction runs within 30 ms on Jetson Orin NX CPU"
+        ],
+        "honest_caveat": "Human data alone was insufficient in prior work (HEAD); embodiment gap and sensor blind spots (glass, dynamic agents) remain challenges.",
+        "writer_brief": "EgoNav trains a diffusion model on 5 hours of human walking data (no robot data) to predict distributions of future 6D trajectories. It uses a 360° panoramic visual memory fusing color, depth, and semantics, plus frozen DINOv3 video features. A hybrid DDIM-DDPM scheme enables real-time inference in 10 steps. The system deploys zero-shot on a Unitree G1 humanoid, demonstrating collision avoidance, crowd navigation, and glass-wall avoidance in unseen indoor and outdoor environments."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A humanoid robot learned to walk through crowds from 5 hours of human footage. Zero robot data.",
+      "commentary": "EgoNav trains a diffusion model purely on 5 hours of human walking video, then deploys zero-shot on a Unitree G1 humanoid. No robot training data, no finetuning. The clever part is the 360-degree visual memory fusing color, depth, and semantics alongside frozen DINOv3 features, which catches things depth sensors miss entirely, like glass walls. Hybrid DDIM-DDPM gets inference down to 10 denoising steps, running within 30 ms on a Jetson Orin NX CPU, which is genuinely tight for a walking robot. The honest caveat: the authors flag the embodiment gap themselves. Human walking data does not perfectly transfer, and dynamic agents plus glass surfaces remain real failure modes. But crowd navigation and door-waiting emerging without explicit programming is the kind of behavioral generalization worth paying attention to.",
+      "slides": [
+        {
+          "title": "Zero robot data. Real robot.",
+          "body": "EgoNav trains entirely on 5 hours of human walking footage, 300 minutes, 25 km total. No robot demonstrations, no simulation, no finetuning. Deploys zero-shot on a Unitree G1 humanoid."
+        },
+        {
+          "title": "360-degree visual memory",
+          "body": "Fuses color, depth, and semantics into a panoramic memory buffer. Frozen DINOv3 video features add appearance cues depth sensors cannot capture, enabling glass-wall avoidance that pure depth pipelines miss."
+        },
+        {
+          "title": "Real-time in 10 steps",
+          "body": "A hybrid DDIM-DDPM sampling scheme runs diffusion inference in 10 denoising steps. Visual memory construction completes within 30 ms on a Jetson Orin NX CPU. Tight enough for a walking humanoid."
+        },
+        {
+          "title": "Emergent crowd behaviors",
+          "body": "Waiting for doors to open, routing around crowds, avoiding glass walls. None of these were explicitly programmed. They surface from the human walking prior and the receding-horizon trajectory selector."
+        },
+        {
+          "title": "Honest limitations",
+          "body": "Authors flag these themselves: embodiment gap between human and humanoid kinematics, sensor blind spots for glass and dynamic agents, and prior work HEAD already showed human data alone is sometimes insufficient."
+        },
+        {
+          "title": "Why it matters",
+          "body": "Humanoid robots need scalable data sources. Human video is abundant; robot demonstrations are not. If the embodiment gap can be narrowed, this data strategy could generalize across platforms without per-robot collection."
+        }
+      ],
+      "video_script": "A humanoid robot walks through a crowded indoor space. It waits at a door, routes around people, and stops before hitting a glass wall it cannot see with depth alone. No robot training data was used. EgoNav learned all of this from 5 hours of a human walking around. A diffusion model predicts future trajectory distributions, runs in 10 steps, under 30 milliseconds on edge hardware. The question is whether the embodiment gap between human walker and G1 humanoid will hold up at scale. What do you think breaks first?",
+      "caption_instagram": "A humanoid robot that learned to navigate crowds from watching humans walk. No robot data collected. No simulation. No finetuning.\n\nEgoNav takes 5 hours of human walking footage, 25 km worth, and trains a diffusion model to predict plausible future trajectories. It then deploys zero-shot on a Unitree G1 humanoid in unseen indoor and outdoor environments.\n\nThe 360-degree visual memory is the key piece. It fuses color, depth, and semantics, then adds frozen DINOv3 video features to catch things depth sensors miss entirely. Glass walls show up in the feature space even when depth returns nothing useful.\n\nReal-time inference in 10 denoising steps, running within 30 ms on a Jetson Orin NX CPU. Crowd avoidance and door-waiting emerge from the prior without being explicitly coded. Authors are upfront about the embodiment gap and dynamic-agent failures. Dataset and models will be released.\n\nPaper: Learning Humanoid Navigation From Human Data, arXiv 2604.00416\n\n#swarmrobotics #humanoidrobots #robotnavigation #diffusionmodels #mobilerobotics #robotlearning #embodiedai",
+      "caption_tiktok": "Humanoid robot. Zero robot training data. Learned crowd navigation from 5 hours of humans walking. 👀 #humanoidrobot #robotics #navigationai #embodiedai #robotlearning",
+      "post_bluesky": "A humanoid robot learned crowd navigation from 5 hrs of human walking footage. Zero robot data. Glass-wall avoidance emerges naturally. Runs in 10 diffusion steps, 30 ms on edge hardware. http://ieeexplore.ieee.org/document/11595528",
+      "bluesky_thread": [
+        "The clever bit: frozen DINOv3 features catch glass walls that depth sensors miss entirely. The honest bit: authors flag the embodiment gap themselves. Human gait data does not map cleanly onto G1 kinematics. That gap is the real research problem here, not the diffusion model.",
+        "Open question for anyone working on humanoid deployment: how much does a 5-hour human dataset actually cover? Crowded malls, yes. Construction sites, narrow corridors, uneven outdoor terrain? This approach needs a stress test outside controlled indoor environments. What breaks first?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-26T07:40:03.894214+00:00",
+    "media": {
+      "figures": [
+        "media/285d4048/pdf/src_06.png",
+        "media/285d4048/pdf/src_05.png",
+        "media/285d4048/pdf/src_02.png",
+        "media/285d4048/pdf/src_00.png"
+      ],
+      "bsky": [
+        "media/285d4048/bsky_00.png",
+        "media/285d4048/bsky_01.png",
+        "media/285d4048/bsky_02.png",
+        "media/285d4048/bsky_03.png"
+      ],
+      "slides": [
+        "media/285d4048/slide_00.png",
+        "media/285d4048/slide_01.png",
+        "media/285d4048/slide_02.png",
+        "media/285d4048/slide_03.png",
+        "media/285d4048/slide_04.png",
+        "media/285d4048/slide_05.png",
+        "media/285d4048/slide_06.png",
+        "media/285d4048/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "2f2c428f",
+    "paper": {
+      "id": "2607.20748v1",
+      "title": "A real-time RGB-D perception pipeline for autonomous impact hammers in mining: self-filtering, rock segmentation and rock-breaking poses generation",
+      "abstract": "Impact hammers, also known as rock-breakers, are essential machines in mining operations, where they perform secondary reduction. In underground mining, these machines are typically teleoperated, limiting operational efficiency. This paper presents a real-time RGB-D perception pipeline as a step towards automating the operation of hydraulic impact hammers used in mining. The proposed system simultaneously generates operationally feasible rock-breaking poses and a robot-free 3D representation of the workspace. The proposed approach combines image-based instance segmentation with geometric point cloud processing, and operates on embedded hardware at approximately 10 Hz with a total latency of around 675 ms, enabling responsive closed-loop behavior when integrated with a control system. Experimental results in a representative scaled scenario demonstrate that the proposed system is suitable for real-time autonomous impact hammer operation.",
+      "authors": [
+        "Martín Gallegos",
+        "Francisco Leiva",
+        "Patricio Loncomilla",
+        "Michelle Cortés",
+        "Javier Ruiz-del-Solar"
+      ],
+      "url": "https://arxiv.org/abs/2607.20748v1",
+      "source": "arxiv",
+      "score": 6.5,
+      "verified": {
+        "hardware": "real",
+        "platform": "Bobcat E10 mini-excavator with hydraulic impact hammer, NVIDIA Jetson AGX Orin, two Stereolabs ZED X1 cameras",
+        "key_numbers": [
+          "~10 Hz operating frequency on embedded hardware",
+          "~675 ms total latency",
+          "1.5 × 1.5 m steel grate in scaled experimental setup",
+          "4 degrees of freedom hydraulic arm"
+        ],
+        "honest_caveat": "Evaluated only in a scaled laboratory environment designed to mimic, not replicate, real underground mining conditions.",
+        "writer_brief": "The authors built a real-time RGB-D perception pipeline for autonomous hydraulic impact hammers used in mining. Running on a Jetson AGX Orin at ~10 Hz with ~675 ms latency, the system self-filters the robot from point clouds, segments rocks on a steel grate using instance segmentation and geometric clustering, and generates prioritized, kinematically feasible rock-breaking poses. It was validated in a scaled lab setup using a Bobcat E10 mini-excavator with a hydraulic hammer end-effector and two stereo cameras."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "A mining excavator now picks its own targets at 10 Hz.",
+      "commentary": "This paper builds a full RGB-D perception pipeline for hydraulic impact hammers, the machines that break oversized rocks in underground mines. Running on a Jetson AGX Orin at ~10 Hz with ~675 ms total latency, it handles self-filtering, instance segmentation, geometric clustering, and kinematically feasible pose generation in one pipeline. The hardware is real: a Bobcat E10 mini-excavator with a hydraulic hammer end-effector and two ZED X1 stereo cameras. Honest caveat though: validation happened in a scaled lab with a 1.5 x 1.5 m steel grate, explicitly not real underground conditions. Rock dust, vibration, lighting changes, and grate occlusion under a real mine will stress-test every number here.",
+      "slides": [
+        {
+          "title": "The problem: rocks block mines",
+          "body": "Oversized rocks jam ore passes in underground mines. Impact hammers break them. Today, a human teleopeates every strike. This paper asks: what if the hammer picks its own targets?"
+        },
+        {
+          "title": "Real hardware, not simulation",
+          "body": "Bobcat E10 mini-excavator. Hydraulic hammer end-effector. Two Stereolabs ZED X1 stereo cameras. NVIDIA Jetson AGX Orin onboard. A real 4-DOF hydraulic arm doing real work in a lab."
+        },
+        {
+          "title": "Pipeline: three problems at once",
+          "body": "1. Self-filter the robot from its own point cloud. 2. Segment individual rocks via instance segmentation plus geometric clustering. 3. Generate prioritized, kinematically feasible breaking poses."
+        },
+        {
+          "title": "The numbers that matter",
+          "body": "~10 Hz on embedded hardware. ~675 ms total latency end-to-end. Fast enough for closed-loop control integration. Tested on a 1.5 x 1.5 m steel grate in a scaled lab scenario."
+        },
+        {
+          "title": "What the lab can't replicate",
+          "body": "Authors are upfront: scaled lab, not a real mine. Rock dust, percussive vibration, dynamic lighting, and partial occlusion underground will challenge every component. Field validation is the next real test."
+        },
+        {
+          "title": "Why this matters anyway",
+          "body": "Teleoperated rock-breakers are a genuine bottleneck in underground mining throughput. A perception stack that runs on a Jetson at 10 Hz is the prerequisite for anything autonomous. This is that foundation."
+        }
+      ],
+      "video_script": "Underground mines have a rock problem. Oversized boulders block ore flow, and today a human teleoperated every single hammer strike to break them. This team built a perception pipeline that runs on a Jetson AGX Orin, on a real Bobcat mini-excavator, at 10 Hz, with 675 milliseconds of total latency. It finds rocks, filters out the robot itself, and plans where to hit. The catch: they tested it in a scaled lab, not a real mine. Rock dust and vibration haven't touched this system yet. So here's my question: what's the single hardest thing a real underground mine would throw at this pipeline first?",
+      "caption_instagram": "A mining excavator that picks its own rock-breaking targets, running at 10 Hz on an embedded Jetson. That's the claim here, and the hardware is real.\n\nThe system does three things simultaneously: filters the robot out of its own point cloud, segments individual rocks using instance segmentation and geometric clustering, and generates prioritized breaking poses that the arm can actually reach. Total latency sits at ~675 ms on a Bobcat E10 mini-excavator with two ZED X1 stereo cameras and a hydraulic hammer end-effector.\n\nThe honest caveat, and the authors say it themselves: this was validated in a scaled lab with a 1.5 x 1.5 m steel grate. Not a real underground mine. Rock dust, percussive vibration, dynamic lighting, and the general chaos of a working mine tunnel haven't touched this system yet.\n\nBut a real-time perception stack running on embedded hardware is the prerequisite for anything that comes next. This is that foundation. Field deployment will be the real paper.\n\nPaper: 'A real-time RGB-D perception pipeline for autonomous impact hammers in mining: self-filtering, rock segmentation and rock-breaking poses generation' arXiv:2607.20748\n\n#miningrobotics #fieldrobotics #roboticperception #autonomousmining #embeddedrobotics #pointcloudprocessing #industrialrobotics",
+      "caption_tiktok": "Real excavator, real hammer, real rocks. 10 Hz perception on embedded hardware. Lab results only so far, but the pipeline is genuinely there. #miningrobotics #fieldrobotics #robotics #autonomoussystems",
+      "post_bluesky": "A Bobcat excavator with a hydraulic hammer now self-selects its own rock targets at 10 Hz, 675 ms latency, on a Jetson AGX Orin. Real hardware. Scaled lab only, but the stack is real. https://arxiv.org/abs/2607.20748v1",
+      "bluesky_thread": [
+        "What's clever: one pipeline handles self-filtering, rock instance segmentation, AND kinematically feasible pose generation simultaneously on embedded hardware. That's not trivial at 10 Hz. The ZED X1 stereo pair doing the perception work on a live hydraulic arm is the part I want to see stressed.",
+        "The authors are upfront that this is a scaled lab, not an underground mine. Rock dust alone would be my first worry, percussive vibration from the hammer itself would be my second. Has anyone here run RGB-D cameras on active impact equipment? Curious what survived."
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "pending_review",
+    "created": "2026-07-26T07:40:42.572691+00:00",
+    "media": {
+      "figures": [
+        "media/2f2c428f/src_02.png",
+        "media/2f2c428f/src_00.png",
+        "media/2f2c428f/src_01.png",
+        "media/2f2c428f/src_06.png"
+      ],
+      "bsky": [
+        "media/2f2c428f/bsky_00.png",
+        "media/2f2c428f/bsky_01.png",
+        "media/2f2c428f/bsky_02.png",
+        "media/2f2c428f/bsky_03.png"
+      ],
+      "slides": [
+        "media/2f2c428f/slide_00.png",
+        "media/2f2c428f/slide_01.png",
+        "media/2f2c428f/slide_02.png",
+        "media/2f2c428f/slide_03.png",
+        "media/2f2c428f/slide_04.png",
+        "media/2f2c428f/slide_05.png",
+        "media/2f2c428f/slide_06.png",
+        "media/2f2c428f/slide_07.png"
+      ]
+    }
   }
 ]
