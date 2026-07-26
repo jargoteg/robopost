@@ -2404,5 +2404,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "ffc3de99",
+    "paper_id": "doi-10.1002_rob.70266",
+    "title": "Develop of a Lightweight Underwater Robotic Arm for Automatic Sampling of Seafloor Hydrothermal Fluid",
+    "format": "carousel",
+    "hook": "Force sensors fail at depth. This arm skips them entirely.",
+    "posted_at": "2026-07-26T12:41:21.227416+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "tension",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mrkfq4zrtw27",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
