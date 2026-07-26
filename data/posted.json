@@ -2353,5 +2353,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-25T22:46:50.667525+00:00"
+  },
+  {
+    "draft_id": "170a3991",
+    "paper_id": "rss-e58f588160",
+    "title": "OmniVTLA: Vision-Tactile-Language-Action Models With Semantic-Aligned Tactile Sensing",
+    "format": "carousel",
+    "hook": "33.3% better peg insertion. Just from adding touch.",
+    "posted_at": "2026-07-26T07:43:05.714330+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mrjv2suj422u",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

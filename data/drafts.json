@@ -16482,7 +16482,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-19T18:31:10.057440+00:00",
     "media": {
       "figures": [
@@ -16508,7 +16508,9 @@
         "media/170a3991/slide_07.png"
       ]
     },
-    "issue": 176
+    "issue": 176,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "819e120e",
@@ -16788,7 +16790,9 @@
         "media/88e5970b/slide_07.png"
       ]
     },
-    "issue": 179
+    "issue": 179,
+    "scheduled_after": "2026-07-26T09:13:05.714325+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "73f86948",
@@ -16872,7 +16876,9 @@
         "media/73f86948/slide_07.png"
       ]
     },
-    "issue": 180
+    "issue": 180,
+    "scheduled_after": "2026-07-26T09:13:05.714325+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "ffc3de99",
@@ -16955,7 +16961,9 @@
         "media/ffc3de99/slide_07.png"
       ]
     },
-    "issue": 181
+    "issue": 181,
+    "scheduled_after": "2026-07-26T09:13:05.714325+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "913b0a02",
@@ -17261,7 +17269,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-26T07:39:28.615449+00:00",
     "media": {
       "figures": [
@@ -17286,7 +17294,8 @@
         "media/aafc1dd6/slide_06.png",
         "media/aafc1dd6/slide_07.png"
       ]
-    }
+    },
+    "issue": 186
   },
   {
     "draft_id": "285d4048",
@@ -17356,7 +17365,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-26T07:40:03.894214+00:00",
     "media": {
       "figures": [
@@ -17381,7 +17390,8 @@
         "media/285d4048/slide_06.png",
         "media/285d4048/slide_07.png"
       ]
-    }
+    },
+    "issue": 187
   },
   {
     "draft_id": "2f2c428f",
@@ -17452,7 +17462,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "pending_review",
+    "status": "in_review",
     "created": "2026-07-26T07:40:42.572691+00:00",
     "media": {
       "figures": [
@@ -17477,6 +17487,7 @@
         "media/2f2c428f/slide_06.png",
         "media/2f2c428f/slide_07.png"
       ]
-    }
+    },
+    "issue": 188
   }
 ]
