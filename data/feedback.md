@@ -1,28 +1,53 @@
-# Engagement lessons (auto-updated 2026-07-25)
+# Engagement lessons (auto-updated 2026-07-26)
 
 # Content Team — Lessons Learned Brief
 
+---
+
 ## 1. Topic Performance
-**Over-performed:** Visually striking or counter-intuitive robots (wheel-legged football: 3L, SAWbot: 2L, haircutting safety: 2L, underwater glider: 2L). Multi-robot coordination and planning also pulled above average (congestion-aware planner: 2L+1R). **Under-performed:** Niche sensor fusion papers (breast ultrasound deformation, wrench control, tendon hysteresis) and military/underwater survey papers. Reviews performed inconsistently. Rejection queue confirms figures availability is the primary bottleneck — fix sourcing before topic selection.
 
-## 2. Hook Styles
-**number_stat** and **curiosity_gap** led on combined likes+reposts. **bold_claim** was volume-heavy but inconsistent (range: 0–3 likes). **tension** rarely broke above 1 like.
+**Over-performed:** Locomotion novelty (wave-propulsion SAWbot, 32-legged amoeba, wheel-legged football, QuadBoat) and manipulation benchmarks consistently drew replies or likes. Human-relatable applications (haircutting, underwater grippers, BCI) also pulled engagement despite low absolute numbers.
 
-## 3. Carousel vs Video
-One video posted, zero likes. Insufficient data; avoid video format until Bluesky audience is larger.
+**Under-performed:** Highly technical sub-system papers (tendon hysteresis, wrench control, bridge-climbing) generated near-zero engagement. Medical/sensor-fusion topics underperformed their apparent interest potential.
 
-### 3a. Hook Weighting Recommendation
-| Hook | Avg Likes | Recommend Weight |
+---
+
+## 2. Hook Styles That Worked
+
+`curiosity_gap` and `bold_claim` led on likes (haircutting: 2L, underwater glider: 2L, mosquito drone: 0L — mixed). `tension` reliably generated **replies** even with 0 likes, suggesting it sparks debate without broad appeal. `number_stat` was inconsistent.
+
+---
+
+## 3. Carousel vs. Video
+
+One video post (juggling) got 0 likes, 1 reply — indistinguishable from weak carousels. **Data too sparse to conclude anything; test 3+ more videos.**
+
+### 3a. Hook-Style Weighting (Bluesky evidence)
+
+| Hook | Avg. Likes | Avg. Replies | Verdict |
+|---|---|---|---|
+| `curiosity_gap` | 1.5 | 0.75 | Best likes |
+| `bold_claim` | 0.8 | 0.5 | High volume, diluted |
+| `tension` | 0.4 | 1.0 | Best for replies |
+| `number_stat` | 0.75 | 0.25 | Weakest overall |
+
+**Recommended weighting:** curiosity_gap 40% · tension 30% · bold_claim 20% · number_stat 10%
+
+### 3b. Bluesky Thread vs. Single
+
+| Format | Avg. Likes | Avg. Replies |
 |---|---|---|
-| curiosity_gap | ~1.3 | **35%** |
-| number_stat | ~1.0 | **30%** |
-| bold_claim | ~0.7 | **25%** |
-| tension | ~0.3 | **10%** |
+| Thread | 0.75 | 0.93 |
+| Single | 0.69 | 0.19 |
 
-### 3b. Thread vs Single
-Threads average slightly more replies; singles slightly more likes. Difference is negligible at this sample size. Maintain **50/50** split and revisit at n=50.
+Threads generate **5× more replies**; likes are roughly equal. **Recommended split: 65% thread / 35% single.**
 
-## 4. Concrete Recommendations
-1. **Lead with the robot, not the problem** — posts featuring a physical robot doing something surprising outperform abstract system papers consistently.
-2. **Prioritize curiosity_gap and number_stat hooks** — retire tension as a default until it shows a signal.
-3. **Gatekeep on figures first** — before writing any post, confirm 3+ usable visuals exist; rejection waste is currently higher than posting rate.
+---
+
+## 4. Three Concrete Recommendations
+
+1. **Lead with locomotion and dexterity novelty.** These topics consistently outperform sub-system engineering papers. Prioritize papers where the robot does something visually surprising or physically counterintuitive.
+
+2. **Shift hooks toward `curiosity_gap` + `tension`; retire `number_stat` as a primary hook.** Numbers work as slide content, not as openers — the stat-led hooks averaged the weakest like-to-reply ratio.
+
+3. **Run a dedicated video test.** Post 4 video-format carousels over the next two weeks with `curiosity_gap` hooks on thread format (the current best-performing combination) and compare directly against carousel equivalents on the same topics before drawing conclusions on format.
