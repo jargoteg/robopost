@@ -16857,7 +16857,7 @@
       ],
       "hook_style": "tension"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-22T10:56:37.459517+00:00",
     "media": {
       "figures": [],
@@ -16880,7 +16880,9 @@
     },
     "issue": 180,
     "scheduled_after": "2026-07-26T10:50:23.862260+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "ffc3de99",
@@ -16964,7 +16966,7 @@
       ]
     },
     "issue": 181,
-    "scheduled_after": "2026-07-26T10:50:23.862260+00:00",
+    "scheduled_after": "2026-07-26T12:35:13.775940+00:00",
     "queue_notified": true
   },
   {
