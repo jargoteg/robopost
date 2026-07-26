@@ -1,40 +1,36 @@
 {
-  "ts": "2026-07-22T10:55",
-  "collected": 234,
-  "dedup_dropped": 58,
-  "after_dedup": 176,
+  "ts": "2026-07-26T07:33",
+  "collected": 273,
+  "dedup_dropped": 64,
+  "after_dedup": 209,
   "score_hist": {
-    "0": 9,
-    "1": 31,
-    "2": 43,
-    "3": 30,
-    "4": 31,
-    "5": 22,
-    "6": 5,
-    "7": 3,
-    "8": 2
+    "0": 16,
+    "1": 15,
+    "2": 30,
+    "3": 44,
+    "4": 38,
+    "5": 30,
+    "6": 13,
+    "7": 16,
+    "8": 6,
+    "9": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 10,
+  "ranked_above_floor": 36,
   "split": {
     "videos": 1,
-    "papers": 5,
-    "news": 4
+    "papers": 24,
+    "news": 11
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Real-Time Omni-Modal Interaction Driven Whole-Body",
+      "t": "Stretch 4.0 Home Robot",
       "type": "video",
       "video": true
     },
     {
-      "t": "Multi‐Wheel Cooperative Simultaneous Climbing Cont",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "Develop of a Lightweight Underwater Robotic Arm fo",
+      "t": "Agile Wheel-Bipedal Loco-Manipulation With Active ",
       "type": "paper",
       "video": false
     }

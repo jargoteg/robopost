@@ -16956,5 +16956,231 @@
       ]
     },
     "issue": 181
+  },
+  {
+    "draft_id": "913b0a02",
+    "paper": {
+      "id": "web-111a353a19",
+      "title": "The Drone That Hides in Motion",
+      "abstract": "Northwestern University engineers have developed an experimental drone called the Phantom Twist that spins up to 25 times per second to create motion blur, making it significantly less visible during flight. Rather than appearing as a recognizable aircraft, it manifests as a faint blur to observers. The drone's design was optimized using artificial intelligence to maximize its visual concealment properties. As a result, it is approximately ten times less visually noticeable than conventional quadcopters. The technology is intended for low-disruption aerial operations where minimizing visual detection is important.",
+      "authors": [
+        "Northwestern University",
+        "Interesting Engineering"
+      ],
+      "url": "https://interestingengineering.com/videos/the-drone-that-hides-in-motion",
+      "source": "Interesting Engineering",
+      "item_type": "article",
+      "journal": false
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "10x less visible: this drone spins 25 times per second to disappear",
+      "commentary": "The Phantom Twist exploits human visual persistence by spinning fast enough to blur its own silhouette into near-invisibility. Ten times less noticeable than a standard quadcopter is a striking claim, and the AI-optimized geometry angle is genuinely interesting. The honest caveat: visual concealment in daylight to a naked eye is a narrow use case. Thermal cameras, radar, and acoustic signatures are untouched by this approach, so real low-detection operations need a lot more than optical blur. Still, the perceptual engineering thinking here is worth following.",
+      "slides": [
+        {
+          "title": "The drone that blurs itself",
+          "body": "Phantom Twist spins at 25 Hz during flight. At that rate, human vision registers a faint smear, not a recognizable aircraft. Result: roughly 10x lower visual noticeability vs. standard quadcopters."
+        },
+        {
+          "title": "Spin geometry, AI-tuned",
+          "body": "The frame shape and spin rate were co-optimized using AI to maximize motion blur across the widest range of viewing angles. It is not just fast rotation, the geometry is doing work too."
+        },
+        {
+          "title": "What it actually hides from",
+          "body": "Human eyes in daylight. That is the scope. Thermal imagers, acoustic sensors, and radar are unaffected. Visual stealth is one layer of a much thicker detection stack in any real deployment."
+        },
+        {
+          "title": "Where this actually fits",
+          "body": "Low-disruption inspection, wildlife monitoring, urban survey where public startle response or aesthetic intrusion matters. Not a surveillance or military solution on its own."
+        },
+        {
+          "title": "The open question",
+          "body": "Does spinning at 25 Hz hurt payload capacity, flight time, or stability in wind? The concealment number is compelling. The efficiency trade-off is the missing data point right now."
+        }
+      ],
+      "video_script": "A drone that hides by spinning. Northwestern's Phantom Twist rotates 25 times per second, fast enough that your brain registers a blur instead of an aircraft. Ten times less visually noticeable than a standard quadcopter, according to the team. The frame geometry was AI-optimized to maximize that effect across viewing angles. But here is the thing: it only fools human eyes. Thermal, acoustic, radar, none of that is touched. So where do you actually deploy a drone like this, and is optical concealment alone worth the engineering trade-off?",
+      "caption_instagram": "A drone that hides in plain sight by spinning itself invisible.\n\nNorthwestern's Phantom Twist rotates at 25 Hz during flight. That is fast enough to replace a recognizable quadcopter silhouette with a faint smear in human vision. The team reports roughly 10x lower visual noticeability compared to conventional designs, with frame geometry AI-optimized to maximize blur across viewing angles.\n\nThe honest take: this solves one specific problem. Human visual detection in daylight. Thermal cameras, microphones, and radar are completely unaffected. Real low-signature operations layer all of those, so Phantom Twist is one piece, not a complete answer.\n\nThe interesting research thread here is perceptual engineering, designing robots around the limits of human senses rather than purely around flight performance. That is a genuinely underexplored angle in aerial robotics.\n\nStill want to see the flight time and wind stability data before getting too excited.\n\nVia Interesting Engineering, covering work out of Northwestern University.\n\n#dronetech #aerialrobotics #UAV #roboticsresearch #perceptualengineering #inspectionrobotics #robotdesign",
+      "caption_tiktok": "This drone spins 25x per second to disappear from human vision. 10x less visible than a normal quadcopter. Thermal cameras still see it fine though. #drone #robotics #UAV #engineeringdesign",
+      "post_bluesky": "10x less visible: this drone spins 25 times per second to blur its own silhouette out of human perception. AI-optimized frame geometry, not just raw speed. Clever perceptual engineering. Thermal and acoustic signatures are a…\nhttps://interestingengineering.com/videos/the-drone-that-hides-in-motion",
+      "bluesky_thread": [
+        "The concept is genuinely interesting: design around the limits of human vision rather than around raw flight performance. That is a different optimization target than most UAV work and worth taking seriously as a research direction.",
+        "But 'less visually noticeable' is doing a lot of work in that headline. Any real low-detection use case stacks optical, thermal, acoustic, and radar signatures together. What is the flight time penalty for spinning at 25 Hz continuously? That number matters more to me than the visibility stat…"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-26T07:34:20.928708+00:00",
+    "media": {
+      "figures": [
+        "media/913b0a02/fig_00.png"
+      ],
+      "bsky": [
+        "media/913b0a02/bsky_00.png",
+        "media/913b0a02/bsky_01.png",
+        "media/913b0a02/bsky_02.png",
+        "media/913b0a02/bsky_03.png"
+      ],
+      "slides": [
+        "media/913b0a02/slide_00.png",
+        "media/913b0a02/slide_01.png",
+        "media/913b0a02/slide_02.png",
+        "media/913b0a02/slide_03.png",
+        "media/913b0a02/slide_04.png",
+        "media/913b0a02/slide_05.png",
+        "media/913b0a02/slide_06.png"
+      ]
+    },
+    "issue": 183
+  },
+  {
+    "draft_id": "02a01ab4",
+    "paper": {
+      "id": "yt-AlC1Aon3A4I",
+      "title": "Stretch 4.0 Home Robot",
+      "abstract": "Meet Stretch 4.0 - The one-armed, three-wheeled robot that can navigate your home safely. Would you rather a humanoid robot or Stretch?\n\nICRA is the flagship conference of @ieee-ras. To learn more about this and other upcoming RAS conferences, visit: https://www.ieee-ras.org/conferences-workshops/upcoming-conferences\n\nAnd visit the RAS site: https://www.ieee-ras.org/",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=AlC1Aon3A4I",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=AlC1Aon3A4I",
+      "video_first": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "video",
+      "hook": "1 arm, 3 wheels, and it probably fits your hallway better than a humanoid",
+      "commentary": "Stretch 4.0 is Hello Robot's latest iteration on a deliberately minimal form factor: one telescoping arm, a wheeled base, and a design philosophy that bets on simplicity over anthropomorphism. The honest case for this approach is real. Narrow corridors, cluttered floors, and doorway clearances punish humanoids hard in actual homes. The caveat: a demo video proves navigation and pick-and-place in controlled settings, not the chaos of a real household with kids, pets, and stuff on the floor. The humanoid hype cycle in 2026 makes Stretch look almost contrarian, which is worth taking seriously.",
+      "slides": [
+        {
+          "title": "What Stretch 4.0 actually is",
+          "body": "One telescoping arm. Three wheels. Narrow enough for real hallways. Hello Robot's bet: home manipulation does not require a humanoid form factor."
+        },
+        {
+          "title": "Why form factor matters",
+          "body": "Humanoids fall over. Wheeled bases do not. Stretch trades dexterity ceiling for stability floor, which in cluttered home environments is often the right trade."
+        },
+        {
+          "title": "What the demo shows",
+          "body": "Navigation around furniture, object retrieval, shelf interaction. Smooth in a tidy lab-adjacent space. Real homes add laundry, pets, and unpredictable floors."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "One arm limits bimanual tasks: opening jars, folding laundry, carrying trays. That gap does not disappear because humanoids are overhyped."
+        },
+        {
+          "title": "Humanoid vs. Stretch: the real question",
+          "body": "Not which looks cooler. Which actually completes 10 consecutive tasks in your home without a reset. Nobody has published that number yet for either platform."
+        }
+      ],
+      "video_script": "Everyone is building humanoids right now. Hello Robot is not. Stretch 4.0 has one arm, three wheels, and a form factor narrow enough to actually fit a real hallway. The argument is simple: stability over spectacle. Wheeled bases do not fall. One arm is still enough to open a fridge, fetch a bottle, hand you something. The demo looks clean. But clean demos in tidy rooms are easy. The real test is your house, not their lab. Would you trust this over a humanoid for actual daily tasks?",
+      "caption_instagram": "Everyone is racing to build humanoids. Hello Robot is doing something different.\n\nStretch 4.0: one telescoping arm, three wheels, a base narrow enough for real doorways. The design philosophy is deliberately minimal, and in 2026 that actually looks like a reasonable bet.\n\nHumanoids are impressive until they meet stairs, clutter, and a wet kitchen floor. Wheeled platforms do not have a falling-over problem. Stretch trades the dexterity ceiling of two arms for a stability floor that survives real homes. That is not a small thing.\n\nHonest caveat: one arm cannot fold laundry, open jars, or carry a tray. The demo shows a controlled, tidy environment. Real deployment data across diverse homes does not exist publicly yet for this platform or any humanoid. Until someone publishes that, the comparison is vibe-based.\n\nFull video linked in bio. What would make you actually trust a home robot?\n\n#swarmrobotics #mobilerobotics #homerobotics #humanoidrobotics #hellorobot #icra2026 #robotresearch",
+      "caption_tiktok": "Everyone building humanoids, Hello Robot building something that fits in your hallway. One arm. Three wheels. Might actually be the smarter bet.\n\n#homerobot #robotics #hellorobot #humanoid #stretch",
+      "post_bluesky": "Everyone is building humanoids. Hello Robot is not. Stretch 4.0: 1 arm, 3 wheels, fits real doorways. Stability over spectacle. Watch it navigate: https://www.youtube.com/watch?v=AlC1Aon3A4I Is minimal form factor the smarter home robot bet right now?",
+      "bluesky_thread": [
+        "The honest case for Stretch: wheeled bases do not fall, narrow frames fit actual hallways, and one arm covers a surprising range of fetch tasks. The honest limit: bimanual manipulation is a hard wall. Folding laundry, opening jars, carrying a full tray. That gap is real.",
+        "With the humanoid-in-classrooms debate running hot right now, Stretch is a useful reference point. Not every robot problem needs a human shape. Sometimes the question is just: what form factor actually completes 10 tasks in a row without a reset? Nobody has published that number cleanly yet."
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-26T07:34:48.638868+00:00",
+    "media": {
+      "figures": [
+        "media/02a01ab4/fig_00.png"
+      ],
+      "bsky": [
+        "media/02a01ab4/bsky_00.png",
+        "media/02a01ab4/bsky_01.png",
+        "media/02a01ab4/bsky_02.png",
+        "media/02a01ab4/bsky_03.png"
+      ],
+      "slides": [
+        "media/02a01ab4/slide_00.png",
+        "media/02a01ab4/slide_01.png",
+        "media/02a01ab4/slide_02.png",
+        "media/02a01ab4/slide_03.png",
+        "media/02a01ab4/slide_04.png",
+        "media/02a01ab4/slide_05.png",
+        "media/02a01ab4/slide_06.png"
+      ],
+      "video": "media/02a01ab4/video.mp4"
+    },
+    "issue": 184
+  },
+  {
+    "draft_id": "7a1c794a",
+    "paper": {
+      "id": "rss-fa18cbd8c7",
+      "title": "Agile Wheel-Bipedal Loco-Manipulation With Active Force Rejection",
+      "abstract": "Recent research advances in wheel-legged robots underscore their potential for versatile real-world deployment. Integrating a robotic arm with such a platform enables loco-manipulation capabilities, significantly expanding its range of potential applications. However, robust whole-body control and coordination for loco-manipulation tasks are critically challenged by external forces inherent to contact-rich environments. This letter addresses the whole-body loco-manipulation problem for wheel-bipedal robots operating under such conditions. We propose an Extended Kalman Filter (EKF)-based explicit force estimator that synergistically integrates rigid-body dynamics with a data-driven neural network. This hybrid approach combines the real-time predictive power of neural networks with the interpretability of model-based dynamics. Leveraging these force estimates, we also introduce a force-responsive whole-body controller capable of dynamically adapting to external forces. This integrated active force rejection whole-body control framework facilitates real-time estimation and adaptive compensation for external forces, and therefore enable the robot's agile loco-manipulation in contact-rich environments. Extensive experimental validation in contact-rich loco-manipulation tasks demonstrates the effectiveness of our approach. Results confirm that the proposed framework improves the robot's performance in force-intensive scenarios.",
+      "authors": [],
+      "url": "http://ieeexplore.ieee.org/document/11603998",
+      "source": "ieeexplore.ieee.org",
+      "item_type": "paper",
+      "journal": true,
+      "score": 9.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "EKF + neural net cuts force estimation lag enough to keep a wheel-biped stable mid-push",
+      "commentary": "This paper tackles a real headache in wheel-legged loco-manipulation: when your arm contacts something, the reaction forces destabilize the base before any controller can respond. Their fix is a hybrid EKF that fuses rigid-body dynamics with a neural network, so you get the NN's speed and the model's interpretability in one estimator. The force-responsive whole-body controller then adapts in real time rather than waiting for a disturbance to propagate. Honest caveat: 'extensive experimental validation' in the abstract doesn't tell us what contact forces or speeds were tested, and wheel-biped platforms still struggle on truly uneven terrain where the force model assumptions break down. But the hybrid estimator architecture is the kind of practical engineering that field deployers actually need.",
+      "slides": [
+        {
+          "title": "The problem in one sentence",
+          "body": "When a wheel-biped arm contacts an object, reaction forces hit the base faster than standard controllers respond. The robot tips or slips before compensation kicks in."
+        },
+        {
+          "title": "Hybrid force estimator",
+          "body": "An EKF fuses rigid-body dynamics with a trained neural network. The NN predicts fast; the model-based layer keeps estimates physically consistent. Neither alone handles both requirements."
+        },
+        {
+          "title": "Active force rejection controller",
+          "body": "Force estimates feed a whole-body controller that adapts wheel and leg torques in real time. The system compensates for contact loads without stopping the manipulation task."
+        },
+        {
+          "title": "Why this matters for field robots",
+          "body": "Contact-rich tasks, valve turning, surface cleaning, pushing doors, are exactly what inspection and maintenance robots need. Stability under reaction forces is the gating requirement for deployment."
+        },
+        {
+          "title": "Honest limitation",
+          "body": "Results are validated in lab contact tasks. Force model accuracy on uneven or slippery surfaces, where wheel-bipeds already struggle, is untested. Field numbers still needed."
+        },
+        {
+          "title": "Bottom line",
+          "body": "Hybrid EKF design is pragmatic and reproducible. If the estimator holds up outside controlled conditions, this is a credible building block for mobile manipulation in real worksites."
+        }
+      ],
+      "video_script": "Wheel-legged robots are promising for inspection and maintenance. But the moment the arm touches something, the reaction force fights the base. This team's answer: a hybrid estimator that combines a neural network's speed with the physical consistency of rigid-body dynamics. Feed those estimates into a whole-body controller and you get real-time compensation for contact loads. Lab results look solid. The open question is whether the force model holds when the ground itself stops cooperating. Would you trust this on an offshore platform?",
+      "caption_instagram": "A wheel-biped picks something up and the arm's reaction forces try to topple it. That's the problem this paper actually solves.\n\nThe fix is a hybrid force estimator: an Extended Kalman Filter that combines classical rigid-body dynamics with a neural network. Fast predictions from the NN, physical consistency from the model. Neither works as well alone.\n\nThose estimates drive a whole-body controller that adapts torques across the arm, wheels, and legs in real time. The goal is stable loco-manipulation in contact-rich tasks, valves, doors, surfaces, the stuff field robots actually need to handle.\n\nCaveat: validation is in controlled lab contact scenarios. Uneven terrain and slippery surfaces are where wheel-bipeds usually fall apart, and that's not tested here. Worth watching if they publish field trials.\n\nPaper: 'Agile Wheel-Bipedal Loco-Manipulation With Active Force Rejection' via IEEE Xplore.\n\n#swarmrobotics #fieldrobotics #mobilerobotics #locomotion #manipulation #wholebody #inspectionrobotics #robotics",
+      "caption_tiktok": "Wheel-legged robot keeps its balance while the arm pushes against things. Hybrid neural plus model estimator doing the work. Field deployment is the real test though. #robotics #legged robots #manipulation #fieldobotics #engineering",
+      "post_bluesky": "EKF + neural net hybrid estimates contact forces fast enough for a wheel-biped to stay stable mid-manipulation. Clever architecture. Lab results solid. Field terrain is the real exam. http://ieeexplore.ieee.org/document/11603998",
+      "bluesky_thread": [
+        "The estimator design is the interesting bit: NN gives you speed, rigid-body dynamics keeps the estimate physically honest. Running both in parallel and fusing via EKF is pragmatic engineering, not just an ablation trick. Worth reading the estimator section closely.",
+        "My caveat: wheel-bipeds already struggle on uneven or slippery ground, and that's exactly where force model assumptions drift. Lab contact tasks are a necessary start, not a finish line. Anyone seen this class of estimator tested on actual site conditions?"
+      ],
+      "hook_style": "number_stat"
+    },
+    "status": "in_review",
+    "created": "2026-07-26T07:35:19.081907+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/7a1c794a/bsky_00.png",
+        "media/7a1c794a/bsky_01.png",
+        "media/7a1c794a/bsky_02.png",
+        "media/7a1c794a/bsky_03.png"
+      ],
+      "slides": [
+        "media/7a1c794a/slide_00.png",
+        "media/7a1c794a/slide_01.png",
+        "media/7a1c794a/slide_02.png",
+        "media/7a1c794a/slide_03.png",
+        "media/7a1c794a/slide_04.png",
+        "media/7a1c794a/slide_05.png",
+        "media/7a1c794a/slide_06.png",
+        "media/7a1c794a/slide_07.png"
+      ]
+    },
+    "issue": 185
   }
 ]
