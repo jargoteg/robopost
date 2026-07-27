@@ -1,7 +1,7 @@
-# Community trends (updated 2026-07-26T19:10Z)
+# Community trends (updated 2026-07-27T02:54Z)
 
-The robotics community is buzzing across several distinct threads right now. The hottest debate centers on humanoid robots in schools, specifically a New York high school's plan to deploy one, which teachers unions and locals are loudly opposing. Closely tied is broader skepticism about humanoid form factor itself, with many questioning whether it reflects a lack of imagination about what robots could be. Realbotix's pivot away from sex robots is generating serious discussion, with a researcher-led thread unpacking the implications. Classic engineering content is performing unusually well, with the Oldham coupling and folded-structure posts racking up thousands of engagements, suggesting nostalgia and fundamentals resonate strongly. There's also ongoing chatter about AI wealth concentration, prompted by a billionaire's comments linking robotics to poverty solutions.
+The robotics community on Bluesky is buzzing across several distinct threads right now. The biggest conversation centers on humanoid robots in schools, sparked by a New York district halting its classroom robot plan after public backlash and union pushback. Closely related is skepticism toward humanoid form factors generally, with many questioning why robots need to look human at all. OpenAI's robotics team and Pentagon guardrails are drawing concern about safety governance. The "billionaire solves poverty with AI and robotics" discourse is generating predictable eye-rolls. On the warmer side, a 12-year-old using robotics to preserve a Native American language is getting genuine engagement and goodwill.
 
-Recurring references include the New York Focus reporting on the school robot and The Onion's half-marathon piece circulating as dry commentary.
+Recurring references include Realbotix's pivot away from sex robots, Unitree G1 snow-clearing footage, and the Russia Aidol collapse moment.
 
-Post angle to try today: a straightforward poll or take on whether humanoid is the wrong default form factor for education robots. The skepticism is loud and the moment is live.
+A post angle that would land today: a sharp take on the New York school humanoid robot reversal framed as a win for community input over tech-first decision-making, inviting educators and researchers to weigh in.
