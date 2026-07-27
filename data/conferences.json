@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T07:55:11.521665+00:00",
+  "updated": "2026-07-27T08:25:46.228797+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -14,7 +14,7 @@
       "year": 2026,
       "start": "2026-09-27",
       "end": "2026-10-01",
-      "location": "Pittsburgh, USA",
+      "location": "Pittsburgh, PA, USA",
       "confidence": "confirmed"
     },
     {
@@ -30,23 +30,23 @@
       "year": 2026,
       "start": "2026-11-09",
       "end": "2026-11-12",
-      "location": "Austin, USA",
+      "location": "Austin, TX, USA",
       "confidence": "confirmed"
     },
     {
       "name": "DARS",
       "year": 2026,
       "start": "2026-10-01",
-      "end": "2026-10-03",
-      "location": "TBD",
+      "end": "2026-10-31",
+      "location": "Unknown",
       "confidence": "estimated"
     },
     {
       "name": "MRS",
       "year": 2027,
-      "start": "2027-12-01",
-      "end": "2027-12-02",
-      "location": "TBD",
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "location": "Unknown",
       "confidence": "estimated"
     },
     {
@@ -54,7 +54,7 @@
       "year": 2026,
       "start": "2026-12-06",
       "end": "2026-12-09",
-      "location": "Santa Clara, USA",
+      "location": "Santa Clara, CA, USA",
       "confidence": "confirmed"
     },
     {
@@ -69,48 +69,40 @@
       "name": "ICSR",
       "year": 2026,
       "start": "2026-11-01",
-      "end": "2026-11-03",
-      "location": "TBD",
+      "end": "2026-11-30",
+      "location": "Unknown",
       "confidence": "estimated"
     },
     {
       "name": "FSR",
-      "year": 2027,
-      "start": "2027-09-01",
-      "end": "2027-09-05",
-      "location": "TBD",
+      "year": 2026,
+      "start": "2026-09-01",
+      "end": "2026-09-30",
+      "location": "Unknown",
       "confidence": "estimated"
     },
     {
       "name": "SSRR",
       "year": 2026,
       "start": "2026-10-01",
-      "end": "2026-10-03",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "IEEE OCEANS",
-      "year": 2026,
-      "start": "2026-09-14",
-      "end": "2026-09-18",
-      "location": "Singapore, Singapore",
+      "end": "2026-10-31",
+      "location": "Unknown",
       "confidence": "estimated"
     },
     {
       "name": "CASE",
       "year": 2026,
-      "start": "2026-08-22",
-      "end": "2026-08-26",
-      "location": "TBD",
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "location": "Unknown",
       "confidence": "estimated"
     },
     {
       "name": "WAFR",
       "year": 2026,
       "start": "2026-10-01",
-      "end": "2026-10-03",
-      "location": "TBD",
+      "end": "2026-10-31",
+      "location": "Unknown",
       "confidence": "estimated"
     }
   ]
