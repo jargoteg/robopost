@@ -2457,5 +2457,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-07-29T22:56:32.376681+00:00"
+  },
+  {
+    "draft_id": "913b0a02",
+    "paper_id": "web-111a353a19",
+    "title": "The Drone That Hides in Motion",
+    "format": "carousel",
+    "hook": "10x less visible: this drone spins 25 times per second to disappear",
+    "posted_at": "2026-07-30T09:57:48.653376+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "article",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mru6hffn3l2j",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
