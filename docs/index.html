@@ -42,9 +42,9 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-07-30 09:56 UTC <span class="chip ok">+0 today</span></p></header>
+<p>@jahirargote · generated 2026-07-30 11:15 UTC <span class="chip ok">+0 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">7</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">95</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">5</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">1</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">96</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
   <header><span class="chip in_review">in review</span>
@@ -86,28 +86,22 @@ https://doi.org/10.1126/scirobotics.aed6267</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The estimator design is the interesting bit: NN gives you speed, rigid-body dynamics keeps the estimate physically honest. Running both in parallel and fusing via EKF is pragmatic engineering, not just an ablation trick. Worth reading the estimator section closely.</div><div class="reply">My caveat: wheel-bipeds already struggle on uneven or slippery ground, and that&#x27;s exactly where force model assumptions drift. Lab contact tasks are a necessary start, not a finish line. Anyone seen this class of estimator tested on actual site conditions?</div>
 </article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">video</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/184" target="_blank">issue #184</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">video</span><span class="chip warn">posts after 11:27 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/184" target="_blank">issue #184</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">Everyone is building humanoids. Hello Robot is not. Stretch 4.0: 1 arm, 3 wheels, fits real doorways. Stability over spectacle. Watch it navigate: https://www.youtube.com/watch?v=AlC1Aon3A4I Is minimal form factor the smarter home robot bet right now?</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/02a01ab4/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/02a01ab4/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/02a01ab4/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/02a01ab4/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The honest case for Stretch: wheeled bases do not fall, narrow frames fit actual hallways, and one arm covers a surprising range of fetch tasks. The honest limit: bimanual manipulation is a hard wall. Folding laundry, opening jars, carrying a full tray. That gap is real.</div><div class="reply">With the humanoid-in-classrooms debate running hot right now, Stretch is a useful reference point. Not every robot problem needs a human shape. Sometimes the question is just: what form factor actually completes 10 tasks in a row without a reset? Nobody has published that number cleanly yet.</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/183" target="_blank">issue #183</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">10x less visible: this drone spins 25 times per second to blur its own silhouette out of human perception. AI-optimized frame geometry, not just raw speed. Clever perceptual engineering. Thermal and acoustic signatures are a…
-https://interestingengineering.com/videos/the-drone-that-hides-in-motion</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/913b0a02/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/913b0a02/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/913b0a02/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/913b0a02/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The concept is genuinely interesting: design around the limits of human vision rather than around raw flight performance. That is a different optimization target than most UAV work and worth taking seriously as a research direction.</div><div class="reply">But &#x27;less visually noticeable&#x27; is doing a lot of work in that headline. Any real low-detection use case stacks optical, thermal, acoustic, and radar signatures together. What is the flight time penalty for spinning at 25 Hz continuously? That number matters more to me than the visibility stat…</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~5463m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1203m)</td><td>✅ success <span class='mono'>2026-07-30 08:29</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~723m)</td><td>✅ success <span class='mono'>2026-07-29 22:56</span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>10:00 UTC (~3m)</td><td>▫️ pending <span class='mono'>2026-07-30 09:54</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>10:00 UTC (~3m)</td><td>▫️ cancelled <span class='mono'>2026-07-30 09:54</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>12:00 UTC (~123m)</td><td>✅ success <span class='mono'>2026-07-30 08:27</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~5384m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1124m)</td><td>✅ success <span class='mono'>2026-07-30 08:29</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~644m)</td><td>✅ success <span class='mono'>2026-07-29 22:56</span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>11:20 UTC (~4m)</td><td>✅ success <span class='mono'>2026-07-30 09:59</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>11:30 UTC (~14m)</td><td>⏳ in_progress <span class='mono'>2026-07-30 11:14</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>12:00 UTC (~44m)</td><td>✅ success <span class='mono'>2026-07-30 08:27</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-26 12:41</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-07-30 09:57</td>
+<td>The Drone That Hides in Motion</td><td class="mono">single</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-07-26 12:41</td>
 <td>Develop of a Lightweight Underwater Robotic Arm for </td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-26 11:05</td>
 <td>Multi‐Wheel Cooperative Simultaneous Climbing Contro</td><td class="mono">single</td>
@@ -135,17 +129,15 @@ https://interestingengineering.com/videos/the-drone-that-hides-in-motion</p>
 <td>The First Brain Computer Interfaces</td><td class="mono">thread</td>
 <td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-19 02:04</td>
 <td>Wheel-Legged Robots Play Football and Balance a Ball</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 3, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-18 21:27</td>
-<td>CHAI – Compliant Human-centered Adaptive Interaction</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 3, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>Erratum for the Research Article “Observing a robot peer</b> · no reason given</li><li><b>Secret Four-Legged Military Robot Spotted? 🤖🚀 Real or AI</b> · ban military</li><li><b>Tornyol — Mosquito killing micro-drone</b> · no reason given</li><li><b>Research on Task Sequence Planning and Trajectory Optimi</b> · no reason given</li><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14", "07-15", "07-16", "07-17", "07-18", "07-19", "07-20", "07-21", "07-22", "07-23", "07-24", "07-25", "07-26", "07-27", "07-28", "07-29"],datasets:[{data:[909, 912, 912, 912, 912, 912, 912, 914, 915, 915, 916, 916, 916, 916, 916, 916, 916, 915, 915, 915, 915],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-18", "07-19", "07-19", "07-19", "07-19", "07-19", "07-20", "07-22", "07-22", "07-22", "07-22", "07-26", "07-26", "07-26", "07-26"],datasets:[
- {label:"likes",data:[1, 3, 0, 0, 1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 1],backgroundColor:"#FF8A2B"},
+new Chart(echart,{type:"bar",data:{labels:["07-19", "07-19", "07-19", "07-19", "07-19", "07-20", "07-22", "07-22", "07-22", "07-22", "07-26", "07-26", "07-26", "07-26", "07-30"],datasets:[
+ {label:"likes",data:[3, 0, 0, 1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 1, 0],backgroundColor:"#FF8A2B"},
  {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>
