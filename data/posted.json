@@ -2474,5 +2474,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "02a01ab4",
+    "paper_id": "yt-AlC1Aon3A4I",
+    "title": "Stretch 4.0 Home Robot",
+    "format": "video",
+    "hook": "1 arm, 3 wheels, and it probably fits your hallway better than a humanoid",
+    "posted_at": "2026-07-30T12:58:17.964622+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "number_stat",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mruik42o2a2r",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
