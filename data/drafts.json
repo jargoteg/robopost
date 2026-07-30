@@ -17495,5 +17495,99 @@
       ]
     },
     "issue": 188
+  },
+  {
+    "draft_id": "35281e33",
+    "paper": {
+      "id": "2509.15610",
+      "title": "Miniature soft robot with magnetically reprogrammable surgical functions",
+      "abstract": "Miniature robots are untethered actuators, which have significant potential to make existing minimally invasive surgery considerably safer and painless, and enable unprecedented treatments because they are much smaller and dexterous than existing surgical robots. Of the miniature robots, the magnetically actuated ones are the most functional and dexterous. However, existing magnetic miniature robots are currently impractical for surgery because they are either restricted to possessing at most two on-board functionalities or having limited five degrees-of-freedom (DOF) locomotion. Some of these actuators are also only operational under specialized environments where actuation from strong external magnets must be at very close proximity (< 4 cm away). Here we present a millimeter-scale soft robot where its magnetization profile can be reprogrammed upon command to perform five surgical functionalities: drug-dispensing, cutting through biological tissues (simulated with gelatin), gripping, storing (biological) samples and remote heating. By possessing full six-DOF motions, including the sixth-DOF rotation about its net magnetic moment, our soft robot can also roll and two-anchor crawl across challenging unstructured environments, which are impassable by its five-DOF counterparts. Because our actuating magnetic fields are relatively uniform and weak (at most 65 mT and 1.5 T/m), such fields can theoretically penetrate through biological tissues harmlessly and allow our soft robot to remain controllable within the depths of the human body. We envision that this work marks a major milestone for the advancement of soft actuators, and towards revolutionizing minimally invasive treatments with untethered miniature robots that have unprecedented functionalities.",
+      "authors": [
+        "Chelsea Shan Xian Ng",
+        "Yu Xuan Yeoh",
+        "Nicholas Yong Wei Foo",
+        "Keerthana Radhakrishnan",
+        "Guo Zhan Lum"
+      ],
+      "url": "https://arxiv.org/abs/2509.15610",
+      "source": "manual",
+      "item_type": "paper",
+      "verified": {
+        "hardware": "real",
+        "platform": "millimeter-scale magnetic soft robot with elastomeric body",
+        "key_numbers": [
+          "Rolling speeds of 1.29–6.75 mm/s at 20 mT, 0.1–1 Hz",
+          "Two-anchor crawling speeds of 0.4–1.06 mm/s",
+          "Reprogramming with 60 mT uniform field in under 1 second",
+          "Six-DOF angular velocities of 1.56–16.5 rad/s"
+        ],
+        "honest_caveat": "Levitation against gravity requires a buoyant component due to limitations of their electromagnetic coil system.",
+        "writer_brief": "Researchers built a millimeter-scale soft robot whose magnetization profile can be reprogrammed on command using 60 mT fields to switch among five surgical modes: drug-dispensing, cutting gelatin tissue simulant, gripping, sample storage, and remote heating. The robot achieves full six-DOF motion including rotation about its net magnetic moment, enabling rolling and two-anchor crawling across unstructured terrains impassable by five-DOF counterparts. Actuation uses weak, relatively uniform fields (≤65 mT, 1.5 T/m) compatible with in-body use."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't surgical robots swap functions inside your body?",
+      "commentary": "This team built a millimeter-scale magnetic soft robot that reprograms its own magnetization profile in under one second using a 60 mT field, switching among five surgical modes: drug dispensing, tissue cutting, gripping, sample storage, and remote heating. The sixth-DOF rotation about the net magnetic moment is the genuinely clever bit, enabling rolling at up to 6.75 mm/s and two-anchor crawling across terrain that stops five-DOF robots cold. Actuation fields stay at or below 65 mT and 1.5 T/m, which is plausible for in-body use. Honest caveat: levitation against gravity requires a buoyant assist because the coil system can't generate enough gradient force alone, so full three-dimensional navigation in tissue is still an open problem.",
+      "slides": [
+        {
+          "title": "One robot, five surgical jobs",
+          "body": "A millimeter-scale soft robot reprograms its own magnetization in under 1 second. Same body, same field source, five modes: drug-dispensing, cutting, gripping, sample storage, remote heating."
+        },
+        {
+          "title": "The sixth DOF changes everything",
+          "body": "Most magnetic mini-robots top out at five DOF. Adding rotation about the net magnetic moment unlocks rolling at 1.29 to 6.75 mm/s and two-anchor crawling at 0.4 to 1.06 mm/s across unstructured terrain."
+        },
+        {
+          "title": "Reprogramming: under 1 second",
+          "body": "A 60 mT uniform field resets the magnetization profile on command. Switching surgical function takes less time than a blink. Angular velocities reach 1.56 to 16.5 rad/s during the sixth-DOF rotation."
+        },
+        {
+          "title": "Fields weak enough for tissue",
+          "body": "Actuation stays at or below 65 mT and 1.5 T/m. Relatively uniform fields at those levels can penetrate biological tissue without harm, keeping the robot controllable deep in the body."
+        },
+        {
+          "title": "The honest caveat",
+          "body": "Levitation against gravity still needs a buoyant component. The coil system can't generate enough gradient force to lift the robot unaided. Full 3D navigation in real tissue is an open problem."
+        },
+        {
+          "title": "Why this matters now",
+          "body": "Existing magnetic mini-robots cap at two onboard functions and need strong magnets within 4 cm. This design breaks both limits. The gap to clinical use is real but the architecture is a credible step forward."
+        }
+      ],
+      "video_script": "Most surgical micro-robots do one thing. This one does five. Researchers built a millimeter-scale soft robot that reprograms its own magnetic profile in under a second, switching between drug dispensing, cutting, gripping, sample storage, and heating. The sixth degree of freedom, rotation about its own magnetic moment, lets it roll at nearly 7 millimeters per second across terrain that stops every five-DOF competitor. Fields stay weak enough to use inside the body. The levitation problem isn't solved yet. But how close are we to a robot that navigates your bloodstream and picks its own tool?",
+      "caption_instagram": "Why can't surgical robots swap functions inside your body?\n\nMost magnetic micro-robots are locked into one or two jobs. This team built a millimeter-scale soft robot that reprograms its own magnetization on command, switching among five surgical modes in under one second using a 60 mT field.\n\nThe sixth-DOF trick is what makes it move. Rotation about the net magnetic moment enables rolling up to 6.75 mm/s and two-anchor crawling across terrain that five-DOF robots simply cannot cross. Actuation fields stay at or below 65 mT, plausibly compatible with real tissue.\n\nHonest limit: levitation against gravity still needs a buoyant assist. Full 3D navigation in tissue remains unsolved. But the architecture of reprogrammable function plus genuine six-DOF motion is a real advance over the field.\n\nPaper: Miniature soft robot with magnetically reprogrammable surgical functions, arXiv 2509.15610\n\n#swarmrobotics #softrobotics #medicalrobotics #microrobotics #magneticrobots #minimallyinvasive #roboticsresearch",
+      "caption_tiktok": "A robot that changes its own job description inside your body. Five surgical functions, one millimeter-scale body, under a second to switch. #softrobotics #microrobotics #surgicalrobotics #robotics",
+      "post_bluesky": "Why can't surgical robots swap functions inside your body? This mm-scale soft robot reprograms its magnetization in <1 sec to switch among 5 surgical modes. 6th-DOF rotation unlocks terrain five-DOF bots can't cross. https://arxiv.org/abs/2509.15610",
+      "bluesky_thread": [
+        "The genuinely clever bit: rotation about the net magnetic moment (not just position control) gives rolling up to 6.75 mm/s and crawling across unstructured terrain. That sixth DOF is what separates this from prior five-DOF designs that get stuck on any real surface.",
+        "Honest caveat: levitation against gravity still needs a buoyant assist. The coil system can't generate enough gradient force alone. So full 3D navigation in tissue is unsolved. How far away do you think we are from a micro-robot that actually navigates inside a living patient?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "in_review",
+    "created": "2026-07-30T09:55:47.680284+00:00",
+    "media": {
+      "figures": [
+        "media/35281e33/fig_00.png"
+      ],
+      "bsky": [
+        "media/35281e33/bsky_00.png",
+        "media/35281e33/bsky_01.png",
+        "media/35281e33/bsky_02.png",
+        "media/35281e33/bsky_03.png"
+      ],
+      "slides": [
+        "media/35281e33/slide_00.png",
+        "media/35281e33/slide_01.png",
+        "media/35281e33/slide_02.png",
+        "media/35281e33/slide_03.png",
+        "media/35281e33/slide_04.png",
+        "media/35281e33/slide_05.png",
+        "media/35281e33/slide_06.png",
+        "media/35281e33/slide_07.png"
+      ]
+    },
+    "issue": 190
   }
 ]

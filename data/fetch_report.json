@@ -1,43 +1,27 @@
 {
-  "ts": "2026-07-26T07:38",
-  "collected": 273,
-  "dedup_dropped": 66,
-  "after_dedup": 207,
+  "ts": "2026-07-30T09:54",
+  "collected": 225,
+  "dedup_dropped": 40,
+  "after_dedup": 185,
   "score_hist": {
-    "0": 18,
-    "1": 16,
-    "2": 29,
-    "3": 48,
-    "4": 35,
-    "5": 29,
-    "6": 17,
-    "7": 11,
-    "8": 3,
+    "0": 25,
+    "1": 19,
+    "2": 36,
+    "3": 44,
+    "4": 29,
+    "5": 16,
+    "6": 8,
+    "7": 5,
+    "8": 2,
     "9": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 32,
+  "ranked_above_floor": 16,
   "split": {
     "videos": 0,
-    "papers": 23,
+    "papers": 7,
     "news": 9
   },
   "floor": 6,
-  "picked": [
-    {
-      "t": "Performant robotic manipulation with real-world re",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "Learning Humanoid Navigation From Human Data",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "A real-time RGB-D perception pipeline for autonomo",
-      "type": null,
-      "video": false
-    }
-  ]
+  "picked": []
 }
