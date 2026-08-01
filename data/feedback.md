@@ -1,29 +1,28 @@
-# Engagement lessons (auto-updated 2026-07-31)
+# Engagement lessons (auto-updated 2026-08-01)
 
-# Content Team: Lessons Learned Brief
+# Content Team — Lessons Learned Brief
 
-## 1. Topics: Over vs Under-Performers
-**Over-performed:** Visually dramatic mechanics (wave-propulsion bot, wheel-legged football, 32-legged amoeba) and multi-robot coordination (congestion planner, LLM-free swarm). **Under-performed:** Niche sensing papers (hysteresis, orbital wrench control, spinning drone), medical robotics, and anything without striking visuals—confirmed by the rejection pile (13/20 rejections were figure-starved).
+## 1. Topic Performance
+**Over-performed:** Physically striking/visual robots (wheel-legged football: 3 likes; SAWbot wave propulsion: 3 engagement; amoeba robot: 2). Manipulation benchmarks and multi-robot planning also held their own. **Under-performed:** Niche sensor/control papers (tendon hysteresis, wrench control, bridge-climbing, spinning drone) scored zero across the board. Medical robotics (breast ultrasound, haircutting) showed weak traction despite strong hooks.
 
-## 2. Hook Styles That Worked
-`curiosity_gap` and `bold_claim` generated the most replies. `number_stat` earned the only repost (congestion planner). `tension` was inconsistent—strong for orchard/CHAI, flat for tendons/bridge climber.
+## 2. Hook Styles
+**bold_claim** and **curiosity_gap** are marginally ahead. **tension** is inconsistent — high ceiling (CHAI, orchard MPC got replies) but frequent zeroes. **number_stat** is the weakest: specific numbers don't translate to clicks here.
 
-## 3. Carousel vs Video
-Video posts (juggling, Stretch 4.0) earned 0 likes combined. Carousels dominated. **Caveat: sample size is 2 videos—insufficient to conclude; test more before cutting format.**
+## 3. Carousel vs. Video
+Both videos scored poorly (juggling: 0 likes; Stretch: 0 likes). Too few data points to conclude, but neither outperformed carousels.
 
-### 3a. Hook-Style Weighting
-| Hook | Avg engagement score* | Recommend weight |
+### 3a. Hook Weighting Recommendation
+| Hook | Avg. engagement signals | Recommended weight |
 |---|---|---|
-| `curiosity_gap` | ~1.3 | 35% |
-| `bold_claim` | ~0.9 | 30% |
-| `number_stat` | ~1.0 | 25% |
-| `tension` | ~0.7 | 10% |
-*likes + reposts + replies combined, averaged per hook type
+| bold_claim | ~1.2 | 35% |
+| curiosity_gap | ~1.1 | 30% |
+| tension | ~0.9 | 25% |
+| number_stat | ~0.6 | 10% |
 
-### 3b. Thread vs Single
-Threads averaged **~1.5 total interactions**; singles averaged **~0.7**. Threads consistently generate replies. **Recommend 70/30 thread/single split.**
+### 3b. Thread vs. Single
+Threads average slightly more replies; singles get comparable likes. Neither dominates. **Recommended split: 50/50** — gather 10 more posts before shifting.
 
 ## 4. Three Concrete Recommendations
-1. **Hard gate on visuals:** reject any paper without at least one striking figure before writing begins—the rejection data proves this wastes the pipeline.
-2. **Lead with consequences, not specs:** "1N force error" flopped; "legs don't" worked. Reframe number-stat hooks around *what breaks without it*.
-3. **Test curiosity_gap on threads specifically:** it currently runs mostly on singles; pairing it with thread format may unlock higher reply chains based on the pattern seen with underwater glider and haircutting posts.
+1. **Prioritize visually bizarre robots** — locomotion novelty drives the most likes; lead with those papers.
+2. **Drop number_stat hooks** until audience grows; the precision repels casual scrollers.
+3. **Test one litreview-style hook per week** — it earned the only repost outside number_stat, suggesting depth-seekers exist in this audience.
