@@ -1,28 +1,42 @@
-# Engagement lessons (auto-updated 2026-08-03)
+# Engagement lessons (auto-updated 2026-08-04)
 
-# Content Team: Lessons Learned Brief
+# Content Team Brief — Lessons Learned
+
+---
 
 ## 1. Topic Performance
-**Over-performed:** Physically striking or counterintuitive locomotion (SAWbot, 32-leg amoeba, wheel-legged football) and multi-robot coordination (congestion planner, LLM-free swarm). These have clear visual novelty or a surprising mechanism.
-**Under-performed:** Niche sensor/control papers (tendon hysteresis, orbital wrench control, drone cloaking) and medical robotics. Abstract technical gains without a relatable "why should I care" framing get zero engagement.
+
+**Over-performed:** Physically striking or counterintuitive robots (wheel-legged football, SAWbot wave propulsion, 32-legged amoeba, underwater gliders). Anything with a concrete mechanism people can visualize tends to pull replies/likes.
+
+**Under-performed:** Niche sensor/control papers (tendon hysteresis, wrench control, drone cloaking). High technical precision without a relatable "so what" generates zero engagement consistently.
+
+---
 
 ## 2. Hook Styles That Worked
-Data is sparse but directionally: **bold_claim** and **curiosity_gap** produced the most non-zero posts. **tension** was inconsistent. **number_stat** rarely broke through unless the number was viscerally surprising.
 
-## 3a. Hook-Style Weighting (A/B)
-| Hook | Avg. likes | Rec. weight |
-|---|---|---|
-| bold_claim | ~0.9 | 35% |
-| curiosity_gap | ~1.0 | 35% |
-| tension | ~0.5 | 20% |
-| number_stat | ~0.6 | 10% |
+**bold_claim** and **curiosity_gap** both produced the highest individual like counts (2–3). **tension** reliably generated replies (1 per post) even at low like counts. **number_stat** is inconsistent — the congestion planner (2 likes, 1 repost) outperformed the peg insertion and orbital wrench posts (0 each).
 
-**Caveat:** N=30, all zeros plentiful—treat as directional only.
+### 3a. Recommended Weighting
+| Hook | Weight |
+|---|---|
+| bold_claim | 35% |
+| curiosity_gap | 30% |
+| tension | 25% |
+| number_stat | 10% |
 
-## 3b. Thread vs. Single
-Threads average slightly more **replies** (1 vs 0); singles slightly more **likes**. Neither dominates. Recommended split: **50/50** until volume justifies confidence.
+---
+
+## 3. Carousel vs. Video
+
+**Data too sparse** (only 2 videos, both near-zero). Cannot conclude. Test 3 more videos before drawing conclusions.
+
+### 3b. Thread vs. Single
+Threads generate more **replies**; singles generate more **likes**. Neither format dominates clearly. Recommend **50/50 split** and track for 2 more weeks.
+
+---
 
 ## 4. Three Concrete Recommendations
-1. **Lead with the robot, not the metric.** Locomotion/manipulation posts with physical drama consistently outperform sensor/control theory posts.
-2. **Test curiosity_gap + thread combo** — only attempted twice; replies suggest conversation potential.
-3. **Drop pure number_stat hooks** below 15% weighting until you find a number genuinely shocking to a lay audience.
+
+1. **Lead with the robot's body**, not its algorithm — posts showing unusual locomotion or physical form outperform controller/sensor papers
+2. **Drop number_stat hooks on pure math papers** — reserve stats for results with intuitive scale ("5x world record" works; "31-33% wrench error" doesn't)
+3. **Test curiosity_gap on manipulation papers** specifically — "why can't robots plug in a cable" outperformed every other manipulation hook
