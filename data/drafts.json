@@ -17571,7 +17571,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-30T09:55:47.680284+00:00",
     "media": {
       "figures": [
@@ -17594,6 +17594,8 @@
         "media/35281e33/slide_07.png"
       ]
     },
-    "issue": 190
+    "issue": 190,
+    "bsky_variant": "single",
+    "finalized": true
   }
 ]

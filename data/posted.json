@@ -2509,5 +2509,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-08-07T22:28:23.466710+00:00"
+  },
+  {
+    "draft_id": "35281e33",
+    "paper_id": "2509.15610",
+    "title": "Miniature soft robot with magnetically reprogrammable surgical functions",
+    "format": "carousel",
+    "hook": "Why can't surgical robots swap functions inside your body?",
+    "posted_at": "2026-08-07T23:37:28.169690+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3msjpygcop42i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
