@@ -1,28 +1,28 @@
-# Engagement lessons (auto-updated 2026-08-05)
+# Engagement lessons (auto-updated 2026-08-07)
 
-# Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Visually dramatic locomotion (wheel-legged football: 3L, SAWbot: 3E, 32-leg amoeba: 2E) and multi-robot coordination (congestion planner: 3E, LLM team prompting: 3E). **Under-performed:** Niche sensor/control papers with no visceral "what does this look like?" angle (tendon hysteresis, orbital wrench control, spinning drone — all scored 0–1).
+**Over-performed:** Visually dramatic mechanics (wheel-legged football: 3L, SAWbot wave: 3E, congestion planner: 3E). Physical novelty with a clear "why" wins. **Under-performed:** Niche industrial topics with no visual hook (tendon hysteresis, UAV pier-climbing, drone visibility: all 0 engagement). Medical robotics (breast ultrasound, CHAI) scraped 1–2 replies but no spread. Literature reviews punched above weight for reposts.
 
-## 2. Hook Styles
-Data is sparse but directional. **Bold_claim** produced the highest single post (wheel-legged football, 3L) and SAWbot (3E). **Curiosity_gap** was consistent at 2–3 engagements. **Number_stat** is volatile: congestion planner punched (4E), others flatlined. **Tension** underperformed relative to frequency of use.
+## 2. Hook Styles That Worked
+**bold_claim** and **curiosity_gap** generated the most likes (2–3). **number_stat** earned the only repost (congestion planner). **tension** drove replies but rarely likes. *Note: dataset is small (~30 posts); treat as directional, not conclusive.*
 
-## 3. Carousel vs Video
-Two videos posted; both scored near zero. Too small a sample to conclude, but carousels are currently the safer bet.
+## 3. Carousel vs. Video
+Both videos scored 0–1 engagement. Carousels dominate by volume and show comparable or better results. **Do not prioritize video format yet** — test with a stronger topic first.
 
-### 3a. Hook Weighting Recommendation
-| Hook | Signal | Recommended weight |
+### 3a. Hook Weighting (recommended)
+| Hook | Signal | Recommended Weight |
 |---|---|---|
-| bold_claim | Highest ceiling | 35% |
-| curiosity_gap | Most consistent | 30% |
-| number_stat | Selective use | 20% |
-| tension | Weakest ROI | 15% |
+| bold_claim | Highest likes | 35% |
+| curiosity_gap | Consistent likes | 30% |
+| number_stat | Only reposts | 20% |
+| tension | Replies only | 15% |
 
-### 3b. Thread vs Single
-Threads average slightly more replies (conversation-starters); singles slightly more likes/reposts. Recommend **50/50 split** — insufficient data to shift further.
+### 3b. Thread vs. Single
+Threads average more replies (1.0 vs 0.4); singles average slightly more likes. Recommend **50/50 split** — threads for community-building, singles for reach.
 
 ## 4. Three Concrete Recommendations
-1. **Lead with locomotion or manipulation demos** — the robot must be doing something visually surprising.
-2. **Retire tension hooks unless the conflict is immediately visceral** — reframe as bold_claim or curiosity_gap instead.
-3. **Test one video post with a pre-built curiosity_gap hook** to isolate whether format or hook caused poor video performance.
+1. **Lead with physical novelty**: robots doing things humans find immediately surprising (juggling, football, wave locomotion) outperform process/control papers regardless of hook.
+2. **Combine number_stat hook with bold_claim framing** in a single opener — the congestion planner post (only repost) did this implicitly.
+3. **A/B test one litreview-style thread per week**: the rolling/morphing locomotion survey hit 3 engagement points with a repost — the highest repost rate in the dataset.
