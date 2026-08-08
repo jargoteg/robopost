@@ -17281,7 +17281,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "posted",
     "created": "2026-07-26T07:39:28.615449+00:00",
     "media": {
       "figures": [
@@ -17307,7 +17307,9 @@
         "media/aafc1dd6/slide_07.png"
       ]
     },
-    "issue": 186
+    "issue": 186,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "285d4048",
@@ -17377,7 +17379,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-26T07:40:03.894214+00:00",
     "media": {
       "figures": [
@@ -17403,7 +17405,9 @@
         "media/285d4048/slide_07.png"
       ]
     },
-    "issue": 187
+    "issue": 187,
+    "scheduled_after": "2026-08-08T15:09:46.601327+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "2f2c428f",
@@ -17474,7 +17478,7 @@
       ],
       "hook_style": "bold_claim"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-26T07:40:42.572691+00:00",
     "media": {
       "figures": [
@@ -17500,7 +17504,9 @@
         "media/2f2c428f/slide_07.png"
       ]
     },
-    "issue": 188
+    "issue": 188,
+    "scheduled_after": "2026-08-08T15:09:46.601327+00:00",
+    "queue_notified": true
   },
   {
     "draft_id": "35281e33",
@@ -17597,5 +17603,236 @@
     "issue": 190,
     "bsky_variant": "single",
     "finalized": true
+  },
+  {
+    "draft_id": "1450e30c",
+    "paper": {
+      "id": "yt-50fI4Kwp1L0",
+      "title": "DEEP Robotics Lynx Roboter navigiert Wasserwege",
+      "abstract": "Ein vierbeiniger Roboter mit Rädern klettert durch einen Bach, über nasse Felsen und kleine Wasserfälle. Der Lynx des ...",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=50fI4Kwp1L0",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=50fI4Kwp1L0",
+      "video_first": true,
+      "score": 7.8
+    },
+    "content": {
+      "format": "video",
+      "hook": "Wheel-legs beat pure legs on wet rocks.",
+      "commentary": "DEEP Robotics' Lynx walks a creek bed, climbs slick boulders, and pushes through small waterfalls without losing its footing. The wheel-leg hybrid is doing real work here: wheels give speed on flat ground, legs give clearance when the terrain gets irregular, and the combo handles sudden slip events that would stop most quadrupeds cold. Honest caveat: this is a curated outdoor demo, not a controlled benchmark. We don't know gait switching latency, battery draw in continuous water ingress, or how the actuators hold up after 30 minutes submerged. Still, creek navigation at that pace is a legitimate stress test most lab robots never see.",
+      "slides": [
+        {
+          "title": "Lynx enters the creek",
+          "body": "Wheel-legged quadruped wades into moving water. Wheels retract as terrain roughens. No hesitation at the water entry point."
+        },
+        {
+          "title": "Wet rock, full speed",
+          "body": "Slick boulder surfaces. Legs absorb irregular contact while wheels spin on any flat patch. Continuous forward motion maintained throughout."
+        },
+        {
+          "title": "Small waterfall crossing",
+          "body": "Robot pushes through a cascade directly. Water over the chassis. No visible gait failure or recovery pause captured in the footage."
+        },
+        {
+          "title": "Why wheel-legs here",
+          "body": "Pure legs slip on wet rock. Pure wheels stall on steps. The hybrid trades some payload efficiency for genuine all-terrain composure. Creek beds are the honest proof."
+        },
+        {
+          "title": "What we still don't know",
+          "body": "No numbers on ingress protection rating, actuator thermals in sustained water contact, or gait-switch latency. Demo conditions are not a deployment spec."
+        },
+        {
+          "title": "Field relevance",
+          "body": "Creek and riverbed inspection, post-flood search and rescue, mining drainage tunnels. Any environment where water and irregular rock coexist. That list is long."
+        }
+      ],
+      "video_script": "Watch this quadruped wade through a creek, climb slick boulders, and push straight through a waterfall. That's DEEP Robotics' Lynx, and the wheel-leg hybrid is why it doesn't fall. Wheels get you speed on flat ground. Legs get you over the steps and rocks. Put them together and you get something that handles sudden slip without a recovery pause. No lab floor. No protective cage. Just wet terrain and moving water. The question is: how long does it hold up before the actuators feel it?",
+      "caption_instagram": "Wheel-legs beat pure legs on wet rocks.\n\nDEEP Robotics' Lynx just walked a creek, climbed slick boulders mid-current, and pushed through a small waterfall without breaking stride. The wheel-leg hybrid is the reason it works. Wheels for flat ground speed, legs for terrain clearance, and the combo handles slip events that stop most quadrupeds.\n\nHonest take: this is a demo, not a deployment spec. We don't have ingress protection ratings, actuator thermal data, or battery draw under continuous water contact. Those numbers matter a lot before you send this into a flooded mine tunnel.\n\nBut creek navigation at that pace is a real stress test. Most field robots never see terrain like this in testing, let alone video. Full footage linked in bio.\n\n#swarmrobotics #fieldrobotics #quadruped #leggeddrobot #inspectionrobotics #robotics #searchandrescue",
+      "caption_tiktok": "Wheel-legged robot walks through a waterfall. No lab, no flat floor, just a creek and wet rocks. Full video in link. #robotics #quadruped #fieldrobotics #legedrobot",
+      "post_bluesky": "Wheel-legs beat pure legs on wet rocks. DEEP Robotics' Lynx walks a creek bed, climbs slick boulders, and pushes through a waterfall without a recovery pause. Hybrid locomotion doing something real. https://www.youtube.com/watch?v=50fI4Kwp1L0",
+      "bluesky_thread": [
+        "The clever bit: wheels give speed on flat ground, legs give clearance on steps and boulders, and together they handle sudden slip without stopping. Most quadrupeds either slide or freeze on wet rock. Lynx just keeps moving.",
+        "What I want to see next: ingress protection rating, actuator temps after 30 minutes in water contact, and gait-switch latency numbers. A demo proves it can do it once. A spec sheet tells you if it can do it reliably. Anyone know if DEEP published those?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-08-08T13:37:48.234249+00:00",
+    "media": {
+      "figures": [
+        "media/1450e30c/fig_00.png"
+      ],
+      "bsky": [
+        "media/1450e30c/bsky_00.png",
+        "media/1450e30c/bsky_01.png",
+        "media/1450e30c/bsky_02.png",
+        "media/1450e30c/bsky_03.png"
+      ],
+      "slides": [
+        "media/1450e30c/slide_00.png",
+        "media/1450e30c/slide_01.png",
+        "media/1450e30c/slide_02.png",
+        "media/1450e30c/slide_03.png",
+        "media/1450e30c/slide_04.png",
+        "media/1450e30c/slide_05.png",
+        "media/1450e30c/slide_06.png",
+        "media/1450e30c/slide_07.png"
+      ],
+      "video": "media/1450e30c/video.mp4"
+    },
+    "issue": 191
+  },
+  {
+    "draft_id": "51319d7f",
+    "paper": {
+      "id": "yt-VmBS2N1FzmE",
+      "title": "Why Does Atlas Have A Head? #askaroboticist #bostondynamics",
+      "abstract": "Taylor Frey-Baker, a mechanical engineer at Boston Dynamics, answers questions about why the current iteration of Atlas has a head, how the brain of the robot works, and how Atlas understands the world around it.",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=VmBS2N1FzmE",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=VmBS2N1FzmE",
+      "video_first": true,
+      "score": 7.0
+    },
+    "content": {
+      "format": "video",
+      "hook": "Atlas has a head because cameras beat proprioception alone.",
+      "commentary": "Taylor Frey-Baker walks through a question that sounds cosmetic but isn't: why does a headless Atlas make sense mechanically, yet the current version has one anyway. The answer is sensor suite placement and field of view, not aesthetics. Honest caveat: this is a comms video, not a technical paper, so the claims about 'understanding the world' stay vague enough to avoid scrutiny. Worth watching for the frank framing around perception architecture, less so for deep technical content.",
+      "slides": [
+        {
+          "title": "Why Atlas grew a head",
+          "body": "Not aesthetics. Boston Dynamics placed cameras there for field-of-view coverage that trunk or wrist mounting can't match for close manipulation tasks."
+        },
+        {
+          "title": "Perception drives the form",
+          "body": "The head orients the sensor suite toward whatever the hands are doing. Gaze and manipulation align, the same constraint that shapes humanoid head placement across the field."
+        },
+        {
+          "title": "The brain question",
+          "body": "Frey-Baker describes compute split between onboard processing and upstream planning. Specific numbers aren't given, which is the honest limit of a public-facing explainer."
+        },
+        {
+          "title": "What 'understanding' actually means",
+          "body": "World understanding here means pose estimation, object detection, and foothold planning. No claim of semantic reasoning. That gap between the word and the mechanism is worth noting."
+        },
+        {
+          "title": "The real design constraint",
+          "body": "Every structural choice on Atlas is a tradeoff between mass, sensor coverage, and collision risk in tight spaces. The head adds weight but earns it in perception geometry."
+        }
+      ],
+      "video_script": "Boston Dynamics put a head on Atlas and people treat it like a style choice. It isn't. A mechanical engineer at BD explains the actual reason: sensor field of view. When your hands are manipulating objects close to your body, you need cameras looking in the same direction. Trunk mounting loses that. Wrist mounting adds payload and collision risk. The head solves a geometry problem. The vague part is 'how the brain works.' That answer stays high-level in this video, which is honest at least. So: where should the cameras actually go on a manipulation robot?",
+      "caption_instagram": "Atlas has a head because the cameras need to see what the hands are doing.\n\nBoston Dynamics mechanical engineer Taylor Frey-Baker answers the question that sounds aesthetic but is actually a sensor placement argument. Field of view for close manipulation tasks is the constraint. The head wins on geometry.\n\nWhat the video doesn't give you: specific compute architecture, latency numbers, or what 'understanding the world' means technically. That vagueness is the honest limit of a public explainer, not a flaw in the robot.\n\nStill worth watching if you're thinking about perception placement on manipulation platforms. The design logic transfers beyond humanoids.\n\nVideo: 'Why Does Atlas Have A Head?' via Boston Dynamics on YouTube.\n\n#swarmrobotics #robotics #bostondynamics #humanoidrobots #robotperception #manipulationrobotics #robotdesign",
+      "caption_tiktok": "Atlas has a head for one reason: cameras need to watch the hands. Boston Dynamics engineer explains the actual geometry. #bostondynamics #atlas #robotics #robotperception",
+      "post_bluesky": "Atlas has a head because cameras beat trunk or wrist mounting for close manipulation field of view. BD engineer explains the geometry. Honest explainer, light on compute specifics. https://www.youtube.com/watch?v=VmBS2N1FzmE",
+      "bluesky_thread": [
+        "The 'how the brain works' section stays deliberately vague, which is fine for a public video. But the perception placement argument is solid. Form following sensor geometry is underappreciated in humanoid design discussions.",
+        "Genuinely curious: for inspection robots working in confined spaces, head-mounted vs chest-mounted perception has real tradeoffs beyond humanoids. Anyone running field deployments with cameras above vs below the manipulation workspace? What actually held up?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-08-08T13:38:12.027992+00:00",
+    "media": {
+      "figures": [
+        "media/51319d7f/fig_00.png"
+      ],
+      "bsky": [
+        "media/51319d7f/bsky_00.png",
+        "media/51319d7f/bsky_01.png",
+        "media/51319d7f/bsky_02.png",
+        "media/51319d7f/bsky_03.png"
+      ],
+      "slides": [
+        "media/51319d7f/slide_00.png",
+        "media/51319d7f/slide_01.png",
+        "media/51319d7f/slide_02.png",
+        "media/51319d7f/slide_03.png",
+        "media/51319d7f/slide_04.png",
+        "media/51319d7f/slide_05.png",
+        "media/51319d7f/slide_06.png"
+      ],
+      "video": "media/51319d7f/video.mp4"
+    },
+    "issue": 192
+  },
+  {
+    "draft_id": "71579176",
+    "paper": {
+      "id": "rss-d00b5bc476",
+      "title": "Controlled flight of high-thrust ultralight ion-propelled microrobot with integrated sensing",
+      "abstract": "Nature Communications, Published online: 08 August 2026; doi:10.1038/s41467-026-76462-y The authors report a 36.7 mg ion-propelled microrobot with integrated sensing, IMU-based closed-loop flight control, and high thrust-to-weight ratio. This mechanical-free design demonstrates controlled flight and stable hovering.",
+      "authors": [],
+      "url": "https://www.nature.com/articles/s41467-026-76462-y",
+      "source": "nature.com",
+      "item_type": "paper",
+      "journal": true,
+      "score": 9.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "36.7 mg robot. No moving parts. It flies.",
+      "commentary": "This is a 36.7 milligram ion-propelled microrobot that achieves closed-loop stable hover with no mechanical actuators, just electrohydrodynamic thrust and an onboard IMU. The thrust-to-weight ratio is high enough to actually fly, which has been the sticking point for ion drive at this scale for years. Published in Nature Comms today, this is a real milestone for mechanical-free flight. The honest caveat: 36.7 mg with integrated sensing is impressive, but ion thrusters need high voltage supplies that don't yet scale to untethered operation, so 'controlled flight' here almost certainly still means a tether for power. That gap between lab demo and free-flying autonomy is the whole story.",
+      "slides": [
+        {
+          "title": "No moving parts. It flies.",
+          "body": "A 36.7 mg microrobot achieves stable hover using ion propulsion, no rotors, no servos, no mechanical actuators. Electrohydrodynamic thrust only."
+        },
+        {
+          "title": "How ion propulsion works",
+          "body": "High voltage ionizes air molecules. The ion wind produces thrust. Zero moving parts means near-zero mechanical failure modes and near-silent operation. The physics has been known; scaling it to 36.7 mg with control is the hard part."
+        },
+        {
+          "title": "Closed-loop control at milligram scale",
+          "body": "An onboard IMU feeds attitude data into a flight controller. The robot senses and corrects its own drift in real time. This is the first time integrated sensing and ion drive have worked together at this weight class."
+        },
+        {
+          "title": "The real limitation",
+          "body": "Ion drives need high voltage. At 36.7 mg, that supply almost certainly comes from a tether. Fully untethered ion flight at this scale remains unsolved. Lab hover is not the same as free flight."
+        },
+        {
+          "title": "Why it still matters",
+          "body": "Mechanical-free designs survive longer in environments where rotors fail: confined ducts, explosive atmospheres, tight infrastructure gaps. If the power problem is solved, this architecture has real inspection applications."
+        },
+        {
+          "title": "The open question",
+          "body": "Every ion microrobot paper hits the same wall: onboard power at sub-100 mg scale. Until someone cracks that, these demos remain tethered proofs of concept, not deployable robots."
+        }
+      ],
+      "video_script": "This robot weighs 36.7 milligrams and has zero moving parts. No rotors, no servos, nothing spinning. It flies using ion propulsion, electrohydrodynamic thrust from high voltage ionizing air. And now it does it with closed-loop control, an onboard IMU correcting its attitude in real time. That combination has never worked at this weight class before. The catch? High voltage at milligram scale almost certainly means a power tether. So: mechanically impressive, practically still tethered. The question I keep asking: who solves the onboard power problem first?",
+      "caption_instagram": "36.7 milligrams. Zero moving parts. Controlled hover.\n\nThis paper out today in Nature Communications is a genuine milestone for ion-propelled microrobotics. The robot achieves closed-loop stable flight using electrohydrodynamic thrust and an onboard IMU, no rotors, no servos, no mechanical actuators of any kind.\n\nThe physics of ion drive isn't new. Scaling it to 36.7 mg with integrated sensing and real-time attitude correction is. That combination has not worked at this weight class before.\n\nThe honest read: ion thrusters need high voltage. At this scale that supply almost certainly comes from a tether, so 'controlled flight' is still a tethered lab demo, not a free-flying robot. The gap between this result and an untethered inspection drone is real and not small.\n\nBut mechanical-free flight architectures matter for environments where rotors fail: explosive atmospheres, tight duct inspection, scenarios where a spinning blade is a liability. If the power problem ever gets solved, this is the architecture you want.\n\nPaper: 'Controlled flight of high-thrust ultralight ion-propelled microrobot with integrated sensing', Nature Communications, August 2026. Link in bio.\n\n#microrobotics #ionpropulsion #aerialrobotics #roboticsinspection #swarmrobotics #MEMS #roboticsresearch",
+      "caption_tiktok": "36.7 mg robot. No rotors. No servos. It just hovers. Ion propulsion with onboard sensing, published today in Nature Comms. Tethered still, but the mechanism is real. #microrobotics #robotics #ionpropulsion #sciencetwitter #roboticsresearch",
+      "post_bluesky": "36.7 mg robot. No moving parts. It flies.\n\nIon propulsion + onboard IMU = closed-loop hover at milligram scale. First time integrated sensing and ion drive have worked together this small. Tether for power almost certainly, but the mechanism is…\nhttps://www.nature.com/articles/s41467-026-76462-y",
+      "bluesky_thread": [
+        "The architecture is what's interesting here. No mechanical failure modes, near-silent, works in environments where spinning rotors are a liability: ducts, explosive atmospheres, tight infrastructure gaps. The physics works. The engineering works. The power supply doesn't, yet.",
+        "Every ion microrobot paper lands here: the tether. Onboard high voltage at sub-100 mg is unsolved. So the real question for the field isn't 'can it fly' anymore, it's 'who cracks untethered power first?' Anyone tracking promising approaches on that front?"
+      ],
+      "hook_style": "bold_claim"
+    },
+    "status": "in_review",
+    "created": "2026-08-08T13:38:43.675891+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/71579176/bsky_00.png",
+        "media/71579176/bsky_01.png",
+        "media/71579176/bsky_02.png",
+        "media/71579176/bsky_03.png"
+      ],
+      "slides": [
+        "media/71579176/slide_00.png",
+        "media/71579176/slide_01.png",
+        "media/71579176/slide_02.png",
+        "media/71579176/slide_03.png",
+        "media/71579176/slide_04.png",
+        "media/71579176/slide_05.png",
+        "media/71579176/slide_06.png",
+        "media/71579176/slide_07.png"
+      ]
+    },
+    "issue": 193
   }
 ]

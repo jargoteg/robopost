@@ -42,35 +42,48 @@ canvas{max-height:220px}
 footer{color:var(--mut);font-size:12px;margin:24px 0;text-align:center}
 </style></head><body>
 <header class="top"><h1>Dr. Jahir Argote Gerald · mission control</h1>
-<p>@jahirargote · generated 2026-08-08 13:02 UTC <span class="chip ok">+0 today</span></p></header>
+<p>@jahirargote · generated 2026-08-08 13:39 UTC <span class="chip ok">+0 today</span></p></header>
 
-<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">4</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">0</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">98</span><span class="lbl">posted</span></div></div>
+<div class="strip"><div class="stage"><span class="num">0</span><span class="lbl">rendering</span></div><div class="conn"></div><div class="stage"><span class="num">4</span><span class="lbl">awaiting you</span></div><div class="conn"></div><div class="stage"><span class="num">2</span><span class="lbl">scheduled</span></div><div class="conn"></div><div class="stage"><span class="num">99</span><span class="lbl">posted</span></div></div>
 <h2>Queue · exactly as it will post</h2>
 <article class="post">
   <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/188" target="_blank">issue #188</a></header>
+  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/193" target="_blank">issue #193</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">36.7 mg robot. No moving parts. It flies.
+
+Ion propulsion + onboard IMU = closed-loop hover at milligram scale. First time integrated sensing and ion drive have worked together this small. Tether for power almost certainly, but the mechanism is…
+https://www.nature.com/articles/s41467-026-76462-y</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/71579176/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/71579176/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/71579176/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/71579176/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The architecture is what&#x27;s interesting here. No mechanical failure modes, near-silent, works in environments where spinning rotors are a liability: ducts, explosive atmospheres, tight infrastructure gaps. The physics works. The engineering works. The power supply doesn&#x27;t, yet.</div><div class="reply">Every ion microrobot paper lands here: the tether. Onboard high voltage at sub-100 mg is unsolved. So the real question for the field isn&#x27;t &#x27;can it fly&#x27; anymore, it&#x27;s &#x27;who cracks untethered power first?&#x27; Anyone tracking promising approaches on that front?</div>
+</article><article class="post">
+  <header><span class="chip in_review">in review</span>
+  <span class="chip">video</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/192" target="_blank">issue #192</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">Atlas has a head because cameras beat trunk or wrist mounting for close manipulation field of view. BD engineer explains the geometry. Honest explainer, light on compute specifics. https://www.youtube.com/watch?v=VmBS2N1FzmE</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/51319d7f/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/51319d7f/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/51319d7f/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/51319d7f/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The &#x27;how the brain works&#x27; section stays deliberately vague, which is fine for a public video. But the perception placement argument is solid. Form following sensor geometry is underappreciated in humanoid design discussions.</div><div class="reply">Genuinely curious: for inspection robots working in confined spaces, head-mounted vs chest-mounted perception has real tradeoffs beyond humanoids. Anyone running field deployments with cameras above vs below the manipulation workspace? What actually held up?</div>
+</article><article class="post">
+  <header><span class="chip in_review">in review</span>
+  <span class="chip">video</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/191" target="_blank">issue #191</a></header>
+  <div class="handle">@jahirargote</div>
+  <p class="ptext">Wheel-legs beat pure legs on wet rocks. DEEP Robotics&#x27; Lynx walks a creek bed, climbs slick boulders, and pushes through a waterfall without a recovery pause. Hybrid locomotion doing something real. https://www.youtube.com/watch?v=50fI4Kwp1L0</p>
+  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1450e30c/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1450e30c/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1450e30c/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/1450e30c/bsky_03.png" alt="" loading="lazy"></div>
+  <div class="reply">The clever bit: wheels give speed on flat ground, legs give clearance on steps and boulders, and together they handle sudden slip without stopping. Most quadrupeds either slide or freeze on wet rock. Lynx just keeps moving.</div><div class="reply">What I want to see next: ingress protection rating, actuator temps after 30 minutes in water contact, and gait-switch latency numbers. A demo proves it can do it once. A spec sheet tells you if it can do it reliably. Anyone know if DEEP published those?</div>
+</article><article class="post">
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 15:09 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/188" target="_blank">issue #188</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">A Bobcat excavator with a hydraulic hammer now self-selects its own rock targets at 10 Hz, 675 ms latency, on a Jetson AGX Orin. Real hardware. Scaled lab only, but the stack is real. https://arxiv.org/abs/2607.20748v1</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/2f2c428f/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/2f2c428f/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/2f2c428f/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/2f2c428f/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">What&#x27;s clever: one pipeline handles self-filtering, rock instance segmentation, AND kinematically feasible pose generation simultaneously on embedded hardware. That&#x27;s not trivial at 10 Hz. The ZED X1 stereo pair doing the perception work on a live hydraulic arm is the part I want to see stressed.</div><div class="reply">The authors are upfront that this is a scaled lab, not an underground mine. Rock dust alone would be my first worry, percussive vibration from the hammer itself would be my second. Has anyone here run RGB-D cameras on active impact equipment? Curious what survived.</div>
 </article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/187" target="_blank">issue #187</a></header>
+  <header><span class="chip approved">approved</span>
+  <span class="chip">carousel</span><span class="chip warn">posts after 15:09 UTC</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/187" target="_blank">issue #187</a></header>
   <div class="handle">@jahirargote</div>
   <p class="ptext">A humanoid robot learned crowd navigation from 5 hrs of human walking footage. Zero robot data. Glass-wall avoidance emerges naturally. Runs in 10 diffusion steps, 30 ms on edge hardware. http://ieeexplore.ieee.org/document/11595528</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/285d4048/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/285d4048/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/285d4048/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/285d4048/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The clever bit: frozen DINOv3 features catch glass walls that depth sensors miss entirely. The honest bit: authors flag the embodiment gap themselves. Human gait data does not map cleanly onto G1 kinematics. That gap is the real research problem here, not the diffusion model.</div><div class="reply">Open question for anyone working on humanoid deployment: how much does a 5-hour human dataset actually cover? Crowded malls, yes. Construction sites, narrow corridors, uneven outdoor terrain? This approach needs a stress test outside controlled indoor environments. What breaks first?</div>
-</article><article class="post">
-  <header><span class="chip in_review">in review</span>
-  <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/186" target="_blank">issue #186</a></header>
-  <div class="handle">@jahirargote</div>
-  <p class="ptext">1000 for 1000. Every trial. Real robots.
-
-RL-100 applies PPO inside diffusion denoising, compresses to one-step control, then runs 7 hrs unattended in a mall. ~90% zero-shot under dynamics shifts. Three arms, eight tasks.
-
-https://doi.org/10.1126/scirobotics.aed6267</p>
-  <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/aafc1dd6/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/aafc1dd6/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/aafc1dd6/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/aafc1dd6/bsky_03.png" alt="" loading="lazy"></div>
-  <div class="reply">The clever part is WHERE the RL happens: inside the denoising process of the diffusion policy, not wrapped around it. Clipped PPO keeps it stable across offline then online stages. Consistency distillation gets you to one-step inference without retraining from scratch. Genuinely non-obvious…</div><div class="reply">Authors are upfront: online RL needs resets, tuning, and real-hardware approvals. That is a real cost most labs cannot absorb easily. So the question is whether the offline RL stages alone get you most of the gains. Code here: https://github.com/lucidrains/RL-100 and video breakdown…</div>
 </article><article class="post">
   <header><span class="chip in_review">in review</span>
   <span class="chip">carousel</span><a class="issue" href="https://github.com/jargoteg/robopost/issues/185" target="_blank">issue #185</a></header>
@@ -79,13 +92,15 @@ https://doi.org/10.1126/scirobotics.aed6267</p>
   <div class="imgs n4"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_00.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_01.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_02.png" alt="" loading="lazy"><img src="https://raw.githubusercontent.com/jargoteg/robopost/main/media/7a1c794a/bsky_03.png" alt="" loading="lazy"></div>
   <div class="reply">The estimator design is the interesting bit: NN gives you speed, rigid-body dynamics keeps the estimate physically honest. Running both in parallel and fusing via EKF is pragmatic engineering, not just an ablation trick. Worth reading the estimator section closely.</div><div class="reply">My caveat: wheel-bipeds already struggle on uneven or slippery ground, and that&#x27;s exactly where force model assumptions drift. Lab contact tasks are a necessary start, not a finish line. Anyone seen this class of estimator tested on actual site conditions?</div>
 </article>
-<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~2397m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~1017m)</td><td>✅ success <span class='mono'>2026-08-08 06:55</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~537m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>13:20 UTC (~17m)</td><td>✅ success <span class='mono'>2026-08-08 12:02</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>13:30 UTC (~27m)</td><td>⏳ in_progress <span class='mono'>2026-08-08 13:01</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>18:00 UTC (~297m)</td><td>✅ success <span class='mono'>2026-08-08 12:47</span></td></tr></table></div>
+<h2>Automation schedule</h2><div class="panel"><p class="mono" style="opacity:.7">GitHub may delay scheduled runs by a few minutes, occasionally longer for frequent crons.</p><table><tr><td>workflow</td><td class="mono">cron</td><td class="mono">next due</td><td>last run</td></tr><tr><td>Conference radar (weekly)</td><td class='mono'>0 5 * * 1</td><td class='mono'>05:00 UTC (~2360m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Daily content pipeline</td><td class='mono'>0 6 * * *</td><td class='mono'>06:00 UTC (~980m)</td><td>✅ success <span class='mono'>2026-08-08 06:55</span></td></tr><tr><td>Metrics &amp; learning loop</td><td class='mono'>0 22 * * *</td><td class='mono'>22:00 UTC (~500m)</td><td>▫️ no runs yet <span class='mono'></span></td></tr><tr><td>Post queue drainer</td><td class='mono'>*/20 * * * *</td><td class='mono'>13:40 UTC (~0m)</td><td>▫️ pending <span class='mono'>2026-08-08 13:35</span></td></tr><tr><td>Review actions (instant)</td><td class='mono'>*/30 * * * *</td><td class='mono'>14:00 UTC (~20m)</td><td>▫️ cancelled <span class='mono'>2026-08-08 13:35</span></td></tr><tr><td>Trends radar (6-hourly)</td><td class='mono'>0 */6 * * *</td><td class='mono'>18:00 UTC (~260m)</td><td>✅ success <span class='mono'>2026-08-08 12:47</span></td></tr></table></div>
 <h2>Followers</h2>
 <div class="panel"><canvas id="fchart"></canvas></div>
 <h2>Engagement per post (Bluesky)</h2>
 <div class="panel"><canvas id="echart"></canvas></div>
 <h2>Recent posts</h2>
-<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-08-07 23:37</td>
+<div class="panel"><table><tr><td class="mono">when</td><td>title</td><td class="mono">variant</td><td class="mono">bluesky</td></tr><tr><td class="mono">2026-08-08 13:39</td>
+<td>Performant robotic manipulation with real-world rein</td><td class="mono">thread</td>
+<td class="mono"></td></tr><tr><td class="mono">2026-08-07 23:37</td>
 <td>Miniature soft robot with magnetically reprogrammabl</td><td class="mono">single</td>
 <td class="mono"></td></tr><tr><td class="mono">2026-07-30 12:58</td>
 <td>Stretch 4.0 Home Robot</td><td class="mono">thread</td>
@@ -113,17 +128,15 @@ https://doi.org/10.1126/scirobotics.aed6267</p>
 <td>Backlash-Like Hysteresis Estimation in Antagonistic </td><td class="mono">single</td>
 <td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr><tr><td class="mono">2026-07-19 21:00</td>
 <td>Real-Time Dynamic Safe Trajectory Planning for Orcha</td><td class="mono">thread</td>
-<td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr><tr><td class="mono">2026-07-19 18:26</td>
-<td>Real-Time Multi-Drone Replanning for Disruption Mana</td><td class="mono">single</td>
-<td class="mono">{&quot;likes&quot;: 0, &quot;reposts&quot;: 0, &quot;replies&quot;: 0}</td></tr></table></div>
+<td class="mono">{&quot;likes&quot;: 1, &quot;reposts&quot;: 0, &quot;replies&quot;: 1}</td></tr></table></div>
 <h2>Recent rejections (teaching the curator)</h2>
 <div class="panel"><ul><li><b>Erratum for the Research Article “Observing a robot peer</b> · no reason given</li><li><b>Secret Four-Legged Military Robot Spotted? 🤖🚀 Real or AI</b> · ban military</li><li><b>Tornyol — Mosquito killing micro-drone</b> · no reason given</li><li><b>Research on Task Sequence Planning and Trajectory Optimi</b> · no reason given</li><li><b>Autonomous Tracking and Terminal Guidance of Moving Targ</b> · auto: no usable figures found (all sources + vetting)</li><li><b>Improving Autonomous Nano-drones Performance via Automat</b> · auto: no usable figures found (all sources + vetting)</li></ul></div>
 <footer>RoboPost · data refreshes with every pipeline run</footer>
 <script>
 const G={grid:{color:"#232B36"},ticks:{color:"#8B95A5",font:{size:10}}};
 new Chart(fchart,{type:"line",data:{labels:["07-09", "07-10", "07-11", "07-12", "07-13", "07-14", "07-15", "07-16", "07-17", "07-18", "07-19", "07-20", "07-21", "07-22", "07-23", "07-24", "07-25", "07-26", "07-27", "07-28", "07-29", "07-30", "07-31", "08-01", "08-02", "08-03", "08-04", "08-05", "08-07"],datasets:[{data:[909, 912, 912, 912, 912, 912, 912, 914, 915, 915, 916, 916, 916, 916, 916, 916, 916, 915, 915, 915, 915, 915, 915, 916, 916, 916, 917, 917, 917],borderColor:"#FF8A2B",backgroundColor:"rgba(79,209,197,.12)",fill:true,tension:.3,pointRadius:2}]},options:{plugins:{legend:{display:false}},scales:{x:G,y:G}}});
-new Chart(echart,{type:"bar",data:{labels:["07-19", "07-19", "07-19", "07-20", "07-22", "07-22", "07-22", "07-22", "07-26", "07-26", "07-26", "07-26", "07-30", "07-30", "08-07"],datasets:[
- {label:"likes",data:[0, 1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0],backgroundColor:"#FF8A2B"},
+new Chart(echart,{type:"bar",data:{labels:["07-19", "07-19", "07-20", "07-22", "07-22", "07-22", "07-22", "07-26", "07-26", "07-26", "07-26", "07-30", "07-30", "08-07", "08-08"],datasets:[
+ {label:"likes",data:[1, 0, 1, 1, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],backgroundColor:"#FF8A2B"},
  {label:"reposts",data:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],backgroundColor:"#F6C177"}]},
  options:{plugins:{legend:{labels:{color:"#8B95A5"}}},scales:{x:{stacked:true,...G},y:{stacked:true,...G}}}});
 </script></body></html>

@@ -1,27 +1,43 @@
 {
-  "ts": "2026-07-30T09:54",
-  "collected": 225,
-  "dedup_dropped": 40,
-  "after_dedup": 185,
+  "ts": "2026-08-08T13:36",
+  "collected": 221,
+  "dedup_dropped": 34,
+  "after_dedup": 187,
   "score_hist": {
-    "0": 25,
-    "1": 19,
-    "2": 36,
-    "3": 44,
-    "4": 29,
-    "5": 16,
-    "6": 8,
-    "7": 5,
-    "8": 2,
-    "9": 1
+    "0": 18,
+    "1": 22,
+    "2": 41,
+    "3": 35,
+    "4": 28,
+    "5": 19,
+    "6": 9,
+    "7": 9,
+    "8": 4,
+    "9": 2
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 16,
+  "ranked_above_floor": 24,
   "split": {
-    "videos": 0,
-    "papers": 7,
-    "news": 9
+    "videos": 3,
+    "papers": 10,
+    "news": 11
   },
   "floor": 6,
-  "picked": []
+  "picked": [
+    {
+      "t": "DEEP Robotics Lynx Roboter navigiert Wasserwege",
+      "type": "video",
+      "video": true
+    },
+    {
+      "t": "Why Does Atlas Have A Head? #askaroboticist #bosto",
+      "type": "video",
+      "video": true
+    },
+    {
+      "t": "Controlled flight of high-thrust ultralight ion-pr",
+      "type": "paper",
+      "video": false
+    }
+  ]
 }

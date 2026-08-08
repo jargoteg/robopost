@@ -2526,5 +2526,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "aafc1dd6",
+    "paper_id": "doi-10.1126_scirobotics.aed6267",
+    "title": "Performant robotic manipulation with real-world reinforcement learning",
+    "format": "carousel",
+    "hook": "1000 for 1000. Every trial. Real robots. Real tasks.",
+    "posted_at": "2026-08-08T13:39:46.601333+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3msl72ks2ft2i",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
