@@ -2543,5 +2543,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "7a1c794a",
+    "paper_id": "rss-fa18cbd8c7",
+    "title": "Agile Wheel-Bipedal Loco-Manipulation With Active Force Rejection",
+    "format": "carousel",
+    "hook": "EKF + neural net cuts force estimation lag enough to keep a wheel-biped stable mid-push",
+    "posted_at": "2026-08-08T15:37:32.314005+00:00",
+    "bsky_variant": "single",
+    "hook_style": "number_stat",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mslfn5ui4727",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

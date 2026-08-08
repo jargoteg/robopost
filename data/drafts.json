@@ -17180,7 +17180,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-07-26T07:35:19.081907+00:00",
     "media": {
       "figures": [],
@@ -17203,7 +17203,9 @@
     },
     "issue": 185,
     "scheduled_after": "2026-08-08T15:09:46.601333+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "aafc1dd6",
@@ -17408,7 +17410,7 @@
       ]
     },
     "issue": 187,
-    "scheduled_after": "2026-08-08T15:09:46.601333+00:00",
+    "scheduled_after": "2026-08-08T17:07:32.314000+00:00",
     "queue_notified": true
   },
   {
@@ -17507,7 +17509,7 @@
       ]
     },
     "issue": 188,
-    "scheduled_after": "2026-08-08T15:09:46.601333+00:00",
+    "scheduled_after": "2026-08-08T17:07:32.314000+00:00",
     "queue_notified": true
   },
   {
