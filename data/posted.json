@@ -2577,5 +2577,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "2f2c428f",
+    "paper_id": "2607.20748v1",
+    "title": "A real-time RGB-D perception pipeline for autonomous impact hammers in mining: self-filtering, rock segmentation and rock-breaking poses generation",
+    "format": "carousel",
+    "hook": "A mining excavator now picks its own targets at 10 Hz.",
+    "posted_at": "2026-08-08T19:36:44.419824+00:00",
+    "bsky_variant": "single",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mslsyuyhac2z",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
