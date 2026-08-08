@@ -2560,5 +2560,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "285d4048",
+    "paper_id": "rss-f708491f08",
+    "title": "Learning Humanoid Navigation From Human Data",
+    "format": "carousel",
+    "hook": "A humanoid robot learned to walk through crowds from 5 hours of human footage. Zero robot data.",
+    "posted_at": "2026-08-08T17:37:50.915687+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "bold_claim",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3mslme3zt2k2z",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
