@@ -1,41 +1,41 @@
 {
-  "ts": "2026-08-08T13:36",
+  "ts": "2026-08-08T13:42",
   "collected": 221,
-  "dedup_dropped": 34,
-  "after_dedup": 187,
+  "dedup_dropped": 37,
+  "after_dedup": 184,
   "score_hist": {
-    "0": 18,
-    "1": 22,
-    "2": 41,
-    "3": 35,
-    "4": 28,
-    "5": 19,
+    "0": 21,
+    "1": 18,
+    "2": 40,
+    "3": 34,
+    "4": 29,
+    "5": 23,
     "6": 9,
-    "7": 9,
-    "8": 4,
-    "9": 2
+    "7": 6,
+    "8": 3,
+    "9": 1
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 24,
+  "ranked_above_floor": 19,
   "split": {
-    "videos": 3,
-    "papers": 10,
-    "news": 11
+    "videos": 1,
+    "papers": 8,
+    "news": 10
   },
   "floor": 6,
   "picked": [
     {
-      "t": "DEEP Robotics Lynx Roboter navigiert Wasserwege",
+      "t": "Innovation at Agility: Digit does TikTok",
       "type": "video",
       "video": true
     },
     {
-      "t": "Why Does Atlas Have A Head? #askaroboticist #bosto",
-      "type": "video",
-      "video": true
+      "t": "QLIMB: End-to-End Whole-Body Control for Quadruped",
+      "type": "paper",
+      "video": false
     },
     {
-      "t": "Controlled flight of high-thrust ultralight ion-pr",
+      "t": "Advances, challenges, and opportunities for legged",
       "type": "paper",
       "video": false
     }

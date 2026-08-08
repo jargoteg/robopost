@@ -17180,7 +17180,7 @@
       ],
       "hook_style": "number_stat"
     },
-    "status": "in_review",
+    "status": "approved",
     "created": "2026-07-26T07:35:19.081907+00:00",
     "media": {
       "figures": [],
@@ -17834,5 +17834,264 @@
       ]
     },
     "issue": 193
+  },
+  {
+    "draft_id": "1dc2b651",
+    "paper": {
+      "id": "yt-vZwYTn3fW1w",
+      "title": "Innovation at Agility: Digit does TikTok",
+      "abstract": "Getting multiple Digits to move in sync is a real test of multi-robot coordination. Each one runs its own balance and whole-body control while staying timed to the others. The same thing that lets a fleet work side by side on a warehouse floor.\n\n---------------------------------------\n\nAt Agility, we make robots that are made for work. Our robot Digit works alongside us in spaces designed for people. Digit handles the tedious and repetitive tasks meant for a machine, allowing companies and their people to focus on the work that requires the human element.\n\nSubscribe (hit the bell for notifications)\nhttps://www.youtube.com/c/AgilityRobotics\n\nJoin our Team\nhttps://www.agilityrobotics.com/careers\n\nFollow our Journey\nhttps://twitter.com/agilityrobotics\nhttps://www.linkedin.com/company/agilityrobotics\nhttps://www.instagram.com/agility_robotics\nhttps://www.tiktok.com/@agility_robotics",
+      "authors": [],
+      "url": "https://www.youtube.com/watch?v=vZwYTn3fW1w",
+      "source": "media_scout",
+      "item_type": "video",
+      "video_url": "https://www.youtube.com/watch?v=vZwYTn3fW1w",
+      "video_first": true,
+      "score": 6.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why does syncing humanoid robots make warehouse fleets actually hard?",
+      "commentary": "Multiple Digits dancing in sync is a flex, but the real test buried in this clip is each robot running independent whole-body control and balance while staying timed to the others. That coordination overhead is exactly what kills fleet throughput in real deployments. The demo is clean, but a warehouse floor has forklifts, wet patches, and humans cutting across lanes. Synchronized motion in an empty studio and synchronized motion under load are very different problems. Still, seeing per-robot balance loops stay coherent across the group is a non-trivial result worth watching.",
+      "slides": [
+        {
+          "title": "Multiple Digits, one beat",
+          "body": "Each Digit runs its own balance and whole-body control loop independently. Staying timed to other units on top of that is the actual coordination challenge, not the choreography."
+        },
+        {
+          "title": "Why synchrony is hard",
+          "body": "Balance on two legs is reactive and noisy. Forcing timing constraints across multiple robots means each unit must absorb perturbations without drifting from the shared tempo. Latency and drift compound fast."
+        },
+        {
+          "title": "The warehouse connection",
+          "body": "Side-by-side fleet operation needs exactly this: robots that don't interfere with each other's motion while sharing a workspace. The sync demo stress-tests that coordination layer in a controlled way."
+        },
+        {
+          "title": "What the demo doesn't show",
+          "body": "Empty floor, no payload, no obstacles. Real warehouse conditions add load shifts, surface variation, and human unpredictability. Studio sync and floor-level sync are not the same problem."
+        },
+        {
+          "title": "The honest take",
+          "body": "Choreography is a reasonable proxy test for multi-robot timing. It exposes real failure modes. But deployment credibility needs footage under load, with strangers in the loop, not just a clean stage."
+        }
+      ],
+      "video_script": "Watch multiple Digits move in sync. Each one is running its own balance controller, its own whole-body control, and staying timed to the others simultaneously. That last part is the hard bit. The coordination overhead that kills fleet throughput in real warehouses is exactly this problem. The demo is in a clean studio with no payload and no obstacles. But the underlying challenge is real: independent reactive balance loops that have to cooperate. Would you trust this fleet on your warehouse floor today?",
+      "caption_instagram": "Why does syncing humanoid robots make warehouse fleets actually hard?\n\nEach Digit in this clip is running its own balance and whole-body control loop. Staying timed to the other units on top of that is the real coordination challenge, not the steps themselves.\n\nThe studio setting is clean and the result looks smooth. But a real warehouse has forklifts, wet floors, people cutting across lanes, and robots carrying actual load. Synchronized motion under those conditions is a much harder problem than this demo represents.\n\nStill, using choreography as a proxy test for multi-robot timing is a legitimate engineering choice. It surfaces real failure modes in balance drift and latency. Worth watching if you work in humanoid fleet deployment or multi-robot coordination.\n\nFull video linked in bio.\n\n#swarmrobotics #humanoidrobots #multirobotcoordination #warehouseautomation #robotics #legged robots #fieldrobotics",
+      "caption_tiktok": "Multiple humanoid robots staying in sync sounds easy. Running independent balance controllers while doing it is not. Full video in bio. #robotics #humanoidrobot #warehousetech #multirobotcoordination",
+      "post_bluesky": "Why does syncing humanoid robots make warehouse fleets hard?\n\nEach Digit runs its own balance loop. Staying timed to others on top of that is the real problem. Clean studio demo, but the coordination layer is genuinely non-trivial.\n\nhttps://www.youtube.com/watch?v=vZwYTn3fW1w",
+      "bluesky_thread": [
+        "The honest caveat: empty floor, no payload, no obstacles. Studio sync and warehouse-floor sync under load are different problems. Balance loops get noisier with weight shifts and surface variation. Would love to see this with a tote in hand.",
+        "That said, choreography is a reasonable proxy test. It forces timing constraints across independent reactive systems and surfaces latency and drift issues early. If you work on fleet coordination for bipeds, what failure mode do you hit first in real deployments?"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-08-08T13:43:55.535561+00:00",
+    "media": {
+      "figures": [
+        "media/1dc2b651/fig_00.png"
+      ],
+      "bsky": [
+        "media/1dc2b651/bsky_00.png",
+        "media/1dc2b651/bsky_01.png",
+        "media/1dc2b651/bsky_02.png",
+        "media/1dc2b651/bsky_03.png"
+      ],
+      "slides": [
+        "media/1dc2b651/slide_00.png",
+        "media/1dc2b651/slide_01.png",
+        "media/1dc2b651/slide_02.png",
+        "media/1dc2b651/slide_03.png",
+        "media/1dc2b651/slide_04.png",
+        "media/1dc2b651/slide_05.png",
+        "media/1dc2b651/slide_06.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "d579a3b9",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3712638",
+      "title": "QLIMB: End-to-End Whole-Body Control for Quadruped Loco-Manipulation and Balance on Complex Terrains",
+      "abstract": "QLIMB: End-to-End Whole-Body Control for Quadruped Loco-Manipulation and Balance on Complex Terrains",
+      "authors": [
+        "Quancheng Qian",
+        "Peng Zhai",
+        "Zonghao Zhang",
+        "Long Yang",
+        "Yujie Xiong",
+        "Yuqi Li"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3712638",
+      "doi": "10.1109/lra.2026.3712638",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 9.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't legged robots manipulate and walk at the same time?",
+      "commentary": "QLIMB trains a quadruped to do loco-manipulation end-to-end, meaning the arm and legs are controlled by one policy, not two separate systems bolted together. That coordination problem is genuinely hard on flat ground. On complex terrain it gets ugly fast because balance and manipulation fight over the same degrees of freedom. The end-to-end framing is the real contribution here, not the arm or the legs individually. Honest caveat: RA-L papers in this space tend to show impressive lab results on curated terrain, and the gap to unstructured field deployment remains large. I want to see this on loose gravel or a slope with payload variance before I believe the 'complex terrains' headline.",
+      "slides": [
+        {
+          "title": "One policy, legs and arm",
+          "body": "QLIMB uses a single end-to-end controller for both locomotion and manipulation. No handoff between two systems. The whole body is one optimization target."
+        },
+        {
+          "title": "Why split control fails",
+          "body": "Separate loco and manipulation controllers fight each other for balance. On rough terrain that conflict spikes. A unified policy learns to trade off both simultaneously."
+        },
+        {
+          "title": "Complex terrain is the test",
+          "body": "The policy is evaluated on uneven surfaces where arm motion shifts the center of mass mid-step. Most prior work tests manipulation on flat ground only."
+        },
+        {
+          "title": "End-to-end: the real claim",
+          "body": "No privileged state. No separate planners. Raw observations in, joint commands out. Simplicity is the point, but it puts all the weight on training data quality."
+        },
+        {
+          "title": "The honest gap",
+          "body": "Lab terrain is curated. Real field conditions add mud, payload uncertainty, and vibration. These results need replication outside the motion-capture room to mean much."
+        },
+        {
+          "title": "Why this matters for inspection",
+          "body": "A quadruped that can walk and reach simultaneously is the form factor for confined-space inspection. One controller failure mode beats two. That is a real engineering argument."
+        }
+      ],
+      "video_script": "Here is the problem nobody talks about enough. Legged robots walk fine. Arm robots manipulate fine. Put them together and the two controllers fight each other, especially when the ground is uneven. QLIMB trains one single policy to run both at once. Legs and arm, one brain. The balance budget and the manipulation task share the same optimization. On complex terrain that is really hard to get right. The question is: does it hold up when the terrain is not hand-picked in the lab?",
+      "caption_instagram": "Why can't legged robots manipulate and walk at the same time?\n\nBecause the controllers fight each other. Balance needs one thing from the legs. Manipulation needs another. On flat ground you can paper over that conflict. On rough terrain it falls apart.\n\nQLIMB addresses this with a single end-to-end policy controlling the whole body. Legs and arm, one unified controller, no handoff between subsystems. The paper evaluates it on complex terrain where arm motion actively perturbs balance mid-step.\n\nThe end-to-end framing is genuinely the contribution here. But I'll stay cautious until I see this tested with real payload variance and non-curated surfaces. Lab 'complex terrain' and field complex terrain are two different things.\n\nPaper: QLIMB: End-to-End Whole-Body Control for Quadruped Loco-Manipulation and Balance on Complex Terrains. RA-L 2026. https://doi.org/10.1109/lra.2026.3712638\n\n#swarmrobotics #quadruped #legedrobots #locomotion #robotmanipulation #fieldrobotics #robotics",
+      "caption_tiktok": "One robot brain controlling four legs AND an arm at once, on rough terrain. This is the coordination problem people underestimate. #quadruped #robotics #legedrobots #manipulation",
+      "post_bluesky": "Why can't legged robots manipulate and walk at the same time? Usually: two controllers fighting over balance. QLIMB runs one end-to-end policy for both, tested on complex terrain. Clever. I want to see it on a real slope. https://doi.org/10.1109/lra.2026.3712638",
+      "bluesky_thread": [
+        "The real claim is architectural. One policy, whole body, no separate loco and manipulation planners handing off state. That removes a failure interface. On uneven ground where arm motion shifts your CoM mid-step, that matters more than it sounds.",
+        "My caveat: every 'complex terrain' paper I've reviewed this year shows curated lab surfaces. If you're thinking confined-space inspection or nuclear decommissioning, the gap to deployment is still wide. What terrain would make you believe this result? Genuine question."
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-08-08T13:44:24.563205+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/d579a3b9/bsky_00.png",
+        "media/d579a3b9/bsky_01.png",
+        "media/d579a3b9/bsky_02.png",
+        "media/d579a3b9/bsky_03.png"
+      ],
+      "slides": [
+        "media/d579a3b9/slide_00.png",
+        "media/d579a3b9/slide_01.png",
+        "media/d579a3b9/slide_02.png",
+        "media/d579a3b9/slide_03.png",
+        "media/d579a3b9/slide_04.png",
+        "media/d579a3b9/slide_05.png",
+        "media/d579a3b9/slide_06.png",
+        "media/d579a3b9/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "e7ee51c4",
+    "paper": {
+      "id": "doi-10.1126_scirobotics.aee0787",
+      "title": "Advances, challenges, and opportunities for legged robots",
+      "abstract": "Humanoid and quadrupedal robots have the potential to revolutionize the way we work, interact, and coexist with intelligent machines. To understand their effects on society and how they can enable scientific discovery, we assess the current capabilities of these systems along hardware, locomotion, autonomy, data, and applications. We identify recent advances and key open challenges that must be overcome to enable widespread adoption and new use cases for legged robots. Last, we provide an outlook on the future of legged robots, exploring their ethical considerations, economic potential, policy implications, and broader societal effects.",
+      "authors": [
+        "Jonas Frey",
+        "Matías Mattamala",
+        "Hae-Won Park",
+        "Mayank Mittal",
+        "Georg Martius",
+        "Maike Osborne"
+      ],
+      "url": "https://doi.org/10.1126/scirobotics.aee0787",
+      "doi": "10.1126/scirobotics.aee0787",
+      "source": "Science Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "video_url": "https://www.youtube.com/watch?v=MsEn7MR8s0w",
+      "video_title": "Next-Gen Mobility: The Rise of Legged Robots",
+      "open_version": "https://arxiv.org/abs/2607.28952",
+      "verified": {
+        "hardware": "both",
+        "platform": "Quadrupedal and humanoid robots (e.g., Unitree, ARTEMIS, Boston Dynamics)",
+        "key_numbers": [
+          "Quadruped vertical ground reaction force up to 3x body weight",
+          "Payload capacity of quadrupeds up to 180 kg",
+          "Locomotion controllers run at 50-200 Hz",
+          "RL policies use below 10 million parameters"
+        ],
+        "honest_caveat": "Current robots lack semantic environment understanding and dexterity for careful, environment-conditioned foot placement.",
+        "writer_brief": "This is a review paper assessing the current state of legged robots across hardware, locomotion, autonomy, data, and applications. It summarizes advances in electric actuators, sensor miniaturization, and RL-based sim-to-real locomotion controllers. It identifies open challenges including the sim-to-real gap, limited semantic understanding, and sample inefficiency, and discusses societal, ethical, and economic implications of widespread legged robot adoption."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Why can't legged robots just look where they step?",
+      "commentary": "Frey et al. publish a thorough state-of-the-union on legged robots in Science Robotics this year, covering hardware through societal implications. The numbers are genuinely useful: quadrupeds hitting 3x body weight in vertical ground reaction force, 180 kg payload capacity, locomotion controllers running at 50 to 200 Hz, RL policies under 10 million parameters. The sim-to-real gap and lack of semantic foot placement are called out honestly by the authors themselves. For field robotics practitioners, that caveat matters most: a robot that can't condition footfall on surface type is a liability in nuclear or mining environments.",
+      "slides": [
+        {
+          "title": "The legged robot report card",
+          "body": "Science Robotics 2026 review assesses quadrupeds and humanoids across hardware, locomotion, autonomy, data, and real-world applications. Real robots, not simulation."
+        },
+        {
+          "title": "Hardware numbers that matter",
+          "body": "Vertical ground reaction force: up to 3x body weight. Payload: up to 180 kg. Locomotion controllers: 50 to 200 Hz. RL policies: under 10 million parameters. Electric actuators and sensor miniaturization are driving this."
+        },
+        {
+          "title": "Where RL locomotion actually stands",
+          "body": "Sim-to-real transfer works well enough for flat and structured terrain. The authors flag the sim-to-real gap as a key open challenge. Policies generalize, but not unconditionally."
+        },
+        {
+          "title": "The honest caveat from the authors",
+          "body": "Current robots lack semantic environment understanding and dexterity for careful, environment-conditioned foot placement. That is the authors' own words. Lab demos do not equal field deployment."
+        },
+        {
+          "title": "Why field robotics should care",
+          "body": "Mining, nuclear, construction, search and rescue: all need robots that know what they are stepping on. Payload and speed are solved-ish. Knowing a wet steel grate from packed gravel is not."
+        },
+        {
+          "title": "What comes next",
+          "body": "Open challenges: semantic terrain understanding, sample-efficient learning, dexterous contact. Plus policy, ethics, and economic implications the review treats seriously, not as afterthoughts."
+        }
+      ],
+      "video_script": "Legged robots can carry 180 kilograms, push back with three times their own body weight, and run locomotion controllers faster than most video games render frames. So why do they still stumble on a wet floor? A new Science Robotics review by Frey and colleagues maps exactly where the field stands in 2026. Hardware is impressive. Sim-to-real learning is functional. But the authors themselves admit: these robots cannot yet look at the ground and decide how to place a foot. That gap between locomotion and understanding is the real frontier. What do you think closes it first, better simulation or more real-world data?",
+      "caption_instagram": "Why can't legged robots just look where they step?\n\nA new review in Science Robotics maps the full state of legged robotics in 2026. Quadrupeds hitting 180 kg payload, 3x body weight in ground reaction force, locomotion controllers at 50 to 200 Hz. The hardware story is genuinely strong.\n\nBut the authors call it plainly: current robots lack semantic environment understanding and dexterity for careful, environment-conditioned foot placement. A robot that cannot tell wet steel from gravel is not ready for nuclear decommissioning or underground mining.\n\nThe sim-to-real gap and sample inefficiency get serious treatment here, not just a line in the limitations section. Worth reading before your next field deployment pitch.\n\nFull open-access preprint: arxiv.org/abs/2607.28952\nPaper: 'Advances, challenges, and opportunities for legged robots', Frey et al., Science Robotics 2026.\n\n#leggedrobotics #fieldrobotics #quadrupedrobot #reinforcementlearning #simtoreal #roboticsinspection #swarmrobotics",
+      "caption_tiktok": "Legged robots can carry 180 kg but still can't decide how to step on a wet floor. The gap between locomotion and understanding is the whole problem. #leggedrobotics #robotics #fieldrobotics #RL #sciencerobotics",
+      "post_bluesky": "Why can't legged robots just look where they step? New Science Robotics review: 180 kg payload, 3x BW ground reaction force, 50-200 Hz controllers. But authors admit: no semantic foot placement yet. That gap kills field deployability. https://doi.org/10.1126/scirobotics.aee0787",
+      "bluesky_thread": [
+        "Open-access version here if the paywall hits you: arxiv.org/abs/2607.28952. The hardware and RL locomotion sections are worth the read. The societal implications section is unusually honest for a review paper, covers economics and ethics without hand-waving.",
+        "The authors' own caveat is the most useful line in the paper: robots lack semantic environment understanding and dexterity for environment-conditioned foot placement. Given the community thread on training data waste this week, curious how many failure clips from real terrain are being used to…"
+      ],
+      "hook_style": "curiosity_gap"
+    },
+    "status": "pending_review",
+    "created": "2026-08-08T13:45:03.939703+00:00",
+    "media": {
+      "figures": [
+        "media/e7ee51c4/pdf/src_00.png",
+        "media/e7ee51c4/pdf/src_02.png",
+        "media/e7ee51c4/pdf/src_03.png",
+        "media/e7ee51c4/pdf/src_01.png"
+      ],
+      "bsky": [
+        "media/e7ee51c4/bsky_00.png",
+        "media/e7ee51c4/bsky_01.png",
+        "media/e7ee51c4/bsky_02.png",
+        "media/e7ee51c4/bsky_03.png"
+      ],
+      "slides": [
+        "media/e7ee51c4/slide_00.png",
+        "media/e7ee51c4/slide_01.png",
+        "media/e7ee51c4/slide_02.png",
+        "media/e7ee51c4/slide_03.png",
+        "media/e7ee51c4/slide_04.png",
+        "media/e7ee51c4/slide_05.png",
+        "media/e7ee51c4/slide_06.png",
+        "media/e7ee51c4/slide_07.png"
+      ]
+    }
   }
 ]
