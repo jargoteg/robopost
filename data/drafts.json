@@ -18083,7 +18083,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-08-08T13:45:03.939703+00:00",
     "media": {
       "figures": [
@@ -18111,7 +18111,9 @@
     },
     "issue": 196,
     "scheduled_after": "2026-08-09T03:42:36.673662+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "thread",
+    "finalized": true
   },
   {
     "draft_id": "b73831de",

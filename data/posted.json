@@ -2669,5 +2669,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "e7ee51c4",
+    "paper_id": "doi-10.1126_scirobotics.aee0787",
+    "title": "Advances, challenges, and opportunities for legged robots",
+    "format": "carousel",
+    "hook": "Why can't legged robots just look where they step?",
+    "posted_at": "2026-08-09T03:56:39.276110+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3msmowrn3vb2c",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
