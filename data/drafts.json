@@ -18110,5 +18110,280 @@
     "issue": 196,
     "scheduled_after": "2026-08-09T02:03:38.229563+00:00",
     "queue_notified": true
+  },
+  {
+    "draft_id": "b73831de",
+    "paper": {
+      "id": "doi-10.1002_rob.70310",
+      "title": "Dumpsite Seabed Characterization of the San Pedro Basin, CA, From Autonomous Vehicle Observations",
+      "abstract": "ABSTRACT A wide‐area seabed survey was conducted using autonomous underwater vehicles (AUVs) in a known dumpsite off the coast of Southern California that has been found to have widespread sediment contamination from the chemical dichlorodiphenyltrichloroethane (DDT). The AUVs were equipped with synthetic Aperture Sonar (SAS), an electronic still camera (ESC), and a laser line scanner to characterize fine‐scale spatial variations of the surficial sediments to gain insight into their mobility. Surveys covered of the known dumpsites to assess sediment texture and distribution patterns. In parallel, a remotely operated vehicle (ROV) performed targeted optical surveys in areas identified by the AUV. The ROV collected 300 h of high‐definition video footage, providing more detailed seafloor observations that were not captured with the ESC. This study employs machine learning and seafloor roughness characterization techniques on SAS data that are informed by the other modalities of seabed sensing. The physics‐informed techniques are applied for seafloor texture classification and provide new insights for interpreting SAS imagery and the seabed in the vicinity of these dumpsites that are of emerging environmental concern.",
+      "authors": [
+        "Ryan A. McCarthy",
+        "Dylan Kriegman",
+        "Sophia T. Merrifield",
+        "Heidi Batchelor",
+        "Eric J. Terrill"
+      ],
+      "url": "https://doi.org/10.1002/rob.70310",
+      "doi": "10.1002/rob.70310",
+      "source": "Journal of Field Robotics",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "300 hours of ROV video. One of the worst chemical dumpsites in U.S. waters.",
+      "commentary": "Scripps and UCSD ran AUVs with synthetic aperture sonar, cameras, and laser scanners over the San Pedro Basin DDT dumpsite off LA. The combo of SAS texture classification plus physics-informed roughness analysis gives you sediment mobility estimates at scale, something a single sensor can't do alone. The 300 hours of ROV HD video ground-truths the AUV classifications in a way that actually matters for regulators. Honest caveat: SAS-to-groundtruth validation at this scale is hard, and ML texture classifiers trained on one seabed type rarely transfer cleanly. Still, this is exactly the kind of multi-modal, multi-vehicle field deployment that moves environmental robotics from demo to actual monitoring infrastructure.",
+      "slides": [
+        {
+          "title": "DDT on the seafloor",
+          "body": "San Pedro Basin, off Southern California. A known dumpsite with widespread DDT sediment contamination. Regulators need to know if that sediment is moving. AUVs and an ROV were deployed to find out."
+        },
+        {
+          "title": "Three sensors per AUV",
+          "body": "Synthetic aperture sonar for texture, electronic still camera for imagery, laser line scanner for fine-scale roughness. Each modality fills gaps the others miss at survey scale."
+        },
+        {
+          "title": "300 hours of ROV video",
+          "body": "A parallel ROV mission logged 300 hours of HD seafloor footage in AUV-flagged priority zones. This is the ground truth that makes the machine learning classifications defensible."
+        },
+        {
+          "title": "Physics-informed SAS classification",
+          "body": "Roughness characterization uses seabed physics, not just learned features. The result is seafloor texture maps that indicate sediment mobility, critical for assessing contaminant spread risk."
+        },
+        {
+          "title": "Why this architecture matters",
+          "body": "AUV handles wide-area coverage fast. ROV handles targeted high-resolution follow-up. Neither alone closes the loop. The handoff between vehicles is the actual methodological contribution here."
+        },
+        {
+          "title": "The open question",
+          "body": "ML classifiers trained on one seabed rarely transfer to another. Field deployments like this need explicit validation datasets. 300 hours of ROV video is a start. Is it enough to generalize?"
+        }
+      ],
+      "video_script": "Off the coast of Los Angeles, there are barrels. Thousands of them, dumped decades ago, loaded with DDT. Researchers just sent a fleet of AUVs and an ROV down to map the damage. Synthetic aperture sonar, laser scanners, cameras, and three hundred hours of HD video. The goal: figure out if the contaminated sediment is moving. Because if it is, the problem is bigger than the dumpsite. Multi-modal sensing, physics-informed classification, vehicle-to-vehicle handoffs in the dark at depth. This is what real environmental robotics looks like. So, how confident should we be in ML classifiers trained on one seabed and applied to another?",
+      "caption_instagram": "300 hours of ROV video. One of the worst chemical dumpsites in U.S. waters.\n\nResearchers from Scripps Institution of Oceanography deployed a multi-vehicle fleet over the San Pedro Basin DDT dumpsite off Southern California. AUVs carried synthetic aperture sonar, laser scanners, and cameras for wide-area coverage. An ROV followed up in flagged zones with high-definition video for ground truth.\n\nThe key contribution is the physics-informed SAS texture classification pipeline. You use seabed roughness characterization grounded in physical models, not just learned features, to estimate sediment mobility. That matters because mobile sediment means spreading contamination.\n\nHonest take: ML classifiers trained on one seabed type are notoriously brittle when you move locations. 300 hours of ROV footage is a serious validation effort, but the generalization question stays open. This is still one of the most rigorous multi-modal AUV field deployments for environmental monitoring I have seen in the Journal of Field Robotics this year.\n\nPaper: Dumpsite Seabed Characterization of the San Pedro Basin, CA, From Autonomous Vehicle Observations. Journal of Field Robotics. https://doi.org/10.1002/rob.70310\n\n#swarmrobotics #AUV #marinerobots #fieldrobotics #underwaterrobotics #environmentalmonitoring #syntheticaperturesonar",
+      "caption_tiktok": "They sent robots to map a DDT dumpsite on the seafloor off LA. 300 hours of video, sonar, lasers. This is what environmental robotics actually looks like. #AUV #underwaterrobotics #fieldrobotics #robotics",
+      "post_bluesky": "300 hours of ROV video. A DDT dumpsite on the seafloor off LA. AUVs mapped sediment texture at scale with SAS + laser scanners, ROV ground-truthed the hotspots. Physics-informed classifiers estimate if the contamination is moving. Real multi-vehicle field robotics. https://doi.org/10.1002/rob.70310",
+      "bluesky_thread": [
+        "The architecture is the contribution: AUV sweeps wide, flags priority zones, ROV dives deep on those targets. Neither vehicle alone gives you coverage AND resolution. The handoff is what makes the classification defensible to regulators, not just reviewers.",
+        "My caveat: SAS texture classifiers trained on San Pedro Basin sediment. How well does that transfer to a different dumpsite, different depth, different sediment type? 300 hrs of ROV footage is serious effort. But field robotics needs explicit out-of-distribution validation. Anyone seen this done…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-08-09T00:36:38.073455+00:00",
+    "media": {
+      "figures": [],
+      "bsky": [
+        "media/b73831de/bsky_00.png",
+        "media/b73831de/bsky_01.png",
+        "media/b73831de/bsky_02.png",
+        "media/b73831de/bsky_03.png"
+      ],
+      "slides": [
+        "media/b73831de/slide_00.png",
+        "media/b73831de/slide_01.png",
+        "media/b73831de/slide_02.png",
+        "media/b73831de/slide_03.png",
+        "media/b73831de/slide_04.png",
+        "media/b73831de/slide_05.png",
+        "media/b73831de/slide_06.png",
+        "media/b73831de/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "cfb3cb62",
+    "paper": {
+      "id": "doi-10.1109_lra.2026.3703996",
+      "title": "SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding",
+      "abstract": "SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding",
+      "authors": [
+        "Kuan Fang",
+        "Yuxin Chen",
+        "Xinghao Zhu",
+        "Farzad Niroui",
+        "Lingfeng Sun",
+        "Jiuguang Wang"
+      ],
+      "url": "https://doi.org/10.1109/lra.2026.3703996",
+      "doi": "10.1109/lra.2026.3703996",
+      "source": "IEEE Robotics and Automation Letters",
+      "item_type": "paper",
+      "journal": true,
+      "score": 8.0,
+      "open_version": "https://arxiv.org/pdf/2512.12842",
+      "verified": {
+        "hardware": "real",
+        "platform": "quadrupedal mobile manipulator (legged robot with arm)",
+        "key_numbers": [
+          "11 real-world tasks evaluated",
+          "5Hz control frequency",
+          "T-step action chunk prediction for closed-loop control",
+          "K affordance types in multi-channel heatmaps"
+        ],
+        "honest_caveat": "Affordance heatmaps computed only once from initial observation, becoming brittle if scene changes significantly during execution.",
+        "writer_brief": "SAGA grounds task objectives as 3D affordance heatmaps using multimodal foundation models, decoupling semantic intent from visuomotor control on a quadrupedal manipulator. Tasks are represented as affordance-entity pairs covering grasp, place, function, avoid, and motion. A diffusion policy conditioned on heatmap-informed point clouds learns from multi-task demonstrations. Tested on 11 real-world tasks zero-shot and few-shot, outperforming end-to-end and modular baselines across all settings."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "One robot arm, 11 tasks, zero task-specific retraining",
+      "commentary": "SAGA decouples semantic intent from motor control on a real quadrupedal manipulator by grounding task descriptions as 3D affordance heatmaps before execution starts. Five affordance types, grasp through avoid, get encoded into multi-channel point clouds that condition a diffusion policy running at 5Hz. The result: 11 real-world tasks handled zero-shot and few-shot, beating both end-to-end and modular baselines. The honest caveat is significant though: heatmaps are computed once from the initial observation, so a knocked-over cup or a shifted target mid-task will break the system. This is a clever grounding architecture, not a robust deployment solution yet.",
+      "slides": [
+        {
+          "title": "The core problem they solved",
+          "body": "Teaching a robot a new task usually means new data, new training. SAGA instead converts any natural-language task into a 3D affordance map computed once before execution, then runs a single policy for all tasks."
+        },
+        {
+          "title": "What affordance grounding means here",
+          "body": "Five affordance types: grasp, place, function, avoid, motion. Each becomes a channel in a heatmap over the point cloud. Multimodal foundation models compute these. The robot never re-trains per task."
+        },
+        {
+          "title": "The control loop: diffusion at 5Hz",
+          "body": "A diffusion policy takes heatmap-informed point clouds as input, predicts T-step action chunks for closed-loop control at 5Hz. Tested on a real quadrupedal mobile manipulator, not simulation."
+        },
+        {
+          "title": "11 real tasks, zero-shot and few-shot",
+          "body": "Evaluated across 11 real-world manipulation tasks. Outperformed end-to-end and modular baselines in both zero-shot and few-shot settings. No task-specific policy retraining required."
+        },
+        {
+          "title": "The honest limitation",
+          "body": "Heatmaps are computed once from the initial scene observation. If anything moves significantly during execution, the affordance map is stale and the policy will fail. Static scenes only for now."
+        },
+        {
+          "title": "Why this matters beyond the lab",
+          "body": "Legged manipulators are being pushed toward unstructured real-world work. A policy that generalizes via semantic grounding rather than per-task data is a practical step. The brittleness problem is the next wall to climb."
+        }
+      ],
+      "video_script": "Most robot manipulation systems need new training data for every new task. SAGA takes a different approach on a real legged robot. You describe the task in language. Foundation models convert that into 3D affordance heatmaps, marking where to grasp, where to avoid, where to place. A single diffusion policy, running at 5Hz, handles the rest. Eleven real-world tasks, zero task-specific retraining. The catch? Those heatmaps are computed once at the start. Move something mid-task and the robot is flying blind. So the question is: how do you keep affordance grounding live throughout execution?",
+      "caption_instagram": "One robot arm, 11 tasks, zero task-specific retraining.\n\nSAGA runs on a real quadrupedal mobile manipulator and grounds task descriptions as 3D affordance heatmaps before execution starts. Five affordance types, grasp, place, function, avoid, and motion, get encoded as channels over a point cloud. A diffusion policy conditioned on those heatmaps runs at 5Hz and handles all tasks from a single learned policy.\n\nThe results across 11 real-world tasks are solid. Zero-shot and few-shot both beat end-to-end and modular baselines. No per-task retraining. The authors are upfront about the key limitation: heatmaps are computed once from the initial observation. Scene changes mid-execution break the grounding, full stop.\n\nFor legged manipulation in real unstructured environments, that brittleness matters a lot. A warehouse shelf gets bumped. A field robot encounters wind. The affordance map is already stale. That is the next real problem to solve.\n\nPaper: SAGA: Open-World Mobile Manipulation via Structured Affordance Grounding, arXiv 2512.12842. Open access link in bio.\n\n#swarmrobotics #mobilemanipulation #leggedrobots #robotlearning #diffusionpolicy #affordancelearning #fieldrobotics",
+      "caption_tiktok": "Real legged robot, 11 tasks, one policy, no retraining. The catch is worth knowing about. #robotics #manipulation #leggedrobots #robotlearning",
+      "post_bluesky": "One legged robot, 11 tasks, zero task-specific retraining. SAGA grounds language into 3D affordance heatmaps, runs a single diffusion policy at 5Hz. Real hardware, real results. Caveat: heatmaps computed once, so mid-task scene changes break it. https://doi.org/10.1109/lra.2026.3703996",
+      "bluesky_thread": [
+        "The architecture is genuinely clever: decouple semantic grounding from visuomotor control entirely. Foundation models handle meaning, diffusion policy handles motion. Means you can swap tasks without retraining the controller. That separation is the real contribution here.",
+        "But the one-shot heatmap problem is not a footnote. For a legged robot in any real environment, things move. If affordance grounding needs to be recomputed continuously to be useful in the field, how much does the latency of foundation model inference hurt you at 5Hz? That tradeoff deserves a…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-08-09T00:37:14.981314+00:00",
+    "media": {
+      "figures": [
+        "media/cfb3cb62/fig_01.png",
+        "media/cfb3cb62/fig_02.png"
+      ],
+      "bsky": [
+        "media/cfb3cb62/bsky_00.png",
+        "media/cfb3cb62/bsky_01.png",
+        "media/cfb3cb62/bsky_02.png",
+        "media/cfb3cb62/bsky_03.png"
+      ],
+      "slides": [
+        "media/cfb3cb62/slide_00.png",
+        "media/cfb3cb62/slide_01.png",
+        "media/cfb3cb62/slide_02.png",
+        "media/cfb3cb62/slide_03.png",
+        "media/cfb3cb62/slide_04.png",
+        "media/cfb3cb62/slide_05.png",
+        "media/cfb3cb62/slide_06.png",
+        "media/cfb3cb62/slide_07.png"
+      ]
+    }
+  },
+  {
+    "draft_id": "d344ae93",
+    "paper": {
+      "id": "2607.25781",
+      "title": "Tripody: An Overconstrained 3-SPR-like Parallel Robot for High-Reach Construction Tasks",
+      "abstract": "This video presents Tripody, a 33 kg wheeled 3-DOF parallel robot designed for high-reach overhead construction tasks. To overcome the high mass typical of existing systems, Tripody utilizes an intentionally overconstrained kinematic architecture with universal base joints. This approach absorbs kinematic incompatibilities via small, distributed elastic deflections, preserving translational motion while dramatically increasing the torsional stiffness critical for overhead tool loads. The system provides a maximum reach of 3.4 m, sustains a continuous payload of 32 kg, and achieves millimeter-level positioning accuracy, which is successfully validated in the video through automated concrete drilling and ceiling installation.\n \nWork conducted by the Robotic Systems Lab (RSL) at ETH Zurich in collaboration with Hilti AG, Schaan, Liechtenstein.\n \nPublished in IEEE Robotics and Automation Let",
+      "authors": [],
+      "url": "https://arxiv.org/abs/2607.25781",
+      "source": "media_scout",
+      "item_type": "paper",
+      "video_url": "https://www.youtube.com/watch?v=85w2PG1WGMQ",
+      "video_first": true,
+      "open_version": "https://arxiv.org/abs/2607.25781",
+      "score": 7.8,
+      "verified": {
+        "hardware": "real",
+        "platform": "Tripody - custom 33 kg wheeled 3-UPR parallel robot prototype",
+        "key_numbers": [
+          "Torsional stiffness increase vs spherical-base: 67% at 1.7m, 196% at 2.6m, 454% at 3.4m",
+          "Closed-loop positioning converges below 0.6 mm across full workspace",
+          "Pure model (open-loop) 95th-percentile error: 2.7 mm, max 3.6 mm",
+          "15-hole ceiling drilling pattern with 4.5 mm maximum relative hole-position error"
+        ],
+        "honest_caveat": "Workspace limited to 50cm triangle footprint; stability and accuracy degrade on uneven floors or near extended-height stability boundary.",
+        "writer_brief": "Tripody is a 33 kg wheeled parallel robot replacing spherical base joints with universal joints in a 3-SPR morphology, intentionally overconstraining it to boost torsional stiffness. Built from aluminium with custom lead-screw actuators, it extends 1.7–3.4 m, carries 32 kg payload, and uses SE(3) state estimation with total-station feedback. Experiments confirmed dramatically higher torsional stiffness than a spherical-base variant, sub-0.6 mm closed-loop positioning, and demonstrated ceiling drilling of a 15-hole pattern with under 4.5 mm relative error."
+      }
+    },
+    "content": {
+      "format": "carousel",
+      "hook": "Stiffer robot. Taller reach. Real ceiling holes.",
+      "commentary": "Tripody is a real 33 kg wheeled parallel robot from ETH Zurich and Hilti that drills overhead concrete at up to 3.4 m reach with sub-0.6 mm closed-loop positioning. The clever bit: they intentionally overconstrain a 3-SPR morphology by swapping spherical base joints for universal joints, letting small elastic deflections absorb kinematic incompatibilities while boosting torsional stiffness by up to 454% at full extension. That stiffness gain is what makes overhead tool loads tractable at this height. Honest caveat: workspace is a 50 cm triangle footprint and performance degrades on uneven floors, so field deployment on real construction sites is still a non-trivial step from these lab and structured-environment results.",
+      "slides": [
+        {
+          "title": "The Problem With Tall Robots",
+          "body": "Overhead construction robots need reach and stiffness. Most systems get heavy trying to achieve both. Tripody is 33 kg, extends to 3.4 m, and carries 32 kg payload."
+        },
+        {
+          "title": "The Overconstraint Trick",
+          "body": "Replace spherical base joints with universal joints in a 3-SPR morphology. It is kinematically overconstrained, but small elastic deflections absorb incompatibilities. Result: torsional stiffness, not rigidity failure."
+        },
+        {
+          "title": "How Much Stiffer?",
+          "body": "Torsional stiffness vs spherical-base variant: +67% at 1.7 m, +196% at 2.6 m, +454% at 3.4 m. The gain compounds with height, exactly where you need it most."
+        },
+        {
+          "title": "Positioning Numbers",
+          "body": "Closed-loop: below 0.6 mm across full workspace. Open-loop model alone: 95th-percentile 2.7 mm, max 3.6 mm. Total-station feedback closes the gap."
+        },
+        {
+          "title": "Real Ceiling Drilling Demo",
+          "body": "15-hole pattern drilled in a concrete ceiling. Maximum relative hole-position error: 4.5 mm. Not simulated. A physical prototype doing physical work."
+        },
+        {
+          "title": "The Honest Caveat",
+          "body": "Workspace is a 50 cm triangle footprint. Accuracy degrades on uneven floors and near the stability boundary at full extension. Real construction sites will test both."
+        }
+      ],
+      "video_script": "Watch Tripody drill a 15-hole pattern into a concrete ceiling at 3.4 meters of reach. This is a 33 kg wheeled parallel robot from ETH Zurich and Hilti, and the key trick is intentional overconstraint. Swap spherical base joints for universal joints, let elastic deflections absorb the kinematic mismatch, and your torsional stiffness jumps 454 percent at full extension. Closed-loop positioning lands below 0.6 mm. The demo is real. The question is: does that 50 cm footprint constraint survive an actual construction site?",
+      "caption_instagram": "A robot drills 15 holes in a concrete ceiling at 3.4 meters of reach. Sub-0.6 mm positioning. 32 kg payload. 33 kg robot weight. This is Tripody.\n\nThe clever part is what looks like a flaw: the kinematic architecture is intentionally overconstrained. Universal base joints replace spherical ones in a 3-SPR parallel robot morphology. That creates small elastic deflections instead of rigid incompatibility, and those deflections preserve the translational motion while dramatically stiffening the structure against torsion. At full 3.4 m extension, torsional stiffness is 454% higher than the spherical-base equivalent.\n\nWhy does that matter? Overhead drilling loads want to twist the robot. At height, a soft structure means bad holes. The ETH Zurich and Hilti team solved that without adding mass, which is the hard part.\n\nHonest caveat: the workspace is a 50 cm triangle footprint, and performance degrades on uneven floors. Real construction sites have both problems constantly. The lab demo is convincing. Field deployment is the next test.\n\nPaper: Tripody: An Overconstrained 3-SPR-like Parallel Robot for High-Reach Construction Tasks, arXiv 2607.25781. Full video in bio.\n\n#swarmrobotics #constructionrobotics #parallelrobotics #fieldrobotics #ETHZurich #robotics #ieeeRobotics",
+      "caption_tiktok": "ETH Zurich built a robot that drills concrete ceilings at 3.4 m reach with 0.6 mm accuracy. The secret: make it intentionally overconstrained. arXiv 2607.25781\n#robotics #constructiontech #parallelrobot #ETHZurich #engineeringdesign",
+      "post_bluesky": "A 33 kg robot drills a 15-hole ceiling pattern at 3.4 m reach with sub-0.6 mm accuracy. The trick: intentional overconstraint boosts torsional stiffness 454% at full height. Real hardware, real concrete. https://arxiv.org/abs/2607.25781",
+      "bluesky_thread": [
+        "The overconstraint move is genuinely clever. Universal joints instead of spherical ones create kinematic incompatibility, but small elastic deflections absorb it. You get torsional stiffness gains that compound with height: +67% at 1.7 m, +196% at 2.6 m, +454% at 3.4 m. That is where overhead tool…",
+        "Honest limit: 50 cm triangle footprint and accuracy degrades on uneven floors. Every real construction site has ground variation. ETH and Hilti know this, they flag it themselves. Curious whether anyone here has seen parallel robots survive real site conditions, not just structured environments…"
+      ],
+      "hook_style": "tension"
+    },
+    "status": "pending_review",
+    "created": "2026-08-09T00:37:57.550458+00:00",
+    "media": {
+      "figures": [
+        "media/d344ae93/pdf/src_05.png",
+        "media/d344ae93/pdf/src_02.png",
+        "media/d344ae93/pdf/src_06.png",
+        "media/d344ae93/pdf/src_00.png"
+      ],
+      "bsky": [
+        "media/d344ae93/bsky_00.png",
+        "media/d344ae93/bsky_01.png",
+        "media/d344ae93/bsky_02.png",
+        "media/d344ae93/bsky_03.png"
+      ],
+      "slides": [
+        "media/d344ae93/slide_00.png",
+        "media/d344ae93/slide_01.png",
+        "media/d344ae93/slide_02.png",
+        "media/d344ae93/slide_03.png",
+        "media/d344ae93/slide_04.png",
+        "media/d344ae93/slide_05.png",
+        "media/d344ae93/slide_06.png",
+        "media/d344ae93/slide_07.png"
+      ]
+    }
   }
 ]

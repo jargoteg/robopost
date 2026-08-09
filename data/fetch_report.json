@@ -1,43 +1,42 @@
 {
-  "ts": "2026-08-08T13:42",
+  "ts": "2026-08-09T00:35",
   "collected": 221,
-  "dedup_dropped": 37,
-  "after_dedup": 184,
+  "dedup_dropped": 38,
+  "after_dedup": 183,
   "score_hist": {
-    "0": 21,
-    "1": 18,
-    "2": 40,
-    "3": 34,
-    "4": 29,
-    "5": 23,
-    "6": 9,
-    "7": 6,
-    "8": 3,
-    "9": 1
+    "0": 22,
+    "1": 17,
+    "2": 37,
+    "3": 40,
+    "4": 31,
+    "5": 18,
+    "6": 10,
+    "7": 5,
+    "8": 3
   },
   "rank_batches_failed": 0,
-  "ranked_above_floor": 19,
+  "ranked_above_floor": 18,
   "split": {
-    "videos": 1,
-    "papers": 8,
-    "news": 10
+    "videos": 0,
+    "papers": 9,
+    "news": 9
   },
   "floor": 6,
   "picked": [
     {
-      "t": "Innovation at Agility: Digit does TikTok",
-      "type": "video",
+      "t": "Dumpsite Seabed Characterization of the San Pedro ",
+      "type": "paper",
+      "video": false
+    },
+    {
+      "t": "SAGA: Open-World Mobile Manipulation via Structure",
+      "type": "paper",
+      "video": false
+    },
+    {
+      "t": "Tripody: An Overconstrained 3-SPR-like Parallel Ro",
+      "type": "paper",
       "video": true
-    },
-    {
-      "t": "QLIMB: End-to-End Whole-Body Control for Quadruped",
-      "type": "paper",
-      "video": false
-    },
-    {
-      "t": "Advances, challenges, and opportunities for legged",
-      "type": "paper",
-      "video": false
     }
   ]
 }
