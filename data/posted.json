@@ -2635,5 +2635,22 @@
       "tiktok": {}
     },
     "metrics_at": "2026-08-08T22:22:50.540427+00:00"
+  },
+  {
+    "draft_id": "1dc2b651",
+    "paper_id": "yt-vZwYTn3fW1w",
+    "title": "Innovation at Agility: Digit does TikTok",
+    "format": "carousel",
+    "hook": "Why does syncing humanoid robots make warehouse fleets actually hard?",
+    "posted_at": "2026-08-09T00:33:38.229570+00:00",
+    "bsky_variant": "thread",
+    "hook_style": "curiosity_gap",
+    "item_type": "video",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3msmdlp24be2m",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]
