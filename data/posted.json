@@ -2652,5 +2652,22 @@
       "tiktok": "skipped"
     },
     "metrics": {}
+  },
+  {
+    "draft_id": "d579a3b9",
+    "paper_id": "doi-10.1109_lra.2026.3712638",
+    "title": "QLIMB: End-to-End Whole-Body Control for Quadruped Loco-Manipulation and Balance on Complex Terrains",
+    "format": "carousel",
+    "hook": "Why can't legged robots manipulate and walk at the same time?",
+    "posted_at": "2026-08-09T02:12:36.673662+00:00",
+    "bsky_variant": "single",
+    "hook_style": "curiosity_gap",
+    "item_type": "paper",
+    "platform_ids": {
+      "bluesky": "at://did:plc:gpwxmmyy5swpdglde55nebig/app.bsky.feed.post/3msmj4r2ida2b",
+      "instagram": "skipped",
+      "tiktok": "skipped"
+    },
+    "metrics": {}
   }
 ]

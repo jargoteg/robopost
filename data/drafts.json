@@ -17980,7 +17980,7 @@
       ],
       "hook_style": "curiosity_gap"
     },
-    "status": "approved",
+    "status": "posted",
     "created": "2026-08-08T13:44:24.563205+00:00",
     "media": {
       "figures": [],
@@ -18003,7 +18003,9 @@
     },
     "issue": 195,
     "scheduled_after": "2026-08-09T02:03:38.229570+00:00",
-    "queue_notified": true
+    "queue_notified": true,
+    "bsky_variant": "single",
+    "finalized": true
   },
   {
     "draft_id": "e7ee51c4",
@@ -18108,7 +18110,7 @@
       ]
     },
     "issue": 196,
-    "scheduled_after": "2026-08-09T02:03:38.229570+00:00",
+    "scheduled_after": "2026-08-09T03:42:36.673657+00:00",
     "queue_notified": true
   },
   {
