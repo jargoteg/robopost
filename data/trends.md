@@ -1,5 +1,9 @@
-# Community trends (updated 2026-08-12T07:24Z)
+# Community trends (updated 2026-08-12T13:08Z)
 
-The robotics community is buzzing across several distinct threads right now. Humanoid robots are dominating conversation, but with heavy skepticism — posts mocking demos as overblown, questioning the logic of human-shaped machines for non-human tasks, and joking about remote-controlled "autonomous" bots are all getting massive traction. The billionaire-techno-solutionism angle (the $370B poverty quote) is generating sharp pushback. Knightscope's pivot from automated security back toward human guards is quietly sparking a "reality check on automation" discussion. The Realbotix pivot thread from a robotics researcher is drawing engagement around ethics and humanoid design choices. Engineering heritage content — the Oldham coupling post, the folded structures post — consistently pulls high numbers, suggesting appetite for "timeless mechanism" content. Swarm robotics is a small but active niche conversation.
+The dominant conversation right now revolves around humanoid robots, and the tone is overwhelmingly skeptical and comedic. People are mocking the gap between hype and reality, from Russia's robot collapsing at its debut to the recurring joke about humanoid robots being remote-controlled by hidden humans. The "why humanoid at all" critique is gaining real traction, with several posts questioning whether the form factor makes any engineering sense.
 
-The post angle that would land today: a sharp, concrete take on why humanoid form factor is often the wrong engineering choice — riding the skepticism wave with specific examples rather than vague contrarianism.
+A second thread is billionaire techno-solutionism, anchored by the $370B poverty-via-AI-robotics take drawing significant cynicism. Knightscope's pivot back to human guards is feeding this skepticism about automation promises broadly.
+
+On the technical side, robot learning from minimal data is generating quiet but genuine interest, particularly the crowd navigation paper using only human walking footage. Swarm robotics is a small but active niche conversation.
+
+Suggested post angle: lean into the "humanoid robot remote controlled by a human" absurdity with a deadpan engineering take on why task-specific robots consistently outperform humanoid generalists. That framing is primed to resonate today.
