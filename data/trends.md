@@ -1,9 +1,5 @@
-# Community trends (updated 2026-08-12T13:08Z)
+# Community trends (updated 2026-08-12T19:02Z)
 
-The dominant conversation right now revolves around humanoid robots, and the tone is overwhelmingly skeptical and comedic. People are mocking the gap between hype and reality, from Russia's robot collapsing at its debut to the recurring joke about humanoid robots being remote-controlled by hidden humans. The "why humanoid at all" critique is gaining real traction, with several posts questioning whether the form factor makes any engineering sense.
+The robotics community on Bluesky is buzzing across several converging threads. Humanoid robots dominate discourse, mostly skeptically: people are mocking overblown demos, questioning why humanoids are chosen over purpose-built machines, and sharing viral fails. The billionaire-tech-solutionism angle is generating heat, with Musk and the "AI fixes poverty" framing drawing sharp criticism. OpenAI's Pentagon robotics deal and the discovery of American chips inside Russian missiles are driving serious policy and ethics conversation. There's warm nostalgia energy around vintage robotics aesthetics, Robert Tinney's 1983 cover art, and the Oldham coupling's engineering legacy. Realbotix's pivot from sex robots to classrooms is sparking a genuine researcher-led thread worth watching. Swarm robotics is a quieter but growing undercurrent.
 
-A second thread is billionaire techno-solutionism, anchored by the $370B poverty-via-AI-robotics take drawing significant cynicism. Knightscope's pivot back to human guards is feeding this skepticism about automation promises broadly.
-
-On the technical side, robot learning from minimal data is generating quiet but genuine interest, particularly the crowd navigation paper using only human walking footage. Swarm robotics is a small but active niche conversation.
-
-Suggested post angle: lean into the "humanoid robot remote controlled by a human" absurdity with a deadpan engineering take on why task-specific robots consistently outperform humanoid generalists. That framing is primed to resonate today.
+A post angle that would land today: lean into the humanoid skepticism with a concrete, data-backed take on why task-specific robots consistently outperform humanoids on cost and reliability metrics. That framing fits the mood perfectly right now.
