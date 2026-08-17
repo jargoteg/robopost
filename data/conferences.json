@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10T06:09:16.258961+00:00",
+  "updated": "2026-08-17T05:30:52.503914+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -19,11 +19,11 @@
     },
     {
       "name": "RSS",
-      "year": 2026,
-      "start": "2026-07-13",
-      "end": "2026-07-17",
-      "location": "Sydney, Australia",
-      "confidence": "confirmed"
+      "year": 2027,
+      "start": "2027-07-12",
+      "end": "2027-07-16",
+      "location": "TBD",
+      "confidence": "estimated"
     },
     {
       "name": "CoRL",
@@ -44,8 +44,8 @@
     {
       "name": "MRS",
       "year": 2027,
-      "start": "2027-01-01",
-      "end": "2027-12-31",
+      "start": "2027-10-01",
+      "end": "2027-10-03",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -69,15 +69,15 @@
       "name": "ICSR",
       "year": 2026,
       "start": "2026-11-01",
-      "end": "2026-11-30",
+      "end": "2026-11-03",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "FSR",
       "year": 2027,
-      "start": "2027-01-01",
-      "end": "2027-12-31",
+      "start": "2027-09-01",
+      "end": "2027-09-03",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -85,39 +85,31 @@
       "name": "SSRR",
       "year": 2026,
       "start": "2026-10-01",
-      "end": "2026-10-31",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "ICUR",
-      "year": 2026,
-      "start": "2026-09-01",
-      "end": "2026-09-30",
+      "end": "2026-10-03",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "IEEE OCEANS",
       "year": 2026,
-      "start": "2026-09-01",
-      "end": "2026-09-30",
+      "start": "2026-09-21",
+      "end": "2026-09-25",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "CASE",
       "year": 2026,
-      "start": "2026-08-01",
-      "end": "2026-09-30",
+      "start": "2026-08-25",
+      "end": "2026-08-29",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "WAFR",
       "year": 2026,
-      "start": "2026-01-01",
-      "end": "2026-12-31",
+      "start": "2026-10-01",
+      "end": "2026-10-03",
       "location": "TBD",
       "confidence": "estimated"
     }
