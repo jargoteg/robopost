@@ -1,9 +1,5 @@
-# Community trends (updated 2026-08-22T12:37Z)
+# Community trends (updated 2026-08-22T18:30Z)
 
-The community is buzzing around humanoid robots above all else, driven by China's "Lightning" robot sprinting 100m faster than Usain Bolt's world record and a competing clip of a robot snapping at the waist after hitting a safety cushion at the "Robot Olympics." Russia's disastrous Aidol debut collapse is generating significant mockery. There's a parallel skeptical thread questioning the entire humanoid form factor, with one well-engaged post calling it "a complete lack of vision of what a robot can be." Elon Musk's earlier guy-in-a-suit incident keeps resurfacing in these conversations.
+The robotics community is buzzing around several overlapping threads right now. Humanoid robots are dominating conversation, driven by China's "Lightning" robot claiming to beat Usain Bolt's 100m record, footage of robots failing spectacularly at the "Robot Olympics," and ongoing skepticism about whether humanoid form factors make any sense at all. A related thread is poking fun at the gap between AI/robotics hype and reality, with the Realbotix pivot and Elon's "guy in a suit" moment getting fresh attention. OpenAI's robotics team raising alarms about Pentagon guardrails is generating serious concern among researchers. There's warm nostalgia energy around classic engineering, with the Oldham coupling and Robert Tinney's 1983 Robotics Age cover both circulating widely.
 
-A secondary theme is AI/robotics wealth inequality, sparked by a billionaire attributing poverty solutions to automation. The OpenAI robotics team's Pentagon guardrails controversy is drawing quieter but serious engagement.
-
-Engineering nostalgia is performing well, with the 1821 Oldham coupling and folded structures posts both cresting 2,500 engagements.
-
-Suggested angle: a grounded explainer on why humanoid robot running is mechanically harder than it looks, using today's sprint failures as the hook.
+For a post angle that would land today: lean into the humanoid failure compilation narrative with a sharp take on whether the "Robot Olympics" is accelerating genuine capability or just crashing robots into walls for PR.
