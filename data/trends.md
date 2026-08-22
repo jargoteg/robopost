@@ -1,5 +1,9 @@
-# Community trends (updated 2026-08-22T06:39Z)
+# Community trends (updated 2026-08-22T12:37Z)
 
-The robotics community is buzzing across several fronts right now. Humanoid robots are dominating conversation, split between genuine excitement and sharp skepticism, with viral moments like the Beijing "Robot Olympics" crash, Russia's collapsing Aidol debut, and the recurring joke that most "autonomous" demos are secretly human-operated fueling a lot of cynical humor. The wealth-and-automation discourse is heating up again following comments from a billionaire framing robotics as a poverty solution, drawing significant pushback. Classic engineering content is performing surprisingly well, with the Oldham coupling and structural folding posts racking up thousands of engagements, suggesting appetite for fundamentals amid hype cycles. Realbotix's pivot from sex robots to classroom companions is generating serious discussion among researchers. Serve Robotics is drawing attention in the delivery space.
+The community is buzzing around humanoid robots above all else, driven by China's "Lightning" robot sprinting 100m faster than Usain Bolt's world record and a competing clip of a robot snapping at the waist after hitting a safety cushion at the "Robot Olympics." Russia's disastrous Aidol debut collapse is generating significant mockery. There's a parallel skeptical thread questioning the entire humanoid form factor, with one well-engaged post calling it "a complete lack of vision of what a robot can be." Elon Musk's earlier guy-in-a-suit incident keeps resurfacing in these conversations.
 
-The post angle that would land today: lean into the engineering classics thread with a sharp contrast framing, something like "while everyone debates humanoid robots, the 200-year-old mechanism quietly running all of them."
+A secondary theme is AI/robotics wealth inequality, sparked by a billionaire attributing poverty solutions to automation. The OpenAI robotics team's Pentagon guardrails controversy is drawing quieter but serious engagement.
+
+Engineering nostalgia is performing well, with the 1821 Oldham coupling and folded structures posts both cresting 2,500 engagements.
+
+Suggested angle: a grounded explainer on why humanoid robot running is mechanically harder than it looks, using today's sprint failures as the hook.
