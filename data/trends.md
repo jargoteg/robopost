@@ -1,5 +1,7 @@
-# Community trends (updated 2026-08-24T12:49Z)
+# Community trends (updated 2026-08-24T18:39Z)
 
-The robotics community is buzzing across several fronts right now. The World Humanoid Robot Games in Beijing is dominating discussion, particularly a Chinese robot clocking 9.39 seconds in the 100m, beating Usain Bolt's record — generating both genuine amazement and sharp skepticism about what these benchmarks actually mean for real-world capability. Relatedly, people are debating humanoid robots broadly, with strong pushback that humanoid form factor reflects a failure of imagination rather than engineering ambition. The Realbotix pivot from sex robots to something new is sparking a thread from a robotics researcher worth watching. OpenAI's robotics team and Pentagon guardrails controversy is drawing concern about AI safety governance. There's also lighthearted energy around Asimov's "Fourth Law" meme and the mocap-suit blooper clip still circulating from 2025.
+The biggest buzz right now is around the World Humanoid Robot Games in Beijing, where a Chinese robot clocked 9.39 seconds in the 100m, beating Usain Bolt's record. The community is split between genuine amazement and dry skepticism ("so does my car"). Closely related, humanoid robots broadly are generating debate, with a vocal contingent arguing humanoid form factor reflects a failure of imagination. Realbotix's pivot away from sex robots is drawing commentary from researchers. OpenAI's robotics team raising concerns about Pentagon guardrails is getting serious traction. Lighter cultural threads include retro robotics nostalgia (Robert Tinney's 1983 cover art, Oldham coupling history) and competitive robotics events like RoboCup Portugal Open.
 
-Suggested post angle: lean into the 100m record skepticism with a sharp take comparing humanoid robot sprint records to car speeds — that framing is already resonating and invites engagement.
+Papers and demos mentioned are thin today, mostly news-driven.
+
+A post angle that would land: lean into the 100m record skepticism with a genuine engineering breakdown of what the sprint actually required mechanically, and what it still cannot do.
