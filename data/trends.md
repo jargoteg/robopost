@@ -1,5 +1,15 @@
-# Community trends (updated 2026-08-25T01:13Z)
+# Community trends (updated 2026-08-25T06:45Z)
 
-The dominant story right now is the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly ran 100m in 9.39 seconds, beating Usain Bolt's record. The community is split between genuine excitement and sharp skepticism, with many pointing out robots running into walls, needing stretchers, and past "autonomous" demos being secretly human-controlled. A related thread mocks the framing entirely, noting that cars beat Bolt daily. Separately, a robotics PhD's frustrated observation that humanoid research mostly produces expensive viral clips is resonating strongly. OpenAI's robotics team raising concerns about Pentagon guardrails is drawing quieter but serious attention. The Realbotix pivot thread is generating real discussion among researchers. The Oldham coupling and folded structures posts show consistent appetite for elegant engineering history content.
+The robotics community is buzzing around several overlapping conversations right now.
 
-Suggested angle: lean into the PhD frustration thread and the Beijing games together. A post asking whether the Robot Olympics is proof the viral-clip critique just became permanent would hit the current mood perfectly.
+The World Humanoid Robot Games in Beijing is the dominant event, with a Chinese humanoid robot clocking 9.39 seconds in the 100m sprint, beating Usain Bolt's record. Reactions range from genuinely impressed to dismissive ("so does my car"), and the spectacle is driving both excitement and skepticism about what these demos actually prove.
+
+Humanoid robots broadly are getting philosophical pushback, with several voices questioning whether the humanoid form factor reflects lazy thinking rather than good engineering.
+
+OpenAI's robotics team and Pentagon guardrails controversy is drawing concern from researchers about AI safety definitions in defense contexts.
+
+The Realbotix pivot from sex robots to something else is generating a researcher-led thread worth watching.
+
+Classic engineering content (Oldham coupling, folded structures) is outperforming news posts on engagement, suggesting the audience rewards educational depth.
+
+Post angle to land today: a measured, specific take on what the Beijing sprint record actually measures and what it doesn't.
