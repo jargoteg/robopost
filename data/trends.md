@@ -1,5 +1,9 @@
-# Community trends (updated 2026-08-25T12:45Z)
+# Community trends (updated 2026-08-25T18:42Z)
 
-The community is buzzing most loudly about the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record (9.39s) — but the discourse is deeply skeptical, with jokes about cannons, stretchers, and "guy in a robot suit" energy dominating. Closely related is the broader humanoid robot hype debate, with a 23-year robotics PhD veteran's post gaining traction arguing humanoids remain "expensive viral video generators." OpenAI's robotics team raising concerns about Pentagon guardrails before sufficient definition is drawing serious engagement in the research crowd. The Realbotix pivot (sex robots to classroom robots) is sparking a notable thread from a robotics researcher. Classic engineering content is also performing surprisingly well, with the 1821 Oldham coupling and folded-structure posts hitting thousands of engagements.
+The dominant conversation this week centers on the World Humanoid Robot Games in Beijing, where a robot allegedly broke Usain Bolt's 100m sprint record. The community is deeply skeptical, with most mocking the comparison to cars, cannons, and controlled demos rather than treating it as genuine achievement. Russia's Aidol robot collapsing at its debut is drawing similar ridicule alongside the Beijing hype.
 
-Suggested post angle: Lean into the humanoid sprint record skepticism with a technically grounded take — what would a *fair* human-robot athletic comparison actually look like, and why current benchmarks mislead everyone including policymakers.
+A longer-running debate is resurfacing around humanoid robots as a format, with veterans arguing the form factor reflects poor design imagination and that "autonomous" demos are frequently human-controlled. A 23-year robotics PhD researcher's thread calling humanoids little more than viral video generators is getting significant traction.
+
+OpenAI's robotics team and Pentagon guardrails story is generating concern about AI safety governance. Classic engineering content around the Oldham coupling and folded structures is performing surprisingly well.
+
+Suggested angle: a dry, factual post comparing what "beating Bolt's record" actually required mechanically versus what headlines imply. Skeptical technical audiences are primed for it today.
