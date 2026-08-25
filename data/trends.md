@@ -1,15 +1,5 @@
-# Community trends (updated 2026-08-25T06:45Z)
+# Community trends (updated 2026-08-25T12:45Z)
 
-The robotics community is buzzing around several overlapping conversations right now.
+The community is buzzing most loudly about the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record (9.39s) — but the discourse is deeply skeptical, with jokes about cannons, stretchers, and "guy in a robot suit" energy dominating. Closely related is the broader humanoid robot hype debate, with a 23-year robotics PhD veteran's post gaining traction arguing humanoids remain "expensive viral video generators." OpenAI's robotics team raising concerns about Pentagon guardrails before sufficient definition is drawing serious engagement in the research crowd. The Realbotix pivot (sex robots to classroom robots) is sparking a notable thread from a robotics researcher. Classic engineering content is also performing surprisingly well, with the 1821 Oldham coupling and folded-structure posts hitting thousands of engagements.
 
-The World Humanoid Robot Games in Beijing is the dominant event, with a Chinese humanoid robot clocking 9.39 seconds in the 100m sprint, beating Usain Bolt's record. Reactions range from genuinely impressed to dismissive ("so does my car"), and the spectacle is driving both excitement and skepticism about what these demos actually prove.
-
-Humanoid robots broadly are getting philosophical pushback, with several voices questioning whether the humanoid form factor reflects lazy thinking rather than good engineering.
-
-OpenAI's robotics team and Pentagon guardrails controversy is drawing concern from researchers about AI safety definitions in defense contexts.
-
-The Realbotix pivot from sex robots to something else is generating a researcher-led thread worth watching.
-
-Classic engineering content (Oldham coupling, folded structures) is outperforming news posts on engagement, suggesting the audience rewards educational depth.
-
-Post angle to land today: a measured, specific take on what the Beijing sprint record actually measures and what it doesn't.
+Suggested post angle: Lean into the humanoid sprint record skepticism with a technically grounded take — what would a *fair* human-robot athletic comparison actually look like, and why current benchmarks mislead everyone including policymakers.
