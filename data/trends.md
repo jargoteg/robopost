@@ -1,9 +1,5 @@
-# Community trends (updated 2026-08-27T07:46Z)
+# Community trends (updated 2026-08-27T21:51Z)
 
-The biggest conversation this week centers on the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record, generating both genuine excitement and heavy skepticism ("so does my car"). Connected to this is broader humanoid robot hype fatigue, with a 23-year robotics PhD veteran noting the technology still mainly produces "expensive viral clips," and users mocking the gap between demo polish and real capability.
+The robotics community is buzzing around several intersecting conversations today. The World Humanoid Robot Games in Beijing is dominating engagement, with the Chinese robot breaking Usain Bolt's 100m record generating both amazement and skepticism ("so does my car"). Russia's failed Aidol debut is drawing mockery as a sharp contrast. Separately, a veteran PhD researcher's thread calling humanoid robots "expensive viral video machines" is resonating with people tired of hype. The Realbotix pivot from sex robots to classroom use is sparking a genuine ethical debate among researchers. Engineering nostalgia content is quietly performing well, with the Oldham coupling post and 1983 Robotics Age cover art both pulling strong numbers.
 
-OpenAI's robotics team raising concerns about insufficient guardrails before their Pentagon deal is drawing serious engagement. Realbotix's pivot away from sex robots is sparking a thread from a robotics researcher worth watching. The billionaire "AI solves poverty" discourse is generating predictable but high-volume pushback.
-
-On the lighter side, classic engineering content (Oldham coupling, folded structures) is performing surprisingly well.
-
-Suggested post angle: a grounded, specific response to the Bolt record story explaining what the Beijing results actually reveal about locomotion progress versus what the headlines imply. That gap is exactly where the community wants nuance right now.
+Suggested post angle: lean into the Beijing Games skepticism with a genuine technical breakdown of what it actually means for a robot to "run" 100m versus human locomotion. The audience is primed for someone to explain it seriously rather than dunk or hype.
