@@ -1,5 +1,9 @@
-# Community trends (updated 2026-08-26T19:47Z)
+# Community trends (updated 2026-08-27T07:46Z)
 
-The dominant conversation this week centers on the World Humanoid Robot Games in Beijing, where a humanoid robot reportedly beat Usain Bolt's 100m record — generating heavy skepticism and mockery ("so does my car"). Russia's failed Aidol robot debut is drawing schadenfreude. A veteran robotics PhD's thread about humanoid robots existing mainly to produce "viral video clips" is resonating deeply with researchers. Classic engineering content is punching above its weight, with posts on the Oldham coupling and force-distributing folds getting strong engagement. There's also a slow-burn conversation about AI/robotics wealth inequality after a billionaire's poverty comments, and OpenAI's Pentagon robotics guardrail story is circulating among concerned practitioners. The Realbotix pivot thread from a researcher is generating nuanced discussion. No major papers trending.
+The biggest conversation this week centers on the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record, generating both genuine excitement and heavy skepticism ("so does my car"). Connected to this is broader humanoid robot hype fatigue, with a 23-year robotics PhD veteran noting the technology still mainly produces "expensive viral clips," and users mocking the gap between demo polish and real capability.
 
-Suggested post angle: Lean into the PhD researcher's cynicism with a data-backed or anecdotal thread asking "what would actually useful humanoid robot milestones look like?" — that framing is primed to land right now.
+OpenAI's robotics team raising concerns about insufficient guardrails before their Pentagon deal is drawing serious engagement. Realbotix's pivot away from sex robots is sparking a thread from a robotics researcher worth watching. The billionaire "AI solves poverty" discourse is generating predictable but high-volume pushback.
+
+On the lighter side, classic engineering content (Oldham coupling, folded structures) is performing surprisingly well.
+
+Suggested post angle: a grounded, specific response to the Bolt record story explaining what the Beijing results actually reveal about locomotion progress versus what the headlines imply. That gap is exactly where the community wants nuance right now.
