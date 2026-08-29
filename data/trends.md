@@ -1,5 +1,11 @@
-# Community trends (updated 2026-08-29T12:23Z)
+# Community trends (updated 2026-08-29T20:29Z)
 
-The dominant conversation right now is the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record (9.39s). The community is deeply skeptical and sardonic about what this actually proves, with comparisons to cars and cannons getting strong traction. A related thread mocks the broader humanoid robot hype cycle, with a PhD roboticist's 23-year retrospective on humanoid research going viral. Realbotix's pivot away from sex robots is generating genuine analytical discussion from researchers. The OpenAI robotics team's Pentagon guardrails controversy is picking up among the more policy-minded crowd. Engineering heritage content is performing surprisingly well, with the 1821 Oldham coupling and folded-structure biomechanics posts both crossing 2,000 engagements.
+The biggest conversation is around the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record at 9.39 seconds. The community is split between genuine amazement and sharp skepticism, with many pointing out the comparison to human athletes is meaningless, and others questioning how "autonomous" these demos really are.
 
-Suggested post angle: Lean into the Beijing games skepticism with a measured technical breakdown of what "robot beats Bolt" actually measures versus genuine locomotion progress. The snark is saturated; informed nuance would stand out.
+A viral mocap-suit clip from 2025 is resurging, keeping the authenticity debate warm. There's also renewed cynicism about humanoid form factor in general, with one well-engaged post calling it "a complete lack of vision."
+
+The Realbotix pivot thread from a robotics researcher is gaining traction, touching on ethics and product direction. Meanwhile, the Oldham coupling and folded-structure posts show steady appetite for elegant engineering history content.
+
+OpenAI's robotics team and Pentagon guardrails are drawing quiet but real concern.
+
+Suggested angle: a plain-language breakdown of what the Beijing robot games results actually mean technically, and what they don't.
