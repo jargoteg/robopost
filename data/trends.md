@@ -1,11 +1,5 @@
-# Community trends (updated 2026-08-29T20:29Z)
+# Community trends (updated 2026-08-30T03:55Z)
 
-The biggest conversation is around the World Humanoid Robot Games in Beijing, where a Chinese robot reportedly beat Usain Bolt's 100m record at 9.39 seconds. The community is split between genuine amazement and sharp skepticism, with many pointing out the comparison to human athletes is meaningless, and others questioning how "autonomous" these demos really are.
+The dominant conversation this week centers on the World Humanoid Robot Games in Beijing, where a robot reportedly beat Usain Bolt's 100m record, generating a mix of genuine excitement and sharp skepticism ("so does my car every time I drive it"). Closely related is broader humanoid robot hype vs. reality tension, with the viral 2025 mocap-suit clip still circulating and a robotics PhD veteran noting that after 23 years, humanoid robots remain "extremely expensive viral video generators." The Realbotix pivot from sex robots to companion AI is drawing serious analytical threads. Engineering nostalgia is quietly thriving, with the 1821 Oldham coupling and 1983 Robotics Age cover art both pulling strong engagement. There's also simmering concern about AI/robotics governance after an OpenAI robotics team member flagged undefined guardrails around the Pentagon deal.
 
-A viral mocap-suit clip from 2025 is resurging, keeping the authenticity debate warm. There's also renewed cynicism about humanoid form factor in general, with one well-engaged post calling it "a complete lack of vision."
-
-The Realbotix pivot thread from a robotics researcher is gaining traction, touching on ethics and product direction. Meanwhile, the Oldham coupling and folded-structure posts show steady appetite for elegant engineering history content.
-
-OpenAI's robotics team and Pentagon guardrails are drawing quiet but real concern.
-
-Suggested angle: a plain-language breakdown of what the Beijing robot games results actually mean technically, and what they don't.
+Post angle that would land today: a punchy, data-grounded take comparing what the Beijing robot games actually measure versus meaningful real-world robotics benchmarks. The skepticism audience is large and hungry for someone to articulate it clearly.
