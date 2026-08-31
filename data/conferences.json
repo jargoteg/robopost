@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T05:34:49.867034+00:00",
+  "updated": "2026-08-31T11:17:46.766823+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -20,9 +20,9 @@
     {
       "name": "RSS",
       "year": 2027,
-      "start": "2027-07-01",
-      "end": "2027-07-05",
-      "location": "Unknown",
+      "start": "2027-07-12",
+      "end": "2027-07-16",
+      "location": "TBD",
       "confidence": "estimated"
     },
     {
@@ -44,9 +44,9 @@
     {
       "name": "MRS",
       "year": 2027,
-      "start": "2027-12-01",
-      "end": "2027-12-02",
-      "location": "Unknown",
+      "start": "2027-11-01",
+      "end": "2027-11-02",
+      "location": "TBD",
       "confidence": "estimated"
     },
     {
@@ -64,46 +64,6 @@
       "end": "2027-06-21",
       "location": "Nuremberg, Germany",
       "confidence": "confirmed"
-    },
-    {
-      "name": "ICSR",
-      "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
-      "location": "Unknown",
-      "confidence": "estimated"
-    },
-    {
-      "name": "FSR",
-      "year": 2025,
-      "start": "2025-09-01",
-      "end": "2025-09-03",
-      "location": "Unknown",
-      "confidence": "estimated"
-    },
-    {
-      "name": "SSRR",
-      "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
-      "location": "Unknown",
-      "confidence": "estimated"
-    },
-    {
-      "name": "CASE",
-      "year": 2026,
-      "start": "2026-08-26",
-      "end": "2026-08-30",
-      "location": "Unknown",
-      "confidence": "estimated"
-    },
-    {
-      "name": "WAFR",
-      "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
-      "location": "Unknown",
-      "confidence": "estimated"
     }
   ]
 }
