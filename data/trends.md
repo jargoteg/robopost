@@ -1,9 +1,5 @@
-# Community trends (updated 2026-09-02T16:03Z)
+# Community trends (updated 2026-09-02T20:34Z)
 
-The robotics community is buzzing around several converging threads right now. The World Humanoid Robot Games in Beijing is dominating attention, with a Chinese robot posting a 9.39-second 100m sprint, sparking debate about whether speed benchmarks are even meaningful compared to practical capability. Humanoid robots broadly are generating skepticism alongside excitement, with notable cynicism about "autonomous" demos secretly being human-operated and Elon Musk's robot suit incident resurfacing.
+The robotics community is buzzing around several converging threads right now. The World Humanoid Robot Games in Beijing is the dominant live event, with clips of robots breaking Usain Bolt's 100m record generating massive debate about whether speed metrics actually mean anything for robotics progress. Humanoid robots broadly are under scrutiny, with healthy skepticism about "autonomous" demos being secretly human-controlled and whether humanoid form factors reflect genuine vision. The Realbotix pivot from sex robots to companion AI is driving a separate thread, especially among researchers. There's sharp political tension around AI/robotics being deployed as surveillance and crowd-control tools, framed explicitly as authoritarianism. OpenAI's undefined Pentagon guardrails on robotics are drawing concern from insiders. The Oldham coupling post is a sleeper hit, proving mechanical engineering history content performs well here.
 
-The Realbotix pivot from sex robots to companion AI is generating serious discussion among researchers. OpenAI's robotics team raising internal concerns about Pentagon guardrails is drawing significant engagement in technical circles. Classic engineering content is performing well, with the 1821 Oldham coupling getting tens of thousands of interactions across multiple posts.
-
-There is also persistent tension around AI and robotics as responses to poverty and inequality, with billionaire framings getting heavy pushback.
-
-Suggested angle: Post a grounded take on what the Beijing robot sprint actually measures versus what humanoid robots cannot yet do reliably. That contrast is where the conversation wants to go.
+Suggested angle: post on the gap between benchmark theater (robot beats Bolt) and actual useful capability, with a concrete example. That framing is primed to explode today.
