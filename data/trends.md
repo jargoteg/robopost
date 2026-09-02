@@ -1,5 +1,9 @@
-# Community trends (updated 2026-09-02T10:44Z)
+# Community trends (updated 2026-09-02T16:03Z)
 
-The robotics community is buzzing around several converging themes right now. The World Humanoid Robot Games in Beijing is dominating conversation, with a Chinese robot breaking Usain Bolt's 100m record generating both genuine excitement and healthy skepticism about what such benchmarks actually mean. Humanoid robots broadly are drawing pushback, with several high-engagement posts questioning the vision behind humanoid form factors and the authenticity of "autonomous" demos. Realbotix's pivot from sex robots to something new is sparking a thread from a robotics researcher worth watching. There's also rising tension around AI and robotics as economic and political tools, from billionaire poverty-solving claims to surveillance technology framed as authoritarianism. Classic engineering content like the Oldham coupling keeps outperforming expectations engagement-wise.
+The robotics community is buzzing around several converging threads right now. The World Humanoid Robot Games in Beijing is dominating attention, with a Chinese robot posting a 9.39-second 100m sprint, sparking debate about whether speed benchmarks are even meaningful compared to practical capability. Humanoid robots broadly are generating skepticism alongside excitement, with notable cynicism about "autonomous" demos secretly being human-operated and Elon Musk's robot suit incident resurfacing.
 
-A strong post angle for today: lean into the Beijing robot games skepticism with a genuinely curious take asking what benchmarks would actually matter for humanoid robots, inviting the community to propose better ones.
+The Realbotix pivot from sex robots to companion AI is generating serious discussion among researchers. OpenAI's robotics team raising internal concerns about Pentagon guardrails is drawing significant engagement in technical circles. Classic engineering content is performing well, with the 1821 Oldham coupling getting tens of thousands of interactions across multiple posts.
+
+There is also persistent tension around AI and robotics as responses to poverty and inequality, with billionaire framings getting heavy pushback.
+
+Suggested angle: Post a grounded take on what the Beijing robot sprint actually measures versus what humanoid robots cannot yet do reliably. That contrast is where the conversation wants to go.
