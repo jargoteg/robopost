@@ -1,30 +1,30 @@
-# Engagement lessons (auto-updated 2026-09-06)
+# Engagement lessons (auto-updated 2026-09-07)
 
-# Content Team — Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid/bipedal locomotion (humanoid navigation post: 11 likes, 3 reposts — clear outlier), wheel-legged robots (3 likes), and surgical/miniature robots (2 likes). Human-interest framing ("learned from human footage," "plays football") drives the most engagement.
-
-**Under-performed:** Sensor/estimation papers (hysteresis, EKF, wrench control), UAV logistics, and anything with heavy jargon in the hook. Abstract technical benchmarks consistently scored 0.
+**Over-performed:** Humanoid robots (navigation from human data: 16 total engagements — clear outlier), wheel-legged hybrids, and multi-robot coordination. Human-relatable framing ("walks through crowds," "plays football") drives outsized results. **Under-performed:** Highly technical sensor/control papers (hysteresis, wrench control, EKF fusion) — too niche, insufficient visceral appeal.
 
 ## 2. Hook Styles That Worked
-`bold_claim` produced the top post by a wide margin. `curiosity_gap` had the most consistent non-zero replies. `number_stat` and `tension` rarely broke through.
+`bold_claim` produced the two highest-performing posts (humanoid navigation: 16eng; wheel-legged football: 3 likes). `curiosity_gap` showed modest consistency. `number_stat` and `tension` largely flatlined.
 
 ## 3. Carousel vs. Video
-Insufficient video data (only 2 posts, both 0 likes). **Cannot conclude — needs deliberate testing.**
+Insufficient video data (only 2 posts, both near-zero). Cannot conclude — **test more videos before drawing comparisons.**
 
 ## 3a. Hook Style Weighting
-| Hook | Avg. Likes | Recommendation |
-|------|-----------|----------------|
-| bold_claim | ~2.2 | **50%** of posts |
-| curiosity_gap | ~1.0 | **30%** |
-| number_stat | ~0.5 | **10%** |
-| tension | ~0.5 | **10%** |
+| Hook | Avg Likes | Verdict |
+|------|-----------|---------|
+| `bold_claim` | ~1.8 | **Best** |
+| `curiosity_gap` | ~1.0 | Decent |
+| `tension` | ~0.5 | Weak |
+| `number_stat` | ~0.4 | Weakest |
+
+**Recommended weighting:** bold_claim 45% · curiosity_gap 30% · tension 15% · number_stat 10%
 
 ## 3b. Bluesky Thread vs. Single
-Threads average slightly more replies (1.0 vs 0.2) but not more likes. Singles don't compensate with reposts. **Recommend 60% thread / 40% single** — threads sustain conversation even when likes are low.
+Threads average more replies; singles slightly more likes/reposts. Difference is marginal given low volumes. **Recommended split: 50/50 until n>50.**
 
 ## 4. Three Concrete Recommendations
-1. **Lead with humans:** Frame papers around what humans gain/lose, not robot specs
-2. **Retire number_stat temporarily** — run 4 consecutive bold_claim posts to validate the gap
-3. **Test video deliberately:** Publish 3 video posts with bold_claim hooks to get comparable data
+1. **Lead with human stakes** — "walks through crowds" outperformed "cuts lag" by 16x. Always frame papers around human consequence, not technical metric.
+2. **Retire number_stat as a primary hook** — reframe statistics as *consequences* inside a bold_claim instead.
+3. **Run a dedicated video experiment** — produce 5 consecutive video posts with bold_claim hooks on visually dramatic topics to generate comparable data.
