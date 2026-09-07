@@ -1,36 +1,12 @@
 {
-  "updated": "2026-08-31T11:17:46.766823+00:00",
+  "updated": "2026-09-07T09:53:56.730152+00:00",
   "conferences": [
-    {
-      "name": "ICRA",
-      "year": 2027,
-      "start": "2027-05-24",
-      "end": "2027-05-28",
-      "location": "Seoul, South Korea",
-      "confidence": "confirmed"
-    },
     {
       "name": "IROS",
       "year": 2026,
       "start": "2026-09-27",
       "end": "2026-10-01",
       "location": "Pittsburgh, USA",
-      "confidence": "confirmed"
-    },
-    {
-      "name": "RSS",
-      "year": 2027,
-      "start": "2027-07-12",
-      "end": "2027-07-16",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "CoRL",
-      "year": 2026,
-      "start": "2026-11-09",
-      "end": "2026-11-12",
-      "location": "Austin, USA",
       "confidence": "confirmed"
     },
     {
@@ -42,12 +18,12 @@
       "confidence": "confirmed"
     },
     {
-      "name": "MRS",
-      "year": 2027,
-      "start": "2027-11-01",
-      "end": "2027-11-02",
-      "location": "TBD",
-      "confidence": "estimated"
+      "name": "CoRL",
+      "year": 2026,
+      "start": "2026-11-09",
+      "end": "2026-11-12",
+      "location": "Austin, USA",
+      "confidence": "confirmed"
     },
     {
       "name": "Humanoids",
@@ -58,12 +34,84 @@
       "confidence": "confirmed"
     },
     {
+      "name": "ICRA",
+      "year": 2027,
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "location": "Seoul, South Korea",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "RSS",
+      "year": 2027,
+      "start": "2027-07-06",
+      "end": "2027-07-11",
+      "location": "Athens, Greece",
+      "confidence": "confirmed"
+    },
+    {
       "name": "RoboCup",
       "year": 2027,
       "start": "2027-06-15",
       "end": "2027-06-21",
       "location": "Nuremberg, Germany",
       "confidence": "confirmed"
+    },
+    {
+      "name": "MRS",
+      "year": 2027,
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "ICSR",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "FSR",
+      "year": 2027,
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "SSRR",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "IEEE OCEANS",
+      "year": 2026,
+      "start": "2026-09-01",
+      "end": "2026-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "CASE",
+      "year": 2026,
+      "start": "2026-08-01",
+      "end": "2026-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "WAFR",
+      "year": 2026,
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
     }
   ]
 }
