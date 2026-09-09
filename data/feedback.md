@@ -1,29 +1,24 @@
-# Engagement lessons (auto-updated 2026-09-08)
+# Engagement lessons (auto-updated 2026-09-09)
 
-# Content Team: Lessons Learned Brief
+# Content Team – Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Human-relatable narratives crushed technical deep-dives. The humanoid navigation post (zero robot data, learned from humans) earned 16 total engagements — 4–8× the next best. Wheel-legged football (3 likes) and multi-robot traffic planning (3 total) also beat average. **Pattern: human-scale stakes + surprising method.**
+**Over-performed:** Visually striking or counterintuitive concepts (wheel-legged football: 3 likes; congestion-aware planning: 3 total interactions; surgical soft robot: 2 likes). Relatable "why can't robots do X" framings also drew replies consistently. **Under-performed:** Highly technical niche papers with no vivid visual hook (tendon hysteresis, UAV visibility, bridge-climbing) scored zero across all metrics. The rejection queue confirms figures are load-bearing — papers without usable visuals fail before posting.
 
-**Under-performed:** Highly technical single-mechanism papers (hysteresis, wrench control, tendon estimation) consistently scored 0–1 engagement. Abstract benchmarks without visual drama flopped.
+## 2. Hook Styles That Worked
+**Bold_claim** and **curiosity_gap** generated the most reply and like activity. **Number_stat** hooks were inconsistent — strong once (congestion), flat most other times, suggesting the stat itself must be surprising, not just present. **Tension** hooks reliably earned replies but fewer likes/reposts.
 
-## 2. Hook Styles (3a)
-| Hook | Avg. Likes | Notes |
-|---|---|---|
-| bold_claim | ~1.9 | Best; humanoid post skews it but bold_claim wins even without it |
-| curiosity_gap | ~1.0 | Decent replies; drives conversation |
-| number_stat | ~0.4 | Weakest; stats feel dry without context |
-| tension | ~0.5 | Low likes but generates replies |
+## 3a. Hook-Style Weighting Recommendation
+Data is sparse (n≈30, low absolute numbers), but directional signal exists:
+- **bold_claim:** 35% of posts
+- **curiosity_gap:** 35%
+- **tension:** 20%
+- **number_stat:** 10% (reserve for genuinely shocking figures only)
 
-**Recommended weighting: bold_claim 45%, curiosity_gap 30%, tension 15%, number_stat 10%**
-
-## 3. Carousel vs. Video
-Data too sparse (2 videos, both ~0–1 engagement). Cannot conclude. **Test 3 more videos before drawing conclusions.**
-
-## 3b. Thread vs. Single (Bluesky)
-Threads average slightly more replies; singles perform comparably on likes. Difference is marginal given sample size. **Maintain 50/50 but prioritize threads for complex papers needing context.**
+## 3b. Bluesky Thread vs. Single
+Threads averaged slightly more replies; singles earned marginally more likes. Difference is negligible at this sample size. **Recommended split: 50/50 until n≥60.**
 
 ## 4. Three Concrete Recommendations
-1. **Lead with human impact** — frame papers around what a person experiences, not the mechanism
-2. **Retire number_stat as a primary hook** — demote to supporting detail inside carousels
-3. **Require visual drama at vetting** — if no striking figure exists, skip the paper; rejections confirm this pattern
+1. **Gate on figures first** — reject any paper without at least two strong visuals before scripting.
+2. **Lead bold_claim hooks with a human consequence**, not a robot spec.
+3. **Test one curiosity_gap post with a genuine question answered inside the carousel** — measure completion-signal via replies.
