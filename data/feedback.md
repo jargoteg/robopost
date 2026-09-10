@@ -1,24 +1,29 @@
-# Engagement lessons (auto-updated 2026-09-09)
+# Engagement lessons (auto-updated 2026-09-10)
 
-# Content Team – Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Visually striking or counterintuitive concepts (wheel-legged football: 3 likes; congestion-aware planning: 3 total interactions; surgical soft robot: 2 likes). Relatable "why can't robots do X" framings also drew replies consistently. **Under-performed:** Highly technical niche papers with no vivid visual hook (tendon hysteresis, UAV visibility, bridge-climbing) scored zero across all metrics. The rejection queue confirms figures are load-bearing — papers without usable visuals fail before posting.
+**Over-performed:** Humanoid/general-purpose robots with relatable real-world stakes ("humanoid learned to walk from human footage," "wheel-legged robots playing football"). Human-centered narratives and benchmark-breaking results drove the top posts.
+**Under-performed:** Highly technical sensor/control papers (hysteresis, wrench control, tendon estimation) and niche hardware posts. Surgical/micro-robots were middle-tier despite novelty hooks.
 
 ## 2. Hook Styles That Worked
-**Bold_claim** and **curiosity_gap** generated the most reply and like activity. **Number_stat** hooks were inconsistent — strong once (congestion), flat most other times, suggesting the stat itself must be surprising, not just present. **Tension** hooks reliably earned replies but fewer likes/reposts.
+`bold_claim` produced the two highest-performing posts (11 likes + humanoid; 3 likes + football). `curiosity_gap` had moderate consistency. `number_stat` and `tension` largely underperformed.
 
-## 3a. Hook-Style Weighting Recommendation
-Data is sparse (n≈30, low absolute numbers), but directional signal exists:
-- **bold_claim:** 35% of posts
-- **curiosity_gap:** 35%
-- **tension:** 20%
-- **number_stat:** 10% (reserve for genuinely shocking figures only)
+## 3. Carousel vs. Video
+Data is too sparse (only 2 videos, both 0 likes). Cannot conclude anything meaningful. **Test: publish 4–5 more videos before drawing conclusions.**
 
-## 3b. Bluesky Thread vs. Single
-Threads averaged slightly more replies; singles earned marginally more likes. Difference is negligible at this sample size. **Recommended split: 50/50 until n≥60.**
+### 3a. Hook-Style Weighting (evidence-based)
+| Hook | Avg. Likes | Recommendation |
+|---|---|---|
+| bold_claim | ~1.9 | **50%** of posts |
+| curiosity_gap | ~1.0 | **25%** |
+| tension | ~0.5 | **15%** |
+| number_stat | ~0.4 | **10%** |
+
+### 3b. Bluesky Thread vs. Single
+Threads avg. ~1.3 likes; singles avg. ~0.7 likes. Threads also earn more replies. **Recommend 60/40 thread/single split.**
 
 ## 4. Three Concrete Recommendations
-1. **Gate on figures first** — reject any paper without at least two strong visuals before scripting.
-2. **Lead bold_claim hooks with a human consequence**, not a robot spec.
-3. **Test one curiosity_gap post with a genuine question answered inside the carousel** — measure completion-signal via replies.
+1. **Lead with bold_claim hooks on humanoid or dexterous manipulation papers** — that's where the audience responds.
+2. **Retire number_stat as a primary hook**; use figures only to reinforce bold_claim slides.
+3. **Test video format explicitly with a bold_claim hook** — the juggling/Stretch posts had strong concepts but weak hooks; a reframe could reveal video's true ceiling.
