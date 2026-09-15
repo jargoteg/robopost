@@ -1,29 +1,28 @@
 # Engagement lessons (auto-updated 2026-09-15)
 
-# Content Team: Lessons Learned Brief
+# Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Human-relatable AI/robot behavior ("humanoid learns from human footage": 16 total engagements) and dynamic physical feats (wheel-legged football: 3 likes). Broadly-accessible concepts beat niche hardware papers.
-**Under-performed:** Highly technical single-mechanism papers (tendon hysteresis, wrench control, EKF force estimation) — most scored 0 across all metrics. Medical/surgical robotics underperformed relative to expectation.
+**Over-performed:** Human-relatable robotics (humanoid navigation from human data: 16 total engagements), playful/visual demonstrations (wheel-legged football: 3 likes), and multi-robot coordination with clear stakes (congestion planning: 3 total). **Under-performed:** Niche hardware specifics (tendon hysteresis, wrench control, EKF force estimation) — consistently 0–1 engagements. Medical/surgical robotics shows mixed but mild positive signal.
 
-## 2. Hook Styles That Worked
-**Bold_claim** is the clear winner. The humanoid navigation post (bold_claim + thread) dominates the entire dataset. Curiosity_gap produced modest but consistent replies (surgical robots, drone fleet). Number_stat and tension hooks rarely broke zero likes.
+## 2. Hook Styles
+**bold_claim** is the clear winner, driven heavily by the humanoid navigation post. **curiosity_gap** shows modest consistent returns. **number_stat** and **tension** underperform despite frequent use.
 
-## 3. Carousel vs. Video
-Data is **too sparse** to conclude — only 2 videos posted, both scored 0–1 likes. Cannot recommend format shift yet. Test: post 4–5 videos before drawing conclusions.
+## 3. Format Performance
+Carousel dominates volume but both videos underperformed (0–1 replies only). Insufficient video data to conclude format inferiority — sample size is 2.
 
-## 3a. Hook-Style Weighting (Recommended)
-| Hook | Evidence | Suggested Weight |
+### 3a. Hook Weighting Recommendation
+| Hook | Evidence | Recommended Weight |
 |---|---|---|
-| bold_claim | Highest ceiling, best avg | 45% |
-| curiosity_gap | Reliable reply driver | 30% |
-| tension | Marginal; occasional reply | 15% |
-| number_stat | Consistently flat | 10% |
+| bold_claim | Best performer | 40% |
+| curiosity_gap | Consistent modest returns | 30% |
+| tension | Weak, used too often | 20% |
+| number_stat | Rarely converts | 10% |
 
-## 3b. Bluesky Thread vs. Single
-Threads average ~1.6 total interactions; singles average ~0.9. Threads generate more replies. **Recommend 65% thread / 35% single.**
+### 3b. Thread vs. Single
+Threads average ~1.0 replies; singles average ~0.6. Likes are comparable. Threads drive conversation marginally better. **Recommend 60/40 thread/single split.**
 
-## 4. Three Concrete Recommendations
-1. **Lead with human stakes** — frame papers around what humans experience, not robot mechanisms
-2. **Retire number_stat as primary hook** — demote to supporting slide copy only
-3. **Test video format deliberately** — post 4 consecutive videos with bold_claim hooks to isolate format effect
+## 4. Concrete Recommendations
+1. **Prioritize bold_claim hooks on human-relatable robotics** — the humanoid navigation post proves accessibility drives sharing.
+2. **Retire number_stat as a primary hook** — reframe statistics inside bold_claim narratives instead.
+3. **Test video format with bold_claim hooks** — current video posts used number_stat/bold_claim weakly; pair striking footage with a stronger human-stakes framing before abandoning the format.
