@@ -1,20 +1,20 @@
 {
-  "updated": "2026-09-14T10:15:53.200901+00:00",
+  "updated": "2026-09-21T10:21:37.662139+00:00",
   "conferences": [
-    {
-      "name": "ICRA",
-      "year": 2027,
-      "start": "2027-05-24",
-      "end": "2027-05-28",
-      "location": "Seoul, South Korea",
-      "confidence": "confirmed"
-    },
     {
       "name": "IROS",
       "year": 2026,
       "start": "2026-09-27",
       "end": "2026-10-01",
       "location": "Pittsburgh, USA",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "ICRA",
+      "year": 2027,
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "location": "Seoul, South Korea",
       "confidence": "confirmed"
     },
     {
@@ -44,8 +44,8 @@
     {
       "name": "MRS",
       "year": 2027,
-      "start": "2027-01-01",
-      "end": "2027-12-31",
+      "start": "2027-10-01",
+      "end": "2027-10-03",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -68,24 +68,24 @@
     {
       "name": "ICSR",
       "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
+      "start": "2026-11-01",
+      "end": "2026-11-03",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "FSR",
       "year": 2027,
-      "start": "2027-01-01",
-      "end": "2027-12-31",
+      "start": "2027-09-01",
+      "end": "2027-09-03",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "SSRR",
       "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
+      "start": "2026-11-01",
+      "end": "2026-11-03",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -100,8 +100,8 @@
     {
       "name": "CASE",
       "year": 2026,
-      "start": "2026-08-01",
-      "end": "2026-08-05",
+      "start": "2026-08-26",
+      "end": "2026-08-29",
       "location": "TBD",
       "confidence": "estimated"
     },
