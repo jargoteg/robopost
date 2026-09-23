@@ -1,7 +1,11 @@
-# Community trends (updated 2026-09-23T10:52Z)
+# Community trends (updated 2026-09-23T16:13Z)
 
-The robotics community is buzzing across several distinct threads right now. Humanoid robots dominate conversation, driven by skepticism and mockery - Russia's collapsing "Aidol" debut and Elon's alleged "guy in a suit" moment are getting heavy engagement, alongside philosophical pushback that humanoid form factors reflect a lack of imagination. Wealth and inequality tension is simmering around the billionaire "AI/robotics solves poverty" framing, drawing cynical responses. Classic engineering content is performing surprisingly well, with the Oldham coupling and folded structures posts pulling thousands of engagements, suggesting appetite for historical/mechanical fundamentals. Realbotix's pivot from sex robots to something else is generating genuine researcher commentary. Swarm robotics appears as a quieter but growing undercurrent.
+The robotics community is buzzing across several fronts right now. Humanoid robots are dominating conversation, with heavy skepticism about authenticity of demos, Musk's "guy in a suit" moment still drawing mockery, and Russia's collapsed debut robot generating jokes. The Unitree G1 snow-clearing clip and the half-marathon record claim are both circulating widely with mixed reactions.
 
-Recurring references: Unitree robots, Serve Robotics, RoboCup Portugal Open 2026, the half-marathon humanoid story (Onion piece going viral).
+Wealth inequality and AI/robotics as a "poverty solution" is generating significant backlash, with the $370B billionaire post attracting sharp criticism. OpenAI's Pentagon robotics deal and undefined guardrails are drawing concern from researchers.
 
-Post angle to land today: A sharp, historically grounded take on why the Oldham coupling or similar "boring" 200-year-old mechanisms keep outperforming cutting-edge innovations in real deployments. The fundamentals-appreciation audience is clearly active and hungry.
+The Realbotix pivot from sex robots to something new has researchers and commentators threading actively. Engineering nostalgia content is performing well, with the Oldham coupling and folded structures posts getting strong traction.
+
+Swarm robotics is a quieter but growing thread, mostly among researchers.
+
+Suggested post angle: Lean into the humanoid skepticism wave with a genuinely critical but constructive take on what robot embodiment should actually look like if humanoid form keeps failing in real-world conditions.
