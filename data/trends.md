@@ -1,11 +1,7 @@
-# Community trends (updated 2026-09-23T16:13Z)
+# Community trends (updated 2026-09-23T21:13Z)
 
-The robotics community is buzzing across several fronts right now. Humanoid robots are dominating conversation, with heavy skepticism about authenticity of demos, Musk's "guy in a suit" moment still drawing mockery, and Russia's collapsed debut robot generating jokes. The Unitree G1 snow-clearing clip and the half-marathon record claim are both circulating widely with mixed reactions.
+The robotics community is buzzing across several distinct threads today. Humanoid robots dominate conversation, with skepticism and humor leading the way — Russia's collapsing "Aidol" robot is getting mocked heavily, and there's continued cynicism about staged "autonomous" demos. Wealth and inequality intersect with tech as a billionaire's claim that AI and robotics will solve poverty draws strong pushback. Engineering history is having a quiet moment, with the 1821 Oldham coupling and structural folding principles generating genuine appreciation. The Realbotix pivot from sex robots to companion AI is sparking a longer researcher-led thread worth watching. Swarm robotics appears as an emerging undercurrent, still niche but generating curious engagement.
 
-Wealth inequality and AI/robotics as a "poverty solution" is generating significant backlash, with the $370B billionaire post attracting sharp criticism. OpenAI's Pentagon robotics deal and undefined guardrails are drawing concern from researchers.
+Recurring references include Unitree Robotics (the $2,700 farm robot video is viral), the Beijing "Robot Olympics," and the OpenAI-Pentagon guardrails story.
 
-The Realbotix pivot from sex robots to something new has researchers and commentators threading actively. Engineering nostalgia content is performing well, with the Oldham coupling and folded structures posts getting strong traction.
-
-Swarm robotics is a quieter but growing thread, mostly among researchers.
-
-Suggested post angle: Lean into the humanoid skepticism wave with a genuinely critical but constructive take on what robot embodiment should actually look like if humanoid form keeps failing in real-world conditions.
+A post angle that would land today: a grounded, slightly sardonic take on what "autonomous" actually means in humanoid robot demos, inviting the community to share their favorite examples of the gap between marketing and reality.
