@@ -1,30 +1,29 @@
-# Engagement lessons (auto-updated 2026-09-27)
+# Engagement lessons (auto-updated 2026-09-28)
 
 # Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid locomotion/navigation (11 likes, 3 reposts — clear outlier), wheel-legged robots, and multi-robot coordination. Human-relatable demos (juggling, football) generate replies even at low likes. **Under-performed:** Highly technical sensor/control papers (hysteresis, wrench control, tendon estimation) — near-zero engagement regardless of format.
+**Over-performed:** Human-relatable robotics (humanoid navigation from human data: 16 total engagements) and visually dramatic demos (wheel-legged football: 3 likes). Papers with a clear "why should I care" angle outperform niche engineering benchmarks.
+**Under-performed:** Highly technical sensor/control papers (hysteresis, wrench control, EKF fusion) consistently scored zero across all metrics. Abstract industrial applications struggle regardless of hook.
 
 ## 2. Hook Styles That Worked
-`bold_claim` produced the top post by a wide margin. `curiosity_gap` generated consistent replies. `number_stat` and `tension` underperformed relative to frequency of use.
+`bold_claim` drove the top two posts. `curiosity_gap` showed modest consistency. `number_stat` and `tension` rarely broke through — the numbers feel arbitrary without context, and tension hooks may read as jargon-heavy to a casual audience.
 
-## 3. Carousel vs. Video
-Data is too sparse (only 2 videos, both 0 likes) to conclude. **Test next:** repost a strong carousel topic as a video to isolate format effect.
+## 3. Carousel vs Video
+Too sparse to conclude (only 2 videos, both underperformed). Do not reduce carousel output yet — test one high-quality video against a matched carousel on the same topic first.
 
-## 3a. Hook Style A/B
-| Hook | Avg Likes | Avg Replies |
-|------|-----------|-------------|
-| bold_claim | **1.6** | **0.9** |
-| curiosity_gap | 0.9 | 0.6 |
-| tension | 0.4 | 0.7 |
-| number_stat | 0.3 | 0.1 |
+## 3a. Hook-Style Weighting
+| Hook | Avg likes | Recommendation |
+|---|---|---|
+| bold_claim | ~1.8 | 45% of posts |
+| curiosity_gap | ~1.0 | 30% |
+| tension | ~0.5 | 15% |
+| number_stat | ~0.4 | 10% |
 
-**Recommended weighting:** bold_claim 45% · curiosity_gap 30% · tension 15% · number_stat 10%
+## 3b. Bluesky Thread vs Single
+Threads average more replies (richer discussion); singles occasionally spike on likes. Current split appears ~50/50 — **shift to 65% thread, 35% single** to favour reply-driven reach.
 
-## 3b. Bluesky Thread vs. Single
-Threads average slightly more replies; singles slightly more likes. Difference is negligible at this sample size. **Recommended split:** 50/50 until n≥20 per variant.
-
-## 4. Concrete Recommendations
-1. **Lead with humanoid or human-interaction topics** — they demonstrably outperform niche hardware papers.
-2. **Retire number_stat as a primary hook** — reframe those posts as bold_claim instead.
-3. **Add one sentence of real-world stakes to every hook** — the humanoid navigation post won because the scenario (crowds, zero robot data) was immediately imaginable.
+## 4. Three Concrete Recommendations
+1. **Lead with human stakes.** The humanoid-navigation post succeeded because it referenced human footage and crowds — anchor every hook to a human outcome, not a metric.
+2. **Retire number_stat as a primary hook.** Percentages without emotional context are inert; demote to supporting slide copy only.
+3. **Test one topic × two hooks.** Pick a strong upcoming paper and run `bold_claim` vs `curiosity_gap` on consecutive days to generate clean A/B data — current confounding between topic quality and hook style makes attribution unreliable.
