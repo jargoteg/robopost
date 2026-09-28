@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T10:21:37.662139+00:00",
+  "updated": "2026-09-28T11:23:31.669036+00:00",
   "conferences": [
     {
       "name": "IROS",
@@ -7,6 +7,30 @@
       "start": "2026-09-27",
       "end": "2026-10-01",
       "location": "Pittsburgh, USA",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "DARS",
+      "year": 2026,
+      "start": "2026-10-26",
+      "end": "2026-10-29",
+      "location": "Tokyo, Japan",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "CoRL",
+      "year": 2026,
+      "start": "2026-11-09",
+      "end": "2026-11-12",
+      "location": "Austin, USA",
+      "confidence": "confirmed"
+    },
+    {
+      "name": "Humanoids",
+      "year": 2026,
+      "start": "2026-12-06",
+      "end": "2026-12-09",
+      "location": "Santa Clara, USA",
       "confidence": "confirmed"
     },
     {
@@ -26,44 +50,36 @@
       "confidence": "confirmed"
     },
     {
-      "name": "CoRL",
-      "year": 2026,
-      "start": "2026-11-09",
-      "end": "2026-11-12",
-      "location": "Austin, USA",
-      "confidence": "confirmed"
-    },
-    {
-      "name": "DARS",
-      "year": 2026,
-      "start": "2026-10-26",
-      "end": "2026-10-29",
-      "location": "Tokyo, Japan",
-      "confidence": "confirmed"
-    },
-    {
-      "name": "MRS",
-      "year": 2027,
-      "start": "2027-10-01",
-      "end": "2027-10-03",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "Humanoids",
-      "year": 2026,
-      "start": "2026-12-06",
-      "end": "2026-12-09",
-      "location": "Santa Clara, USA",
-      "confidence": "confirmed"
-    },
-    {
       "name": "RoboCup",
       "year": 2027,
       "start": "2027-06-15",
       "end": "2027-06-21",
       "location": "Nuremberg, Germany",
       "confidence": "confirmed"
+    },
+    {
+      "name": "MRS",
+      "year": 2027,
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "CASE",
+      "year": 2026,
+      "start": "2026-08-25",
+      "end": "2026-08-29",
+      "location": "Auckland, New Zealand",
+      "confidence": "estimated"
+    },
+    {
+      "name": "SSRR",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-10-03",
+      "location": "TBD",
+      "confidence": "estimated"
     },
     {
       "name": "ICSR",
@@ -75,41 +91,33 @@
     },
     {
       "name": "FSR",
-      "year": 2027,
-      "start": "2027-09-01",
-      "end": "2027-09-03",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "SSRR",
       "year": 2026,
-      "start": "2026-11-01",
-      "end": "2026-11-03",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "IEEE OCEANS",
-      "year": 2026,
-      "start": "2026-09-22",
-      "end": "2026-09-25",
-      "location": "TBD",
-      "confidence": "estimated"
-    },
-    {
-      "name": "CASE",
-      "year": 2026,
-      "start": "2026-08-26",
-      "end": "2026-08-29",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "WAFR",
       "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "ICUR",
+      "year": 2026,
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "IEEE OCEANS",
+      "year": 2026,
+      "start": "2026-01-01",
+      "end": "2026-12-31",
       "location": "TBD",
       "confidence": "estimated"
     }
