@@ -1,28 +1,29 @@
-# Engagement lessons (auto-updated 2026-10-01)
+# Engagement lessons (auto-updated 2026-10-02)
 
-# Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid robots with relatable framing ("Learning Humanoid Navigation" — 11L/3R/2Re, outlier). General locomotion/hybrid robots and multi-robot planning also showed modest lift. **Under-performed:** Niche hardware details (tendon hysteresis, wrench control, underwater arms) and anything without a visceral visual hook consistently scored 0s.
+**Over-performed:** Humanoid locomotion/navigation (11L/3R/2Re — clear outlier), wheel-legged robots, multi-robot planning. Human-relatable demos (juggling, football, humanoid crowds) drive curiosity even with low absolute numbers.
+**Under-performed:** Highly technical sensor/estimation papers (hysteresis, wrench control, EKF force), niche hardware benchmarks. Abstract engineering problems without a visible robot or concrete stakes flatline.
 
 ## 2. Hook Styles That Worked
-`bold_claim` drove the two highest-performing posts (humanoid navigation, wheel-legged football). `curiosity_gap` had a decent hit rate for replies but low likes/reposts. `number_stat` and `tension` were largely flat.
+`bold_claim` produced the top post by a wide margin and most consistent non-zero engagement. `curiosity_gap` had reliable replies. `number_stat` and `tension` mostly underperformed — numbers feel dry without context, tension hooks often read as jargon.
 
-## 3. Carousel vs. Video
-Data is too sparse (only 2 videos, both scored 0–1). **Cannot conclude yet** — test 3–5 more videos before drawing conclusions.
+## 3. Carousel vs Video
+Data too sparse (only 2 videos, both scored 0–1 likes). Cannot conclude. **Test:** run 3–4 more videos before drawing conclusions.
 
-## 3a. Hook-Style Weighting
-| Hook | Avg. Likes | Recommendation |
+### 3a. Hook Weighting Recommendation
+| Hook | Avg likes | Recommendation |
 |---|---|---|
-| `bold_claim` | ~1.8 | **Primary (50%)** |
-| `curiosity_gap` | ~0.9 | Secondary (25%) |
-| `tension` | ~0.5 | Reduce (15%) |
-| `number_stat` | ~0.3 | Minimize (10%) |
+| bold_claim | ~1.9 | 45% of posts |
+| curiosity_gap | ~0.9 | 30% |
+| tension | ~0.5 | 15% |
+| number_stat | ~0.3 | 10% |
 
-## 3b. Bluesky Thread vs. Single
-Threads average marginally more replies; singles cluster around 0–1 likes. Difference is negligible given sample size. **Recommended split: 60% thread / 40% single** — threads create reply surface.
+### 3b. Thread vs Single
+Threads average slightly higher replies; singles slightly higher likes. Difference is marginal. Recommend **60/40 thread/single** — threads generate conversation, which matters for algorithmic reach.
 
-## 4. Concrete Recommendations
-1. **Lead with humanoid/relatable robot topics** — crowds, homes, real tasks outperform abstract hardware papers
-2. **Double down on `bold_claim` hooks** — reframe every post to assert something falsifiable or surprising
-3. **Test one video post per week** with a `bold_claim` hook to build the video dataset for a real A/B conclusion
+## 4. Three Concrete Recommendations
+1. **Prioritize humanoid/legged robot demos** with visible, relatable behavior over sensor-paper abstractions.
+2. **Lead every bold_claim hook with a human outcome**, not a system name.
+3. **Test curiosity_gap + thread combo** — currently untested; replies suggest it sustains conversation.
