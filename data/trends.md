@@ -1,7 +1,7 @@
-# Community trends (updated 2026-10-05T23:48Z)
+# Community trends (updated 2026-10-06T05:08Z)
 
-The robotics community is buzzing across several threads right now. Humanoid robots are dominating conversation, with skepticism running high — people are mocking overhyped demos, questioning the form factor entirely, and joking about Russia's collapsing debut robot. The Realbotix pivot from sex robots to classroom companions is generating serious critical discussion, especially from researchers. OpenAI's Pentagon robotics deal and undefined AI guardrails are drawing concern about ethics and oversight. Milrem Robotics' alleged arson by Russian actors is sparking geopolitical tension around defense robotics. There's also warm nostalgia energy around 1983 Robotics Age cover art circulating with solid engagement.
+The robotics community is buzzing across several fronts right now. The wealth-and-poverty debate is dominating engagement, with a billionaire's claim that AI and robotics solve poverty drawing sharp skepticism. Humanoid robots are generating both excitement and mockery, particularly around Russia's collapsing debut robot, Unitree's snow-clearing struggles, and ongoing skepticism about whether humanoid form factors make any sense at all. The Milrem Robotics arson accusation against Russia is surfacing serious conversation about defense robotics and geopolitical stakes. Classic engineering mechanisms are having a moment, with the Oldham coupling and folded-structure posts going viral, suggesting appetite for "timeless tech" content. OpenAI's Pentagon guardrails controversy is pulling in the AI-ethics crowd via the robotics lens.
 
-Events on the radar include RoboCup Portugal Open 2026 in Barcelos and the Robot Olympics preparation footage from Beijing.
+Events worth noting: RoboCup Portugal Open 2026 is live and generating regional buzz.
 
-A post angle that would land today: lean into the humanoid skepticism wave with a sharp, evidence-based take on why non-humanoid form factors are solving harder real-world problems faster. That contrarian framing is primed to spread right now.
+Post angle that would land today: a punchy, historically grounded take on why elegant 200-year-old mechanical solutions keep outperforming cutting-edge alternatives in modern robotics, riding the Oldham coupling wave.
