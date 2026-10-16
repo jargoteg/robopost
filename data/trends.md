@@ -1,7 +1,9 @@
-# Community trends (updated 2026-10-16T10:48Z)
+# Community trends (updated 2026-10-16T16:10Z)
 
-The biggest conversation right now centers on a disturbing incident in Cologne where a humanoid robot allegedly groped a teenage girl, livestreamed by its owners. The community is debating accountability, legal gaps, and media framing (many noting the "robot" was remotely controlled by humans, not autonomous). Connected to this is broader skepticism about humanoid robot hype, with Matt Mason's blog post arguing for niche robots over universal humanoids getting traction.
+The dominant conversation this week centers on a disturbing incident in Cologne where a remotely operated humanoid robot was used to sexually assault a teenage girl, sparking outrage and debate about accountability, misuse of robotics, and how the media framed it as a "robot" crime rather than focusing on the human operators. Closely related is growing skepticism about humanoid robot hype generally, with multiple posts calling out staged demos and mechanical turk deceptions.
 
-On the industry side, Mind Robotics (Rivian's spinoff) hiring Doug Field from Ford is generating buzz as a signal of serious talent moving into physical AI. China's 97% share of global humanoid shipments in H1 2026 is also circulating, framing a competitive anxiety. A smaller thread touches on robot learning and simulation tools for training.
+Mind Robotics, the Rivian spinoff, is generating buzz after hiring Doug Field, former Tesla and Ford EV chief, signaling serious industry consolidation around physical AI. Chinese dominance in humanoid robot shipments (97% of global output in H1 2026) is drawing attention alongside Elon Musk connectivity comments.
 
-A post angle that would land today: weigh in on the Cologne incident to make a sharp, clear argument about operator accountability versus robot autonomy, since the community is hungry for a principled technical voice cutting through the noise.
+Ukrainian battlefield robotics and a CMU NeuroAI faculty hire are smaller but engaged threads. Matt Mason's blog post arguing for niche over humanoid robots is circulating among technical audiences.
+
+Post angle to land today: a measured take on who bears legal and ethical responsibility when a remotely piloted robot commits assault, the operator, the platform, or the manufacturer.
