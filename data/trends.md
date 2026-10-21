@@ -1,7 +1,7 @@
-# Community trends (updated 2026-10-20T21:18Z)
+# Community trends (updated 2026-10-21T03:31Z)
 
-The robotics community is buzzing across several distinct threads today. Humanoid robots dominate conversation, with heavy skepticism toward overhyped demos — particularly mockery of past incidents where "humanoid robots" turned out to be humans in costumes, and pushback on the practical need for bipedal form factors at all. Defense robotics is drawing quiet but significant attention, with Ukrainian logistics robots generating high engagement. On the funding side, Dream Labs ($90M seed), Eka Robotics ($150M Series A at $1.45B valuation), and Reliable Robotics ($115M) are circulating, signaling a hot investment climate. Biometric data privacy lawsuits against Coco and Serve Robotics are sparking legal and ethical discussion. A lighter thread around combat robotics, specifically antweight fights, is generating genuine enthusiasm.
+The robotics community is buzzing across several distinct conversations right now. Defense and military robotics is drawing significant attention, anchored by the high-engagement Ukrainian logistics robot post. Humanoid robot skepticism is a dominant thread, with multiple users mocking Elon Musk's history of presenting costumed humans as robots and debating whether humanoid form factors are even necessary versus simpler solutions. Funding news is circulating heavily, with Dream Labs ($90M seed), Reliable Robotics ($115M), and Eka Robotics ($1.45B valuation after $150M Series A from a16z generating notable chatter. Biometric privacy concerns are surfacing around the Coco Robotics and Serve Robotics lawsuits in Chicago. A lighter combat robotics thread around antweight battles is also gaining warmth.
 
-No specific papers or major demos are trending, but the Eka Robotics raise keeps resurfacing.
+No specific papers or demos are being widely cited, but the Alaska Robotics Comics Camp applications are an active event mention.
 
-A post angle that would land today: a sharp take on the gap between humanoid robot hype and actual deployment reality, backed by the costume-gate anecdotes the community keeps referencing.
+A strong post angle for today would be a punchy take on the humanoid skepticism wave, specifically asking whether the industry's obsession with bipedalism is engineering ambition or marketing theater.
