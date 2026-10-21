@@ -1,7 +1,7 @@
-# Community trends (updated 2026-10-21T03:31Z)
+# Community trends (updated 2026-10-21T11:16Z)
 
-The robotics community is buzzing across several distinct conversations right now. Defense and military robotics is drawing significant attention, anchored by the high-engagement Ukrainian logistics robot post. Humanoid robot skepticism is a dominant thread, with multiple users mocking Elon Musk's history of presenting costumed humans as robots and debating whether humanoid form factors are even necessary versus simpler solutions. Funding news is circulating heavily, with Dream Labs ($90M seed), Reliable Robotics ($115M), and Eka Robotics ($1.45B valuation after $150M Series A from a16z generating notable chatter. Biometric privacy concerns are surfacing around the Coco Robotics and Serve Robotics lawsuits in Chicago. A lighter combat robotics thread around antweight battles is also gaining warmth.
+The robotics community is buzzing across several distinct threads right now. Humanoid robot skepticism is running hot, with multiple high-engagement posts mocking Elon Musk's history of presenting costumed humans as robots, and broader pushback against humanoid robot hype generally. Funding news is circulating with Eka Robotics ($150M, a16z-led), Dream Labs ($90M seed), and Reliable Robotics ($115M) all getting attention. Ukrainian battlefield robotics is drawing significant engagement around a logistics robot footage post. The Alaska Robotics Comics Camp is the surprise top performer by engagement volume. There is also a lively side debate about AI in education and whether students can critically evaluate robot-generated content.
 
-No specific papers or demos are being widely cited, but the Alaska Robotics Comics Camp applications are an active event mention.
+No specific papers or demos are being cited repeatedly, but the Coco/Serve Robotics biometric data lawsuit is getting traction as a policy conversation starter.
 
-A strong post angle for today would be a punchy take on the humanoid skepticism wave, specifically asking whether the industry's obsession with bipedalism is engineering ambition or marketing theater.
+Suggested post angle: lean into the humanoid skepticism wave with a grounded take on what specific problems humanoid form-factor actually solves versus cheaper purpose-built alternatives. That framing is clearly resonating today.
