@@ -1,30 +1,30 @@
-# Engagement lessons (auto-updated 2026-10-21)
+# Engagement lessons (auto-updated 2026-10-22)
 
-# Content Team Lessons Learned Brief
+# Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid locomotion ("Learning Humanoid Navigation" — 12 likes, 3 reposts, 2 replies) and fun/physical demonstrations ("Wheel-legged football" — 3 likes). **Under-performed:** Highly technical hardware papers (tendon hysteresis, wrench control, EKF force estimation) — consistently 0 engagement. Abstract or niche sensing papers (drone camouflage, swarm transport) also flatlined.
+**Over-performed:** Humanoid/legged robot posts dominated — the humanoid navigation post (12 likes, 3 reposts, 2 replies) was a clear outlier. Wheel-legged football (3 likes) and congestion-aware planning (2 likes) also beat average. **Common thread: relatable, visual concepts with broad appeal beyond specialists.**
+
+**Under-performed:** Highly technical sensor/control papers (hysteresis, wrench control, tendon estimation) consistently scored 0–1 across all metrics. Medical/surgical robotics underperformed relative to novelty.
 
 ## 2. Hook Styles That Worked
-`bold_claim` drove the top two posts. `curiosity_gap` produced the most consistent non-zero replies. `number_stat` and `tension` were unreliable.
+Bold_claim generated the top post by a wide margin. Curiosity_gap produced modest but consistent replies. Number_stat and tension hooks largely flatlined.
 
 ## 3. Carousel vs. Video
-Data is too sparse (only 2 videos, both 0 likes). Cannot conclude. **Test next:** repost a strong-topic video with a bold_claim hook.
+Insufficient video data (n=2, both scored near zero) to draw conclusions. Do not deprioritize video yet — test more before deciding.
 
-### 3a. Hook-Style Weighting
-| Hook | Avg Likes | Avg Replies |
-|------|-----------|-------------|
-| bold_claim | ~2.5 | ~0.8 |
-| curiosity_gap | ~1.0 | ~0.6 |
-| number_stat | ~0.4 | ~0.2 |
-| tension | ~0.4 | ~0.8 |
+### 3a. Hook-Style Weighting Recommendation
+| Hook | Avg. likes | Weight |
+|---|---|---|
+| bold_claim | ~2.1 | **50%** |
+| curiosity_gap | ~1.0 | **25%** |
+| number_stat | ~0.4 | **15%** |
+| tension | ~0.4 | **10%** |
 
-**Recommended weighting:** bold_claim 45% · curiosity_gap 30% · tension 15% · number_stat 10%
+### 3b. Thread vs. Single Split
+Threads average slightly higher replies (1.0 vs 0.5) but not likes. Singles occasionally spike higher. **Recommended split: 50/50 — insufficient data to justify heavier weighting either way.**
 
-### 3b. Thread vs. Single
-Threads average ~0.9 likes; singles ~0.7 — marginal difference. Threads earn slightly more replies. **Recommended split:** 55% thread / 45% single.
-
-## 4. Recommendations
-1. **Prioritize humanoid, locomotion, and human-robot interaction topics** — they carry genuine public curiosity.
-2. **Lead with bold_claim hooks** on every high-visibility paper; retire number_stat as a primary hook.
-3. **Retire highly niche hardware papers** (tendon dynamics, orbital wrench control) unless paired with a visually striking figure and relatable analogy.
+## 4. Concrete Recommendations
+1. **Prioritize humanoid/legged robot topics with bold_claim hooks** — that combination produced the only genuine spike.
+2. **Retire number_stat as a primary hook** — reframe stats inside bold_claim narratives instead.
+3. **Run 5 consecutive thread posts** to properly test whether the analysis-reply format drives meaningful reply growth before abandoning the format.
