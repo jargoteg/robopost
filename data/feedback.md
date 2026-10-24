@@ -3,40 +3,27 @@
 # Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
+**Over-performed:** Humanoid locomotion/navigation (12L/3R/2Re — clear outlier), wheel-legged systems (3L), and multi-robot planning (2L). Human-relatable robot tasks (navigation through crowds, football) drove disproportionate engagement.
+**Under-performed:** Highly niche hardware papers (tendon hysteresis, orbital wrench control, drone visibility) and BCI content scored zero across the board. Abstract or sensor-heavy topics without a clear "wow" moment consistently flatlined.
 
-**Over-performed:** Humanoid/legged robot locomotion with relatable hooks ("walk through crowds," "football") drove the highest numbers. The humanoid navigation post (12 likes, 3 reposts) is a clear outlier. Hybrid locomotion and manipulation with tangible demos also performed above baseline.
+## 2. Hook Styles That Worked
+`bold_claim` produced the top post by a wide margin. `curiosity_gap` showed modest consistency. `number_stat` and `tension` hooks rarely broke above 1 like.
 
-**Under-performed:** Niche hardware internals (hysteresis, wrench control, tendon backlash) and swarm logistics consistently flatlined. Abstract algorithmic papers without strong visual payoff get rejected or ignored.
+## 3. Carousel vs. Video
+Data is too sparse (only 2 videos, both near-zero) to draw conclusions. Test more video posts before deprioritizing the format.
 
----
-
-## 2. Hook Styles (A/B Analysis — 3a)
-
-| Hook | Avg Likes | Avg Replies |
+## 3a. Hook-Style Weighting
+| Hook | Avg. likes | Recommendation |
 |---|---|---|
-| bold_claim | ~1.6 | ~0.7 |
-| curiosity_gap | ~0.9 | ~0.4 |
-| number_stat | ~0.4 | ~0.1 |
-| tension | ~0.4 | ~0.7 |
+| bold_claim | ~2.2 | 45% of posts |
+| curiosity_gap | ~1.0 | 30% |
+| tension | ~0.4 | 15% |
+| number_stat | ~0.3 | 10% |
 
-**bold_claim wins on likes; tension generates conversation but not reach. number_stat consistently underperforms.**
-
-**Recommended weighting:** bold_claim 45% · tension 25% · curiosity_gap 25% · number_stat 5%
-
----
-
-## 3. Carousel vs Video (3b)
-
-Video sample is too small (n=2, both near zero) to conclude superiority. Do not deprioritize video yet — test 3–4 more before judging.
-
-**Thread vs Single:** Threads average ~1.0 reply; singles ~0.2. Singles slightly edge likes. Threads build conversation, singles get passive approval.
-
-**Recommended split:** 60% thread · 40% single
-
----
+## 3b. Thread vs. Single
+Threads average slightly more replies (1.0 vs 0.3) but not more likes. Singles occasionally spike higher (3L, wheel-legged football). Recommend **55% single / 45% thread**.
 
 ## 4. Three Concrete Recommendations
-
-1. **Lead with humanoid/legged locomotion** — it's your proven category. Prioritize papers with real-world deployment footage.
-2. **Kill number_stat hooks** unless the number is genuinely shocking (e.g., "1000/1000 trials"). Replace with bold_claim by default.
-3. **Test video format on high-performer topics** — take the next strong humanoid paper and produce both a carousel and a video to establish a real A/B baseline.
+1. **Lead with humanoid + human-world framing** — the crowd-navigation post proves this is your highest-ceiling topic.
+2. **Bold_claim hooks on visually striking papers only** — they fall flat without a genuine "that shouldn't be possible" moment.
+3. **Test video format on a high-performing topic type** (humanoid, physical stunt) before concluding video underperforms.
