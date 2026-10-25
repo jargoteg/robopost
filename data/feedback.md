@@ -1,29 +1,29 @@
-# Engagement lessons (auto-updated 2026-10-24)
+# Engagement lessons (auto-updated 2026-10-25)
 
 # Content Team: Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid locomotion/navigation (12L/3R/2Re — clear outlier), wheel-legged systems (3L), and multi-robot planning (2L). Human-relatable robot tasks (navigation through crowds, football) drove disproportionate engagement.
-**Under-performed:** Highly niche hardware papers (tendon hysteresis, orbital wrench control, drone visibility) and BCI content scored zero across the board. Abstract or sensor-heavy topics without a clear "wow" moment consistently flatlined.
+**Over-performed:** Humanoid robots (navigation from human data: 17 total engagements — clear outlier), wheel-legged/hybrid locomotion, and multi-robot planning. Relatable "robot meets real world" framing drives interest.
+**Under-performed:** Niche hardware (tendon hysteresis, wrench control, stealth drones) and underwater/industrial inspection. Technically dense, low-accessibility topics consistently flatline.
 
 ## 2. Hook Styles That Worked
-`bold_claim` produced the top post by a wide margin. `curiosity_gap` showed modest consistency. `number_stat` and `tension` hooks rarely broke above 1 like.
+`bold_claim` generated the highest peaks (humanoid walking: 12 likes; wheel-legged football: 3 likes). `curiosity_gap` and `number_stat` produced inconsistent mid-range results. `tension` rarely broke through.
 
 ## 3. Carousel vs. Video
-Data is too sparse (only 2 videos, both near-zero) to draw conclusions. Test more video posts before deprioritizing the format.
+Data is too sparse (only 2 videos, both near-zero) to draw conclusions. **Test needed:** 3–4 more videos before any format shift.
 
-## 3a. Hook-Style Weighting
-| Hook | Avg. likes | Recommendation |
+### 3a. Hook-Style Weighting (evidence-based)
+| Hook | Avg. Bluesky Likes | Recommended Weight |
 |---|---|---|
-| bold_claim | ~2.2 | 45% of posts |
-| curiosity_gap | ~1.0 | 30% |
-| tension | ~0.4 | 15% |
-| number_stat | ~0.3 | 10% |
+| `bold_claim` | ~1.9 | **50%** |
+| `curiosity_gap` | ~1.0 | 25% |
+| `number_stat` | ~0.5 | 15% |
+| `tension` | ~0.4 | 10% |
 
-## 3b. Thread vs. Single
-Threads average slightly more replies (1.0 vs 0.3) but not more likes. Singles occasionally spike higher (3L, wheel-legged football). Recommend **55% single / 45% thread**.
+### 3b. Thread vs. Single
+Threads average slightly more replies (1.0 vs 0.2) but not more likes. Singles occasionally spike higher. **Recommend 50/50 split** — insufficient signal to commit further.
 
 ## 4. Three Concrete Recommendations
-1. **Lead with humanoid + human-world framing** — the crowd-navigation post proves this is your highest-ceiling topic.
-2. **Bold_claim hooks on visually striking papers only** — they fall flat without a genuine "that shouldn't be possible" moment.
-3. **Test video format on a high-performing topic type** (humanoid, physical stunt) before concluding video underperforms.
+1. **Lead with humanoid/embodied AI topics** — they demonstrably outperform niche hardware papers.
+2. **Default to `bold_claim` hooks**; retire `tension` unless the paper has a genuinely dramatic tradeoff.
+3. **Filter out papers without strong visual assets earlier** — rejection volume for "no usable figures" is wasteful and avoidable with a preflight figure check.
