@@ -1,5 +1,9 @@
-# Community trends (updated 2026-10-25T15:38Z)
+# Community trends (updated 2026-10-25T20:26Z)
 
-The robotics community today is buzzing across several distinct threads. Tesla/Optimus skepticism is running hot, with the $5B capex reversal drawing sharp criticism about whether humanoid robots are actually being built at scale. Defense and autonomous systems are surfacing repeatedly, particularly around Advanced Navigation and Petraeus's advisory role, suggesting unease about military robotics governance. There's genuine excitement around European robotics investment, with NEURA Robotics and TUM's Gym facility framing workforce development as a strategic priority. A lighter but active thread involves community robotics events: Alaska Robotics Comics Camp, FIRST/Lego competitions, and campus orgs like RoboRambler are drawing warm engagement. The "Klara and the Sun" film adaptation is sparking reflection on robot consciousness and emotional storytelling.
+The robotics community on Bluesky today is buzzing around several converging themes.
 
-For a post angle that would land today: lean into the capex story with a grounded take on what meaningful production milestones for humanoid robots should actually look like, since the community clearly wants sharper signal through Elon's noise.
+Military and defense robotics is generating significant engagement, sparked by the viral China video of a robotic dog and drone exchanging fireworks, plus discussion of Petraeus's advisory role at Advanced Navigation and its autonomous systems work. Tesla's Optimus capex cuts are fueling skepticism about humanoid robot timelines, with a high-engagement post questioning whether the $5B swing signals trouble. Education and workforce development is active, with NEURA Robotics launching its TUM training gym, Alaska Robotics Comics Camp applications opening, and a new open robot learning textbook from UdeM/Mila gaining traction. There's also lively cultural conversation around robots in fiction, referencing Klara and the Sun and Star Trek horror moments.
+
+Notable mentions include Dream Labs' $90M raise and Agility Robotics' NVIDIA partnership.
+
+Suggested post angle: React to the open robot learning textbook with a thread on why accessible robotics education matters right now given the workforce gap stories dominating this week.
