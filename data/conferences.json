@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T10:27:13.974002+00:00",
+  "updated": "2026-10-26T10:42:33.748039+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -11,10 +11,10 @@
     },
     {
       "name": "IROS",
-      "year": 2027,
-      "start": "2027-09-26",
-      "end": "2027-10-01",
-      "location": "Florence, Italy",
+      "year": 2026,
+      "start": "2026-09-27",
+      "end": "2026-10-01",
+      "location": "Pittsburgh, USA",
       "confidence": "confirmed"
     },
     {
@@ -30,7 +30,7 @@
       "year": 2026,
       "start": "2026-11-09",
       "end": "2026-11-12",
-      "location": "Austin, TX, USA",
+      "location": "Austin, USA",
       "confidence": "confirmed"
     },
     {
@@ -46,7 +46,7 @@
       "year": 2027,
       "start": "2027-12-01",
       "end": "2027-12-02",
-      "location": "Granada, Spain",
+      "location": "TBD",
       "confidence": "estimated"
     },
     {
@@ -54,22 +54,22 @@
       "year": 2026,
       "start": "2026-12-06",
       "end": "2026-12-09",
-      "location": "Santa Clara, CA, USA",
+      "location": "Santa Clara, USA",
       "confidence": "confirmed"
     },
     {
       "name": "RoboCup",
       "year": 2027,
-      "start": "2027-07-01",
-      "end": "2027-07-07",
-      "location": "TBD",
-      "confidence": "estimated"
+      "start": "2027-06-15",
+      "end": "2027-06-21",
+      "location": "Nuremberg, Germany",
+      "confidence": "confirmed"
     },
     {
       "name": "ICSR",
       "year": 2026,
-      "start": "2026-11-01",
-      "end": "2026-11-03",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -86,6 +86,14 @@
       "year": 2026,
       "start": "2026-11-01",
       "end": "2026-11-03",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "ICUR",
+      "year": 2026,
+      "start": "2026-09-01",
+      "end": "2026-09-03",
       "location": "TBD",
       "confidence": "estimated"
     },
