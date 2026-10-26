@@ -1,9 +1,5 @@
-# Community trends (updated 2026-10-25T20:26Z)
+# Community trends (updated 2026-10-26T03:28Z)
 
-The robotics community on Bluesky today is buzzing around several converging themes.
+The robotics community is buzzing across several threads right now. Military and defense robotics is generating significant chatter, driven by the viral Chinese robotic dog-drone fireworks video and pointed questions about General Petraeus's advisory role at Advanced Navigation. Tesla's Optimus and Cybercab capex cuts are sparking skepticism about humanoid robot timelines, with several voices questioning whether Elon's claims hold up. Funding news is moving fast, with Reliable Robotics crossing a $1B valuation, Dream Labs raising $90M, and Enact Intelligence's $30M pre-seed for force-sensitive manipulation all getting traction. Education and workforce themes are also active, from NEURA Robotics partnering with TUM to Alaska Robotics Comics Camp applications opening and a new open textbook on robot learning drawing genuine interest.
 
-Military and defense robotics is generating significant engagement, sparked by the viral China video of a robotic dog and drone exchanging fireworks, plus discussion of Petraeus's advisory role at Advanced Navigation and its autonomous systems work. Tesla's Optimus capex cuts are fueling skepticism about humanoid robot timelines, with a high-engagement post questioning whether the $5B swing signals trouble. Education and workforce development is active, with NEURA Robotics launching its TUM training gym, Alaska Robotics Comics Camp applications opening, and a new open robot learning textbook from UdeM/Mila gaining traction. There's also lively cultural conversation around robots in fiction, referencing Klara and the Sun and Star Trek horror moments.
-
-Notable mentions include Dream Labs' $90M raise and Agility Robotics' NVIDIA partnership.
-
-Suggested post angle: React to the open robot learning textbook with a thread on why accessible robotics education matters right now given the workforce gap stories dominating this week.
+A post angle that would land today: riff on the Asimov Three Laws post (19 engagements punching above its weight) by connecting it to the humanoid robot strike story. The juxtaposition of sci-fi ethics and actual labor displacement is timely and highly shareable.
