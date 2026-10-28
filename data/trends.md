@@ -1,5 +1,11 @@
-# Community trends (updated 2026-10-27T21:52Z)
+# Community trends (updated 2026-10-28T04:16Z)
 
-The dominant conversation is the ethics of defense funding in robotics, sparked by high-engagement posts about employees protesting weapon-adjacent robot sales and the genuine lack of civilian career paths for robotics engineers who don't want to build weapons. Closely tied is the historical context that DARPA and SBIRs essentially bankrolled the modern robotics industry, leaving many feeling trapped. Humanoid robot progress is a steady undercurrent, with Bear Robotics' KR1 manipulation improvements, Neura Robotics' 4NE1 gen four, and Toyota's humanoid push all circulating. A robot learning open textbook from a UdeM/Mila researcher is getting traction as a community resource worth amplifying. Military robotics unease is also surfacing around the viral Chinese robotic dog and drone fireworks video.
+The dominant conversation this week centers on the ethics of military robotics, with nearly 1,500 combined engagement on posts about employees protesting robot weapons sales and the general difficulty of working in robotics without contributing to defense applications. This is clearly the most charged topic in the community right now.
 
-Suggested post angle for today: respond directly to the "I thought we were just making dancing robots" sentiment with a grounded, empathetic thread on how civilian robotics researchers can navigate funding landscapes without defaulting to defense contracts. That tension is live and hungry for nuance.
+A secondary thread is the dual-use dilemma more broadly: drones, robotics code, and autonomous systems all sit uncomfortably between civilian and military applications, with several posts questioning where the line is.
+
+There is meaningful interest in humanoid robot progress, covering Bear Robotics' KR1, Neura Robotics' 4NE1, and Toyota's push against Tesla and Chinese competitors. Robot learning education is surfacing too, with a new open textbook from UdeM/Mila getting shared repeatedly.
+
+Finally, worker displacement anxiety is quietly building around humanoid labor economics.
+
+A post angle that would land today: ask your audience directly whether the "robots won't be weaponized" promise from executives is even a meaningful commitment, given how dual-use the underlying technology inherently is.
