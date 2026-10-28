@@ -1,11 +1,5 @@
-# Community trends (updated 2026-10-28T04:16Z)
+# Community trends (updated 2026-10-28T12:13Z)
 
-The dominant conversation this week centers on the ethics of military robotics, with nearly 1,500 combined engagement on posts about employees protesting robot weapons sales and the general difficulty of working in robotics without contributing to defense applications. This is clearly the most charged topic in the community right now.
+The dominant conversation this week centers on robotics and weapons/defense ethics, sparked by a high-engagement post about employees opposing a robot sale despite executive assurances of non-weaponization, echoing broader anxiety about dual-use technology and defense funding being the only viable path for robotics startups. A second thread questions whether there's space for robotics professionals who want no part of military applications. Community members are also buzzing about humanoid robot progress, with Bear Robotics, Neura Robotics, Toyota, and Xpeng all surfacing, alongside skepticism and dark humor about where this is all heading. The open robot learning textbook from UdeM/Mila is getting genuine traction as a practical community resource. Japan's cultural relationship with robots is sparking thoughtful side discussion.
 
-A secondary thread is the dual-use dilemma more broadly: drones, robotics code, and autonomous systems all sit uncomfortably between civilian and military applications, with several posts questioning where the line is.
-
-There is meaningful interest in humanoid robot progress, covering Bear Robotics' KR1, Neura Robotics' 4NE1, and Toyota's push against Tesla and Chinese competitors. Robot learning education is surfacing too, with a new open textbook from UdeM/Mila getting shared repeatedly.
-
-Finally, worker displacement anxiety is quietly building around humanoid labor economics.
-
-A post angle that would land today: ask your audience directly whether the "robots won't be weaponized" promise from executives is even a meaningful commitment, given how dual-use the underlying technology inherently is.
+A post that would land well today: a grounded, honest take on the civilian robotics funding gap and why defense money keeps flowing in, inviting the community to propose alternatives. That tension is live and unresolved.
