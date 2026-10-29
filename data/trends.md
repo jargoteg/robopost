@@ -1,5 +1,11 @@
-# Community trends (updated 2026-10-29T12:22Z)
+# Community trends (updated 2026-10-29T22:29Z)
 
-The dominant conversation right now centers on the ethics of militarization and dual-use robotics. The highest-engagement post (1,111 engagements) covers employees protesting a robot sale over weaponization fears, directly feeding into a broader, painful thread about how few career paths exist for roboticists who want to avoid defense work. A secondary theme is humanoid robot progress: Bear Robotics' KINO-2 manipulation demo, Toyota's humanoid push, and Xpeng's solid-state battery news are all circulating. People are also debating industrial policy, with Trump's decision to delay robotics tariffs drawing attention. On the educational side, an open robot learning textbook from UdeM/Mila is getting genuine traction, as is a FOSDEM 2027 CFP. There's also ambient anxiety about what the robotics boom means culturally and economically.
+The dominant conversation this week centers on the ethics and dual-use tension in robotics, driven by the high-engagement post about Boston Dynamics-style robot sales despite employee objections, and the widespread frustration that drone/robotics careers almost inevitably lead to weapons work. There's genuine community anxiety here worth tracking.
 
-For a post angle that lands today: respond to the "nowhere to go if you don't want to build weapons" thread with concrete examples of civilian-focused robotics employers or research paths. That conversation is live and hungry for constructive signal.
+On the industry side, people are watching the humanoid race closely: Bear Robotics' KINO-2 manipulation demo, Toyota's humanoid push, Neura Robotics' 4NE1, and Xpeng's Iron battery progress are all circulating. Chinese humanoid stumbles are getting light mockery but also grudging respect for pace.
+
+Trump's decision to pause robotics tariffs is getting quiet attention, as is the DARPA/SBIR funding history post, which sparked nostalgia and debate about how the field got built.
+
+Community learning resources are resonating: the open robot learning textbook at robotlearningbook.com got solid pickup.
+
+Suggested post angle: respond directly to the "nowhere to go if you don't want to build weapons" thread with concrete examples of civilian robotics career paths or organizations. That conversation is hot and underserved.
