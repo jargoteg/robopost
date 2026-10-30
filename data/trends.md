@@ -1,11 +1,5 @@
-# Community trends (updated 2026-10-29T22:29Z)
+# Community trends (updated 2026-10-30T04:37Z)
 
-The dominant conversation this week centers on the ethics and dual-use tension in robotics, driven by the high-engagement post about Boston Dynamics-style robot sales despite employee objections, and the widespread frustration that drone/robotics careers almost inevitably lead to weapons work. There's genuine community anxiety here worth tracking.
+The dominant conversation this week centers on the ethics of robotics and defense, sparked by the high-engagement post about Boston Dynamics employees protesting robot weaponization, with many expressing frustration that civilian robotics careers are nearly impossible without defense entanglements. A secondary thread debates industrial progress, notably Bear Robotics' KINO-2 humanoid manipulation demo cutting inference latency from 500ms to 60ms, and Toyota entering the humanoid race against Tesla and Chinese competitors. The Chinese humanoid robot stumble is generating sardonic humor. Trade policy is quietly simmering after Trump signaled tariff restraint on robotics imports pending talks. An open robot learning textbook from UdeM/Mila is drawing genuine appreciation from the education-minded crowd.
 
-On the industry side, people are watching the humanoid race closely: Bear Robotics' KINO-2 manipulation demo, Toyota's humanoid push, Neura Robotics' 4NE1, and Xpeng's Iron battery progress are all circulating. Chinese humanoid stumbles are getting light mockery but also grudging respect for pace.
-
-Trump's decision to pause robotics tariffs is getting quiet attention, as is the DARPA/SBIR funding history post, which sparked nostalgia and debate about how the field got built.
-
-Community learning resources are resonating: the open robot learning textbook at robotlearningbook.com got solid pickup.
-
-Suggested post angle: respond directly to the "nowhere to go if you don't want to build weapons" thread with concrete examples of civilian robotics career paths or organizations. That conversation is hot and underserved.
+Suggested post angle: Lean into the "where can ethical robotics talent actually go" tension. A concrete list of civilian, non-defense robotics companies actively hiring would fill a real gap the community is loudly feeling right now and would almost certainly drive strong engagement.
