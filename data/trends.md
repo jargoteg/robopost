@@ -1,5 +1,9 @@
-# Community trends (updated 2026-10-30T04:37Z)
+# Community trends (updated 2026-10-30T12:13Z)
 
-The dominant conversation this week centers on the ethics of robotics and defense, sparked by the high-engagement post about Boston Dynamics employees protesting robot weaponization, with many expressing frustration that civilian robotics careers are nearly impossible without defense entanglements. A secondary thread debates industrial progress, notably Bear Robotics' KINO-2 humanoid manipulation demo cutting inference latency from 500ms to 60ms, and Toyota entering the humanoid race against Tesla and Chinese competitors. The Chinese humanoid robot stumble is generating sardonic humor. Trade policy is quietly simmering after Trump signaled tariff restraint on robotics imports pending talks. An open robot learning textbook from UdeM/Mila is drawing genuine appreciation from the education-minded crowd.
+The biggest conversation right now centers on robotics and weaponization, with the highest-engagement posts reflecting deep discomfort about robots being sold for military use despite employee objections, drones being used in warfare, and the lack of civilian career paths for people who want to build robots without contributing to weapons. There's a related undercurrent about who funded modern robotics, with appreciation for DARPA and SBIR grants being a foundation the current industry is built on.
 
-Suggested post angle: Lean into the "where can ethical robotics talent actually go" tension. A concrete list of civilian, non-defense robotics companies actively hiring would fill a real gap the community is loudly feeling right now and would almost certainly drive strong engagement.
+Humanoid robots are generating chatter on two fronts: Bear Robotics' KINO-2 demo showing dramatic inference speed improvements, and the broader China vs. Toyota vs. Tesla humanoid race, with some healthy skepticism about Chinese robot progress claims.
+
+Community members are also discussing an open robot learning textbook from a UdeM/Mila researcher, which is getting genuine interest as a teaching resource.
+
+A post angle that would land well today: a thoughtful take on the civilian robotics career pipeline problem, asking what it would actually take to build a thriving non-defense robotics industry, given how much of the existing foundation came from military-adjacent funding.
