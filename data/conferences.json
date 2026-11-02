@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T10:42:33.748039+00:00",
+  "updated": "2026-11-02T13:00:39.965047+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -11,10 +11,10 @@
     },
     {
       "name": "IROS",
-      "year": 2026,
-      "start": "2026-09-27",
-      "end": "2026-10-01",
-      "location": "Pittsburgh, USA",
+      "year": 2027,
+      "start": "2027-09-27",
+      "end": "2027-10-01",
+      "location": "Florence, Italy",
       "confidence": "confirmed"
     },
     {
@@ -30,7 +30,7 @@
       "year": 2026,
       "start": "2026-11-09",
       "end": "2026-11-12",
-      "location": "Austin, USA",
+      "location": "Austin, TX, USA",
       "confidence": "confirmed"
     },
     {
@@ -46,7 +46,7 @@
       "year": 2027,
       "start": "2027-12-01",
       "end": "2027-12-02",
-      "location": "TBD",
+      "location": "Granada, Spain",
       "confidence": "estimated"
     },
     {
@@ -54,7 +54,7 @@
       "year": 2026,
       "start": "2026-12-06",
       "end": "2026-12-09",
-      "location": "Santa Clara, USA",
+      "location": "Santa Clara, CA, USA",
       "confidence": "confirmed"
     },
     {
@@ -68,8 +68,8 @@
     {
       "name": "ICSR",
       "year": 2026,
-      "start": "2026-10-23",
-      "end": "2026-10-25",
+      "start": "2026-11-17",
+      "end": "2026-11-19",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -84,16 +84,16 @@
     {
       "name": "SSRR",
       "year": 2026,
-      "start": "2026-11-01",
-      "end": "2026-11-03",
+      "start": "2026-11-05",
+      "end": "2026-11-07",
       "location": "TBD",
       "confidence": "estimated"
     },
     {
       "name": "ICUR",
       "year": 2026,
-      "start": "2026-09-01",
-      "end": "2026-09-03",
+      "start": "2026-11-01",
+      "end": "2026-11-03",
       "location": "TBD",
       "confidence": "estimated"
     },
@@ -108,16 +108,16 @@
     {
       "name": "CASE",
       "year": 2027,
-      "start": "2027-08-22",
+      "start": "2027-08-23",
       "end": "2027-08-27",
-      "location": "Linz, Austria",
-      "confidence": "confirmed"
+      "location": "TBD",
+      "confidence": "estimated"
     },
     {
       "name": "WAFR",
       "year": 2026,
-      "start": "2026-10-01",
-      "end": "2026-10-03",
+      "start": "2026-12-08",
+      "end": "2026-12-10",
       "location": "TBD",
       "confidence": "estimated"
     }
