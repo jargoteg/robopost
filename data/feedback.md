@@ -1,28 +1,30 @@
-# Engagement lessons (auto-updated 2026-11-02)
+# Engagement lessons (auto-updated 2026-11-03)
 
-# Content Team Lessons Learned Brief
+# Content Team — Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid navigation (12L/3R/2Re — clear outlier), wheel-legged/hybrid locomotion, multi-robot planning. Human-relatable demos and "zero robot data" framing drove the humanoid spike. **Under-performed:** Niche hardware (tendon hysteresis, orbital wrench control, UAV stealth) and heavily benchmarked papers with no intuitive payoff. Medical/surgical robotics showed modest curiosity engagement but low virality.
+**Over-performed:** Humanoid/legged robot learning (humanoid navigation post: 12 likes, 3 reposts), wheel-legged locomotion (3 likes), and accessible manipulation hardware (curiosity_gap surgical robot, congestion planning). Human-interest framing ("learned from human footage," "plays football") consistently outperforms pure technical framing.
+
+**Under-performed:** Niche sensor papers (hysteresis, wrench control, EKF force estimation), drone concealment, and swarm transport. High specificity without a relatable "so what" kills traction.
 
 ## 2. Hook Styles That Worked
-**bold_claim** generated the highest single post (humanoid navigation) and consistent reply activity. **curiosity_gap** earned reliable replies but fewer reposts. **number_stat** underperformed despite specificity — numbers alone don't create stakes. **tension** was median across the board.
+`bold_claim` drove the standout post. `curiosity_gap` showed consistent low-level engagement (replies). `number_stat` and `tension` performed similarly poorly in isolation.
 
 ## 3. Carousel vs. Video
-Insufficient video data (2 posts, both 0 likes). Cannot conclude. **Test 2–3 more videos before drawing comparisons.**
+Data is too sparse (2 videos, both near-zero likes) to draw conclusions. **Test needed:** 3–5 more videos with strong hooks before recommending format shift.
 
-### 3a. Hook Weighting Recommendation
-| Hook | Signal | Recommended Weight |
+### 3a. Hook-Style Weighting Recommendation
+| Hook | Avg. likes | Recommended weight |
 |---|---|---|
-| bold_claim | Best likes + reposts | 40% |
-| curiosity_gap | Consistent replies | 30% |
-| tension | Moderate, reliable | 20% |
-| number_stat | Weakest ROI | 10% |
+| `bold_claim` | ~2.2 | **50%** |
+| `curiosity_gap` | ~1.0 | **25%** |
+| `tension` | ~0.5 | **15%** |
+| `number_stat` | ~0.3 | **10%** |
 
 ### 3b. Thread vs. Single
-Threads average slightly more replies; singles slightly more likes. Difference is marginal given sample size. Recommend **60% thread / 40% single** — threads invite conversation which may help algorithmic reach.
+Threads average slightly more replies (1.0 vs 0.3); singles slightly more reposts. Engagement totals are comparable. **Recommend 60/40 thread/single** until volume increases.
 
-## 4. Concrete Recommendations
-1. **Prioritize bold_claim hooks on humanoid/legged robot demos** — the gap between this and everything else is too large to ignore.
-2. **Retire standalone number_stat hooks**; embed stats inside bold_claim or tension hooks as supporting evidence.
-3. **Run a dedicated video test** on a visually striking demo (juggling, locomotion) with a bold_claim hook to finally generate carousel-vs-video comparable data.
+## 4. Three Concrete Recommendations
+1. **Lead with the human angle.** "A humanoid learned from humans" beats "model achieves X%." Reframe technical wins as human stories.
+2. **Retire low-ratio number_stat hooks** unless the number is genuinely shocking (not "33.3% better").
+3. **A/B test one bold_claim video post** against a carousel on the same topic to finally get format signal.
