@@ -1,32 +1,30 @@
-# Engagement lessons (auto-updated 2026-11-04)
+# Engagement lessons (auto-updated 2026-11-05)
 
-# Content Team: Lessons Learned Brief
+# Content Team – Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid locomotion/navigation ("Learning Humanoid Navigation" dominated at 12L/3R/2Re). Wheel-legged robots performing physical tasks (football: 3L). Surgical micro-robots and congestion-aware planning showed modest positive signals.
-
-**Under-performed:** Niche hardware details (tendon hysteresis, orbital wrench control, bridge-climbing), ultra-specific benchmarks, and anything without a relatable physical demonstration. BCIs underperformed despite broad appeal—possibly too speculative.
+**Over-performed:** Humanoid locomotion/navigation ("Learning Humanoid Navigation" – 12 likes, 3 reposts) and robot sports/dynamic balance ("Wheel-Legged Football" – 3 likes). Human-relatable, visually dramatic scenarios win. Multi-robot planning also showed modest positive signals.
+**Under-performed:** Niche hardware papers (tendon hysteresis, orbital wrench control, bridge-climbing, stealth drones) consistently scored 0 across all metrics. Underwater and medical robotics were mixed but weak.
 
 ## 2. Hook Styles That Worked
-`bold_claim` produced the standout post. It creates a falsifiable, surprising assertion readers want to dispute or validate. `curiosity_gap` and `number_stat` showed inconsistent mid-tier results.
+**Bold_claim** produced the top two posts by a wide margin. Curiosity_gap showed occasional sparks (surgical reprogramming: 2 likes). Number_stat and tension underperformed consistently.
 
 ## 3. Carousel vs. Video
-Data is too sparse (only 2 videos, both near-zero engagement) to draw conclusions. **Test needed:** 3–4 more videos before concluding format matters.
+Data is too sparse (only 2 videos, both near-zero engagement) to conclude format drives outcomes. Topic appears to dominate format effect.
 
-## 3a. Hook Style Weighting
-| Hook | Avg. Total Interactions |
-|---|---|
-| bold_claim | ~1.8 |
-| curiosity_gap | ~0.9 |
-| tension | ~0.8 |
-| number_stat | ~0.5 |
+## 3a. Hook-Style Weighting Recommendation
+| Hook | Avg likes | Weight |
+|---|---|---|
+| bold_claim | ~2.5 | **50%** |
+| curiosity_gap | ~1.0 | 25% |
+| litreview | ~1.0 | 10% |
+| tension | ~0.4 | 10% |
+| number_stat | ~0.3 | 5% |
 
-**Recommended weighting:** bold_claim 45%, curiosity_gap 25%, tension 20%, number_stat 10%
-
-## 3b. Thread vs. Single
-Threads average slightly higher reply counts; singles get marginally more likes. Neither is clearly superior. **Recommended split:** 50/50 until 20+ more posts generate signal.
+## 3b. Thread vs. Single Split
+Threads average slightly more replies (1.0 vs 0.3) but fewer likes. Singles occasionally spike higher. **Recommend 60/40 single/thread split.**
 
 ## 4. Three Concrete Recommendations
-1. **Lead with humanoid/bipedal robot topics**—the data strongly favors them
-2. **Default to `bold_claim` hooks**; retire `number_stat` unless the number is genuinely shocking
-3. **A/B test the same paper as thread vs. single** on consecutive weeks to isolate format effect cleanly
+1. **Lead with humanoid or human-robot interaction papers** – that's where the audience is.
+2. **Default to bold_claim hooks**; retire number_stat unless the stat is genuinely shocking.
+3. **A/B test one video post on a high-performing topic** (humanoid navigation) to isolate whether format matters independently of topic.
