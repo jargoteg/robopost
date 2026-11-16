@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T13:32:33.559492+00:00",
+  "updated": "2026-11-16T13:18:22.676201+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -12,7 +12,7 @@
     {
       "name": "IROS",
       "year": 2027,
-      "start": "2027-09-27",
+      "start": "2027-09-26",
       "end": "2027-10-01",
       "location": "Florence, Italy",
       "confidence": "confirmed"
@@ -44,9 +44,9 @@
     {
       "name": "MRS",
       "year": 2027,
-      "start": null,
-      "end": null,
-      "location": null,
+      "start": "2027-01-01",
+      "end": "2027-01-01",
+      "location": "Granada, Spain",
       "confidence": "estimated"
     },
     {
