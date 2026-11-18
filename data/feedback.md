@@ -1,30 +1,39 @@
-# Engagement lessons (auto-updated 2026-11-17)
+# Engagement lessons (auto-updated 2026-11-18)
 
-# Content Team: Lessons Learned Brief
+# Content Team — Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid locomotion/navigation ("Learning Humanoid Navigation" — 12 likes, 3 reposts, 2 replies) dominated everything else. Relatable, visual, high-stakes topics outperform niche technical papers. Wheel-legged robots (football post, 3 likes) also punched above average.
+**Over-performed:** Humanoid locomotion/navigation ("Learning Humanoid Navigation" — 12 likes, 3 reposts), wheel-legged hybrid systems, and congestion-aware planning. Human-relatable robot tasks (walking in crowds, playing football) clearly outperform niche engineering problems.
 
-**Under-performed:** Highly specialized control theory (hysteresis, wrench control, tendon estimation) and underwater/agricultural robotics consistently scored 0–1 likes. Swarm logistics papers also flatlined.
+**Under-performed:** Highly technical single-system papers (tendon hysteresis, orbital wrench control, bridge-climbing). Abstractions without an obvious "why should I care" suffer most.
+
+---
 
 ## 2. Hook Styles That Worked
-**Bold claim** hooks drove the top two performers. **Curiosity gap** showed modest consistency. **Number stat** and **tension** rarely broke 1 like.
+**Bold claims lead.** "A humanoid robot learned to walk through crowds from 5 hours of human footage" — the top-performing post by a large margin.
 
-## 3. Carousel vs. Video
-Data is too sparse (only 2 videos, both scoring 0–1 likes) to draw conclusions. **Test needed:** 3–4 more video posts before comparing formats.
+---
 
-## 3a. Hook-Style Weighting
-| Hook | Avg. Likes | Recommendation |
+## 3a. Hook Style A/B
+| Hook | Avg Likes | Avg Reposts |
 |---|---|---|
-| bold_claim | ~2.3 | **50%** of posts |
-| curiosity_gap | ~1.0 | **30%** |
-| number_stat | ~0.5 | **10%** |
-| tension | ~0.4 | **10%** |
+| bold_claim | 2.0 | 0.5 |
+| curiosity_gap | 0.8 | 0 |
+| number_stat | 0.4 | 0.1 |
+| tension | 0.4 | 0 |
 
-## 3b. Bluesky Thread vs. Single
-Threads average ~0.9 total interactions; singles ~0.5. Threads win marginally, likely from reply chains. **Recommend 65/35 thread/single split.**
+**Recommended weighting:** bold_claim 50%, curiosity_gap 25%, number_stat 15%, tension 10%. Retire tension-only hooks unless paired with a vivid concrete image.
+
+---
+
+## 3b. Bluesky Thread vs Single
+Threads average slightly more replies (1.0 vs 0.2) but not more likes. Singles occasionally spike higher. Data is too sparse for confidence.
+
+**Recommended split:** 60% thread / 40% single — threads generate conversation; test for 10 more posts before adjusting.
+
+---
 
 ## 4. Three Concrete Recommendations
-1. **Prioritize humanoid + locomotion papers** — this audience responds strongly to walking/navigation breakthroughs
-2. **Lead every post with bold_claim hooks** — reframe technical papers as surprising capability demonstrations
-3. **A/B test video format explicitly** — pair the same paper as carousel vs. video to isolate format effect
+1. **Lead with humanoid/human-robot interaction topics** — they carry inherent relatability and dominate engagement.
+2. **Reframe technical hooks as human stakes** — not "31% wrench error" but "one skipped step and the space arm fails."
+3. **Video format is untested** — run 3 more video posts with bold_claim hooks before drawing conclusions.
