@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T13:18:22.676201+00:00",
+  "updated": "2026-11-23T15:36:35.003678+00:00",
   "conferences": [
     {
       "name": "ICRA",
@@ -12,7 +12,7 @@
     {
       "name": "IROS",
       "year": 2027,
-      "start": "2027-09-26",
+      "start": "2027-09-27",
       "end": "2027-10-01",
       "location": "Florence, Italy",
       "confidence": "confirmed"
@@ -35,18 +35,18 @@
     },
     {
       "name": "DARS",
-      "year": 2026,
-      "start": "2026-10-26",
-      "end": "2026-10-29",
-      "location": "Tokyo, Japan",
-      "confidence": "confirmed"
+      "year": 2028,
+      "start": "2028-10-01",
+      "end": "2028-10-31",
+      "location": "TBD",
+      "confidence": "estimated"
     },
     {
       "name": "MRS",
       "year": 2027,
       "start": "2027-01-01",
-      "end": "2027-01-01",
-      "location": "Granada, Spain",
+      "end": "2027-12-31",
+      "location": "Grenada, Spain",
       "confidence": "estimated"
     },
     {
@@ -64,6 +64,54 @@
       "end": "2027-06-21",
       "location": "Nuremberg, Germany",
       "confidence": "confirmed"
+    },
+    {
+      "name": "ICSR",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "FSR",
+      "year": 2027,
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "SSRR",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "CASE",
+      "year": 2026,
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "location": "Munich, Germany",
+      "confidence": "estimated"
+    },
+    {
+      "name": "IEEE OCEANS",
+      "year": 2027,
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "location": "TBD",
+      "confidence": "estimated"
+    },
+    {
+      "name": "WAFR",
+      "year": 2026,
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "location": "TBD",
+      "confidence": "estimated"
     }
   ]
 }
