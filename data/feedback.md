@@ -1,28 +1,28 @@
-# Engagement lessons (auto-updated 2026-11-27)
+# Engagement lessons (auto-updated 2026-11-28)
 
 # Content Team — Lessons Learned Brief
 
 ## 1. Topic Performance
-**Over-performed:** Humanoid locomotion/navigation ("Learning Humanoid Navigation" — 12 likes, 3 reposts, 2 replies — was a clear outlier). Wheel-legged robots performing physical tasks also punched above average (3 likes). **Under-performed:** Niche hardware papers (tendon hysteresis, orbital wrench control, bridge-climbing) — most scored 0 across all metrics. Medical/surgical robotics had modest curiosity but no amplification.
+**Over-performed:** Humanoid locomotion/navigation ("Learning Humanoid Navigation" — 12 likes, 3 reposts, 2 replies) and multi-robot coordination ("Congestion-Aware Planner" — top carousel). **Under-performed:** Niche hardware papers (tendon hysteresis, orbital wrench control, spinning drone) consistently scored 0 across all metrics. Papers without strong visual assets were systematically rejected — this is a structural pipeline issue, not topic failure.
 
 ## 2. Hook Styles That Worked
-**Bold claims led overall** (humanoid nav, wheel-legged football, BCI, 1000-for-1000). The best hooks made a counterintuitive promise resolvable by reading. Number stats underperformed — they front-load the answer and reduce click incentive.
+`bold_claim` produced the standout outlier (humanoid navigation). `curiosity_gap` showed modest consistency. `number_stat` and `tension` rarely broke zero engagement.
 
 ## 3. Carousel vs. Video
-Data is too sparse (only 2 videos) to conclude. Neither video outperformed the top carousel. **Don't pivot to video yet; test 4–5 more before drawing conclusions.**
+Video data is too sparse (2 posts, both near-zero) to draw conclusions. Do not de-prioritize carousels yet.
 
-### 3a. Hook Style Weighting (evidence-based)
-| Hook | Avg. Bluesky Engagement | Recommended Weight |
+### 3a. Hook Style Weighting
+| Hook | Avg Likes | Recommendation |
 |---|---|---|
-| bold_claim | ~1.6 | **50%** |
-| curiosity_gap | ~0.9 | **25%** |
-| tension | ~0.8 | **20%** |
-| number_stat | ~0.3 | **5%** |
+| bold_claim | ~1.9 | **50% of posts** |
+| curiosity_gap | ~1.0 | 30% |
+| number_stat | ~0.4 | 10% |
+| tension | ~0.4 | 10% |
 
 ### 3b. Thread vs. Single
-Threads average slightly higher reply counts; singles get marginally more likes. Neither dominates clearly. **Recommended split: 50/50 — keep testing.**
+Threads average slightly more replies; singles slightly more likes. Difference is negligible at this sample size. **Recommended split: 50/50 — test for 4 more weeks before changing.**
 
 ## 4. Three Concrete Recommendations
-1. **Lead with humanoid/embodied AI topics** — this audience responds to human-scale robot behavior stories.
-2. **Retire number_stat as a primary hook** — demote to supporting copy inside the carousel only.
-3. **A/B test the same paper with bold_claim vs. curiosity_gap hooks** on consecutive weeks to isolate hook effect from topic effect.
+1. **Lead with humanoid/embodied AI topics** — audience responds to relatable, landmark robot behaviors
+2. **Retire `number_stat` hooks unless the number is genuinely surprising** — raw percentages aren't landing
+3. **Gate all papers on visual asset quality before scripting** — rejected content wastes production time
